@@ -1,7 +1,7 @@
 {{ $url := .Get "url" }}
 {{ $limit := .Get "limit" | default 10 }}
 {{ $author := .Get "author" | default "" }}
-{{ $debug := .Get "debug" | default false }}
+{{ $debug := .Get "debug" | default "false" }}
 {{ $feed := "" }}
 {{ $fetchError := false }}
 
@@ -20,7 +20,7 @@
   <div class="rss-feed">
     <h2>Latest from Road Trail Run</h2>
     
-    {{ if $debug }}
+    {{ if and $debug (ne $debug "false") }}
       <div class="debug-info">
         <h3>DEBUG MODE - Feed Structure:</h3>
         <pre style="background: #f0f0f0; padding: 1rem; overflow-x: auto; font-size: 0.85rem;">
