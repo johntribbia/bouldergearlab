@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reviews on Boulder Gear Lab</title>
-    <link>https://www.bouldergearlab.com/reviews/</link>
-    <description>Recent content in Reviews on Boulder Gear Lab</description>
+    <title>Shoes on Boulder Gear Lab</title>
+    <link>https://www.bouldergearlab.com/tags/shoes/</link>
+    <description>Recent content in Shoes on Boulder Gear Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.bouldergearlab.com/reviews/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.bouldergearlab.com/tags/shoes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Gear Review</title>
       <link>https://www.bouldergearlab.com/reviews/2025/12/23/first-review/</link>

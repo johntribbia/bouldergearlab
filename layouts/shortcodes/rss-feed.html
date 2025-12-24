@@ -1,0 +1,384 @@
+{{ $url := .Get "url" }}
+{{ $limit := .Get "limit" | default 10 }}
+{{ $author := .Get "author" | default "" }}
+{{ $debug := .Get "debug" | default false }}
+{{ $feed := "" }}
+{{ $fetchError := false }}
+
+{{ with resources.GetRemote $url }}
+  {{ $feed = . | transform.Unmarshal }}
+{{ else }}
+  {{ $fetchError = true }}
+{{ end }}
+
+{{ if $fetchError }}
+  <div class="rss-feed">
+    <p class="error">Unable to fetch RSS feed from Road Trail Run. Please check back later.</p>
+  </div>
+{{ else }}
+  {{ with $feed }}
+  <div class="rss-feed">
+    <h2>Latest from Road Trail Run</h2>
+    
+    {{ if $debug }}
+      <div class="debug-info">
+        <h3>DEBUG MODE - Feed Structure:</h3>
+        <pre style="background: #f0f0f0; padding: 1rem; overflow-x: auto; font-size: 0.85rem;">
+Feed Type: {{ if .channel }}RSS{{ else if .entry }}Atom{{ else }}Unknown{{ end }}
+        </pre>
+        
+        {{/* Check if it's an Atom feed (Blogger uses Atom) */}}
+        {{ if .entry }}
+          <h4>First 3 Atom Entries:</h4>
+          {{ range first 3 .entry }}
+            {{ $debugUrl := "" }}
+            {{ range .link }}
+              {{ $rel := index . "-rel" }}
+              {{ if eq $rel "alternate" }}
+                {{ $debugUrl = index . "-href" }}
+              {{ end }}
+            {{ end }}
+            {{ $debugTitle := "" }}
+            {{ if .title }}
+              {{ if reflect.IsMap .title }}
+                {{ $debugTitle = index .title "#text" }}
+              {{ else }}
+                {{ $debugTitle = .title }}
+              {{ end }}
+            {{ end }}
+            <pre style="background: #f0f0f0; padding: 1rem; overflow-x: auto; font-size: 0.85rem; margin-bottom: 1rem;">
+Title: {{ $debugTitle }}
+Link: {{ $debugUrl }}
+Published: {{ .published }}
+Author structure: {{ .author }}
+Author name: {{ if .author }}{{ if .author.name }}{{ .author.name }}{{ end }}{{ end }}
+Summary: {{ .summary | plainify | truncate 200 }}
+            </pre>
+          {{ end }}
+        {{ end }}
+        
+        {{/* Check if it's RSS feed */}}
+        {{ if .channel }}
+          <h4>First 3 RSS Items:</h4>
+          {{ range first 3 .channel.item }}
+            <pre style="background: #f0f0f0; padding: 1rem; overflow-x: auto; font-size: 0.85rem; margin-bottom: 1rem;">
+Title: {{ .title }}
+Link: {{ .link }}
+PubDate: {{ .pubDate }}
+Author: {{ .author }}
+Description: {{ .description | plainify | truncate 200 }}
+            </pre>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+    
+    <div class="rss-posts">
+      {{ $count := 0 }}
+      
+      {{/* Handle Atom feed format (Blogger) */}}
+      {{ if .entry }}
+        {{ range .entry }}
+          {{ $showPost := true }}
+          
+          {{ if $author }}
+            {{ $showPost = false }}
+            
+            {{/* Check author name in Atom format */}}
+            {{ if .author }}
+              {{ $authorName := "" }}
+              {{ if reflect.IsMap .author }}
+                {{ if .author.name }}
+                  {{ if reflect.IsMap .author.name }}
+                    {{ $authorName = index .author.name "#text" }}
+                  {{ else }}
+                    {{ $authorName = .author.name }}
+                  {{ end }}
+                {{ end }}
+              {{ else }}
+                {{ $authorName = .author }}
+              {{ end }}
+              
+              {{ if $authorName }}
+                {{ if in (lower $authorName) (lower $author) }}
+                  {{ $showPost = true }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            
+            {{/* Check title */}}
+            {{ if .title }}
+              {{ $titleText := "" }}
+              {{ if reflect.IsMap .title }}
+                {{ $titleText = index .title "#text" }}
+              {{ else }}
+                {{ $titleText = .title }}
+              {{ end }}
+              {{ if in (lower $titleText) (lower $author) }}
+                {{ $showPost = true }}
+              {{ end }}
+            {{ end }}
+            
+            {{/* Check summary/content - extract "Article by" text and check content thoroughly */}}
+            {{ if .summary }}
+              {{ $summaryText := "" }}
+              {{ if reflect.IsMap .summary }}
+                {{ $summaryText = index .summary "#text" }}
+              {{ else }}
+                {{ $summaryText = .summary }}
+              {{ end }}
+              {{ if in (lower $summaryText) (lower $author) }}
+                {{ $showPost = true }}
+              {{ end }}
+            {{ end }}
+            
+            {{ if .content }}
+              {{ $contentText := "" }}
+              {{ if reflect.IsMap .content }}
+                {{ $contentText = index .content "#text" }}
+              {{ else }}
+                {{ $contentText = .content }}
+              {{ end }}
+              {{ if in (lower $contentText) (lower $author) }}
+                {{ $showPost = true }}
+              {{ end }}
+              
+              {{/* For HTML content, look for "Article by [Author]" pattern */}}
+              {{ $plainContent := $contentText | plainify | lower }}
+              {{ if in $plainContent (lower $author) }}
+                {{ $showPost = true }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          
+          {{ if and $showPost (lt $count $limit) }}
+            {{ $count = add $count 1 }}
+            {{ $postUrl := "" }}
+            {{ range .link }}
+              {{ $rel := index . "-rel" }}
+              {{ if eq $rel "alternate" }}
+                {{ $postUrl = index . "-href" }}
+              {{ end }}
+            {{ end }}
+            
+            {{/* Extract title - handle both string and map formats */}}
+            {{ $postTitle := "" }}
+            {{ if .title }}
+              {{ if reflect.IsMap .title }}
+                {{ $postTitle = index .title "#text" }}
+              {{ else }}
+                {{ $postTitle = .title }}
+              {{ end }}
+            {{ end }}
+            
+            <article class="rss-post">
+              <h3>
+                {{ if $postUrl }}
+                  <a href="{{ $postUrl }}" target="_blank" rel="noopener">{{ $postTitle }}</a>
+                {{ else }}
+                  {{ $postTitle }}
+                {{ end }}
+              </h3>
+              <time>{{ .published }}</time>
+              {{ $displayText := "" }}
+              {{ if .summary }}
+                {{ if reflect.IsMap .summary }}
+                  {{ $displayText = index .summary "#text" }}
+                {{ else }}
+                  {{ $displayText = .summary }}
+                {{ end }}
+              {{ end }}
+              
+              {{/* If summary is empty, try content */}}
+              {{ if not $displayText }}
+                {{ if .content }}
+                  {{ if reflect.IsMap .content }}
+                    {{ $displayText = index .content "#text" }}
+                  {{ else }}
+                    {{ $displayText = .content }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+              
+              {{ if $displayText }}
+                <p>{{ $displayText | safeHTML | plainify | truncate 200 }}</p>
+              {{ end }}
+              {{ if $postUrl }}
+                <a href="{{ $postUrl }}" target="_blank" rel="noopener">Read full review →</a>
+              {{ end }}
+            </article>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      
+      {{/* Handle RSS feed format */}}
+      {{ if .channel }}
+        {{ range .channel.item }}
+          {{ $showPost := true }}
+          
+          {{ if $author }}
+            {{ $showPost = false }}
+            
+            {{/* Check author field */}}
+            {{ if .author }}
+              {{ if in (lower .author) (lower $author) }}
+                {{ $showPost = true }}
+              {{ end }}
+            {{ end }}
+            
+            {{/* Check dc:creator */}}
+            {{ $creator := index . "dc:creator" }}
+            {{ if $creator }}
+              {{ if in (lower $creator) (lower $author) }}
+                {{ $showPost = true }}
+              {{ end }}
+            {{ end }}
+            
+            {{/* Check title */}}
+            {{ if .title }}
+              {{ if in (lower .title) (lower $author) }}
+                {{ $showPost = true }}
+              {{ end }}
+            {{ end }}
+            
+            {{/* Check description */}}
+            {{ if .description }}
+              {{ if in (lower .description) (lower $author) }}
+                {{ $showPost = true }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          
+          {{ if and $showPost (lt $count $limit) }}
+            {{ $count = add $count 1 }}
+            <article class="rss-post">
+              <h3><a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a></h3>
+              <time>{{ .pubDate }}</time>
+              {{ with .description }}
+                <p>{{ . | safeHTML | plainify | truncate 200 }}</p>
+              {{ end }}
+              <a href="{{ .link }}" target="_blank" rel="noopener">Read full review →</a>
+            </article>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      
+      {{ if eq $count 0 }}
+        <p class="no-results">No articles found{{ if $author }} by {{ $author }}{{ end }}. {{ if not $debug }}Try adding debug="true" to see feed structure.{{ end }}</p>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
+
+<style>
+.rss-feed {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.rss-feed h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.debug-info {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+}
+
+.debug-info h3, .debug-info h4 {
+  margin-top: 0;
+  color: #856404;
+}
+
+.rss-posts {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.rss-post {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #0066cc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rss-post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.rss-post h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.rss-post h3 a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.rss-post h3 a:hover {
+  text-decoration: underline;
+  color: #0052a3;
+}
+
+.rss-post time {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.rss-post p {
+  margin: 0.5rem 0 1rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.rss-post > a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rss-post > a:hover {
+  text-decoration: underline;
+}
+
+.rss-post > a::after {
+  content: ' →';
+  margin-left: 0.25rem;
+}
+
+.error {
+  color: #d32f2f;
+  padding: 1rem;
+  background: #ffebee;
+  border-radius: 4px;
+  border-left: 4px solid #d32f2f;
+}
+
+.no-results {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 6px;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+</style>
