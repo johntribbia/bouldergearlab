@@ -40,7 +40,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAGES_TOKEN }}
           enablement: github_pages
 
       - name: Build with Hugo
