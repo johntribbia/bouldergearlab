@@ -1,0 +1,7 @@
+# This file contains sensitive credentials and should never be committed to git
+# Copy this file to hugo.config.local.toml and fill in your actual values
+
+[params]
+    # Google Custom Search configuration
+    googleSearchApiKey = "***REMOVED***"
+    googleSearchEngineId = "06bf7648c6df3486f"
