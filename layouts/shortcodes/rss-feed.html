@@ -85,53 +85,7 @@ Description: {{ .description | plainify | truncate 200 }}
             {{ $showPost = false }}
             
             {{/* Check author name in Atom format */}}
-            {{ if .author }}
-              {{ $authorName := "" }}
-              {{ if reflect.IsMap .author }}
-                {{ if .author.name }}
-                  {{ if reflect.IsMap .author.name }}
-                    {{ $authorName = index .author.name "#text" }}
-                  {{ else }}
-                    {{ $authorName = .author.name }}
-                  {{ end }}
-                {{ end }}
-              {{ else }}
-                {{ $authorName = .author }}
-              {{ end }}
-              
-              {{ if $authorName }}
-                {{ if in (lower $authorName) (lower $author) }}
-                  {{ $showPost = true }}
-                {{ end }}
-              {{ end }}
-            {{ end }}
-            
-            {{/* Check title */}}
-            {{ if .title }}
-              {{ $titleText := "" }}
-              {{ if reflect.IsMap .title }}
-                {{ $titleText = index .title "#text" }}
-              {{ else }}
-                {{ $titleText = .title }}
-              {{ end }}
-              {{ if in (lower $titleText) (lower $author) }}
-                {{ $showPost = true }}
-              {{ end }}
-            {{ end }}
-            
-            {{/* Check summary/content - extract "Article by" text and check content thoroughly */}}
-            {{ if .summary }}
-              {{ $summaryText := "" }}
-              {{ if reflect.IsMap .summary }}
-                {{ $summaryText = index .summary "#text" }}
-              {{ else }}
-                {{ $summaryText = .summary }}
-              {{ end }}
-              {{ if in (lower $summaryText) (lower $author) }}
-                {{ $showPost = true }}
-              {{ end }}
-            {{ end }}
-            
+            {{/* For Blogger Atom feeds, author is in HTML content as "Article by [Name]" */}}
             {{ if .content }}
               {{ $contentText := "" }}
               {{ if reflect.IsMap .content }}
@@ -139,14 +93,39 @@ Description: {{ .description | plainify | truncate 200 }}
               {{ else }}
                 {{ $contentText = .content }}
               {{ end }}
-              {{ if in (lower $contentText) (lower $author) }}
-                {{ $showPost = true }}
-              {{ end }}
               
-              {{/* For HTML content, look for "Article by [Author]" pattern */}}
               {{ $plainContent := $contentText | plainify | lower }}
               {{ if in $plainContent (lower $author) }}
                 {{ $showPost = true }}
+              {{ end }}
+            {{ end }}
+            
+            {{/* Fallback: check other fields */}}
+            {{ if not $showPost }}
+              {{ if .summary }}
+                {{ $summaryText := "" }}
+                {{ if reflect.IsMap .summary }}
+                  {{ $summaryText = index .summary "#text" }}
+                {{ else }}
+                  {{ $summaryText = .summary }}
+                {{ end }}
+                {{ if in (lower $summaryText) (lower $author) }}
+                  {{ $showPost = true }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            
+            {{ if not $showPost }}
+              {{ if .title }}
+                {{ $titleText := "" }}
+                {{ if reflect.IsMap .title }}
+                  {{ $titleText = index .title "#text" }}
+                {{ else }}
+                  {{ $titleText = .title }}
+                {{ end }}
+                {{ if in (lower $titleText) (lower $author) }}
+                  {{ $showPost = true }}
+                {{ end }}
               {{ end }}
             {{ end }}
           {{ end }}
@@ -204,7 +183,7 @@ Description: {{ .description | plainify | truncate 200 }}
                 <p>{{ $displayText | safeHTML | plainify | truncate 200 }}</p>
               {{ end }}
               {{ if $postUrl }}
-                <a href="{{ $postUrl }}" target="_blank" rel="noopener">Read full review →</a>
+                <a href="{{ $postUrl }}" target="_blank" rel="noopener">Read full review</a>
               {{ end }}
             </article>
           {{ end }}
@@ -255,9 +234,11 @@ Description: {{ .description | plainify | truncate 200 }}
               <h3><a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a></h3>
               <time>{{ .pubDate }}</time>
               {{ with .description }}
-                <p>{{ . | safeHTML | plainify | truncate 200 }}</p>
+                {{ $desc := . | safeHTML | plainify }}
+                {{ $desc = (replace $desc "CLICK to Read more »" "") }}
+                <p>{{ $desc | truncate 200 }}</p>
               {{ end }}
-              <a href="{{ .link }}" target="_blank" rel="noopener">Read full review →</a>
+              <a href="{{ .link }}" target="_blank" rel="noopener">Read full review</a>
             </article>
           {{ end }}
         {{ end }}

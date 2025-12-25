@@ -2,18 +2,298 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shoes on Boulder Gear Lab</title>
-    <link>https://www.bouldergearlab.com/tags/shoes/</link>
+    <link>http://localhost:1313/tags/shoes/</link>
     <description>Recent content in Shoes on Boulder Gear Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.bouldergearlab.com/tags/shoes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/shoes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Gear Review</title>
-      <link>https://www.bouldergearlab.com/reviews/2025/12/23/first-review/</link>
-      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.bouldergearlab.com/reviews/2025/12/23/first-review/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s my detailed review&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;&#xA;&lt;p&gt;After testing for several weeks&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;video-review&#34;&gt;Video Review&lt;/h2&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;final-verdict&#34;&gt;Final Verdict&lt;/h2&gt;&#xA;&lt;p&gt;Overall thoughts&amp;hellip;&lt;/p&gt;</description>
+      <title>A Detailed Look At The Sealskinz</title>
+      <link>http://localhost:1313/reviews/2024/01/01/a-detailed-look-at-the-sealskinz/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/a-detailed-look-at-the-sealskinz/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Alpine Start With Benefits</title>
+      <link>http://localhost:1313/reviews/2024/01/01/alpine-start-with-benefits/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/alpine-start-with-benefits/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apple Watch Series 9 Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/apple-watch-series-9-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/apple-watch-series-9-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Borealis Flume And Crestone Fat Bike</title>
+      <link>http://localhost:1313/reviews/2024/01/01/borealis-flume-and-crestone-fat-bike/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/borealis-flume-and-crestone-fat-bike/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Boulder Gear Lab Running And Bike</title>
+      <link>http://localhost:1313/reviews/2024/01/01/boulder-gear-lab-running-and-bike/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/boulder-gear-lab-running-and-bike/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bridging The Gap A Comprehensive</title>
+      <link>http://localhost:1313/reviews/2024/01/01/bridging-the-gap-a-comprehensive/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/bridging-the-gap-a-comprehensive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brooks Catamount 2 Multi Tester Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/brooks-catamount-2-multi-tester-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/brooks-catamount-2-multi-tester-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dos And Donts Of Stroller Running</title>
+      <link>http://localhost:1313/reviews/2024/01/01/dos-and-donts-of-stroller-running/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/dos-and-donts-of-stroller-running/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Eastern Outer Bamboo Floating Sunglasses</title>
+      <link>http://localhost:1313/reviews/2024/01/01/eastern-outer-bamboo-floating-sunglasses/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/eastern-outer-bamboo-floating-sunglasses/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hoka Speedgoat 5 Gtx Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/hoka-speedgoat-5-gtx-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/hoka-speedgoat-5-gtx-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Horizon Fitness 78 At Treadmill Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/horizon-fitness-78-at-treadmill-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/horizon-fitness-78-at-treadmill-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How To Adopt The Cargo Bike Lifestyle</title>
+      <link>http://localhost:1313/reviews/2024/01/01/how-to-adopt-the-cargo-bike-lifestyle/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/how-to-adopt-the-cargo-bike-lifestyle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How To Adopt The Cargo Bike Lifestyle 101</title>
+      <link>http://localhost:1313/reviews/2024/01/01/how-to-adopt-the-cargo-bike-lifestyle-101/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/how-to-adopt-the-cargo-bike-lifestyle-101/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How To Adopt The Cargo Bike Lifestyle 2De</title>
+      <link>http://localhost:1313/reviews/2024/01/01/how-to-adopt-the-cargo-bike-lifestyle-2de/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/how-to-adopt-the-cargo-bike-lifestyle-2de/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How To Adopt The Cargo Bike Lifestyle 8E8</title>
+      <link>http://localhost:1313/reviews/2024/01/01/how-to-adopt-the-cargo-bike-lifestyle-8e8/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/how-to-adopt-the-cargo-bike-lifestyle-8e8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kahtoola Exospikes Review And Comparison</title>
+      <link>http://localhost:1313/reviews/2024/01/01/kahtoola-exospikes-review-and-comparison/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/kahtoola-exospikes-review-and-comparison/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Koo Alibi Sunglasses From Roadtrailrun</title>
+      <link>http://localhost:1313/reviews/2024/01/01/koo-alibi-sunglasses-from-roadtrailrun/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/koo-alibi-sunglasses-from-roadtrailrun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>La Sportiva Karacal</title>
+      <link>http://localhost:1313/reviews/2024/01/01/la-sportiva-karacal/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/la-sportiva-karacal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>La Sportiva Prodigio Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/la-sportiva-prodigio-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/la-sportiva-prodigio-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Liquid Iv</title>
+      <link>http://localhost:1313/reviews/2024/01/01/liquid-iv/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/liquid-iv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Livsn Flex Canvas Shorts Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/livsn-flex-canvas-shorts-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/livsn-flex-canvas-shorts-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Livsn Reflex Shorts Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/livsn-reflex-shorts-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/livsn-reflex-shorts-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Naawk Sunscreen</title>
+      <link>http://localhost:1313/reviews/2024/01/01/naawk-sunscreen/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/naawk-sunscreen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Odorless Feet But At What Cost</title>
+      <link>http://localhost:1313/reviews/2024/01/01/odorless-feet-but-at-what-cost/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/odorless-feet-but-at-what-cost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ororo Heated Clothing Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/ororo-heated-clothing-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/ororo-heated-clothing-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Path Projects Round Up Review Where</title>
+      <link>http://localhost:1313/reviews/2024/01/01/path-projects-round-up-review-where/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/path-projects-round-up-review-where/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pearl Izumi Amfib Lobster Gel Gloves</title>
+      <link>http://localhost:1313/reviews/2024/01/01/pearl-izumi-amfib-lobster-gel-gloves/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/pearl-izumi-amfib-lobster-gel-gloves/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pearl Izumi Amfib Shoe Covers Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/pearl-izumi-amfib-shoe-covers-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/pearl-izumi-amfib-shoe-covers-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Penny Pinching For Cycling Gloves</title>
+      <link>http://localhost:1313/reviews/2024/01/01/penny-pinching-for-cycling-gloves/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/penny-pinching-for-cycling-gloves/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Priority Current Ebike Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/priority-current-ebike-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/priority-current-ebike-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ride Priority Continuum Onyx Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/ride-priority-continuum-onyx-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/ride-priority-continuum-onyx-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ride1Up Portola Folding Ebike Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/ride1up-portola-folding-ebike-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/ride1up-portola-folding-ebike-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Salomon Pulsar Trail Pro Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/salomon-pulsar-trail-pro-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/salomon-pulsar-trail-pro-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Santa Cruz Highball Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/santa-cruz-highball-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/santa-cruz-highball-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Seeing Clearly Through Shifting Light</title>
+      <link>http://localhost:1313/reviews/2024/01/01/seeing-clearly-through-shifting-light/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/seeing-clearly-through-shifting-light/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Snowshoe Running</title>
+      <link>http://localhost:1313/reviews/2024/01/01/snowshoe-running/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/snowshoe-running/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>State 4130 All Road 700C Gravel Bike</title>
+      <link>http://localhost:1313/reviews/2024/01/01/state-4130-all-road-700c-gravel-bike/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/state-4130-all-road-700c-gravel-bike/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tenways Cgo600 Pro Ebike Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/tenways-cgo600-pro-ebike-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/tenways-cgo600-pro-ebike-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tenways Cgo800S Ebike Review</title>
+      <link>http://localhost:1313/reviews/2024/01/01/tenways-cgo800s-ebike-review/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/tenways-cgo800s-ebike-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Urtopia Unveils The Worlds First</title>
+      <link>http://localhost:1313/reviews/2024/01/01/urtopia-unveils-the-worlds-first/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/urtopia-unveils-the-worlds-first/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Who Made The Pb In The Pb And J</title>
+      <link>http://localhost:1313/reviews/2024/01/01/who-made-the-pb-in-the-pb-and-j/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reviews/2024/01/01/who-made-the-pb-in-the-pb-and-j/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

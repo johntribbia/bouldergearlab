@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Boulder Gear Lab</title>
-    <link>https://www.bouldergearlab.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Boulder Gear Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.bouldergearlab.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running</title>
-      <link>https://www.bouldergearlab.com/tags/running/</link>
-      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.bouldergearlab.com/tags/running/</guid>
+      <link>http://localhost:1313/tags/running/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/running/</guid>
       <description></description>
     </item>
     <item>
       <title>Shoes</title>
-      <link>https://www.bouldergearlab.com/tags/shoes/</link>
-      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.bouldergearlab.com/tags/shoes/</guid>
+      <link>http://localhost:1313/tags/shoes/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/shoes/</guid>
       <description></description>
     </item>
   </channel>

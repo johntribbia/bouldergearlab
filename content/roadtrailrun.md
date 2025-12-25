@@ -11,7 +11,7 @@ Road Trail Run is one of the most respected voices in the running community, kno
 
 Below are my most recent contributions:
 
-{{< rss-feed url="https://www.roadtrailrun.com/feeds/posts/default?max-results=500" limit="50" author="John Tribbia" debug="false" >}}
+{{< rss-feed url="https://www.roadtrailrun.com/feeds/posts/default?max-results=500" limit="50" author="Tribbia" debug="false" >}}
 
 ---
 
