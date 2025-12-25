@@ -43,10 +43,18 @@ jobs:
           token: ${{ secrets.PAGES_TOKEN }}
           enablement: github_pages
 
+      - name: Create local config with credentials
+        run: |
+          cat > hugo.config.local.toml << 'EOF'
+          [params]
+              googleSearchApiKey = "${{ secrets.GOOGLE_SEARCH_API_KEY }}"
+              googleSearchEngineId = "${{ secrets.GOOGLE_SEARCH_ENGINE_ID }}"
+          EOF
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
-        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/" --config hugo.toml,hugo.config.local.toml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
