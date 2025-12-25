@@ -1,0 +1,169 @@
+{{ $apiKey := .Get "apiKey" | default .Site.Params.googleSearchApiKey }}
+{{ $cx := .Get "cx" | default .Site.Params.googleSearchEngineId }}
+{{ $query := .Get "query" | default "John Tribbia" }}
+{{ $limit := .Get "limit" | default 50 }}
+{{ $debug := .Get "debug" | default "false" }}
+
+{{ if or (not $apiKey) (not $cx) }}
+  <div class="search-feed">
+    <p class="error">Google Custom Search is not configured. Please add googleSearchApiKey and googleSearchEngineId to your site config.</p>
+  </div>
+{{ else }}
+
+{{ $encodedQuery := printf "%s" ($query | urlize) | replaceRE "-" "%20" }}
+{{ $url := printf "https://www.googleapis.com/customsearch/v1?key=%s&cx=%s&q=%s&num=10" $apiKey $cx $encodedQuery }}
+{{ $fetchError := false }}
+{{ $searchResults := "" }}
+
+{{ with resources.GetRemote $url }}
+  {{ $searchResults = . | transform.Unmarshal }}
+{{ else }}
+  {{ $fetchError = true }}
+{{ end }}
+
+{{ if $fetchError }}
+  <div class="search-feed">
+    <p class="error">Unable to fetch search results. Please check back later.</p>
+  </div>
+{{ else }}
+  {{ with $searchResults }}
+  <div class="search-feed">
+    {{ if and $debug (ne $debug "false") }}
+      <div class="debug-info">
+        <h3>DEBUG MODE - Search Results:</h3>
+        <pre style="background: #f0f0f0; padding: 1rem; overflow-x: auto; font-size: 0.85rem;">
+{{ if .queries }}Total Results: {{ index .queries.request 0 | .totalResults }}{{ end }}
+        </pre>
+      </div>
+    {{ end }}
+
+    <div class="search-posts">
+      {{ if .items }}
+        {{ range first $limit .items }}
+          <article class="search-post">
+            <h3>
+              <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+            </h3>
+            {{ if .displayLink }}
+              <p class="source">{{ .displayLink }}</p>
+            {{ end }}
+            {{ if .snippet }}
+              <p>{{ .snippet | plainify | truncate 200 }}</p>
+            {{ end }}
+            <a href="{{ .link }}" target="_blank" rel="noopener" class="read-more">Read article →</a>
+          </article>
+        {{ end }}
+      {{ else }}
+        <p class="no-results">No articles found for "{{ $query }}".</p>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
+
+<style>
+.search-feed {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.search-feed h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.debug-info {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+}
+
+.debug-info h3 {
+  margin-top: 0;
+  color: #856404;
+}
+
+.search-posts {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.search-post {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #0066cc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.search-post h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.search-post h3 a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.search-post h3 a:hover {
+  text-decoration: underline;
+  color: #0052a3;
+}
+
+.search-post .source {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.search-post p {
+  margin: 0.5rem 0 1rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.search-post .read-more {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-post .read-more:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #d32f2f;
+  padding: 1rem;
+  background: #ffebee;
+  border-radius: 4px;
+  border-left: 4px solid #d32f2f;
+}
+
+.no-results {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 6px;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+</style>
+{{ end }}

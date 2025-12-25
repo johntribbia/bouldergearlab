@@ -45,6 +45,10 @@ summaryLength = 70
     logo_small = "img/logo-small.png"
     contact_url = "/contact"
     
+    # Google Custom Search configuration
+    googleSearchApiKey = ""
+    googleSearchEngineId = ""
+    
     address = """<p class="text-uppercase"><strong>Boulder Gear Lab</strong>
         <br>Boulder, Colorado
         <br>
