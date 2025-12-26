@@ -30,7 +30,7 @@ summaryLength = 70
     formspree_action = ""
     contact_form_ajax = false
 
-    about_us = "<p>Boulder Gear Lab applies rigorous, data-driven methodology to both outdoor gear testing and analytics projects. Led by John Tribbia, a Senior Staff Data Scientist at Google and outdoor enthusiast based in Boulder, Colorado.</p>"
+    about_us = "<p>Boulder Gear Lab applies rigorous, data-driven methodology to both outdoor gear testing and analytics projects. Led by John Tribbia, a Data Scientist and outdoor enthusiast based in Boulder, Colorado.</p>"
     
     copyright = "Copyright (c) 2025, Boulder Gear Lab; all rights reserved."
 
