@@ -4,3 +4,12 @@ resources/
 .hugo_build.lock
 .env
 hugo.config.local.toml
+
+# Hugo specific
+public/
+resources/_gen/
+.hugo_build.lock
+
+# OS specific
+.DS_Store
+Thumbs.db
