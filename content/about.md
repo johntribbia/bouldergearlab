@@ -1,6 +1,7 @@
 ---
 title: "About Boulder Gear Lab"
 date: 2024-12-23
+banner: "image_0.jpg"
 ---
 
 # About Boulder Gear Lab
