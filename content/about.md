@@ -3,7 +3,7 @@ title: "About Boulder Gear Lab"
 date: 2024-12-23
 banner: "image_0.jpg"
 ---
-
+![image_0.jpg](image_0.jpg)
 # About Boulder Gear Lab
 
 ## Testing Gear Where It Matters Most
