@@ -17,7 +17,7 @@ summaryLength = 70
     author = "John Tribbia"
     defaultKeywords = ["gear reviews", "data science", "outdoor equipment", "analytics", "Boulder Colorado"]
     mainSections = ["reviews", "data-projects"]
-    defaultDescription = "Data-driven gear testing and analytics projects from Boulder, Colorado"
+    defaultDescription = "Data-driven gear testing and data projects from Boulder, Colorado"
 
     # Social media
     twitter_site = "" # your Twitter handle
@@ -25,7 +25,7 @@ summaryLength = 70
     linkedin = "https://www.linkedin.com/in/john-tribbia/"
 
     # Style: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "blue"
+    style = "green"
 
     formspree_action = ""
     contact_form_ajax = false
