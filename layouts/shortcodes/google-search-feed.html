@@ -11,7 +11,7 @@
 {{ else }}
 
 {{ $encodedQuery := printf "%s" ($query | urlize) | replaceRE "-" "%20" }}
-{{ $url := printf "https://www.googleapis.com/customsearch/v1?key=%s&cx=%s&q=%s&num=10" $apiKey $cx $encodedQuery }}
+{{ $url := printf "https://www.googleapis.com/customsearch/v1?key=%s&cx=%s&q=%s&num=10&sort=date" $apiKey $cx $encodedQuery }}
 {{ $fetchError := false }}
 {{ $searchResults := "" }}
 
