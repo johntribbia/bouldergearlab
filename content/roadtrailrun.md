@@ -9,10 +9,10 @@ Road Trail Run is one of the most respected voices in the running community, kno
 
 ## My Latest Articles
 
-Below are all my contributions to Road Trail Run:
+Below are my recent contributions to Road Trail Run:
 
 {{< google-search-feed >}}
 
 ---
 
-Visit [Road Trail Run](https://www.roadtrailrun.com) to see the full archive of reviews and running content.
+Visit [Road Trail Run](https://www.roadtrailrun.com/search?q=john+tribbia) to see the full archive of my reviews and running content.
