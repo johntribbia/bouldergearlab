@@ -1,8 +1,8 @@
 ---
 title: "Path Projects Round Up Review Where"
-date: 2024-01-01
+date: 2024-01-28
 banner: "image_1.png"
-tags: ["running", "shoes"]
+tags: ["running", "apparel"]
 categories: ["reviews"]
 description: ""
 draft: false

@@ -1,8 +1,8 @@
 ---
 title: "Snowshoe Running"
-date: 2024-01-01
+date: 2014-03-04
 banner: "image_0.jpg"
-tags: ["running", "shoes"]
+tags: ["running", "winter"]
 categories: ["reviews"]
 description: ""
 draft: false

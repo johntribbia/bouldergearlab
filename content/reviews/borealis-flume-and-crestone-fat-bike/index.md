@@ -1,8 +1,8 @@
 ---
 title: "Borealis Flume And Crestone Fat Bike"
-date: 2024-01-01
+date: 2024-02-17
 banner: "image_0.jpg"
-tags: ["running", "shoes"]
+tags: ["cycling", "bikes"]
 categories: ["reviews"]
 description: ""
 draft: false

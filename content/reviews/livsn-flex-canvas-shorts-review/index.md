@@ -1,8 +1,8 @@
 ---
 title: "Livsn Flex Canvas Shorts Review"
-date: 2024-01-01
+date: 2024-07-01
 banner: "image_0.jpg"
-tags: ["running", "shoes"]
+tags: ["running", "apparel"]
 categories: ["reviews"]
 description: ""
 draft: false

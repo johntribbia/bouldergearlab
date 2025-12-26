@@ -1,8 +1,8 @@
 ---
 title: "Seeing Clearly Through Shifting Light"
-date: 2024-01-01
+date: 2023-08-13
 banner: "image_0.png"
-tags: ["running", "shoes"]
+tags: ["running", "accessories"]
 categories: ["reviews"]
 description: ""
 draft: false

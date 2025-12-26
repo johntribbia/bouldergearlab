@@ -32,7 +32,7 @@ summaryLength = 70
 
     about_us = "<p>Boulder Gear Lab applies rigorous, data-driven methodology to both outdoor gear testing and analytics projects. Led by John Tribbia, a Senior Staff Data Scientist at Google and outdoor enthusiast based in Boulder, Colorado.</p>"
     
-    copyright = "Copyright (c) 2024-2025, Boulder Gear Lab; all rights reserved."
+    copyright = "Copyright (c) 2025, Boulder Gear Lab; all rights reserved."
 
     date_format = "January 2, 2006"
 
@@ -50,9 +50,8 @@ summaryLength = 70
     googleSearchEngineId = ""
     
     address = """<p class="text-uppercase"><strong>Boulder Gear Lab</strong>
-        <br>Boulder, Colorado
         <br>
-        <strong>USA</strong>
+        <br>Boulder, Colorado USA
       </p>
       """
 
@@ -62,7 +61,7 @@ summaryLength = 70
 
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Data-driven gear testing • Analytics projects • Boulder, Colorado</p>
+    text = """<p class="hidden-sm hidden-xs">Data-driven gear testing • Data projects • Boulder, Colorado</p>
       """
 
 [params.widgets]

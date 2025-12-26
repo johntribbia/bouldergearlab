@@ -1,6 +1,6 @@
 ---
 title: "La Sportiva Karacal"
-date: 2024-01-01
+date: 2020-12-14
 banner: "image_12.jpg"
 tags: ["running", "shoes"]
 categories: ["reviews"]

@@ -1,8 +1,8 @@
 ---
 title: "Odorless Feet But At What Cost"
-date: 2024-01-01
+date: 2023-11-01
 banner: "image_1.jpg"
-tags: ["running", "shoes"]
+tags: ["running", "accessories"]
 categories: ["reviews"]
 description: ""
 draft: false

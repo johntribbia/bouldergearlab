@@ -1,8 +1,8 @@
 ---
 title: "Ride Priority Continuum Onyx Review"
-date: 2024-01-01
+date: 2022-09-21
 banner: "image_1.png"
-tags: ["running", "shoes"]
+tags: ["cycling"]
 categories: ["reviews"]
 description: ""
 draft: false

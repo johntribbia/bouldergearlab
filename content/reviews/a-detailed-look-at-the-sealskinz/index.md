@@ -1,8 +1,8 @@
 ---
 title: "A Detailed Look At The Sealskinz"
-date: 2024-01-01
+date: 2024-01-28
 banner: "image_10.jpg"
-tags: ["running", "shoes"]
+tags: ["cycling", "accessories"]
 categories: ["reviews"]
 description: ""
 draft: false

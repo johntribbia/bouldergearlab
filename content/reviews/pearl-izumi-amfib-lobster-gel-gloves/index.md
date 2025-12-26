@@ -1,8 +1,8 @@
 ---
 title: "Pearl Izumi Amfib Lobster Gel Gloves"
-date: 2024-01-01
+date: 2024-01-13
 banner: "image_0.png"
-tags: ["running", "shoes"]
+tags: ["cycling", "accessories"]
 categories: ["reviews"]
 description: ""
 draft: false

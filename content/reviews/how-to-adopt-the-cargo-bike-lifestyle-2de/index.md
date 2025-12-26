@@ -1,8 +1,8 @@
 ---
-title: "How To Adopt The Cargo Bike Lifestyle 2De"
-date: 2024-01-01
+title: "How To Adopt The Cargo Bike Lifestyle Part II"
+date: 2024-06-01
 banner: "image_1.jpg"
-tags: ["running", "shoes"]
+tags: ["cycling", "ebikes"]
 categories: ["reviews"]
 description: ""
 draft: false
@@ -25,9 +25,6 @@ another 30K miles of life on it, but the 20 year-old college student who
 rear ended me as I was waiting to merge into traffic had different plans
 for the fate of that car. Most importantly, and thankfully, nobody was
 hurt!**
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
 
 **After dealing with all of the nuances relating to police reports,
 insurance claims, and coming to grips with the total loss, a strange

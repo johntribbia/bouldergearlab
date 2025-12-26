@@ -1,6 +1,6 @@
 ---
 title: "La Sportiva Prodigio Review"
-date: 2024-01-01
+date: 2023-12-11
 banner: "image_0.png"
 tags: ["running", "shoes"]
 categories: ["reviews"]

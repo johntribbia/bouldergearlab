@@ -1,8 +1,8 @@
 ---
 title: "Horizon Fitness 78 At Treadmill Review"
-date: 2024-01-01
+date: 2024-06-23
 banner: "image_1.png"
-tags: ["running", "shoes"]
+tags: ["running", "home fitness"]
 categories: ["reviews"]
 description: ""
 draft: false

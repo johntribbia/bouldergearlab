@@ -1,8 +1,8 @@
 ---
 title: "Ororo Heated Clothing Review"
-date: 2024-01-01
+date: 2023-01-01
 banner: "image_0.jpg"
-tags: ["running", "shoes"]
+tags: ["running", "apparel"]
 categories: ["reviews"]
 description: ""
 draft: false

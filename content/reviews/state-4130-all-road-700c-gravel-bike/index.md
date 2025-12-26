@@ -1,8 +1,8 @@
 ---
 title: "State 4130 All Road 700C Gravel Bike"
-date: 2024-01-01
+date: 2022-05-24
 banner: "image_1.png"
-tags: ["running", "shoes"]
+tags: ["cycling"]
 categories: ["reviews"]
 description: ""
 draft: false

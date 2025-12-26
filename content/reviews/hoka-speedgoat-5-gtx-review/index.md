@@ -1,6 +1,6 @@
 ---
 title: "Hoka Speedgoat 5 Gtx Review"
-date: 2024-01-01
+date: 2023-01-01
 banner: "image_1.jpg"
 tags: ["running", "shoes"]
 categories: ["reviews"]

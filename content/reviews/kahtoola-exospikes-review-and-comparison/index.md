@@ -1,8 +1,8 @@
 ---
 title: "Kahtoola Exospikes Review And Comparison"
-date: 2024-01-01
+date: 2025-03-01
 banner: "image_1.jpg"
-tags: ["running", "shoes"]
+tags: ["running", "accessories"]
 categories: ["reviews"]
 description: ""
 draft: false
@@ -108,6 +108,3 @@ topped 1,000,000 feet twice. He is equally obsessed with Bear Peak,
 which he has almost gridded and climbed almost 1,300 times! 
 
 ------------------------------------------------------------------------
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

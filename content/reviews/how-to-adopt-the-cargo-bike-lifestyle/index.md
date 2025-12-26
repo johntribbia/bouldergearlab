@@ -1,6 +1,6 @@
 ---
-title: "How To Adopt The Cargo Bike Lifestyle"
-date: 2024-01-01
+title: "How To Adopt The Cargo Bike Lifestyle Part I"
+date: 2024-05-01
 banner: "image_3.jpg"
 tags: ["running", "shoes"]
 categories: ["reviews"]
@@ -34,8 +34,6 @@ Colorado Front Range weather boasts 300-plus days of sunshine. Yet, I
 saw lines of cars and trucks sitting idly in traffic while I leisurely
 passed them in my cross-town commute by bike each day.**
 
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
 
 **Much to my disappointment, eleven years later, traffic is still at a
 standstill in an even longer queue and the air quality has increasingly

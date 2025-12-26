@@ -1,8 +1,8 @@
 ---
 title: "Tenways Cgo600 Pro Ebike Review"
-date: 2024-01-01
+date: 2022-10-24
 banner: "image_0.png"
-tags: ["running", "shoes"]
+tags: ["cycling", "ebikes"]
 categories: ["reviews"]
 description: ""
 draft: false

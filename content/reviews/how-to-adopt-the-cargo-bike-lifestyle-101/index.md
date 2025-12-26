@@ -1,8 +1,8 @@
 ---
-title: "How To Adopt The Cargo Bike Lifestyle 101"
-date: 2024-01-01
+title: "How To Adopt The Cargo Bike Lifestyle Part III"
+date: 2024-07-01
 banner: "image_2.jpg"
-tags: ["running", "shoes"]
+tags: ["cycling", "ebikes"]
 categories: ["reviews"]
 description: ""
 draft: false

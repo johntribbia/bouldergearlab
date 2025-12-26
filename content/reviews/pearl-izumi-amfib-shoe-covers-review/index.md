@@ -1,8 +1,8 @@
 ---
 title: "Pearl Izumi Amfib Shoe Covers Review"
-date: 2024-01-01
+date: 2024-01-17
 banner: "image_10.jpg"
-tags: ["running", "shoes"]
+tags: ["cycling", "accessories"]
 categories: ["reviews"]
 description: ""
 draft: false

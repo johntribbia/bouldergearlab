@@ -1,8 +1,8 @@
 ---
 title: "Eastern Outer Bamboo Floating Sunglasses"
-date: 2024-01-01
+date: 2024-05-11
 banner: "image_1.png"
-tags: ["running", "shoes"]
+tags: ["running", "accessories"]
 categories: ["reviews"]
 description: ""
 draft: false

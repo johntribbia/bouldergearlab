@@ -1,8 +1,8 @@
 ---
 title: "Priority Current Ebike Review"
-date: 2024-01-01
+date: 2022-09-15
 banner: "image_11.png"
-tags: ["running", "shoes"]
+tags: ["cycling", "ebikes"]
 categories: ["reviews"]
 description: ""
 draft: false
