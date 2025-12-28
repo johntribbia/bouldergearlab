@@ -109,27 +109,27 @@ summaryLength = 70
     weight     = 1
 
 [[menu.main]]
+    name       = "About"
+    identifier = "menu.about"
+    url        = "/about/"
+    weight     = 2
+
+[[menu.main]]
     name       = "Gear Reviews"
     identifier = "menu.reviews"
     url        = "/reviews/"
-    weight     = 2
+    weight     = 3
 
 [[menu.main]]
     name       = "Data Projects"
     identifier = "menu.dataprojects"
     url        = "/data-projects/"
-    weight     = 3
+    weight     = 4
 
 [[menu.main]]
     name       = "Road Trail Run"
     identifier = "menu.roadtrailrun"
     url        = "/roadtrailrun/"
-    weight     = 4
-
-[[menu.main]]
-    name       = "About"
-    identifier = "menu.about"
-    url        = "/about/"
     weight     = 5
 
 [[menu.main]]

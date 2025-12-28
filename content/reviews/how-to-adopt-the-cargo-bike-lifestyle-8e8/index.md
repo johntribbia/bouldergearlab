@@ -1,6 +1,6 @@
 ---
 title: "How To Adopt The Cargo Bike Lifestyle Part IV"
-date: 2024-05-01
+date: 2025-05-01
 banner: "image_1.jpg"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
