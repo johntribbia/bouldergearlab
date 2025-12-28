@@ -28,9 +28,6 @@ The earliest versions of peanut butter were more like a chunky paste,
 and they were often used as a medicine or a food for people who couldn't
 chew solid food, like old folks with no teeth.
 
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
-
 The first person to patent a peanut butter-making machine was a man
 named Marcellus Gilmore Edson of Montreal, Quebec, Canada. He filed his
 patent in 1884, and his machine was designed to grind roasted peanuts
@@ -138,7 +135,3 @@ the next jar and stir until it is smooth, and so on.
 href="https://substackcdn.com/image/fetch/$s_!34Ex!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe7d27d5b-c021-4551-a88f-280d0b945b8e_1080x1080.jpeg"
 class="image-link image2 is-viewable-img" target="_blank"
 data-component-name="Image2ToDOM"></a>
-
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

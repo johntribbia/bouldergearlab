@@ -1,6 +1,6 @@
 ---
 title: "Ride Priority Continuum Onyx Review"
-date: 2022-09-21
+date: 2024-09-21
 banner: "image_1.png"
 tags: ["cycling"]
 categories: ["reviews"]
@@ -68,9 +68,6 @@ performant option.
 
 - Heavy and especially at the rear due to the weight of rear hub and
   wheels.
-
-<a href="https://bouldergearlab.substack.com/subscribe?"
-class="button primary"><span>Subscribe now</span></a>
 
 ## First Impressions
 
@@ -287,9 +284,6 @@ components)
 Fun Factor (out of 5) - 🙌 🙌 🙌 🙌 
 
 **Overall Average: 8.8 / 10**
-
-Thanks for reading Boulder Gear Lab Substack! Subscribe for free to
-receive new posts and support my work.
 
 ## Tester Profile
 

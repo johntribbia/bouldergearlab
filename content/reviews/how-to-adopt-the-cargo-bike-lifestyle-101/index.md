@@ -1,6 +1,6 @@
 ---
 title: "How To Adopt The Cargo Bike Lifestyle Part III"
-date: 2024-07-01
+date: 2025-06-01
 banner: "image_2.jpg"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
@@ -38,9 +38,6 @@ As there are important signals to obey when on the road, there are
 equally important signals to obey when shopping for and inquiring about
 new bikes. How To Adopt The Cargo Bike Lifestyle – Step 3 –
 Understanding Cargo Bikes is here to get you ready: 
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
 
 ### Red Light
 
@@ -156,6 +153,3 @@ information when deciding between multiple bikes.
 If you purchase your bike from an independent bike shop, this is yet
 another important piece of information when comparing between multiple
 bikes from different shops.
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

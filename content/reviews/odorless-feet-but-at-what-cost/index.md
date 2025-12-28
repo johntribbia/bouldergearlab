@@ -78,6 +78,3 @@ concerns, offering a more universally comfortable experience. Until
 then, the socks remain a welcome addition to my wardrobe, albeit with
 specific limitations. They're a dependable weapon against foot odor, and
 the battle for ultimate performance continues.
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

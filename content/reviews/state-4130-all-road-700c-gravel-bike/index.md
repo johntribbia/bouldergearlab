@@ -1,6 +1,6 @@
 ---
 title: "State 4130 All Road 700C Gravel Bike"
-date: 2022-05-24
+date: 2025-03-24
 banner: "image_1.png"
 tags: ["cycling"]
 categories: ["reviews"]
@@ -206,6 +206,3 @@ saddle height)
 keep the price down)  
 **Fun Factor (out of 5)** - 🙌 🙌 🙌 🙌   
 **Overall Average: 8 / 10**
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

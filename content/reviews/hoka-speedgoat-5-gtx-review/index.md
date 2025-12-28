@@ -54,9 +54,6 @@ forefoot
 $170. Available now at our partner REI 
 [HERE](https://www.avantlink.com/click.php?tt=cl&merchant_id=e295c418-295a-447c-b265-734e25f82503&website_id=b49fa48c-1149-4bca-b4c4-b5af0c5246a3&url=https%3A%2F%2Fwww.rei.com%2Fsearch%3Fq%3DSpeedgoat%2B5)
 
-<a href="https://bouldergearlab.substack.com/subscribe?"
-class="button primary"><span>Subscribe now</span></a>
-
 ### **First Impressions, Fit and Upper**
 
 **Renee:** The fan favorite Speedgoat returns with a freaking fantastic
@@ -340,6 +337,3 @@ The GTX upper on the Speedgoat is more protective, warmer, and holds up
 to full puddle submersion. I do like the pseudo-gaiter on the Pegasus
 Trail and will always approve of the bright, flashy colorways of the
 Nike. 
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

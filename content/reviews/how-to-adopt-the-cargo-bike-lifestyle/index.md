@@ -1,6 +1,6 @@
 ---
 title: "How To Adopt The Cargo Bike Lifestyle Part I"
-date: 2024-05-01
+date: 2025-08-01
 banner: "image_3.jpg"
 tags: ["running", "shoes"]
 categories: ["reviews"]
@@ -248,6 +248,3 @@ Campuses in Portland, Oregon J MacArthur, N Kobel, J Dill, Z Mumuni**
 
 **McLeod, K., 2015 – How people currently perceive electric bicycles and
 how these new types of bicycles might fit into our work.**
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

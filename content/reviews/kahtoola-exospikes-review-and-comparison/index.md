@@ -1,6 +1,6 @@
 ---
 title: "Kahtoola Exospikes Review And Comparison"
-date: 2025-03-01
+date: 2024-03-01
 banner: "image_1.jpg"
 tags: ["running", "accessories"]
 categories: ["reviews"]

@@ -1,6 +1,6 @@
 ---
 title: "A Detailed Look At The Sealskinz"
-date: 2024-01-28
+date: 2025-01-28
 banner: "image_10.jpg"
 tags: ["cycling", "accessories"]
 categories: ["reviews"]

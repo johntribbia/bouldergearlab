@@ -1,6 +1,6 @@
 ---
 title: "Pearl Izumi Amfib Shoe Covers Review"
-date: 2024-01-17
+date: 2025-01-17
 banner: "image_10.jpg"
 tags: ["cycling", "accessories"]
 categories: ["reviews"]
@@ -113,6 +113,3 @@ Overall, the **PEARL iZUMi** AmFIB Shoe Covers are a great option for
 cyclists who want to keep their toes warm and dry in cold weather.
 They're comfortable to wear, they don't restrict movement, and they're
 affordable. I highly recommend them.
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

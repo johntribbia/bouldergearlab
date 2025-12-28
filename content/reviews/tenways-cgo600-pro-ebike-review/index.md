@@ -9,9 +9,6 @@ draft: false
 ---
 <!--more-->
 
-​
-
-
 ![image_0.png](image_0.png)
 
 
@@ -44,6 +41,3 @@ from A to B)
 Fun Factor (out of 5) - 🙌 🙌 🙌   
 
 Overall Average: 7.7 / 10
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

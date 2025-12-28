@@ -1,6 +1,6 @@
 ---
 title: "How To Adopt The Cargo Bike Lifestyle Part II"
-date: 2024-06-01
+date: 2025-07-01
 banner: "image_1.jpg"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
@@ -146,6 +146,3 @@ trails, and paths.**
 
 **In the end, there are many ways on how to adopt the cargo bike
 lifestyle – choose your bike.**
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

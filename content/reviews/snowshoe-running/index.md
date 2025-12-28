@@ -1,6 +1,6 @@
 ---
 title: "Snowshoe Running"
-date: 2014-03-04
+date: 2025-03-04
 banner: "image_0.jpg"
 tags: ["running", "winter"]
 categories: ["reviews"]
@@ -28,9 +28,6 @@ cyclists, triathletes, and other endurance athletes to get off the
 treadmill or trainer and get back outside. 
 
 Interested yet? Here are a few basics on how to get started:
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
 
 ## Gear
 
@@ -117,7 +114,3 @@ Dion Snowshoe Series in the Northeast:
 href="https://substackcdn.com/image/fetch/$s_!PoEL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feaaea2ca-5c52-4eff-b4b5-babc6f0497e8_640x640.jpeg"
 class="image-link image2 is-viewable-img" target="_blank"
 data-component-name="Image2ToDOM"></a>
-
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

@@ -1,6 +1,6 @@
 ---
 title: "Ride1Up Portola Folding Ebike Review"
-date: 2023-04-23
+date: 2025-04-23
 banner: "image_0.jpg"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
@@ -40,7 +40,3 @@ I was ready to roll (or fold, to be more precise).
 href="https://substackcdn.com/image/fetch/$s_!H0FH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74617a88-661a-4985-9803-67b9e7594901_2554x1916.jpeg"
 class="image-link image2 is-viewable-img" target="_blank"
 data-component-name="Image2ToDOM"></a>
-
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

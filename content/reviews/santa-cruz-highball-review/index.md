@@ -28,9 +28,6 @@ for improving cardiovascular fitness and endurance without all of the
 pounding. And, it can help build underdeveloped muscles that can
 actually improve uphill running economy. 
 
-Thanks for reading Boulder Gear Lab Substack! Subscribe for free to
-receive new posts and support my work.
-
 I recently took the [Santa Cruz
 Highball](https://www.santacruzbicycles.com/en-US/bikes/highball)
 hardtail mountain bike for a 20 minute test ride and found it to be
@@ -221,6 +218,3 @@ as well as 6+ years of working at [University
 Bikes](https://www.ubikes.com/) in Boulder, CO and over 20 years of
 competitive running, he loves the opportunity to test the latest and
 greatest in both sports. 
-
-Thanks for reading Boulder Gear Lab Substack! Subscribe for free to
-receive new posts and support my work.

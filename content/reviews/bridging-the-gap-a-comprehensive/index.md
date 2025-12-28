@@ -1,6 +1,6 @@
 ---
 title: "Bridging The Gap A Comprehensive"
-date: 2024-03-01
+date: 2025-03-01
 banner: "image_0.png"
 tags: ["running", "ski"]
 categories: ["reviews"]
@@ -176,6 +176,3 @@ While not intended for high-speed downhill skiing or racing, the Hok
 opens doors to a new realm of winter experiences, offering a unique
 blend of control, efficiency, and adaptability for exploring the
 untracked landscapes beyond the groomed trails.
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

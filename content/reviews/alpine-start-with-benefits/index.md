@@ -100,6 +100,3 @@ href="https://substackcdn.com/image/fetch/$s_!dSZZ!,f_auto,q_auto:good,fl_progre
 class="image-link image2 is-viewable-img" target="_blank"
 data-component-name="Image2ToDOM"></a>
 
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

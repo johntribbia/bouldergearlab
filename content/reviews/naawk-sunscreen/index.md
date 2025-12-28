@@ -9,11 +9,6 @@ draft: false
 ---
 <!--more-->
 
-## 
-
-<a href="https://bouldergearlab.substack.com/subscribe?"
-class="button primary"><span>Subscribe now</span></a>
-
 ## **Warm weather has come and gone**
 
 and, with it, most people stow away their swimsuits, shorts, Hawaiian
@@ -86,6 +81,3 @@ data-component-name="Image2ToDOM"></a>
   them, cosmetic products typically don’t act as UV defenders if you are
   outside for the day. Look for “broad spectrum”, “UVA and UVB
   protection”, and higher than SPF-30.
-
-  Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-  posts and support my work.

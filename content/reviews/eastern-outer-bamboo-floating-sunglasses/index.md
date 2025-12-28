@@ -119,6 +119,3 @@ data-component-name="Image2ToDOM"></a>
 >
 > - Not ideal for resting on top of the head due to shape and smoothness
 >   of frames
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

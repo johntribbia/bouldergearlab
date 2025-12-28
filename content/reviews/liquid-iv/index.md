@@ -19,7 +19,3 @@ That's where Liquid IV Hydration Multiplier comes in. Or does it?
 
 
 ![image_1.png](image_1.png)
-
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

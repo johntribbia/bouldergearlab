@@ -28,11 +28,6 @@ class="image-link image2 is-viewable-img" target="_blank"
 data-component-name="Image2ToDOM"></a>
 
 
-### 
-
-<a href="https://bouldergearlab.substack.com/subscribe?"
-class="button primary"><span>Subscribe now</span></a>
-
 ### **Introduction**
 
 The Pulsar Trail Pro is Salomon’s new mid to long range trail running
@@ -479,6 +474,3 @@ forefoot, more protection, and a larger base to absorb the terrain. If I
 am going fast and relatively long in mostly non-technical terrain, where
 I need some pep in my step, I’ll go with the Pulsar Trail Pro, but I
 will pull out the Torrents on for most anything else. 
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

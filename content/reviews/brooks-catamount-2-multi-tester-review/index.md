@@ -1,6 +1,6 @@
 ---
 title: "Brooks Catamount 2 Multi Tester Review"
-date: 2024-01-01
+date: 2025-01-01
 banner: "image_0.jpg"
 tags: ["running", "shoes"]
 categories: ["reviews"]
@@ -18,9 +18,6 @@ Reviews Here</span></a>
 
 *Article by Mike Postaski, John Tribbia, Jeff Valliere, Jana
 Herzgova, and Sam Winebaum*
-
-<a href="https://bouldergearlab.substack.com/subscribe?"
-class="button primary"><span>Subscribe now</span></a>
 
 ### **Brooks Catamount 2** ($170)
 
@@ -917,9 +914,6 @@ other than fast paces while the Cat flowed forward smoothly no matter
 the pace and had the impulse from its plate. Hey, Brooks just give the
 Max the plate and midsole geometry of the Cat and a road outsole and you
 would have a clear winner.
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
 
 ### **Tester Profiles**
 

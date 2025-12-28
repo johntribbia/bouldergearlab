@@ -135,6 +135,3 @@ Reflex Shorts to be a great pair of shorts for hiking, bike commuting,
 or any other outdoor activity. They are comfortable, durable, and
 versatile, and they have a number of features that make them ideal for
 these activities.
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

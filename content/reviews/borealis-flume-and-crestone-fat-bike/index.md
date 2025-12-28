@@ -1,11 +1,10 @@
 ---
 title: "Borealis Flume And Crestone Fat Bike"
-date: 2024-02-17
+date: 2025-02-17
 banner: "image_0.jpg"
 tags: ["cycling", "bikes"]
 categories: ["reviews"]
 description: ""
-draft: false
 ---
 <!--more-->
 
@@ -80,9 +79,6 @@ Crestone on the right, a muddy day!
 > depending on how you choose to spec the bike, it could get pricey
 >
 > Jeff: I really cannot come up with a con, this bike is awesome!  
-
-<a href="https://bouldergearlab.substack.com/subscribe?"
-class="button primary"><span>Subscribe now</span></a>
 
 ### **First** **Impressions**
 
@@ -444,9 +440,6 @@ Specs - 10/10 (top quality for their entry level version)
 Fun Factor (out of 5) - 🙌 🙌 🙌 🙌 🙌
 
 **Overall Average: 10 / 10**
-
-Thanks for reading Boulder Gear Lab Substack! Subscribe for free to
-receive new posts and support our work.
 
 ### **Tester Profiles**
 

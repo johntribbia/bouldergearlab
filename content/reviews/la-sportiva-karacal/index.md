@@ -412,5 +412,3 @@ influence our editorial content.*
 
 *The opinions herein are entirely the authors'.*
 
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

@@ -125,5 +125,3 @@ data-component-name="Image2ToDOM"></a>
 Overall, the Livsn Flex Canvas Shorts are a solid pair of shorts. They
 are comfortable, stylish, durable, and secretly reflective at night.
 
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

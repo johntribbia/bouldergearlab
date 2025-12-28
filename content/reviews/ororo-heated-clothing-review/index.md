@@ -1,6 +1,6 @@
 ---
 title: "Ororo Heated Clothing Review"
-date: 2023-01-01
+date: 2025-01-01
 banner: "image_0.jpg"
 tags: ["running", "apparel"]
 categories: ["reviews"]
@@ -263,9 +263,6 @@ Socks](https://www.ororowear.com/products/unisex-mojave-heated-socks?variant=420
 >   slip out if running
 >
 > - Not sure about durability of heating element
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
 
 ### **Tester Profile**
 

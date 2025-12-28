@@ -315,9 +315,6 @@ sustained running at an incline. Nothing will ever replace trail
 running, but the treadmill is a great option for times when I'm unable
 to get to the trails.
 
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
-
 <a
 href="https://www.roadtrailrun.com/2023/03/horizon-fitness-78-at-treadmill-review.html#more"
 class="button primary"><span>Click to See Review on Road Trail

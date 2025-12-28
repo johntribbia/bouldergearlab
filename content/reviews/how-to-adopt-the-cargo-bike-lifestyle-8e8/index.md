@@ -1,6 +1,6 @@
 ---
 title: "How To Adopt The Cargo Bike Lifestyle Part IV"
-date: 2024-08-01
+date: 2024-05-01
 banner: "image_1.jpg"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
@@ -30,9 +30,6 @@ many different e-bikes as I could. That way, I could make a list of
 features I must have and a list of features I absolutely do not want.
 So, I rode cargo bikes, cruisers, town bikes, mountain bikes, pedal
 assist bikes, throttle electric bikes, and everything in between.
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
 
 I remember that first pedal stroke on the first of my e-bike test rides
 and it was magical. I felt like I was riding with the wind at my
@@ -109,5 +106,3 @@ budget guide you
   you test rode a high end and lower end bike, you’ll know what you pay
   for as you make your final bike decision.
 
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

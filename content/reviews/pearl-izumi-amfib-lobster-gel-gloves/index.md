@@ -1,6 +1,6 @@
 ---
 title: "Pearl Izumi Amfib Lobster Gel Gloves"
-date: 2024-01-13
+date: 2025-01-13
 banner: "image_0.png"
 tags: ["cycling", "accessories"]
 categories: ["reviews"]
@@ -152,6 +152,3 @@ to purchase these gloves depends on your individual needs and
 priorities. If you are seeking warmth above all else, then these gloves
 will serve you well. However, if you require the dexterity of nimble
 fingers, you may want to look elsewhere.
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support our work.

@@ -367,6 +367,3 @@ Prodigio prioritizes cushioning for long-distance comfort, while Norda
 002 offers minimal cushioning, focusing on ground feel and agility.
 Norda 002 is highly responsive, promoting a barefoot-like experience.
 Prodigio feels more cushioned and less agile in comparison. 
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

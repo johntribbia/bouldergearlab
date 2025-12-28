@@ -36,10 +36,6 @@ adaptability continued throughout the day, offering optimal clarity
 under the midday sun and adjusting back to a lighter tint as dusk
 approached.
 
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.
-
-
 ![image_10.png](image_10.png)
 <a
 href="https://substackcdn.com/image/fetch/$s_!YfHp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9c96201e-8ad3-47e5-b054-77db186efd2b_1201x1600.png"
@@ -125,7 +121,3 @@ outdoor pursuits, the Short Fuse is a clear winner.
 href="https://substackcdn.com/image/fetch/$s_!2sCG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F530f5a1a-867d-45d5-aa4c-6c6174a2e3af_1201x1600.png"
 class="image-link image2 is-viewable-img" target="_blank"
 data-component-name="Image2ToDOM"></a>
-
-
-Thanks for reading Boulder Gear Lab! Subscribe for free to receive new
-posts and support my work.

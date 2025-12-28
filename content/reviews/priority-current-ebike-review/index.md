@@ -1,6 +1,6 @@
 ---
 title: "Priority Current Ebike Review"
-date: 2022-09-15
+date: 2025-09-15
 banner: "image_11.png"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
@@ -32,9 +32,6 @@ eBike. It’s the minivan of bikes where school drop-off/pick-up, work
 commutes, quick trips to the store, and the like, are the norm. In large
 part thanks to our flexible schedules, I can only count a few times
 where a second car would have been useful those past two years. 
-
-Thanks for reading Boulder Gear Lab Substack! Subscribe for free to
-receive new posts and support my work.
 
 With a non-Cargo eBike, like the [Priority Current
 eBike](https://www.prioritybicycles.com/products/current?gclid=CjwKCAjw-L-ZBhB4EiwA76YzOUGC8ia6BrUGg0a97sjEVmhEJyx9rDxddtfpKIrKmCmDljWjwwqNPBoCJJYQAvD_BwE),
@@ -337,6 +334,3 @@ as well as 6+ years of working at [University
 Bikes](https://www.ubikes.com/) in Boulder, CO and over 20 years of
 competitive running, he loves the opportunity to test the latest and
 greatest in both sports. 
-
-Thanks for reading Boulder Gear Lab Substack! Subscribe for free to
-receive new posts and support my work.

@@ -85,9 +85,6 @@ workout, the gym, or the grocery store. 
 - Single speed setup is best suited for regular and long distance riding
   on flat terrain
 
-<a href="https://bouldergearlab.substack.com/subscribe?"
-class="button primary"><span>Subscribe now</span></a>
-
 ### **First** **Impressions**
 
 
@@ -355,9 +352,6 @@ the price of the Priority, has better battery life and range, has a more
 comfortable saddle that is better for longer distance riding, and is
 more tech user friendly with an accompanying app and slightly more
 intuitive controls. 
-
-Thanks for reading Boulder Gear Lab Substack! Subscribe for free to
-receive new posts and support my work.
 
 ### **Tester Profile**
 
