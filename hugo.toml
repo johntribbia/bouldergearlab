@@ -82,7 +82,7 @@ summaryLength = 70
     enable = false
 
 [params.see_more]
-    enable = true
+    enable = false
     icon = "far fa-file-alt"
     title = "Explore More"
     subtitle = "Gear reviews, data projects, and insights"
