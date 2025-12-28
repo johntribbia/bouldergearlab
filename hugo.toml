@@ -25,7 +25,7 @@ summaryLength = 70
     linkedin = "https://www.linkedin.com/in/john-tribbia/"
 
     # Style: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "green"
+    style = "default"
 
     formspree_action = ""
     contact_form_ajax = false
@@ -50,8 +50,7 @@ summaryLength = 70
     googleSearchEngineId = ""
     
     address = """<p class="text-uppercase"><strong>Boulder Gear Lab</strong>
-        <br>
-        <br>Boulder, Colorado USA
+        <br>Boulder, Colorado, USA
       </p>
       """
 
