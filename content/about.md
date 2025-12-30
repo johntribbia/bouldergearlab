@@ -1,15 +1,15 @@
 ---
 title: ""
-date: 2024-12-23
+date: 2025-12-23
 banner: "/img/about/image_1.jpg"
 ---
 <img src="/img/about/image_1.jpg" alt="Description" style="max-width: 700px; border: 2px solid #000000ff;">
 
 ## Testing Gear Where It Matters Most
 
-**Boulder Gear Lab** is built on hundreds of thousands of miles run and biked, and millions of vertical feet gained across the U.S. and around the world. Boulder Gear Lab is an authority on running shoes, bikes, cycling gear, and outdoor equipment - delivering honest, data-driven reviews for athletes and adventurers who demand real answers, not marketing hype.
+**Boulder Gear Lab** is built on hundreds of thousands of miles run and biked, and millions of vertical feet gained across the U.S. and around the world. We deliver honest gear reviews for athletes and adventurers who demand real answers, not marketing hype.
 
-**John Tribbia** and has spent his professional career and passion of the outdoors at the intersection of data science and the outdoor industry. By day, he's a Data Scientist at Google currently leading AI model evaluation. But his expertise in gear doesn't come from analysis alone — it comes from decades in the trenches of the outdoor industry and on the trails themselves.
+**John Tribbia** has spent his career at the intersection of data science and the outdoor industry. By day, he's a Data Scientist at Google leading AI model evaluation. But his gear expertise comes from decades in the outdoor industry and on the trails themselves—not from spreadsheets alone.
 
 <img src="/img/about/image_2.jpg" alt="Description" style="max-width: 400px; border: 2px solid #000000ff;">
 
@@ -23,13 +23,13 @@ As an **Eagle Scout and NOLS graduate**, John has led backcountry trips and spen
 
 ### The Boulder Gear Lab Philosophy
 
-This unique combination of outdoor industry experience, elite athletic background, and advanced data science mindset is what makes Boulder Gear Lab different. John knows what brands look for, what athletes need, and how to measure it objectively.
+This combination of outdoor industry experience, elite athletic background, and analytical training makes Boulder Gear Lab different. John knows what brands look for, what athletes need, and how to evaluate it honestly.
 
-Every review can combine **quantitative analysis** (weight, durability metrics, performance benchmarks) with **real-world punishment** across Colorado's demanding conditions. Boulder Gear Lab tests gear over hundreds or thousands of miles because that's when the truth emerges: what holds up, what falls apart, and what's actually worth your money. Whether evaluating AI models for billions of Google users or trail running shoes on 30-40% grades, Boulder Gear Lab applies the same framework: rigorous testing, data-driven analysis, and evidence-based conclusions.
+Every review applies **analytical thinking** to real-world gear performance across hundreds of miles in Colorado's demanding conditions. That means examining design, testing durability, and identifying what actually holds up versus what falls apart—then reporting it honestly. Whether evaluating AI models at Google or trail running shoes on 30-40% grades, the same principle applies: observe carefully, think critically, report truthfully. No fluff. No marketing spin.
 
 John is a regular contributor to **[Road Trail Run](https://www.roadtrailrun.com/search?q=john+tribbia)** and began reviewing shoes over 20 years ago; His reviews have been featured in Trail Runner Magazine, Triathlete Magazine, 5280,  Running Times, and other publications. John holds a PhD from CU-Boulder with expertise in statistical modeling, causal inference, and forecasting, skills he's applied in leadership roles at Oracle, Infor, InsideSales.com, and Backcountry before Google.
 
-This is rigorous testing with evidence-based conclusions. No fluff, no marketing spin - just honest assessments from someone who's worked in the industry, competed at the highest levels, and broken in (and broken) more gear than most people will ever own.
+This is rigorous testing with honest analysis. No fluff. Just real assessments from someone who's worked in the industry, competed at the highest levels, and tested more gear than most people will ever own.
 
 ### Connect
 

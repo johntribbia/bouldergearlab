@@ -15,9 +15,9 @@ summaryLength = 70
 [params]
     viewMorePostLink = "/reviews/"
     author = "John Tribbia"
-    defaultKeywords = ["gear reviews", "data science", "outdoor equipment", "analytics", "Boulder Colorado"]
+    defaultKeywords = ["gear reviews", "outdoor equipment", "running shoes", "bikes", "Boulder Colorado"]
     mainSections = ["reviews", "data-projects"]
-    defaultDescription = "Data-driven gear testing and data projects from Boulder, Colorado"
+    defaultDescription = "Honest gear reviews and outdoor data science from Boulder, Colorado"
 
     # Social media
     twitter_site = "" # your Twitter handle
@@ -30,7 +30,7 @@ summaryLength = 70
     formspree_action = ""
     contact_form_ajax = false
 
-    about_us = "<p>Boulder Gear Lab applies rigorous, data-driven methodology to both outdoor gear testing and analytics projects. Led by John Tribbia, a Data Scientist and outdoor enthusiast based in Boulder, Colorado.</p>"
+    about_us = "<p>Boulder Gear Lab combines analytical thinking with outdoor industry expertise to deliver honest gear reviews and data science projects. Led by John Tribbia, a Data Scientist and outdoor enthusiast based in Boulder, Colorado.</p>"
     
     copyright = "Copyright (c) 2025, Boulder Gear Lab; all rights reserved."
 
@@ -103,37 +103,31 @@ summaryLength = 70
 
 # Main Navigation Menu
 [[menu.main]]
-    name       = "Home"
-    identifier = "menu.home"
-    url        = "/"
-    weight     = 1
-
-[[menu.main]]
     name       = "About"
     identifier = "menu.about"
     url        = "/about/"
-    weight     = 2
+    weight     = 1
 
 [[menu.main]]
     name       = "Gear Reviews"
     identifier = "menu.reviews"
     url        = "/reviews/"
-    weight     = 3
+    weight     = 2
 
 [[menu.main]]
     name       = "Data Projects"
     identifier = "menu.dataprojects"
     url        = "/data-projects/"
-    weight     = 4
+    weight     = 3
 
 [[menu.main]]
-    name       = "Road Trail Run"
+    name       = "RoadTrailRun"
     identifier = "menu.roadtrailrun"
     url        = "/roadtrailrun/"
-    weight     = 5
+    weight     = 4
 
 [[menu.main]]
     name       = "Contact"
     identifier = "menu.contact"
     url        = "/contact/"
-    weight     = 6
+    weight     = 5
