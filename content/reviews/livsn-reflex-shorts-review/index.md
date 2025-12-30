@@ -11,10 +11,6 @@ draft: false
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Zf4o!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4e33fcc4-2c7c-456c-b9b0-5902e5e93204_1700x2266.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The [LIVSN Reflex
@@ -40,18 +36,10 @@ they've held up well to all sorts of abuse.
 
   
 ![image_10.jpg](image_10.jpg)
-<a
-  href="https://substackcdn.com/image/fetch/$s_!gG-D!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7a7fce12-6969-44f7-8f7d-eabe26506efe_1458x1528.jpeg"
-  class="image-link image2 is-viewable-img" target="_blank"
-  data-component-name="Image2ToDOM"></a>
   
 
   
 ![image_15.jpg](image_15.jpg)
-<a
-  href="https://substackcdn.com/image/fetch/$s_!tM9j!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2050954-6ba9-4ad7-84aa-c02617e4e63e_2880x2160.jpeg"
-  class="image-link image2 is-viewable-img" target="_blank"
-  data-component-name="Image2ToDOM"></a>
   
 
 - **Ventilated deep front pockets w/ phone sleeves:** Designed to help
@@ -61,10 +49,6 @@ they've held up well to all sorts of abuse.
 
   
 ![image_2.jpg](image_2.jpg)
-<a
-  href="https://substackcdn.com/image/fetch/$s_!Qpsi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F84d9f788-8c59-4a70-aa70-04672dd4d538_1700x2266.jpeg"
-  class="image-link image2 is-viewable-img" target="_blank"
-  data-component-name="Image2ToDOM"></a>
   
 
 - **Snap button front fly:** In my opinion, this type of fly is more
@@ -74,10 +58,6 @@ they've held up well to all sorts of abuse.
 
   
 ![image_3.jpg](image_3.jpg)
-<a
-  href="https://substackcdn.com/image/fetch/$s_!QNbO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b366f60-de74-43d9-9a39-5cbfccef454d_1700x2266.jpeg"
-  class="image-link image2 is-viewable-img" target="_blank"
-  data-component-name="Image2ToDOM"></a>
   
 
 - **Movement crotch gusset:** Allows for more movement and flexibility
@@ -86,10 +66,6 @@ they've held up well to all sorts of abuse.
 
   
 ![image_4.jpg](image_4.jpg)
-<a
-  href="https://substackcdn.com/image/fetch/$s_!RyZV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d6b32c2-26f3-49e1-9796-abbca3b86f57_2880x2160.jpeg"
-  class="image-link image2 is-viewable-img" target="_blank"
-  data-component-name="Image2ToDOM"></a>
   
 
 - **Movement comfort stretch waistband:** This waistband is made of a
@@ -98,10 +74,6 @@ they've held up well to all sorts of abuse.
 
   
 ![image_7.jpg](image_7.jpg)
-<a
-  href="https://substackcdn.com/image/fetch/$s_!Ntmn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75ca5065-db96-44b0-bafd-5912a3337599_2880x2160.jpeg"
-  class="image-link image2 is-viewable-img" target="_blank"
-  data-component-name="Image2ToDOM"></a>
   
 
 - **7” inseam (8.5" if measured to top seam of gusset, but they fit like
@@ -111,10 +83,6 @@ they've held up well to all sorts of abuse.
 
   
 ![image_8.jpg](image_8.jpg)
-<a
-  href="https://substackcdn.com/image/fetch/$s_!dx1P!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffbcb66d0-8ef6-46e8-b55c-7472865f760f_1292x2266.jpeg"
-  class="image-link image2 is-viewable-img" target="_blank"
-  data-component-name="Image2ToDOM"></a>
   
 
 - **Flat felled center seam:** This type of seam is more durable than a

@@ -53,7 +53,7 @@ I'm also a regular contributor to [Road Trail Run](https://www.roadtrailrun.com)
 
 ---
 
-### Experience
+## Experience
 
 **Running & Cycling:** 20+ years of competitive experience, from mountain bike racing as a junior to sponsored trail running with podium finishes domestically and internationally.
 
@@ -62,30 +62,34 @@ I'm also a regular contributor to [Road Trail Run](https://www.roadtrailrun.com)
 **Outdoor Foundation:** Eagle Scout, NOLS graduate, Born and Raised in Boulder, Colorado.
 
 ---
-
-<div class="stats-grid">
-    <div>
-        <div class="stat-number">PhD</div>
-        <div class="stat-label">Quantitative Methods</div>
-    </div>
-    <div>
-        <div class="stat-number">100K+</div>
-        <div class="stat-label">Miles Logged</div>
-    </div>
-    <div>
-        <div class="stat-number">40+</div>
-        <div class="stat-label">Years in Colorado</div>
-    </div>
-    <div>
-        <div class="stat-number">0</div>
-        <div class="stat-label">Current Sponsors</div>
-    </div>
-</div>
-
----
-
 ## Let's Connect
 
 Questions about reviews? Want to discuss testing approaches? Interested in collaboration? Reach out.
 
 [Get In Touch](/contact/)
+
+<!-- Stats Section -->
+<div class="bgl-stats-section">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+                <div class="bgl-stat-number">100K+</div>
+                <div class="bgl-stat-label">Miles Tested</div>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+                <div class="bgl-stat-number">100s</div>
+                <div class="bgl-stat-label">Reviews</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="bgl-stat-number">1M+</div>
+                <div class="bgl-stat-label">Feet Elevation Gained</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="bgl-stat-number">0</div>
+                <div class="bgl-stat-label">Sponsors</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

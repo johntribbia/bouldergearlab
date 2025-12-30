@@ -16,10 +16,6 @@ peanuts into a paste and put it on bread.
 
 
 ![image_0.jpg](image_0.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Z19y!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff040a17c-53c9-4a2e-acc2-278bfc7f827b_1892x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The answer is a little complicated. Peanut butter has been around for
@@ -42,10 +38,6 @@ Missouri, patented a peanut-butter-making machine.
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!iFOt!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb036ea83-268a-42bf-994b-0590f0e9795e_1146x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 By the early 1900s, peanut butter was being manufactured and sold
@@ -68,10 +60,6 @@ nutritious breakfast.
 
 
 ![image_3.jpg](image_3.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!1Mt5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7f97004d-2c2b-4125-bd18-5053b59c56ac_1146x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 No matter how you eat it, peanut butter is a delicious and nutritious
@@ -85,10 +73,6 @@ cycling and it is simple + packable!
 
 
 ![image_4.jpg](image_4.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!NYAv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F58e41ab1-a2d9-491b-bf15-665ccfc7e01d_1146x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Whole Foods 365 Natural Peanut Butter is a natural peanut butter made
@@ -103,10 +87,6 @@ Jif and Skippy, 365 is definitely worth giving a try.
 
 
 ![image_7.jpg](image_7.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!6k6I!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff27ab777-fe9e-4caf-8ce4-608674f1a258_1146x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Like most natural peanut butters, 365 Natural can be difficult to mix.
@@ -131,7 +111,3 @@ the next jar and stir until it is smooth, and so on.
 
 
 ![image_9.jpg](image_9.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!34Ex!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe7d27d5b-c021-4551-a88f-280d0b945b8e_1080x1080.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>

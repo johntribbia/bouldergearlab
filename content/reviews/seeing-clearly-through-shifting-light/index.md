@@ -19,10 +19,6 @@ here's what I discovered.
 
 
 ![image_0.png](image_0.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Fc1r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6a97cd78-ff26-45d5-9d69-944102978e68_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Adaptive All-Star
@@ -37,10 +33,6 @@ under the midday sun and adjusting back to a lighter tint as dusk
 approached.
 
 ![image_10.png](image_10.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!YfHp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9c96201e-8ad3-47e5-b054-77db186efd2b_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Lightweight Champion
@@ -52,10 +44,6 @@ sweaty rides, with no pressure points or slippage.
 
 
 ![image_11.png](image_11.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!YYQ9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F82cb792e-83ea-446a-aa64-3bc9bfd61012_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Vision and Ventilation
@@ -67,10 +55,6 @@ efforts.
 
 
 ![image_12.png](image_12.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!g9Yg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4417203d-8c8e-455a-80e4-5cb4429047ad_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Grippy and Secure
@@ -82,10 +66,6 @@ hand.
 
 
 ![image_4.png](image_4.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!dqwY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F06f8f848-e4c2-4a38-8466-d1a7a6938fe4_1600x1456.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Subtle Style
@@ -98,10 +78,6 @@ same!
 
 
 ![image_5.png](image_5.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!z4kR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff83feb7f-57a4-4cdb-bf45-c06fe4f7e2b4_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Final Verdict
@@ -117,7 +93,3 @@ outdoor pursuits, the Short Fuse is a clear winner.
 
 
 ![image_7.png](image_7.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!2sCG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F530f5a1a-867d-45d5-aa4c-6c6174a2e3af_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>

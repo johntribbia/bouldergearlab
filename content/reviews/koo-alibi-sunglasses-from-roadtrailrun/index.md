@@ -22,13 +22,9 @@ you that they are a solid pair of eyewear.
 
 
 ![image_0.png](image_0.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!UUke!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c6aba45-4785-4976-b5c0-547a08cfe823_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Features**
+### Features
 
 The Alibi sunglasses are incredibly lightweight, weighing only 21 grams,
 making them feel practically invisible on my face. This is a significant
@@ -40,10 +36,6 @@ for a combination of comfort, performance, and style.
 
 
 ![image_2.png](image_2.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!JLXc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fff6d0b31-b875-4f24-8348-320733e02763_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 **Fit**
@@ -57,7 +49,7 @@ a sweat-free experience. Additionally, the glasses can be securely
 placed atop the brim of a hat or the front holes of a helmet, providing
 a convenient option when you need a break from wearing them.
 
-**Utility**
+### Utility
 
 The true star of the Alibi show lies in their photochromic lenses. These
 intelligent lenses adapt to varying light conditions, seamlessly

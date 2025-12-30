@@ -37,26 +37,19 @@ purchasing one, I’d like to share with you a few “Dos” and “Don’ts” 
 that you too can enjoy the pleasures of baby jogging, and pass along a
 few tips for getting in a good workout.
 
-
 ![image_0.png](image_0.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!KVgr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0a6edc1e-bf3b-459f-9285-10887c99f04f_1500x998.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
-
 
 ​​
 
-**THE BASICS**
+### THE BASICS
 
-**Errands**
+### Errands
 
 **Do** use your baby jogger as a way to combine exercise and doing
 errands
 
 **Don’t** forget you have to bring whatever you purchase home with you
 in the stroller  
-  
 
 While a baby jogger can be used for exercise of nearly any intensity, I
 also like to use my CX1 to do errands by foot. I take my son and jogger
@@ -73,11 +66,7 @@ not be too excited about sharing space with a lot of produce!
 
 > 
 ![image_3.png](image_3.png)
-<a
-> href="https://substackcdn.com/image/fetch/$s_!6G75!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F390090bc-0b21-41b6-aacc-9e561046935b_1500x998.png"
-> class="image-link image2 is-viewable-img" target="_blank"
-> data-component-name="Image2ToDOM"></a>
-> 
+
 
 **Fuel**  
 **Do** bring snacks and hydration
@@ -104,11 +93,7 @@ provisions *just* for you to make it through the long run. Trust me.
 
 > 
 ![image_4.jpg](image_4.jpg)
-<a
-> href="https://substackcdn.com/image/fetch/$s_!XBAo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbd2c9155-5f68-49c5-a9eb-ba8e725d6ff8_1500x998.png"
-> class="image-link image2 is-viewable-img" target="_blank"
-> data-component-name="Image2ToDOM"></a>
-> 
+
 
  **GETTING A WORKOUT **
 
@@ -116,7 +101,7 @@ Excursions with a baby jogger can be more than just getting out and
 about. Now that we have some of the basics covered, here are some tips
 for getting a serious workout with your jogger. 
 
-**Expect to go slower**
+### Expect to go slower
 
 When I first took the stroller out for a run, I immediately noticed the
 level of effort to run while pushing was more difficult. My typical
@@ -137,13 +122,13 @@ run while pushing extra weight (my arms were sore the first few weeks!),
 so be mindful of foot positioning so that you don’t find yourself
 injured on the sidelines.
 
-**Running hands-free is unsafe**
+### Running hands-free is unsafe
 
 It’s not a good idea, even if it helps you achieve a more natural arm
 swing. The stroller could easily lose control and get away from you,
 which is unsafe for your child and anyone else around you.
 
-**Push with one hand instead**
+### Push with one hand instead
 
 Pushing a jogging stroller impedes your natural arm swing, which makes
 it much tougher on your lungs, heart, and legs. So try pushing the
@@ -152,7 +137,7 @@ so you get to work both sides. If you do opt for the one-handed push,
 make certain the leash is around the pushing arm so that you minimize
 the risk of inadvertently losing control of the stroller.
 
-**Patience makes progress**
+### Patience makes progress
 
 I run with Lou almost every day – taking him on recovery jogs, interval
 sessions (I call them “strollervals”), and long runs. But, because of
@@ -165,9 +150,4 @@ three months. 
 
 ​
 
-
 ![image_5.jpg](image_5.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!bzgB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F336f413c-402c-41b7-88fc-8a3f4e831c32_1500x998.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>

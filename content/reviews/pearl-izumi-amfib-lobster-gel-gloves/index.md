@@ -20,10 +20,6 @@ ambitious claims? This review, forged through rigorous testing in
 
 
 ![image_0.png](image_0.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Jxml!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe20b1843-e156-4e98-8460-1bed8828669a_1600x1118.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The core of these gloves is the 170g Primaloft Gold insulation with
@@ -36,13 +32,9 @@ warrants a closer look.
 
 
 ![image_11.png](image_11.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!oMVq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F462d6e61-8f75-4993-9cb6-9e1fb3a9a5b5_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-## **Warmth**
+## Warmth
 
 The gloves provide a warm and comfortable embrace, like a warm hearth in
 the midst of a snowstorm. The Primaloft Gold insulation lives up to its
@@ -54,13 +46,9 @@ unaware of the biting wind, thanks to the gloves' thermal sanctuary.
 
 
 ![image_13.png](image_13.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!B9wM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F113002e6-a40a-4dda-96e9-8e4dfcd7f49c_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-## **Dexterity**
+## Dexterity
 
 While warmth is the gloves’ primary focus, they do not entirely
 sacrifice dexterity. The split fingers provide a surprising degree of
@@ -69,10 +57,6 @@ bike with relative ease. 
 
 
 ![image_14.png](image_14.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!J-bi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd9b86bc2-7710-4102-92be-fecade170ad3_1600x1202.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 However, there is a slight decrease in precision compared to traditional
@@ -81,13 +65,9 @@ required more focus due to the gloves’ thickness.
 
 
 ![image_15.png](image_15.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!LA9i!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F917cffeb-cb13-4100-911c-63f3fd5babda_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-## **Weather Resistance**
+## Weather Resistance
 
 Mother Nature put the gloves’ mettle to the test with a flurry of snow
 and ice. The AmFIB® DWR water-resistant fabric repelled the elements,
@@ -96,13 +76,9 @@ barrier against the wind, blocking its icy breath.
 
 
 ![image_3.png](image_3.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!vZc9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99fd9563-05ea-4551-b766-17bf2f378556_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-## **Comfort and Fit**
+## Comfort and Fit
 
 These gloves fit like … a glove … providing a secure and reassuring
 hold. The velcro closure at the wrist allows for fine adjustments,
@@ -112,10 +88,6 @@ during extended rides.
 
 
 ![image_6.png](image_6.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!rIwF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6dc71642-7a2d-4be5-ad92-f15eb736e96e_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 However, even the most impressive feats of engineering come with some
@@ -134,10 +106,6 @@ caveats:
 
 
 ![image_9.png](image_9.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!d2Tc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8feeb711-82ac-4c91-af40-77d4d966cf06_1600x634.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Conclusion

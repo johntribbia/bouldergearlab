@@ -11,10 +11,6 @@ draft: false
 
 
 ![image_0.jpg](image_0.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!zWBW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9224e41d-d514-41ba-9a26-6409a3b11948_640x640.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Are you a multi-sport athlete who lives in or visits a cold winter
@@ -65,10 +61,6 @@ the snow if it is sunny. 
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!-vej!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7fa00bf1-ef6a-46c1-911d-64903f2dcd55_1080x1350.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Where to go?
@@ -110,7 +102,3 @@ Dion Snowshoe Series in the Northeast:
 
 
 ![image_3.jpg](image_3.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!PoEL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feaaea2ca-5c52-4eff-b4b5-babc6f0497e8_640x640.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>

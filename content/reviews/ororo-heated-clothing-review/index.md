@@ -32,10 +32,6 @@ with sub-zero temperature once they arrived.
 
 
 ![image_0.jpg](image_0.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!_45I!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdc347e1b-470e-4ced-9680-37f6ab3a9f7b_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Packaging is really nice with unassuming yet clean brand logo
@@ -47,7 +43,7 @@ customers, even in the coldest weather. It was founded in 2015 in the
 Midwest, and it is known for its high-quality, affordable heated
 jackets, vests, and other apparel. 
 
-### **MEN'S HEATED PRIMALOFT® GOLF VEST**
+### MEN'S HEATED PRIMALOFT® GOLF VEST
 
 *$230*
 
@@ -68,10 +64,6 @@ lasted over 6 hours on the hottest setting for me on a single charge.
 
 
 ![image_10.png](image_10.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Cnye!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fab25eeda-8a4e-4429-8cc5-47c559cfd314_788x1024.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Stock image of the heating elements: back and pockets are warming
@@ -93,50 +85,30 @@ highly recommend it to anyone who lives in a cold climate.
 
 
 ![image_11.png](image_11.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!eTq9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5759b74-43da-4235-94ac-3263888e9f77_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 On/Off button in left pocket glows red when on high setting
 
 
 ![image_13.png](image_13.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!7WN7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F544da24c-1b0e-4bd6-9389-4d6ce97e8366_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Close up of the on/off button
 
 
 ![image_15.png](image_15.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!VGpp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F97c2d7b0-a234-42e0-aa52-3176fb313b08_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Rear pocket to hold battery
 
 
 ![image_2.png](image_2.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!wssI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8fa57030-0b2c-4a94-bab5-8de81480a0a3_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Battery and USB charging cord
 
 
 ![image_20.png](image_20.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!4Wtc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F70d039cf-6936-4fa7-9b5a-788dfe48e338_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Soft fleece on neck is really comfortable
@@ -169,7 +141,7 @@ Here are some of the pros and cons of the ORORO heated vest:
 >
 > - It is not waterproof, so you cannot wear it in the rain or snow.
 
-### **"MOJAVE" HEATED SOCKS 3.0**
+### "MOJAVE" HEATED SOCKS 3.0
 
 *$120*
 
@@ -193,10 +165,6 @@ feel and moisture-wicking.
 
 
 ![image_3.png](image_3.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!hbRA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd21d8467-dbe4-4543-b223-bf4bad8a2136_448x442.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I did an A/B test while biking in the cold with my left wearing a wool
@@ -214,10 +182,6 @@ and hanging out around the house. 
 
 
 ![image_5.png](image_5.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!9755!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff5685c20-a7b9-4082-b618-854082d6a95d_1049x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Battery tucks into upper calf pocket and button is overlaid on the
@@ -225,20 +189,12 @@ pocket
 
 
 ![image_7.png](image_7.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!tzFy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d480910-0a4f-4547-a73d-7f8dbc526e5d_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Fast charging battery and on/off button at top of calf 
 
 
 ![image_9.png](image_9.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!_nHF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fea43248b-74a2-4c24-b5f7-e7bbac433291_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 A lot of times when I was moving, I felt like the battery was going to
@@ -264,7 +220,7 @@ Socks](https://www.ororowear.com/products/unisex-mojave-heated-socks?variant=420
 >
 > - Not sure about durability of heating element
 
-### **Tester Profile**
+### Tester Profile
 
 **John Tribbia** is a regular technical reviewer for running-oriented
 product testing website [RoadTrailRun](http://www.roadtrailrun.com/)

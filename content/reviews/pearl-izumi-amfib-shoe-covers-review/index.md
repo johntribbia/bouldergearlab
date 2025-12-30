@@ -17,10 +17,6 @@ AmFIB Shoe Covers come in.
 
 
 ![image_10.jpg](image_10.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!SOlF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0fa370c1-6ad5-4acb-ad6e-f7f99051a681_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The AmFIB Shoe Covers are made from a combination of AmFIB fabric and
@@ -31,10 +27,6 @@ that traps heat, providing additional warmth.
 
 
 ![image_11.jpg](image_11.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!vfKl!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F19c34b73-bc34-4c00-b9a6-38d5cd4e0e94_1146x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The AmFIB Shoe Covers are designed to fit snugly over your cycling
@@ -45,10 +37,6 @@ entry and removal.
 
 
 ![image_2.jpg](image_2.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!J7Ur!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75a93231-b918-48c0-a717-a4559778f612_1146x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The shoe covers are also compatible with cleats, so you can wear them
@@ -56,10 +44,6 @@ with your favorite cycling shoes.
 
 
 ![image_5.jpg](image_5.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!5xsq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe389cc80-9300-4c28-86f1-a9cd6c57d401_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I've been using the AmFIB Shoe Covers for a few months now, and I'm very
@@ -69,10 +53,6 @@ comfortable to wear, and they don't restrict my movement.
 
 
 ![image_8.jpg](image_8.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!6E3_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc0d038e-ff58-481a-ad0e-fab44548947d_2712x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 If you're looking for a pair of foot warmers to keep your toes warm in
@@ -82,10 +62,6 @@ your feet warm and dry all winter long.
 
 
 ![image_9.jpg](image_9.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!T2vH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9d570850-c4a4-47d1-8636-4d5da8d7aebe_1146x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Here are some additional pros and cons of the PEARL iZUMi AmFIB Shoe

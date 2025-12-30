@@ -17,10 +17,6 @@ Ride is here to help. 
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!VbiT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe4722240-a8f5-4022-9a9c-0b9580c88807_800x450.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 When I was shopping for e-bikes, I hadn’t actually been on one before.
@@ -75,10 +71,6 @@ you are out on the bikes.
 
   
 ![image_3.png](image_3.png)
-<a
-  href="https://substackcdn.com/image/fetch/$s_!QrQ1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F478646d7-227c-4396-bc13-b14e52ac4393_1918x1236.png"
-  class="image-link image2 is-viewable-img" target="_blank"
-  data-component-name="Image2ToDOM"></a>
   
 
 \(5\)   When you are riding the bikes, ride on terrain you expect to

@@ -21,10 +21,6 @@ sun's harmful rays.
 
 
 ![image_1.png](image_1.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ZwpA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52c44032-93ba-4e63-970a-63d01fabcd46_1585x885.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 [Eastern Outer's story](https://easternouter.com/pages/about-us) is
@@ -37,10 +33,6 @@ outdoor gear market.
 
 
 ![image_5.png](image_5.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!PaPL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc84948a0-72c4-4150-8bbf-181ca432badd_664x885.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Having extensively tested the Eastern Outer Bamboo Floating Sunglasses
@@ -55,10 +47,6 @@ challenging to rest the glasses on top of my head.
 
 
 ![image_6.png](image_6.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!eWh8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc80741ea-2ad6-4364-81cc-349b493017fa_1423x523.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The floating feature is a game-changer for those who enjoy water-based
@@ -78,10 +66,6 @@ confidence in their long-lasting durability.
 
 
 ![image_8.png](image_8.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Ok3A!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7328275b-c2c3-4a22-b6b9-a15da265d30b_936x885.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Eastern Outer Bamboo Floating Sunglasses with Pink Lenses
@@ -93,10 +77,6 @@ outdoor enthusiast's gear collection.
 
 
 ![image_9.png](image_9.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!GMCp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb20239ee-f67c-4e52-b5cd-cfcba33236a5_664x885.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 > ### Pros

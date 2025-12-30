@@ -5,6 +5,7 @@ banner: "image_0.jpg"
 tags: ["cycling", "bikes"]
 categories: ["reviews"]
 description: ""
+draft: false
 ---
 <!--more-->
 
@@ -15,15 +16,11 @@ Sizes: S(15”), M(17”), L(19”), XL(21”)
 
 
 ![image_0.jpg](image_0.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!COoV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F81004783-5f04-4cf6-a1e3-129d7e356a2d_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Borealis Crestone
 
-### **Introduction**
+### Introduction
 
 Based in Colorado Springs, Colorado, [Borealis Fat
 Bikes](https://www.fatbike.com/) is a company that specializes in
@@ -80,7 +77,7 @@ Crestone on the right, a muddy day!
 >
 > Jeff: I really cannot come up with a con, this bike is awesome!  
 
-### **First** **Impressions**
+### First Impressions
 
 John: Overall, I was very impressed with the [Borealis Flume Fat
 Bike](https://www.fatbike.com/flume). The bike is well-made and durable,
@@ -121,13 +118,9 @@ practicality.  The bike is a work of art.
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!20yz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c64dbc9-5408-423d-ad05-9f0e49983214_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Ride**
+### Ride
 
 John: On snow, the Flume performs incredibly well, with the wide tires
 providing good flotation and traction. The rigid carbon fork helps to
@@ -174,7 +167,7 @@ I got bounced around a good bit, reminding me of riding fat tired 3
 wheelers back in the 80’s.  Certainly not a knock on the Crestone, but
 just the nature of riding a fat tire bike too fast.
 
-### **Fit**
+### Fit
 
 John: The Borealis Flume has a comfortable and relaxed fit, with a roomy
 cockpit and upright riding position. The bike is designed to be
@@ -209,10 +202,6 @@ wife and daughters ride the Crestone on occasion.  
 
 
 ![image_11.jpg](image_11.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!1mHB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5d9cd1e-6975-4c9b-8b38-ac842c3c642b_1600x900.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 My daughter who is 5’3” loves riding the Crestone and actually fit well
@@ -223,13 +212,9 @@ review.
 
 
 ![image_12.jpg](image_12.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!MWFc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14fed5bd-a90a-4af1-b491-e6b8ab31bbe9_755x1063.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Specs and Tech**
+### Specs and Tech
 
 **Standard Build Specs** ([Flume Build
 Options](https://www.fatbike.com/store/-p124043621) / [Crestone Build
@@ -237,10 +222,6 @@ Options](https://www.fatbike.com/store/-p124041936))
 
 
 ![image_13.jpg](image_13.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!nnNu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F58106893-1274-4dc3-910f-a3bc15ed9737_1040x1224.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Both bikes we received to review were amazingly well spec'd. The
@@ -250,10 +231,6 @@ up with SRAM Eagle NX 1 x 12, which was incredibly performant. 
 
 
 ![image_18.png](image_18.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Ysiq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F567bd5dc-68d1-4722-84df-368f4f1eec24_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The 12spd cassettes have an incredible 10-50 range (with a 30T front). 
@@ -262,10 +239,6 @@ surprisingly did not wish for a double or triple chainring up front.
 
 
 ![image_25.jpg](image_25.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!wTG6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdce2f6e3-d3ea-4f9c-a124-299bfadb59be_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Up front on the Crestone we have a SRAM Eagle DUB GX crankset made of
@@ -284,10 +257,6 @@ it was warmer and dry, I went with clipless for better efficiency.
 
 
 ![image_27.jpg](image_27.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!2Htz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6f4137d7-acdf-4c65-acce-d2fbea24e58d_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The carbon Borealis GLOSS bars are wide and sturdy, offering very good
@@ -295,10 +264,6 @@ control and additional dampening.
 
 
 ![image_28.jpg](image_28.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!CAiN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F890b1f39-7f4b-49a8-a2dc-223cc73c65dc_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Holding the stem in place is a 35x50BLK Borealis branded stem, which is
@@ -320,10 +285,6 @@ warm and colder weather. 
 
 
 ![image_29.jpg](image_29.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!GEmt!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9bd8ea1e-2fc5-4027-bff2-e2c751c5c761_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The disc brakes are very grabby, but modulate very well with an easy
@@ -331,10 +292,6 @@ lever pull and positive feel.
 
 
 ![image_3.png](image_3.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!2qWP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99ab8d23-2058-4846-b8e0-cc44e216f764_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The KS LEV Integra dropper post with KS Southpaw lever is easy to use
@@ -342,10 +299,6 @@ with a wide range, super smooth and secure.
 
 
 ![image_30.jpg](image_30.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!xG92!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffeed5362-324c-4f14-afe6-e3757aba34d4_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Dropper lever above.
@@ -360,10 +313,6 @@ concrete. 
 
 
 ![image_31.png](image_31.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!RbVg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F32e8c686-d894-4928-99ed-1e84be1635c1_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The rims are HED Big Deal Alloy 27.5 x 80, which are wide, but crazy
@@ -371,22 +320,14 @@ light and have surprisingly efficient rotating weight for the size.
 
 
 ![image_4.jpg](image_4.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!biYV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00b52006-f39e-47d1-8aa6-81f7792bc1f9_1440x1080.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 While not made for mud, the Crestone handled it like a champ!
 
-### **Conclusions & Rating**
+### Conclusions & Rating
 
 
 ![image_6.jpg](image_6.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ZkCV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ae895f5-1643-4a2d-87c9-2364411ea818_1419x1064.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 John: The Borealis Flume Fat Bike is a stable, surprisingly nimble, fat
@@ -413,14 +354,10 @@ height)
 Specs - 9.5/10 (top quality for their entry level version)  
 Fun Factor (out of 5) - 🙌 🙌 🙌 🙌 🙌
 
-**Overall Average: 9.7 / 10**
+Overall Average: 9.7 / 10
 
 
 ![image_9.jpg](image_9.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!RswI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51e96fa7-16e4-4bc7-b21c-ba9edc96e13e_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Jeff:  I cannot say enough good things about the Borealis Crestone.  The
@@ -439,9 +376,9 @@ height)
 Specs - 10/10 (top quality for their entry level version)  
 Fun Factor (out of 5) - 🙌 🙌 🙌 🙌 🙌
 
-**Overall Average: 10 / 10**
+Overall Average: 10 / 10
 
-### **Tester Profiles**
+### Tester Profiles
 
 **John Tribbia** is a regular technical reviewer for running-oriented
 product testing website [RoadTrailRun](http://www.roadtrailrun.com) with

@@ -20,10 +20,6 @@ Priority Continuum Onyx ($1,299)
 
 
 ![image_1.png](image_1.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!MAf1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5d718f0-a6b3-4a0b-8da2-0a063a422029_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Despite the fact that I’ve been riding bikes and commuting for countless
@@ -73,10 +69,6 @@ performant option.
 
 
 ![image_10.png](image_10.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!RPt_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fccc9855f-4110-4c52-a33c-e24624d5652c_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Priority Continuum Onyx arrives packed in a bike box. 
@@ -96,10 +88,6 @@ bike. 
 
 
 ![image_13.png](image_13.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!zs6Y!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b4b15b8-88ce-4b04-a625-ff1791930fe1_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 It is worth noting that Priority recommends that a certified bike
@@ -108,10 +96,6 @@ not a comfortable area of knowledge for you.
 
 
 ![image_14.png](image_14.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!s6nz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1cdcd07f-0f88-47ce-bf41-9890c4152520_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The bike is 90% assembling and there are only a handful of tools
@@ -129,10 +113,6 @@ adjust your effort to match.
 
 
 ![image_15.png](image_15.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Zvyu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e982064-ac7f-473a-a159-e2700bf3ed27_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Sealed Continuously Variable Transmission (CVT) Rear Hub with carbon
@@ -140,10 +120,6 @@ belt is durable, low maintenance, and shifts smoothly.
 
 
 ![image_17.png](image_17.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!7-f6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0295f29-3670-4733-9f6a-15a21bb70259_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Another view of the sealed hub drivetrain
@@ -165,10 +141,6 @@ the high is great for flatter and faster terrain. 
 
 
 ![image_18.png](image_18.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!vai8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5f4cfff3-0045-45b7-a398-a3b330ebd667_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Since there is no gear ratio, the indicator on the shifter is
@@ -200,10 +172,6 @@ leisurely to streamline and competitive.
 
 
 ![image_21.png](image_21.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!DU2F!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffce2cb0b-4dda-4696-b879-424897ad9b05_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ​​Carbon belt drive generates plenty of torque for steep hills given the
@@ -223,28 +191,16 @@ to ensure your body is over the pedals for power and speed. 
 
 
 ![image_7.png](image_7.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!wK7b!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F863f2a40-6341-4d5c-ae76-98dce6d3cb96_1202x1198.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Specs
 
 
 ![image_8.png](image_8.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!KdoJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63873b20-1ebd-4b2f-837a-f0a498db2256_968x750.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 
 ![image_9.png](image_9.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!VsxU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F158b0f86-5d33-4f40-8926-c2523b8ea5b1_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 360 visibility with reflective decals and reflective highlight strip on
@@ -283,7 +239,7 @@ Specs - 8.5/10 (low maintenance, smooth shifting, and bomb proof
 components)  
 Fun Factor (out of 5) - 🙌 🙌 🙌 🙌 
 
-**Overall Average: 8.8 / 10**
+Overall Average: 8.8 / 10
 
 ## Tester Profile
 

@@ -30,10 +30,6 @@ hot and cold weather.
 
 
 ![image_0.jpg](image_0.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!oecA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1b0a88da-a7a5-4d06-8041-96c8c0748e5f_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The inseam of the LIVSN Flex Canvas Shorts is 8.5 inches. This is a good
@@ -46,10 +42,6 @@ feels like it will last for many wears, similar to Carhartts.
 
 
 ![image_10.jpg](image_10.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Sftu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff087fd75-ba51-45a0-8e6c-7843eb28738d_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The **strongmesh interior** on the Flex Canvas Shorts is a nice touch
@@ -59,10 +51,6 @@ prevent chafing.
 
 
 ![image_11.jpg](image_11.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!5V3_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fac1e7897-3183-43ee-b9b7-d0ba25298b3b_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The shorts have **reinforced pockets with zippers** to keep your
@@ -76,10 +64,6 @@ are moving around.
 
 
 ![image_12.jpg](image_12.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!vHIU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1ddda61b-2702-4402-b724-477b1d77e0bd_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 **Gusseted Crotch**: The gusseted crotch on the LIVSN Flex Canvas Shorts
@@ -88,10 +72,6 @@ move freely without feeling restricted.
 
 
 ![image_13.jpg](image_13.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!BcYR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7233637b-f30b-433a-874e-73510f74b19b_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The **reflective taping** inside the hem of the Canvas Shorts is a nice
@@ -103,10 +83,6 @@ or biking in an area with a lot of traffic.
 
 
 ![image_4.jpg](image_4.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!jJCS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F47a48c20-be21-4731-928f-059bb92815dc_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 **Hidden Security Pocket**: The hidden security pocket is a great
@@ -116,10 +92,6 @@ a wallet.
 
 
 ![image_7.jpg](image_7.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!cfp2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faaa26377-fa94-4cd0-a20e-b37b2bb3bc86_2038x1528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Overall, the Livsn Flex Canvas Shorts are a solid pair of shorts. They

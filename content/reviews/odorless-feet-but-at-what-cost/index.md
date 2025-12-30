@@ -17,10 +17,6 @@ both brilliance and shortcomings.
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!EVIl!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F98bda5c7-265d-4f9e-8e2d-a53c0c8120d1_1138x1516.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 OX SOX's triumph lies in its proprietary fabric blend, which neutralizes
@@ -31,10 +27,6 @@ liberating.
 
 
 ![image_2.jpg](image_2.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!lryY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F752ae4b8-385d-4c6d-950a-17ec650218cc_1860x1516.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 But the socks' thickness and high cotton content present challenges.
@@ -67,10 +59,6 @@ the socks might fall short.
 
 
 ![image_3.jpg](image_3.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!_ifU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d1730c5-dac2-48db-805e-ba1a1c1f5f4c_1138x1516.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I remain hopeful that future iterations of OX SOX will address these

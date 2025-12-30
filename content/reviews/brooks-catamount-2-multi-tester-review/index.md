@@ -19,19 +19,15 @@ Reviews Here</span></a>
 *Article by Mike Postaski, John Tribbia, Jeff Valliere, Jana
 Herzgova, and Sam Winebaum*
 
-### **Brooks Catamount 2** ($170)
+### Brooks Catamount 2 ($170)
 
 
 ![image_0.jpg](image_0.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!SK_r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbdaa88f7-1e7d-43b2-a3f8-f7fa0a7c0c6d_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Introduction**
+### Introduction
 
-**Mike P:** I really wanted to like the first version of the Catamount.
+Mike P: I really wanted to like the first version of the Catamount.
 I even tried it out several times in some pre-race testing, but
 ultimately never felt comfortable in them and never ran anything of
 substance in them. The DNA Flash midsole was quite responsive, but
@@ -45,10 +41,6 @@ V2 into a different shoe altogether? Well.. perhaps a bit of both..
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!GYc9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F67a108d1-258c-453d-a3cc-d3652acc08be_1463x978.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Jana's women's color way
@@ -88,13 +80,9 @@ Jana's women's color way
 
 
 ![image_10.jpg](image_10.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!knXy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13570357-3c8d-4581-a3ec-daba0bc93af3_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Stats**
+### Stats
 
 Official Weight: men's 9.7 oz  / 275g (US9)  /  women's 8.6 oz / 244g
 (US8)
@@ -106,17 +94,13 @@ women’s  mm heel / mm forefoot
 
 Available  Feb 2023. $170. 
 
-### **First Impressions, Fit and Upper**
+### First Impressions, Fit and Upper
 
 
 ![image_11.jpg](image_11.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!IPBH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc0a6e829-16b8-485a-b68e-98ffb9e0ee30_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Jeff V:**  I really enjoyed the Catamount 1, but over the long term I
+Jeff V: I really enjoyed the Catamount 1, but over the long term I
 only revisited them once or twice, as I found the foothold to be
 limiting, traction to be a bit scarce for the more technical terrain
 that I prefer and also a bit stiff.  I have been anticipating an update
@@ -126,10 +110,6 @@ delivered on all counts!  
 
 
 ![image_12.jpg](image_12.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!JVMt!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd4123f61-79ca-4304-a492-bf595e51476a_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 As I had hoped, the upper has been refined to provide a better
@@ -146,10 +126,6 @@ and 2, I am measuring version 2 at 3 grams lighter.
 
 
 ![image_13.jpg](image_13.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!btBf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd73b6cfb-8a70-45dd-95c6-2ba51c67c5d2_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The toe bumper is protective and substantial, integrating into an almost
@@ -164,10 +140,6 @@ not have to over tighten for my foot to be held well.
 
 
 ![image_16.jpg](image_16.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!bHY1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F08f31c6d-6f3b-4e53-9218-41f8e627d6d9_1283x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The laces have also been improved over the previous, instead of the soft
@@ -194,10 +166,6 @@ downhills, technical terrain and overall run faster with more confidence
 
 
 ![image_17.jpg](image_17.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!SK_r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbdaa88f7-1e7d-43b2-a3f8-f7fa0a7c0c6d_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 **John**: Simply due to a change in work schedule, I have had to take
@@ -228,13 +196,9 @@ terrain.
 
 
 ![image_18.png](image_18.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!SnTk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9d1a385b-b4f0-4057-b902-a870c4eaa3fd_1489x995.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Jana:** Catamount 2 is the very first shoe from Brooks family I have
+Jana: Catamount 2 is the very first shoe from Brooks family I have
 ever run in and it has been a pleasant ride for me. It is a light and
 nimble shoe for speedy and firm ground technical terrain. Fit is true to
 size, with a great foothold over all - aiding speedy runners. Th heel
@@ -246,7 +210,7 @@ light and comfortable. Also dries fast, and stay light while wet. 
 
 The downside - a bit narrow toe box. 
 
-**Mike P:** Jeff V describes the new upper very well. As mentioned in my
+Mike P: Jeff V describes the new upper very well. As mentioned in my
 intro, I had similar feelings about the upper and reservations about
 running them in any type of technical, or even non-straight terrain. I
 do have to note that I had V1 in US 9.5, and my V2 test pair is US 10.
@@ -257,10 +221,6 @@ smaller, US 9.5 V1. 
 
 
 ![image_2.jpg](image_2.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!mfxF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F40f71d9e-0bb0-497b-9498-8655f843b48d_1600x900.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Others have mentioned the fit feeling a bit narrow, but I have to
@@ -285,17 +245,13 @@ Final note- as with Jeff V, I find my V2’s to actually be lighter than
 V1, even with the difference in size. My V1’s (US 9.5) were 280g, and my
 V2’s (US 10) are 278g. 
 
-### **Midsole**
+### Midsole
 
 
 ![image_20.jpg](image_20.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!BXTr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F64c8ab7d-b84c-4621-a660-06d90f4436bb_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Sam:** The midsole foam and stack height of approximately 30mm heel /
+Sam: The midsole foam and stack height of approximately 30mm heel /
 24 mm forefoot remain the same as v1. The foam is Brooks’s DNA Flast
 nitrogen infused supercritical EVA, the same foam and at the same
 relative firmness as in their road Hyperion Elite and Hyperion Max. The
@@ -311,10 +267,6 @@ ultra distances. 
 
 
 ![image_21.jpg](image_21.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ge7D!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc6867591-c158-41dd-ad85-ec2dc20b8c77_498x528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 What changes is the addition of effective rear stabilizing “wings” and
@@ -324,10 +276,6 @@ highly effective. 
 
 
 ![image_24.jpg](image_24.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!gdoH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1bde16bd-a5ca-4045-a2aa-63b038aabb17_347x229.jpeg"
-class="image-link image2" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Along with the new more segmented open outsole, this new overall design
@@ -336,7 +284,7 @@ and with increased midfoot stability from the plate and upper support.
 The Catamount 1 was a notably rigid shoe up front and not a particularly
 stable shoe on off camber not so at all here. 
 
-**Jeff V:** Sam sums up the technical details of the midsole quite
+Jeff V: Sam sums up the technical details of the midsole quite
 well.  While the midsole foam is the same as the previous, the Catamount
 2 is more flexible and friendly.  Cushioning is soft and compliant
 enough to provide a nice, well cushioned landing, though simultaneously
@@ -347,10 +295,6 @@ stable, precise and agile.  
 
 
 ![image_27.jpg](image_27.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!jcr5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faf67e242-f3b8-487e-ae5a-e926d84d8342_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The plate provides good rock protection, along with some propulsion and
@@ -367,7 +311,7 @@ off. In the Catamount 2, I (like Jeff) felt the improved flexibility and
 reduced stiffness that promoted a really efficient uphill experience as
 well.
 
-**Mike P:** Agree mostly on all points with everyone above. I don’t
+Mike P: Agree mostly on all points with everyone above. I don’t
 believe Brooks has provided official stack height numbers, only the
 drop - which is 6mm. After my first run or two, I actually thought that
 they must have dropped the stack height a bit. They felt more low-slung
@@ -379,10 +323,6 @@ the same stack level.
 
 
 ![image_28.jpg](image_28.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!GbIL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94b3980c-5579-4224-ba84-3bb8cddce6f3_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I agree 100% with John about the stiffness - that and the seemingly
@@ -393,32 +333,24 @@ flexing nicely along with the toes on inclines. It’s a much more
 responsive feel that the plate that was in V1 which felt a bit more
 centered under the foot and definitely less flex-y. 
 
-**Jana:** This is definitely not a shoe for long distances for me.
+Jana: This is definitely not a shoe for long distances for me.
 Cushioning is in the mid to low mark (at least for me), giving a ground
 feel like feeling which I prefer for fast downhills, and overall for
 faster trail runs.
 
-### **Outsole**
+### Outsole
 
 
 ![image_32.jpg](image_32.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!qfml!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F79affd8a-8fa8-4106-a91b-d374a811bd2f_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Jeff V:**  With slightly deeper lugs at 4mm and a more aggressive lug
+Jeff V: With slightly deeper lugs at 4mm and a more aggressive lug
 design/pattern, the Trail Tack outsole of the Catamount 2 provides
 better grip overall than the Catamount 1.  The rubber compound feels the
 same as the previous and is sticky, yet durable. 
 
 
 ![image_34.jpg](image_34.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Fpm2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4162d642-dcb7-4ee3-a4b4-75440c4b02fb_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I have run on dry trails, wet trails, wet slabby rock, off trail, snow,
@@ -432,13 +364,9 @@ essentially unnoticed on the roads.
 
 
 ![image_35.jpg](image_35.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!7BrZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F50cc2a0a-b591-4c44-841d-56cf5568e53a_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**John:** The newly designed outsole lug pattern as well as slightly
+John: The newly designed outsole lug pattern as well as slightly
 deeper lugs bring even more grip to the Catamount 2 compared to the
 first version. It is impressively grippy on a wide variety of terrain in
 varied temperatures. I ran on road, hard pack gravel, off camber grassy
@@ -451,7 +379,7 @@ shoes. In fact, I prefer the more aggressive design for winter road
 running, since most of the time the dry roads will still have loose sand
 and salt residue.  
 
-**Mike P:** The triangular-esque all-around lugs of V1 have been
+Mike P: The triangular-esque all-around lugs of V1 have been
 replaced by more trail-oriented and deeper arrow shaped-lugs. Grip and
 traction in dry and mixed sand/slush/dirty snow & ice is excellent.
 Brooks’ TrailTack rubber is really good, and I’ve had great experience
@@ -466,13 +394,9 @@ another feature to enhance the flexibility and agility of the shoe. 
 
 
 ![image_37.jpg](image_37.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!lZKJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F19d9bee1-07aa-47f7-86af-3a0eab0f839d_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Sam:** The others have described the outsole and its performance well.
+Sam: The others have described the outsole and its performance well.
 I agree. I will highlight that I find the new outsole design with both a
 more decoupled heel area, less midfoot coverage (stability there made up
 for by the internal plate)  and slots through to the midsole upfront
@@ -481,26 +405,18 @@ flexible and even as not so rigid overall more stable. 
 
 
 ![image_39.jpg](image_39.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ZCtW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F20728dca-3e1b-4fc0-b904-035fa526b21a_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Shown above the Cat 1 outsole with its fuller, more continuous shallower
 and more rigid coverage.
 
-**Jana:** I don't have anything else to add, the others have summed up
+Jana: I don't have anything else to add, the others have summed up
 the outsole well.
 
-### **Ride**
+### Ride
 
 
 ![image_6.jpg](image_6.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!PQ69!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbd149185-9fc0-4744-b161-aad43c1af6a5_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 **Jeff V: ** The ride is quick, smooth, energetic and spirited, an
@@ -509,7 +425,7 @@ flexibility over the first version.  The Catamount 2 is also well
 balanced, stable, predictable and well cushioned enough for me for hours
 with great comfort.
 
-**Mike P:** In comparison to V1 especially, I’d sum up the ride with
+Mike P: In comparison to V1 especially, I’d sum up the ride with
 three words: quick, balanced, and agile. While the original version had
 a slightly softer and slightly bouncier feel, V2 is a bit firmer with
 more of a snappy feel. Overall in V1 I felt as if I was riding on top of
@@ -544,13 +460,9 @@ for distance.
 
 
 ![image_7.jpg](image_7.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!7Dof!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4c693ac0-868a-4ab1-862d-cb4663920d61_1280x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Sam:** The Cat 2 has what I could call an “all round” ride. I took it
+Sam: The Cat 2 has what I could call an “all round” ride. I took it
 on non technical forest path trails, moderately rocky and rooty New
 England single tracks with plenty of leaves and some hard icy snow, and
 on the road. 
@@ -564,7 +476,7 @@ got close to some Strava segment PR’s on shorter uphills. They were
 great on the road if a bit firm, but the DNA Flash foam clearly had a
 snappy decisive energy return. 
 
-**Jana:** The Catamount 2 is a fun, fast, and durable shoe for me, on
+Jana: The Catamount 2 is a fun, fast, and durable shoe for me, on
 technical firm ground trails. Although the majority of miles I ran in
 these were on groomed and firm snow covered road/trail (47 miles out of
 62 respectively), they provided a comfortable and stable feel. And as I
@@ -573,15 +485,11 @@ for a shoe that is not a barefoot type (Vivobarefoot are my absolute
 favorite). So for anyone who prefers a slightly cushioned shoe for gym
 workouts, this might be a solution as well. 
 
-### **Conclusions and Recommendations**
-
-<a
-href="https://substackcdn.com/image/fetch/$s_!C4Gp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde4878aa-c874-4ab2-b128-f0348b15d802_1600x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
+### Conclusions and Recommendations
 
 
-**Mike P:** The Catamount 2 is one of my highest scoring shoes - I’m
+
+Mike P: The Catamount 2 is one of my highest scoring shoes - I’m
 very impressed with this shoe. They’ve specifically addressed the two
 main issues I (and others) had with V1 which I laid out in my intro. In
 doing so, they probably have shifted the shoe for most from an
@@ -591,7 +499,7 @@ I’ll surely be taking it out for races this season. Brooks as a brand is
 really coming on strong in the trail scene - Cascadia 16, Caldera 6,
 Divide 3, Catamount 2 - a pretty stout lineup.
 
-**Mike P’s Score:** ** 9.73 / 10**
+Mike P’s Score:** ** 9.73 / 10
 
 Ride: 10 - Love it - quick, balanced, and agile… & lightweight!  
 Fit: 10 - Much improvement here - secure, with great forefoot width  
@@ -602,7 +510,7 @@ Traction: 9.5 - Excellent in most trail conditions you’d expect to run
 these in  
 Rock Protection: 9 - Good, but with the firmness you may feel something
 here or there  
-**Smiles 😊😊😊😊😊**
+Smiles 😊😊😊😊😊
 
 **Jeff V: ** The Catamount 2 is a huge improvement over the first
 version, addressing my most major concern, the less than secure upper,
@@ -616,7 +524,7 @@ stride and going fast uphill, downhill or anything in between.  I would
 also gladly take them along on a trip as a do it all shoe, ready for
 anything that comes along (AND they look very sharp and classy IMHO).
 
-**Jeff V’s Score:** ** 9.6 / 10**
+Jeff V’s Score:** ** 9.6 / 10
 
 Ride: 9.75 - The ride is fast, fun and energetic  
 Fit: 9.75 - Brooks has really dialed in the fit here, a massive
@@ -628,7 +536,7 @@ Traction: 9.5 - excellent for intended purpose, versatile and great for
 all but the most extreme terrain.  
 Rock Protection: 9.5 - very good, I have yet to feel an unpleasant jab
 or any sort of abuse under foot.  
-**Smiles 😊😊😊😊😊**
+Smiles 😊😊😊😊😊
 
 **John**: I would not be surprised if the Catamount 2 is a shoe worn by
 a podium finisher at a major ultra marathon this year. I think the
@@ -639,7 +547,7 @@ is, this shoe is not just great for the podium finishers, it is a high
 performing cushioned choice on the full spectrum of terrain. Without a
 doubt, this is my shoe choice for an everyday long or short run.
 
-**John’s Score: 9.7 / 10**
+John’s Score: 9.7 / 10
 
 Ride: 9.75 (stable, smooth, snappy, and great at uphills)  
 Fit: 9.75 (nearly no break in period for me and my average width foot
@@ -650,13 +558,13 @@ Style: 10 (great contrasting color choices by Brooks!)
 Traction: 9.5 (high performing on a variety of terrain)  
 Rock Protection: 9.5 (solid protection that isn’t too stiff and
 cumbersome)  
-**Smiles 😊😊😊😊😊**
+Smiles 😊😊😊😊😊
 
-**Jana:** My very first Brooks shoe and I am impressed. It is a fun and
+Jana: My very first Brooks shoe and I am impressed. It is a fun and
 fast shoe, for shorter distances. It will definitely stay in my rotation
 for a while.
 
-**Jana’s Score: 9.25 /10**
+Jana’s Score: 9.25 /10
 
 Ride: 9.5 - very pleasant  
 Fit: 9 - it fits well for me, however it may be on a narrow side for
@@ -670,7 +578,7 @@ Rock protection: 9.5 - I had zero issues on technical terrain in them -
 not a single jab felt during my runs.  
 Smiles 😊😊😊😊😊
 
-**Sam:** The Catamount 2 is clearly the product of carefully “listening”
+Sam: The Catamount 2 is clearly the product of carefully “listening”
 and extensive testing by Brooks. Improved in all respects from upper to
 ride to traction the Cat now sits high high on list of all around trail
 shoes with a fun stable and fast ride on just about any terrain, even
@@ -679,7 +587,7 @@ here there are very few with only maybe its capabilities for long ultra
 cush and softness and high mountain runs suffering a bit. For that and
 for long slogs Brooks has the Caldera and Cascadia respectively.
 
-**Sam’s Score: 9.6 /10 **
+Sam’s Score: 9.6 /10 
 
 Ride: 9.8 I do wish for a touch softer foam  
 Fit: 9.8 about as good as it gets for a shoe focused on non ultra
@@ -696,19 +604,19 @@ Rock Protection: 9.2 more than adequate
 
 Unable to execute JavaScript.
 
-### **14 Comparisons**
+### 14 Comparisons
 
 **Brooks Catamount 1** ([RTR
 Review](https://www.roadtrailrun.com/2020/07/brooks-catamount-multi-tester-review.html))
 
-**Mike P (9.5):** Comparisons throughout the review above. Mainly - V2
+Mike P (9.5): Comparisons throughout the review above. Mainly - V2
 features a much better upper and more secure fit. A touch firmer
 underfoot, but much better ground feel, more agile feeling, and overall
 a much more versatile ride. Don’t look for discounts on V1 unless it
 specifically worked for you. V2 is a much better shoe. May have to go up
 ½ size if the new upper feels too snug over the top of the foot.
 
-**Jeff V:** Agreed with Mike and compared throughout review above.
+Jeff V: Agreed with Mike and compared throughout review above.
 
 **John**: The Catamount 2 is everything I enjoyed about the first
 version and offers an improved upper and more dialed ride that enhances
@@ -717,7 +625,7 @@ the uphill running experience. 
 **Brooks Divide 3 ** ([RTR
 Review](https://www.roadtrailrun.com/2022/04/brooks-running-divide-3-multi-tester.html))
 
-**Mike (9.5):** Vague feelings of similarity, but the Divide 3 is
+Mike (9.5): Vague feelings of similarity, but the Divide 3 is
 obviously the budget and less performance oriented shoe. I really like
 the Divide 3 for training as the upper is comfortable and you get nice
 ground feel, and it makes your feet do the work. But for racing, the
@@ -725,7 +633,7 @@ Catamount 2’s plate gives that propulsion you want, and the upper is
 more dialed in which gives you more confidence at speed. Both are great
 shoes for different scenarios.
 
-**Jeff V:**  Agreed with Mike, the Catamount 2 is lighter and much more
+Jeff V: Agreed with Mike, the Catamount 2 is lighter and much more
 performance oriented, nimble, agile and quick, while the Divide 3 is a
 better shoe for slower paces and longer distances.  At $100, the Divide
 3 is a steal, so good that I bought a pair for my wife.
@@ -756,7 +664,7 @@ running where any extended sections of pavement might be involved.
 **Salomon Sense Pro 4 ** ([RTR
 Review](https://www.roadtrailrun.com/2020/02/salomon-sense-pro-4-multi-tester-review.html))
 
-**Jeff V:**  Perhaps some overlap in use, as both are quite versatile,
+Jeff V: Perhaps some overlap in use, as both are quite versatile,
 but the SP4 is not as light, responsive, quick, agile or as protected
 underfoot.  I would look to the Cat 2 for more uptempo or race
 scenarios, where I pick the SP4 for more casual affairs.  In fact, the
@@ -776,7 +684,7 @@ anything else. 
 **Saucony Peregrine 12 ** ([RTR
 Review](https://www.roadtrailrun.com/2022/01/saucony-peregrine-12-multi-tester.html))
 
-**Mike P (9.5):** The Saucony upper is just as dialed in as the
+Mike P (9.5): The Saucony upper is just as dialed in as the
 Catamount, but I find just a touch more width across the forefoot of the
 Brooks - which feels better for me for longer distances. The Saucony’s
 woven plate is more substantial than the SkyVault plate and offers a bit
@@ -808,7 +716,7 @@ scrambling. 
 **VJ Ultra 2 ** ([RTR
 Review](https://www.roadtrailrun.com/2022/07/vj-ultra-2-multi-tester-review-11.html))
 
-**Mike P (10.5):** Note the difference in sizing here - VJ runs smaller
+Mike P (10.5): Note the difference in sizing here - VJ runs smaller
 than every other brand for me. Like the Catamount, the VJ Ultra was
 improved quite a bit from V1 to V2. I really enjoyed running the Ultra 2
 in rugged, mountainous terrain this past summer, but now having the
@@ -820,7 +728,7 @@ and the enhanced agility may make up for the difference in protection.
 The VJ has an obvious advantage in traction and grip, so that would
 definitely be an overriding factor depending on target terrain.
 
-**Jeff V:**  Mike makes some great points, though I personally favor the
+Jeff V: Mike makes some great points, though I personally favor the
 VJ when the terrain gets really technical and/or when maximum grip is
 necessary.  Aside from that, both shoes are fast, agile and protective
 for fast running on most terrain with great performance and good
@@ -829,11 +737,11 @@ cushion/protection.
 **Hoka Torrent  2** ([RTR
 Review](https://www.roadtrailrun.com/2020/06/hoka-one-one-torrent-multi-tester.html))
 
-**Jeff V:**  I much prefer the Cat 2, as it has a more dialed upper, a
+Jeff V: I much prefer the Cat 2, as it has a more dialed upper, a
 more responsive midsole with better protection and overall better
 protection as well.
 
-**John:** Similar to Jeff, I prefer the Catamount 2 over the Hoka
+John: Similar to Jeff, I prefer the Catamount 2 over the Hoka
 Torrent 2. In addition to being more responsive, I find the Torrent 2
 has a more “flat footed” fit and feel, while the Catamount 2 has midfoot
 support that promotes an efficient and bouncy ride. 
@@ -841,7 +749,7 @@ support that promotes an efficient and bouncy ride. 
 **Hoka Zinal** ** **([RTR
 Review](https://www.roadtrailrun.com/2021/06/hoka-one-one-zinal-multi-tester-review.html))
 
-**Jeff V:**  This is actually a really close comparison, with similar
+Jeff V: This is actually a really close comparison, with similar
 stats and overall feel, though I find the Zinal to feel a little bit
 less substantial under foot and thus better suited for going fast on
 less technical terrain, where the Cat 2 can handle everything the Zinal
@@ -856,7 +764,7 @@ however is THE most comfortable shoe of any type (including OOFOs
 recovery slippers) that I have ever put on my foot and is exceptionally
 great for more casual runs, day to day use, door to trail, travel, etc…
 
-**Mike P (9.5):** Agree with Jeff’s first sentence above. I’ll add that
+Mike P (9.5): Agree with Jeff’s first sentence above. I’ll add that
 the Cat 2’s much more balanced feel works much better for me than the
 back-weighted Peg Trail 4. I tested the GTX version of the Peg Trail 4,
 and it’s a great shoe in those conditions, but generally I don’t favor
@@ -868,7 +776,7 @@ Golden Trail Series - they’re a great racer for some)
 **Naked T/r** ([RTR
 Review](https://www.roadtrailrun.com/2022/09/naked-tr-trail-racing-shoe-multi-tester.html))
 
-**Mike P (9.0):** When initially trying on the Catamount 2, I had Tecton
+Mike P (9.0): When initially trying on the Catamount 2, I had Tecton
 X vibes, but after further testing, it kind of transitioned to Naked T/r
 vibes. The Catamount 2 feels like somewhat of a beefed up version of the
 Naked shoe. They have a similar quick feeling via flexible plates, both
@@ -889,7 +797,7 @@ Catamount 2 every time. 
 **Adidas Terrex Speed Ultra** ([RTR
 Review](https://www.roadtrailrun.com/2021/05/adidas-terrex-speed-ultra-multi-tester.html))
 
-**Mike P (9.5/10.0):** For me, I’d have to say that this is the closest
+Mike P (9.5/10.0): For me, I’d have to say that this is the closest
 comp - my beloved Speed Ultras. One of my favorite trail shoes of all
 time - I must admit the Catamount 2 gives very similar feelings. The
 Speed Ultra is a bit lighter - 10g in an equal size US 10. They feel
@@ -907,7 +815,7 @@ testing of the Catamount 2, it’s a toss-up for me.  
 **Brooks Hyperion Max** ([RTR
 Review](https://www.roadtrailrun.com/2022/11/brooks-running-hyperion-max-multi.html))
 
-**Sam:** I constantly thought about Brooks Hyperion Max on the road, a
+Sam: I constantly thought about Brooks Hyperion Max on the road, a
 light up tempo trainer. It has the same DNA Flash midsole foam as the
 Cat. The Max has a blocky awkward overly broad feeling heel at anything
 other than fast paces while the Cat flowed forward smoothly no matter
@@ -915,7 +823,7 @@ the pace and had the impulse from its plate. Hey, Brooks just give the
 Max the plate and midsole geometry of the Cat and a road outsole and you
 would have a clear winner.
 
-### **Tester Profiles**
+### Tester Profiles
 
 **Mike Postaski** currently focuses on long mountainous ultras -
 anywhere from 50K up to his favorite - 100M. 5'10", 138 lbs,

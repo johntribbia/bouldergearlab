@@ -141,7 +141,7 @@ a:hover {
     color: #1a1a1a;
     border-radius: 2px;
     font-weight: 600;
-    font-size: 2.2rem !important;
+    font-size: 1.8rem !important;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     border: 2px solid white;
 }
@@ -559,4 +559,48 @@ ul, ol {
 
 li {
     margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   LINK STYLING
+   ============================================================ */
+
+a {
+    color: #d946a6;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #ec4899;
+}
+
+/* ============================================================
+   REVIEW IMAGE STYLING
+   ============================================================ */
+
+/* Standard image sizing for review content */
+article img,
+.post-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Constrain images on wider screens */
+@media (min-width: 768px) {
+    article img,
+    .post-content img {
+        max-width: 85%;
+    }
+}
+
+/* Banner/hero images */
+.box.post img:first-child,
+article > img:first-of-type {
+    margin-top: 0;
+    max-width: 100%;
 }

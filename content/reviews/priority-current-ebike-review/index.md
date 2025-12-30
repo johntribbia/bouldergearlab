@@ -19,10 +19,6 @@ Priority Current eBike Review ($3,299)
 
 
 ![image_11.png](image_11.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!AXJ4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4d1be36-57ef-4885-94bb-c9cd830d456a_1600x1162.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 If you haven’t experienced the eBike world, I’m convinced you are
@@ -75,14 +71,10 @@ performant eBike.
 - $3,000 + price point can be a hard pill to swallow if you aren’t
   all-in
 
-### **First** **Impressions**
+### First Impressions
 
 
 ![image_12.jpg](image_12.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!77zn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd03f5e97-3aae-43a6-a0f4-8f3746220afc_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Like the Priority Continuum Onyx I
@@ -114,10 +106,6 @@ not something with which you are not very comfortable.
 
 
 ![image_13.png](image_13.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!5IM6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb550bb7a-cf22-4e0d-9851-dc02c3279401_1600x1151.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Once the bike was built, I took the Current for a ride around the
@@ -148,10 +136,6 @@ speed is easy to achieve.
 
 
 ![image_14.png](image_14.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!c6Ca!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0b7021cb-b132-4da2-a2fb-e7be3cb47a6e_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The bike I tested has an eBike specific Shimano Inter-5 internal hub. I
@@ -168,10 +152,6 @@ easy and quick with an assist this strong. 
 
 
 ![image_15.png](image_15.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!XBpq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63f61cc7-7af7-4303-b773-3fc5ba258a08_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 According to Priority, in a Class 1 setting, riders will get between 20
@@ -183,10 +163,6 @@ guess the range for Class 3 setting is 15 to 40 miles per charge.
 
 
 ![image_16.png](image_16.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!fCSI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb3a776e-72a7-4711-a19d-cba12c56eed7_1037x1446.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The 10.4Ah battery is integrated into the bottom of the downtube and I
@@ -207,10 +183,6 @@ security when traveling at higher speeds.
 
 
 ![image_19.png](image_19.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!951j!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc619377c-4dd2-431a-b27b-7c9af48b178b_1600x902.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The tires are plush Goodyear Transit Tour 27.5” tires and, at first, I
@@ -229,13 +201,9 @@ fenders. 
 
 
 ![image_2.jpg](image_2.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!7BbC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff416b689-2537-4422-8e02-f37b26be7130_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Fit**
+### Fit
 
 The Current comes in three sizes - Small, Medium, and Large. The bike is
 built around a mid-step 6061 aluminum frame. The relaxed frame geometry
@@ -248,10 +216,6 @@ adjustment of the stem.
 
 
 ![image_20.jpg](image_20.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!hPQQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6eaa33e4-76a5-4964-bd4b-b612577d277f_1045x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I found the gel padded wider saddle is well cushioned and comfortable
@@ -260,23 +224,15 @@ faster on longer rides
 
 
 ![image_22.jpg](image_22.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!A2gM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2cbfbfa1-2373-4a93-ab50-a929f6651857_1462x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Specs**
+### Specs
 
 
 ![image_24.jpg](image_24.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!nUYi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fae6c2c63-ddbd-4c4a-af8e-82bb6b1d3bce_1276x850.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Conclusions & Rating**
+### Conclusions & Rating
 
 At $3,299 for the Shimano shifting and $3,499 for the Enviolo CVT
 shifting, the Current is somewhat pricey in the middle to upper price
@@ -307,9 +263,9 @@ Specs - 8/10 (at the price point, it would be cool to have an integrated
 gPS in the display and a longer range battery)  
 Fun Factor (out of 5) - 🙌 🙌 🙌 🙌 🙌 
 
-**Overall Average: 8.67 / 10**
+Overall Average: 8.67 / 10
 
-### **Tester Profile**
+### Tester Profile
 
 **John Tribbia** is a regular technical reviewer for running-oriented
 product testing website [RoadTrailRun](http://www.roadtrailrun.com) with

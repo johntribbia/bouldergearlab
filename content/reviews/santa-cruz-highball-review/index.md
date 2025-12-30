@@ -43,10 +43,6 @@ and novice riders with stability and control on descents. 
 
 
 ![image_0.png](image_0.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!oJia!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5eb3788-5c7f-4ecb-9c61-145ac0e9a268_1000x604.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Pros and Cons
@@ -103,10 +99,6 @@ than the old myth suggests.
 
 
 ![image_1.png](image_1.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!qR_I!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5d992036-3841-4d25-89f1-f327e3a3d2a0_1600x1067.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Rear seat stay / seat tube junction looks a lot like a full suspension
@@ -123,10 +115,6 @@ gearing is perfect for steep, unrelenting climbs. 
 
 
 ![image_3.png](image_3.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!KPJ9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4f8d59a1-5212-43b5-bb23-7c42f49e1cd8_1600x1112.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The geometry is compact and generates a lot of pop and response on
@@ -144,10 +132,6 @@ pedals, ensuring optimal pedal position for power and speed. 
 
 
 ![image_5.png](image_5.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!76rw!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7859b31e-b0fe-47d3-b29d-15035ac83cf9_783x396.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Longer reach is great for taller riders, but was more challenging for my
@@ -157,10 +141,6 @@ short reach. 
 
 
 ![image_7.png](image_7.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!jxvz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F803cf7de-0bdd-433b-abab-2f8a3def38b8_922x430.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Rating
@@ -185,7 +165,7 @@ myself)
 Specs - 9.5/10 (top quality for their entry level version)  
 Fun Factor (out of 5) - 🙌 🙌 🙌 🙌 🙌
 
-**Overall Average: 9 / 10**
+Overall Average: 9 / 10
 
 ## Tester Profile
 

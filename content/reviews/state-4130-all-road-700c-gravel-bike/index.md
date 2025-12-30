@@ -64,7 +64,7 @@ also doesn't come with any accessories, such as fenders or a rack.
 >
 > - Doesn't come with any accessories
 
-### **Bike and Kit**
+### Bike and Kit
 
 This won’t surprise anyone: cycling is an expensive sport where gear and
 bikes can cost a fortune for most. Even entry-level bikes suitable for
@@ -134,7 +134,7 @@ for long rides and adventures.
 ![image_4.png](image_4.png)
 
 
-### **Fit and Ride**
+### Fit and Ride
 
 One of the things I like most about the 4130 All-Road is its comfortable
 riding position. The bike has a relatively upright geometry, which makes
@@ -167,7 +167,7 @@ everyday riding, as well as longer adventures.
 ![image_6.png](image_6.png)
 
 
-### **Conclusion**
+### Conclusion
 
 Ultimately, the best bike for gravel riding and/or bikepacking is the
 one that fits your budget and needs. If you're on a tight budget, the
@@ -205,4 +205,4 @@ saddle height)
 **Specs - 7.5/10** (decent house brand components, which is a bonus to
 keep the price down)  
 **Fun Factor (out of 5)** - 🙌 🙌 🙌 🙌   
-**Overall Average: 8 / 10**
+Overall Average: 8 / 10

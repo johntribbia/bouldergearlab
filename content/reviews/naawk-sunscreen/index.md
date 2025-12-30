@@ -9,7 +9,7 @@ draft: false
 ---
 <!--more-->
 
-## **Warm weather has come and gone**
+## Warm weather has come and gone
 
 and, with it, most people stow away their swimsuits, shorts, Hawaiian
 shirts, barbecues, and sunscreen. But wait…don’t hastily put that
@@ -44,13 +44,9 @@ broad-spectrum sunscreen to protect your skin from harmful UV rays!
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!7vPd!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe2d64cc1-7baf-4568-986a-f3d9dc5f33da_1000x1000.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-## **Here are some additional helpful tips to help you better protect your skin year round:**
+## Here are some additional helpful tips to help you better protect your skin year round:
 
 - **No sun? No sunscreen, right?** Unless it is in the dark hours of the
   day, any daylight carries the risk of harmful UV rays.

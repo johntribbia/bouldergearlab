@@ -12,7 +12,7 @@ draft: false
 ![image_0.png](image_0.png)
 
 
-### **Overall: Value for the Money**
+### Overall: Value for the Money
 
 The TENWAYS CGO600 Pro is a good value for the money. It's a
 lightweight, affordable, and stylish eBike that's perfect for city

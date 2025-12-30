@@ -17,13 +17,9 @@ La Sportiva Prodigio ($155, release in mid-February 2024)
 
 
 ![image_0.png](image_0.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!SewR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdcf411ef-c36d-4452-8bcb-e335b1d833e6_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-## **Introduction**
+## Introduction
 
 The trail running world is buzzing with anticipation for La Sportiva's
 newest release: the Prodigio. As a regular trail running shoe reviewer,
@@ -53,9 +49,7 @@ terrain it's designed for. Stay tuned for the full review here, where
 I'll delve into the Prodigio's strengths and weaknesses, and shed light
 on its suitability for the dedicated ultra-distance runner.
 
-**Pros:**
-
-- Softer midsole: Designed for comfort and protection over long
+Pros: - Softer midsole: Designed for comfort and protection over long
   distances
 
 - Lightweight: Weighs under 9.6 oz / US9 sample
@@ -70,9 +64,7 @@ on its suitability for the dedicated ultra-distance runner.
 - Tri-compound FriXion Offers a balance of grip, durability, and
   versatility across different terrains
 
-**Cons:**
-
-- Less stability and protection: Softer midsole compromises performance
+Cons: - Less stability and protection: Softer midsole compromises performance
   on technical terrain
 
 - Less robust upper: May be more susceptible to wear and tear than La
@@ -81,7 +73,7 @@ on its suitability for the dedicated ultra-distance runner.
 Please find the testers full run bios at the end of the article after
 Comparisons.
 
-## **Stats**
+## Stats
 
 Samples: men’s  9.6 oz / 273 g US 9
 
@@ -89,14 +81,10 @@ Stack Height: men’s 34mm heel / 28mm forefoot (6mm drop) 
 
 Available February 15, 2024.
 
-## **First Impressions, Fit and Upper**
+## First Impressions, Fit and Upper
 
 
 ![image_1.png](image_1.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!LCh0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8a05b4b3-f59b-4126-a287-377d04b2f0d4_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 After taking the Prodigio for walks around the block and a first short
@@ -106,10 +94,6 @@ especially compared to other La Sportiva models I've tested.
 
 
 ![image_11.png](image_11.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ie4X!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbefe87a1-9b4d-4549-ba0b-5eff356b1b66_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Firstly, regarding the fit, I would recommend to size up 0.5 US.
@@ -121,10 +105,6 @@ uncomfortable pressure points.
 
 
 ![image_12.png](image_12.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!dD39!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5337a4fb-7b17-4363-a6ef-5cebd949e39f_1600x1447.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The upper is a highlight for me. I love the lightweight and breathable
@@ -144,14 +124,10 @@ how it performs on longer trail runs and more technical terrain, but my
 first impression is that La Sportiva has delivered an exceptional
 contender for the ultra-distance running market.
 
-## **Midsole & Platform**
+## Midsole & Platform
 
 
 ![image_16.png](image_16.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!FkEm!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8007911a-8247-4225-a206-47f8cd48abac_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Prodigio's X-Flow supercritical foam midsole and platform represent
@@ -171,10 +147,6 @@ promise of enhanced cushioning and responsiveness.
 
 
 ![image_2.png](image_2.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!0Fku!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4705d3c7-b5c1-4581-ada8-c55bef46a63d_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The initial impression of softness is undeniable. The X-Flow compound
@@ -199,10 +171,6 @@ distances on moderate terrain.
 
 
 ![image_3.png](image_3.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!NuVx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe823142d-5d19-408a-8c29-95ff3eb985fe_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 However, it's crucial to acknowledge that the X-Flow platform might not
@@ -212,14 +180,10 @@ technical terrain. For runners who prioritize agility and precision over
 comfort, La Sportiva's other models with their firmer midsoles might be
 a more appropriate choice.
 
-## **Outsole**
+## Outsole
 
 
 ![image_7.png](image_7.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!vuJm!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F80d90383-6eda-462a-ab36-5fb00f527dae_948x616.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Prodigio's outsole proved surprisingly versatile across diverse
@@ -235,12 +199,8 @@ compared to La Sportiva's more aggressive offerings. Nevertheless, on
 road sections, the shoe surprised with a smooth transition and ample
 traction despite the prominent lugs.
 
-## **Ride, Conclusions and Recommendations**
+## Ride, Conclusions and Recommendations
 
-<a
-href="https://substackcdn.com/image/fetch/$s_!SewR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdcf411ef-c36d-4452-8bcb-e335b1d833e6_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Prodigio delivers a smooth and comfortable ride, particularly
@@ -287,7 +247,7 @@ of trail and ultra runners' needs. It's a shoe that will undoubtedly
 find its place among dedicated long-distance enthusiasts who prioritize
 comfort without entirely sacrificing performance and versatility.
 
-**Rating Score:  9/10**
+Rating Score:  9/10
 
 Ride: 9.5 (great shoe for variety of paces on the smooth trails and
 road)
@@ -304,7 +264,7 @@ Rock Protection: 8.5
 
 😊😊😊😊 
 
-## **Comparisons**
+## Comparisons
 
 Index to all RTR reviews:
 [HERE](https://www.roadtrailrun.com/p/blog-page.html)** **

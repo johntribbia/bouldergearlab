@@ -22,10 +22,6 @@ Hoka Speedgoat 5 GTX ($170)
 
 
 ![image_1.jpg](image_1.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!NSbz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F50029fd1-6537-407d-8f63-a5aa0053c3d4_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 **Pros**
@@ -42,7 +38,7 @@ Heel shape: **Renee**
 
 Midsole is dense and harsh in cold temperatures: **John**
 
-### **Stats**
+### Stats
 
 Sample Weights:  men’s     9.84oz  / 279g (US 9.0)
 
@@ -54,9 +50,9 @@ forefoot
 $170. Available now at our partner REI 
 [HERE](https://www.avantlink.com/click.php?tt=cl&merchant_id=e295c418-295a-447c-b265-734e25f82503&website_id=b49fa48c-1149-4bca-b4c4-b5af0c5246a3&url=https%3A%2F%2Fwww.rei.com%2Fsearch%3Fq%3DSpeedgoat%2B5)
 
-### **First Impressions, Fit and Upper**
+### First Impressions, Fit and Upper
 
-**Renee:** The fan favorite Speedgoat returns with a freaking fantastic
+Renee: The fan favorite Speedgoat returns with a freaking fantastic
 GTX upper! I bought the Speedgoat 4 (not a review sample) and returned
 it. The shoe was too heavy for me and my little toe needed more room. I
 won’t bury the lead here: I like the SG 5 much better. The GTX version
@@ -69,10 +65,6 @@ which I recommend reading. 
 
 
 ![image_12.png](image_12.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!lYt_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff060690b-a411-4c69-bfb1-64cae804b111_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The upper is a double layer jacquard engineered mesh with what Hoka
@@ -107,10 +99,6 @@ comfortable, even when running in wet and snowy conditions. 
 
 
 ![image_13.jpg](image_13.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!XG2p!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe789369-d623-45a5-9c24-53b47b370be5_1200x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Speedgoat 5 fits true to size. If you are at a half size, I would
@@ -123,17 +111,13 @@ are slipping or sliding around in the shoe, and the upper hugs my foot
 nicely. When I'm bombing down trails, I like that the Speedgoat 5 keeps
 a tight grip on my foot, with no slipping or rubbing
 
-### **Midsole**
+### Midsole
 
 
 ![image_15.jpg](image_15.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!PEGi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0d4f1aed-c2da-4567-98e4-4a03938f401a_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Renee:** The midsole is CMEVA (Compression Molded EVA) with a late
+Renee: The midsole is CMEVA (Compression Molded EVA) with a late
 stage rocker. The midsole is firm, but not uncomfortably harsh and works
 for me as a trail shoe when I don't want an over cushioned midsole. I’m
 not a fan of rocker midsoles/rides for trails, but the late stage is
@@ -155,17 +139,13 @@ it still provides a good amount of impact protection. The CMEVA midsole
 foam provides a comfortable cushion that dampens the underfoot terrain
 while offering good stability. 
 
-### **Outsole**
+### Outsole
 
 
 ![image_3.jpg](image_3.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!dbYo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F906527df-2a66-469c-bc6b-4e01caa39958_419x293.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Renee:** I tested the non spike version of the GTX, which has the same
+Renee: I tested the non spike version of the GTX, which has the same
 outsole as the regular non GTX Speedgoat. 
 
 The 5mm lugs and Vibram MegaGrip are comfortable on a variety of
@@ -175,10 +155,6 @@ through fields. The 5mm lugs aren’t uncomfortable on rolling hills
 
 
 ![image_4.jpg](image_4.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!niuW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F957f0640-b4e0-45d9-b5be-921750aff4f1_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 At times, the lugs seem less than 5mm, but it’s hard to get good
@@ -188,10 +164,6 @@ front and back of most of the outsole lugs. 
 
 
 ![image_6.png](image_6.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!J6Zn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa03b5bca-ff7c-413d-bcdb-8e4fc1074af1_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 **John**: The Speedgoat 5 outsole has a lot of small lugs that provide
@@ -200,17 +172,13 @@ ice, and slick rocks. I've never felt like I was going to slip or slide,
 even on wet or muddy surfaces. I also ran them on pavement and they were
 reasonably efficient, although I would still prefer them off-road. 
 
-### **Ride**
+### Ride
 
 
 ![image_7.jpg](image_7.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!2BRu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fef576380-c0cf-45bb-940e-a8b765239cef_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-**Renee:** The ride is smooth. The more I ran in the shoes, the more I
+Renee: The ride is smooth. The more I ran in the shoes, the more I
 liked it. The late stage rocker is not as obtrusive on uneven surfaces
 as I initially thought it would be. At slow paces (which is pretty much
 all I can manage when running through snow), the ride is protective and
@@ -224,10 +192,6 @@ warranted a GTX upper. 
 
 
 ![image_8.jpg](image_8.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!fty0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07ce9cb7-9369-4eae-a587-9062ab0a09bf_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I thought the shoes worked well for snowshoe running, although I’d
@@ -239,9 +203,9 @@ makes running feel more efficient. Like Renee, I like the smooth ride of
 the shoe, especially for slower paces on uphills and downhills, but felt
 encumbered when trying to pick up the pace. 
 
-### **Conclusions and Recommendations**
+### Conclusions and Recommendations
 
-**Renee:** For winter running, the SG 5 GTX is very useful. I don’t like
+Renee: For winter running, the SG 5 GTX is very useful. I don’t like
 heavy shoes and I’m not usually a fan of rocker midsoles. However, the
 GTX of the upper is well integrated around the entire tongue, so during
 winter snow/slush/sleet running I had no issues racking up miles in this
@@ -274,7 +238,7 @@ conditions thanks to the GoreTex upper.  The Speedgoat 5 is versatile
 and is a great option for moderately paced runs, short and long distance
 across a multiplicity of terrain types
 
-**John’s Score:  9.3/10**
+John’s Score:  9.3/10
 
 Ride: 9 - A smooth, well cushioned, and nice rocker  
 Fit: 9.5 - Roomy toebox and secure upper  
@@ -286,14 +250,14 @@ Rock Protection: 9 - Dense midsole provides solid protection
 
 😊😊😊😊
 
-### **Comparisons**
+### Comparisons
 
 Index to all RTR reviews:
 [HERE](https://www.roadtrailrun.com/p/blog-page.html)
 
 **Saucony Peregrine 13 GTX** (RTR Review soon)
 
-**Renee:** The Peregrine 13 GTX is a lighter weight shoe without a
+Renee: The Peregrine 13 GTX is a lighter weight shoe without a
 rocker ride. The rock plate helps with uneven surfaces although the
 Speedgoat has good protection underfoot without a plate. The GTX on the
 SG5 wraps around the heel, whereas the Peregrine GTX does not. For a
@@ -313,7 +277,7 @@ uptempo.
 **Nike Pegasus Trail 4 GTX** ** **([RTR
 Review](https://www.roadtrailrun.com/2022/12/nike-react-pegasus-trail-4-gtx-multi.html))
 
-**Renee:** The Pegasus Trail 4 GTX is a lighter, more nimble shoe.
+Renee: The Pegasus Trail 4 GTX is a lighter, more nimble shoe.
 Although a road-to-trail shoe, it rides well on single track. The SG5
 has a better forefoot cushion and overall protection for longer, more
 technical trails. The GTX coverage is better too, but The Peg Trail GTX

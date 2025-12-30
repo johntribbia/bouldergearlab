@@ -45,13 +45,9 @@ equipment at a mid-tier price.
 
 
 ![image_1.png](image_1.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ONsj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe4bdc3d3-6aa0-4571-b5b7-7d1789bd3aa3_1728x2322.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Pros**
+### Pros
 
 - Powerful motor with Rapid Sync technology
 
@@ -65,7 +61,7 @@ data-component-name="Image2ToDOM"></a>
 
 - Has a lifetime frame and motor warranty
 
-### **Cons**
+### Cons
 
 - Heavy and not as portable as some other treadmills
 
@@ -74,7 +70,7 @@ data-component-name="Image2ToDOM"></a>
 - Speed and incline wheel adjustments are sensitive to accidental bumps
   or turns
 
-### **Home Delivery**
+### Home Delivery
 
 Horizon Fitness has three options for home delivery: standard $159
 delivery where the machine is delivered to your home and you are
@@ -87,16 +83,12 @@ unassembled, and weighs over 350lbs!
 
 
 ![image_12.png](image_12.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!G5--!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd7ddf8ca-c858-4f9a-b7bc-171d587afb1a_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The 7.8 AT features a wide and long deck and other features such as an
 integrated fan, speakers, and spin dial speed + incline adjustment
 
-### **Comfortable running deck**
+### Comfortable running deck
 
 The running deck on the 7.8 AT is made of 22" x 60" of durable material
 with 3-zone cushioning. This provides plenty of space for walking,
@@ -125,16 +117,12 @@ cushioning.
 
 
 ![image_14.png](image_14.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!sw3M!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49098fea-4259-4acb-a5be-d3957b379841_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The running deck is 22” wide and 60” long, which allows for long strides
 and variable positioning
 
-### **Powerful motor**
+### Powerful motor
 
 The 7.8 AT has a powerful motor that can go up to 12 mph and has a 15%
 incline. This makes it a great option for runners who want to do
@@ -164,10 +152,6 @@ run close to the console or like to use the handles for stability. 
 
 
 ![image_18.png](image_18.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!jJOA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd523d8f5-7379-4fac-9a37-d7311e1f2c50_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The QuickDial on top of the heart rate sensor handle allows for quick
@@ -176,15 +160,11 @@ speed without having to calibrate with the dial. 
 
 
 ![image_19.png](image_19.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!NDpr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F644a07af-0f67-4a8f-85d4-418bc0d4b23c_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 There is the same feature on the left side for incline from 0-15%. 
 
-### **Variety of features**
+### Variety of features
 
 The 7.8 AT comes with a variety of features that make it easy to use. It
 has a built-in fan, which helps keep you cool while you're running and
@@ -200,10 +180,6 @@ ease.
 
 
 ![image_2.png](image_2.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!shX2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F367cc396-1737-40db-a50b-52083f597415_1600x863.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 9.3” screen that displays distance, pace, time, calories, lap count,
@@ -211,10 +187,6 @@ speed, incline, and heart rate
 
 
 ![image_5.png](image_5.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Y9F9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbc42bbf1-195e-4fb8-9168-d26f048086d6_855x528.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Tablets can be placed above the screen in the designated holder, which
@@ -222,10 +194,6 @@ is at eye level
 
 
 ![image_6.png](image_6.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!7JWy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe2ca23a6-4fc3-4f4a-8a3d-ed07cfc81beb_765x370.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 There is additional storage for phones, water bottles, and other
@@ -251,10 +219,6 @@ iPad changed at all times.
 
 
 ![image_7.jpg](image_7.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!QyAi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8b71d1d-6f29-4bf0-801a-f0c49d489f17_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 An integrated fan, BlueTooth connectivity, and several automatic workout
@@ -264,16 +228,12 @@ playlist
 
 
 ![image_8.png](image_8.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!aQLa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7dd31ae2-2cb3-4f22-8231-9e7fc22b9fd5_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Tucked in the corner of the basement, the 7.8 AT can be used without
 taking too much space
 
-### **Overall**
+### Overall
 
 As someone who is new to home fitness equipment, I can’t necessarily
 comment on how the 7.8 AT compares to other home options, but I have and
@@ -297,15 +257,11 @@ easy to use.
 
 
 ![image_9.png](image_9.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!l0tw!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa3e16dff-291f-459f-9f6b-7f98e85fd9c8_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 For home space optimization, the 7.8 AT can fold vertically
 
-### **Conclusion**
+### Conclusion
 
 So, there you have it. I'm a trail runner who's always been a bit
 reluctant to have a treadmill at home, but this one has really changed

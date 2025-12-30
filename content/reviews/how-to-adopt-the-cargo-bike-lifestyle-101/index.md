@@ -11,10 +11,6 @@ draft: false
 
 
 ![image_2.jpg](image_2.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!6Wus!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F112ea41f-1f8c-4279-8fc3-c09eacd6788e_1000x563.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 One important responsibility as a current or future e-bike rider is to
@@ -105,10 +101,6 @@ similar situation while buying your bike, all signals say GO!
 
 
 ![image_3.jpg](image_3.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Ls7L!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc12cf44e-08f7-4c2c-9498-58719ba0f91c_300x207.jpeg"
-class="image-link image2" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 ## Step 3: Learn about Cargo Bikes (by asking the right Qs)

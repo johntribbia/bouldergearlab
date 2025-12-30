@@ -22,13 +22,9 @@ Reviews Here</span></a>
 
 
 ![image_12.jpg](image_12.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!SC3g!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F348397d8-dbfa-4ed2-ac2b-50ffa0dfba07_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Introduction**
+### Introduction
 
 John: In a recent
 [interview](https://thepillmagazine.com/feature/la-sportiva-ss21-news-interview-with-jonathan-wyatt-running-product-specialist/?lang=en)
@@ -53,26 +49,22 @@ distances.
 
 
 ![image_13.jpg](image_13.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!TFL4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc28746e1-8a95-4a74-80fc-b4fa5efa3b60_1600x1355.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Pros:**
+### Pros:
 
 John: great ground feel, very stable, well protected, and efficient in
 technical terrain. Very breathable  
 Jeff V:  Stable, protective both underfoot and upper, fit/security,
 traction
 
-### **Cons:**
+### Cons:
 
 John: a bit too breathable for colder pursuits, my feet were freezing at
 45 degrees!  
 Jeff V:  Firm ride
 
-### **Tester Profiles**
+### Tester Profiles
 
 **John Tribbia (5' 6", 130lbs)** is a former sponsored mountain/trail
 runner who has run with La Sportiva, Brooks/Fleet Feet, Pearl Izumi, and
@@ -89,7 +81,7 @@ before the break of dawn almost everyday.
 **Jeff** runs mostly on very steep technical terrain above Boulder often
 challenging well known local FKT's. 
 
-### **Stats**
+### Stats
 
 Weight: men's 10.37 oz/ 294g   (US9)
 
@@ -100,14 +92,10 @@ Stack Height: 29mm heel / 22mm forefoot, 7mm drop
 
 Available early 2021, $130  
 
-### **First Impressions and Fit**
+### First Impressions and Fit
 
 
 ![image_15.jpg](image_15.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!xAQ3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1f38859f-34bd-4ffd-98cc-894a17daaebb_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 John: The La Sportiva Karacal is incredibly comfortable and holds my
@@ -127,14 +115,10 @@ outsole and midsole as the Jackal, but with a completely different upper
 that I find to fit much more “normal” and which is more accommodating in
 the forefoot.  Fit is true to size for me.
 
-### **Upper**
+### Upper
 
 
 ![image_16.jpg](image_16.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!hVYA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa513490a-2969-427e-9e5c-56d96c3d22d4_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 John: With a seamless 3D mesh upper that is covered with very thin
@@ -143,10 +127,6 @@ excellent combination of breathability and protection. 
 
 
 ![image_17.jpg](image_17.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ueeH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6dbb382e-eb35-43e5-82e3-431b49f0e1e8_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The heel collar is low with just enough padding. There’s an external
@@ -155,10 +135,6 @@ enhances the heel hold. 
 
 
 ![image_18.jpg](image_18.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!cIs0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb694c1f3-6dd6-408b-ae74-8646b1380fbf_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Related, the midfoot hold is excellent. With the combination of a secure
@@ -168,10 +144,6 @@ technical terrain. 
 
 
 ![image_19.jpg](image_19.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!f3tK!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe43d48ae-8ae4-40a4-b84b-9595d93c9d1c_1600x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Overall, the upper security is exceptional,, especially on steep
@@ -179,10 +151,6 @@ technical terrain.
 
 
 ![image_2.jpg](image_2.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!0pOQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1b20387a-5ab2-48e6-8272-e468156b9f84_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The laces are soft, comfortable, and provide a secure tie-down. Lastly,
@@ -196,14 +164,10 @@ not notably generous, it is relatively generous for a La Sportiva and
 has just enough room for splay, swell and just a bit more relaxed, while
 maintaining very good foothold throughout.  
 
-### **Midsole**
+### Midsole
 
 
 ![image_20.jpg](image_20.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!3XOh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F187ef6ca-bc05-4ba6-99cf-052c78d9475a_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 John: the midsole of the Karacal is a dual density compressed EVA with a
@@ -224,14 +188,10 @@ or lively, so the Karacal in my opinion is best suited for more
 moderately paced efforts, or even somewhat quicker efforts in technical
 terrain.
 
-### **Outsole**
+### Outsole
 
 
 ![image_4.jpg](image_4.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!4svi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1d184577-dd35-411c-8721-ae111b9179a0_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 John: The FriXion AT2 outsole with 3mm lugs provide superb traction and
@@ -241,10 +201,6 @@ trail, to mud. 
 
 
 ![image_7.jpg](image_7.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!vyyM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16a932b3-02cf-46f8-91e6-39023fe441ca_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The yellow hardened EVA rock plate extends the entire length of the shoe
@@ -253,10 +209,6 @@ front without being overly stiff as rock plates sometimes can be
 
 
 ![image_9.jpg](image_9.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!cZXh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F481c9218-bf01-43f2-a048-f71de2548c96_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Although the 3mm lugs aren’t exceptionally deep, they are sharp and
@@ -271,7 +223,7 @@ surface.  Durability thus far has been very good, with very minimal
 signs of wear despite the rough and rocky terrain I frequent, which is
 testament to the purpose of this shoe.
 
-### **Ride**
+### Ride
 
 John:  The ride of the Karacal is dreamy for those who run in the
 mountains over rough and technical terrain. Traveling over scree or
@@ -288,16 +240,16 @@ firm delight.  For more spirited, higher paced running on buffed out
 terrain, dirt roads or pavement, the firmness of the Karacal and less
 than lively outsole is not ideal, but is fine for short stints.
 
-### **Conclusions and Recommendations**
+### Conclusions and Recommendations
 
-**John:** If you are looking to add a shoe that is ideal when moving
+John: If you are looking to add a shoe that is ideal when moving
 fast and efficiently through technical mountain terrain, the Karacal is
 a top choice. The shoe is comfortable with a wider fit than typical La
 Sportiva shoes, feels secure and stable when running across varied
 terrain, is firm in a good way, and can withstand long days in the
 mountains.
 
-**John’s Score: 9.1/10 **
+John’s Score: 9.1/10 
 
 Ride: 9 (fun mountain shoe with stable and firm ride)  
 Fit: 9 (the roomier toe box is a welcome feature)  
@@ -319,7 +271,7 @@ splay.  I would recommend for long days in the mountains, preferably if
 the terrain is rugged, but for faster running over longer distances that
 is less technical, I might look to the Akasha 2.
 
-**Score: 9.3/10**
+Score: 9.3/10
 
 Ride: 9 - Firm, but appropriately so for rough mountain terrain  
 Fit: 9 - Perhaps better than any La Sportiva to date, secure with a bit
@@ -330,7 +282,7 @@ Traction: 10 - Best in class, impressive for its versatility on a wide
 range of terrain  
 Rock Protection: 10 - Nothing comes close to poking through the Karacal
 
-### **Comparisons**
+### Comparisons
 
 Index to all RTR reviews:
 [HERE](https://www.roadtrailrun.com/p/blog-page.html)

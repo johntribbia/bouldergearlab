@@ -17,10 +17,6 @@ surpasses the likes of Starbucks (gasp!).
 
 
 ![image_1.png](image_1.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!M1Dv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7edd4286-58ce-44dc-90d0-14c0d7444549_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Intrigued? Absolutely. So, when a care package containing Matcha with
@@ -35,10 +31,6 @@ posts and support my work.
 
 
 ![image_3.jpg](image_3.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!tAM9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffc0f0331-a52b-44fd-bd30-48e14e6a7ee6_1201x1600.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Beverages “with Benefits”
@@ -58,10 +50,6 @@ it a functional upgrade to your regular oat milk.
 
 
 ![image_6.png](image_6.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!r6PB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F275e3f3f-7cc9-40d4-9872-b9e143114cdf_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Craving a coffee kick? The "[Latte with
@@ -81,10 +69,6 @@ pick-me-up with a sustained energy boost.
 
 
 ![image_8.png](image_8.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!JZZq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c27fb21-7353-4d9f-a545-274493171feb_1600x1309.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Sure, there might be slight taste differences compared to freshly brewed
@@ -95,8 +79,4 @@ future – your taste buds (and your immune system) will thank you.
 
 
 ![image_9.png](image_9.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!dSZZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F683f7e30-5480-494a-a153-85fa74ad5c7f_2554x1916.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 

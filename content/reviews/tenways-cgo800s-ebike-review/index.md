@@ -20,13 +20,9 @@ TENWAYS CGO800S eBike Review ($1,999)
 
 
 ![image_0.png](image_0.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!2YRW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd90a66d1-a407-46c6-be8b-a9c1540d839b_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Introduction**
+### Introduction
 
 [TENWAYS
 Bicycles](https://www.tenways.com/?ref=johntribbia&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=johntribbia)
@@ -85,14 +81,10 @@ workout, the gym, or the grocery store. 
 - Single speed setup is best suited for regular and long distance riding
   on flat terrain
 
-### **First** **Impressions**
+### First Impressions
 
 
 ![image_11.png](image_11.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!r9Lr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F98b41f3d-c6f9-4e5a-ae17-1acfef65953b_1600x1200.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Like the [Priority Continuum
@@ -102,10 +94,6 @@ box. It is a heavy box that may require two people to carry. 
 
 
 ![image_13.png](image_13.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!wjdZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1af8ea67-1426-4c57-b538-5c8d90a6479f_1600x950.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Most direct to consumer eBikes (especially those with carbon belt drives
@@ -133,10 +121,6 @@ the buttons near the right grip (photo below)
 
 
 ![image_14.png](image_14.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!hTLo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc449739c-545a-4b3c-98f5-6468a54d5e38_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Once the bike was built, I took the CGO800S for a ride around the
@@ -164,10 +148,6 @@ weatherproof and I’m a big fan..
 
 
 ![image_15.png](image_15.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!Fhxx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4e6c4fd0-f95d-474b-ad11-e09897cb4259_1600x1130.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The brushless hub motor with carbon belt is durable, low maintenance,
@@ -175,13 +155,9 @@ and is incredibly quiet.
 
 
 ![image_18.png](image_18.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!jaKY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2149aec5-eb73-44b3-b48a-741c457e421f_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Ride**
+### Ride
 
 I started riding the CGO800S on commutes to/from work and neighborhood
 tours. My commute to work is around 8 miles and mostly flat. Around the
@@ -215,10 +191,6 @@ remaining.
 
 
 ![image_19.png](image_19.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!iUPa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F81661e8f-799f-4780-add3-ba508786f7e4_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The 36V, 10.4Ah Lithium-ion Battery with 18650 cells is integrated into
@@ -245,10 +217,6 @@ efficiently on tarmac and did well in wet and dry conditions. 
 
 
 ![image_20.png](image_20.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!f_2F!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3190d7ef-d114-4506-b7df-ab30cee2868b_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I really appreciate the SR SUNTOUR Suspension Front Fork that does an
@@ -262,10 +230,6 @@ squeeze with cold hands or with mittens on, fenders, and a rear rack. 
 
 
 ![image_21.png](image_21.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!qSMs!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8356dac4-a71c-4763-bd18-ddc33dd4164c_1600x1083.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 **Fit**
@@ -278,10 +242,6 @@ modified with the adjustment of the stem.
 
 
 ![image_22.png](image_22.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!O-Zw!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1637da69-687e-4215-8222-7684f722979b_1146x1528.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I found the Selle Royal saddle is well cushioned and comfortable for
@@ -289,23 +249,15 @@ casual cruising and is ergonomic for faster pedaling cadences
 
 
 ![image_3.png](image_3.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!-TBg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda516213-5264-4423-8c13-a7ec6dce65f8_1600x534.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Specs**
+### Specs
 
 
 ![image_6.png](image_6.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!MIed!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaa61860-63c6-4099-ad17-e85f278984d3_1160x1210.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Conclusions & Rating**
+### Conclusions & Rating
 
 At $1,999, the [TENWAYS
 CGO800S](https://www.tenways.com/products/cgo800s/?ref=johntribbia&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=johntribbia)
@@ -331,9 +283,9 @@ Specs - 8/10 (at the price point, it is a great bike that can take you
 from A to B)  
 Fun Factor (out of 5) - 🙌 🙌 🙌 🙌  
 
-**Overall Average: 8.33 / 10**
+Overall Average: 8.33 / 10
 
-### **Comparisons**
+### Comparisons
 
 **Priority Current** ([RTR
 Review](https://www.roadtrailrun.com/2022/09/roadtrailride-priority-current-ebike.html)) 
@@ -353,7 +305,7 @@ comfortable saddle that is better for longer distance riding, and is
 more tech user friendly with an accompanying app and slightly more
 intuitive controls. 
 
-### **Tester Profile**
+### Tester Profile
 
 **John Tribbia** is a regular technical reviewer for running-oriented
 product testing website [RoadTrailRun](http://www.roadtrailrun.com) with

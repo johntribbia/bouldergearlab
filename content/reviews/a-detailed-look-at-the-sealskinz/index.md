@@ -18,10 +18,6 @@ Socks](https://www.sealskinzusa.com/products/starston-waterproof-cold-weather-mi
 
 
 ![image_10.jpg](image_10.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!5Uuq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F70775ce0-587f-4c56-a460-4038559e48b1_1478x1916.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 These socks are more than just a layer of warmth; they're a fortress
@@ -46,10 +42,6 @@ lies a highly sophisticated three-layer construction:
 
 
 ![image_3.jpg](image_3.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!GUSa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6bb3c8c3-49e8-4583-8d37-20ecfdbf0ca2_3328x1738.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The seamless toe box eliminates any potential rubbing or discomfort,
@@ -59,10 +51,6 @@ teeth of a 20-degree winter morning.
 
 
 ![image_4.jpg](image_4.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!SOBC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F627bec79-3e7a-463c-986e-cce8d346f35c_1438x1916.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Despite the long duration and frigid temperatures, my feet remained
@@ -80,10 +68,6 @@ foot quite well and caused no issues.
 
 
 ![image_5.jpg](image_5.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!kevR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc4cf29d1-a0ce-40c8-8589-566a4d1904f1_2554x1916.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 However, the Starston socks come with some caveats. Firstly, their
@@ -94,10 +78,6 @@ than standard cycling socks.
 
 
 ![image_6.jpg](image_6.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!EU8y!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd516bc85-d8f5-4d7f-ac5d-4fc2c00aa3c3_2554x1916.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Secondly, while the merino wool effectively regulates temperature, it
@@ -111,10 +91,6 @@ riders.
 
 
 ![image_7.jpg](image_7.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!HABj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8d53246-8ced-4d81-8c35-252e9c6a3954_1650x1916.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Notwithstanding, the Sealskinz Starston socks aren’t just a pair of

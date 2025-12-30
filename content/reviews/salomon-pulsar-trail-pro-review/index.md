@@ -18,17 +18,13 @@ Reviews Here</span></a>
 
 *Article by John Tribbia*
 
-### **Salomon Pulsar Trail Pro** ($150)
+### Salomon Pulsar Trail Pro ($150)
 
 
 ![image_1.png](image_1.png)
-<a
-href="https://substackcdn.com/image/fetch/$s_!JWhA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3d5580a4-f7cf-4134-acaa-8506b70376fb_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Introduction**
+### Introduction
 
 The Pulsar Trail Pro is Salomon’s new mid to long range trail running
 shoe that is built for moving fast, regardless of conditions. It is a
@@ -53,10 +49,6 @@ typical-Salomon-style toe box. 
 
 
 ![image_10.jpg](image_10.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!R1Ji!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F19bd3d22-b7b7-41fe-9aa3-993af4487b75_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 In short, the Salomon Pulsar Trail Pro is a race or fast training trail
@@ -65,13 +57,9 @@ and even races.
 
 
 ![image_13.jpg](image_13.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!S4QG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3a039002-4eb2-4c0e-b988-0edc014ecf80_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Pros**
+### Pros
 
 > Soft cushion and forgiving ride
 >
@@ -85,7 +73,7 @@ data-component-name="Image2ToDOM"></a>
 >
 > Longer laces with easy to use Quicklace garage.
 
-### **Cons**
+### Cons
 
 > Lack of ground feel
 >
@@ -97,13 +85,9 @@ data-component-name="Image2ToDOM"></a>
 
 
 ![image_14.jpg](image_14.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ul4P!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F01b06dfe-c96a-4b8f-bc10-d2748e919b29_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Tester Profile**
+### Tester Profile
 
 **John Tribbia (5' 6", 130lbs)** is a former sponsored mountain/trail
 runner who has run with La Sportiva, Brooks/Fleet Feet, Pearl Izumi, and
@@ -117,7 +101,7 @@ him on [Strava](https://www.strava.com/athletes/1044838), you'll notice
 he runs at varying paces between 5 minutes/mile to 12 minutes/mile
 before the break of dawn almost every day.
 
-### **Stats**
+### Stats
 
 Sample: men’s  9.06 oz  / 257g
 
@@ -125,14 +109,10 @@ Stack Height: men’s 31 mm heel / 25 mm forefoot, 6mm drop
 
 Available now. $150
 
-### **First Impressions, Fit and Upper**
+### First Impressions, Fit and Upper
 
 
 ![image_15.jpg](image_15.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!JWhA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3d5580a4-f7cf-4134-acaa-8506b70376fb_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 I’m really excited to test this shoe! I tested S/LAB Pulsar and have
@@ -142,10 +122,6 @@ as soon as you put it on. 
 
 
 ![image_17.jpg](image_17.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!VZOa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb11b071-1fea-4110-b38b-45945226f423_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 With the added cushioning compared to the S/LAB Pulsar 1mm more and with
@@ -157,10 +133,6 @@ cushion. 
 
 
 ![image_18.jpg](image_18.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!v9h5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c2ff92e-30a2-43d1-8cd5-c352138ccb0b_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Fit is true to size and a bit wider for my slightly narrow foot compared
@@ -169,30 +141,18 @@ in using the Quicklace system. 
 
 
 ![image_20.jpg](image_20.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!eQLF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd4e20a3f-9fd5-4f59-879e-fed93ecfe335_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The toe box has ample room.
 
 
 ![image_21.jpg](image_21.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!djcc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a281ccb-d448-4f5b-aabe-0508877317a7_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
-### **Midsole**
+### Midsole
 
 
 ![image_22.jpg](image_22.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!s4Zt!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5de653f8-3d50-49a8-8f8b-cc910b9942ea_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Energy Surge midsole foam is lightweight and responsive due to its
@@ -201,10 +161,6 @@ TPU Energy Blade with a firmer layer underneath. 
 
 
 ![image_25.jpg](image_25.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!wHlV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5acad66c-5dd0-4e4a-b28e-0c40e81217fb_316x481.png"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Source: Salomon
@@ -219,10 +175,6 @@ comfortable. 
 
 
 ![image_29.jpg](image_29.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ua-o!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb5ae55c-1f42-4e9c-930e-9fa790d452fe_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 In the technical sections, I felt like the Trail Pro was less stable -
@@ -233,14 +185,10 @@ between my foot and the ground to feel confident in precise footsteps.
 Needless to say, the dual foam and blade combination yield a leg saving
 yet responsive feel when navigating any other terrain. 
 
-### **Outsole**
+### Outsole
 
 
 ![image_3.jpg](image_3.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!ql6n!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbebde63f-5e5d-4dae-bf04-5cbfcb2ba8e4_1600x829.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Contagrip rubber outsole is grippy, though the 3.5mm lugs are not
@@ -250,7 +198,7 @@ protection is noticeable from the lower firmer foam layer and is well
 suited for navigating off camber, mellow sections of mud and potentially
 snow/ice. 
 
-### **Ride**
+### Ride
 
 The ride is lively at any pace, but excels when the cadence is high. I
 found that technical trails weren’t the Pulsar Trail Pro’s cup of tea,
@@ -263,10 +211,6 @@ combination and the well shaped rocker. 
 
 
 ![image_30.jpg](image_30.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!R1Ji!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F19bd3d22-b7b7-41fe-9aa3-993af4487b75_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The added stack height, Blade, and firmer lower foam dampens the ground
@@ -278,14 +222,10 @@ because of the stack and midsole plate and foams. It’s fine for paced
 running on rolling trails or dirt/paved roads, but I lacked confidence
 in terrain that required precise footing. 
 
-### **Conclusions and Recommendations**
+### Conclusions and Recommendations
 
 
 ![image_32.jpg](image_32.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!VZOa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb11b071-1fea-4110-b38b-45945226f423_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The Pulsar Trail Pro is a great shoe for mid- to longer-range uptempo
@@ -300,7 +240,7 @@ especially if you are forefoot runner. With a subtle rocker and dual
 foam / blade midsole, the Pulsar Trail Pro is a go-to shoe for the
 runner where speed is not just needed, but expected.
 
-**Score: 8.33 / 10**
+Score: 8.33 / 10
 
 Ride - 8 (responsive and efficient, but lackluster in technical
 terrain)  
@@ -314,7 +254,7 @@ Rock Protection - 8.5 (TPU Blade and cushion provide sufficient
 protection)  
 **Smiles -** 😊😊😊 out of 5
 
-### **Comparisons**
+### Comparisons
 
 Index to all RTR reviews:
 [HERE](https://www.roadtrailrun.com/p/blog-page.html)
@@ -336,10 +276,6 @@ Review](https://www.roadtrailrun.com/2022/02/salomon-slab-pulsar-sg-multi-tester
 
 
 ![image_36.jpg](image_36.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!VQPW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6094a487-b4df-4100-b12f-2a7f1960c711_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 The S/Lab is superb on steep uphills and rolling terrain, efficient on
@@ -350,10 +286,6 @@ downhill. 
 
 
 ![image_4.jpg](image_4.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!JmRF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5478d2d3-fe33-411f-be1f-a73e0ae7d0a8_1200x1600.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 While the Trail Pro is reasonably capable in those situations, it seems
@@ -367,10 +299,6 @@ Review](https://www.roadtrailrun.com/2022/05/salomon-pulsar-trail-initial-review
 
 
 ![image_9.jpg](image_9.jpg)
-<a
-href="https://substackcdn.com/image/fetch/$s_!D_gx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c74d323-c502-4ff4-8d33-9676984c7185_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Editor’s Note: Sam had only one run (road) in the Pro before sending our
@@ -384,10 +312,6 @@ The lower firmer Energy Surge foam, same dual layer construction as the
 Pro, is a bit thicker and thus should provide a bit more protection
 underfoot but likely less agility. 
 
-<a
-href="https://substackcdn.com/image/fetch/$s_!xgJO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16e17176-cd5f-4c68-bf0f-b6944a1256a3_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Its outsole has somewhat broader surfaced less angular and more spaced
@@ -398,10 +322,6 @@ the Pro  9.06 oz  / 257g with most of that weight appearing to come from
 the denser (warmer) and more protective (and supportive) upper of the
 Trail, a shoe that will lean ultra a bit more than the Pro for most. 
 
-<a
-href="https://substackcdn.com/image/fetch/$s_!igRL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F013bdc6a-9ad5-4fc3-bb70-5e76fe82043d_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Editor’s Note: I had only one run (road) in the Pro before sending our
@@ -416,10 +336,6 @@ The lower firmer Energy Surge foam, same dual layer construction as the
 Pro is a bit thicker and thus provides a bit more protection underfoot
 but likely less agility. 
 
-<a
-href="https://substackcdn.com/image/fetch/$s_!A1QL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbfb138d9-7a95-496c-9d04-afccb6f56a4e_1600x1200.jpeg"
-class="image-link image2 is-viewable-img" target="_blank"
-data-component-name="Image2ToDOM"></a>
 
 
 Its outsole (red above) has somewhat broader surfaced less angular and
