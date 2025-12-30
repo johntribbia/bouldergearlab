@@ -8,19 +8,20 @@
    ============================================================ */
 
 :root {
-    --bgl-primary: #2c3e50;
-    --bgl-accent: #3498db;
-    --bgl-light: #ecf0f1;
-    --bgl-text: #34495e;
-    --bgl-border: #bdc3c7;
+    --bgl-primary: #1a1a1a;
+    --bgl-accent: #1a1a1a;
+    --bgl-light: #f5f5f5;
+    --bgl-text: #333333;
+    --bgl-border: #e0e0e0;
     --bgl-spacing-unit: 1.5rem;
 }
 
 body {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.8;
     color: var(--bgl-text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.3px;
 }
 
 /* Improve heading hierarchy and sizes */
@@ -28,21 +29,23 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.3;
     color: var(--bgl-primary);
-    letter-spacing: -0.02em;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    letter-spacing: -0.015em;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 800;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 h4 {
@@ -71,7 +74,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 0;
     overflow: hidden;
 }
 
@@ -97,7 +100,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.35);
     z-index: 2;
 }
 
@@ -111,32 +114,34 @@ a:hover {
 }
 
 .bgl-hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: white;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .bgl-hero-subtitle {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
 }
 
 .bgl-hero-cta {
     display: inline-block;
-    padding: 12px 32px;
-    background-color: var(--bgl-accent);
-    color: white;
-    border-radius: 4px;
+    padding: 18px 48px;
+    background-color: white;
+    color: #1a1a1a;
+    border-radius: 2px;
     font-weight: 600;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border: 2px solid white;
 }
 
 .bgl-hero-cta:hover {
-    background-color: var(--bgl-primary);
+    background-color: transparent;
     color: white;
     text-decoration: none;
     transform: translateY(-2px);
@@ -159,6 +164,57 @@ a:hover {
 }
 
 /* ============================================================
+   INTRO SECTION
+   ============================================================ */
+
+.bgl-intro-section {
+    padding: 5rem 0;
+    margin-bottom: 0;
+}
+
+.bgl-intro-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2.8rem;
+}
+
+.bgl-intro-text {
+    font-size: 1.3rem;
+    line-height: 2;
+    color: #555;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================================
+   STATS SECTION
+   ============================================================ */
+
+.bgl-stats-section {
+    padding: 5rem 0;
+    background-color: #fafafa;
+    margin-bottom: 4rem;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.bgl-stat-number {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+}
+
+.bgl-stat-label {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+/* ============================================================
    CONTAINER & SPACING
    ============================================================ */
 
@@ -168,22 +224,22 @@ a:hover {
 
 /* Add generous whitespace to main content */
 .content {
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 /* Improve spacing around sections */
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 section + section {
-    border-top: 1px solid var(--bgl-light);
-    padding-top: 3rem;
+    border-top: none;
+    padding-top: 4rem;
 }
 
 /* Better spacing in main content area */
 .row {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 /* ============================================================
@@ -192,15 +248,16 @@ section + section {
 
 .box.post {
     padding: 2.5rem;
-    margin-bottom: 2rem;
-    border: 1px solid var(--bgl-light);
-    border-radius: 4px;
+    margin-bottom: 2.5rem;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .box.post:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
 }
 
 .post-meta {
@@ -214,6 +271,7 @@ section + section {
 
 .post-title {
     margin: 0.5rem 0 1rem 0;
+    font-size: 1.4rem;
 }
 
 .post-title a {
@@ -253,9 +311,9 @@ section + section {
 }
 
 .widget {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--bgl-light);
+    margin-bottom: 3rem;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .widget:last-child {
@@ -274,17 +332,18 @@ section + section {
    ============================================================ */
 
 .btn {
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 12px 28px;
+    border-radius: 2px;
     font-weight: 600;
     transition: all 0.3s ease;
     text-decoration: none;
+    border: 2px solid transparent;
 }
 
 .btn-default {
-    background-color: var(--bgl-light);
+    background-color: white;
     color: var(--bgl-primary);
-    border: 1px solid var(--bgl-border);
+    border: 2px solid var(--bgl-primary);
 }
 
 .btn-default:hover {
@@ -294,13 +353,14 @@ section + section {
 }
 
 .btn-primary {
-    background-color: var(--bgl-accent);
+    background-color: var(--bgl-primary);
     color: white;
+    border: 2px solid var(--bgl-primary);
 }
 
 .btn-primary:hover {
-    background-color: var(--bgl-primary);
-    color: white;
+    background-color: white;
+    color: var(--bgl-primary);
 }
 
 /* ============================================================
@@ -309,17 +369,53 @@ section + section {
 
 .navbar {
     margin-bottom: 0;
+    border: none;
+    box-shadow: none;
+    background-color: white;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar-affixed-top {
+    margin-bottom: 2rem;
+}
+
+.navbar-brand {
+    padding: 15px 20px !important;
+    font-weight: 700;
+    font-size: 1.9rem;  /* ← Change this to adjust size */
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    color: var(--bgl-primary) !important;}
+
+.navbar-brand home {
+    color: var(--bgl-primary) !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
 }
 
 .navbar-nav > li > a {
-    padding: 12px 16px;
+    padding: 15px 18px !important;
     font-weight: 600;
     color: var(--bgl-primary) !important;
-    transition: color 0.3s ease;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    letter-spacing: 0.3px;
 }
 
 .navbar-nav > li > a:hover {
-    color: var(--bgl-accent) !important;
+    color: #1a1a1a !important;
+    background-color: transparent !important;
+    border-bottom: 3px solid var(--bgl-primary);
+}
+
+.navbar-nav > li.active > a {
+    background-color: transparent !important;
+    color: var(--bgl-primary) !important;
+    border-bottom: 3px solid var(--bgl-primary);
 }
 
 /* ============================================================
@@ -329,13 +425,13 @@ section + section {
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 /* Add breathing room around images */
 p > img,
 .content img {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -346,19 +442,21 @@ p > img,
    ============================================================ */
 
 code {
-    background-color: #f5f5f5;
+    background-color: #fafafa;
     padding: 2px 6px;
-    border-radius: 3px;
+    border-radius: 2px;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-size: 0.9em;
+    color: var(--bgl-primary);
 }
 
 pre {
-    background-color: #f5f5f5;
+    background-color: #fafafa;
     padding: 1.5rem;
-    border-radius: 4px;
+    border-radius: 2px;
     overflow-x: auto;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
+    border-left: 4px solid #1a1a1a;
 }
 
 pre code {
@@ -372,11 +470,12 @@ pre code {
    ============================================================ */
 
 blockquote {
-    border-left: 4px solid var(--bgl-accent);
+    border-left: 4px solid #1a1a1a;
     padding-left: 1.5rem;
     margin: 2rem 0;
-    color: #7f8c8d;
+    color: #555;
     font-style: italic;
+    font-weight: 400;
 }
 
 /* ============================================================
@@ -384,15 +483,17 @@ blockquote {
    ============================================================ */
 
 footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--bgl-light);
-    color: #7f8c8d;
-    font-size: 0.9rem;
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: none;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 footer a {
-    color: var(--bgl-accent);
+    color: var(--bgl-primary);
+    font-weight: 600;
 }
 
 /* ============================================================

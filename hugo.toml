@@ -38,7 +38,7 @@ summaryLength = 70
 
     dropdown_mouse_over = false
 
-    disabled_logo = false
+    disabled_logo = true
     logo_text = "Boulder Gear Lab"
 
     logo = "img/logo.png"
