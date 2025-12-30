@@ -4,6 +4,12 @@
    ============================================================ */
 
 /* ============================================================
+   Google Fonts Import
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+/* ============================================================
    ROOT & GENERAL TYPOGRAPHY
    ============================================================ */
 
@@ -20,7 +26,7 @@ body {
     font-size: 18px;
     line-height: 1.8;
     color: var(--bgl-text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 0.3px;
 }
 
@@ -130,12 +136,12 @@ a:hover {
 
 .bgl-hero-cta {
     display: inline-block;
-    padding: 18px 48px;
+    padding: 24px 64px;
     background-color: white;
     color: #1a1a1a;
     border-radius: 2px;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 2.2rem !important;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     border: 2px solid white;
 }
@@ -380,13 +386,8 @@ section + section {
 }
 
 .navbar-brand {
-    padding: 15px 20px !important;
-    font-weight: 700;
-    font-size: 1.9rem;  /* ← Change this to adjust size */
-    letter-spacing: -0.5px;
-    display: flex;
-    align-items: center;
-    color: var(--bgl-primary) !important;}
+    display: none !important;
+}
 
 .navbar-brand home {
     color: var(--bgl-primary) !important;
@@ -401,7 +402,7 @@ section + section {
     padding: 15px 18px !important;
     font-weight: 600;
     color: var(--bgl-primary) !important;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     transition: color 0.3s ease, background-color 0.3s ease;
     letter-spacing: 0.3px;
 }

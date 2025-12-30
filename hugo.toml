@@ -25,7 +25,7 @@ summaryLength = 70
     linkedin = "https://www.linkedin.com/in/john-tribbia/"
 
     # Style: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "default"
+    style = "green"
 
     formspree_action = ""
     contact_form_ajax = false
@@ -94,7 +94,7 @@ summaryLength = 70
 
 [params.recent_posts]
     enable = true
-    title = "Latest from the Lab"
+    title = "Latest from Boulder Gear Lab"
     subtitle = "Recent reviews and projects"
     hide_summary = false
 
@@ -103,21 +103,21 @@ summaryLength = 70
 
 # Main Navigation Menu
 [[menu.main]]
+    name       = "Home"
+    identifier = "menu.home"
+    url        = "/"
+    weight     = 1
+
+[[menu.main]]
     name       = "About"
     identifier = "menu.about"
     url        = "/about/"
-    weight     = 1
+    weight     = 2
 
 [[menu.main]]
     name       = "Gear Reviews"
     identifier = "menu.reviews"
     url        = "/reviews/"
-    weight     = 2
-
-[[menu.main]]
-    name       = "Data Projects"
-    identifier = "menu.dataprojects"
-    url        = "/data-projects/"
     weight     = 3
 
 [[menu.main]]
@@ -127,7 +127,19 @@ summaryLength = 70
     weight     = 4
 
 [[menu.main]]
+    name       = "Methodology"
+    identifier = "menu.methodology"
+    url        = "/methodology/"
+    weight     = 5
+
+[[menu.main]]
+    name       = "Data Projects"
+    identifier = "menu.dataprojects"
+    url        = "/data-projects/"
+    weight     = 6
+
+[[menu.main]]
     name       = "Contact"
     identifier = "menu.contact"
     url        = "/contact/"
-    weight     = 5
+    weight     = 7
