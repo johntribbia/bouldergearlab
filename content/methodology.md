@@ -1,5 +1,5 @@
 ---
-title: "Testing Approach"
+title: ""
 description: "How Boulder Gear Lab evaluates outdoor gear through systematic field testing and analytical rigor."
 ---
 
