@@ -1,164 +1,69 @@
 ---
 title: "Testing Approach"
-date: 2025-12-28
-description: "How Boulder Gear Lab evaluates outdoor gear through extensive field testing"
+description: "How Boulder Gear Lab evaluates outdoor gear through systematic field testing and analytical rigor."
 ---
 
-# Testing Approach
+# Testing Approach: Real-World Rigor
 
-## Real-World Testing, Critical Thinking
-
-Boulder Gear Lab reviews are built on extensive field experience and analytical thinking. I don't run lab tests or collect statistical measurements—instead, I bring a critical, systematic approach to evaluating how gear performs in the real world.
+At Boulder Gear Lab, I don’t use treadmills or sensors. My "lab" is the high-alpine terrain of the Front Range. I replace sterile measurements with a systematic, analytical approach to how gear performs when it actually matters.
 
 ---
 
-## My Testing Framework
+## The Testing Framework
 
-### 1. Extensive Field Testing
+Every review is built on a foundation of high-mileage exposure and comparative analysis. I don't publish "first impressions" only; I publish conclusions.
 
-Every product gets substantial use before I write about it:
+### 1. The Mileage Threshold
+I believe gear doesn't reveal its true character in a weekend. Ideally, every product meets a strict minimum usage requirement before a review is written:
+* **Running Shoes:** 50–150 miles across varied terrain.
+* **Bikes & Components:** 100+ miles in diverse weather and trail conditions.
+* **Apparel & Tech:** Extended seasonal use to test breathability, durability, and battery life.
 
-**Running Shoes:** Minimum 100-200 miles across varied terrain  
-**Bikes:** 200+ miles in different conditions  
-**Apparel:** Multiple uses across different weather and activities  
-**Technical Equipment:** Extended use until I understand its strengths and limitations
+### 2. The "Boulder" Variable
+Living in Boulder, Colorado, provides a unique environmental stress test. My testing grounds include:
+* **Vertical Extremes:** Testing breathability and gear shifts from 5,000 to 10,000+ feet.
+* **Technical Terrain:** Pavement, gravel, jagged singletrack, and alpine scree.
+* **Climate Swings:** 60°F temperature shifts, intense UV, high-altitude snow, and gale-force winds.
 
-### 2. Colorado's Testing Grounds
-
-Living in Boulder gives me access to incredibly diverse conditions:
-
-- **Elevation:** 5,000 to 14,000+ feet
-- **Terrain:** Technical singletrack, gravel, pavement, alpine
-- **Weather:** Temperature swings of 60°F in a day, snow, sun, wind
-- **Real-world scenarios:** Commuting, training, adventures
-
-If gear works here, it'll work anywhere.
-
-### 3. Comparative Thinking
-
-I don't test products in isolation. Every review considers:
-
-- How does this compare to similar products I've used?
-- Where does it fit in the market at this price point?
-- Who would this work well for? Who wouldn't it suit?
-- What are the tradeoffs compared to alternatives?
-
-### 4. Critical Analysis
-
-My data science background shapes how I think about products:
-
-- **Asking the right questions:** What problem is this solving? For whom?
-- **Considering edge cases:** How does it perform in adverse conditions?
-- **Evaluating claims:** Does it deliver on manufacturer promises?
-- **Thinking systematically:** What are the failure modes? Durability concerns?
-
-### 5. Long-Term Observation
-
-Products stay in my rotation long after reviews are published. I track:
-
-- Wear patterns over time
-- Performance degradation
-- What breaks first and why
-- When it's time to replace
-
-I update reviews when long-term use reveals important information.
-
----
-
-## What I Track
-
-While I'm not conducting lab measurements, I do pay attention to:
-
-- **Usage:** Total miles, elevation gain, number of uses
-- **Conditions:** Weather, terrain type, how gear performs in different scenarios
-- **Durability:** How materials hold up, where wear occurs first
-- **Fit & Comfort:** How things feel over long distances, throughout different activities
-- **Practical details:** Weight (if relevant), features that matter in the field
+### 3. Analytical Synthesis
+As a Data Scientist, I look past the marketing "hype" to identify the mechanical reality of a product. I evaluate gear based on:
+* **Systemic Failure Modes:** Identifying where materials are likely to fail first.
+* **Market Context:** Positioning the product against its direct competitors in price and performance.
+* **Edge Case Performance:** How does it behave when conditions get ugly?
 
 ---
 
 ## Independence & Objectivity
 
-### How I Maintain Independence:
+Trust is the only currency in gear reviews. To remain 100% objective, I adhere to a strict code of conduct:
 
-**I DO:**
-- Purchase most gear at retail price
-- Accept PR samples for evaluation (always disclosed)
-- Provide honest assessments regardless of how I acquired products
-- Return or donate PR samples after testing
-- Maintain editorial control over all content
-
-**I DON'T:**
-- Have current sponsorships with brands I review
-- Accept payment for positive coverage
-- Allow brands to review content before publication
-- Modify reviews based on brand feedback
+| I Do | I Do Not |
+| :--- | :--- |
+| Purchase gear at retail price. | Accept payment for positive coverage. |
+| Disclose when a PR sample is being tested. | Allow brands to "preview" or edit my reviews. |
+| Keep, return, or donate samples after testing. | Maintain any active athlete sponsorships. |
+| Provide honest, unfiltered critiques. | Use manufacturer-provided talking points. |
 
 ---
 
-## My Background
+## My Philosophy on Ratings
 
-All testing is done by me, John Tribbia:
-
-- **500,000+ miles** of running and cycling experience
-- **Data scientist** with analytical training and critical thinking skills
-- **Former sponsored athlete** (La Sportiva, Brooks, Pearl Izumi)—no current brand relationships
-- **Colorado resident** since 2008 with deep knowledge of local conditions
-- **20+ years** competing and testing gear across running and cycling
-- **6+ years** working at University Bikes in Boulder
+I evaluate products on a 1–10 scale across five core dimensions:
+1.  **Fit & Comfort:** Is the geometry/ergonomics correct?
+2.  **Performance:** Does it deliver on its primary intended use?
+3.  **Durability:** How did it look at mile 1 vs. mile 100?
+4.  **Value:** Does the performance justify the MSRP?
+5.  **The "Fun" Factor:** Does this gear make you want to get outside?
 
 ---
 
-## Review Structure
+## The Boulder Gear Lab Difference
 
-### Rating System (1-10 or 1-5 scale):
+Most reviews are based on a spec sheet. Mine are based on **100,000+ miles** of movement and a **PhD-level** commitment to asking the right questions. 
 
-I evaluate products across multiple dimensions relevant to each category:
-
-- Overall impression
-- Fit and comfort
-- Performance in intended use
-- Durability observations
-- Value for the price
-- Fun factor (because it matters!)
-
-Ratings reflect my honest assessment after extensive field testing, not measurements or lab data.
-
-### What You'll Find in Reviews:
-
-- **First impressions:** Initial observations out of the box
-- **Fit details:** How sizing works, who it's suited for
-- **Real-world performance:** How it handles in various conditions
-- **Comparisons:** How it stacks up against similar products
-- **Pros & cons:** Honest assessment of strengths and weaknesses
-- **Bottom line:** Who should buy this, who should look elsewhere
+I’m not looking for the "best" gear — I’m looking for the *right* gear for specific people and specific conditions. No fluff. No hype. Just the data from the trail.
 
 ---
 
-## The Difference
-
-My reviews aren't based on:
-- ❌ Lab measurements or quantitative testing
-- ❌ Short-term impressions after a few uses
-- ❌ Manufacturer talking points
-
-They ARE based on:
-- ✅ Hundreds of miles of real-world experience
-- ✅ Critical, analytical thinking about performance
-- ✅ Comparisons to similar products I've tested
-- ✅ Honest assessment of strengths AND weaknesses
-- ✅ Complete editorial independence
-
----
-
-## Two Sides of the Lab
-
-**Gear Reviews:** Thoughtful, experience-based evaluations of outdoor equipment
-
-**Data Projects:** This is where the quantitative analysis lives—separate from gear reviews, this section will feature data science work, visualizations, and analytical projects
-
----
-
-## Questions?
-
-Want to know more about how I test or my background? [Get in touch](/contact).
+### Have questions about a specific test?
+[Get in touch](/contact) to learn more about my process or to suggest a product for evaluation.

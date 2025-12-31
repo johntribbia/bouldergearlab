@@ -25,12 +25,12 @@ summaryLength = 70
     linkedin = "https://www.linkedin.com/in/john-tribbia/"
 
     # Style: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "green"
+    style = "blue"
 
     formspree_action = ""
     contact_form_ajax = false
 
-    about_us = "<p>Boulder Gear Lab combines analytical thinking with outdoor industry expertise to deliver honest gear reviews and data science projects. Led by John Tribbia, a Data Scientist and outdoor enthusiast based in Boulder, Colorado.</p>"
+    about_us = "<p>Gear reviews tested on hundreds of thousands of miles. Backed by data science mindset and industry experience.</p>"
     
     copyright = "Copyright (c) 2025, Boulder Gear Lab; all rights reserved."
 
@@ -60,7 +60,7 @@ summaryLength = 70
 
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Gear testing • Data projects • Boulder, Colorado</p>
+    text = """<p class="hidden-sm hidden-xs">Boulder Gear Lab || Gear testing • Boulder, Colorado</p>
       """
 
 [params.widgets]
@@ -133,13 +133,7 @@ summaryLength = 70
     weight     = 5
 
 [[menu.main]]
-    name       = "Data Projects"
-    identifier = "menu.dataprojects"
-    url        = "/data-projects/"
-    weight     = 6
-
-[[menu.main]]
     name       = "Contact"
     identifier = "menu.contact"
     url        = "/contact/"
-    weight     = 7
+    weight     = 6

@@ -1,95 +1,71 @@
 ---
-title: "About"
-description: "Meet John Tribbia and learn about Boulder Gear Lab"
+title: ""
+description: "Meet John Tribbia and the philosophy behind Boulder Gear Lab."
 ---
 
 <div class="about-hero">
     <div>
-        <img src="/img/about/image_1.jpg" alt="John Tribbia">
+        <div class="about-image-small">
+            <img src="/img/about/image_1.jpg" alt="Testing gear on the trail">
+        </div>
     </div>
     <div>
         <h1>John Tribbia</h1>
         <p>
-            Data Scientist. Trail runner. Cyclist. Outoor enthusiast. Former sponsored athlete turned 
-            independent gear reviewer. Based in Boulder, Colorado, where the terrain 
-            tests everything you bring.
+            <strong>Data Scientist. Trail Runner. Cyclist. Outdoor Enthusiast.</strong>
         </p>
         <p>
-            I've logged over 100K+ miles across running and cycling and hiking, held sponsorships 
-            with La Sportiva, Brooks, Pearl Izumi, Backcountry, and Salomon, and work as a data scientist at Google. 
-            Now I review gear completely independently, combining analytical thinking with 
-            extensive field experience.
+            I am a former sponsored athlete turned independent gear reviewer based in Boulder, Colorado — a place where the terrain has a way of testing the limits of everything you bring into the foothills.
+        </p>
+        <p>
+            With over 100,000 miles logged across trails and roads, I’ve spent decades exploring the outdoors. After years of representing brands like La Sportiva, Pearl Izumi, and Salomon, I now focus on providing completely independent reviews that combine analytical rigor with extensive field experience.
         </p>
     </div>
 </div>
 
 ---
-
+# Boulder Gear Lab
 ## The Philosophy
 
-Good gear reviews require extensive testing, critical thinking, and honest assessment. My data science background shapes how I approach reviews — not through statistical measurements, but through asking the right questions, thinking systematically about performance, and considering real-world edge cases.
+High-quality gear reviews require three things: exhaustive testing, critical thinking, and radical honesty. My background in data science shapes my approach — not through lab-coat measurements, but through systematic inquiry. I look for the "why" behind a product's performance and consider the real-world edge cases where gear usually fails.
 
-I test products the way you'd actually use them: on Colorado trails, commuting through winter, pushing limits on long efforts. No lab tests. No hype. Just real experience and honest feedback.
+I test products the way you actually use them: grinding up Colorado peaks, commuting through Front Range winters, and pushing limits on all-day efforts. No hype, no fluff—just real miles and honest feedback.
 
 ---
 
-![Testing](/img/carousel/image_2.jpg)
+<div class="about-image-small">
+    <img src="/img/about/image_3.jpg" alt="Field testing in Boulder">
+</div>
 
 ---
 
 ## Two Worlds, One Lab
 
 ### The Data Science Side
+By day, I am a Data Scientist at Google, leading teams in analytics, machine learning, and statistical modeling. I hold a PhD in Sociology from the University of Colorado Boulder, specializing in quantitative methods and research design. 
 
-By day, I'm a Data Scientist at Google, leading teams in analytics, machine learning, and statistical modeling. I hold a PhD in Sociology from the University of Colorado Boulder, specializing in quantitative methods and research design.
-
-This analytical training influences how I think about everything — including gear. But the "Lab" in Boulder Gear Lab refers to my approach to problem-solving and critical thinking, not to laboratory equipment or statistical testing of products.
+The "Lab" in Boulder Gear Lab refers to this mindset of rigorous problem-solving and critical thinking, rather than a sterile room full of sensors.
 
 ### The Gear Testing Side
+I’ve spent twenty years testing gear through the lens of a competitive athlete. While I value my past partnerships with brands like La Sportiva, Pearl Izumi, and Salomon, those sponsorships are behind me. This allows me to maintain complete editorial independence.
 
-I've been testing gear through thousands of miles as a competitive runner and recreational cyclist. Former sponsorships with La Sportiva, Brooks/Fleet Feet, Pearl Izumi, Backcountry, and Salomon have ended, giving me complete independence in reviews.
-
-I'm also a regular contributor to [Road Trail Run](https://www.roadtrailrun.com), one of the running community's most trusted review platforms. [See my RTR reviews →](/roadtrailrun/)
+I am also a regular contributor to [Road Trail Run](https://www.roadtrailrun.com), one of the most respected review platforms in the industry. [See my RTR reviews →](/roadtrailrun/)
 
 ---
 
 ## Experience
 
-**Running & Cycling:** 20+ years of competitive experience, from mountain bike racing as a junior to sponsored trail running with podium finishes domestically and internationally.
+**Running & Cycling:** 20+ years of competitive athletic experience, highlighted by a transition from junior mountain bike racing to sponsored trail running with multiple podium finishes on the global stage.
 
-**Bike and Outdoor Industry:** 6+ years at University Bikes in Boulder, staying up to date on the latest cycling technologies. And, 10+ years working at Backcountry or providing analytical consulting to Outdoor Industry brands. 
+**Bike and Outdoor Industry:** 15+ years of direct outdoor industry experience, combining a decade of analytical consulting for brands like Backcountry with six years at University Bikes staying at the forefront of cycling technology.
 
-**Outdoor Foundation:** Eagle Scout, NOLS graduate, Born and Raised in Boulder, Colorado.
+**Outdoor Foundation:** Eagle Scout, NOLS graduate, Born + Raised + Living in Boulder, Colorado.
 
 ---
 ## Let's Connect
 
-Questions about reviews? Want to discuss testing approaches? Interested in collaboration? Reach out.
+Interested in collaboration, have questions about a review, or want to discuss analytics? Reach out:
 
-[Get In Touch](/contact/)
-
-<!-- Stats Section -->
-<div class="bgl-stats-section">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-6 col-md-3 mb-4 mb-md-0">
-                <div class="bgl-stat-number">100K+</div>
-                <div class="bgl-stat-label">Miles Tested</div>
-            </div>
-            <div class="col-6 col-md-3 mb-4 mb-md-0">
-                <div class="bgl-stat-number">100s</div>
-                <div class="bgl-stat-label">Reviews</div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="bgl-stat-number">1M+</div>
-                <div class="bgl-stat-label">Feet Elevation Gained</div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="bgl-stat-number">0</div>
-                <div class="bgl-stat-label">Sponsors</div>
-            </div>
-        </div>
-    </div>
-</div>
+*[Get In Touch](/contact/)
 
 

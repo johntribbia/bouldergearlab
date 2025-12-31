@@ -590,6 +590,15 @@ article img,
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Smaller images for about page */
+.about-image-small img {
+    display: block;
+    max-width: 65%;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 6px;
+}
+
 /* Constrain images on wider screens */
 @media (min-width: 768px) {
     article img,

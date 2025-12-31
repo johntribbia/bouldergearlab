@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  <head>
+    {{ partial "headers.html" . }}
+    {{ partial "custom_headers.html" . }}
+  </head>
+
+  <body>
+
+    <div id="all">
+
+        {{ partial "top.html" . }}
+
+        {{ partial "nav.html" . }}
+
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <!-- *** LEFT COLUMN *** -->
+
+                    <div class="col-md-9">
+
+                        <article>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    {{ if eq .Type "reviews" }}
+                                    <!-- Individual review page - no stats section -->
+                                    {{ else }}
+                                    <!-- Main page - show stats at bottom -->
+                                    {{ end }}
+                                </div>
+                            </div>
+
+                            <h1>{{ .Title }}</h1>
+                            
+                            {{ if .Params.banner }}
+                            {{ $image := .Resources.GetMatch .Params.banner }}
+                            {{ if $image }}
+                            <img src="{{ $image.Permalink }}" class="img-responsive" alt="" />
+                            {{ else }}
+                            <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="" />
+                            {{ end }}
+                            {{ end }}
+
+                            {{ .Content }}
+
+                        </article>
+
+                    </div>
+                    <!-- /.col-md-9 -->
+
+                    <!-- *** RIGHT COLUMN ***
+       _________________________________________________________ -->
+
+                    <div class="col-md-3">
+
+                        <!-- *** MENUS AND WIDGETS *** -->
+
+                        {{ partial "sidebar.html" . }}
+
+                        <!-- *** MENUS AND FILTERS END *** -->
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <!-- *** RIGHT COLUMN END *** -->
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+        {{ if ne .Type "reviews" }}
+        <!-- Include stats section for non-review pages (full width) -->
+        {{ partial "bgl-stats.html" . }}
+        {{ end }}
+
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>
