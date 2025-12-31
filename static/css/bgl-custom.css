@@ -58,6 +58,30 @@ h4 {
     font-size: 1.25rem;
 }
 
+/* Responsive typography */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+}
+
 /* Improve link styling */
 a {
     color: var(--bgl-accent);
@@ -153,11 +177,16 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* Responsive hero */
+/* Responsive hero and buttons */
 @media (max-width: 768px) {
     .bgl-hero {
         height: 350px;
         margin-bottom: 3rem;
+    }
+
+    .bgl-hero-cta {
+        padding: 16px 40px;
+        font-size: 1.2rem !important;
     }
 
     .bgl-hero-text h1 {
@@ -190,6 +219,25 @@ a:hover {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1rem;
+}
+
+/* Responsive intro section */
+@media (max-width: 768px) {
+    .bgl-intro-section {
+        padding: 3rem 0;
+    }
+    
+    .bgl-intro-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .bgl-intro-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        padding: 0 1.5rem;
+    }
 }
 
 /* ============================================================
@@ -218,6 +266,23 @@ a:hover {
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.8px;
+}
+
+/* Responsive stats section */
+@media (max-width: 768px) {
+    .bgl-stat-number {
+        font-size: 2.5rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .bgl-stat-label {
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .bgl-stats-section {
+        padding: 3rem 0;
+    }
 }
 
 /* ============================================================
@@ -477,6 +542,21 @@ blockquote {
     color: #555;
     font-style: italic;
     font-weight: 400;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Responsive blockquote for mobile */
+@media (max-width: 768px) {
+    blockquote {
+        padding-left: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    blockquote p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 /* ============================================================
@@ -527,8 +607,52 @@ footer a {
     .box.post {
         padding: 1.5rem;
     }
-
+    
+    /* General container padding */
     .container {
+        padding: 0 1rem;
+    }
+    
+    /* Section padding adjustments */
+    section,
+    .section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Button sizing on mobile */
+    .btn,
+    a.btn,
+    button {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        width: auto;
+        min-width: 120px;
+    }
+    
+    /* Ensure proper text sizing for mobile readability */
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Reduced margins on mobile */
+    .box.post {
+        margin-bottom: 2rem;
+    }
+    
+    /* Table responsiveness */
+    table {
+        font-size: 0.9rem;
+        display: block;
+        overflow-x: auto;
+    }
+    
+    /* Lists responsive */
+    ul, ol {
+        padding-left: 1.5rem;
+    }
+}    .container {
         padding: 0 1rem;
     }
 }
@@ -604,6 +728,18 @@ article img,
     article img,
     .post-content img {
         max-width: 85%;
+    }
+}
+
+/* Mobile image adjustments */
+@media (max-width: 768px) {
+    article img,
+    .post-content img {
+        margin: 1.5rem auto;
+    }
+    
+    .about-image-small img {
+        max-width: 90%;
     }
 }
 
