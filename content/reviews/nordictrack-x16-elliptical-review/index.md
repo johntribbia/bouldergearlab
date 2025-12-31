@@ -3,7 +3,7 @@ title: "NordicTrack x16 Elliptical Review"
 date: 2025-12-31
 banner: "image_1.jpg"
 tags: ['running', 'cross-training', 'home fitness']
-categories: ['review']
+categories: ['reviews']
 description: ""
 draft: false
 ---
