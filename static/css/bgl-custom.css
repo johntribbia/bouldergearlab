@@ -10,6 +10,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 
 /* ============================================================
+   TOP RIBBON
+   ============================================================ */
+
+#top {
+    padding: 4px 0 !important;
+}
+
+#top p {
+    margin: 0;
+    font-size: 11px;
+}
+
+/* ============================================================
    ROOT & GENERAL TYPOGRAPHY
    ============================================================ */
 
@@ -529,6 +542,60 @@ pre code {
     background-color: transparent;
     padding: 0;
     color: var(--bgl-text);
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: #fff;
+}
+
+table thead {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table th {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+table tbody td {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+    
+    table th,
+    table td {
+        padding: 8px 10px;
+    }
 }
 
 /* ============================================================

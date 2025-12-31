@@ -39,9 +39,9 @@ Trust is the only currency in gear reviews. To remain 100% objective, I adhere t
 
 | I Do | I Do Not |
 | :--- | :--- |
-| Purchase gear at retail price. | Accept payment for positive coverage. |
+| Accept gear provided at no cost for review purposes only. | Accept payment for positive coverage. |
 | Disclose when a PR sample is being tested. | Allow brands to "preview" or edit my reviews. |
-| Keep, return, or donate samples after testing. | Maintain any active athlete sponsorships. |
+| Keep, return, or donate samples after testing. | Sell tested gear or maintain any active athlete sponsorships. |
 | Provide honest, unfiltered critiques. | Use manufacturer-provided talking points. |
 
 ---
