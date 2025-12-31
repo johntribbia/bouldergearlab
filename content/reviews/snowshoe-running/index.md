@@ -10,9 +10,6 @@ draft: false
 <!--more-->
 
 
-![image_0.jpg](image_0.jpg)
-
-
 Are you a multi-sport athlete who lives in or visits a cold winter
 climate where running or cycling outside in snow or ice isn’t always the
 safest or seemingly most enjoyable option? Have you tried snowshoe
