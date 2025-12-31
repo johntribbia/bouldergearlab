@@ -88,26 +88,43 @@ class ReviewToMarkdownConverter:
         
     def _extract_and_save_images(self):
         """
-        Extracts all images from the .docx file and saves them as image_1.jpg, image_2.jpg, etc.
+        Extracts all images from the .docx file in document order (top to bottom)
+        and saves them as image_1.jpg, image_2.jpg, etc.
         
         Returns:
             dict: Mapping of relationship IDs to extracted filenames
         """
         image_map = {}
+        seen_rids = set()
         
-        # Extract images from document relationships
-        for rel in self.doc.part.rels.values():
-            if "image" in rel.target_ref:
-                self.image_counter += 1
-                new_name = f"image_{self.image_counter}.jpg"
-                img_data = rel.target_part.blob
-                
-                img_path = os.path.join(self.image_dir, new_name)
-                with open(img_path, "wb") as f:
-                    f.write(img_data)
-                
-                image_map[rel.rId] = new_name
-                print(f"  ✓ Extracted: {new_name}")
+        # Iterate through paragraphs in document order to maintain image sequence
+        for paragraph in self.doc.paragraphs:
+            # Check for images in runs
+            for run in paragraph.runs:
+                for child in run._element:
+                    if child.tag.endswith('drawing'):
+                        # Found a drawing element, extract embedded images
+                        for elem in child.iter():
+                            if 'blip' in elem.tag:
+                                embed_ref = elem.get(qn('r:embed'))
+                                if embed_ref and embed_ref not in seen_rids:
+                                    # This is a new image we haven't processed
+                                    try:
+                                        rel = self.doc.part.rels[embed_ref]
+                                        if "image" in rel.target_ref:
+                                            self.image_counter += 1
+                                            new_name = f"image_{self.image_counter}.jpg"
+                                            img_data = rel.target_part.blob
+                                            
+                                            img_path = os.path.join(self.image_dir, new_name)
+                                            with open(img_path, "wb") as f:
+                                                f.write(img_data)
+                                            
+                                            image_map[embed_ref] = new_name
+                                            seen_rids.add(embed_ref)
+                                            print(f"  ✓ Extracted: {new_name}")
+                                    except (KeyError, AttributeError):
+                                        pass
         
         self.image_map = image_map
         return image_map
@@ -254,15 +271,14 @@ class ReviewToMarkdownConverter:
             "",
         ]
         
-        # Step 3: Process Document Content
+        # Step 3: Process Document Content with Inline Images
         print("3. Processing document content...")
-        image_index = 0
         
         for paragraph in self.doc.paragraphs:
             text = paragraph.text.strip()
             
             # Skip empty paragraphs
-            if not text:
+            if not text and not any(run._element.find('.//' + qn('w:drawing')) for run in paragraph.runs):
                 continue
             
             # Check for headings
@@ -271,15 +287,36 @@ class ReviewToMarkdownConverter:
                 markdown_lines.append(f"\n{'#' * level} {text}\n")
                 continue
             
-            # Add the paragraph text
-            markdown_lines.append(text)
+            # Process runs in order to handle inline images and text
+            para_content = []
+            for run in paragraph.runs:
+                # Check for images in this run
+                has_image = False
+                for child in run._element:
+                    if child.tag.endswith('drawing'):
+                        has_image = True
+                        # Extract and link the image
+                        for elem in child.iter():
+                            if 'blip' in elem.tag:
+                                embed_ref = elem.get(qn('r:embed'))
+                                if embed_ref and embed_ref in self.image_map:
+                                    img_filename = self.image_map[embed_ref]
+                                    # Add any preceding text first
+                                    if para_content:
+                                        markdown_lines.append("".join(para_content).strip())
+                                        para_content = []
+                                    # Add the image
+                                    markdown_lines.append(f"\n![{img_filename}]({img_filename})\n")
+                
+                # Add text content if no image
+                if not has_image and run.text:
+                    para_content.append(run.text)
             
-            # Process inline images
-            processed = self._process_paragraph_text(paragraph)
-            if len(processed) > 1:  # If we found inline images
-                for item in processed:
-                    if item.startswith("!\["):
-                        markdown_lines.append(item)
+            # Add any remaining text content
+            if para_content:
+                text_content = "".join(para_content).strip()
+                if text_content:
+                    markdown_lines.append(text_content)
         
         # Step 4: Save Markdown File
         print("4. Saving markdown file...")
