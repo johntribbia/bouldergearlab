@@ -1,6 +1,6 @@
 ---
 title: "NordicTrack x16 Elliptical Review"
-date: 2025-12-31
+date: 2025-12-28
 banner: "image_1.jpg"
 tags: ['running', 'cross-training', 'home fitness']
 categories: ['reviews']
@@ -12,9 +12,9 @@ draft: false
 *Article by John Tribbia*
 
 Original Post from RoadTrailRun
-([link](https://www.roadtrailrun.com/))
+([link](https://www.roadtrailrun.com/2025/12/nordictrack-x16-elliptical-in-depth.html)
 
-<a href="https://www.roadtrailrun.com/2025/12/nordictrack-x16-elliptical-in-depth.html"
+<a href="https://www.roadtrailrun.com/"
 class="button primary button-wrapper"><span>Read All RoadTrailRun
 Reviews Here</span></a>
 

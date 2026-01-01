@@ -1,6 +1,6 @@
 ---
 title: "Bright as Day 800 Review"
-date: 2025-12-31
+date: 2025-10-31
 banner: "image_1.jpg"
 tags: ['running', 'accessories']
 categories: ['reviews']
@@ -12,7 +12,7 @@ draft: false
 *Article by John Tribbia*
 
 Original Post from RoadTrailRun
-([link](https://www.roadtrailrun.com/))
+([link](https://www.roadtrailrun.com/2025/08/moonlight-mountain-gear-bright-as-day.html))
 
 <a href="https://www.roadtrailrun.com"
 class="button primary button-wrapper"><span>Read All RoadTrailRun
