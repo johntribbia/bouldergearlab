@@ -1,6 +1,6 @@
 {{ $apiKey := .Get "apiKey" | default .Site.Params.googleSearchApiKey }}
 {{ $cx := .Get "cx" | default .Site.Params.googleSearchEngineId }}
-{{ $query := .Get "query" | default "site:roadtrailrun.com John Tribbia -homepage" }}
+{{ $query := .Get "query" | default "John Tribbia" }}
 {{ $limit := .Get "limit" | default 50 }}
 {{ $debug := .Get "debug" | default "false" }}
 
