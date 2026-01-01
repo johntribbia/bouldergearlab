@@ -80,7 +80,38 @@ converter.convert(
 - Sections like "Pros", "Cons", "Stats" should be clear headings in your doc
 - Use Heading 2 or 3 styles for these
 
-## Export from Google Docs
+## What Gets Converted
+
+The converter handles:
+
+- ✅ **Headings** - Google Docs Heading 1, 2, 3 styles → Markdown `#`, `##`, `###`
+- ✅ **Text Content** - All paragraph text and formatting preserved
+- ✅ **Hyperlinks** - Links embedded in text are converted to markdown `[text](url)` format
+- ✅ **Images** - All images extracted in order and saved as `image_1.jpg`, `image_2.jpg`, etc.
+- ✅ **Lists** - Bullets and numbered lists converted to markdown syntax
+- ✅ **Front Matter** - Automatic YAML generation with title, date, banner, tags, categories
+- ⚠️ **Tables** - Text content preserved, but structure may need minor markdown adjustment
+- ⚠️ **Formatting** - Bold/italic text handled, complex formatting may need review
+
+### Hyperlinks
+
+Hyperlinks in your Google Doc are automatically converted to markdown format:
+
+**Google Doc:**
+```
+Read more about this at specifications (link: https://example.com/specs)
+```
+
+**Converted Markdown:**
+```markdown
+Read more about this at [specifications](https://example.com/specs)
+```
+
+The converter:
+- Detects hyperlinks in paragraph text
+- Extracts both the link text and the target URL
+- Outputs proper markdown `[text](url)` syntax
+- Preserves link integrity for readers
 
 ### Option 1: Direct URL (Recommended - No Export Needed!)
 1. Open your Google Doc
@@ -128,8 +159,9 @@ After conversion, you'll want to:
 1. **Add pricing information** to the title section (e.g., "Product Name ($199)")
 2. **Verify image placement** - sometimes images need context labels
 3. **Check heading hierarchy** - ensure Heading 1, 2, 3 structure is correct
-4. **Add links** - the converter preserves link text but you may need to adjust URLs
+4. **Verify hyperlinks** - Check that all links render correctly (links are auto-converted to markdown)
 5. **Format special sections** - like author attributions for multi-reviewer content
+6. **Review tables** - markdown table syntax may need minor adjustments
 
 ## Example Conversion
 

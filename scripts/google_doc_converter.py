@@ -168,12 +168,70 @@ class ReviewToMarkdownConverter:
         # Default to H3 for detected headings
         return 3
 
+    def _extract_hyperlink_from_run(self, run):
+        """
+        Extract hyperlink URL and text from a run element.
+        
+        Args:
+            run: A run object from python-docx
+            
+        Returns:
+            tuple: (text, url) if hyperlink exists, (None, None) otherwise
+        """
+        try:
+            # Look for hyperlink element in the run's parent (paragraph)
+            # Hyperlinks are stored at paragraph level, not run level
+            # We need to find the hyperlink that contains this run
+            
+            # First, check if this run is part of a hyperlink
+            hyperlink = run._element.find('.//' + qn('w:hyperlink'))
+            
+            if hyperlink is not None:
+                # Found a hyperlink element
+                rId = hyperlink.get(qn('r:id'))
+                
+                if rId:
+                    # Get the target URL from relationships
+                    try:
+                        rel = self.doc.part.rels[rId]
+                        url = rel.target_ref
+                        text = run.text
+                        return text, url
+                    except (KeyError, AttributeError):
+                        pass
+            
+            # Check if run itself is inside a hyperlink in the paragraph
+            parent_hyperlink = None
+            current = run._element
+            
+            # Walk up the XML tree to find parent hyperlink
+            while current is not None:
+                if current.tag == qn('w:hyperlink'):
+                    parent_hyperlink = current
+                    break
+                current = current.getparent()
+            
+            if parent_hyperlink is not None:
+                rId = parent_hyperlink.get(qn('r:id'))
+                if rId:
+                    try:
+                        rel = self.doc.part.rels[rId]
+                        url = rel.target_ref
+                        text = run.text
+                        return text, url
+                    except (KeyError, AttributeError):
+                        pass
+        except:
+            pass
+        
+        return None, None
+
     def _process_paragraph_text(self, paragraph):
         """
-        Process paragraph text and extract inline images.
+        Process paragraph text and extract inline images and hyperlinks.
         
         Returns:
-            list: Lines of processed text (may include image references)
+            list: Lines of processed text (may include image references and hyperlinks)
         """
         lines = []
         para_text = ""
@@ -198,8 +256,19 @@ class ReviewToMarkdownConverter:
                                     lines.append(f"\n![{img_filename}]({img_filename})\n")
                     continue
             
-            # Regular text
-            para_text += run.text
+            # Check for hyperlinks in this run
+            link_text, link_url = self._extract_hyperlink_from_run(run)
+            
+            if link_text and link_url:
+                # Add any preceding text first
+                if para_text.strip():
+                    lines.append(para_text.strip())
+                    para_text = ""
+                # Add hyperlink as markdown
+                para_text += f"[{link_text}]({link_url})"
+            else:
+                # Regular text
+                para_text += run.text
         
         # Add remaining text
         if para_text.strip():
@@ -287,7 +356,7 @@ class ReviewToMarkdownConverter:
                 markdown_lines.append(f"\n{'#' * level} {text}\n")
                 continue
             
-            # Process runs in order to handle inline images and text
+            # Process runs in order to handle inline images, text, and hyperlinks
             para_content = []
             for run in paragraph.runs:
                 # Check for images in this run
@@ -308,9 +377,17 @@ class ReviewToMarkdownConverter:
                                     # Add the image
                                     markdown_lines.append(f"\n![{img_filename}]({img_filename})\n")
                 
-                # Add text content if no image
+                # Handle text content - check for hyperlinks
                 if not has_image and run.text:
-                    para_content.append(run.text)
+                    # Check if this run contains a hyperlink
+                    link_text, link_url = self._extract_hyperlink_from_run(run)
+                    
+                    if link_text and link_url:
+                        # Hyperlink found - format as markdown link
+                        para_content.append(f"[{link_text}]({link_url})")
+                    else:
+                        # Regular text
+                        para_content.append(run.text)
             
             # Add any remaining text content
             if para_content:
