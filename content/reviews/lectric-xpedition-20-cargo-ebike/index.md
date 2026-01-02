@@ -29,8 +29,8 @@ Article by John Tribbia
 ### Introduction
 
 Here in Boulder, Colorado, my cargo eBike isn't a novelty, it's a necessity. With over 4,000 miles logged on my trusty Yuba Spicy Curry, I've hauled everything from a week’s worth of groceries up steep roads to commuting across town along a mix of gravel trails, roads, and bike paths.
-It’s basically our second car, my work shuttle, my transportation to trailheads, and my weekend escape rolled into one. So when the opportunity arose to test  - a bike claiming massive utility and power at a fraction of the cost of premium brands - my interest was piqued, and admittedly, I was a bit skeptical.
-I tested the [XPedition 2.0](https://lectricebikes.com/products/xpedition-dual-battery) on a variety of terrain, including those steep unforgiving hills, winding bike paths, and light trails to find out if this budget-friendly cargo bike is a true car-killer or just a pretender.
+It’s basically our second car, my work shuttle, my transportation to trailheads, and my weekend escape rolled into one. So when the opportunity arose to test the Lectric [XPedition 2.0](https://lectricebikes.com/products/xpedition-dual-battery) - a bike claiming massive utility and power at a fraction of the cost of premium brands - my interest was piqued, and admittedly, I was a bit skeptical.
+I tested the cargo bike  on a variety of terrain, including those steep unforgiving hills, winding bike paths, and light trails to find out if this budget-friendly cargo bike is a true car-killer or just a pretender.
 Note: the bike was donated on behalf of Lectric for testing purposes.
 
 ### First Impressions, Pros & Cons
