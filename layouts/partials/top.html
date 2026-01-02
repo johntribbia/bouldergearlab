@@ -1,0 +1,15 @@
+{{ if isset .Site.Params "topbar" }}
+
+{{ if .Site.Params.topbar.enable }}
+<div class="top-bar" id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{ .Site.Params.topbar.text | safeHTML }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ end }}

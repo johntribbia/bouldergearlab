@@ -12,13 +12,13 @@ draft: false
 *Article by John Tribbia*
 
 Original Post from RoadTrailRun
-([link](https://www.roadtrailrun.com/2025/12/nordictrack-x16-elliptical-in-depth.html)
+([link](https://www.roadtrailrun.com/2025/12/nordictrack-x16-elliptical-in-depth.html))
 
 <a href="https://www.roadtrailrun.com/"
 class="button primary button-wrapper"><span>Read All RoadTrailRun
 Reviews Here</span></a>
 
-NordicTrack x16 Elliptical Review
+[NordicTrack x16 Elliptical](https://www.nordictrack.com/product/x16-elliptical) Review
 Article by John Tribbia
 ($2,799 MSRP)
 
