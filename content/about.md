@@ -49,7 +49,7 @@ The "Lab" in Boulder Gear Lab refers to this mindset of rigorous problem-solving
 ### The Gear Testing Side
 I’ve spent twenty years testing gear through the lens of a competitive athlete. While I value my past partnerships with brands like La Sportiva, Pearl Izumi, and Salomon, those sponsorships are behind me. This allows me to maintain complete editorial independence.
 
-I am also a regular contributor to [Road Trail Run](https://www.roadtrailrun.com), one of the most respected review platforms in the industry. [See my RTR reviews →](/roadtrailrun/)
+I have contributed to reviews in Runner's World, Running Times, Triathlete Magazine, and Competitor Sports Magazine. And, I am activealy a regular contributor to [Road Trail Run](https://www.roadtrailrun.com), one of the most respected review platforms in the industry. [See my RTR reviews →](/roadtrailrun/)
 
 ---
 
