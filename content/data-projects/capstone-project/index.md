@@ -1,4 +1,11 @@
-# Capstone Project: Quantifying the Business Impact of AI Model Quality Investments
+---
+title: "Capstone Project: Quantifying the Business Impact of AI Model Quality Investments"
+date: 2026-01-01
+tags: ['data project']
+categories: ['data project']
+description: ""
+draft: false
+---
 
 ## Project Overview
 
