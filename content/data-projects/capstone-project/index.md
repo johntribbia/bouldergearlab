@@ -1,6 +1,7 @@
 ---
 title: "Capstone Project: Quantifying the Business Impact of AI Model Quality Investments"
 date: 2026-01-01
+banner: "capstone-banner.jpg"
 tags: ['data project']
 categories: ['data project']
 description: ""
