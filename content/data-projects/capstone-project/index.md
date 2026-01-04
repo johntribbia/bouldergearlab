@@ -98,6 +98,40 @@ Static user characteristics and subscription outcomes measured at week 26.
 - High pre-engagement (>70): 18% conversion
 - Treatment effect: +4 percentage points (10% vs 6%)
 
+## Download Datasets
+
+All datasets have been generated and are ready for analysis. Download the CSV files below:
+
+### Dataset Files
+
+| File | Records | Size | Description |
+|------|---------|------|-------------|
+| [offline_model_evaluation.csv](offline_model_evaluation.csv) | 50,000 | 15.6 MB | Model evaluation scores from human raters and automated benchmarks |
+| [user_demographics_subscription.csv](user_demographics_subscription.csv) | 100,000 | 42.3 MB | User characteristics and subscription outcomes |
+| [user_engagement_timeseries.csv](user_engagement_timeseries.csv) | 1,500,980 | 360.7 MB | Weekly engagement metrics and session data |
+
+**Total Dataset Size**: 2.5M+ records, ~418 MB
+
+### Dataset Summary Statistics
+
+**Offline Model Evaluation Data**:
+- Model versions: v1.0 (15,000 evals), v1.1 (18,000 evals), v1.2 (17,000 evals)
+- Human-synthetic correlation: ρ ≈ 0.517
+- Evaluation categories: Coding, Creative Writing, Math/Logic, General QA, Scientific
+
+**User Demographics**:
+- Total users: 100,000
+- Subscribers: 8,922 (8.92% conversion rate)
+- Treatment group: 84,182 (84.18%)
+- Enterprise users: 30,165 (30.2%)
+
+**User Engagement**:
+- Total sessions: 1,500,980
+- Week range: 1-26 (6 months)
+- Missing sentiment scores: 225,789 (15.0%)
+- Average prompts per session: 10.34
+- Correlation(prompts, model_quality): 0.345
+
 ## Technical Methodology
 
 ### Causal Inference Techniques Required
