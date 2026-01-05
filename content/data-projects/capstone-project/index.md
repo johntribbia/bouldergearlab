@@ -10,10 +10,6 @@ draft: false
 
 ## Project Overview
 
-**Level**: Masters-level Applied Mathematics  
-**Duration**: 12 weeks  
-**Team Size**: 3-5 students  
-**Industry Partner**: Anthropic (AI Research Company)  
 **Dataset Size**: 2.5M+ synthetic records
 
 ## Executive Summary
@@ -73,8 +69,6 @@ Contains quality assessments from human evaluators and synthetic benchmarks for 
 - `eval_prompt_category`: Coding, Creative Writing, Math/Logic, etc.
 - `cost_of_evaluation`: USD spent per evaluation
 
-**Statistical Property**: Correlation ρ(human_rating, synthetic_metric) ≈ 0.82 (strong but imperfect)
-
 #### B. User Engagement Time-Series (~2,000,000 records)
 Weekly session logs tracking how users interacted with different model versions.
 
@@ -86,11 +80,6 @@ Weekly session logs tracking how users interacted with different model versions.
 - `model_version_used`: Which model the user was exposed to
 - `prompt_length_avg`: Proxy variable for enterprise analysis
 
-**Realistic Challenges**:
-- 15% missing sentiment scores (logging failures)
-- Seasonal spike: +20% engagement in weeks 20-26
-- Correlation with quality is mild (ρ ≈ 0.25), indicating confounding
-
 #### C. User Demographics & Subscription Data (100,000 records)
 Static user characteristics and subscription outcomes measured at week 26.
 
@@ -100,11 +89,6 @@ Static user characteristics and subscription outcomes measured at week 26.
 - `pre_project_engagement_score`: Baseline engagement before week 1
 - `is_treatment_group`: Exposed primarily to v1.1+ models
 - `signup_date`: Controls for cohort effects
-
-**Ground Truth Effects** (embedded in synthetic data):
-- Overall conversion rate: 8%
-- High pre-engagement (>70): 18% conversion
-- Treatment effect: +4 percentage points (10% vs 6%)
 
 ## Download Datasets
 
@@ -140,174 +124,6 @@ All datasets have been generated and are ready for analysis. Download the CSV fi
 - Average prompts per session: 10.34
 - Correlation(prompts, model_quality): 0.345
 
-## Technical Methodology
-
-### Causal Inference Techniques Required
-
-#### 1. Difference-in-Differences (DiD)
-Students must implement a DiD regression with user and week fixed effects to estimate the causal effect of model deployment on engagement.
-
-**Model Specification**:
-```
-Engagement_it = β₀ + β₁·Treatment_i + β₂·Post_t + β₃·(Treatment_i × Post_t) + γ·X_it + δ_i + τ_t + ε_it
-```
-
-Where β₃ is the DiD estimator (causal effect of interest).
-
-**Key Assumption to Test**: Parallel trends in pre-treatment period (weeks 1-7)
-
-#### 2. Propensity Score Matching (PSM)
-For the conversion analysis, students must:
-1. Estimate propensity scores (probability of treatment)
-2. Match treatment and control users on observables
-3. Calculate Average Treatment Effect (ATE) with confidence intervals
-4. Conduct sensitivity analysis (Rosenbaum bounds)
-
-#### 3. Proxy Variable Development
-Since enterprise users lack prompt classification data, students must:
-- Validate proxy variables (prompt_length_avg, session_duration) in consumer segment
-- Apply validated proxies to enterprise segment
-- Compare effect sizes across segments
-
-### Data Quality Challenges (Learning Opportunities)
-
-1. **Missing Data**: 15% of sentiment scores are NULL → Require multiple imputation
-2. **Confounding**: Seasonal trends and marketing campaigns → Need time fixed effects
-3. **Selection Bias**: Treatment assignment not random → Use PSM or IPW
-4. **Outliers**: Some users have extreme engagement (bots?) → Winsorization or robust regression
-5. **Enterprise Constraints**: 30% of data lacks prompt categories → Proxy variable innovation
-
-## Learning Objectives
-
-By completing this project, students will:
-
-1. **Master Causal Inference**: Apply DiD, PSM, and instrumental variables to observational data
-2. **Handle Real-World Data Issues**: Missing values, outliers, confounding, measurement error
-3. **Communicate Technical Findings**: Translate statistical results into business recommendations
-4. **Work with Large Datasets**: Process and analyze 2.5M+ records efficiently
-5. **Develop Domain Expertise**: Understand AI product metrics and evaluation practices
-6. **Practice Reproducible Research**: Document methodology, assumptions, and sensitivity analyses
-
-## Deliverables
-
-### 1. Technical Report (20-25 pages)
-- Hypothesis formulation with mathematical notation
-- Causal inference model specifications
-- Statistical test results with visualizations
-- Sensitivity analyses and robustness checks
-- Business recommendations with confidence intervals
-
-### 2. Code Repository
-- Data cleaning and preprocessing scripts
-- Causal inference implementations (DiD, PSM)
-- Visualization notebooks
-- Reproducibility documentation
-
-### 3. Executive Presentation (15 minutes)
-- Business problem framing
-- Key findings (effect sizes, significance)
-- Confidence in causal claims
-- Investment recommendations
-- Limitations and future research
-
-### 4. Data Quality Audit
-- Missing data patterns
-- Outlier detection and handling
-- Balance tests (treatment vs control)
-- Validation of causal assumptions
-
-## Tools & Prerequisites
-
-**Required Skills**:
-- Regression analysis and hypothesis testing
-- Causal inference fundamentals (confounding, selection bias)
-- Python or R programming
-- Data visualization
-
-**Recommended Packages**:
-- Python: `pandas`, `numpy`, `statsmodels`, `scikit-learn`, `matplotlib`, `seaborn`
-- R: `tidyverse`, `MatchIt`, `lme4`, `CausalImpact`
-
-**Computational Resources**:
-- Standard laptop sufficient (dataset fits in memory)
-- Optional: Cloud computing for parallelized matching algorithms
-
-## Timeline
-
-### Weeks 1-2: Data Exploration & Hypothesis Formation
-- Generate synthetic datasets
-- Exploratory data analysis (distributions, correlations, trends)
-- Formulate null and alternative hypotheses
-- Identify potential confounders
-
-### Weeks 3-5: Causal Analysis - Engagement
-- Implement DiD regression with fixed effects
-- Test parallel trends assumption
-- Run robustness checks (alternative specifications, placebo tests)
-- Visualize treatment effects over time
-
-### Weeks 6-8: Causal Analysis - Conversion
-- Estimate propensity scores
-- Perform matching (nearest neighbor, kernel)
-- Calculate ATE with bootstrapped confidence intervals
-- Conduct sensitivity analysis
-
-### Weeks 9-10: Enterprise Analysis & Extensions
-- Validate proxy variables
-- Compare consumer vs enterprise effects
-- Test for effect heterogeneity (by country, role, baseline engagement)
-
-### Weeks 11-12: Final Report & Presentation
-- Synthesize findings
-- Develop business recommendations
-- Prepare visualizations and slides
-- Practice presentation
-
-## Expected Findings (For Instructors)
-
-The synthetic data embeds the following ground truth effects:
-
-1. **Engagement Effect**: DiD estimate ≈ +2.5 prompts/week (p < 0.01)
-2. **Conversion Effect**: ATE ≈ +4 percentage points (p < 0.05)
-3. **ROI Calculation**: Based on evaluation costs and subscriber lifetime value
-4. **Effect Heterogeneity**: Larger effects for users with high baseline engagement
-
-Students should conclude that model quality investments **do** have measurable positive effects, but the magnitude is moderate and requires careful causal analysis to detect.
-
-## Real-World Applications
-
-This project mirrors actual business analytics challenges at:
-- **AI Companies**: Anthropic, OpenAI, Google DeepMind
-- **Product Analytics Teams**: Meta, Netflix, Spotify
-- **E-commerce**: A/B testing and personalization impact
-- **Healthcare**: Treatment effect estimation from observational data
-
-Skills developed are directly applicable to roles in:
-- Applied Science / Research Science
-- Data Science (Causal Inference focus)
-- Product Analytics
-- Business Intelligence
-- Econometrics / Policy Analysis
-
-## Resources & Support
-
-**Dataset Access**: [Download synthetic datasets](#) (CSV format, 2.5M+ records)
-
-**Starter Code**: Python notebook with data loading and basic EDA
-
-**Office Hours**: Weekly sessions for methodology questions
-
-**Reading List**:
-- Angrist & Pischke: "Mostly Harmless Econometrics"
-- Pearl, Glymour & Jewell: "Causal Inference in Statistics"
-- Imbens & Rubin: "Causal Inference for Statistics, Social, and Biomedical Sciences"
-
-## Contact
-
-**Project Sponsor**: Boulder Gear Lab  
-**Website**: [www.bouldergearlab.com/data-projects](https://www.bouldergearlab.com/data-projects/)  
-**Questions**: Contact your faculty advisor or teaching assistant
-
 ---
 
 ## Why This Project Matters
@@ -321,4 +137,4 @@ As AI systems become more sophisticated and expensive to develop, companies must
 
 These skills are increasingly valuable as more companies move beyond simple A/B testing toward sophisticated causal inference for strategic decision-making.
 
-**Ready to start?** Download the datasets and begin your analysis. Remember: in the real world, you won't know the ground truth—your job is to build the most credible causal argument possible given the data constraints. Good luck!
+**Ready to start?** Download the datasets and begin your analysis. Remember: in the real world, you won't know the ground truth — your job is to build the most credible causal argument possible given the data constraints. Good luck!
