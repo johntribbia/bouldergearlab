@@ -1,0 +1,39 @@
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Language alternatives -->
+{{ if .IsTranslated }}
+{{ range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+{{ end }}
+{{ else }}
+<link rel="alternate" hreflang="en" href="{{ .Permalink }}" />
+{{ end }}
+
+<!-- Twitter Card Tags -->
+{{ $twitter_handle := .Site.Params.twitter_site }}
+{{ if $twitter_handle }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ $twitter_handle }}">
+<meta name="twitter:creator" content="@{{ $twitter_handle }}">
+<meta name="twitter:title" content="{{ .Title | plainify }}">
+<meta name="twitter:description" content="{{ default .Site.Params.defaultDescription .Description | plainify | truncate 160 }}">
+{{ if .Params.banner }}
+<meta name="twitter:image" content="{{ (.Params.banner | absURL) }}">
+{{ end }}
+{{ end }}
+
+<!-- Additional SEO Meta Tags -->
+<meta name="theme-color" content="#0066cc">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Preconnect to external resources -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+<!-- Last Modified for search engines -->
+{{ with .Lastmod }}
+<meta http-equiv="last-modified" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">
+{{ end }}

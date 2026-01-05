@@ -9,6 +9,16 @@ googleAnalytics = ""
 
 summaryLength = 70
 
+# Enable minification for SEO (smaller file sizes = better Core Web Vitals)
+[minify]
+  minifyOutput = false  # Set to true for production
+
+# Output formats configuration
+[outputs]
+  home = ["HTML", "JSON"]
+  page = ["HTML", "JSON"]
+  section = ["HTML"]
+
 [markup.goldmark.renderer]
     unsafe = true
 
@@ -53,6 +63,12 @@ summaryLength = 70
         <br>Boulder, Colorado, USA
       </p>
       """
+
+    # Organization schema (for structured data)
+    [params.organization]
+        name = "Boulder Gear Lab"
+        location = "Boulder, Colorado"
+        country = "USA"
 
 [Permalinks]
     reviews = "/reviews/:year/:month/:day/:filename/"

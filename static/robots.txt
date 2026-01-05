@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemaps
+Sitemap: https://www.bouldergearlab.com/sitemap.xml
+Sitemap: https://www.bouldergearlab.com/sitemap-index.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# User-agents that may have different rules
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile
+Disallow:
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+Crawl-delay: 10

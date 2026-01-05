@@ -94,3 +94,6 @@
 {{ end }}
 <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
 {{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
+<!-- SEO enhancements -->
+{{ partial "seo-meta.html" . }}
+{{ partial "schema-review.html" . }}

@@ -39,9 +39,9 @@
                             {{ if .Params.banner }}
                             {{ $image := .Resources.GetMatch .Params.banner }}
                             {{ if $image }}
-                            <img src="{{ $image.Permalink }}" class="img-responsive" alt="" />
+                            <img src="{{ $image.Permalink }}" class="img-responsive" alt="{{ .Title }} - featured image" />
                             {{ else }}
-                            <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="" />
+                            <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="{{ .Title }} - featured image" />
                             {{ end }}
                             {{ end }}
 

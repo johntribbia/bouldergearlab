@@ -1,0 +1,76 @@
+{{ if eq .Type "reviews" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ .Title | plainify }}",
+  "description": "{{ .Description | plainify }}",
+  "image": [
+    {{ if .Params.banner }}
+    "{{ (.Params.banner | absURL) }}"{{ if .Params.images }},{{ end }}{{ end }}
+    {{ with .Params.images }}{{ range $index, $image := . }}{{ if gt $index 0 }},{{ end }}"{{ ($image | absURL) }}"{{ end }}{{ end }}
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Param "author" | default .Site.Params.author }}"
+  },
+  "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "url": "{{ .Permalink }}"
+}
+</script>
+{{ end }}
+
+{{ if or (eq .Type "blog") (eq .Kind "page") (in .Type "data-projects") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title | plainify }}",
+  "description": "{{ .Description | plainify }}",
+  "image": "{{ if .Params.banner }}{{ (.Params.banner | absURL) }}{{ else }}{{ .Site.Params.default_sharing_image | default "img/sharing-default.png" | absURL }}{{ end }}",
+  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z0700" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z0700" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Param "author" | default .Site.Params.author }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.Params.logo | absURL }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{ end }}
+
+{{ with .Site.Params.organization }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ .Site.Params.logo | absURL }}",
+  "description": "{{ .Site.Params.defaultDescription }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Boulder",
+    "addressRegion": "Colorado",
+    "addressCountry": "USA"
+  },
+  "sameAs": [
+    {{ if .Site.Params.twitter_site }}"https://twitter.com/{{ .Site.Params.twitter_site }}"{{ end }}{{ if .Site.Params.linkedin }},{{ .Site.Params.linkedin }}{{ end }}{{ if .Site.Params.youtube }},"https://www.youtube.com/c/{{ .Site.Params.youtube }}"{{ end }}
+  ]
+}
+</script>
+{{ end }}
