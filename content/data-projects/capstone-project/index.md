@@ -14,7 +14,7 @@ draft: false
 
 ## Executive Summary
 
-This capstone project challenges graduate students to answer a critical business question facing AI companies: **Does investing in rigorous offline model evaluations translate to measurable improvements in user engagement and revenue?**
+This capstone project challenges students to answer a critical business question facing AI companies: **Does investing in rigorous offline model evaluations translate to measurable improvements in user engagement and revenue?**
 
 Students will work with realistic synthetic data spanning 6 months of user interactions, model evaluation scores, and subscription conversions to establish causal relationships between model quality improvements and key business metrics.
 
