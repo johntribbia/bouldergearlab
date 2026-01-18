@@ -220,25 +220,4 @@ Jen: The Wave Rider 29 far exceeded my expectations, and I place it near the top
 
 😊😊😊😊.5
 
-### Comparisons
 
-Roadtrailrun
-Generally shoes that are similar by weight class, type of ride, purpose. As many as you see being appropriate. A short paragraph. If we have reviewed it I will include links to comparisons or you can as reading them is useful for stats etc...
-Please list your size for the comparison shoe and review shoe and touch on relative fit for each. Review stats and info for each shoe to refresh your memory.
-Shoes listed are suggestions. Please feel free to add as you wish
-Mizuno Neo Zen ()
-Sam: Both shoes have NXT nitrogen infused foams with the Zen having a TPU and the Wave Rider an EVA. The Rider’s foam feels similar to the Zen airier in feel and somewhat bouncier, noting also no plate in the Zen. The Zen is considerably lighter weight, has a lower 6mm drop and sits on a broader platform. Its knit upper, more minimal and less supportive than the Wave Rider for sure contributes to the lighter weight. The Zen is a super fun and bouncy shoe in what Mizuno calls its “Swift” silo while the Wave Rider is a reliable workhorse type daily trainer in Mizuno’s “Cruise” silo.
-Michael: I love the Neo Zen. Love it. I think there are some elements of the Wave Rider that are better, though - the drop, for one, and the outsole (I was surprised with the relatively lack of durability coming out of the Neo Zen). It’s a big plus to say that Mizuno has two very competitive daily trainers, and it’s tough to really say which is better, but ultimately I do prefer the “next generation” feel of the Neo line to the “modern classic” Wave Rider.
-Diadora Núcleo 2 ()
-Sam: The Nucleo is a similar stable neutral daily trainer with a slightly higher heel and more forefoot cushioning as it is a 5mm drop shoe. It weighs about 0.4 oz / more than the Wave Rider. Its stability elements, essentially higher foam side walls, are less noticed than the Wave Rider Wave Plate but get to the same place in terms of providing a stable neutral ride. Its DD Anima foam is about as good as an EVA  gets with nice bounce but is denser and less reactive in feel but overall the midsole more consistent and all of piece in feel, somewhat more shock absorbing  if not quite as exciting as the Mizuno’s. Fits are similar with the Diadora upper somewhat more supportive and narrower in the toe box.
-adidas Supernova Prima ()
-Sam: The Prima is somewhat heavier, has a broader platform and about the same stack height with a slightly lower 8mm drop. Its “plate” support elements are hardened foam rods at the ground while the Mizuno has its plastic plate sandwiched higher up in the midsole. The adidas has a supercritical PEBA/EVA blend foam midsole that is denser and less reactive in feel compared to the Mizuno’s. Overall the Prima has a smoother more versatile but less exciting and dynamic ride. Uppers are similar in construction, both true to size with the Mizuno’s a bit thinner and smoother fitting.
-Puma ForeverRun Nitro ()
-Sam:
-ASICS GEL-Cumulus 27 ()
-Sam:
-Puma Magnify Nitro 3 ()
-Sam:
-Index to all RTR reviews:
-
-### Tester Profiles

@@ -1,0 +1,8 @@
+#!/bin/bash
+# Bash wrapper for the convert_review.py script
+
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Run the Python script from the scripts directory
+python3 "$SCRIPT_DIR/scripts/convert_review.py" "$@"
