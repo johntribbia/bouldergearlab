@@ -27,7 +27,7 @@ Article by John Tribbia
 
 248 grams/8.7 oz (Head unit 55g/1.9 oz, Battery pack 100g/3.5 oz, Headband/cable 93g/3.3 oz)
 800 Max Lumens
-The Bright as Day 800 is available directly from
+The Bright as Day 800 is available directly from [Moonlight Mountain Gear](https://moonlightmountaingear.com/collections/lighting/products/bright-as-day-800-headlamp)
 
 ![image_2.jpg](image_2.jpg)
 

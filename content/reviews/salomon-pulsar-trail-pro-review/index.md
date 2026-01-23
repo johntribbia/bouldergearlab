@@ -18,7 +18,7 @@ Reviews Here</span></a>
 
 *Article by John Tribbia*
 
-### Salomon Pulsar Trail Pro ($150)
+Salomon Pulsar Trail Pro ($150)
 
 
 ![image_1.png](image_1.png)

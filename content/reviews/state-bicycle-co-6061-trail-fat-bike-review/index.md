@@ -27,7 +27,7 @@ L
 
 ### Introduction
 
-Living near Boulder, Colorado means I'm practically tripping over amazing trails every time I step outside. Naturally, fat biking during the shoulder and snow season is always on my radar – the idea of conquering snow-covered paths and expanding the riding season is incredibly appealing. I've been following . for a while now, appreciating their commitment to accessible quality, so I jumped at the chance to test out the . I was curious to see how their value-driven philosophy translated into the world of fat bikes, especially here in the varied terrain of the Colorado Front Range.
+Living near Boulder, Colorado means I'm practically tripping over amazing trails every time I step outside. Naturally, fat biking during the shoulder and snow season is always on my radar – the idea of conquering snow-covered paths and expanding the riding season is incredibly appealing. I've been following State Bicycle Company. for a while now, appreciating their commitment to accessible quality, so I jumped at the chance to test out the 6061 Trail+ Fat Bike. I was curious to see how their value-driven philosophy translated into the world of fat bikes, especially here in the varied terrain of the Colorado Front Range.
 
 ![image_2.jpg](image_2.jpg)
 

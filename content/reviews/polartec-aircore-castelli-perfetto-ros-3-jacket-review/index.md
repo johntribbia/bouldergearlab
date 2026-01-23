@@ -19,7 +19,6 @@ class="button primary button-wrapper"><span>Read All RoadTrailRun
 Reviews Here</span></a>
 
 Article by John Tribbia
-($320)
 
 ![image_1.jpg](image_1.jpg)
 

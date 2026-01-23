@@ -24,7 +24,7 @@ Reviews Here</span></a>
 
 ### 
 
-As an avid early morning trail runner, a reliable headlamp is crucial, and I've experienced how innovative design can significantly improve essential gear. The  stands out in a crowded market by addressing common issues such as slow charging and inconsistent power. Its remarkably compact size and ultralight design are the highlights among other high quality features.
+As an avid early morning trail runner, a reliable headlamp is crucial, and I've experienced how innovative design can significantly improve essential gear. The BioLite Range 500 stands out in a crowded market by addressing common issues such as slow charging and inconsistent power. Its remarkably compact size and ultralight design are the highlights among other high quality features.
 
 ### Design
 
