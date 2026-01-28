@@ -33,18 +33,18 @@ As someone who gave the original Prodigio high marks - a 9/10 in my review - I w
 
 ### Pros:
 
-Wider, more accommodating fit - finally! - John
-Softer XFlow Nitro EVA delivers excellent long-distance comfort - John
-Improved platform stability for technical terrain - John
-Lightweight at approximately 9.35 oz (US 9) - John
-Excellent breathability in warm conditions - John
-Enhanced rock protection from repositioned rocker and midfoot insert - John
+* Wider, more accommodating fit - finally! - John
+* Softer XFlow Nitro EVA delivers excellent long-distance comfort - John
+* Improved platform stability for technical terrain - John
+* Lightweight at approximately 9.35 oz (US 9) - John
+* Excellent breathability in warm conditions - John
+* Enhanced rock protection from repositioned rocker and midfoot insert - John
 
 ### Cons:
 
-Upper still feels less robust than La Sportiva's burlier mountain shoes - John
-May be too soft for runners seeking maximum ground feel - John
-Still requires sizing up half a size for ideal fit - John
+* Upper still feels less robust than La Sportiva's burlier mountain shoes - John
+* May be too soft for runners seeking maximum ground feel - John
+* Still requires sizing up half a size for ideal fit - John
 
 ### Stats
 
@@ -54,13 +54,6 @@ Stack Height:  34mm heel /  28mm forefoot
 Also list previous if available
 Platform Width: 85 mm heel /  70mm midfoot  / 110mm forefoot
 
-### Also measure previous if available listing size
-
-Feb-March 2026 release
-
-### Tester Profile
-
-John Tribbia (5' 6", 130lbs) is a former sponsored mountain/trail runner who has run with La Sportiva, Brooks/Fleet Feet, Pearl Izumi, and Salomon. Even though he competes less frequently these days, you can still find John enjoying the daily grind of running on any surface, though his favorite terrain is 30-40% grade climbs. He has won races such as America's Uphill, Imogene Pass Run, and the US Skyrunner Vertical Kilometer Series; and he's held several FKTs on several iconic mountains in Boulder, Colorado and Salt Lake City, Utah. If you follow him on , you'll notice he runs at varying paces between 5 minutes/mile to 12 minutes/mile before the break of dawn almost every day.
 
 ### First Impressions, Fit and Upper
 
@@ -150,9 +143,7 @@ John: The Xplor 2 is another cushioned trail shoe aimed at long distances, but i
 ### Craft Pure Trail Pro (RTR Review)
 
 John: The Pure Trail Pro is Craft’s more race-oriented trail shoe with less cushioning than the Prodigio 2. It's firmer, lower to the ground, and more responsive, making it better suited for faster efforts on moderate terrain. The Pure Trail Pro weighs less and feels more agile, but sacrifices the long-distance comfort that the Prodigio 2 excels at. The Prodigio 2’s softer midsole and higher stack height provide significantly more protection and fatigue resistance over ultra-distances. The Pure Trail Pro has a grippier outsole for muddier / softer terrain. Choose the Pure Trail Pro for shorter, faster races where you want maximum responsiveness, or the Prodigio 2 for ultras and long training runs where comfort matters most.
-(RTR Review)
-(RTR Review)
-(RTR Review)
-Index to all RTR reviews:
 
-### Tester Profiles
+### Tester Profile
+
+John Tribbia (5' 6", 130lbs) is a former sponsored mountain/trail runner who has run with La Sportiva, Brooks/Fleet Feet, Pearl Izumi, and Salomon. Even though he competes less frequently these days, you can still find John enjoying the daily grind of running on any surface, though his favorite terrain is 30-40% grade climbs. He has won races such as America's Uphill, Imogene Pass Run, and the US Skyrunner Vertical Kilometer Series; and he's held several FKTs on several iconic mountains in Boulder, Colorado and Salt Lake City, Utah. If you follow him on , you'll notice he runs at varying paces between 5 minutes/mile to 12 minutes/mile before the break of dawn almost every day.
