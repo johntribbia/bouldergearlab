@@ -49,6 +49,10 @@
             height: 100%;
         }
 
+        #mountainCanvas.loading {
+            opacity: 0;
+        }
+
         .hero-content {
             position: relative;
             z-index: 10;
@@ -107,6 +111,11 @@
             box-shadow: 0 15px 40px rgba(224, 30, 55, 0.5);
         }
 
+        .cta-button:focus {
+            outline: 3px solid white;
+            outline-offset: 4px;
+        }
+
         .cta-button.secondary {
             background: transparent;
             border: 2px solid white;
@@ -115,6 +124,11 @@
         .cta-button.secondary:hover {
             background: white;
             color: var(--mountain-dark);
+        }
+
+        .cta-button.secondary:focus {
+            outline: 3px solid var(--trail-red);
+            outline-offset: 4px;
         }
 
         /* Content Sections */
@@ -541,6 +555,11 @@
             box-shadow: 0 10px 30px rgba(224, 30, 55, 0.4);
         }
 
+        .contact-button:focus {
+            outline: 3px solid white;
+            outline-offset: 4px;
+        }
+
         .footer-note {
             opacity: 0.6;
             font-size: 14px;
@@ -597,7 +616,7 @@
 <body>
 
     <section class="hero-section">
-        <canvas id="mountainCanvas"></canvas>
+        <canvas id="mountainCanvas" class="loading" aria-hidden="true" role="img" aria-label="Animated mountain landscape background"></canvas>
         <div class="hero-content">
             <span class="hero-tagline">Senior Staff Data Scientist @ Google • Mountain / Trail Runner</span>
             <br>
@@ -617,8 +636,8 @@
             <br>
             <br>
             <div>
-                <a href="#experience" class="cta-button secondary">View Experience</a>
-                <a href="#contact" class="cta-button secondary">Get In Touch</a>
+                <a href="#experience" class="cta-button secondary" aria-label="Navigate to experience section">View Experience</a>
+                <a href="#contact" class="cta-button secondary" aria-label="Navigate to contact section">Get In Touch</a>
             </div>
         </div>
     </section>
@@ -1032,8 +1051,8 @@
             running? I'd love to hear from you.
         </p>
         <div class="contact-links">
-            <a href="https://linkedin.com/in/jtribbia" class="contact-button" target="_blank">LinkedIn</a>
-            <a href="mailto:john@bouldergearlab.com" class="contact-button" target="_blank">Email</a>
+            <a href="https://linkedin.com/in/jtribbia" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Connect with John Tribbia on LinkedIn">LinkedIn</a>
+            <a href="mailto:john@bouldergearlab.com" class="contact-button" aria-label="Send email to John Tribbia">Email</a>
         </div>
         <p class="footer-note">
             Boulder, Colorado • PhD • Senior Staff Data Scientist @ Google
@@ -1127,12 +1146,17 @@
                 y: Math.random() * canvas.height,
                 text: words[Math.floor(Math.random() * words.length)],
                 speed: 0.15 + Math.random() * 0.4,
-                opacity: 0.05 + Math.random() * 0.2,
+                opacity: 0.02 + Math.random() * 0.08,
                 drift: Math.random() * 2 - 1
             });
         }
 
         const mountain = new Mountain();
+
+        // Remove loading state once canvas is ready
+        setTimeout(() => {
+            canvas.classList.remove('loading');
+        }, 100);
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
