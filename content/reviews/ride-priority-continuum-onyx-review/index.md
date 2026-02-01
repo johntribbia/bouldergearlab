@@ -4,7 +4,7 @@ date: 2024-09-21
 banner: "image_1.png"
 tags: ["cycling"]
 categories: ["reviews"]
-description: ""
+description: "Despite the fact that I’ve been riding bikes and commuting for countless years, to this day I still end up with a greasy chainring mark on my leg or end up s..."
 draft: false
 ---
 <!--more-->

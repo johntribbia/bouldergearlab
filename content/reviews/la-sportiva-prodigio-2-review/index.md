@@ -4,7 +4,7 @@ date: 2026-01-27
 banner: "image_1.jpg"
 tags: ['running', 'shoes']
 categories: ['reviews']
-description: ""
+description: "John: The trail running community has been eagerly awaiting La Sportiva’s follow-up to their groundbreaking Prodigio, and I think they did well with the Prod..."
 draft: false
 ---
 <!--more-->
@@ -33,18 +33,18 @@ As someone who gave the original Prodigio high marks - a 9/10 in my review - I w
 
 ### Pros:
 
-* Wider, more accommodating fit - finally! - John
-* Softer XFlow Nitro EVA delivers excellent long-distance comfort - John
-* Improved platform stability for technical terrain - John
-* Lightweight at approximately 9.35 oz (US 9) - John
-* Excellent breathability in warm conditions - John
-* Enhanced rock protection from repositioned rocker and midfoot insert - John
+- Wider, more accommodating fit - finally! - John
+- Softer XFlow Nitro EVA delivers excellent long-distance comfort - John
+- Improved platform stability for technical terrain - John
+- Lightweight at approximately 9.35 oz (US 9) - John
+- Excellent breathability in warm conditions - John
+- Enhanced rock protection from repositioned rocker and midfoot insert - John
 
 ### Cons:
 
-* Upper still feels less robust than La Sportiva's burlier mountain shoes - John
-* May be too soft for runners seeking maximum ground feel - John
-* Still requires sizing up half a size for ideal fit - John
+- Upper still feels less robust than La Sportiva's burlier mountain shoes - John
+- May be too soft for runners seeking maximum ground feel - John
+- Still requires sizing up half a size for ideal fit - John
 
 ### Stats
 
@@ -78,8 +78,6 @@ The lacing system is straightforward and effective. Nothing fancy, which is fine
 ### Midsole & Platform
 
 
-### 
-
 John: The Prodigio 2’s midsole is evolved from the original. They refined their XFlow supercritical nitrogen-infused EVA compound, and they claim it's a little softer than the original generation. On the trail, I'd say that's accurate; it's noticeably softer, though not dramatically so.
 The midsole stack measures 35mm in the heel and 29mm in the forefoot, maintaining the 6mm drop. This generous cushioning platform is really good at absorbing the repetitive impact of long miles. The softness is most apparent on harder surfaces like on roads approaches to trailheads.
 What continues to impress me about La Sportiva's XFlow compound is how it manages to feel both soft and responsive. This isn’t the dead, mushy softness you get with some over-cushioned shoes. There’s some liveliness to the foam that provides energy return on toe-off. I suspect this comes from the layered construction, which is similar to the original design with XFlow foam sitting atop a firmer EVA base layer. This combination delivers soft initial impact absorption with a responsive platform underneath.
@@ -91,8 +89,6 @@ However, I should note that this midsole design prioritizes comfort over ground 
 
 ### Outsole
 
-
-### 
 
 John: La Sportiva has upgraded the outsole on the Prodigio 2 with slightly deeper 4mm lugs compared to the original's 3-4mm range. This might seem like a minor change on paper, but it makes a meaningful difference in real-world traction, particularly in loose or muddy conditions.
 

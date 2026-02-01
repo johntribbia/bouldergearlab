@@ -4,7 +4,7 @@ date: 2025-12-28
 banner: "image_1.jpg"
 tags: ['running', 'cross-training', 'home fitness']
 categories: ['reviews']
-description: ""
+description: "NordicTrack x16 Elliptical Review Article by John Tribbia ($2,799 MSRP)"
 draft: false
 ---
 <!--more-->
@@ -21,8 +21,6 @@ Reviews Here</span></a>
 [NordicTrack x16 Elliptical](https://www.nordictrack.com/product/x16-elliptical) Review
 Article by John Tribbia
 ($2,799 MSRP)
-
-### 
 
 As a longtime trail runner who's been battling patellofemoral syndrome flare-ups for over a year, I've had to get creative with my training. The journey hasn’t been easy (but far from unique) - I've gone through periods of rest, physical therapy, and carefully rebuilding my running volume. But the truth is, sometimes my knee just needs a break from the pounding of the trails and pavement. That’s where low-impact cross-training has been helpful, and I've been testing the NordicTrack x16 Elliptical to see if it could become a valuable part of my rehab and long-term training strategy.
 While I generally prefer the varied terrain and natural movement of trail running to the predictability of most ellipticals - even the BowFlex Max Trainer I recently tested - my focus has shifted.

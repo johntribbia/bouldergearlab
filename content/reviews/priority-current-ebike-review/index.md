@@ -4,7 +4,7 @@ date: 2025-09-15
 banner: "image_11.png"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
-description: ""
+description: "If you haven’t experienced the eBike world, I’m convinced you are missing out. Two years ago, my wife and I sold our second car with the intent that all of o..."
 draft: false
 ---
 <!--more-->

@@ -4,7 +4,7 @@ date: 2025-01-13
 banner: "image_0.png"
 tags: ["cycling", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "In the realm of winter gear, where warmth and dexterity engage in a delicate dance, the Pearl Izumi AmFIB® Lobster Gel Gloves ($85) emerge as a captivating c..."
 draft: false
 ---
 <!--more-->

@@ -4,7 +4,7 @@ date: 2025-02-17
 banner: "image_0.jpg"
 tags: ["cycling", "bikes"]
 categories: ["reviews"]
-description: ""
+description: "Borealis Flume and Crestone Fat Bike Review ($2,257 for Flume & $4,217 for Crestone as tested)"
 draft: false
 ---
 <!--more-->

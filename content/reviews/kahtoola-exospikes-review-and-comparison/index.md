@@ -4,7 +4,7 @@ date: 2024-03-01
 banner: "image_1.jpg"
 tags: ["running", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "A decade ago, I made my first purchase of Kahtoola MICROspikes ($74.95). They have become one of my all-time favorite pieces of outdoor gear. In fact, they a..."
 draft: false
 ---
 <!--more-->

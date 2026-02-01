@@ -4,7 +4,7 @@ date: 2025-03-01
 banner: "image_0.png"
 tags: ["running", "ski"]
 categories: ["reviews"]
-description: ""
+description: "Deep in the Altai Mountains of North Asia, skis remain a vital tool for traversing challenging landscapes and navigating deep snow. With this heritage in min..."
 draft: false
 ---
 <!--more-->

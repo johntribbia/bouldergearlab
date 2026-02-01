@@ -4,7 +4,7 @@ date: 2026-01-01
 banner: "image_1.jpg"
 tags: ['cycling', 'eBikes']
 categories: ['reviews']
-description: ""
+description: "Here in Boulder, Colorado, my cargo eBike isn't a novelty, it's a necessity. With over 4,000 miles logged on my trusty Yuba Spicy Curry, I've hauled everythi..."
 draft: false
 ---
 <!--more-->
@@ -46,17 +46,17 @@ Once assembled, the bike's build quality is impressive for its price point. The 
 
 ### Pros
 
-* Exceptional Value: Offers features like a torque sensor and dual-battery capability at a price point competitors can't touch.
-* Immense Power and Capacity: The 750W motor (peaking at 1310W) and a 450 lb payload capacity mean it can handle heavy loads (in my case, two 11 year olds) and steep hills with confidence.
-* Massive Range: The dual-battery option provides an incredible amount of range.
-* Smooth and Intuitive Ride: The new PWR+ torque sensor delivers natural-feeling pedal assist, a significant upgrade from cadence-only systems.
-* Highly Customizable: Comes with a host of included accessories and a wide range of optional add-ons to tailor it to any need.
+- Exceptional Value: Offers features like a torque sensor and dual-battery capability at a price point competitors can't touch.
+- Immense Power and Capacity: The 750W motor (peaking at 1310W) and a 450 lb payload capacity mean it can handle heavy loads (in my case, two 11 year olds) and steep hills with confidence.
+- Massive Range: The dual-battery option provides an incredible amount of range.
+- Smooth and Intuitive Ride: The new PWR+ torque sensor delivers natural-feeling pedal assist, a significant upgrade from cadence-only systems.
+- Highly Customizable: Comes with a host of included accessories and a wide range of optional add-ons to tailor it to any need.
 
 ### Cons
 
-* Heavy: At over 80 lbs with batteries, lifting it onto a car rack or carrying it up stairs is a serious challenge.
-* Basic Suspension: While the front fork and suspension seatpost help, the ride can be harsh on very rough terrain due to the lack of rear suspension.
-* Proprietary Charger Connector: Makes it difficult to use third-party chargers.
+- Heavy: At over 80 lbs with batteries, lifting it onto a car rack or carrying it up stairs is a serious challenge.
+- Basic Suspension: While the front fork and suspension seatpost help, the ride can be harsh on very rough terrain due to the lack of rear suspension.
+- Proprietary Charger Connector: Makes it difficult to use third-party chargers.
 
 ![image_4.jpg](image_4.jpg)
 

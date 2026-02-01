@@ -4,7 +4,7 @@ date: 2025-07-17
 banner: "image_1.jpg"
 tags: ['running', 'shoes']
 categories: ['reviews']
-description: ""
+description: "The Wave Rider is a classic daily trainer. By this I mean a shoe at a moderate stack height and a high drop with some neutral focused stability and with dura..."
 draft: false
 ---
 <!--more-->
@@ -36,22 +36,22 @@ More modern bonuses: 3mm more forefoot stack height and 1mm more heel stack heig
 
 ### Pros:
 
-* Very energetic and modern supercritical midsole foam ride: Sam/John/Dominique/Michael/Jen
-* Simple, effective, comfortable and breathable Jacquard “Air” Mesh upper: Sam/John/Dominique/Michael/Jen
-* Stable: higher Wave Plate location increases stability focus even with now softer foam and without the usual sensation of a firmer medial side of the shoe: * Sam/Dominique/Jen
+- Very energetic and modern supercritical midsole foam ride: Sam/John/Dominique/Michael/Jen
+- Simple, effective, comfortable and breathable Jacquard “Air” Mesh upper: Sam/John/Dominique/Michael/Jen
+- Stable: higher Wave Plate location increases stability focus even with now softer foam and without the usual sensation of a firmer medial side of the shoe: * Sam/Dominique/Jen
 Lightweight feel: John/Michael/Dominique/Jen
 
 ### Cons:
 
-* If you don’t need mild pronation control the new higher plate location may be over present in feel directly under foot, is for me: Sam
-* Front of shoe could use more flex: Sam/Michael
-* Not sure about long term durability: John
+- If you don’t need mild pronation control the new higher plate location may be over present in feel directly under foot, is for me: Sam
+- Front of shoe could use more flex: Sam/Michael
+- Not sure about long term durability: John
 
 ### Most comparable shoes
 
-* Diadora Nucleo 2
-* Puma ForeverRun
-* adidas Supernova Prima
+- Diadora Nucleo 2
+- Puma ForeverRun
+- adidas Supernova Prima
 
 ![image_4.jpg](image_4.jpg)
 
@@ -70,8 +70,6 @@ Platform Width:
 
 ### First Impressions, Fit and Upper
 
-
-### 
 
 The upper is a new Jacquard Air Mesh and it is a beaut! Smooth fitting, very breathable for such a dense mesh (tested on a feel- like 91 F / 32 C day), true to size and very smooth fitting.
 
@@ -116,8 +114,6 @@ The very rigid heel counter was a question mark for me at first, as I wondered w
 ### Midsole & Platform
 
 
-### 
-
 Sam: The platform moves to a 10mm drop (from 12mm) with a 38.5 mm heel /  28.5 mm forefoot stack height. This means 3mm more cushion at the forefoot and 1mm more at the heel.
 The weight is very reasonable at about 9.2 oz / 261g in a US men’s 9
 The platform width of 85 mm heel /  65 mm midfoot  / 105 mm forefoot  gives a stable heel landing,  with a narrower midfoot (well supported by the Wave Plate) and a not excessively wide front platform width for some agility
@@ -142,8 +138,6 @@ Michael: To cut to the chase, the midsole on the Wave Rider 29 is terrific. Ener
 The 10mm drop (down from 12mm) makes the ride feel more balanced, and the 38.5/28.5 mm stack gives plenty of cushion without losing connection to the ground. I wouldn’t complain about a 12mm drop, but 10 is plenty, and works well for this type of shoe. The Wave Plate is still here, but now it’s embedded higher in the heel. For me, that stabilizing element is well-tuned - present but not intrusive. If you’re sensitive to plates, you might notice it early on, but it settles in quickly. It’s rigid, to be sure (this is a Wave Rider, after all!) but I didn’t find it obtrusive. Of course, if you’re looking for “plated trainer” vibes, as it were, this isn’t exactly that given its rear of the shoe focus - but it is a solid, stable, well-done ride.
 The Enerzy NXT material isn’t a soft-and-sinky foam like ZoomX, but it’s way more fun than traditional EVA. In my opinion, the best comparison is probably Puma’s latest Nitro foams - energetic, springy, and durable. As should be clear, this is the best riding Wave Rider I’ve tested in years (and probably ever!).
 
-### 
-
 Dominique: Commenting in Michael’s footsteps, I am equally enthusiastic about the upgrades in the midsole though my prior experience with the Waive Rider is limited to the 26th edition and I tend to prefer the middle of the road drops in the 5-8 mm range..
 The midsole, with its new blend of Mizuno Enerzy NXT (Nitrogen Infused EVA), and higher stack height, especially in the forefoot (29mm/39mm), feels great underfoot delivering a smooth and energetic ride.
 
@@ -156,8 +150,6 @@ Like John, I found the midsole to be a great balance between cushion and respons
 ### Outsole
 
 
-### 
-
 The outsole has an almost full coverage with a lugged pattern. I especially note the very extensive forefoot coverage which helps stabilize the forefoot in front of where the plate ends while also providing response or pop. All good but I think the front rubber could be more segmented in the area near the  midfoot where it overlaps the plate above as the first part of transition to toe off in that area is stiffer than I like
 
 ![image_21.jpg](image_21.jpg)
@@ -166,17 +158,12 @@ John: The outsole of the Wave Rider 29 is built to last. The extensive coverage 
 Michael: No surprises here: Mizuno’s X10 rubber is tough and well-positioned, and really looks like it’ll take a beating. The outsole coverage is generous, especially in the forefoot, which helps with stability and a little extra pop at toe-off. That said, I agree with Sam that the front rubber could benefit from more segmentation. There’s a touch of stiffness through the midfoot during transitions, especially early in the break-in period.
 Traction has been solid on a mix of surfaces, including light rain. This should wear well over the long haul - it’s built for mileage, after all. No issues.
 
-### 
-
-
 ### Dominique: Designed for durability, the thread pattern of the outsole provides good traction.
 
 Jen: As the other testers note, the majority of the outsole is covered with waffled X10 rubber for significant traction. I took it on gravel roads and light trail as well as wet and dry pavement and was satisfied in all conditions. I especially appreciate that the center groove is large enough to avoid capturing gravel when going off-road. No signs of wear on the outsole after 40+ miles in my pair, and I would guess that the outsole is the most durable component of the shoe.
 
 ### Ride, Conclusions and Recommendations
 
-
-### 
 
 The Wave Rider 29 is a fully modernized classic daily trainer. Light stability from its Wave Plate, an energetic supercritical foam midsole, a simple and effective upper, and light weight for its very decent stack height.
 My only issue with the shoe is the somewhat over present Wave Plate outsole combination at midfoot which makes transitions a bit more labored and over stabilized there and less fluid than I would like. I wore the shoes for standard daily runs at near 9:00 minute miles as well as somewhat slower recovery runs where the plate and outsole combination did not have me worried about my form as the shoe kept me nicely aligned.

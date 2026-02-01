@@ -4,7 +4,7 @@ date: 2023-11-01
 banner: "image_1.jpg"
 tags: ["running", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "As a seasoned runner and cyclist, conquering the post-workout foot funk can be an ongoing struggle. OX SOX ($19.99 for a single pack crew height), with its p..."
 draft: false
 ---
 <!--more-->

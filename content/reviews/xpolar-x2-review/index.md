@@ -4,7 +4,7 @@ date: 2025-11-08
 banner: "image_1.jpg"
 tags: ['running', 'accessories']
 categories: ['reviews']
-description: ""
+description: "XPolar X2 (now $299.00 USD Regular price $369.00 USDSave $70.00)"
 draft: false
 ---
 <!--more-->
@@ -20,8 +20,6 @@ Reviews Here</span></a>
 
 [XPolar X2](https://www.amazon.com/stores/XPOLAR/page/6B6C9E60-8990-4992-A2DC-F90E651CA8C9?lp_asin=B0DLKQX9MN&store_ref=bl_ast_dp_brandLogo_sto&linkCode=sl2&tag=roadtr03-20&linkId=e51b03fdeedc98e7392449af0bd8ec5f&language=en_US&ref_=as_li_ss_tl)
 (now $299.00 USD Regular price $369.00 USDSave $70.00)
-
-### 
 
 John: As a trail runner, my sanity is intrinsically linked to my ability to get out on the trail. So when a recent unexpected flare-up of a knee issue arose over the summer before my planned race at the Rattlesnake Ramble, I was devastated. My routine devolved into a frustrating cycle: run, swell, ice, hobble, and repeat. My freezer was a chaotic mess of gel packs, and the monotony of holding a bag of frozen peas on my knee multiple times a day was wearing thin.
 

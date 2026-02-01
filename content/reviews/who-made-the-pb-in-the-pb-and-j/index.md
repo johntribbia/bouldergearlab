@@ -4,7 +4,7 @@ date: 2022-04-15
 banner: "image_0.jpg"
 tags: ["running", "nutrition"]
 categories: ["reviews"]
-description: ""
+description: "Peanut butter is one of the most common foods found in almost every household in America. If you've ever eaten a peanut butter and jelly sandwich, you've pro..."
 draft: false
 ---
 <!--more-->

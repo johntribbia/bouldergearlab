@@ -4,7 +4,7 @@ date: 2022-08-22
 banner: "image_1.png"
 tags: ["running", "shoes"]
 categories: ["reviews"]
-description: ""
+description: "The Pulsar Trail Pro is Salomon’s new mid to long range trail running shoe that is built for moving fast, regardless of conditions. It is a quick and nimble ..."
 draft: false
 ---
 <!--more-->

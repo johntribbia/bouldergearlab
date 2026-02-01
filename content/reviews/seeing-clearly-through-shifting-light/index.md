@@ -4,7 +4,7 @@ date: 2023-08-13
 banner: "image_0.png"
 tags: ["running", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "For those of us who can't decide between sunrise trail runs and midday cycling sprints, finding the right pair of sunglasses can feel like a never-ending que..."
 draft: false
 ---
 <!--more-->

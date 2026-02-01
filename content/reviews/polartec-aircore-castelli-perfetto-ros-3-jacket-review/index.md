@@ -4,7 +4,7 @@ date: 2025-11-08
 banner: "image_1.jpg"
 tags: ['running', 'cycling', 'apparel']
 categories: ['reviews']
-description: ""
+description: "John: While the Castelli Perfetto has long been a staple in the world of cycling, I've always viewed it through the lens of a cold-weather aerobic enthusiast..."
 draft: false
 ---
 <!--more-->

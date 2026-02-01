@@ -2,9 +2,9 @@
 title: "Naawk Sunscreen"
 date: 2018-01-01
 banner: "image_1.jpg"
-tags: ["running", "shoes"]
+tags: ["running", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "and, with it, most people stow away their swimsuits, shorts, Hawaiian shirts, barbecues, and sunscreen. But wait…don’t hastily put that sunscreen away, becau..."
 draft: false
 ---
 <!--more-->

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <style>
         :root {
             --mountain-dark: #1a1a2e;
-            --trail-red: #E01E37;
+            --trail-red: #46a606;
             --summit-white: #F5F5F7;
             --rock-gray: #86868B;
             --alpine-blue: #2c5f8d;
@@ -57,14 +58,14 @@
         }
 
         .hero-tagline {
-            color: var(--trail-red);
+            color: var(--summit-white);
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 5px;
-            font-size: 13px;
+            font-size: 16px;
             margin-bottom: 12px;
             display: block;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero-title {
@@ -74,17 +75,17 @@
             color: white;
             line-height: 0.95;
             margin-bottom: 15px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
         }
 
         .hero-subtitle {
             font-size: clamp(18px, 2.5vw, 26px);
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 400;
             max-width: 800px;
             margin: 0 auto 30px;
             line-height: 1.5;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .cta-button {
@@ -170,7 +171,7 @@
         .skill-category:hover {
             border-color: var(--trail-red);
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         .skill-category h3 {
@@ -228,7 +229,7 @@
 
         .peak-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
             border-color: var(--trail-red);
         }
 
@@ -264,12 +265,12 @@
             padding: 30px;
             margin-bottom: 0;
             border-left: 6px solid var(--trail-red);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .expedition-card:hover {
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transform: translateX(5px);
         }
 
@@ -380,8 +381,8 @@
             background: white;
             border-radius: 16px;
             padding: 25px;
-            border-left: 4px solid var(--alpine-blue);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--trail-red);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
 
         .pub-title {
@@ -423,7 +424,7 @@
             padding: 25px 20px;
             border: 2px solid #eee;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
         }
@@ -440,7 +441,7 @@
 
         .award-badge:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
             border-color: var(--trail-red);
         }
 
@@ -544,7 +545,7 @@
             opacity: 0.6;
             font-size: 14px;
             padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .open-to-opportunities {
@@ -592,6 +593,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <section class="hero-section">
@@ -599,13 +601,23 @@
         <div class="hero-content">
             <span class="hero-tagline">Senior Staff Data Scientist @ Google • Mountain / Trail Runner</span>
             <br>
+            <br>
+            <br>
             <h2 class="hero-title">John Tribbia</h2>
             <br>
-            <p class="hero-subtitle">Leading AI evaluation and model quality measurement at Google Workspace AI Platform. 
-                <br> <br> Tackling mountains of data with the same determination I bring to mountain running.</p>
-            
+            <br>
+            <br>
+            <p class="hero-subtitle">Leading AI evaluation and model quality measurement at Google
+                <br>
+                &
+                <br>
+                Tackling mountains of data like I do on the run
+            </p>
+            <br>
+            <br>
+            <br>
             <div>
-                <a href="#experience" class="cta-button">View Experience</a>
+                <a href="#experience" class="cta-button secondary">View Experience</a>
                 <a href="#contact" class="cta-button secondary">Get In Touch</a>
             </div>
         </div>
@@ -616,7 +628,9 @@
         <div class="container">
             <div class="open-to-opportunities">
                 <h3>Open to Leadership Opportunities</h3>
-                <p>Seeking leadership roles where I can leverage my experience leading high-performing teams and driving strategic data initiatives. Particularly interested in positions that combine technical leadership with AI/ML innovation, team development, and cross-functional influence at scale.</p>
+                <p>Seeking leadership roles where I can leverage my experience leading high-performing teams and driving
+                    strategic data initiatives. Particularly interested in positions that combine technical leadership
+                    with AI/ML innovation, team development, and cross-functional influence at scale.</p>
             </div>
         </div>
     </section>
@@ -626,7 +640,7 @@
         <div class="container">
             <h2>Technical Expertise</h2>
             <p class="section-subtitle">Deep technical capabilities across the modern data science stack</p>
-            
+
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>ML & AI</h3>
@@ -638,7 +652,7 @@
                         <span class="skill-tag">Automated Classification</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3>Data Analysis</h3>
                     <div class="skill-tags">
@@ -649,7 +663,7 @@
                         <span class="skill-tag">Data Visualization</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3>Analytics & Statistics</h3>
                     <div class="skill-tags">
@@ -657,11 +671,11 @@
                         <span class="skill-tag">Forecasting</span>
                         <span class="skill-tag">Multi-Touch Attribution</span>
                         <span class="skill-tag">Predictive Analytics</span>
-                         <span class="skill-tag">A/B Testing</span>
+                        <span class="skill-tag">A/B Testing</span>
                         <span class="skill-tag">Causal Inference</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3>Leadership</h3>
                     <div class="skill-tags">
@@ -682,21 +696,27 @@
         <div class="container">
             <h2>Leadership Approach</h2>
             <p class="section-subtitle">Building high-performing teams and scalable data solutions</p>
-            
+
             <div class="peaks-grid">
                 <div class="peak-card">
                     <div class="peak-title">Technical Leadership</div>
-                    <div class="peak-desc">Progressive leadership from IC to Senior Staff at Google, leading diverse teams across Data Science, Analytics Engineering, and BI. Setting quality standards and developing talent through direct mentorship and organizational influence.</div>
+                    <div class="peak-desc">Progressive leadership from IC to Senior Staff at Google, leading diverse
+                        teams across Data Science, Analytics Engineering, and BI. Setting quality standards and
+                        developing talent through direct mentorship and organizational influence.</div>
                 </div>
 
                 <div class="peak-card">
                     <div class="peak-title">Strategic Vision</div>
-                    <div class="peak-desc">Driving end-to-end data science roadmaps that connect offline model evaluation to online product engagement. Establishing measurement frameworks that inform strategic decision-making at scale.</div>
+                    <div class="peak-desc">Driving end-to-end data science roadmaps that connect offline model
+                        evaluation to online product engagement. Establishing measurement frameworks that inform
+                        strategic decision-making at scale.</div>
                 </div>
 
                 <div class="peak-card">
                     <div class="peak-title">Cross-Functional Impact</div>
-                    <div class="peak-desc">Fostering partnerships across engineering, product, research, and operations teams. Translating complex technical concepts into actionable business insights for diverse stakeholders.</div>
+                    <div class="peak-desc">Fostering partnerships across engineering, product, research, and operations
+                        teams. Translating complex technical concepts into actionable business insights for diverse
+                        stakeholders.</div>
                 </div>
             </div>
         </div>
@@ -707,7 +727,7 @@
         <div class="container">
             <h2>Experience</h2>
             <p class="section-subtitle">14+ years driving data-informed decision making at scale</p>
-            
+
             <div class="expedition-section">
                 <!-- Current Role -->
                 <div class="expedition-card">
@@ -721,11 +741,11 @@
                         </div>
                         <div class="exp-elevation">Sep 2025 – Present</div>
                     </div>
-                    <p class="exp-terrain">Leading the definition and execution of response quality measurement and improvement strategy for models across Google Workspace AI Platform. Setting strategic direction for LLM evaluation at scale.</p>
                     <ul class="achievements-trail">
-                        <li>Developed comprehensive framework quantifying model quality impact on user retention, <strong>bridging offline evaluation metrics with online product engagement</strong></li>
-                        <li>Driving cross-functional collaboration across engineering, product, and research teams to establish <strong>quality standards and measurement protocols for AI deployment</strong></li>
-                        <li>Architecting scalable evaluation pipelines for multiple LLM models serving millions of users</li>
+                        <li>Leading definition and execution of <strong>response quality measurement and improvement
+                                strategy</strong> for models across Google Workspace AI Platform</li>
+                        <li>Developed framework to <strong>quantify model quality impact on user retention</strong></li>
+                        <li>Effectively linked <strong>offline evaluations with online product engagement</strong></li>
                     </ul>
                 </div>
 
@@ -742,12 +762,14 @@
                         <div class="exp-elevation">Dec 2020 – Sep 2025</div>
                     </div>
                     <span class="team-size">👥 Team Size: 3-8 (Data Scientists)</span>
-                    <p class="exp-terrain">Progressive leadership journey from Forecasting Manager to Senior Data Science Manager. Led vision and roadmap for end-to-end data science solutions across Google Ads customer support, strategy, and operations.</p>
                     <ul class="achievements-trail">
-                        <li>Built and scaled advanced analytics frameworks for customer support optimization, <strong>reducing resolution time by 28% while improving CSAT scores</strong></li>
-                        <li>Developed and deployed LLM-based solutions for automated text summarization and sentiment analysis of customer interactions at scale</li>
-                        <li>Fostered strategic partnerships across engineering, product, and operations, <strong>influencing product roadmap decisions affecting $200B+ in ad revenue</strong></li>
-                        <li>Mentored and developed high-performing teams, with 4 direct reports promoted to senior roles</li>
+                        <li>Progressive leadership journey: <strong>Forecasting Manager → Data Science Manager → Senior
+                                Data Science Manager</strong></li>
+                        <li>Drove <strong>advanced analytics and data science initiatives</strong> across Google Ads
+                            customer support, strategy, and operations</li>
+                        <li>Fostered strong partnerships with <strong>engineering, strategy, product, and operations
+                                teams</strong></li>
+                        <li>Led vision and roadmap for <strong>end-to-end data science solutions</strong></li>
                     </ul>
                 </div>
 
@@ -764,11 +786,11 @@
                         <div class="exp-elevation">2019 – 2020</div>
                     </div>
                     <span class="team-size">👥 Team Size: 8 (Manager of Managers, Cross-functional)</span>
-                    <p class="exp-terrain">Led cross-functional teams building enterprise-scale multi-touch attribution pipeline and decision-making platform, enabling comprehensive ROI analysis across marketing, sales, and services.</p>
                     <ul class="achievements-trail">
-                        <li>Architected full-stack attribution pipeline spanning Marketing, Sales, BD, and Services, <strong>processing 50M+ touchpoints monthly</strong></li>
-                        <li>Delivered Customer Health & Early Warning Churn Detection System, <strong>identifying at-risk accounts 90 days in advance with 82% accuracy</strong></li>
-                        <li>Enabled data-driven budget reallocation resulting in <strong>15% improvement in customer acquisition cost</strong></li>
+                        <li>Led cross-functional teams to develop and implement <strong>multi-touch attribution pipeline
+                                and decision tool</strong></li>
+                        <li>Directly enabled <strong>data-driven ROI analysis</strong> for marketing and sales
+                            initiatives</li>
                     </ul>
                 </div>
 
@@ -779,16 +801,16 @@
                             <div class="exp-route">
                                 <span>Oracle</span>
                             </div>
-                            <div class="exp-summit">Sr. Marketing Data Scientist</div>
+                            <div class="exp-summit">Sr. Data Scientist</div>
                             <div class="exp-location">Broomfield, Colorado</div>
                         </div>
                         <div class="exp-elevation">2017 – 2019</div>
                     </div>
-                    <p class="exp-terrain">Optimized audience targeting and ad campaign performance through advanced causal impact analysis, measuring true ad uplift beyond simple correlation.</p>
                     <ul class="achievements-trail">
-                        <li>Developed persona-based audience planner using propensity modeling, contributing to <strong>+30% incremental audience revenue ($8M+)</strong></li>
-                        <li>Created automated data workflows and dashboards driving <strong>$500K+ incremental revenue through improved targeting</strong></li>
-                        <li>Conducted rigorous A/B testing and causal inference studies across 100+ campaigns</li>
+                        <li>Optimized <strong>audience targeting and ad campaign performance</strong></li>
+                        <li>Conducted <strong>causal impact analysis</strong> to measure ad uplift</li>
+                        <li>Developed persona-based audience planner contributing to <strong>+30% incremental audience
+                                revenue</strong></li>
                     </ul>
                 </div>
 
@@ -804,10 +826,11 @@
                         </div>
                         <div class="exp-elevation">2016 – 2017</div>
                     </div>
-                    <p class="exp-terrain">Built multi-touch attribution infrastructure from scratch, identifying high-ROI marketing channels through systematic analysis and optimization.</p>
                     <ul class="achievements-trail">
-                        <li>Achieved <strong>60% increase in lead-appointment conversion rate</strong> through attribution modeling and channel optimization</li>
-                        <li>Designed and implemented ETL pipelines integrating 12+ marketing platforms</li>
+                        <li>Developed and implemented <strong>multi-touch attribution database and decision
+                                tool</strong></li>
+                        <li>Achieved <strong>60% increase in lead-appointment conversion rate</strong> through
+                            optimization of high-ROI marketing channels</li>
                     </ul>
                 </div>
 
@@ -824,10 +847,13 @@
                         <div class="exp-elevation">2014 – 2016</div>
                     </div>
                     <span class="team-size">👥 Team Size: 3 (Analysts, Data Scientists, BI)</span>
-                    <p class="exp-terrain">Led cross-functional analytics team shifting marketing strategy from transactional to lifetime value optimization through advanced analytics and predictive modeling.</p>
                     <ul class="achievements-trail">
-                        <li>Spearheaded customer database creation and LTV modeling: <strong>+4% retention, +1.75% order frequency, $2M+ incremental revenue</strong></li>
-                        <li>Developed Analytical Hierarchy Process (AHP) bid optimization enabling long-term value strategies across channels</li>
+                        <li>Led cross-functional team of <strong>analysts, data scientists, and BI</strong> to drive
+                            strategic marketing decisions</li>
+                        <li>Developed <strong>analytical hierarchy process (AHP) bid optimization solutions</strong>
+                        </li>
+                        <li>Enabled teams to shift <strong>pricing and acquisition strategies from transactional to
+                                long-term value</strong></li>
                     </ul>
                 </div>
 
@@ -843,9 +869,11 @@
                         </div>
                         <div class="exp-elevation">2013 – 2014</div>
                     </div>
-                    <p class="exp-terrain">Built precision forecasting models optimizing revenue across channels while maintaining cost efficiency and budget discipline.</p>
                     <ul class="achievements-trail">
-                        <li>Increased sales <strong>+13.5% while keeping cost-as-percentage-of-sales flat</strong> through demand forecasting and channel optimization</li>
+                        <li>Managed <strong>marketing budgets and KPIs</strong> across multiple channels</li>
+                        <li>Built <strong>demand forecasting models</strong> for revenue optimization</li>
+                        <li>Conducted <strong>performance analyses</strong> across sites, channels, and sales formats
+                        </li>
                     </ul>
                 </div>
 
@@ -861,7 +889,10 @@
                         </div>
                         <div class="exp-elevation">2012 – 2013</div>
                     </div>
-                    <p class="exp-terrain">Designed multi-modal surveys and applied advanced statistical modeling for high-profile ski resort and tourism clients.</p>
+                    <ul class="achievements-trail">
+                        <li>Designed <strong>multi-modal surveys</strong> for high-profile ski resort clients</li>
+                        <li>Applied <strong>advanced statistical modeling</strong> to deliver actionable insights</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -871,16 +902,23 @@
     <section class="section compact">
         <div class="container">
             <h2>Education</h2>
-            <p class="section-subtitle">Rigorous quantitative foundation in statistics, mathematics, and social science</p>
-            
+            <p class="section-subtitle">Rigorous quantitative foundation in statistics, mathematics, and social science
+            </p>
+
             <div class="training-grid">
                 <div class="training-card">
                     <div class="training-degree">PhD in Sociology</div>
                     <div class="training-institution">University of Colorado at Boulder</div>
                     <div class="training-focus">
-                        Certificate in Demography, 2012<br><br>
+                        2012<br><br>
+                        <strong>Dissertation:</strong> "What's so local about global climate change? Testing social theories of environmental 
+                        degradation to quantify the demographic, economic, and governmental factors associated with energy consumption 
+                        and carbon dioxide emissions in US metropolitan areas and counties"<br><br>
+                        <strong>Certificate in Demography</strong><br><br>
                         <strong>Focus:</strong> Social Statistics • Demography • Climate & Population Studies<br><br>
-                        <strong>Research:</strong> Collaborated with Nobel Peace Prize-winning scientists at NCAR (2006-2011). Published 15 peer-reviewed articles with 800+ citations on population and climate change dynamics.
+                        <strong>Research:</strong> Collaborated with Nobel Peace Prize-winning scientists at NCAR
+                        (2006-2011). Published 15 peer-reviewed articles with 800+ citations on population and climate
+                        change dynamics.
                     </div>
                 </div>
 
@@ -890,7 +928,8 @@
                     <div class="training-focus">
                         2004<br><br>
                         <strong>Focus:</strong> Statistics • Geometry • Environmental Studies (minor)<br><br>
-                        Foundation in quantitative reasoning and analytical problem-solving that bridges data science and systems thinking.
+                        Foundation in quantitative reasoning and analytical problem-solving that bridges data science
+                        and systems thinking.
                     </div>
                 </div>
             </div>
@@ -902,69 +941,85 @@
         <div class="container">
             <h2>Beyond the Data</h2>
             <p class="section-subtitle">Building community, mentoring future leaders, and pursuing excellence</p>
-            
+
             <div class="awards-grid">
                 <div class="award-badge">
                     <div class="award-title">2024 Google-Boulder Site Citizenship Award</div>
-                    <div class="award-desc">Recognized for exceptional contributions to the Boulder community and Google's local presence through partnership development and community engagement</div>
+                    <div class="award-desc">Recognized for exceptional contributions to the Boulder community and
+                        Google's local presence through partnership development and community engagement</div>
                 </div>
-                
+
                 <div class="award-badge">
                     <div class="award-title">Business Leader in Residence</div>
-                    <div class="award-desc">Leading Google-Boulder's partnership with CU-Boulder Leeds School of Business, mentoring MBA students and investing in the next generation of business leaders</div>
+                    <div class="award-desc">Leading Google-Boulder's partnership with CU-Boulder Leeds School of
+                        Business, mentoring MBA students and investing in the next generation of business leaders</div>
                 </div>
-                
+
                 <div class="award-badge">
                     <div class="award-title">Former Sponsored Athlete</div>
-                    <div class="award-desc">La Sportiva • Pearl Izumi • Salomon - Multiple podium finishes on the global mountain/trail running stage</div>
+                    <div class="award-desc">La Sportiva • Pearl Izumi • Salomon - Multiple podium finishes on the global
+                        mountain/trail running stage</div>
                 </div>
-                
+
                 <div class="award-badge">
-                    <div class="award-title">Boulder Gear Lab Founder</div>
-                    <div class="award-desc">200+ lifetime gear reviews • Road Trail Run contributor • 100K+ miles tested in the Colorado Rockies</div>
+                    <div class="award-title">Running Shoe Tester</a></div>
+                    <div class="award-desc"><a href="https://bouldergearlab.com">Boulder Gear Lab</a> • 200+ lifetime
+                        gear reviews • <a href="https://roadtrailrun.com">Road Trail Run</a> contributor • 100K+ miles
+                        tested in the Colorado Rockies</div>
                 </div>
-                
+
                 <div class="award-badge">
                     <div class="award-title">Eagle Scout</div>
-                    <div class="award-desc">Boy Scouts of America, 1999 - Early foundation in leadership and service</div>
+                    <div class="award-desc">Boy Scouts of America, 1999 - Early foundation in leadership and service
+                    </div>
                 </div>
-                
+
                 <div class="award-badge">
                     <div class="award-title">NOLS Graduate</div>
-                    <div class="award-desc">National Outdoor Leadership School, 2005 - Wilderness leadership and risk management training</div>
+                    <div class="award-desc">National Outdoor Leadership School, 2005 - Wilderness leadership and risk
+                        management training</div>
                 </div>
             </div>
         </div>
     </section>
-     <!-- Publications Section -->
+    <!-- Publications Section -->
     <section class="section compact">
         <div class="container">
             <h2>Select Publications</h2>
-            <p class="section-subtitle">Graduate school research at the intersection of climate science, demography, and social statistics</p>
-            
+            <p class="section-subtitle">Graduate school research at the intersection of climate science, demography, and
+                social statistics</p>
+
             <div class="publications-grid">
                 <div class="publication-card">
-                    <div class="pub-title">More than information: what coastal managers need to plan for climate change</div>
+                    <div class="pub-title">More than information: what coastal managers need to plan for climate change
+                    </div>
                     <div class="pub-meta">Environmental Science & Policy • 2008 • Co-Author with SC Moser</div>
                 </div>
-                
+
                 <div class="publication-card">
-                    <div class="pub-title">Vulnerability to inundation and climate change impacts in California: coastal managers' attitudes and perceptions</div>
+                    <div class="pub-title">Vulnerability to inundation and climate change impacts in California: coastal
+                        managers' attitudes and perceptions</div>
                     <div class="pub-meta">Marine Technology Society Journal • 2006 • Co-Author with SC Moser</div>
                 </div>
-                
+
                 <div class="publication-card">
-                    <div class="pub-title">Testing theories to explore the drivers of cities' atmospheric emissions</div>
-                    <div class="pub-meta">AMBIO: A Journal of the Human Environment • 2009 • Co-Author with PR Lankao, D Nychka</div>
+                    <div class="pub-title">Testing theories to explore the drivers of cities' atmospheric emissions
+                    </div>
+                    <div class="pub-meta">AMBIO: A Journal of the Human Environment • 2009 • Co-Author with PR Lankao, D
+                        Nychka</div>
                 </div>
-                
+
                 <div class="publication-card">
-                    <div class="pub-title">Development and greenhouse gas emissions deviate from the 'modernization' theory and 'convergence' hypothesis</div>
+                    <div class="pub-title">Development and greenhouse gas emissions deviate from the 'modernization'
+                        theory and 'convergence' hypothesis</div>
                     <div class="pub-meta">Climate Research • 2008 • Co-Author with PR Lankao, D Nychka</div>
                 </div>
                 <div class="publication-card">
-                    <div class="pub-title">Stuck in the slow lane of behavior change? A not-so-superhuman perspective on getting out of our cars</div>
-                    <div class="pub-meta">In S. C. Moser & L. Dilling (Eds.), Creating a climate for change: Communicating climate change and facilitating social change (pp. 237–250). Cambridge University Press.</div>
+                    <div class="pub-title">Stuck in the slow lane of behavior change? A not-so-superhuman perspective on
+                        getting out of our cars</div>
+                    <div class="pub-meta">In S. C. Moser & L. Dilling (Eds.), Creating a climate for change:
+                        Communicating climate change and facilitating social change (pp. 237–250). Cambridge University
+                        Press.</div>
                 </div>
             </div>
         </div>
@@ -973,7 +1028,8 @@
     <section class="summit-footer" id="contact">
         <h2>Let's Connect</h2>
         <p class="summit-tagline">
-            Interested in discussing AI evaluation, data science leadership, building high-performing teams, or trail running? I'd love to hear from you.
+            Interested in discussing AI evaluation, data science leadership, building high-performing teams, or trail
+            running? I'd love to hear from you.
         </p>
         <div class="contact-links">
             <a href="https://linkedin.com/in/jtribbia" class="contact-button" target="_blank">LinkedIn</a>
@@ -1023,21 +1079,21 @@
                 for (let i = 1; i < this.peaks.length; i++) {
                     const peak = this.peaks[i];
                     const prevPeak = this.peaks[i - 1];
-                    
+
                     const x = canvas.width * peak.x;
                     const y = canvas.height - (canvas.height * peak.height);
                     const prevX = canvas.width * prevPeak.x;
                     const prevY = canvas.height - (canvas.height * prevPeak.height);
-                    
+
                     // Calculate control points for smoother curves
                     const midX = (prevX + x) / 2;
                     const tension = 0.3;
-                    
+
                     const cp1X = prevX + (midX - prevX) * (1 - tension);
                     const cp1Y = prevY;
                     const cp2X = x - (x - midX) * (1 - tension);
                     const cp2Y = y;
-                    
+
                     ctx.bezierCurveTo(cp1X, cp1Y, cp2X, cp2Y, x, y);
                 }
 
@@ -1046,7 +1102,7 @@
                 const lastX = canvas.width * lastPeak.x;
                 const lastY = canvas.height - (canvas.height * lastPeak.height);
                 ctx.quadraticCurveTo(lastX + (canvas.width - lastX) * 0.5, lastY, canvas.width, canvas.height);
-                
+
                 ctx.closePath();
 
                 const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
@@ -1065,7 +1121,7 @@
         const particles = [];
         const words = ['LLM Development & Evaluation', 'Model Quality Metrics', 'Text Summarization', 'Sentiment Analysis', 'Automated Classification', 'SQL', 'Python', 'R', 'ETL Pipelines', 'Data Visualization', 'Statistical Modeling', 'Forecasting', 'Multi-Touch Attribution', 'Predictive Analytics', 'A/B Testing', 'Causal Inference', 'Technical Strategy', 'Team Building', 'Cross-functional Collaboration', 'Stakeholder Management', 'Mentorship', 'Quality Standards'];
 
-        for(let i = 0; i < 25; i++) {
+        for (let i = 0; i < 25; i++) {
             particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
@@ -1080,23 +1136,23 @@
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
+
             mountain.draw();
 
             particles.forEach(p => {
                 ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
                 ctx.font = '900 14px Inter';
                 ctx.fillText(p.text, p.x, p.y);
-                
+
                 p.y -= p.speed;
                 p.x += p.drift * 0.1;
-                
-                if(p.y < -20) {
+
+                if (p.y < -20) {
                     p.y = canvas.height + 20;
                     p.x = Math.random() * canvas.width;
                 }
-                
-                if(p.x < -50 || p.x > canvas.width + 50) {
+
+                if (p.x < -50 || p.x > canvas.width + 50) {
                     p.x = Math.random() * canvas.width;
                 }
             });
@@ -1111,11 +1167,12 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if(target) {
+                if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
     </script>
 </body>
+
 </html>

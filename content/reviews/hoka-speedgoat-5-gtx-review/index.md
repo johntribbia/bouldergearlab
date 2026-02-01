@@ -4,7 +4,7 @@ date: 2023-01-01
 banner: "image_1.jpg"
 tags: ["running", "shoes"]
 categories: ["reviews"]
-description: ""
+description: "Midsole is dense and harsh in cold temperatures: John"
 draft: false
 ---
 <!--more-->

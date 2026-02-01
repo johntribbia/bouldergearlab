@@ -4,11 +4,10 @@ date: 2025-03-04
 banner: "image_0.jpg"
 tags: ["running", "winter"]
 categories: ["reviews"]
-description: ""
+description: "Are you a multi-sport athlete who lives in or visits a cold winter climate where running or cycling outside in snow or ice isn’t always the safest or seeming..."
 draft: false
 ---
 <!--more-->
-
 
 Are you a multi-sport athlete who lives in or visits a cold winter
 climate where running or cycling outside in snow or ice isn’t always the

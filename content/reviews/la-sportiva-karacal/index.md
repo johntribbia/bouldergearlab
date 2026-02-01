@@ -4,7 +4,7 @@ date: 2020-12-14
 banner: "image_12.jpg"
 tags: ["running", "shoes"]
 categories: ["reviews"]
-description: ""
+description: "John: In a recent interview with Jonathan Wyatt (multi-time World Mountain Running champion and La Sportiva Running Product Specialist) he suggested that las..."
 draft: false
 ---
 <!--more-->

@@ -4,7 +4,7 @@ date: 2024-06-23
 banner: "image_1.png"
 tags: ["running", "home fitness"]
 categories: ["reviews"]
-description: ""
+description: "As a longtime trail runner, I love the feeling of being outdoors - the fresh air, and the challenge of running on uneven terrain. But lately, my work and fam..."
 draft: false
 ---
 <!--more-->

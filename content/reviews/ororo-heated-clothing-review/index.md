@@ -4,7 +4,7 @@ date: 2025-01-01
 banner: "image_0.jpg"
 tags: ["running", "apparel"]
 categories: ["reviews"]
-description: ""
+description: "Is it possible that heated clothing can make bike riding in the winter more comfortable? Earlier in January I saw my coworker wearing a heated jacket and I w..."
 draft: false
 ---
 <!--more-->

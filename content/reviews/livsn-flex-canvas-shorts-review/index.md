@@ -4,7 +4,7 @@ date: 2024-07-01
 banner: "image_0.jpg"
 tags: ["running", "apparel"]
 categories: ["reviews"]
-description: ""
+description: "LIVSN is a clothing brand founded in 2017 by two friends, David and Anders. The name comes from the Swedish word 'livsnjutare,' meaning 'one who enjoys life.'"
 draft: false
 ---
 <!--more-->

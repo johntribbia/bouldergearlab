@@ -4,7 +4,7 @@ date: 2025-07-01
 banner: "image_1.jpg"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
-description: ""
+description: "It was a trusty 1997 Subaru Legacy Wagon, approaching 222K miles on the odometer. Prior to the accident, my mechanic told me the car had another 30K miles of..."
 draft: false
 ---
 <!--more-->

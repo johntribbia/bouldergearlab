@@ -4,7 +4,7 @@ date: 2024-05-11
 banner: "image_1.png"
 tags: ["running", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "In the realm of outdoor eyewear, the Eastern Outer Bamboo Floating Sunglasses with Pink Lenses stand out as a unique and compelling option. Crafted from sust..."
 draft: false
 ---
 <!--more-->

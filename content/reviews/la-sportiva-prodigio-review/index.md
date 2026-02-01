@@ -4,7 +4,7 @@ date: 2023-12-11
 banner: "image_0.png"
 tags: ["running", "shoes"]
 categories: ["reviews"]
-description: ""
+description: "Original review was posted on www.roadtrailrun.com HERE"
 draft: false
 ---
 <!--more-->

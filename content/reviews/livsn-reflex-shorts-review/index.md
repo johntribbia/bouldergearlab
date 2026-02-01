@@ -4,11 +4,10 @@ date: 2024-07-01
 banner: "image_1.jpg"
 tags: ["running", "apparel"]
 categories: ["reviews"]
-description: ""
+description: "The LIVSN Reflex Shorts ($79) are the perfect shorts for anyone who wants to look good, feel good, and be the life of the party while they're out exploring t..."
 draft: false
 ---
 <!--more-->
-
 
 ![image_1.jpg](image_1.jpg)
 

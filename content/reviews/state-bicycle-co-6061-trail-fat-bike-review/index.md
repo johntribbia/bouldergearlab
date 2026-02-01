@@ -4,7 +4,7 @@ date: 2025-02-01
 banner: "image_1.jpg"
 tags: ['cycling', 'fat bike']
 categories: ['reviews']
-description: ""
+description: "Living near Boulder, Colorado means I'm practically tripping over amazing trails every time I step outside. Naturally, fat biking during the shoulder and sno..."
 draft: false
 ---
 <!--more-->

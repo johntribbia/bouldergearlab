@@ -2,9 +2,9 @@
 title: "How To Adopt The Cargo Bike Lifestyle Part I"
 date: 2025-08-01
 banner: "image_3.jpg"
-tags: ["running", "shoes"]
+tags: ["cycling", "ebikes"]
 categories: ["reviews"]
-description: ""
+description: "During my graduate school days while living in Boulder, Colorado (my hometown), I studied the social, economic, and psychological determinants of environment..."
 draft: false
 ---
 <!--more-->

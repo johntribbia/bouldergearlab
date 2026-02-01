@@ -4,7 +4,7 @@ date: 2025-01-01
 banner: "image_0.jpg"
 tags: ["running", "shoes"]
 categories: ["reviews"]
-description: ""
+description: "Mike P: I really wanted to like the first version of the Catamount. I even tried it out several times in some pre-race testing, but ultimately never felt com..."
 draft: false
 ---
 <!--more-->

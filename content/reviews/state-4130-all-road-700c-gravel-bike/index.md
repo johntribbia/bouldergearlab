@@ -4,7 +4,7 @@ date: 2025-03-24
 banner: "image_1.png"
 tags: ["cycling"]
 categories: ["reviews"]
-description: ""
+description: "State Bicycle 4130 All-Road 700c Gravel Bike ($899)"
 draft: false
 ---
 <!--more-->

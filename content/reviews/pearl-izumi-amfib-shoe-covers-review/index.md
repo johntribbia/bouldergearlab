@@ -4,7 +4,7 @@ date: 2025-01-17
 banner: "image_10.jpg"
 tags: ["cycling", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "Here in the Front Range of Colorado, April weather really just means that <s>second</s> <s>third</s> fourth winter is coming, and that means cold weather cyc..."
 draft: false
 ---
 <!--more-->

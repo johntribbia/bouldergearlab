@@ -4,11 +4,10 @@ date: 2025-06-01
 banner: "image_2.jpg"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
-description: ""
+description: "One important responsibility as a current or future e-bike rider is to know and obey traffic laws where you are riding. In most places, bikes are required to..."
 draft: false
 ---
 <!--more-->
-
 
 ![image_2.jpg](image_2.jpg)
 

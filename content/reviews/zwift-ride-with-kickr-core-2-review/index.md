@@ -4,7 +4,7 @@ date: 2026-01-13
 banner: "image_1.jpg"
 tags: ['cycling', 'cross training']
 categories: ['reviews']
-description: ""
+description: "I’ve been on a journey this year to diversify my training options, given the need to minimize all of the pounding my legs have endured in the past 20 years. ..."
 draft: false
 ---
 <!--more-->
@@ -32,10 +32,10 @@ I'll be honest - I didn't expect to like this as much as I do. But after a coupl
 The Zwift Ride is essentially a purpose-built frame bike paired with Wahoo’s proven KICKR Core 2 smart trainer. Zwift says the setup “combines the immersive experience of a smart bike with the flexibility and value of a smart trainer.” It’s designed for people who want a dedicated indoor cycling setup without the hassle of constantly mounting and unmounting an outdoor bike. This is certainly the appeal for me, especially given its relatively compact size.
 
 The package included:
-* The Zwift Ride frame (non-motorized bike with adjustable fit)
-* Wahoo KICKR Core 2 trainer (the actual resistance unit)
-* Zwift Click (wireless shift controller)
-* Zwift Play controllers (handlebar-mounted game controllers)
+- The Zwift Ride frame (non-motorized bike with adjustable fit)
+- Wahoo KICKR Core 2 trainer (the actual resistance unit)
+- Zwift Click (wireless shift controller)
+- Zwift Play controllers (handlebar-mounted game controllers)
 
 ![image_3.jpg](image_3.jpg)
 
@@ -44,18 +44,18 @@ It’s a nice concept, and for runners looking for serious cross-training that d
 
 ### Pros:
 
-* Smooth, quiet, realistic ride feel
-* Seamless Zwift integration and gamification makes time pass
-* Quality construction, stable during hard efforts
-* Thoughtful details (water bottle holders, cable management)
-* Reasonable price for what you get
+- Smooth, quiet, realistic ride feel
+- Seamless Zwift integration and gamification makes time pass
+- Quality construction, stable during hard efforts
+- Thoughtful details (water bottle holders, cable management)
+- Reasonable price for what you get
 
 ### Cons:
 
-* Limited fit adjustability for shorter/taller riders
-* Heavy (though stable)
-* Requires Zwift membership ($199.99/yr) for full functionality
-* Still indoor training (not a replacement for getting outside)
+- Limited fit adjustability for shorter/taller riders
+- Heavy (though stable)
+- Requires Zwift membership ($199.99/yr) for full functionality
+- Still indoor training (not a replacement for getting outside)
 
 ## Unboxing and Set Up
 
@@ -136,9 +136,6 @@ Nothing (skipping workouts when hurt): $0 but fitness lost
 The Zwift Ride with KICKR Core 2 offers a high-quality indoor cycling experience that, while not replacing outdoor running, proves to be a genuinely valuable tool for runners. It excels as a cross-training option, making it a solid investment for maintaining and even building fitness, especially during injury recovery or demanding training cycles when the body needs a break from the high-impact.
 The cycling setup’s low-impact nature is perfect for active recovery days when legs are too fatigued for another run. With variable resistance, the user can precisely control the intensity, transitioning from easy, restorative spins to challenging efforts. I love that the engaging platform of Zwift transforms indoor cross-training from a chore to an activity I can actually commit to.
 While I’m dedicated to getting outside as much as possible, the Zwift Ride with KICKR Core has become a great alternative for days when I need a break.
-
-### 
-
 
 ### Who should buy it:
 

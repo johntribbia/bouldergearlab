@@ -4,7 +4,7 @@ date: 2015-06-01
 banner: "image_0.png"
 tags: ["running", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "The day my Thule Chariot CX1 jogging stroller was delivered to the door, the first thought that came to my head was “freedom.” No, not the kind of freedom yo..."
 draft: false
 ---
 <!--more-->

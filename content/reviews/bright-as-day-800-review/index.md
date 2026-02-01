@@ -4,7 +4,7 @@ date: 2025-10-31
 banner: "image_1.jpg"
 tags: ['running', 'accessories']
 categories: ['reviews']
-description: ""
+description: "248 grams/8.7 oz (Head unit 55g/1.9 oz, Battery pack 100g/3.5 oz, Headband/cable 93g/3.3 oz) 800 Max Lumens The Bright as Day 800 is available directly from ..."
 draft: false
 ---
 <!--more-->
@@ -105,8 +105,6 @@ I haven’t tested cold weather performance, but I like the added extension cord
 
 ### Summary
 
-
-### 
 
 After a few weeks of daily pre-dawn use, the Moonlight Mountain Gear Bright as Day 800 has become indispensable to my routine. This isn't a light for casual users or gram-counting runners. Zach Miller used it in Hardrock 100 this year, so that’s a sure tell sign it's engineered for people who depend on their headlamp day in, day out, in conditions that would make other lights underperform.
 

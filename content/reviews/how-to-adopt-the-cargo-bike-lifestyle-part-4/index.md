@@ -4,7 +4,7 @@ date: 2025-05-01
 banner: "image_1.jpg"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
-description: ""
+description: "Unlike in life where you “never know what you’re gonna get”, test riding e-bikes is like a box of chocolates that you get to bite, break open, or poke your f..."
 draft: false
 ---
 <!--more-->

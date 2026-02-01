@@ -4,7 +4,7 @@ date: 2022-09-15
 banner: "image_0.png"
 tags: ["cycling"]
 categories: ["reviews"]
-description: ""
+description: "Spoiler alert: I’m a runner. But I started my endurance addiction on my mountain bike exploring my hometown in high school. While finding success domesticall..."
 draft: false
 ---
 <!--more-->

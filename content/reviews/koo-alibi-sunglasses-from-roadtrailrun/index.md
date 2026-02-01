@@ -4,7 +4,7 @@ date: 2024-03-01
 banner: "image_0.png"
 tags: ["running", "accessories"]
 categories: ["reviews"]
-description: ""
+description: "Like many runners, I’m on a relentless pursuit of the ideal sunglasses: a featherweight design, an unobstructed view of the path, and adequate protection fro..."
 draft: false
 ---
 <!--more-->

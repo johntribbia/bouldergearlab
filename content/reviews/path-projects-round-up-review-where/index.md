@@ -4,7 +4,7 @@ date: 2024-01-28
 banner: "image_1.png"
 tags: ["running", "apparel"]
 categories: ["reviews"]
-description: ""
+description: "When it comes to hitting the trails or pounding the pavement, you need gear that can keep up with your active lifestyle. But what if you want clothing that c..."
 draft: false
 ---
 <!--more-->

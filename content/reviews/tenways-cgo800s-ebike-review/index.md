@@ -4,7 +4,7 @@ date: 2022-10-24
 banner: "image_0.png"
 tags: ["cycling", "ebikes"]
 categories: ["reviews"]
-description: ""
+description: "TENWAYS Bicycles is headquartered in the Netherlands, which is basically the cycling capital of the world where bikes are a cultural symbol for the Dutch. Th..."
 draft: false
 ---
 <!--more-->
