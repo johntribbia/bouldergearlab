@@ -167,10 +167,14 @@
         }
 
         /* Content Sections */
+        .section {
+            padding: 10px 0;
+        }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 0 20px;
         }
 
         h2 {
@@ -290,6 +294,16 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .company-logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            border-radius: 4px;
         }
 
         .exp-summit {
@@ -341,21 +355,7 @@
             font-size: 20px;
         }
 
-        /* Basecamp Awards */
-        .basecamp-section {
-            background: var(--mountain-dark);
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .basecamp-section h2 {
-            color: white;
-            margin-bottom: 25px;
-        }
-
-        .basecamp-section h2::before {
-            color: var(--trail-red);
-        }
+        /* Basecamp Awards - uses standard .section */
 
         .awards-grid {
             display: grid;
@@ -366,22 +366,36 @@
         }
 
         .award-badge {
-            background: linear-gradient(135deg, var(--trail-red) 0%, #c41630 100%);
-            color: white;
+            background: white;
             border-radius: 20px;
             padding: 25px 20px;
+            border: 2px solid #eee;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 20px rgba(224, 30, 55, 0.2);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-badge::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
         }
 
         .award-badge:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(224, 30, 55, 0.35);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border-color: var(--trail-red);
         }
 
         .award-icon {
             font-size: 56px;
             margin-bottom: 12px;
+            opacity: 0.8;
         }
 
         .award-title {
@@ -389,19 +403,17 @@
             font-size: 18px;
             margin-bottom: 8px;
             line-height: 1.4;
+            color: var(--trail-red);
         }
 
         .award-desc {
             font-size: 14px;
             opacity: 0.95;
             line-height: 1.5;
+            color: #333;
         }
 
-        /* Training Ground (Education) */
-        .training-section {
-            padding: 15px 20px 30px 20px;
-            margin-top: -15px;
-        }
+        /* Training Ground (Education) - uses standard .section */
 
         .training-grid {
             display: grid;
@@ -518,9 +530,10 @@
     <section class="hero-section">
         <canvas id="mountainCanvas"></canvas>
         <div class="hero-content">
-            <span class="hero-tagline">Data Science Leader • Former Sponsored Athlete</span>
-            <h1 class="hero-title">John Tribbia</h1>
-            <p class="hero-subtitle">Tackling mountains of data with the same unrelenting determination I bring to mountain running. Leading AI innovation at Google.</p>
+            <span class="hero-tagline">Data Science Leader • Mountain / Trail Runner</span>
+            <h2 class="hero-title">John Tribbia</h2>
+            <p class="hero-subtitle">Tackling mountains of data with the same unrelenting determination I bring to running up a mountain. 
+                <br><br>Currently leading AI quality & innovation at Google.</p>
             
             <div class="hero-stats">
                 <div class="hero-stat">
@@ -543,16 +556,13 @@
         </div>
     </section>
 
-    <div class="trail-marker">
-        <h3>Two Worlds, One Trail</h3>
-        <p>By day, leading data science and AI evaluation at Google. By dawn, running the trails and ascending Boulder's peaks.</p>
-    </div>
-
-    <div class="container">
-        <h2 id="experience">Peak Performance Areas</h2>
-        <p class="section-subtitle">"The 'why' behind performance — whether in models or on mountains"</p>
-        
-        <div class="peaks-grid">
+    <!-- Expertise Section -->
+    <section class="section">
+        <div class="container">
+            <h2 id="experience">Expertise</h2>
+            <p class="section-subtitle">Specialized in technical leadership, advanced analytics, and building data infrastructure that drives business decisions.</p>
+            
+            <div class="peaks-grid">
             <div class="peak-card">
                 <div class="peak-title">Technical Leadership</div>
                 <div class="peak-desc">Leading diverse technical teams (Data Science, Analytics Engineering, BI), setting quality standards, and developing talent through direct and indirect influence. Progressive leadership from IC to Senior Leader at Google.</div>
@@ -568,16 +578,23 @@
                 <div class="peak-desc">SQL, R, Python (pandas), ETL / Data Modeling, Data Visualization. Building scalable pipelines that transform raw data into actionable insights, tested under real-world pressure.</div>
             </div>
         </div>
+    </section>
 
-        <h2>Career Ascent</h2>
-        <p class="section-subtitle">"Every ascent measured in impact, every summit earned through rigor"</p>
-        
-        <div class="expedition-section">
+    <!-- Experience Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <p class="section-subtitle">Progressive growth from analyst to senior technical leadership, driving data-informed decision making at scale.</p>
+            
+            <div class="expedition-section">
             <!-- Current Role -->
             <div class="expedition-card">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-route">Google | Workspace AI</div>
+                        <div class="exp-route">
+                            <img src="/img/logos/google.png" alt="Google" class="company-logo">
+                            <span>Google | Workspace AI</span>
+                        </div>
                         <div class="exp-summit">Senior Staff Data Scientist<br>(Tech Lead IC)</div>
                         <div class="exp-location">Boulder, Colorado</div>
                     </div>
@@ -595,7 +612,10 @@
             <div class="expedition-card">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-route">Google | Ads Operations</div>
+                        <div class="exp-route">
+                            <img src="/img/logos/google.png" alt="Google" class="company-logo">
+                            <span>Google | Ads Operations</span>
+                        </div>
                         <div class="exp-summit">Senior Manager, Data Science</div>
                         <div class="exp-location">Boulder, Colorado</div>
                     </div>
@@ -608,12 +628,14 @@
                     <li>Developed and mentored high-performing teams of data scientists and analytics engineers</li>
                 </ul>
             </div>
-
             <!-- Infor -->
             <div class="expedition-card">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-route">Infor</div>
+                        <div class="exp-route">
+                            <img src="/img/logos/infor.png" alt="Infor" class="company-logo">
+                            <span>Infor</span>
+                        </div>
                         <div class="exp-summit">Head of Marketing & Ops Analytics</div>
                         <div class="exp-location">Boulder, Colorado (Remote)</div>
                     </div>
@@ -630,7 +652,10 @@
             <div class="expedition-card">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-route">Oracle</div>
+                        <div class="exp-route">
+                            <img src="/img/logos/oracle.png" alt="Oracle" class="company-logo">
+                            <span>Oracle</span>
+                        </div>
                         <div class="exp-summit">Sr. Marketing Data Scientist</div>
                         <div class="exp-location">Broomfield, Colorado</div>
                     </div>
@@ -647,7 +672,10 @@
             <div class="expedition-card">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-route">InsideSales.com</div>
+                        <div class="exp-route">
+                            <img src="/img/logos/insidesales.png" alt="InsideSales.com" class="company-logo">
+                            <span>InsideSales.com</span>
+                        </div>
                         <div class="exp-summit">Sr. Marketing Data Scientist</div>
                         <div class="exp-location">Salt Lake City, Utah</div>
                     </div>
@@ -663,7 +691,10 @@
             <div class="expedition-card">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-route">Backcountry</div>
+                        <div class="exp-route">
+                            <img src="/img/logos/backcountry.jpg" alt="Backcountry" class="company-logo">
+                            <span>Backcountry</span>
+                        </div>
                         <div class="exp-summit">Manager, Marketing Analytics</div>
                         <div class="exp-location">Park City, Utah</div>
                     </div>
@@ -680,7 +711,10 @@
             <div class="expedition-card">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-route">Backcountry</div>
+                        <div class="exp-route">
+                            <img src="/img/logos/backcountry.jpg" alt="Backcountry" class="company-logo">
+                            <span>Backcountry</span>
+                        </div>
                         <div class="exp-summit">Marketing Business Analyst</div>
                         <div class="exp-location">Park City, Utah</div>
                     </div>
@@ -696,7 +730,10 @@
             <div class="expedition-card">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-route">RRC Associates</div>
+                        <div class="exp-route">
+                            <img src="https://www.rrcassociates.com/wp-content/uploads/2025/02/RRC-Logo-NoAssoc-Horizontal.png" alt="RRC Associates" class="company-logo">
+                            <span>RRC Associates</span>
+                        </div>
                         <div class="exp-summit">Senior Data Analyst</div>
                         <div class="exp-location">Boulder, Colorado</div>
                     </div>
@@ -705,26 +742,29 @@
                 <p class="exp-terrain">Designed multi-modal surveys and applied advanced statistical modeling for high-profile ski resort clients.</p>
             </div>
         </div>
-    </div>
-
-    <section class="personal-achievements-section">
+    </section>
+    
+    <!-- Personal Achievements Section -->
+    <section class="section">
+        <div class="container">
         <h2>Personal Achievements</h2>
+        <p class="section-subtitle">&nbsp;</p>
         <div class="awards-grid">
             <div class="award-badge">
                 <div class="award-title">2024 Google-Boulder Site Citizenship Award</div>
                 <div class="award-desc">Recognized for exceptional contributions to the Boulder community and Google's local presence</div>
             </div>
             <div class="award-badge">
-                <div class="award-title">CU-Boulder Partnership Lead</div>
-                <div class="award-desc">Leading Google-Boulder's partnership with CU-Boulder Leeds School of Business</div>
+                <div class="award-title">Research</div>
+                <div class="award-desc"> Collaborated with Nobel Peace Prize-winning scientists at NCAR (2006-2011). Authored 15 journal articles with 800+ citations on climate change and social science research</div>
             </div>
             <div class="award-badge">
                 <div class="award-title">Former Sponsored Athlete</div>
                 <div class="award-desc">La Sportiva • Pearl Izumi • Salomon - Multiple podium finishes on the global stage</div>
             </div>
             <div class="award-badge">
-                <div class="award-title">Boulder Gear Lab Founder</div>
-                <div class="award-desc">200+ independent gear reviews • Road Trail Run contributor • 100K+ miles tested</div>
+                <div class="award-title"><a href="https://www.colorado.edu/business/news/2025/09/22/business-leader-residence-program" target="_blank">Business Leader in Residence</a></div>
+                <div class="award-desc">Investing in the next generation of business leaders with CU-Leeds School of Business</div>
             </div>
             <div class="award-badge">
                 <div class="award-title">Eagle Scout</div>
@@ -737,10 +777,11 @@
         </div>
     </section>
 
-    <section class="training-section">
+    <!-- Training Ground Section -->
+    <section class="section">
         <div class="container">
             <h2>Training Ground</h2>
-            <p class="section-subtitle">"Building the foundation for rigorous problem-solving"</p>
+            <p class="section-subtitle">Building the foundation for rigorous problem-solving</p>
             
             <div class="training-grid">
                 <div class="training-card">
@@ -749,7 +790,6 @@
                     <div class="training-focus">
                         Certificate in Demography, 2012<br><br>
                         <strong>Focus:</strong> Social Statistics • Demography • Climate & Population Studies<br><br>
-                        <strong>Research:</strong> Collaborated with Nobel Peace Prize-winning scientists at NCAR (2006-2011). Authored 15 journal articles with 580+ citations on climate change and sociological research.
                     </div>
                 </div>
 
@@ -759,7 +799,6 @@
                     <div class="training-focus">
                         2004<br><br>
                         <strong>Focus:</strong> Statistics • Geometry • Environmental Studies (minor)<br><br>
-                        Foundation in quantitative reasoning and analytical problem-solving that bridges data science and outdoor pursuits.
                     </div>
                 </div>
             </div>
@@ -772,7 +811,7 @@
             Interested in discussing AI evaluation, data science leadership, or trail running? Let's connect.
         </p>
         <div class="contact-links">
-            <a href="https://linkedin.com/in/jtribbia" class="contact-button" target="_blank">LinkedIn</a>
+            <a href="https://linkedin.com/in/jtribbia" class="contact-button" target="_blank">Connect With Me</a>
         </div>
         <p class="footer-note">
             Boulder, Colorado • PhD • Data Science • Endless Determination
