@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Tribbia - Data Science Leader</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-    <style>
+    <!-- Updated Typography -->
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">    <style>
         :root {
             --mountain-dark: #1a1a2e;
             --trail-red: #46a606;
@@ -14,6 +15,8 @@
             --rock-gray: #86868B;
             --alpine-blue: #2c5f8d;
             --forest-green: #2d5016;
+            --font-display: 'Archivo', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
         }
 
         * {
@@ -23,22 +26,35 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            font-family: var(--font-body);
             background-color: var(--summit-white);
             color: #1D1D1F;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="rgba(70,166,6,0.3)" stroke="%2346a606" stroke-width="2"/></svg>') 10 10, auto;
+        }
+
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s ease;
         }
 
         /* Hero Section - Mountain Landscape */
         .hero-section {
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            padding: 60px 0;
         }
 
         #mountainCanvas {
@@ -73,9 +89,10 @@
         }
 
         .hero-title {
+            font-family: var(--font-display);
             font-size: clamp(40px, 10vw, 90px);
-            font-weight: 900;
-            letter-spacing: -0.04em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
             color: white;
             line-height: 0.95;
             margin-bottom: 15px;
@@ -92,6 +109,43 @@
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--trail-red);
+            font-variant-numeric: tabular-nums;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 8px;
+        }
+
         .cta-button {
             display: inline-block;
             padding: 18px 40px;
@@ -104,6 +158,7 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 10px 30px rgba(224, 30, 55, 0.3);
             margin: 0 10px;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
         }
 
         .cta-button:hover {
@@ -133,11 +188,30 @@
 
         /* Content Sections */
         .section {
-            padding: 0;
+            padding: 80px 0 0;
+            position: relative;
+            background-color: var(--summit-white);
+            z-index: 100;
         }
 
         .section.compact {
-            padding: 0;
+            padding: 40px 0 0;
+        }
+
+        /* Section Dividers */
+        .section::before {
+            content: "▲";
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: var(--trail-red);
+            opacity: 0.3;
+        }
+
+        .section:first-of-type::before {
+            display: none;
         }
 
         .container {
@@ -147,9 +221,10 @@
         }
 
         h2 {
+            font-family: var(--font-display);
             font-size: 42px;
-            font-weight: 800;
-            letter-spacing: -0.03em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
             margin-bottom: 12px;
         }
 
@@ -164,6 +239,18 @@
             color: var(--rock-gray);
             margin-bottom: 40px;
             font-style: italic;
+        }
+
+        /* Fade in animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Technical Expertise Section */
@@ -211,6 +298,52 @@
             font-weight: 600;
             color: #333;
             border: 1px solid #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Skill proficiency indicator */
+        .skill-tag::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: var(--trail-red);
+            transition: width 0.6s ease;
+        }
+
+        .skill-category:hover .skill-tag::before {
+            width: 100%;
+        }
+
+        /* Tooltip */
+        .skill-tag[data-tooltip] {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
+        }
+
+        .skill-tag[data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            background: var(--mountain-dark);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 10;
+        }
+
+        .skill-tag[data-tooltip]:hover::after {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-12px);
         }
 
         /* Peak Performance Cards */
@@ -271,6 +404,25 @@
             gap: 15px;
             max-width: 1100px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        /* Timeline connector line */
+        .expedition-section::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom,
+                transparent,
+                var(--trail-red) 10%,
+                var(--trail-red) 90%,
+                transparent
+            );
+            transform: translateX(-50%);
+            z-index: 0;
         }
 
         .expedition-card {
@@ -281,11 +433,56 @@
             border-left: 6px solid var(--trail-red);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
         }
 
         .expedition-card:hover {
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transform: translateX(5px);
+        }
+
+        /* Waypoint markers on timeline */
+        .expedition-card::after {
+            content: "";
+            position: absolute;
+            right: -28px;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            background: var(--trail-red);
+            border: 3px solid white;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .expedition-card:nth-child(even)::after {
+            right: auto;
+            left: -28px;
+        }
+
+        .expedition-card:hover::after {
+            width: 16px;
+            height: 16px;
+            box-shadow: 0 0 0 4px rgba(70, 166, 6, 0.2);
+        }
+
+        /* Altitude indicator */
+        .expedition-card::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                var(--trail-red) 0%, 
+                var(--alpine-blue) 100%);
+            opacity: 0.2;
+            border-radius: 0 20px 20px 0;
         }
 
         .exp-header {
@@ -329,11 +526,11 @@
         }
 
         .exp-elevation {
+            font-family: var(--font-display);
             color: var(--rock-gray);
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14px;
             text-align: right;
-            font-family: monospace;
             white-space: nowrap;
             align-self: start;
         }
@@ -365,7 +562,7 @@
         }
 
         .achievements-trail li {
-            padding: 8px 0 8px 25px;
+            padding: 8px 0 8px 30px;
             position: relative;
             color: #333;
             line-height: 1.5;
@@ -373,10 +570,15 @@
         }
 
         .achievements-trail li:before {
-            content: "⛰";
+            content: "";
             position: absolute;
             left: 0;
-            font-size: 20px;
+            top: 10px;
+            width: 18px;
+            height: 18px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2346a606"><path d="M12 2L15 9L22 10L17 15L18 22L12 18L6 22L7 15L2 10L9 9Z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
         }
 
         .achievements-trail li strong {
@@ -474,6 +676,18 @@
             color: #333;
         }
 
+        .award-desc a {
+            color: var(--alpine-blue);
+            text-decoration: none;
+            border-bottom: 1px solid var(--alpine-blue);
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
+        }
+
+        .award-desc a:hover {
+            color: var(--trail-red);
+            border-bottom-color: var(--trail-red);
+        }
+
         /* Education Section */
         .training-grid {
             display: grid;
@@ -547,6 +761,7 @@
             font-weight: 700;
             transition: all 0.3s;
             box-shadow: 0 5px 20px rgba(224, 30, 55, 0.2);
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
         }
 
         .contact-button:hover {
@@ -589,6 +804,32 @@
             line-height: 1.6;
         }
 
+        /* Stagger animation delays */
+        .expedition-card:nth-child(1) { transition-delay: 0.05s; }
+        .expedition-card:nth-child(2) { transition-delay: 0.1s; }
+        .expedition-card:nth-child(3) { transition-delay: 0.15s; }
+        .expedition-card:nth-child(4) { transition-delay: 0.2s; }
+        .expedition-card:nth-child(5) { transition-delay: 0.25s; }
+        .expedition-card:nth-child(6) { transition-delay: 0.3s; }
+        .expedition-card:nth-child(7) { transition-delay: 0.35s; }
+        .expedition-card:nth-child(8) { transition-delay: 0.4s; }
+
+        .skill-category:nth-child(1) { transition-delay: 0.05s; }
+        .skill-category:nth-child(2) { transition-delay: 0.1s; }
+        .skill-category:nth-child(3) { transition-delay: 0.15s; }
+        .skill-category:nth-child(4) { transition-delay: 0.2s; }
+
+        .peak-card:nth-child(1) { transition-delay: 0.05s; }
+        .peak-card:nth-child(2) { transition-delay: 0.1s; }
+        .peak-card:nth-child(3) { transition-delay: 0.15s; }
+
+        .award-badge:nth-child(1) { transition-delay: 0.05s; }
+        .award-badge:nth-child(2) { transition-delay: 0.1s; }
+        .award-badge:nth-child(3) { transition-delay: 0.15s; }
+        .award-badge:nth-child(4) { transition-delay: 0.2s; }
+        .award-badge:nth-child(5) { transition-delay: 0.25s; }
+        .award-badge:nth-child(6) { transition-delay: 0.3s; }
+
         @media (max-width: 768px) {
             .exp-header {
                 flex-direction: column;
@@ -606,25 +847,45 @@
                 grid-template-columns: 1fr;
             }
 
+            .expedition-section::before {
+                left: 0;
+            }
+
+            .expedition-card::after {
+                left: -28px;
+                right: auto;
+            }
+
             .skills-container {
                 grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            body {
+                cursor: auto;
+            }
+
+            .cta-button, .contact-button, .award-desc a {
+                cursor: pointer;
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress"></div>
 
     <section class="hero-section">
         <canvas id="mountainCanvas" class="loading" aria-hidden="true" role="img" aria-label="Animated mountain landscape background"></canvas>
         <div class="hero-content">
             <span class="hero-tagline">Senior Staff Data Scientist @ Google • Mountain / Trail Runner</span>
             <br>
-            <br>
-            <br>
             <h2 class="hero-title">John Tribbia</h2>
-            <br>
-            <br>
             <br>
             <p class="hero-subtitle">Leading AI evaluation and model quality measurement at Google
                 <br>
@@ -632,10 +893,20 @@
                 <br>
                 Tackling mountains of data like I do on the run
             </p>
-            <br>
-            <br>
-            <br>
-            <div>
+            
+            <!-- Stats Counter -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="14">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                     <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">Years as Team Lead</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; margin-bottom: 60px;">
                 <a href="#experience" class="cta-button secondary" aria-label="Navigate to experience section">View Experience</a>
                 <a href="#contact" class="cta-button secondary" aria-label="Navigate to contact section">Get In Touch</a>
             </div>
@@ -645,7 +916,7 @@
     <!-- What I'm Looking For -->
     <section class="section compact">
         <div class="container">
-            <div class="open-to-opportunities">
+            <div class="open-to-opportunities fade-in-up">
                 <h3>Open to Leadership Opportunities</h3>
                 <p>Seeking leadership roles where I can leverage my experience leading high-performing teams and driving
                     strategic data initiatives. Particularly interested in positions that combine technical leadership
@@ -661,49 +932,49 @@
             <p class="section-subtitle">Deep technical capabilities across the modern data science stack</p>
 
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category fade-in-up">
                     <h3>ML & AI</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">LLM Development & Evaluation</span>
-                        <span class="skill-tag">Model Quality Metrics</span>
-                        <span class="skill-tag">Text Summarization</span>
-                        <span class="skill-tag">Sentiment Analysis</span>
-                        <span class="skill-tag">Automated Classification</span>
+                        <span class="skill-tag" data-tooltip="5+ years experience">LLM Development & Evaluation</span>
+                        <span class="skill-tag" data-tooltip="Current focus at Google">Model Quality Metrics</span>
+                        <span class="skill-tag" data-tooltip="Production systems">Text Summarization</span>
+                        <span class="skill-tag" data-tooltip="Advanced techniques">Sentiment Analysis</span>
+                        <span class="skill-tag" data-tooltip="At scale">Automated Classification</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category fade-in-up">
                     <h3>Data Analysis</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">ETL Pipelines</span>
-                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag" data-tooltip="Expert level">SQL</span>
+                        <span class="skill-tag" data-tooltip="Daily use">Python</span>
+                        <span class="skill-tag" data-tooltip="Statistical modeling">R</span>
+                        <span class="skill-tag" data-tooltip="Large-scale pipelines">ETL Pipelines</span>
+                        <span class="skill-tag" data-tooltip="Storytelling">Data Visualization</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category fade-in-up">
                     <h3>Analytics & Statistics</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Statistical Modeling</span>
-                        <span class="skill-tag">Forecasting</span>
-                        <span class="skill-tag">Multi-Touch Attribution</span>
-                        <span class="skill-tag">Predictive Analytics</span>
-                        <span class="skill-tag">A/B Testing</span>
-                        <span class="skill-tag">Causal Inference</span>
+                        <span class="skill-tag" data-tooltip="PhD-level expertise">Statistical Modeling</span>
+                        <span class="skill-tag" data-tooltip="Multiple methodologies">Forecasting</span>
+                        <span class="skill-tag" data-tooltip="Built from scratch">Multi-Touch Attribution</span>
+                        <span class="skill-tag" data-tooltip="10+ years">Predictive Analytics</span>
+                        <span class="skill-tag" data-tooltip="Rigorous methodology">A/B Testing</span>
+                        <span class="skill-tag" data-tooltip="Advanced methods">Causal Inference</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category fade-in-up">
                     <h3>Leadership</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Technical Strategy</span>
-                        <span class="skill-tag">Team Building</span>
-                        <span class="skill-tag">Cross-functional Collaboration</span>
-                        <span class="skill-tag">Stakeholder Management</span>
-                        <span class="skill-tag">Mentorship</span>
-                        <span class="skill-tag">Quality Standards</span>
+                        <span class="skill-tag" data-tooltip="Cross-org influence">Technical Strategy</span>
+                        <span class="skill-tag" data-tooltip="3-8 person teams">Team Building</span>
+                        <span class="skill-tag" data-tooltip="Eng, Product, Research">Cross-functional Collaboration</span>
+                        <span class="skill-tag" data-tooltip="Executive level">Stakeholder Management</span>
+                        <span class="skill-tag" data-tooltip="IC to Senior Staff">Mentorship</span>
+                        <span class="skill-tag" data-tooltip="Org-wide impact">Quality Standards</span>
                     </div>
                 </div>
             </div>
@@ -717,21 +988,21 @@
             <p class="section-subtitle">Building high-performing teams and scalable data solutions</p>
 
             <div class="peaks-grid">
-                <div class="peak-card">
+                <div class="peak-card fade-in-up">
                     <div class="peak-title">Technical Leadership</div>
                     <div class="peak-desc">Progressive leadership from IC to Senior Staff at Google, leading diverse
                         teams across Data Science, Analytics Engineering, and BI. Setting quality standards and
                         developing talent through direct mentorship and organizational influence.</div>
                 </div>
 
-                <div class="peak-card">
+                <div class="peak-card fade-in-up">
                     <div class="peak-title">Strategic Vision</div>
                     <div class="peak-desc">Driving end-to-end data science roadmaps that connect offline model
                         evaluation to online product engagement. Establishing measurement frameworks that inform
                         strategic decision-making at scale.</div>
                 </div>
 
-                <div class="peak-card">
+                <div class="peak-card fade-in-up">
                     <div class="peak-title">Cross-Functional Impact</div>
                     <div class="peak-desc">Fostering partnerships across engineering, product, research, and operations
                         teams. Translating complex technical concepts into actionable business insights for diverse
@@ -749,7 +1020,7 @@
 
             <div class="expedition-section">
                 <!-- Current Role -->
-                <div class="expedition-card">
+                <div class="expedition-card fade-in-up">
                     <div class="exp-header">
                         <div>
                             <div class="exp-route">
@@ -769,7 +1040,7 @@
                 </div>
 
                 <!-- Google Ads -->
-                <div class="expedition-card">
+                <div class="expedition-card fade-in-up">
                     <div class="exp-header">
                         <div>
                             <div class="exp-route">
@@ -793,7 +1064,7 @@
                 </div>
 
                 <!-- Infor -->
-                <div class="expedition-card">
+                <div class="expedition-card fade-in-up">
                     <div class="exp-header">
                         <div>
                             <div class="exp-route">
@@ -814,7 +1085,7 @@
                 </div>
 
                 <!-- Oracle -->
-                <div class="expedition-card">
+                <div class="expedition-card fade-in-up">
                     <div class="exp-header">
                         <div>
                             <div class="exp-route">
@@ -834,7 +1105,7 @@
                 </div>
 
                 <!-- InsideSales -->
-                <div class="expedition-card">
+                <div class="expedition-card fade-in-up">
                     <div class="exp-header">
                         <div>
                             <div class="exp-route">
@@ -854,7 +1125,7 @@
                 </div>
 
                 <!-- Backcountry Manager -->
-                <div class="expedition-card">
+                <div class="expedition-card fade-in-up">
                     <div class="exp-header">
                         <div>
                             <div class="exp-route">
@@ -877,7 +1148,7 @@
                 </div>
 
                 <!-- Backcountry Analyst -->
-                <div class="expedition-card">
+                <div class="expedition-card fade-in-up">
                     <div class="exp-header">
                         <div>
                             <div class="exp-route">
@@ -897,7 +1168,7 @@
                 </div>
 
                 <!-- RRC -->
-                <div class="expedition-card">
+                <div class="expedition-card fade-in-up">
                     <div class="exp-header">
                         <div>
                             <div class="exp-route">
@@ -925,7 +1196,7 @@
             </p>
 
             <div class="training-grid">
-                <div class="training-card">
+                <div class="training-card fade-in-up">
                     <div class="training-degree">PhD in Sociology</div>
                     <div class="training-institution">University of Colorado at Boulder</div>
                     <div class="training-focus">
@@ -941,7 +1212,7 @@
                     </div>
                 </div>
 
-                <div class="training-card">
+                <div class="training-card fade-in-up">
                     <div class="training-degree">BS in Mathematics</div>
                     <div class="training-institution">University of Puget Sound</div>
                     <div class="training-focus">
@@ -962,38 +1233,38 @@
             <p class="section-subtitle">Building community, mentoring future leaders, and pursuing excellence</p>
 
             <div class="awards-grid">
-                <div class="award-badge">
+                <div class="award-badge fade-in-up">
                     <div class="award-title">2024 Google-Boulder Site Citizenship Award</div>
                     <div class="award-desc">Recognized for exceptional contributions to the Boulder community and
                         Google's local presence through partnership development and community engagement</div>
                 </div>
 
-                <div class="award-badge">
+                <div class="award-badge fade-in-up">
                     <div class="award-title">Business Leader in Residence</div>
                     <div class="award-desc">Leading Google-Boulder's partnership with CU-Boulder Leeds School of
                         Business, mentoring MBA students and investing in the next generation of business leaders</div>
                 </div>
 
-                <div class="award-badge">
+                <div class="award-badge fade-in-up">
                     <div class="award-title">Former Sponsored Athlete</div>
                     <div class="award-desc">La Sportiva • Pearl Izumi • Salomon - Multiple podium finishes on the global
                         mountain/trail running stage</div>
                 </div>
 
-                <div class="award-badge">
-                    <div class="award-title">Running Shoe Tester</a></div>
+                <div class="award-badge fade-in-up">
+                    <div class="award-title">Running Shoe Tester</div>
                     <div class="award-desc"><a href="https://bouldergearlab.com">Boulder Gear Lab</a> • 200+ lifetime
                         gear reviews • <a href="https://roadtrailrun.com">Road Trail Run</a> contributor • 100K+ miles
                         tested in the Colorado Rockies</div>
                 </div>
 
-                <div class="award-badge">
+                <div class="award-badge fade-in-up">
                     <div class="award-title">Eagle Scout</div>
                     <div class="award-desc">Boy Scouts of America, 1999 - Early foundation in leadership and service
                     </div>
                 </div>
 
-                <div class="award-badge">
+                <div class="award-badge fade-in-up">
                     <div class="award-title">NOLS Graduate</div>
                     <div class="award-desc">National Outdoor Leadership School, 2005 - Wilderness leadership and risk
                         management training</div>
@@ -1001,6 +1272,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Publications Section -->
     <section class="section compact">
         <div class="container">
@@ -1009,31 +1281,31 @@
                 social statistics</p>
 
             <div class="publications-grid">
-                <div class="publication-card">
+                <div class="publication-card fade-in-up">
                     <div class="pub-title">More than information: what coastal managers need to plan for climate change
                     </div>
                     <div class="pub-meta">Environmental Science & Policy • 2008 • Co-Author with SC Moser</div>
                 </div>
 
-                <div class="publication-card">
+                <div class="publication-card fade-in-up">
                     <div class="pub-title">Vulnerability to inundation and climate change impacts in California: coastal
                         managers' attitudes and perceptions</div>
                     <div class="pub-meta">Marine Technology Society Journal • 2006 • Co-Author with SC Moser</div>
                 </div>
 
-                <div class="publication-card">
+                <div class="publication-card fade-in-up">
                     <div class="pub-title">Testing theories to explore the drivers of cities' atmospheric emissions
                     </div>
                     <div class="pub-meta">AMBIO: A Journal of the Human Environment • 2009 • Co-Author with PR Lankao, D
                         Nychka</div>
                 </div>
 
-                <div class="publication-card">
+                <div class="publication-card fade-in-up">
                     <div class="pub-title">Development and greenhouse gas emissions deviate from the 'modernization'
                         theory and 'convergence' hypothesis</div>
                     <div class="pub-meta">Climate Research • 2008 • Co-Author with PR Lankao, D Nychka</div>
                 </div>
-                <div class="publication-card">
+                <div class="publication-card fade-in-up">
                     <div class="pub-title">Stuck in the slow lane of behavior change? A not-so-superhuman perspective on
                         getting out of our cars</div>
                     <div class="pub-meta">In S. C. Moser & L. Dilling (Eds.), Creating a climate for change:
@@ -1165,7 +1437,7 @@
 
             particles.forEach(p => {
                 ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
-                ctx.font = '900 14px Inter';
+                ctx.font = '900 14px Manrope';
                 ctx.fillText(p.text, p.x, p.y);
 
                 p.y -= p.speed;
@@ -1186,6 +1458,18 @@
 
         animate();
 
+        // Parallax scrolling
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroContent = document.querySelector('.hero-content');
+            const canvasElement = document.querySelector('#mountainCanvas');
+            
+            if (scrolled < window.innerHeight) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+                canvasElement.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1195,6 +1479,67 @@
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
+        });
+
+        // Stats Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.dataset.target);
+            const duration = 2000;
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Trigger stats counter on scroll into view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.stat-number').forEach(animateCounter);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsRow = document.querySelector('.stats-row');
+        if (statsRow) {
+            statsObserver.observe(statsRow);
+        }
+
+        // Scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Reading Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const height = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrolled / height) * 100;
+            document.querySelector('.reading-progress').style.width = progress + '%';
         });
     </script>
 </body>
