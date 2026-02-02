@@ -16,6 +16,9 @@
 
 {{ hugo.Generator }}
 
+<!-- Google Fonts - Theme Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <!-- Font -->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -32,6 +35,9 @@
 {{ else }}
   <link href="{{ "css/style.default.css" | relURL }}" rel="stylesheet" id="theme-stylesheet">
 {{ end }}
+
+<!-- Custom theme styles - extracted from resume.html -->
+<link href="{{ "css/theme-styles.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
 
 <!-- Custom stylesheet - for your changes -->
 <link href="{{ "css/custom.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">

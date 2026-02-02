@@ -1,0 +1,868 @@
+/* Boulder Gear Lab Theme Styles */
+/* Based on resume.html design system */
+
+:root {
+    --mountain-dark: #1a1a2e;
+    --trail-red: #46a606;
+    --summit-white: #F5F5F7;
+    --rock-gray: #86868B;
+    --alpine-blue: #2c5f8d;
+    --forest-green: #2d5016;
+    --font-display: 'Archivo', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--summit-white);
+    color: #1D1D1F;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="rgba(70,166,6,0.3)" stroke="%2346a606" stroke-width="2"/></svg>') 10 10, auto;
+}
+
+/* Reading Progress Bar */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* Hero Section - Mountain Landscape */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+#mountainCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#mountainCanvas.loading {
+    opacity: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 1000px;
+    padding: 40px 20px;
+}
+
+.hero-tagline {
+    color: var(--summit-white);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: block;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 10vw, 90px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: white;
+    line-height: 0.95;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Stats Row */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--trail-red);
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    color: white;
+    margin-top: 8px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 18px 40px;
+    background: var(--trail-red);
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(224, 30, 55, 0.3);
+    margin: 0 10px;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(224, 30, 55, 0.5);
+}
+
+.cta-button:focus {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+    background: white;
+    color: var(--mountain-dark);
+}
+
+.cta-button.secondary:focus {
+    outline: 3px solid var(--trail-red);
+    outline-offset: 4px;
+}
+
+/* Content Sections */
+.section {
+    padding: 80px 0 0;
+    position: relative;
+    background-color: var(--summit-white);
+    z-index: 100;
+}
+
+.section.compact {
+    padding: 40px 0 0;
+}
+
+/* Section Dividers */
+.section::before {
+    content: "▲";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: var(--trail-red);
+    opacity: 0.3;
+}
+
+.section:first-of-type::before {
+    display: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+h2::before {
+    content: "▲ ";
+    color: var(--trail-red);
+    margin-right: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--rock-gray);
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* Fade in animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Technical Expertise Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.skill-category {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    border-color: var(--trail-red);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.skill-category h3 {
+    color: var(--trail-red);
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: var(--summit-white);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Skill proficiency indicator */
+.skill-tag::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--trail-red);
+    transition: width 0.6s ease;
+}
+
+.skill-category:hover .skill-tag::before {
+    width: 100%;
+}
+
+/* Tooltip */
+.skill-tag[data-tooltip] {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
+}
+
+.skill-tag[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: var(--mountain-dark);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.skill-tag[data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-12px);
+}
+
+/* Peak Performance Cards */
+.peaks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.peak-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid #eee;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.peak-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
+}
+
+.peak-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border-color: var(--trail-red);
+}
+
+.peak-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--trail-red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.peak-desc {
+    color: #333;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Expedition Timeline */
+.expedition-section {
+    background: var(--summit-white);
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Timeline connector line */
+.expedition-section::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+        transparent,
+        var(--trail-red) 10%,
+        var(--trail-red) 90%,
+        transparent
+    );
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.expedition-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 0;
+    border-left: 6px solid var(--trail-red);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.expedition-card:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+}
+
+/* Waypoint markers on timeline */
+.expedition-card::after {
+    content: "";
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: var(--trail-red);
+    border: 3px solid white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.expedition-card:nth-child(even)::after {
+    right: auto;
+    left: -28px;
+}
+
+.expedition-card:hover::after {
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 0 4px rgba(70, 166, 6, 0.2);
+}
+
+/* Altitude indicator */
+.expedition-card::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+        var(--trail-red) 0%, 
+        var(--alpine-blue) 100%);
+    opacity: 0.2;
+    border-radius: 0 20px 20px 0;
+}
+
+.exp-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    margin-bottom: 10px;
+    align-items: start;
+}
+
+.exp-route {
+    color: var(--trail-red);
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.company-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.exp-summit {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.exp-location {
+    color: var(--rock-gray);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.exp-elevation {
+    font-family: var(--font-display);
+    color: var(--rock-gray);
+    font-weight: 700;
+    font-size: 14px;
+    text-align: right;
+    white-space: nowrap;
+    align-self: start;
+}
+
+.exp-terrain {
+    color: #333;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.team-size {
+    display: inline-block;
+    background: var(--summit-white);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--alpine-blue);
+    margin-bottom: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+}
+
+.achievements-trail {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+}
+
+.achievements-trail li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    color: #333;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.achievements-trail li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2346a606"><path d="M12 2L15 9L22 10L17 15L18 22L12 18L6 22L7 15L2 10L9 9Z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.achievements-trail li strong {
+    color: var(--trail-red);
+    font-weight: 800;
+}
+
+/* Publications Section */
+.publications-grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.publication-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    border-left: 4px solid var(--trail-red);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.pub-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.pub-meta {
+    font-size: 14px;
+    color: var(--rock-gray);
+    margin-bottom: 8px;
+}
+
+.pub-citations {
+    display: inline-block;
+    background: var(--summit-white);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--alpine-blue);
+}
+
+/* Awards Grid */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.award-badge {
+    background: white;
+    border-radius: 20px;
+    padding: 25px 20px;
+    border: 2px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.award-badge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
+}
+
+.award-badge:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border-color: var(--trail-red);
+}
+
+.award-title {
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    color: var(--trail-red);
+}
+
+.award-desc {
+    font-size: 14px;
+    opacity: 0.95;
+    line-height: 1.5;
+    color: #333;
+}
+
+.award-desc a {
+    color: var(--alpine-blue);
+    text-decoration: none;
+    border-bottom: 1px solid var(--alpine-blue);
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
+}
+
+.award-desc a:hover {
+    color: var(--trail-red);
+    border-bottom-color: var(--trail-red);
+}
+
+/* Education Section */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.training-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid #eee;
+}
+
+.training-degree {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.training-institution {
+    color: var(--trail-red);
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.training-focus {
+    color: var(--rock-gray);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Summit Footer */
+.summit-footer {
+    background: var(--mountain-dark);
+    color: white;
+    padding: 50px 20px 30px;
+    text-align: center;
+}
+
+.summit-footer h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.summit-tagline {
+    font-size: 22px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.contact-links {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.contact-button {
+    padding: 18px 40px;
+    background: var(--trail-red);
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(224, 30, 55, 0.2);
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
+}
+
+.contact-button:hover {
+    background: #ff002b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(224, 30, 55, 0.4);
+}
+
+.contact-button:focus {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+.footer-note {
+    opacity: 0.6;
+    font-size: 14px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.open-to-opportunities {
+    background: linear-gradient(135deg, var(--alpine-blue), var(--trail-red));
+    color: white;
+    padding: 35px;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.open-to-opportunities h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.open-to-opportunities p {
+    font-size: 16px;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+/* Stagger animation delays */
+.expedition-card:nth-child(1) { transition-delay: 0.05s; }
+.expedition-card:nth-child(2) { transition-delay: 0.1s; }
+.expedition-card:nth-child(3) { transition-delay: 0.15s; }
+.expedition-card:nth-child(4) { transition-delay: 0.2s; }
+.expedition-card:nth-child(5) { transition-delay: 0.25s; }
+.expedition-card:nth-child(6) { transition-delay: 0.3s; }
+.expedition-card:nth-child(7) { transition-delay: 0.35s; }
+.expedition-card:nth-child(8) { transition-delay: 0.4s; }
+
+.skill-category:nth-child(1) { transition-delay: 0.05s; }
+.skill-category:nth-child(2) { transition-delay: 0.1s; }
+.skill-category:nth-child(3) { transition-delay: 0.15s; }
+.skill-category:nth-child(4) { transition-delay: 0.2s; }
+
+.peak-card:nth-child(1) { transition-delay: 0.05s; }
+.peak-card:nth-child(2) { transition-delay: 0.1s; }
+.peak-card:nth-child(3) { transition-delay: 0.15s; }
+
+.award-badge:nth-child(1) { transition-delay: 0.05s; }
+.award-badge:nth-child(2) { transition-delay: 0.1s; }
+.award-badge:nth-child(3) { transition-delay: 0.15s; }
+.award-badge:nth-child(4) { transition-delay: 0.2s; }
+.award-badge:nth-child(5) { transition-delay: 0.25s; }
+.award-badge:nth-child(6) { transition-delay: 0.3s; }
+
+@media (max-width: 768px) {
+    .exp-header {
+        flex-direction: column;
+    }
+
+    .exp-elevation {
+        text-align: left;
+    }
+
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expedition-section {
+        grid-template-columns: 1fr;
+    }
+
+    .expedition-section::before {
+        left: 0;
+    }
+
+    .expedition-card::after {
+        left: -28px;
+        right: auto;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    body {
+        cursor: auto;
+    }
+
+    .cta-button, .contact-button, .award-desc a {
+        cursor: pointer;
+    }
+}
