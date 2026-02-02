@@ -95,33 +95,34 @@
             letter-spacing: -0.02em;
             color: white;
             line-height: 0.95;
-            margin-bottom: 15px;
+            margin-bottom: 40px;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
         }
+        
 
         .hero-subtitle {
             font-size: clamp(18px, 2.5vw, 26px);
             color: rgba(255, 255, 255, 0.9);
             font-weight: 400;
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto 40px;
             line-height: 1.5;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         /* Stats Row */
         .stats-row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin: 40px 0;
-            padding: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin: 40px auto;
+            padding: 30px 60px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 700px;
         }
-
         .stat-item {
             text-align: center;
         }
@@ -884,12 +885,10 @@
         <canvas id="mountainCanvas" class="loading" aria-hidden="true" role="img" aria-label="Animated mountain landscape background"></canvas>
         <div class="hero-content">
             <span class="hero-tagline">Senior Staff Data Scientist @ Google • Mountain / Trail Runner</span>
-            <br>
             <h2 class="hero-title">John Tribbia</h2>
-            <br>
             <p class="hero-subtitle">Leading AI evaluation and model quality measurement at Google
                 <br>
-                <>
+                &
                 <br>
                 Tackling mountains of data like I do on the run
             </p>
