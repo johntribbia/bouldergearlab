@@ -128,3 +128,431 @@ a, button, .btn, .box, .card {
         cursor: pointer !important;
     }
 }
+
+/* ========================================
+   ENHANCED ARTICLE CONTENT TYPOGRAPHY
+   ======================================== */
+
+/* Main article content container */
+#post-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Drop cap for first paragraph */
+#post-content > p:first-of-type::first-letter {
+    font-family: var(--font-display);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 0.85;
+    float: left;
+    margin: 8px 12px 0 0;
+    color: var(--trail-red);
+}
+
+/* Better paragraph spacing */
+#post-content p {
+    margin-bottom: 1.5em;
+}
+
+/* Subheadings in articles */
+#post-content h3 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--trail-red);
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+    letter-spacing: -0.01em;
+}
+
+#post-content h4 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 1.75em;
+    margin-bottom: 0.5em;
+}
+
+/* ========================================
+   ENHANCED LINK STYLING
+   ======================================== */
+
+#post-content a {
+    color: var(--alpine-blue);
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(--alpine-blue), var(--alpine-blue));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    transition: background-size 0.3s ease, color 0.3s ease;
+    padding-bottom: 2px;
+}
+
+#post-content a:hover {
+    color: var(--trail-red);
+    background-image: linear-gradient(to right, var(--trail-red), var(--trail-red));
+    background-size: 100% 2px;
+}
+
+/* Button links should keep their styling */
+#post-content a.button,
+#post-content a.btn,
+#post-content a.cta-button {
+    background-image: none;
+    padding-bottom: 0;
+}
+
+/* ========================================
+   ENHANCED LIST STYLING
+   ======================================== */
+
+#post-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.5em 0;
+}
+
+#post-content ul li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* Mountain peak bullet */
+#post-content ul li::before {
+    content: "▲";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--trail-red);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#post-content ol {
+    padding-left: 30px;
+    margin: 1.5em 0;
+}
+
+#post-content ol li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    padding-left: 10px;
+}
+
+#post-content ol li::marker {
+    color: var(--trail-red);
+    font-weight: 700;
+}
+
+/* Nested lists */
+#post-content ul ul,
+#post-content ol ul,
+#post-content ul ol,
+#post-content ol ol {
+    margin: 0.5em 0;
+}
+
+#post-content ul ul li::before {
+    content: "•";
+    font-size: 20px;
+}
+
+/* ========================================
+   IMAGE ENHANCEMENT
+   ======================================== */
+
+#post-content img {
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    margin: 2em 0;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#post-content img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Image captions */
+#post-content figure {
+    margin: 2em 0;
+}
+
+#post-content figcaption {
+    margin-top: 12px;
+    font-size: 15px;
+    color: var(--rock-gray);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Image gallery grid */
+#post-content .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 2em 0;
+}
+
+#post-content .image-gallery img {
+    margin: 0;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ========================================
+   BLOCKQUOTE & CALLOUT BOXES
+   ======================================== */
+
+#post-content blockquote {
+    background: linear-gradient(135deg, rgba(70, 166, 6, 0.05), rgba(44, 95, 141, 0.05));
+    border-left: 6px solid var(--trail-red);
+    border-radius: 0 12px 12px 0;
+    padding: 25px 30px;
+    margin: 2em 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333;
+    position: relative;
+}
+
+#post-content blockquote::before {
+    content: """;
+    font-family: Georgia, serif;
+    font-size: 60px;
+    color: var(--trail-red);
+    opacity: 0.3;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    line-height: 1;
+}
+
+#post-content blockquote p {
+    margin-bottom: 0.75em;
+}
+
+#post-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+#post-content blockquote cite {
+    display: block;
+    margin-top: 12px;
+    font-size: 15px;
+    color: var(--rock-gray);
+    font-style: normal;
+    font-weight: 600;
+}
+
+#post-content blockquote cite::before {
+    content: "— ";
+}
+
+/* Pros/Cons callout boxes */
+.callout-box,
+.pros-box,
+.cons-box {
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin: 2em 0;
+    border: 2px solid;
+}
+
+.pros-box {
+    background: rgba(70, 166, 6, 0.05);
+    border-color: var(--trail-red);
+}
+
+.cons-box {
+    background: rgba(255, 0, 0, 0.03);
+    border-color: #dc3545;
+}
+
+.callout-box h4,
+.pros-box h4,
+.cons-box h4 {
+    margin-top: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.pros-box h4 {
+    color: var(--trail-red);
+}
+
+.cons-box h4 {
+    color: #dc3545;
+}
+
+/* ========================================
+   CODE BLOCKS
+   ======================================== */
+
+#post-content pre {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 25px;
+    overflow-x: auto;
+    margin: 2em 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+#post-content code {
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#post-content pre code {
+    color: #f8f8f2;
+    background: none;
+    padding: 0;
+}
+
+/* Inline code */
+#post-content p code,
+#post-content li code {
+    background: var(--summit-white);
+    color: var(--alpine-blue);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+/* ========================================
+   TABLE STYLING
+   ======================================== */
+
+#post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#post-content table thead {
+    background: linear-gradient(135deg, var(--trail-red), var(--alpine-blue));
+}
+
+#post-content table th {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding: 16px 20px;
+    text-align: left;
+}
+
+#post-content table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#post-content table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+#post-content table tbody tr:nth-child(even) {
+    background: var(--summit-white);
+}
+
+#post-content table tbody tr:hover {
+    background: rgba(70, 166, 6, 0.05);
+}
+
+#post-content table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========================================
+   HORIZONTAL RULES
+   ======================================== */
+
+#post-content hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--trail-red) 20%,
+        var(--alpine-blue) 80%,
+        transparent
+    );
+    margin: 3em 0;
+    border-radius: 2px;
+}
+
+/* ========================================
+   STRONG & EMPHASIS
+   ======================================== */
+
+#post-content strong {
+    color: var(--trail-red);
+    font-weight: 700;
+}
+
+#post-content em {
+    color: var(--alpine-blue);
+    font-style: italic;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+    #post-content {
+        font-size: 16px;
+    }
+    
+    #post-content > p:first-of-type::first-letter {
+        font-size: 52px;
+        margin: 4px 8px 0 0;
+    }
+    
+    #post-content h3 {
+        font-size: 22px;
+    }
+    
+    #post-content h4 {
+        font-size: 18px;
+    }
+    
+    #post-content pre {
+        padding: 15px;
+        font-size: 13px;
+    }
+    
+    #post-content table {
+        font-size: 14px;
+    }
+    
+    #post-content table th,
+    #post-content table td {
+        padding: 12px 15px;
+    }
+    
+    #post-content .image-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    #post-content blockquote {
+        padding: 20px 25px;
+        font-size: 16px;
+    }
+}

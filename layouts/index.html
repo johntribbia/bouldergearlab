@@ -47,29 +47,33 @@
 
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    {{ range first 10 (where .RegularPages "Type" "in" .Site.Params.mainSections) }}
-                    <div class="box post">
-                        <div class="box-body">
-                            <div class="tombstone">
-                                <span class="post-meta">
-                                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format .Site.Params.date_format }}</time>
-                                </span>
-                                <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                            </div>
-                            <p class="post-summary">{{ .Summary }}</p>
-                            <a href="{{ .Permalink }}" class="btn btn-default">{{ i18n "readmore" }}</a>
+        <!-- Recent Reviews Section with Premium Cards -->
+        <section class="section">
+            <div class="container">
+                <h2>Latest Reviews</h2>
+                <p class="section-subtitle">Honest gear reviews from the Colorado Rockies</p>
+                
+                <div class="peaks-grid">
+                    {{ range first 6 (where .RegularPages "Type" "in" .Site.Params.mainSections) }}
+                    <div class="peak-card fade-in-up">
+                        <div class="peak-title">
+                            <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a>
+                        </div>
+                        <div class="peak-desc">
+                            {{ if .Description }}
+                                {{ .Description | truncate 120 }}
+                            {{ else }}
+                                {{ .Summary | plainify | truncate 120 }}
+                            {{ end }}
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="{{ .Permalink }}" class="cta-button" style="padding: 12px 24px; font-size: 14px;">Read Review</a>
                         </div>
                     </div>
                     {{ end }}
                 </div>
-                <div class="col-md-4">
-                    {{ partial "sidebar-home.html" . }}
-                </div>
             </div>
-        </div>
+        </section>
 
         {{ partial "footer.html" . }}
     </div>

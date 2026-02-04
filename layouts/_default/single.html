@@ -16,74 +16,75 @@
 
         {{ partial "breadcrumbs.html" . }}
 
-        <div id="content">
+        <!-- Main Content with Premium Styling -->
+        <section class="section">
             <div class="container">
+
+                <!-- Article Header -->
+                <div style="text-align: center; margin-bottom: 40px;" class="fade-in-up">
+                    <h1 style="font-family: var(--font-display); font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">
+                        {{ .Title }}
+                    </h1>
+                    
+                    {{ if or .Params.author .Params.date }}
+                    <p style="color: var(--rock-gray); font-size: 16px; margin-bottom: 8px;">
+                        {{ if isset .Params "authors" }}
+                            {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<strong>{{ $author }}</strong>{{ end }}
+                        {{ end }}
+                        {{ if and .Params.author .Params.date }} • {{ end }}
+                        {{ if .Params.date }}
+                            {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                            {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+                                {{ $createdAt = replace $createdAt $month (i18n $month) }}
+                            {{ end }}
+                            {{ $createdAt }}
+                        {{ end }}
+                    </p>
+                    {{ end }}
+                    
+                    {{ if .Description }}
+                    <p style="color: var(--rock-gray); font-size: 18px; font-style: italic; max-width: 800px; margin: 0 auto;">
+                        {{ .Description }}
+                    </p>
+                    {{ end }}
+                </div>
+
+                <!-- Article Content -->
                 <div class="row">
-                    <!-- *** LEFT COLUMN *** -->
-
-                    <div class="col-md-9">
-
-                        <article>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    {{ if eq .Type "reviews" }}
-                                    <!-- Individual review page - no stats section -->
-                                    {{ else }}
-                                    <!-- Main page - show stats at bottom -->
-                                    {{ end }}
-                                </div>
-                            </div>
-
-                            <h1>{{ .Title }}</h1>
-                            
-                            {{ if .Params.banner }}
-                            {{ $image := .Resources.GetMatch .Params.banner }}
-                            {{ if $image }}
-                            <img src="{{ $image.Permalink }}" class="img-responsive" alt="{{ .Title }} - featured image" />
-                            {{ else }}
-                            <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="{{ .Title }} - featured image" />
-                            {{ end }}
-                            {{ end }}
-
-                            {{ .Content }}
-
-                        </article>
-
+                    <div class="col-md-9" id="blog-post">
+                        <div id="post-content" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);">
+                          {{ if .Params.banner }}
+                          {{ $image := .Resources.GetMatch .Params.banner }}
+                          <div style="margin: -40px -40px 30px -40px; border-radius: 20px 20px 0 0; overflow: hidden;">
+                              {{ if $image }}
+                              <img src="{{ $image.Permalink }}" style="width: 100%; height: auto; display: block;" alt="{{ .Title }}" />
+                              {{ else }}
+                              <img src="{{ .Params.banner | relURL }}" style="width: 100%; height: auto; display: block;" alt="{{ .Title }}" />
+                              {{ end }}
+                          </div>
+                          {{ end }}
+                          
+                          {{ .Content }}
+                        </div>
+                        
+                        {{ if .Site.Config.Services.Disqus.Shortname }}
+                        <div id="comments" style="margin-top: 40px;">
+                            {{ template "_internal/disqus.html" . }}
+                        </div>
+                        {{ end }}
                     </div>
-                    <!-- /.col-md-9 -->
-
-                    <!-- *** RIGHT COLUMN ***
-       _________________________________________________________ -->
 
                     <div class="col-md-3">
-
-                        <!-- *** MENUS AND WIDGETS *** -->
-
                         {{ partial "sidebar.html" . }}
-
-                        <!-- *** MENUS AND FILTERS END *** -->
-
                     </div>
-                    <!-- /.col-md-3 -->
-
-                    <!-- *** RIGHT COLUMN END *** -->
-
                 </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /#content -->
 
-        {{ if ne .Type "reviews" }}
-        <!-- Include stats section for non-review pages (full width) -->
-        {{ partial "bgl-stats.html" . }}
-        {{ end }}
+            </div>
+        </section>
 
         {{ partial "footer.html" . }}
 
     </div>
-    <!-- /#all -->
 
     {{ partial "scripts.html" . }}
 

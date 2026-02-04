@@ -16,110 +16,74 @@
 
         {{ partial "breadcrumbs.html" . }}
 
-        <div id="content">
+        <!-- Premium Card Grid Layout -->
+        <section class="section">
             <div class="container">
-                <div class="row">
-                    <!-- *** LEFT COLUMN *** -->
+                <h2>{{ .Title }}</h2>
+                {{ if .Description }}
+                <p class="section-subtitle">{{ .Description }}</p>
+                {{ else }}
+                <p class="section-subtitle">Browse our collection of gear reviews</p>
+                {{ end }}
 
-                    <div class="col-md-9" id="blog-listing-medium">
-
-                        {{ $paginator := .Paginate (where .Data.Pages "Type" "in" .Site.Params.mainSections) }}
-                        {{ range $paginator.Pages }}
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="{{ .Permalink }}">
-                                          {{ if .Params.banner }}
-                                          {{ $image := .Resources.GetMatch .Params.banner }}
-                                          {{ if $image }}
-                                          <img src="{{ $image.Permalink }}" class="img-responsive" alt="" />
-                                          {{ else }}
-                                          <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="" />
-                                          {{ end }}
-                                          {{ else }}
-                                          <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="" />
-                                          {{ end }}
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          {{ if isset .Params "authors" }}
-					  {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<a href="{{ (printf "%s/%s" ("authors" | relLangURL) ($author | urlize)) }}">{{ $author }}</a>{{ end }}
-                                          {{ end }}
-                                          {{ if isset .Params "categories" }}
-                                          {{ if gt (len .Params.categories) 0 }}
-                                          in 
-                                          {{ range $index, $category := .Params.categories }}{{ if $index }}, {{ end }}
-                                              <a href="{{ "categories/" | relLangURL }}{{ . | urlize | lower }}">{{ $category }}</a>{{ end }}
-                                          {{ end }}
-                                          {{ end }}
-
-                                        </p>
-                                        {{ if isset .Params "date" }}
-
-                                        {{ $createdAt := .Date.Format .Site.Params.date_format }}
-                                        {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
-                                            {{ $createdAt = replace $createdAt $month (i18n $month) }}
-                                        {{ end }}
-
-                                        <p class="date-comments">
-                                            <a href="{{ .Permalink }}"><i class="far fa-calendar"></i> {{ $createdAt }}</a>
-                                        </p>
-                                        {{ end }}
-                                    </div>
-                                    {{ if not .Site.Params.recent_posts.hide_summary }}
-                                    <p class="intro">{{ .Summary }}</p>
-                                    <p class="read-more"><a href="{{ .Permalink }}" class="btn btn-template-main">{{ i18n "continueReading" }}</a>
-                                    </p>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </section>
+                <div class="peaks-grid">
+                    {{ $paginator := .Paginate (where .Data.Pages "Type" "in" .Site.Params.mainSections) }}
+                    {{ range $paginator.Pages }}
+                    <div class="peak-card fade-in-up">
+                        {{ if .Params.banner }}
+                        {{ $image := .Resources.GetMatch .Params.banner }}
+                        <div style="margin: -30px -30px 20px -30px; border-radius: 20px 20px 0 0; overflow: hidden;">
+                            <a href="{{ .Permalink }}">
+                                {{ if $image }}
+                                <img src="{{ $image.Permalink }}" style="width: 100%; height: 200px; object-fit: cover; display: block;" alt="{{ .Title }}" />
+                                {{ else }}
+                                <img src="{{ .Params.banner | relURL }}" style="width: 100%; height: 200px; object-fit: cover; display: block;" alt="{{ .Title }}" />
+                                {{ end }}
+                            </a>
+                        </div>
                         {{ end }}
-
-                        <ul class="pager">
-                            {{ if .Paginator.HasPrev }}
-                            <li class="previous"><a href="{{ .Paginator.Prev.URL | relURL }}">&larr; {{ i18n "newer" }}</a></li>
-                            {{ else }}
-                            <li class="previous disabled"><a href="#">&larr; {{ i18n "newer" }}</a></li>
+                        
+                        <div class="peak-title">
+                            <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a>
+                        </div>
+                        
+                        {{ if isset .Params "date" }}
+                        <div style="font-size: 13px; color: var(--rock-gray); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">
+                            {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                            {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+                                {{ $createdAt = replace $createdAt $month (i18n $month) }}
                             {{ end }}
-
-                            {{ if .Paginator.HasNext }}
-                            <li class="next"><a href="{{ .Paginator.Next.URL | relURL }}">{{ i18n "older" }} &rarr;</a></li>
-                            {{ else }}
-                            <li class="next disabled"><a href="#">{{ i18n "older" }} &rarr;</a></li>
+                            {{ $createdAt }}
+                        </div>
+                        {{ end }}
+                        
+                        <div class="peak-desc">
+                            {{ if .Description }}
+                                {{ .Description | truncate 150 }}
+                            {{ else if not .Site.Params.recent_posts.hide_summary }}
+                                {{ .Summary | plainify | truncate 150 }}
                             {{ end }}
-                        </ul>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <a href="{{ .Permalink }}" class="cta-button" style="padding: 12px 24px; font-size: 14px;">Read More</a>
+                        </div>
                     </div>
-                    <!-- /.col-md-9 -->
-
-                    <!-- *** LEFT COLUMN END *** -->
-
-                    <!-- *** RIGHT COLUMN ***
-       _________________________________________________________ -->
-
-                    <div class="col-md-3">
-
-                        <!-- *** MENUS AND WIDGETS *** -->
-
-                        {{ partial "sidebar.html" . }}
-
-                        <!-- *** MENUS AND FILTERS END *** -->
-
-                    </div>
-                    <!-- /.col-md-3 -->
-
-                    <!-- *** RIGHT COLUMN END *** -->
-
+                    {{ end }}
                 </div>
-                <!-- /.row -->
+
+                <!-- Pagination -->
+                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 60px;">
+                    {{ if .Paginator.HasPrev }}
+                    <a href="{{ .Paginator.Prev.URL | relURL }}" class="cta-button secondary">← Newer</a>
+                    {{ end }}
+                    
+                    {{ if .Paginator.HasNext }}
+                    <a href="{{ .Paginator.Next.URL | relURL }}" class="cta-button secondary">Older →</a>
+                    {{ end }}
+                </div>
             </div>
-            <!-- /.container -->
-        </div>
+        </section>
         <!-- /#content -->
 
         {{ partial "footer.html" . }}
