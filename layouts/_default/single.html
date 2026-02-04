@@ -22,9 +22,11 @@
 
                 <!-- Article Header -->
                 <div style="text-align: center; margin-bottom: 40px;" class="fade-in-up">
+                    {{ if not .Params.banner }}
                     <h1 style="font-family: var(--font-display); font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">
                         {{ .Title }}
                     </h1>
+                    {{ end }}
                     
                     {{ if or .Params.author .Params.date }}
                     <p style="color: var(--rock-gray); font-size: 16px; margin-bottom: 8px;">
