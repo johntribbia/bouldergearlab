@@ -54,7 +54,7 @@
                 <p class="section-subtitle">Honest gear reviews from the Colorado Rockies</p>
                 
                 <div class="peaks-grid">
-                    {{ range first 6 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+                    {{ range first 6 (where .Site.RegularPages "Section" "reviews") }}
                     <div class="peak-card fade-in-up">
                         <div class="peak-title">
                             <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a>
