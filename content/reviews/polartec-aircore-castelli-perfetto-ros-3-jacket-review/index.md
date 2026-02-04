@@ -18,8 +18,6 @@ Original Post from RoadTrailRun
 class="button primary button-wrapper"><span>Read All RoadTrailRun
 Reviews Here</span></a>
 
-Article by John Tribbia
-
 ![image_1.jpg](image_1.jpg)
 
 John: While the Castelli Perfetto has long been a staple in the world of cycling, I've always viewed it through the lens of a cold-weather aerobic enthusiast. As a daily bike commuter and runner, I need a jacket that can handle the rigors of hard efforts in chilly, and even damp, conditions. This latest iteration, the Perfetto RoS 3, represents a significant shift in philosophy, prioritizing breathability over absolute waterproofness.

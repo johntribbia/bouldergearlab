@@ -18,8 +18,6 @@ Original Post from RoadTrailRun
 class="button primary button-wrapper"><span>Read All RoadTrailRun
 Reviews Here</span></a>
 
-Article by John Tribbia
-
 ### Lectric XPedition 2.0 Cargo eBike ($1,799 + accessories)
 
 

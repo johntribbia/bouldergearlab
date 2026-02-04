@@ -18,8 +18,6 @@ Original Post from RoadTrailRun
 class="button primary button-wrapper"><span>Read All RoadTrailRun
 Reviews Here</span></a>
 
-Article by John Tribbia
-
 ### Moonlight Mountain Gear Bright as Day 800 Headlamp ($199)
 
 
