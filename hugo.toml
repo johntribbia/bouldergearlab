@@ -149,6 +149,12 @@ summaryLength = 70
     weight     = 5
 
 [[menu.main]]
+    name       = "Professional Resume"
+    identifier = "menu.resume"
+    url        = "/resume/"
+    weight     = 5
+
+[[menu.main]]
     name       = "Contact"
     identifier = "menu.contact"
     url        = "/contact/"
