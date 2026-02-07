@@ -1757,3 +1757,152 @@
 #sidebar .widget a:hover {
     color: var(--trail-red);
 }
+
+/* ========================================
+   COMPREHENSIVE MOBILE FIXES
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Global mobile spacing */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+    
+    /* Hero section mobile */
+    .bgl-hero {
+        min-height: 85vh;
+        padding: 20px;
+    }
+    
+    .bgl-hero-content {
+        padding: 30px 15px;
+    }
+    
+    .bgl-hero-text h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    
+    .bgl-hero-text .lead {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+    
+    .bgl-hero-text .lead br {
+        display: none;
+    }
+    
+    .hero-badge {
+        font-size: 10px;
+        padding: 6px 14px;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+    
+    .bgl-hero-cta {
+        padding: 14px 28px;
+        font-size: 14px;
+    }
+    
+    /* Section headers mobile */
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 28px;
+    }
+    
+    .section-tag {
+        font-size: 10px;
+        padding: 5px 12px;
+    }
+    
+    .section-subtitle {
+        font-size: 15px;
+    }
+    
+    /* Reviews section mobile */
+    .reviews-section {
+        padding: 60px 0;
+    }
+    
+    .review-card {
+        border-radius: 16px;
+    }
+    
+    .review-card-image {
+        height: 180px;
+    }
+    
+    .review-card-content {
+        padding: 20px;
+    }
+    
+    .review-card-title {
+        font-size: 18px;
+    }
+    
+    .review-card-excerpt {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    
+    /* Browse all button mobile */
+    .cta-button.browse-all {
+        padding: 14px 32px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .section-cta {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .bgl-hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .bgl-hero-text .lead {
+        font-size: 15px;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .review-card-title {
+        font-size: 16px;
+    }
+    
+    .review-card-excerpt {
+        font-size: 13px;
+    }
+    
+    .review-card-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    /* Stack CTA buttons on very small screens */
+    .hero-cta-group {
+        gap: 12px;
+    }
+    
+    .bgl-hero-cta {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+}
