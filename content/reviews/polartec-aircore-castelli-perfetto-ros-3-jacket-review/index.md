@@ -24,7 +24,7 @@ John: While the Castelli Perfetto has long been a staple in the world of cycling
 
 ![image_2.jpg](image_2.jpg)
 
-My testing took place through a classic shoulder season, with cool mornings, and some surprisingly chilly days. The fit of the Perfetto RoS 3 is excellent - a nice, aerodynamic cut that still allows for comfortable movement thanks to the Lycra-like feel of the new  new material which “maximizes breathability while protecting against the elements.
+My testing took place through a classic shoulder season, with cool mornings, and some surprisingly chilly days. The fit of the Perfetto RoS 3 is excellent - a nice, aerodynamic cut that still allows for comfortable movement thanks to the Lycra-like feel of the new material which "maximizes breathability while protecting against the elements.
 
 ![image_3.jpg](image_3.jpg)
 

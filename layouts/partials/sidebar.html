@@ -1,0 +1,82 @@
+<!-- Custom Sidebar - TOC only for clean reading experience -->
+<div id="sidebar">
+    <!-- Table of Contents will be injected here by JavaScript -->
+    <div class="toc-container"></div>
+</div>
+
+<style>
+#sidebar {
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    align-self: flex-start;
+}
+
+.toc-container {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.toc-sidebar {
+    margin: 0;
+}
+
+.toc-sidebar h4 {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--rock-gray);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.toc-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-sidebar li {
+    margin-bottom: 8px;
+}
+
+.toc-sidebar a {
+    display: block;
+    color: var(--rock-gray);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-left: 2px solid transparent;
+    padding-left: 12px;
+    margin-left: -12px;
+    transition: all 0.2s ease;
+}
+
+.toc-sidebar a:hover {
+    color: var(--trail-red);
+    border-left-color: var(--trail-red);
+}
+
+.toc-sidebar a.active {
+    color: var(--alpine-blue);
+    border-left-color: var(--alpine-blue);
+    font-weight: 600;
+}
+
+/* Hide TOC container if no TOC generated */
+.toc-container:empty {
+    display: none;
+}
+
+/* Ensure parent row doesn't break sticky */
+.col-md-3 {
+    align-self: flex-start;
+}
+</style>

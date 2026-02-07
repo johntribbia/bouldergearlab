@@ -98,7 +98,7 @@ not a comfortable area of knowledge for you.
 ![image_14.png](image_14.png)
 
 
-The bike is 90% assembling and there are only a handful of tools
+The bike is 90% assembled and there are only a handful of tools
 necessary to complete the build. 
 
 After assembling and adjusting to fit, I took the bike for a spin around

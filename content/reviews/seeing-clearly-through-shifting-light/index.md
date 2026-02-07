@@ -73,7 +73,7 @@ hand.
 While the Short Fuse prioritizes functionality, it doesn't compromise on
 style. The minimalist design is sleek and understated, offering a touch
 of sophistication to any outdoor adventure. As an added bonus, the color
-pattern is unique to each frame meaning no two Short Fuse's are the
+pattern is unique to each frame meaning no two Short Fuses are the
 same!
 
 

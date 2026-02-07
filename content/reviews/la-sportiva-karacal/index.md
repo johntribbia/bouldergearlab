@@ -85,7 +85,7 @@ challenging well known local FKT's. 
 
 Weight: men's 10.37 oz/ 294g   (US9)
 
-Samples: men’s: 10.37 oz/ 294g   (288g left,, 301g right) US9, 10.9 oz /
+Samples: men's: 10.37 oz/ 294g   (288g left, 301g right) US9, 10.9 oz /
 310 grams US9
 
 Stack Height: 29mm heel / 22mm forefoot, 7mm drop

@@ -4,7 +4,7 @@ date: 2025-01-28
 banner: "image_10.jpg"
 tags: ["cycling", "accessories"]
 categories: ["reviews"]
-description: "For two hours, I battled the elements – a relentless wind, a biting 20-degree chill, and the ever-present threat of numb toes. But my feet remained blissfull..."
+description: "For two hours, I battled the elements – a relentless wind, a biting 20-degree chill, and the ever-present threat of numb toes. But my feet remained blissfully warm..."
 draft: false
 ---
 <!--more-->

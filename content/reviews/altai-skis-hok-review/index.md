@@ -98,7 +98,7 @@ so I would opt for a waterproof shoe with a little stiffness.
 
 For those looking for a more traditional setup, the Hok includes inserts
 for 75mm 3pin bindings. Additionally, an adapter plate available
-separately offers compatibility with Rottefella NNN BC and Solomon BC
+separately offers compatibility with Rottefella NNN BC and Salomon BC
 bindings, further enhancing the ski's versatility for various skiing
 styles.
 

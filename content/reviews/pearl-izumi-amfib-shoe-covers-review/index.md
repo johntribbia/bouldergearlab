@@ -32,7 +32,7 @@ that traps heat, providing additional warmth.
 The AmFIB Shoe Covers are designed to fit snugly over your cycling
 shoes. They have a wide elastic band at the top that helps to keep them
 in place, and a hook-and-loop strap at the bottom that provides
-additional adjustability. The velcro secure on the heel is nice for easy
+additional adjustability. The Velcro closure on the heel is nice for easy
 entry and removal.
 
 

@@ -4,7 +4,7 @@ date: 2025-12-28
 banner: "image_1.jpg"
 tags: ['running', 'cross-training', 'home fitness']
 categories: ['reviews']
-description: "NordicTrack x16 Elliptical Review ($2,799 MSRP)"
+description: "...But the truth is, sometimes my knee just needs a break from the pounding of the trails and pavement. That’s where low-impact cross-training has been helpful, and I've been testing the NordicTrack x16 Elliptical to see if it could become a valuable part of my rehab and long-term training strategy..."
 draft: false
 ---
 <!--more-->

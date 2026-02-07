@@ -63,7 +63,7 @@ take a few snacks and water with you
   questions for more than an hour. So you’ll definitely want to be
   comfortable and satiated.
 
-\(4\)   If you have kids, bring a baby sitter to help entertain while
+\(4\)   If you have kids, bring a babysitter to help entertain them while
 you are out on the bikes.
 
 - [University Bicycles](https://ubikes.com/) in Boulder has one at a

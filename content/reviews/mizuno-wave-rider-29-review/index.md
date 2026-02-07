@@ -28,7 +28,7 @@ Reviews Here</span></a>
 ### Introduction
 
 The Wave Rider is a classic daily trainer. By this I mean a shoe at a moderate stack height and a high drop with some neutral focused stability and with durability a priority all at a weight below 10 oz / 284g. In recent years the “classic” formula has stretched as supercritical foams and lighter uppers allow great stack height at the same or lower weights.
-For its 29th edition, the Wave Rider fully joins the “modern world” without losing its essence as a stable neutral trainer suitable for all types of runs. It goes from a 12mm drop to 10mm.. progress..Its midsole goes all supercritical nitrogen infused EVA retaining the Wave Plate but now higher up  in the rear of the  shoe. The upper is a highly supportive yet light and breathable Jacquard Air Mesh.
+For its 29th edition, the Wave Rider fully joins the “modern world” without losing its essence as a stable neutral trainer suitable for all types of runs. It goes from a 12mm drop to 10mm—progress! Its midsole goes all supercritical nitrogen infused EVA retaining the Wave Plate but now higher up in the rear of the shoe. The upper is a highly supportive yet light and breathable Jacquard Air Mesh.
 More modern bonuses: 3mm more forefoot stack height and 1mm more heel stack height to a for 2025 moderate 38.5 mm heel /  28.5 mm forefoot stack height. Final bonus it loses about 13g to come in at a highly competitive for its class weight of about   9.2 oz / 261g US9. Let’s see how this  fully renewed classic performs!
 
 ![image_3.jpg](image_3.jpg)
@@ -61,7 +61,7 @@ Lightweight feel: John/Michael/Dominique/Jen
 Approx. Weight: men's  9.2 oz / 261g US9 (Prior Version Spec Weight: 9.7 oz / 274g US9)
 Sample Weights:
 men’s  8.96 oz / 254g US8.5
-women’’s oz / g US9
+women's oz / g US9
 Stack Height:
 Wave Rider 29: 38.5 mm heel /  28.5 mm forefoot, 10 mm drop
 Wave Rider 28: 37.5mm heel / 25.5 mm forefoot, 12mm drop
@@ -124,7 +124,7 @@ They represent an “experience”. Here the experience is soft, and both spring
 
 Mizuno moved the plate up in the stack for the 29 compared to the 28 and this clearly stabilizes the rear and midfoot of the shoe. This makes the Wave Rider a near light stability/pronation control shoe for me and this even with the softer and more energetic Enerzy NXT foam now found throughout the entire midsole. The 28 which I didn’t personally test had a layer of light EVA below its lower mounted Wave Plate with NXT foam above.
 Mizuno talks about smooth transitions. Well if you need a touch of stability in the mix I would agree but I found the plate somewhat over present in feel under the rear of the  foot especially in the first 10 miles in the shoe. This is not a traditional support approach with firmer medial support or a new age broad platform (especially wide midfoot platforms)  of inherent support such as in ASICS Kayano and recent Saucony Guide. Essentially the plate is a thin layer of support that keeps the foot aligned in the direction of travel.
-I find it a bit overdone, especially at the transition point to toe off area at midfoot with the extensive rubber just ahead of the plate making it quite rigid if stable towards  the front of the shoe This sensation was especially present in the first few runs but now has subsided with the shoe more flexible and easter to roll past midfoot.
+I find it a bit overdone, especially at the transition point to toe off area at midfoot with the extensive rubber just ahead of the plate making it quite rigid if stable towards  the front of the shoe This sensation was especially present in the first few runs but now has subsided with the shoe more flexible and easier to roll past midfoot.
 
 ![image_16.jpg](image_16.jpg)
 

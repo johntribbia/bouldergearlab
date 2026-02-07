@@ -34,13 +34,13 @@ with a wider gait and promote a more natural stride. Thirdly, they are
 constructed with lighter materials to lessen fatigue. Running in
 snowshoes uphill, in powder, and at altitude will tire you out more than
 any workout you’ve probably ever done and the lightweight materials of
-running shoes do actually make a big difference.
+running snowshoes do actually make a big difference.
 
 **Don’t overdress**. The weather outside might be frightful, but running
 in snowshoes kicks your internal thermostat into high gear. A rule of
 thumb is if you feel comfortable and toasty before you start out, you
 are overdressed. If you start your run a little cold, you are probably
-perfectly prepared. In addition, choosing the right type clothing is as
+perfectly prepared. In addition, choosing the right type of clothing is as
 important as the amount of clothing. When running in snowshoes,
 especially through softer snow, most snowshoes kick up snow on your
 backside. With your body temperature rising as you run longer, the snow

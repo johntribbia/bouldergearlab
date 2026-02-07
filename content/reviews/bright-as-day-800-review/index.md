@@ -61,7 +61,7 @@ For longer efforts, I do relocate the battery to my vest using the extension cab
 
 ![image_7.jpg](image_7.jpg)
 
-My one complaint is the headband adjustment system. Once I have it dialed for my preferred hat/buff combination, it's rock solid. But making adjustments on-the-go. It's not a dealbreaker, but it's less convenient than some quick-adjust systems I've used.
+My one complaint is the headband adjustment system. Once I have it dialed for my preferred hat/buff combination, it's rock solid. But making adjustments on-the-go can be tricky. It's not a dealbreaker, but it's less convenient than some quick-adjust systems I've used.
 That said, the silicone grip strip works exceptionally well. Even during those warm summer mornings when I'm dripping sweat by mile 3, this light stays exactly where I put it.
 
 ![image_8.jpg](image_8.jpg)
@@ -104,7 +104,7 @@ I haven’t tested cold weather performance, but I like the added extension cord
 ### Summary
 
 
-After a few weeks of daily pre-dawn use, the Moonlight Mountain Gear Bright as Day 800 has become indispensable to my routine. This isn't a light for casual users or gram-counting runners. Zach Miller used it in Hardrock 100 this year, so that’s a sure tell sign it's engineered for people who depend on their headlamp day in, day out, in conditions that would make other lights underperform.
+After a few weeks of daily pre-dawn use, the Moonlight Mountain Gear Bright as Day 800 has become indispensable to my routine. This isn't a light for casual users or gram-counting runners. Zach Miller used it in Hardrock 100 this year, so that's a telltale sign it's engineered for people who depend on their headlamp day in, day out, in conditions that would make other lights underperform.
 
 ![image_14.jpg](image_14.jpg)
 

@@ -101,7 +101,7 @@ with little to no adjustment needs), like the CGO800S, are basically 90%
 assembled. TENWAYS provides all of the necessary tools to assemble as
 well as helpful instructions on how to do it. I received a beautiful
 pebble gray colorway frame. The rear fender is already installed along
-with integrated front and rear rear lights. The bike also comes equipped
+with integrated front and rear lights. The bike also comes equipped
 with a sturdy kickstand and an adjustable stem that is easily adjusted
 up or down for more comfortable positioning. 
 
@@ -205,7 +205,7 @@ incredibly fun! Overall, the bike riding is smooth, quiet, and the pedal
 assist is between touchy and moderate from a standstill (which is just
 enough for a single speed). It is a heavy bike, when including the
 battery, but at 50+ pounds it isn’t outside the normal range for an
-eBike. Although the weight quite noticeable if you don’t use any pedal
+eBike. Although the weight is quite noticeable if you don't use any pedal
 assist, the relatively powerful motor and graded assist is more than
 enough to counter the weight of the bike.
 

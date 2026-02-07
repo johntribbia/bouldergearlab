@@ -22,7 +22,7 @@ Reviews Here</span></a>
 ### Introduction
 
 John: The trail running community has been eagerly awaiting La Sportiva’s follow-up to their groundbreaking Prodigio, and I think they did well with the Prodigio 2.
-When the original Prodigio launched in early 2024, it was a major shift in La Sportiva’s design philosophy - a move away from their traditionally firm, mountain-focused shoes toward something softer, more cushioned, and geared for ultra-distance comfort on moderate terrain. It was followed by the faster long race Prodigo Pro and more technical long races Prodigio Max.
+When the original Prodigio launched in early 2024, it was a major shift in La Sportiva’s design philosophy - a move away from their traditionally firm, mountain-focused shoes toward something softer, more cushioned, and geared for ultra-distance comfort on moderate terrain. It was followed by the faster long race Prodigio Pro and more technical long races Prodigio Max.
 Now, with the Prodigio 2, La Sportiva aims to refine that formula while addressing some of the original’s limitations.
 According to La Sportiva, the Prodigio 2 features a wider fit and platform, along with their XFlow nitro EVA compound that’s said to be a little softer than the first generation.
 
@@ -142,4 +142,4 @@ John: The Pure Trail Pro is Craft’s more race-oriented trail shoe with less cu
 
 ### Tester Profile
 
-John Tribbia (5' 6", 130lbs) is a former sponsored mountain/trail runner who has run with La Sportiva, Brooks/Fleet Feet, Pearl Izumi, and Salomon. Even though he competes less frequently these days, you can still find John enjoying the daily grind of running on any surface, though his favorite terrain is 30-40% grade climbs. He has won races such as America's Uphill, Imogene Pass Run, and the US Skyrunner Vertical Kilometer Series; and he's held several FKTs on several iconic mountains in Boulder, Colorado and Salt Lake City, Utah. If you follow him on , you'll notice he runs at varying paces between 5 minutes/mile to 12 minutes/mile before the break of dawn almost every day.
+John Tribbia (5' 6", 130lbs) is a former sponsored mountain/trail runner who has run with La Sportiva, Brooks/Fleet Feet, Pearl Izumi, and Salomon. Even though he competes less frequently these days, you can still find John enjoying the daily grind of running on any surface, though his favorite terrain is 30-40% grade climbs. He has won races such as America's Uphill, Imogene Pass Run, and the US Skyrunner Vertical Kilometer Series; and he's held several FKTs on several iconic mountains in Boulder, Colorado and Salt Lake City, Utah. If you follow him on [Strava](https://www.strava.com/athletes/1044838), you'll notice he runs at varying paces between 5 minutes/mile to 12 minutes/mile before the break of dawn almost every day.

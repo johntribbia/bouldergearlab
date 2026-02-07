@@ -126,7 +126,7 @@ I’m 5’6” and have a short torso. I would not characterize the fit of the
 Santa Cruz Highball as compact. In contrast to other carbon hardtails
 like the Pivot LES 2 or the Specialized Epic HT, the Highball has a
 longer reach. After a few minor adjustments, I was able to find the
-right fit, but it  is definitely well suited for larger framed people.
+right fit, but it is definitely well suited for larger framed people.
 Notwithstanding, the geometry of the bike puts your body over the
 pedals, ensuring optimal pedal position for power and speed. 
 

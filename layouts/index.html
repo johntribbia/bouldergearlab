@@ -48,29 +48,73 @@
         </div>
 
         <!-- Recent Reviews Section with Premium Cards -->
-        <section class="section">
+        <section class="section reviews-section">
             <div class="container">
-                <h2>Latest Reviews</h2>
-                <p class="section-subtitle">Honest gear reviews from the Colorado Rockies</p>
+                <div class="section-header">
+                    <span class="section-tag">Fresh from the Lab</span>
+                    <h2>Latest Reviews</h2>
+                    <p class="section-subtitle">Honest gear reviews tested in the Colorado Rockies</p>
+                </div>
                 
-                <div class="peaks-grid">
+                <div class="peaks-grid premium-grid">
                     {{ range first 6 (where .Site.RegularPages "Section" "reviews") }}
-                    <div class="peak-card fade-in-up">
-                        <div class="peak-title">
-                            <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a>
-                        </div>
-                        <div class="peak-desc">
-                            {{ if .Description }}
-                                {{ .Description | truncate 120 }}
+                    <article class="review-card fade-in-up">
+                        {{ if .Params.banner }}
+                        {{ $image := .Resources.GetMatch .Params.banner }}
+                        <div class="review-card-image">
+                            {{ if $image }}
+                            <img src="{{ $image.Permalink }}" alt="{{ .Title }}" loading="lazy">
                             {{ else }}
-                                {{ .Summary | plainify | truncate 120 }}
+                            <img src="{{ .Params.banner | relURL }}" alt="{{ .Title }}" loading="lazy">
                             {{ end }}
+                            <div class="review-card-overlay">
+                                <a href="{{ .Permalink }}" class="review-card-link">
+                                    <span>Read Review</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div style="margin-top: 20px;">
-                            <a href="{{ .Permalink }}" class="cta-button" style="padding: 12px 24px; font-size: 14px;">Read Review</a>
+                        {{ end }}
+                        <div class="review-card-content">
+                            <div class="review-card-meta">
+                                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                                {{ if .Params.categories }}
+                                <span class="review-category">{{ index .Params.categories 0 }}</span>
+                                {{ end }}
+                            </div>
+                            <h3 class="review-card-title">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h3>
+                            <p class="review-card-excerpt">
+                                {{ if .Description }}
+                                    {{ .Description | truncate 140 }}
+                                {{ else }}
+                                    {{ .Summary | plainify | truncate 140 }}
+                                {{ end }}
+                            </p>
+                            <a href="{{ .Permalink }}" class="review-card-cta">
+                                Read Full Review
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
                         </div>
-                    </div>
+                    </article>
                     {{ end }}
+                </div>
+                
+                <div class="section-cta">
+                    <a href="/reviews/" class="cta-button browse-all">
+                        Browse All Reviews
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>

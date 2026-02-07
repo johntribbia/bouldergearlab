@@ -1,22 +1,163 @@
-<!-- Intro Section -->
-<div class="bgl-intro-section">
+<!-- Premium Intro Section -->
+<section class="bgl-intro-section">
     <div class="container">
-        <div class="row">
-            <div class="col-12 text-left">
-                <p class="bgl-hero-text">Real Testing, Real Insights</p>
-                <blockquote class="blockquote">
-                    <p class="bgl-hero-text">
-                        Every review combines analytical thinking with extensive real-world testing in the outdoor lab.
-                        As a data scientist and lifelong runner, cyclist, and outdoor enthusiast, I evaluate gear
-                        through thousands of miles on Colorado's trails, roads, and mountains - not through laboratory
-                        measurements.
-                        <br><br>
-                        My background shapes how I approach products: asking the right questions, considering edge
-                        cases, and thinking critically about performance claims. Every review is independent, with zero
-                        brand sponsorships. The goal is honest objective assessment that helps readers make informed decisions.
-                    </p>
-                </blockquote>
+        <div class="intro-wrapper fade-in-up">
+            <div class="intro-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+                Independent Reviews
+            </div>
+            
+            <h2 class="intro-title">Real Testing, Real Insights</h2>
+            
+            <div class="intro-content">
+                <p>
+                    Every review combines analytical thinking with extensive real-world testing in the outdoor lab.
+                    As a data scientist and lifelong runner, cyclist, and outdoor enthusiast, I evaluate gear
+                    through thousands of miles on Colorado's trails, roads, and mountains — not through laboratory
+                    measurements.
+                </p>
+                <p>
+                    My background shapes how I approach products: asking the right questions, considering edge
+                    cases, and thinking critically about performance claims. Every review is independent, with zero
+                    brand sponsorships. The goal is honest, objective assessment that helps readers make informed decisions.
+                </p>
+            </div>
+            
+            <div class="intro-features">
+                <div class="intro-feature">
+                    <div class="feature-text">
+                        <strong>Field Tested</strong>
+                        <span>Colorado trails & roads</span>
+                    </div>
+                </div>
+                <div class="intro-feature">
+                    <div class="feature-text">
+                        <strong>Data-Driven</strong>
+                        <span>Analytical approach</span>
+                    </div>
+                </div>
+                <div class="intro-feature">
+                    <div class="feature-text">
+                        <strong>No Sponsors</strong>
+                        <span>100% independent</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<style>
+.bgl-intro-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, white 0%, #fafafa 100%);
+}
+
+.intro-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, rgba(70, 166, 6, 0.1), rgba(44, 95, 141, 0.1));
+    color: var(--alpine-blue);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+}
+
+.intro-badge svg {
+    color: var(--trail-red);
+}
+
+.intro-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 900;
+    color: var(--mountain-dark);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+}
+
+.intro-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--rock-gray);
+    margin-bottom: 48px;
+}
+
+.intro-content p {
+    margin-bottom: 20px;
+}
+
+.intro-features {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.intro-feature {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 28px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.intro-feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 32px;
+}
+
+.feature-text {
+    text-align: left;
+}
+
+.feature-text strong {
+    display: block;
+    font-weight: 700;
+    color: var(--mountain-dark);
+    font-size: 16px;
+}
+
+.feature-text span {
+    color: var(--rock-gray);
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .bgl-intro-section {
+        padding: 60px 0;
+    }
+    
+    .intro-features {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .intro-feature {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+</style>

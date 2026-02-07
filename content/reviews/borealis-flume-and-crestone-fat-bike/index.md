@@ -112,7 +112,7 @@ carbon fiber Crestone frame has a deep and textured look to it,
 sparkling in the sun and changing almost as if magic in different
 lighting conditions and sun angles.  The construction, design, geometry
 and angles of the frame and fork make it clear that the folks at
-Crestone really know what they are doing and have not only supreme frame
+Borealis really know what they are doing and have not only supreme frame
 building skills, but have a keen sense of blending high performance and
 practicality.  The bike is a work of art.
 
@@ -136,8 +136,8 @@ the versatility of any mountain bike, especially a fat bike. I was able
 to take the Flume on dry dirt, rutty dried out mud, fresh packed snow,
 and melted out frozen snow. To be frank, the bike handles all of those
 conditions really well. It floats atop the unstable terrain like snow
-and loose dirt and yet can dig into mud or wet snow.  I would be remiss
-to mention that I really enjoyed how it rides on flat hardpack dirt or
+and loose dirt, and yet can dig into mud or wet snow. I would be remiss
+not to mention that I really enjoyed how it rides on flat hardpack dirt or
 road – It goes a lot faster than I would have guessed. I think one
 reason is that Borealis designed the bike to have a standard cross
 country mountain bike frame geometry. I love climbing and I found the
