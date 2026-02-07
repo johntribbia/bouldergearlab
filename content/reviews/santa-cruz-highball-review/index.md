@@ -42,7 +42,6 @@ steep and/or technical climbs, while the long wheelbase provides expert
 and novice riders with stability and control on descents. 
 
 
-![image_0.png](image_0.png)
 
 
 ## Pros and Cons

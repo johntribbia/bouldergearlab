@@ -16,7 +16,6 @@ elimination, ignited a glimmer of hope. However, my test drive revealed
 both brilliance and shortcomings.
 
 
-![image_1.jpg](image_1.jpg)
 
 
 OX SOX's triumph lies in its proprietary fabric blend, which neutralizes

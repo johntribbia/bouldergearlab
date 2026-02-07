@@ -12,7 +12,6 @@ draft: false
 ## 
 
 
-![image_1.png](image_1.png)
 
 
 When it comes to hitting the trails or pounding the pavement, you need

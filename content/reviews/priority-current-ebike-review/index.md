@@ -18,7 +18,6 @@ All RoadTrailRun Reviews Here</span></a>
 Priority Current eBike Review ($3,299)
 
 
-![image_11.png](image_11.png)
 
 
 If you haven’t experienced the eBike world, I’m convinced you are

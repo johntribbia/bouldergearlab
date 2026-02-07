@@ -29,7 +29,6 @@ This fabric is soft, durable, and breathable, making it perfect for both
 hot and cold weather.
 
 
-![image_0.jpg](image_0.jpg)
 
 
 The inseam of the LIVSN Flex Canvas Shorts is 8.5 inches. This is a good

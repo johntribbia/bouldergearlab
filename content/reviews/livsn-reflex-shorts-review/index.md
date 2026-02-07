@@ -9,7 +9,6 @@ draft: false
 ---
 <!--more-->
 
-![image_1.jpg](image_1.jpg)
 
 
 The [LIVSN Reflex

@@ -21,7 +21,6 @@ Reviews Here</span></a>
 ### Moonlight Mountain Gear Bright as Day 800 Headlamp ($199)
 
 
-![image_1.jpg](image_1.jpg)
 
 248 grams/8.7 oz (Head unit 55g/1.9 oz, Battery pack 100g/3.5 oz, Headband/cable 93g/3.3 oz)
 800 Max Lumens

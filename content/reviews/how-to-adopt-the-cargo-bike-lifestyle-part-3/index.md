@@ -9,7 +9,6 @@ draft: false
 ---
 <!--more-->
 
-![image_2.jpg](image_2.jpg)
 
 
 One important responsibility as a current or future e-bike rider is to

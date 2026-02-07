@@ -18,7 +18,6 @@ Lens](https://easternouter.com/collections/bike-and-run-performance-sunglasses/p
 here's what I discovered.
 
 
-![image_0.png](image_0.png)
 
 
 ## Adaptive All-Star

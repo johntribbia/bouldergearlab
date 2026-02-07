@@ -21,7 +21,6 @@ class="button primary button-wrapper"><span>Read All RoadTrailRun
 Reviews Here</span></a>
 
 
-![image_12.jpg](image_12.jpg)
 
 
 ### Introduction

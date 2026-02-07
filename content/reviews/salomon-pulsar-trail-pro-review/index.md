@@ -21,7 +21,6 @@ Reviews Here</span></a>
 Salomon Pulsar Trail Pro ($150)
 
 
-![image_1.png](image_1.png)
 
 
 ### Introduction

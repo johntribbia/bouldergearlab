@@ -16,7 +16,6 @@ a cold weather ride faster than cold toes. That's where the PEARL iZUMi
 AmFIB Shoe Covers come in.
 
 
-![image_10.jpg](image_10.jpg)
 
 
 The AmFIB Shoe Covers are made from a combination of AmFIB fabric and

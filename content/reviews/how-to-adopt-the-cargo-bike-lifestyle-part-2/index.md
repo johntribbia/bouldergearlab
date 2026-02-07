@@ -12,7 +12,6 @@ draft: false
 A few weeks ago, my car was totaled…
 
 
-![image_1.jpg](image_1.jpg)
 
 
 It was a trusty 1997 Subaru Legacy Wagon, approaching 222K miles on

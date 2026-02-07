@@ -22,7 +22,6 @@ enthusiasts a versatile and efficient way to explore the winter
 backcountry.
 
 
-![image_0.png](image_0.png)
 
 
 ## First Impressions & Design

@@ -15,7 +15,6 @@ sandwich, you've probably wondered who came up with the idea to grind
 peanuts into a paste and put it on bread.
 
 
-![image_0.jpg](image_0.jpg)
 
 
 The answer is a little complicated. Peanut butter has been around for

@@ -21,7 +21,6 @@ Reviews Here</span></a>
 Hoka Speedgoat 5 GTX ($170)
 
 
-![image_1.jpg](image_1.jpg)
 
 
 **Pros**

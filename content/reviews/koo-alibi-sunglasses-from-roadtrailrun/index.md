@@ -21,7 +21,6 @@ through the paces on various runs and a few bike rides, I'm here to tell
 you that they are a solid pair of eyewear.
 
 
-![image_0.png](image_0.png)
 
 
 ### Features

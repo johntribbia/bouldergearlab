@@ -17,7 +17,6 @@ Socks](https://www.sealskinzusa.com/products/starston-waterproof-cold-weather-mi
 ($55).
 
 
-![image_10.jpg](image_10.jpg)
 
 
 These socks are more than just a layer of warmth; they're a fortress

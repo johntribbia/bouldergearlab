@@ -18,4 +18,3 @@ your immune system?
 That's where Liquid IV Hydration Multiplier comes in. Or does it?
 
 
-![image_1.png](image_1.png)

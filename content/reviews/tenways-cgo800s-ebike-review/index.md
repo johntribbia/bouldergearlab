@@ -19,7 +19,6 @@ Reviews Here</span></a>
 TENWAYS CGO800S eBike Review ($1,999)
 
 
-![image_0.png](image_0.png)
 
 
 ### Introduction

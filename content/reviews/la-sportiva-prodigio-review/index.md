@@ -16,7 +16,6 @@ Original review was posted on
 La Sportiva Prodigio ($155, release in mid-February 2024)
 
 
-![image_0.png](image_0.png)
 
 
 ## Introduction

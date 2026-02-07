@@ -37,7 +37,6 @@ purchasing one, I’d like to share with you a few “Dos” and “Don’ts” 
 that you too can enjoy the pleasures of baby jogging, and pass along a
 few tips for getting in a good workout.
 
-![image_0.png](image_0.png)
 
 ​​
 

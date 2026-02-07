@@ -15,7 +15,6 @@ for Crestone as tested)
 Sizes: S(15”), M(17”), L(19”), XL(21”)
 
 
-![image_0.jpg](image_0.jpg)
 
 
 Borealis Crestone

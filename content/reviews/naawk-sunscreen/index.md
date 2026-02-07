@@ -43,7 +43,6 @@ season is summer or winter, make sure to apply an SPF-30 (or more),
 broad-spectrum sunscreen to protect your skin from harmful UV rays!
 
 
-![image_1.jpg](image_1.jpg)
 
 
 ## Here are some additional helpful tips to help you better protect your skin year round:

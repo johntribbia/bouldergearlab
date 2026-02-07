@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-description: "John Tribbia's Professional Resume - Data Science Leader and ML Innovator"
+description: "John Tribbia's Professional Resume - Data Science Leader"
 layout: "resume"
 draft: false
 ---

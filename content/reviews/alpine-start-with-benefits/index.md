@@ -16,7 +16,6 @@ instant coffee that, well, actually tastes good. They even claim it
 surpasses the likes of Starbucks (gasp!).
 
 
-![image_1.png](image_1.png)
 
 
 Intrigued? Absolutely. So, when a care package containing Matcha with

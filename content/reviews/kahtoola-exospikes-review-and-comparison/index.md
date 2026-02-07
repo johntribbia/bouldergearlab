@@ -20,7 +20,6 @@ them. I couldn't fathom how anything could possibly be better than
 MICROspikes.
 
 
-![image_1.jpg](image_1.jpg)
 
 
 The impressive quality of their performance truly astounded me. The

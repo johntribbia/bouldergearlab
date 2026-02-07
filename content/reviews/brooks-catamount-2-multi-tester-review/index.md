@@ -22,7 +22,6 @@ Herzgova, and Sam Winebaum*
 ### Brooks Catamount 2 ($170)
 
 
-![image_0.jpg](image_0.jpg)
 
 
 ### Introduction

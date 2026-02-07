@@ -19,7 +19,6 @@ Reviews Here</span></a>
 Priority Continuum Onyx ($1,299)
 
 
-![image_1.png](image_1.png)
 
 
 Despite the fact that I’ve been riding bikes and commuting for countless

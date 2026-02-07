@@ -19,7 +19,6 @@ ambitious claims? This review, forged through rigorous testing in
 10-20°F temperatures, seeks to unravel the truth.
 
 
-![image_0.png](image_0.png)
 
 
 The core of these gloves is the 170g Primaloft Gold insulation with

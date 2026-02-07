@@ -16,7 +16,6 @@ like most. How To Adopt The Cargo Bike Lifestyle – Yuba Step 4 – Test
 Ride is here to help. 
 
 
-![image_1.jpg](image_1.jpg)
 
 
 When I was shopping for e-bikes, I hadn’t actually been on one before.

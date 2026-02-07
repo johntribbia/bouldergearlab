@@ -12,7 +12,6 @@ draft: false
 # 
 
 
-![image_3.jpg](image_3.jpg)
 
 
 During my graduate school days while living in Boulder, Colorado (my

@@ -21,7 +21,6 @@ Reviews Here</span></a>
 ### Lectric XPedition 2.0 Cargo eBike ($1,799 + accessories)
 
 
-![image_1.jpg](image_1.jpg)
 
 
 ### Introduction

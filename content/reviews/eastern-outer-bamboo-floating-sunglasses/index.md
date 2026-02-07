@@ -20,7 +20,6 @@ Polarized UV400 protection, effectively shielding your eyes from the
 sun's harmful rays.
 
 
-![image_1.png](image_1.png)
 
 
 [Eastern Outer's story](https://easternouter.com/pages/about-us) is

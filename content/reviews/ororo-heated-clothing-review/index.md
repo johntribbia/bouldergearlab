@@ -31,7 +31,6 @@ vest to try. Thankfully, too, we had an unusually long stretch of days
 with sub-zero temperature once they arrived.
 
 
-![image_0.jpg](image_0.jpg)
 
 
 Packaging is really nice with unassuming yet clean brand logo

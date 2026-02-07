@@ -14,7 +14,6 @@ Bike](https://www.statebicycle.com/collections/bicycles/products/4130-all-road-c
 ($899)
 
 
-![image_1.png](image_1.png)
 
 
 I received a loaner [State 4130 All-Road - a drop-bar steel gravel bike

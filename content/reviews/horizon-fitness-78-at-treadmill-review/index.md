@@ -44,7 +44,6 @@ home fitness enthusiasts who need a quality treadmill or home fitness
 equipment at a mid-tier price.
 
 
-![image_1.png](image_1.png)
 
 
 ### Pros
