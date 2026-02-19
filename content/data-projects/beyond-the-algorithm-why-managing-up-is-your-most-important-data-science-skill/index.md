@@ -20,7 +20,7 @@ Drawing upon my experiences as a National Outdoor Leadership School ([NOLS](http
 
 In the "wilderness" of corporate data science, the stakes might seem lower, but the principle is identical. Managing up isn't about sucking up or office politics. It's the strategic communication and proactive engagement required to ensure your hard work actually makes an impact. It's the missing link that connects all those leadership roles, especially when you're the technical expert trying to navigate complex organizational terrain.
 
-Why Managing Up is Non-Negotiable for Data Scientists (Especially the Lone Wolves)
+## Why Managing Up is Non-Negotiable for Data Scientists (Especially the Lone Wolves)
 Data science is inherently complex. We deal in probabilities, uncertainty, and models that can feel like black boxes to our non-technical colleagues and leaders. When I was the only data person, I quickly learned:
 
 - **You Need Buy-In**: Getting resources (time, compute power, access to more data) requires convincing leadership that your work is valuable and aligned with business goals. You can't just show code; you have to sell the potential outcome.
