@@ -1,1625 +1,1756 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PL27J3MM6K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PL27J3MM6K');
-    </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Tribbia - Data Science Leader</title>
-    <!-- Updated Typography -->
-    <!-- Google Fonts Link -->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">    <style>
-        :root {
-            --mountain-dark: #1a1a2e;
-            --trail-red: #46a606;
-            --summit-white: #F5F5F7;
-            --rock-gray: #86868B;
-            --alpine-blue: #2c5f8d;
-            --forest-green: #2d5016;
-            --font-display: 'Archivo', sans-serif;
-            --font-body: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--summit-white);
-            color: #1D1D1F;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="rgba(70,166,6,0.3)" stroke="%2346a606" stroke-width="2"/></svg>') 10 10, auto;
-        }
-
-        /* Reading Progress Bar */
-        .reading-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
-            width: 0%;
-            z-index: 9999;
-            transition: width 0.1s ease;
-        }
-
-        /* Hero Section - Mountain Landscape */
-        .hero-section {
-            min-height: 82vh;
-            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 0;
-        }
-
-        #mountainCanvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        #mountainCanvas.loading {
-            opacity: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            max-width: 1000px;
-            padding: 20px 20px;
-        }
-
-        .hero-tagline {
-            color: var(--summit-white);
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 16px;
-            margin-bottom: 10px;
-            display: block;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(40px, 10vw, 90px);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: white;
-            line-height: 0.95;
-            margin-bottom: 24px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-        }
-        
-
-        .hero-subtitle {
-            font-size: clamp(16px, 2vw, 21px);
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 400;
-            max-width: 800px;
-            margin: 0 auto 28px;
-            line-height: 1.5;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Stats Row */
-        .stats-row {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin: 24px auto;
-            padding: 20px 50px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            max-width: 600px;
-        }
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            display: block;
-            font-family: var(--font-display);
-            font-size: 40px;
-            font-weight: 700;
-            color: var(--trail-red);
-            font-variant-numeric: tabular-nums;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .stat-label {
-            display: block;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            opacity: 0.9;
-            color: white;
-            margin-top: 8px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 18px 40px;
-            background: var(--trail-red);
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 30px rgba(224, 30, 55, 0.3);
-            margin: 0 10px;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(224, 30, 55, 0.5);
-        }
-
-        .cta-button:focus {
-            outline: 3px solid white;
-            outline-offset: 4px;
-        }
-
-        .cta-button.secondary {
-            background: transparent;
-            border: 2px solid white;
-        }
-
-        .cta-button.secondary:hover {
-            background: white;
-            color: var(--mountain-dark);
-        }
-
-        .cta-button.secondary:focus {
-            outline: 3px solid var(--trail-red);
-            outline-offset: 4px;
-        }
-
-        /* Content Sections */
-        .section {
-            padding: 55px 0 0;
-            position: relative;
-            background-color: var(--summit-white);
-            z-index: 100;
-        }
-
-        .section.compact {
-            padding: 28px 0 0;
-        }
-
-        /* Section Dividers */
-        .section::before {
-            content: "▲";
-            position: absolute;
-            top: 26px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 20px;
-            color: var(--trail-red);
-            opacity: 0.3;
-        }
-
-        .section:first-of-type::before {
-            display: none;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        h2 {
-            font-family: var(--font-display);
-            font-size: 38px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 6px;
-        }
-
-        h2::before {
-            content: "▲ ";
-            color: var(--trail-red);
-            margin-right: 10px;
-        }
-
-        .section-subtitle {
-            font-size: 16px;
-            color: var(--rock-gray);
-            margin-bottom: 24px;
-            font-style: italic;
-        }
-
-        /* Fade in animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* About / Bio Summary Card */
-        .about-card {
-            background: white;
-            border-radius: 20px;
-            padding: 28px 32px;
-            border: 2px solid #eee;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            margin-bottom: 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
-        }
-
-        .about-card p {
-            font-size: 16px;
-            line-height: 1.75;
-            color: #333;
-        }
-
-        .about-card p + p {
-            margin-top: 12px;
-        }
-
-        /* Technical Expertise Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-bottom: 24px;
-        }
-
-        .skill-category {
-            background: white;
-            border-radius: 16px;
-            padding: 18px 20px;
-            border: 2px solid #eee;
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            border-color: var(--trail-red);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .skill-category h3 {
-            color: var(--trail-red);
-            font-size: 16px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            background: var(--summit-white);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #333;
-            border: 1px solid #ddd;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Skill proficiency indicator */
-        .skill-tag::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 2px;
-            width: 0%;
-            background: var(--trail-red);
-            transition: width 0.6s ease;
-        }
-
-        .skill-category:hover .skill-tag::before {
-            width: 100%;
-        }
-
-        /* Tooltip */
-        .skill-tag[data-tooltip] {
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
-        }
-
-        .skill-tag[data-tooltip]::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-8px);
-            background: var(--mountain-dark);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 11px;
-            white-space: nowrap;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            z-index: 10;
-        }
-
-        .skill-tag[data-tooltip]:hover::after {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-12px);
-        }
-
-        /* Peak Performance Cards */
-        .peaks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .peak-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            border: 2px solid #eee;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .peak-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
-        }
-
-        .peak-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-            border-color: var(--trail-red);
-        }
-
-        .peak-title {
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--trail-red);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-        }
-
-        .peak-desc {
-            color: #333;
-            line-height: 1.7;
-            font-size: 15px;
-        }
-
-        /* Expedition Timeline */
-        .expedition-section {
-            background: var(--summit-white);
-            padding: 16px 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            max-width: 1100px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        /* Timeline connector line */
-        .expedition-section::before {
-            content: "";
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom,
-                transparent,
-                var(--trail-red) 10%,
-                var(--trail-red) 90%,
-                transparent
-            );
-            transform: translateX(-50%);
-            z-index: 0;
-        }
-
-        .expedition-card {
-            background: white;
-            border-radius: 20px;
-            padding: 22px 24px;
-            margin-bottom: 0;
-            border-left: 6px solid var(--trail-red);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .expedition-card:hover {
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transform: translateX(5px);
-        }
-
-        /* Waypoint markers on timeline */
-        .expedition-card::after {
-            content: "";
-            position: absolute;
-            right: -28px;
-            top: 50%;
-            width: 12px;
-            height: 12px;
-            background: var(--trail-red);
-            border: 3px solid white;
-            border-radius: 50%;
-            transform: translateY(-50%);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            z-index: 2;
-        }
-
-        .expedition-card:nth-child(even)::after {
-            right: auto;
-            left: -28px;
-        }
-
-        .expedition-card:hover::after {
-            width: 16px;
-            height: 16px;
-            box-shadow: 0 0 0 4px rgba(70, 166, 6, 0.2);
-        }
-
-        /* Altitude indicator */
-        .expedition-card::before {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(to bottom, 
-                var(--trail-red) 0%, 
-                var(--alpine-blue) 100%);
-            opacity: 0.2;
-            border-radius: 0 20px 20px 0;
-        }
-
-        .exp-header {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 20px;
-            margin-bottom: 10px;
-            align-items: start;
-        }
-
-        .exp-route {
-            color: var(--trail-red);
-            font-weight: 800;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .company-logo {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-
-        .exp-summit {
-            font-size: 20px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 4px;
-        }
-
-        .exp-location {
-            color: var(--rock-gray);
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        .exp-elevation {
-            font-family: var(--font-display);
-            color: var(--rock-gray);
-            font-weight: 700;
-            font-size: 14px;
-            text-align: right;
-            white-space: nowrap;
-            align-self: start;
-        }
-
-        .exp-terrain {
-            color: #333;
-            font-size: 17px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .team-size {
-            display: inline-block;
-            background: var(--summit-white);
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--alpine-blue);
-            margin-bottom: 12px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .achievements-trail {
-            list-style: none;
-            padding: 0;
-            margin-top: 12px;
-        }
-
-        .achievements-trail li {
-            padding: 5px 0 5px 28px;
-            position: relative;
-            color: #333;
-            line-height: 1.45;
-            font-size: 13.5px;
-        }
-
-        .achievements-trail li:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 18px;
-            height: 18px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2346a606"><path d="M12 2L15 9L22 10L17 15L18 22L12 18L6 22L7 15L2 10L9 9Z"/></svg>');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        .achievements-trail li strong {
-            color: var(--trail-red);
-            font-weight: 800;
-        }
-
-        /* Publications Section */
-        .publications-grid {
-            display: grid;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .publication-card {
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            border-left: 4px solid var(--trail-red);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .pub-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .pub-meta {
-            font-size: 14px;
-            color: var(--rock-gray);
-            margin-bottom: 8px;
-        }
-
-        .pub-citations {
-            display: inline-block;
-            background: var(--summit-white);
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--alpine-blue);
-        }
-
-        /* Awards Grid */
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 12px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .award-badge {
-            background: white;
-            border-radius: 16px;
-            padding: 18px 20px;
-            border: 2px solid #eee;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .award-badge::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--trail-red), var(--alpine-blue));
-        }
-
-        .award-badge:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-            border-color: var(--trail-red);
-        }
-
-        .award-title {
-            font-weight: 800;
-            font-size: 18px;
-            margin-bottom: 8px;
-            line-height: 1.4;
-            color: var(--trail-red);
-        }
-
-        .award-desc {
-            font-size: 14px;
-            opacity: 0.95;
-            line-height: 1.5;
-            color: #333;
-        }
-
-        .award-desc a {
-            color: var(--alpine-blue);
-            text-decoration: none;
-            border-bottom: 1px solid var(--alpine-blue);
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
-        }
-
-        .award-desc a:hover {
-            color: var(--trail-red);
-            border-bottom-color: var(--trail-red);
-        }
-
-        /* Education Section */
-        .training-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 16px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .training-card {
-            background: white;
-            border-radius: 20px;
-            padding: 24px 28px;
-            border: 2px solid #eee;
-        }
-
-        .training-degree {
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .training-institution {
-            color: var(--trail-red);
-            font-weight: 800;
-            font-size: 18px;
-            margin-bottom: 12px;
-        }
-
-        .training-focus {
-            color: var(--rock-gray);
-            font-size: 15px;
-            line-height: 1.8;
-        }
-
-        .training-roles {
-            margin-top: 20px;
-            padding-top: 18px;
-            border-top: 1px solid #eee;
-        }
-
-        .training-roles-label {
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--trail-red);
-            margin-bottom: 12px;
-        }
-
-        .training-role-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 12px;
-            padding: 6px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .training-role-item:last-child {
-            border-bottom: none;
-        }
-
-        .training-role-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .training-role-org {
-            font-size: 13px;
-            color: var(--rock-gray);
-        }
-
-        .training-role-dates {
-            font-size: 13px;
-            color: var(--rock-gray);
-            white-space: nowrap;
-            font-family: var(--font-display);
-        }
-
-        /* Summit Footer */
-        .summit-footer {
-            background: var(--mountain-dark);
-            color: white;
-            padding: 40px 20px 24px;
-            text-align: center;
-        }
-
-        .summit-footer h2 {
-            color: white;
-            margin-bottom: 16px;
-        }
-
-        .summit-tagline {
-            font-size: 18px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 36px;
-            line-height: 1.6;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .contact-button {
-            padding: 18px 40px;
-            background: var(--trail-red);
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s;
-            box-shadow: 0 5px 20px rgba(224, 30, 55, 0.2);
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%2346a606"/></svg>') 12 12, pointer;
-        }
-
-        .contact-button:hover {
-            background: #ff002b;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(224, 30, 55, 0.4);
-        }
-
-        .contact-button:focus {
-            outline: 3px solid white;
-            outline-offset: 4px;
-        }
-
-        .footer-note {
-            opacity: 0.6;
-            font-size: 14px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .open-to-opportunities {
-            background: linear-gradient(135deg, var(--alpine-blue), var(--trail-red));
-            color: white;
-            padding: 24px 30px;
-            border-radius: 16px;
-            margin-top: 24px;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        .open-to-opportunities h3 {
-            font-size: 22px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .open-to-opportunities p {
-            font-size: 15px;
-            opacity: 0.95;
-            line-height: 1.55;
-        }
-
-        /* Stagger animation delays */
-        .expedition-card:nth-child(1) { transition-delay: 0.05s; }
-        .expedition-card:nth-child(2) { transition-delay: 0.1s; }
-        .expedition-card:nth-child(3) { transition-delay: 0.15s; }
-        .expedition-card:nth-child(4) { transition-delay: 0.2s; }
-        .expedition-card:nth-child(5) { transition-delay: 0.25s; }
-        .expedition-card:nth-child(6) { transition-delay: 0.3s; }
-        .expedition-card:nth-child(7) { transition-delay: 0.35s; }
-        .expedition-card:nth-child(8) { transition-delay: 0.4s; }
-
-        .skill-category:nth-child(1) { transition-delay: 0.05s; }
-        .skill-category:nth-child(2) { transition-delay: 0.1s; }
-        .skill-category:nth-child(3) { transition-delay: 0.15s; }
-        .skill-category:nth-child(4) { transition-delay: 0.2s; }
-
-        .peak-card:nth-child(1) { transition-delay: 0.05s; }
-        .peak-card:nth-child(2) { transition-delay: 0.1s; }
-        .peak-card:nth-child(3) { transition-delay: 0.15s; }
-
-        .award-badge:nth-child(1) { transition-delay: 0.05s; }
-        .award-badge:nth-child(2) { transition-delay: 0.1s; }
-        .award-badge:nth-child(3) { transition-delay: 0.15s; }
-        .award-badge:nth-child(4) { transition-delay: 0.2s; }
-        .award-badge:nth-child(5) { transition-delay: 0.25s; }
-        .award-badge:nth-child(6) { transition-delay: 0.3s; }
-
-        @media (max-width: 768px) {
-            .exp-header {
-                flex-direction: column;
-            }
-
-            .exp-elevation {
-                text-align: left;
-            }
-
-            .training-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .expedition-section {
-                grid-template-columns: 1fr;
-            }
-
-            .expedition-section::before {
-                left: 0;
-            }
-
-            .expedition-card::after {
-                left: -28px;
-                right: auto;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-row {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            body {
-                cursor: auto;
-            }
-
-            .cta-button, .contact-button, .award-desc a {
-                cursor: pointer;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Tribbia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+/* ════════════════════════════════════════
+   TOKENS
+════════════════════════════════════════ */
+:root {
+  --canvas-w: 340px;
+
+  /* Zone colors */
+  --predawn:   #0a0d14;
+  --treeline:  #0f1a1c;
+  --alpine:    #111820;
+  --ridge:     #1a2030;
+  --summit:    #e8e4dc;
+  --valley:    #f0ece4;
+
+  --moss:      #7db800;
+  --moss-glow: rgba(125,184,0,0.25);
+  --ice:       #a8c8d8;
+  --stone:     #8a8c84;
+  --snow:      #e8ede8;
+
+  --f-display: 'Outfit', sans-serif;
+  --f-body:    'Outfit', sans-serif;
+  --f-mono:    'Space Mono', monospace;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ════════════════════════════════════════
+   BASE
+════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--predawn); }
+::-webkit-scrollbar-thumb { background: var(--moss); }
+::selection { background: var(--moss); color: var(--predawn); }
+
+body {
+  background: var(--predawn);
+  font-family: var(--f-display);
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ════════════════════════════════════════
+   MOUNTAIN CANVAS — fixed left panel
+════════════════════════════════════════ */
+#mountain-canvas {
+  position: fixed;
+  left: 0; top: 0;
+  width: var(--canvas-w);
+  height: 100vh;
+  z-index: 10;
+  display: block;
+}
+
+/* Altitude HUD */
+#altitude-hud {
+  position: fixed;
+  top: 28px; right: 28px;
+  z-index: 200;
+  text-align: right;
+}
+
+#altitude-counter {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.35);
+  display: block;
+  line-height: 1;
+  transition: color 0.5s ease;
+}
+
+#altitude-label {
+  font-family: var(--f-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.18);
+  display: block;
+  margin-top: 4px;
+}
+
+/* ════════════════════════════════════════
+   SCROLL CONTAINER
+════════════════════════════════════════ */
+#scroll-content {
+  margin-left: var(--canvas-w);
+  position: relative;
+  z-index: 50;
+}
+
+/* ════════════════════════════════════════
+   ZONE: BASE CAMP — hero
+════════════════════════════════════════ */
+.zone-basecamp {
+  min-height: 100vh;
+  padding: 0 72px 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background: transparent;
+}
+
+.basecamp-eyebrow {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: riseIn 1s var(--ease-expo) 0.3s forwards;
+}
+
+.basecamp-name {
+  font-family: var(--f-display);
+  font-size: clamp(72px, 9.5vw, 138px);
+  font-weight: 900;
+  line-height: 0.87;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: riseIn 1.2s var(--ease-expo) 0.5s forwards;
+}
+
+.basecamp-name .name-sub {
+  display: block;
+  font-weight: 400;
+  font-style: normal; font-weight: 300; letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.62em;
+  letter-spacing: -0.01em;
+}
+
+.basecamp-role {
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: riseIn 1s var(--ease-expo) 0.8s forwards;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.basecamp-role::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--moss);
+  display: block;
+  flex-shrink: 0;
+}
+
+.basecamp-desc {
+  font-family: var(--f-display);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.38);
+  max-width: 480px;
+  margin-bottom: 52px;
+  opacity: 0;
+  animation: riseIn 1s var(--ease-expo) 1.0s forwards;
+}
+
+.basecamp-desc strong {
+  color: rgba(255,255,255,0.72);
+  font-weight: 700;
+}
+
+/* Stats row */
+.basecamp-stats {
+  display: flex;
+  gap: 0;
+  opacity: 0;
+  animation: riseIn 1s var(--ease-expo) 1.2s forwards;
+}
+
+.bcamp-stat {
+  padding: 16px 28px 16px 0;
+  margin-right: 28px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.bcamp-stat:last-child { border-right: none; margin-right: 0; }
+
+.bcamp-n {
+  font-family: var(--f-display);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--moss);
+  line-height: 1;
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+.bcamp-l {
+  font-family: var(--f-mono);
+  font-size: 8.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.25);
+  display: block;
+  margin-top: 6px;
+}
+
+.basecamp-scroll-hint {
+  position: absolute;
+  bottom: 32px; right: 72px;
+  font-family: var(--f-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  animation: riseIn 1s var(--ease-expo) 1.8s forwards;
+}
+
+.scroll-hint-line {
+  width: 40px; height: 1px;
+  background: rgba(255,255,255,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-hint-line::after {
+  content: '';
+  position: absolute;
+  left: -100%; top: 0;
+  width: 100%; height: 100%;
+  background: var(--moss);
+  animation: scanLine 2s ease-in-out 2.2s infinite;
+}
+
+@keyframes scanLine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ════════════════════════════════════════
+   SECTION SHELL
+════════════════════════════════════════ */
+.zone {
+  padding: 80px 72px 80px 60px;
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Zone label — pinned left edge */
+.zone-label {
+  position: absolute;
+  left: -var(--canvas-w);
+  writing-mode: vertical-lr;
+  font-family: var(--f-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.12);
+  top: 80px;
+  left: 16px;
+  transform: rotate(180deg);
+}
+
+.zone-header {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 52px;
+}
+
+.zone-num {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  color: var(--moss);
+  letter-spacing: 0.16em;
+}
+
+.zone-title {
+  font-family: var(--f-display);
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.zone-rule {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.07);
+  align-self: center;
+}
+
+/* Dark zones */
+.zone-dark {
+  background: transparent;
+  color: #fff;
+}
+
+.zone-dark .zone-title { color: rgba(255,255,255,0.88); }
+
+/* Mid zones */
+.zone-mid {
+  background: rgba(255,255,255,0.02);
+  color: #fff;
+}
+
+/* Light zones */
+.zone-light {
+  background: var(--summit);
+  color: var(--predawn);
+}
+
+.zone-light .zone-title { color: var(--predawn); }
+.zone-light .zone-num { color: #4a7a00; }
+.zone-light .zone-rule { background: rgba(0,0,0,0.1); }
+
+/* ════════════════════════════════════════
+   ABOUT
+════════════════════════════════════════ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-prose p {
+  font-family: var(--f-display);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.6);
+}
+
+.about-prose p + p { margin-top: 20px; }
+.about-prose strong { color: rgba(255,255,255,0.9); font-weight: 700; }
+
+.about-meta { border-left: 1px solid rgba(255,255,255,0.08); padding-left: 28px; }
+
+.meta-item { margin-bottom: 24px; }
+.meta-item:last-child { margin-bottom: 0; }
+
+.meta-key {
+  font-family: var(--f-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 6px;
+}
+
+.meta-val {
+  font-family: var(--f-display);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+.meta-val a { border-bottom: 1px solid rgba(125,184,0,0.3); color: rgba(255,255,255,0.7); transition: border-color 0.2s; }
+.meta-val a:hover { border-color: var(--moss); color: var(--moss); }
+
+/* Open badge */
+.open-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--moss);
+  border: 1px solid rgba(125,184,0,0.3);
+  padding: 9px 16px;
+  margin-top: 32px;
+}
+
+.open-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--moss);
+  box-shadow: 0 0 8px var(--moss);
+  animation: breathe 2.5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.5;transform:scale(.7)}
+}
+
+/* ════════════════════════════════════════
+   SKILLS — topographic terrain
+════════════════════════════════════════ */
+.topo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.topo-col {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.topo-head {
+  padding: 14px 20px;
+  background: rgba(125,184,0,0.08);
+  border-bottom: 1px solid rgba(125,184,0,0.15);
+  font-family: var(--f-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+
+.topo-item {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-family: var(--f-display);
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+  transition: color 0.2s ease, background 0.2s ease;
+  cursor: default;
+  overflow: hidden;
+}
+
+.topo-item:last-child { border-bottom: none; }
+
+/* Contour fill on hover */
+.topo-item::before {
+  content: '';
+  position: absolute;
+  left: -100%; top: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(125,184,0,0.07));
+  transition: left 0.4s ease;
+}
+
+.topo-item:hover::before { left: 0; }
+.topo-item:hover { color: rgba(255,255,255,0.88); }
+
+/* ════════════════════════════════════════
+   EXPERIENCE — geological strata
+════════════════════════════════════════ */
+.strata-log { display: flex; flex-direction: column; }
+
+.stratum {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0;
+  position: relative;
+}
+
+/* Strata connector */
+.stratum::before {
+  content: '';
+  position: absolute;
+  left: 159px;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+.stratum-meta {
+  padding: 28px 32px 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.stratum:last-child .stratum-meta { border-bottom: none; }
+
+.s-dates {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 8px;
+}
+
+.s-company {
+  font-family: var(--f-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.s-loc {
+  font-family: var(--f-mono);
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.22);
+}
+
+.stratum-body {
+  padding: 28px 0 28px 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-left: 1px solid rgba(255,255,255,0.06);
+}
+
+.stratum:last-child .stratum-body { border-bottom: none; }
+
+/* Current stratum — glows */
+.stratum.current .stratum-meta { border-left: 2px solid var(--moss); padding-left: 16px; }
+.stratum.current .s-company { color: #fff; }
+.stratum.current .s-dates { color: var(--moss); }
+
+.s-role {
+  font-family: var(--f-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.s-team {
+  display: inline-block;
+  font-family: var(--f-mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(125,184,0,0.8);
+  border: 1px solid rgba(125,184,0,0.2);
+  padding: 3px 9px;
+  margin-bottom: 14px;
+  background: rgba(125,184,0,0.05);
+}
+
+.s-notes { list-style: none; }
+
+.s-note {
+  font-family: var(--f-display);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+  padding: 6px 0 6px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+}
+
+.s-note:last-child { border-bottom: none; }
+
+.s-note::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  font-family: var(--f-mono);
+  font-size: 9px;
+  color: var(--moss);
+  top: 8px;
+}
+
+.s-note strong { color: rgba(255,255,255,0.82); font-weight: 700; }
+
+/* ════════════════════════════════════════
+   EDUCATION — summit zone, light bg
+════════════════════════════════════════ */
+.edu-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.edu-pane {
+  background: var(--summit);
+  padding: 36px 40px;
+}
+
+.edu-yr {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5a7a20;
+  margin-bottom: 10px;
+}
+
+.edu-deg {
+  font-family: var(--f-display);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--predawn);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  font-family: var(--f-display);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5a7a20;
+  margin-bottom: 20px;
+}
+
+.edu-body {
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  color: rgba(10,13,20,0.55);
+  line-height: 2;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 16px;
+}
+
+.edu-roles-section {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.edu-roles-lbl {
+  font-family: var(--f-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #5a7a20;
+  margin-bottom: 12px;
+}
+
+.edu-role-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-family: var(--f-mono);
+  font-size: 9.5px;
+}
+
+.edu-role-row:last-child { border-bottom: none; }
+.edu-role-title { color: var(--predawn); font-weight: 500; }
+.edu-role-org { color: rgba(10,13,20,0.45); font-size: 8.5px; margin-top: 1px; }
+.edu-role-dates { color: rgba(10,13,20,0.4); white-space: nowrap; padding-left: 8px; }
+
+/* ════════════════════════════════════════
+   BEYOND — thin air, minimal
+════════════════════════════════════════ */
+.beyond-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.beyond-entry {
+  padding: 24px 26px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.25s ease;
+}
+
+.beyond-entry:hover { background: rgba(255,255,255,0.03); }
+.beyond-entry:nth-child(3n) { border-right: none; }
+.beyond-entry:nth-child(n+4) { border-bottom: none; }
+
+.beyond-n {
+  font-family: var(--f-mono);
+  font-size: 8px;
+  color: var(--moss);
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+}
+
+.beyond-t {
+  font-family: var(--f-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.beyond-d {
+  font-size: 12px;
+  font-family: var(--f-display);
+  font-weight: 400;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+}
+
+.beyond-d a { color: var(--moss); border-bottom: 1px solid rgba(125,184,0,0.25); transition: border-color 0.2s; }
+.beyond-d a:hover { border-color: var(--moss); }
+
+/* ════════════════════════════════════════
+   RESEARCH TABLE
+════════════════════════════════════════ */
+.research-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.research-table thead tr {
+  background: rgba(125,184,0,0.06);
+  border-bottom: 1px solid rgba(125,184,0,0.15);
+}
+
+.research-table th {
+  font-family: var(--f-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--moss);
+  padding: 12px 20px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.research-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.15s ease;
+}
+
+.research-table tbody tr:last-child { border-bottom: none; }
+.research-table tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+.research-table td {
+  padding: 16px 20px;
+  vertical-align: top;
+}
+
+.rt-title {
+  font-family: var(--f-display);
+  font-style: normal; font-weight: 300; letter-spacing: 0.02em;
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+
+.rt-journal {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+}
+
+.rt-year {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  white-space: nowrap;
+}
+
+.scholar-row {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.scholar-link {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--moss);
+  border-bottom: 1px solid rgba(125,184,0,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+
+.scholar-link:hover { border-color: var(--moss); }
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+.summit-footer {
+  padding: 80px 72px 56px 60px;
+  background: var(--predawn);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-name-bg {
+  position: absolute;
+  bottom: -20px; right: 40px;
+  font-family: var(--f-display);
+  font-size: 160px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.025);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 80px;
+  align-items: end;
+}
+
+.footer-heading {
+  font-family: var(--f-display);
+  font-size: 56px;
+  font-weight: 400;
+  font-style: normal; font-weight: 300; letter-spacing: 0.02em;
+  line-height: 1;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.footer-heading em { color: var(--moss); font-style: normal; }
+
+.footer-sub {
+  font-family: var(--f-display);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.3);
+  max-width: 400px;
+  line-height: 1.7;
+}
+
+.footer-btns { display: flex; flex-direction: column; gap: 10px; }
+
+.footer-btn {
+  font-family: var(--f-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  transition: all 0.22s ease;
+  display: block;
+  min-width: 150px;
+}
+
+.footer-btn:hover { border-color: var(--moss); color: var(--moss); }
+
+.footer-btn.primary {
+  background: var(--moss);
+  border-color: var(--moss);
+  color: var(--predawn);
+  font-weight: 700;
+}
+
+.footer-btn.primary:hover { background: #8fca00; border-color: #8fca00; }
+
+.footer-base {
+  position: relative;
+  z-index: 1;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.18);
+}
+
+/* ════════════════════════════════════════
+   REVEAL
+════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s var(--ease-expo), transform 0.7s var(--ease-expo);
+}
+
+.reveal.vis { opacity: 1; transform: none; }
+
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s var(--ease-expo), transform 0.5s var(--ease-expo);
+}
+
+.stagger-children.vis > *:nth-child(1){opacity:1;transform:none;transition-delay:0.04s}
+.stagger-children.vis > *:nth-child(2){opacity:1;transform:none;transition-delay:0.10s}
+.stagger-children.vis > *:nth-child(3){opacity:1;transform:none;transition-delay:0.16s}
+.stagger-children.vis > *:nth-child(4){opacity:1;transform:none;transition-delay:0.22s}
+.stagger-children.vis > *:nth-child(5){opacity:1;transform:none;transition-delay:0.28s}
+.stagger-children.vis > *:nth-child(6){opacity:1;transform:none;transition-delay:0.34s}
+.stagger-children.vis > *:nth-child(7){opacity:1;transform:none;transition-delay:0.40s}
+.stagger-children.vis > *:nth-child(8){opacity:1;transform:none;transition-delay:0.46s}
+
+@keyframes riseIn {
+  from { opacity:0; transform:translateY(28px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+@media (max-width: 900px) {
+  :root { --canvas-w: 0px; }
+  #mountain-canvas { display: none; }
+  #scroll-content { margin-left: 0; }
+  #altitude-hud { display: none; }
+  .zone { padding: 56px 32px; }
+  .zone-basecamp { padding: 56px 32px 72px; }
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .about-meta { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 28px; }
+  .topo-grid { grid-template-columns: 1fr; }
+  .stratum { grid-template-columns: 1fr; }
+  .stratum::before { display: none; }
+  .stratum-meta { padding: 20px 0 0; border-bottom: none; }
+  .stratum-body { padding: 12px 0 20px; border-left: none; }
+  .edu-split { grid-template-columns: 1fr; }
+  .beyond-list { grid-template-columns: 1fr 1fr; }
+  .beyond-entry:nth-child(3n) { border-right: 1px solid rgba(255,255,255,0.06); }
+  .beyond-entry:nth-child(2n) { border-right: none; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-heading { font-size: 40px; }
+  .footer-btns { flex-direction: row; }
+  .footer-name-bg { font-size: 80px; }
+  .basecamp-name { font-size: 72px; }
+}
+</style>
 </head>
-
 <body>
-    <!-- Reading Progress Bar -->
-    <div class="reading-progress"></div>
 
-    <section class="hero-section">
-        <canvas id="mountainCanvas" class="loading" aria-hidden="true" role="img" aria-label="Animated mountain landscape background"></canvas>
-        <div class="hero-content">
-            <span class="hero-tagline">Senior Staff Data Scientist @ Google • LLM Evaluation & Model Quality</span>
-            <h2 class="hero-title">John Tribbia</h2>
-            <p class="hero-subtitle">Specializing in LLM evaluation, model quality measurement, and linking offline model performance to online user engagement
-                <br>
-                &
-                <br>
-                Tackling mountains of data like I do on the run
-            </p>
-            
-            <!-- Stats Counter -->
-            <div class="stats-row">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="14">0</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                     <span class="stat-number" data-target="10">0</span>
-                    <span class="stat-label">Years as Team Lead</span>
-                </div>
-            </div>
-            
-            <div style="margin-top: 24px; margin-bottom: 30px;">
-                <a href="#experience" class="cta-button secondary" aria-label="Navigate to experience section">View Experience</a>
-                <a href="#contact" class="cta-button secondary" aria-label="Navigate to contact section">Get In Touch</a>
-            </div>
+<!-- ════════════════════════════════════
+     MOUNTAIN CANVAS
+════════════════════════════════════ -->
+<canvas id="mountain-canvas"></canvas>
+
+<!-- ════════════════════════════════════
+     ALTITUDE HUD
+════════════════════════════════════ -->
+<div id="altitude-hud">
+  <span id="altitude-counter">0 ft</span>
+  <span id="altitude-label">Elevation</span>
+</div>
+
+<!-- ════════════════════════════════════
+     SCROLL CONTENT
+════════════════════════════════════ -->
+<div id="scroll-content">
+
+  <!-- BASE CAMP: Hero -->
+  <section class="zone-basecamp" id="hero">
+    <div class="basecamp-eyebrow">Boulder, Colorado · Data Science Leader</div>
+    <h1 class="basecamp-name">
+      John
+      <span class="name-sub">Tribbia</span>
+    </h1>
+    <div class="basecamp-role">Senior Staff Data Scientist · Google Workspace AI</div>
+    <p class="basecamp-desc">
+      Specializing in <strong>LLM evaluation</strong> and <strong>model quality measurement</strong> — linking offline model performance to online user engagement. PhD researcher turned Senior Staff.
+    </p>
+    <div class="basecamp-stats">
+      <div class="bcamp-stat">
+        <span class="bcamp-n" data-target="14">0</span>
+        <span class="bcamp-l">Years Experience</span>
+      </div>
+      <div class="bcamp-stat">
+        <span class="bcamp-n" data-target="10">0</span>
+        <span class="bcamp-l">Leading Teams</span>
+      </div>
+    </div>
+    <div class="basecamp-scroll-hint">
+      <span class="scroll-hint-line"></span>
+      Scroll to ascend
+    </div>
+  </section>
+
+  <!-- ZONE 01: About -->
+  <section class="zone zone-dark reveal" id="about">
+    <div class="zone-header">
+      <span class="zone-num">01 —</span>
+      <h2 class="zone-title">About</h2>
+      <div class="zone-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-prose">
+        <p>Data science leader with expertise in <strong>LLM evaluation, model quality measurement, and user-based systems analysis</strong>. Currently leading response quality measurement for Google Workspace AI, linking offline model evaluations to online user engagement and retention.</p>
+        <p>Specialized in translating observational insights into actionable improvements for AI systems — backed by a PhD in Sociology and 15+ peer-reviewed publications (800+ citations) in the human dimensions of climate change. Brings a rare combination of rigorous scientific method and hands-on engineering leadership.</p>
+        <div class="open-badge">
+          <span class="open-dot"></span>
+          Open to leadership opportunities
         </div>
-    </section>
+      </div>
+      <div class="about-meta">
+        <div class="meta-item">
+          <div class="meta-key">Current</div>
+          <div class="meta-val">Senior Staff Data Scientist<br>Google Workspace AI</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-key">Location</div>
+          <div class="meta-val">Boulder, Colorado</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-key">Education</div>
+          <div class="meta-val">PhD Sociology · BS Mathematics</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-key">Contact</div>
+          <div class="meta-val">
+            <a href="https://linkedin.com/in/jtribbia" target="_blank">LinkedIn ↗</a><br>
+            <a href="mailto:john.tribbia@gmail.com">john.tribbia@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- About / Summary -->
-    <section class="section compact">
-        <div class="container">
-            <h2>About</h2>
-            <p class="section-subtitle">PhD researcher turned data science leader</p>
-            <div class="about-card fade-in-up">
-                <p>Data science leader with expertise in <strong>LLM evaluation, model quality measurement, and user-based systems analysis</strong>. Currently leading response quality measurement for Google Workspace AI, linking offline model evaluations to online user engagement and retention. Specialized in translating observational insights into actionable improvements for AI systems through rigorous evaluation and cross-functional collaboration.</p>
-                <p>Proficient in statistical modeling, causal inference, and predictive forecasting — backed by a PhD in Sociology and 15+ peer-reviewed publications (800+ citations) in the human dimensions of climate change. Leverages a deep understanding of human behavioral systems to architect and deploy robust, customer-centric analytical solutions at scale.</p>
+  <!-- ZONE 02: Skills -->
+  <section class="zone zone-mid reveal" id="skills">
+    <div class="zone-header">
+      <span class="zone-num">02 —</span>
+      <h2 class="zone-title">Technical Expertise</h2>
+      <div class="zone-rule"></div>
+    </div>
+    <div class="topo-grid stagger-children">
+      <div class="topo-col">
+        <div class="topo-head">ML &amp; AI Evaluation</div>
+        <div class="topo-item">LLM Development &amp; Evaluation</div>
+        <div class="topo-item">Model Quality Metrics</div>
+        <div class="topo-item">Response Quality Measurement</div>
+        <div class="topo-item">Sentiment Analysis</div>
+        <div class="topo-item">Text Summarization</div>
+        <div class="topo-item">Automated Classification</div>
+        <div class="topo-item">Offline → Online Metrics</div>
+      </div>
+      <div class="topo-col">
+        <div class="topo-head">Statistics &amp; Analysis</div>
+        <div class="topo-item">Statistical Modeling</div>
+        <div class="topo-item">Causal Inference</div>
+        <div class="topo-item">Forecasting</div>
+        <div class="topo-item">A/B Testing</div>
+        <div class="topo-item">Multi-Touch Attribution</div>
+        <div class="topo-item">Predictive Analytics</div>
+        <div class="topo-item">Time Series Decomposition</div>
+      </div>
+      <div class="topo-col">
+        <div class="topo-head">Tools &amp; Engineering</div>
+        <div class="topo-item">Python (pandas, scikit-learn)</div>
+        <div class="topo-item">SQL</div>
+        <div class="topo-item">R</div>
+        <div class="topo-item">ETL / Data Modeling</div>
+        <div class="topo-item">Data Visualization</div>
+      </div>
+      <div class="topo-col">
+        <div class="topo-head">Leadership</div>
+        <div class="topo-item">Technical Strategy &amp; Roadmap</div>
+        <div class="topo-item">Team Building (IC → Senior Staff)</div>
+        <div class="topo-item">Cross-functional Collaboration</div>
+        <div class="topo-item">Executive Stakeholder Management</div>
+        <div class="topo-item">Mentorship &amp; Development</div>
+        <div class="topo-item">Quality Standards</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE 03: Experience -->
+  <section class="zone zone-dark" id="experience">
+    <div class="zone-header reveal">
+      <span class="zone-num">03 —</span>
+      <h2 class="zone-title">Experience</h2>
+      <div class="zone-rule"></div>
+    </div>
+    <div class="strata-log">
+
+      <div class="stratum current reveal">
+        <div class="stratum-meta">
+          <div class="s-dates">Sep 2025 — Present</div>
+          <div class="s-company">Google<br>Workspace AI</div>
+          <div class="s-loc">Boulder, CO</div>
+        </div>
+        <div class="stratum-body">
+          <div class="s-role">Senior Staff Data Scientist · Tech Lead IC</div>
+          <ul class="s-notes">
+            <li class="s-note">Leading definition and execution of <strong>response quality measurement and improvement strategy</strong> for models across Google Workspace AI Platform</li>
+            <li class="s-note">Developed framework to <strong>quantify model quality impact on user retention</strong>, linking offline evaluations with online product engagement</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stratum reveal">
+        <div class="stratum-meta">
+          <div class="s-dates">Dec 2020 — Sep 2025</div>
+          <div class="s-company">Google<br>Ads Operations</div>
+          <div class="s-loc">Boulder, CO</div>
+        </div>
+        <div class="stratum-body">
+          <div class="s-role">Senior Manager, Data Science</div>
+          <div class="s-team">Team · 3–8 Data Scientists</div>
+          <ul class="s-notes">
+            <li class="s-note">Progressive journey: <strong>Forecasting Manager → Data Science Manager → Senior Manager</strong> across Google Ads customer support, strategy, and operations</li>
+            <li class="s-note"><strong>Built AI Metrics:</strong> Championed NLP-derived sentiment scoring and LLM-based explanations as core KPIs, directly informing A/B testing roadmaps for AI-driven features</li>
+            <li class="s-note"><strong>Automated Classification:</strong> LLM-based issue classification achieving <strong>85% accuracy</strong> vs. 60% manual — key inputs for offline AI model evaluation</li>
+            <li class="s-note"><strong>Influenced C-Suite:</strong> Leveraged causal impact modeling to reverse deprecation of live support for SMB customers</li>
+            <li class="s-note"><strong>Deployed AI Toolkit:</strong> End-to-end LLM insight generation toolkit driving a <strong>25% increase</strong> in identified product improvements</li>
+            <li class="s-note"><strong>Crisis Response:</strong> Led time series decomposition during COVID to maintain forecast accuracy for strategic staffing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stratum reveal">
+        <div class="stratum-meta">
+          <div class="s-dates">2019 — 2020</div>
+          <div class="s-company">Infor</div>
+          <div class="s-loc">Boulder, CO · Remote</div>
+        </div>
+        <div class="stratum-body">
+          <div class="s-role">Head of Marketing &amp; Ops Analytics</div>
+          <div class="s-team">Team · 8 · Manager of Managers</div>
+          <ul class="s-notes">
+            <li class="s-note">Led cross-functional teams developing <strong>multi-touch attribution pipeline</strong> for data-driven ROI analysis</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stratum reveal">
+        <div class="stratum-meta">
+          <div class="s-dates">2017 — 2019</div>
+          <div class="s-company">Oracle</div>
+          <div class="s-loc">Broomfield, CO</div>
+        </div>
+        <div class="stratum-body">
+          <div class="s-role">Sr. Marketing Data Scientist</div>
+          <ul class="s-notes">
+            <li class="s-note">Optimized audience targeting through causal impact analysis — persona-based planner contributing to <strong>+30% incremental revenue</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stratum reveal">
+        <div class="stratum-meta">
+          <div class="s-dates">2016 — 2017</div>
+          <div class="s-company">InsideSales.com</div>
+          <div class="s-loc">Salt Lake City, UT</div>
+        </div>
+        <div class="stratum-body">
+          <div class="s-role">Sr. Marketing Data Scientist</div>
+          <ul class="s-notes">
+            <li class="s-note">Built multi-touch attribution database and decision tool — <strong>60% increase in lead-appointment conversion rate</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stratum reveal">
+        <div class="stratum-meta">
+          <div class="s-dates">2013 — 2016</div>
+          <div class="s-company">Backcountry</div>
+          <div class="s-loc">Park City, UT</div>
+        </div>
+        <div class="stratum-body">
+          <div class="s-role">Manager, Marketing Analytics → Business Analyst</div>
+          <div class="s-team">Team · 3 · Analysts, DS, BI</div>
+          <ul class="s-notes">
+            <li class="s-note">Developed AHP bid optimization solutions shifting strategies from transactional to long-term customer value</li>
+            <li class="s-note">Built demand forecasting models; managed budgets and KPIs across channels</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stratum reveal">
+        <div class="stratum-meta">
+          <div class="s-dates">2012 — 2013</div>
+          <div class="s-company">RRC Associates</div>
+          <div class="s-loc">Boulder, CO</div>
+        </div>
+        <div class="stratum-body">
+          <div class="s-role">Senior Data Analyst</div>
+          <ul class="s-notes">
+            <li class="s-note">Designed multi-modal surveys; applied advanced statistical modeling for high-profile ski resort clients</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ZONE 04: Education — light summit zone -->
+  <section class="zone zone-light reveal" id="education">
+    <div class="zone-header">
+      <span class="zone-num">04 —</span>
+      <h2 class="zone-title">Education</h2>
+      <div class="zone-rule"></div>
+    </div>
+    <div class="edu-split">
+      <div class="edu-pane">
+        <div class="edu-yr">2012</div>
+        <div class="edu-deg">PhD in Sociology</div>
+        <div class="edu-school">University of Colorado · Boulder</div>
+        <div class="edu-body">
+          <strong>Dissertation:</strong> "What's so local about global climate change?"<br>
+          <strong>Certificate:</strong> Demography<br>
+          <strong>Focus:</strong> Social Statistics · Demography · Climate &amp; Population<br>
+          <strong>Research:</strong> Collaborated with Nobel Peace Prize-winning scientists at NCAR. 15 peer-reviewed articles · 800+ citations.
+        </div>
+        <div class="edu-roles-section">
+          <div class="edu-roles-lbl">Related Roles</div>
+          <div class="edu-role-row">
+            <div>
+              <div class="edu-role-title">Research Assistant</div>
+              <div class="edu-role-org">Nat'l Center for Atmospheric Research</div>
             </div>
-        </div>
-    </section>
-
-    <!-- What I'm Looking For -->
-    <section class="section compact">
-        <div class="container">
-            <div class="open-to-opportunities fade-in-up">
-                <h3>Open to Leadership Opportunities</h3>
+            <div class="edu-role-dates">2006–2011</div>
+          </div>
+          <div class="edu-role-row">
+            <div>
+              <div class="edu-role-title">Statistics Instructor</div>
+              <div class="edu-role-org">University of Colorado at Boulder</div>
             </div>
+            <div class="edu-role-dates">2010–2012</div>
+          </div>
         </div>
-    </section>
-
-    <!-- Technical Expertise Section -->
-    <section class="section">
-        <div class="container">
-            <h2>Technical Expertise</h2>
-            <p class="section-subtitle">Deep technical capabilities across the modern data science stack</p>
-
-            <div class="skills-container">
-                <div class="skill-category fade-in-up">
-                    <h3>ML & AI</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="5+ years experience">LLM Development & Evaluation</span>
-                        <span class="skill-tag" data-tooltip="Current focus at Google">Model Quality Metrics</span>
-                        <span class="skill-tag" data-tooltip="Production systems">Text Summarization</span>
-                        <span class="skill-tag" data-tooltip="Advanced techniques">Sentiment Analysis</span>
-                        <span class="skill-tag" data-tooltip="At scale">Automated Classification</span>
-                    </div>
-                </div>
-
-                <div class="skill-category fade-in-up">
-                    <h3>Data Analysis</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="Expert level">SQL</span>
-                        <span class="skill-tag" data-tooltip="Daily use">Python</span>
-                        <span class="skill-tag" data-tooltip="Statistical modeling">R</span>
-                        <span class="skill-tag" data-tooltip="Large-scale pipelines">ETL Pipelines</span>
-                        <span class="skill-tag" data-tooltip="Storytelling">Data Visualization</span>
-                    </div>
-                </div>
-
-                <div class="skill-category fade-in-up">
-                    <h3>Analytics & Statistics</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="PhD-level expertise">Statistical Modeling</span>
-                        <span class="skill-tag" data-tooltip="Multiple methodologies">Forecasting</span>
-                        <span class="skill-tag" data-tooltip="Built from scratch">Multi-Touch Attribution</span>
-                        <span class="skill-tag" data-tooltip="10+ years">Predictive Analytics</span>
-                        <span class="skill-tag" data-tooltip="Rigorous methodology">A/B Testing</span>
-                        <span class="skill-tag" data-tooltip="Advanced methods">Causal Inference</span>
-                    </div>
-                </div>
-
-                <div class="skill-category fade-in-up">
-                    <h3>Leadership</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="Cross-org influence">Technical Strategy</span>
-                        <span class="skill-tag" data-tooltip="3-8 person teams">Team Building</span>
-                        <span class="skill-tag" data-tooltip="Eng, Product, Research">Cross-functional Collaboration</span>
-                        <span class="skill-tag" data-tooltip="Executive level">Stakeholder Management</span>
-                        <span class="skill-tag" data-tooltip="IC to Senior Staff">Mentorship</span>
-                        <span class="skill-tag" data-tooltip="Org-wide impact">Quality Standards</span>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="edu-pane">
+        <div class="edu-yr">2004</div>
+        <div class="edu-deg">BS in Mathematics</div>
+        <div class="edu-school">University of Puget Sound</div>
+        <div class="edu-body">
+          <strong>Focus:</strong> Statistics · Geometry · Environmental Studies (minor)<br><br>
+          Foundation in quantitative reasoning and analytical problem-solving that bridges data science and systems thinking.
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <p class="section-subtitle">14+ years driving data-informed decision making at scale</p>
+  <!-- ZONE 05: Beyond -->
+  <section class="zone zone-dark reveal" id="beyond">
+    <div class="zone-header">
+      <span class="zone-num">05 —</span>
+      <h2 class="zone-title">Beyond the Data</h2>
+      <div class="zone-rule"></div>
+    </div>
+    <div class="beyond-list stagger-children">
+      <div class="beyond-entry">
+        <div class="beyond-n">01</div>
+        <div class="beyond-t">2024 Site Citizenship Award</div>
+        <div class="beyond-d">Recognized for exceptional contributions to the Boulder community through Google-Boulder partnership development.</div>
+      </div>
+      <div class="beyond-entry">
+        <div class="beyond-n">02</div>
+        <div class="beyond-t">Business Leader in Residence</div>
+        <div class="beyond-d">Google-Boulder partnership with CU-Boulder Leeds School of Business — mentoring MBA students.</div>
+      </div>
+      <div class="beyond-entry">
+        <div class="beyond-n">03</div>
+        <div class="beyond-t">Former Sponsored Athlete</div>
+        <div class="beyond-d">La Sportiva · Pearl Izumi · Salomon. Multiple podium finishes on the global mountain and trail running stage.</div>
+      </div>
+      <div class="beyond-entry">
+        <div class="beyond-n">04</div>
+        <div class="beyond-t">Running Shoe Tester</div>
+        <div class="beyond-d"><a href="https://bouldergearlab.com" target="_blank">Boulder Gear Lab</a> · 200+ reviews · <a href="https://roadtrailrun.com" target="_blank">Road Trail Run</a> · 100K+ miles in the Rockies.</div>
+      </div>
+      <div class="beyond-entry">
+        <div class="beyond-n">05</div>
+        <div class="beyond-t">Eagle Scout</div>
+        <div class="beyond-d">Boy Scouts of America, 1999. Early foundation in leadership and service.</div>
+      </div>
+      <div class="beyond-entry">
+        <div class="beyond-n">06</div>
+        <div class="beyond-t">NOLS Graduate</div>
+        <div class="beyond-d">National Outdoor Leadership School, 2005. Wilderness leadership and risk management under pressure.</div>
+      </div>
+    </div>
+  </section>
 
-            <div class="expedition-section">
-                <!-- Current Role -->
-                <div class="expedition-card fade-in-up">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-route">
-                                <span>Google | Workspace AI</span>
-                            </div>
-                            <div class="exp-summit">Senior Staff Data Scientist<br>(Tech Lead IC)</div>
-                            <div class="exp-location">Boulder, Colorado</div>
-                        </div>
-                        <div class="exp-elevation">Sep 2025 – Present</div>
-                    </div>
-                    <ul class="achievements-trail">
-                        <li>Leading definition and execution of <strong>response quality measurement and improvement
-                                strategy</strong> for models across Google Workspace AI Platform</li>
-                        <li>Developed framework to <strong>quantify model quality impact on user retention</strong></li>
-                        <li>Effectively linked <strong>offline evaluations with online product engagement</strong></li>
-                    </ul>
-                </div>
+  <!-- ZONE 06: Research -->
+  <section class="zone zone-mid reveal" id="research">
+    <div class="zone-header">
+      <span class="zone-num">06 —</span>
+      <h2 class="zone-title">Selected Research</h2>
+      <div class="zone-rule"></div>
+    </div>
+    <table class="research-table">
+      <thead>
+        <tr>
+          <th style="width:55%">Title</th>
+          <th>Journal</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rt-title">More than information: what coastal managers need to plan for climate change</td>
+          <td class="rt-journal">Environmental Science &amp; Policy</td>
+          <td class="rt-year">2008</td>
+        </tr>
+        <tr>
+          <td class="rt-title">Vulnerability to inundation and climate change impacts in California</td>
+          <td class="rt-journal">Marine Technology Society Journal</td>
+          <td class="rt-year">2006</td>
+        </tr>
+        <tr>
+          <td class="rt-title">Testing theories to explore the drivers of cities' atmospheric emissions</td>
+          <td class="rt-journal">AMBIO: Journal of the Human Environment</td>
+          <td class="rt-year">2009</td>
+        </tr>
+        <tr>
+          <td class="rt-title">Development and greenhouse gas emissions deviate from the 'modernization' theory</td>
+          <td class="rt-journal">Climate Research</td>
+          <td class="rt-year">2008</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="scholar-row">
+      <a href="https://scholar.google.com/citations?user=umbbj1QAAAAJ&hl=en" target="_blank" class="scholar-link">View all on Google Scholar ↗</a>
+    </div>
+  </section>
 
-                <!-- Google Ads -->
-                <div class="expedition-card fade-in-up">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-route">
-                                <span>Google | Ads Operations</span>
-                            </div>
-                            <div class="exp-summit">Senior Manager, Data Science</div>
-                            <div class="exp-location">Boulder, Colorado</div>
-                        </div>
-                        <div class="exp-elevation">Dec 2020 – Sep 2025</div>
-                    </div>
-                    <span class="team-size">👥 Team Size: 3-8 (Data Scientists)</span>
-                    <ul class="achievements-trail">
-                        <li>Progressive leadership journey: <strong>Forecasting Manager → Data Science Manager → Senior
-                                Data Science Manager</strong>, driving advanced analytics and data science initiatives across Google Ads
-                                customer support, strategy, and operations</li>
-                        <li>Fostered strong partnerships with <strong>engineering, strategy, product, and operations
-                                teams</strong> while leading vision and roadmap for E2E data science solutions</li>
-                        <li><strong>Built AI Metrics:</strong> Championed development and cross-organizational adoption of an NLP-derived 
-                                "Sentiment Score Metric" and LLM-based explanations as core KPIs for AI product quality and user experience (CX) 
-                                analysis, directly informing product prioritization and A/B testing roadmaps</li>
-                        <li><strong>Automated Classification:</strong> Led development of LLM-based user issue classification systems, 
-                                providing key inputs for offline AI model evaluation and achieving <strong>85% accuracy</strong> (vs. 60% manual), 
-                                optimizing resource allocation and improving resolution speed</li>
-                        <li><strong>Influenced C-Suite:</strong> Leveraged causal impact modeling and experimentation insights to influence 
-                                executive leadership on product strategy (e.g., reversing deprecation of live support for SMB customers), 
-                                demonstrating ability to drive decisions critical for safe deployment</li>
-                        <li><strong>Deployed AI Toolkit:</strong> Initiated and led development of an end-to-end LLM-based insight generation 
-                                toolkit, accelerating feedback loops and driving a <strong>25% increase</strong> in identified product improvement opportunities</li>
-                        <li><strong>Managed Crisis Response:</strong> Led time series decomposition implementation during COVID to mitigate 
-                                support disruptions, driving forecast accuracy for strategic staffing budget</li>
-                    </ul>
-                </div>
+  <!-- FOOTER / SUMMIT -->
+  <footer class="summit-footer" id="contact">
+    <div class="footer-name-bg">Tribbia</div>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-heading">Let's<br><span style="color:var(--moss)">connect.</span></div>
+        <p class="footer-sub">Interested in AI evaluation, data science leadership, high-performing teams, or trail running? I'd love to hear from you.</p>
+      </div>
+      <div class="footer-btns">
+        <a href="https://linkedin.com/in/jtribbia" class="footer-btn primary" target="_blank">LinkedIn ↗</a>
+        <a href="mailto:john.tribbia@gmail.com" class="footer-btn">Email</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>Boulder, Colorado · PhD · Senior Staff Data Scientist @ Google</span>
+      <span>john.tribbia@gmail.com</span>
+    </div>
+  </footer>
 
-                <!-- Infor -->
-                <div class="expedition-card fade-in-up">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-route">
-                                <span>Infor</span>
-                            </div>
-                            <div class="exp-summit">Head of Marketing & Ops Analytics</div>
-                            <div class="exp-location">Boulder, Colorado (Remote)</div>
-                        </div>
-                        <div class="exp-elevation">2019 – 2020</div>
-                    </div>
-                    <span class="team-size">👥 Team Size: 8 (Manager of Managers, Cross-functional)</span>
-                    <ul class="achievements-trail">
-                        <li>Led cross-functional teams to develop and implement <strong>multi-touch attribution pipeline
-                                and decision tool</strong></li>
-                        <li>Directly enabled <strong>data-driven ROI analysis</strong> for marketing and sales
-                            initiatives</li>
-                    </ul>
-                </div>
+</div><!-- end scroll-content -->
 
-                <!-- Oracle -->
-                <div class="expedition-card fade-in-up">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-route">
-                                <span>Oracle</span>
-                            </div>
-                            <div class="exp-summit">Sr. Data Scientist</div>
-                            <div class="exp-location">Broomfield, Colorado</div>
-                        </div>
-                        <div class="exp-elevation">2017 – 2019</div>
-                    </div>
-                    <ul class="achievements-trail">
-                        <li>Optimized <strong>audience targeting and ad campaign performance</strong></li>
-                        <li>Conducted <strong>causal impact analysis</strong> to measure ad uplift</li>
-                        <li>Developed persona-based audience planner contributing to <strong>+30% incremental audience
-                                revenue</strong></li>
-                    </ul>
-                </div>
+<!-- ════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════ -->
+<script>
+"use strict";
 
-                <!-- InsideSales -->
-                <div class="expedition-card fade-in-up">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-route">
-                                <span>InsideSales.com</span>
-                            </div>
-                            <div class="exp-summit">Sr. Marketing Data Scientist</div>
-                            <div class="exp-location">Salt Lake City, Utah</div>
-                        </div>
-                        <div class="exp-elevation">2016 – 2017</div>
-                    </div>
-                    <ul class="achievements-trail">
-                        <li>Developed and implemented <strong>multi-touch attribution database and decision
-                                tool</strong></li>
-                        <li>Achieved <strong>60% increase in lead-appointment conversion rate</strong> through
-                            optimization of high-ROI marketing channels</li>
-                    </ul>
-                </div>
+/* ─── Canvas setup ───────────────────── */
+const canvas = document.getElementById('mountain-canvas');
+const ctx    = canvas.getContext('2d');
+const CW     = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--canvas-w')) || 340;
 
-                <!-- Backcountry Manager -->
-                <div class="expedition-card fade-in-up">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-route">
-                                <span>Backcountry</span>
-                            </div>
-                            <div class="exp-summit">Manager, Marketing Analytics</div>
-                            <div class="exp-location">Park City, Utah</div>
-                        </div>
-                        <div class="exp-elevation">2014 – 2016</div>
-                    </div>
-                    <span class="team-size">👥 Team Size: 3 (Analysts, Data Scientists, BI)</span>
-                    <ul class="achievements-trail">
-                        <li>Led cross-functional team of <strong>analysts, data scientists, and BI</strong> to drive
-                            strategic marketing decisions</li>
-                        <li>Developed <strong>analytical hierarchy process (AHP) bid optimization solutions</strong>
-                        </li>
-                        <li>Enabled teams to shift <strong>pricing and acquisition strategies from transactional to
-                                long-term value</strong></li>
-                    </ul>
-                </div>
+let W = CW, H = window.innerHeight;
 
-                <!-- Backcountry Analyst -->
-                <div class="expedition-card fade-in-up">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-route">
-                                <span>Backcountry</span>
-                            </div>
-                            <div class="exp-summit">Marketing Business Analyst</div>
-                            <div class="exp-location">Park City, Utah</div>
-                        </div>
-                        <div class="exp-elevation">2013 – 2014</div>
-                    </div>
-                    <ul class="achievements-trail">
-                        <li>Managed <strong>marketing budgets and KPIs</strong> across multiple channels</li>
-                        <li>Built <strong>demand forecasting models</strong> for revenue optimization</li>
-                        <li>Conducted <strong>performance analyses</strong> across sites, channels, and sales formats
-                        </li>
-                    </ul>
-                </div>
+function resizeCanvas() {
+  H = window.innerHeight;
+  canvas.width  = W;
+  canvas.height = H;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
-                <!-- RRC -->
-                <div class="expedition-card fade-in-up">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-route">
-                                <span>RRC Associates</span>
-                            </div>
-                            <div class="exp-summit">Senior Data Analyst</div>
-                            <div class="exp-location">Boulder, Colorado</div>
-                        </div>
-                        <div class="exp-elevation">2012 – 2013</div>
-                    </div>
-                    <ul class="achievements-trail">
-                        <li>Designed <strong>multi-modal surveys</strong> for high-profile ski resort clients</li>
-                        <li>Applied <strong>advanced statistical modeling</strong> to deliver actionable insights</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ─── Mountain geometry (deterministic) ─ */
+// Two parallax layers — far range + near ridge
+const farPeaks = [
+  {x:0.0,  y:0.78},
+  {x:0.12, y:0.55},
+  {x:0.25, y:0.38},
+  {x:0.38, y:0.62},
+  {x:0.52, y:0.30},  // main summit
+  {x:0.65, y:0.50},
+  {x:0.78, y:0.44},
+  {x:0.88, y:0.60},
+  {x:1.0,  y:0.72},
+];
 
-    <!-- Education -->
-    <section class="section compact">
-        <div class="container">
-            <h2>Education</h2>
-            <p class="section-subtitle">Rigorous quantitative foundation in statistics, mathematics, and social science
-            </p>
+const nearPeaks = [
+  {x:0.0,  y:0.88},
+  {x:0.10, y:0.72},
+  {x:0.22, y:0.80},
+  {x:0.35, y:0.65},
+  {x:0.50, y:0.75},
+  {x:0.63, y:0.60},
+  {x:0.75, y:0.70},
+  {x:0.88, y:0.65},
+  {x:1.0,  y:0.82},
+];
 
-            <div class="training-grid">
-                <div class="training-card fade-in-up">
-                    <div class="training-degree">PhD in Sociology</div>
-                    <div class="training-institution">University of Colorado at Boulder</div>
-                    <div class="training-focus">
-                        2012<br><br>
-                        <strong>Dissertation:</strong> "What's so local about global climate change?"<br><br>
-                        <strong>Certificate in Demography</strong><br><br>
-                        <strong>Focus:</strong> Social Statistics • Demography • Climate & Population Studies<br><br>
-                        <strong>Research:</strong> Collaborated with Nobel Peace Prize-winning scientists at NCAR
-                        (2006-2011). Published 15 peer-reviewed articles with 800+ citations on population and climate
-                        change dynamics.
-                    </div>
-                    <div class="training-roles">
-                        <div class="training-roles-label">▲ Related Roles During Graduate Study</div>
-                        <div class="training-role-item">
-                            <div>
-                                <div class="training-role-title">Research Assistant</div>
-                                <div class="training-role-org">National Center for Atmospheric Research (NCAR)</div>
-                            </div>
-                            <div class="training-role-dates">2006 – 2011</div>
-                        </div>
-                        <div class="training-role-item">
-                            <div>
-                                <div class="training-role-title">Intro to Statistics Instructor</div>
-                                <div class="training-role-org">University of Colorado at Boulder</div>
-                            </div>
-                            <div class="training-role-dates">2010 – 2012</div>
-                        </div>
-                    </div>
-                </div>
+function makePath(peaks, scrollPct, parallax) {
+  const pts = peaks.map(p => ({
+    x: p.x * W,
+    y: (p.y - scrollPct * parallax * 0.18) * H
+  }));
 
-                <div class="training-card fade-in-up">
-                    <div class="training-degree">BS in Mathematics</div>
-                    <div class="training-institution">University of Puget Sound</div>
-                    <div class="training-focus">
-                        2004<br><br>
-                        <strong>Focus:</strong> Statistics • Geometry • Environmental Studies (minor)<br><br>
-                        Foundation in quantitative reasoning and analytical problem-solving that bridges data science
-                        and systems thinking.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  ctx.beginPath();
+  ctx.moveTo(0, H);
+  ctx.lineTo(pts[0].x, pts[0].y);
 
-    <!-- Personal Achievements -->
-    <section class="section compact">
-        <div class="container">
-            <h2>Beyond the Data</h2>
-            <p class="section-subtitle">Building community, mentoring future leaders, and pursuing excellence</p>
+  for (let i = 1; i < pts.length - 1; i++) {
+    const mx = (pts[i].x + pts[i+1].x) / 2;
+    const my = (pts[i].y + pts[i+1].y) / 2;
+    ctx.quadraticCurveTo(pts[i].x, pts[i].y, mx, my);
+  }
 
-            <div class="awards-grid">
-                <div class="award-badge fade-in-up">
-                    <div class="award-title">2024 Google-Boulder Site Citizenship Award</div>
-                    <div class="award-desc">Recognized for exceptional contributions to the Boulder community and
-                        Google's local presence through partnership development and community engagement</div>
-                </div>
+  const last = pts[pts.length - 1];
+  ctx.lineTo(last.x, last.y);
+  ctx.lineTo(W, H);
+  ctx.closePath();
+}
 
-                <div class="award-badge fade-in-up">
-                    <div class="award-title">Business Leader in Residence</div>
-                    <div class="award-desc">Leading Google-Boulder's partnership with CU-Boulder Leeds School of
-                        Business, mentoring MBA students and investing in the next generation of business leaders</div>
-                </div>
+/* ─── Hiker dot position on mountain ─── */
+function getHikerPos(scrollPct) {
+  // Walk along the far ridge
+  const t = scrollPct;
+  const n = farPeaks.length - 1;
+  const idx = Math.min(Math.floor(t * n), n - 1);
+  const local = (t * n) - idx;
+  const a = farPeaks[idx];
+  const b = farPeaks[Math.min(idx + 1, n)];
+  return {
+    x: (a.x + (b.x - a.x) * local) * W,
+    y: (a.y + (b.y - a.y) * local - 0.18 * scrollPct * 0.18) * H
+  };
+}
 
-                <div class="award-badge fade-in-up">
-                    <div class="award-title">Former Sponsored Athlete</div>
-                    <div class="award-desc">La Sportiva • Pearl Izumi • Salomon - Multiple podium finishes on the global
-                        mountain/trail running stage</div>
-                </div>
+/* ─── Floating keywords ─────────────── */
+const WORDS = [
+  'LLM Evaluation','Model Quality','Causal Inference','800+ Citations',
+  'Sentiment Analysis','Statistical Modeling','A/B Testing','Forecasting',
+  'Offline + Online Metrics','Python · SQL · R','Trail Running',
+  'Team Building','Google Workspace AI','PhD Sociology',
+  'Predictive Analytics','14+ Years','Response Quality',
+  'Data Science','Longs Peak 14,259ft','Boulder CO',
+];
 
-                <div class="award-badge fade-in-up">
-                    <div class="award-title">Running Shoe Tester</div>
-                    <div class="award-desc"><a href="https://bouldergearlab.com">Boulder Gear Lab</a> • 200+ lifetime
-                        gear reviews • <a href="https://roadtrailrun.com">Road Trail Run</a> contributor • 100K+ miles
-                        tested in the Colorado Rockies</div>
-                </div>
+// Use guaranteed-available monospace until webfont loads
+let kwFont = 'bold 11px monospace';
+document.fonts.ready.then(() => { kwFont = 'bold 11px "Space Mono", monospace'; });
 
-                <div class="award-badge fade-in-up">
-                    <div class="award-title">Eagle Scout</div>
-                    <div class="award-desc">Boy Scouts of America, 1999 - Early foundation in leadership and service
-                    </div>
-                </div>
+const KW_COLORS = ['#a8d8f0','#c8ead8','#cccaee','#e0ddf4','#b8e0d8'];
 
-                <div class="award-badge fade-in-up">
-                    <div class="award-title">NOLS Graduate</div>
-                    <div class="award-desc">National Outdoor Leadership School, 2005 - Wilderness leadership and risk
-                        management training</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Publications Section -->
-    <section class="section compact">
-        <div class="container">
-            <h2>Selected Early Research</h2>
-            <p class="section-subtitle">Graduate school research at the intersection of climate science, demography, and
-                social statistics • <a href="https://scholar.google.com/citations?user=umbbj1QAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="color: var(--alpine-blue); text-decoration: none; border-bottom: 1px solid var(--alpine-blue);">View all publications on Google Scholar →</a></p>
+function makeKword(spread) {
+  const maxA = 0.5 + Math.random() * 0.4;
+  return {
+    word:    WORDS[Math.floor(Math.random() * WORDS.length)],
+    x:       12 + Math.random() * (W - 24),
+    y:       spread ? 10 + Math.random() * (H * 0.6) : H * 0.62,
+    vy:      -(0.28 + Math.random() * 0.42),
+    vx:      (Math.random() - 0.5) * 0.2,
+    maxA,
+    alpha:   spread ? Math.random() * maxA : 0,
+    life:    spread ? Math.floor(Math.random() * 150) : 0,
+    maxLife: 280 + Math.random() * 180,
+    color:   KW_COLORS[Math.floor(Math.random() * KW_COLORS.length)],
+  };
+}
 
-            <div class="publications-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
-                <div class="publication-card fade-in-up" style="padding: 20px;">
-                    <div class="pub-title" style="font-size: 15px;">More than information: what coastal managers need to plan for climate change</div>
-                    <div class="pub-meta">Environmental Science & Policy • 2008</div>
-                </div>
+const kwords = Array.from({length: 30}, () => makeKword(true));
 
-                <div class="publication-card fade-in-up" style="padding: 20px;">
-                    <div class="pub-title" style="font-size: 15px;">Vulnerability to inundation and climate change impacts in California</div>
-                    <div class="pub-meta">Marine Technology Society Journal • 2006</div>
-                </div>
+function updateKwords() {
+  // The Y threshold below which we won't show keywords (the mountain area).
+  // Use the highest (lowest y-value) far peak, roughly.
+  const skyFloor = H * 0.72; // generous — above the near ridgeline
+  kwords.forEach(k => {
+    k.x += k.vx;
+    k.y += k.vy;
+    k.life++;
+    const h = k.maxLife / 2;
+    k.alpha = k.life < h
+      ? (k.life / h) * k.maxA
+      : Math.max(0, ((k.maxLife - k.life) / h) * k.maxA);
+    if (k.life >= k.maxLife || k.y < -20) {
+      Object.assign(k, makeKword(false));
+    }
+  });
+}
 
-                <div class="publication-card fade-in-up" style="padding: 20px;">
-                    <div class="pub-title" style="font-size: 15px;">Testing theories to explore the drivers of cities' atmospheric emissions</div>
-                    <div class="pub-meta">AMBIO: A Journal of the Human Environment • 2009</div>
-                </div>
+function drawKwords(c) {
+  const skyFloor = H * 0.66;
+  kwords.forEach(k => {
+    if (k.alpha < 0.015 || k.y > skyFloor) return;
+    c.save();
+    c.globalAlpha = k.alpha;
+    c.fillStyle   = k.color;
+    c.font        = kwFont;
+    c.fillText(k.word, k.x, k.y);
+    c.restore();
+  });
+}
 
-                <div class="publication-card fade-in-up" style="padding: 20px;">
-                    <div class="pub-title" style="font-size: 15px;">Development and greenhouse gas emissions deviate from the 'modernization' theory</div>
-                    <div class="pub-meta">Climate Research • 2008</div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ─── Sky gradient based on scroll ───── */
+function skyGradient(pct) {
+  // Pre-dawn → steel blue → cold light
+  const stops = [
+    {p:0.0,  top:'#070a12', bot:'#0d1520'},
+    {p:0.25, top:'#0a0f1e', bot:'#121c2a'},
+    {p:0.5,  top:'#0c1520', bot:'#1a2535'},
+    {p:0.75, top:'#0f1a22', bot:'#1e2c35'},
+    {p:1.0,  top:'#101820', bot:'#1a2530'},
+  ];
 
-    <section class="summit-footer" id="contact">
-        <h2>Let's Connect</h2>
-        <p class="summit-tagline">
-            Interested in discussing AI evaluation, data science leadership, building high-performing teams, or trail
-            running? I'd love to hear from you.
-        </p>
-        <div class="contact-links">
-            <a href="https://linkedin.com/in/jtribbia" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Connect with John Tribbia on LinkedIn">LinkedIn</a>
-            <a href="mailto:john@bouldergearlab.com" class="contact-button" aria-label="Send email to John Tribbia">Email</a>
-        </div>
-        <p class="footer-note">
-            Boulder, Colorado • PhD • Senior Staff Data Scientist @ Google
-        </p>
-    </section>
+  let a = stops[0], b = stops[stops.length-1];
+  for (let i=0; i<stops.length-1; i++) {
+    if (pct >= stops[i].p && pct <= stops[i+1].p) {
+      a = stops[i]; b = stops[i+1]; break;
+    }
+  }
 
-    <script>
-        const canvas = document.getElementById('mountainCanvas');
-        const ctx = canvas.getContext('2d');
+  const t = a.p === b.p ? 0 : (pct - a.p) / (b.p - a.p);
+  function lerpHex(ca, cb, t) {
+    const parse = h => [
+      parseInt(h.slice(1,3),16),
+      parseInt(h.slice(3,5),16),
+      parseInt(h.slice(5,7),16)
+    ];
+    const [r1,g1,b1] = parse(ca);
+    const [r2,g2,b2] = parse(cb);
+    return `rgb(${Math.round(r1+(r2-r1)*t)},${Math.round(g1+(g2-g1)*t)},${Math.round(b1+(b2-b1)*t)})`;
+  }
 
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resize);
-        resize();
+  const grad = ctx.createLinearGradient(0, 0, 0, H);
+  grad.addColorStop(0,   lerpHex(a.top, b.top, t));
+  grad.addColorStop(1,   lerpHex(a.bot, b.bot, t));
+  return grad;
+}
 
-        // Mountain peaks
-        class Mountain {
-            constructor() {
-                this.peaks = [
-                    { x: 0.2, height: 0.5 },
-                    { x: 0.35, height: 0.7 },
-                    { x: 0.5, height: 0.35 },
-                    { x: 0.65, height: 0.6 },
-                    { x: 0.8, height: 0.45 }
-                ];
-            }
+/* ─── Stars ─────────────────────────── */
+const stars = Array.from({length: 60}, () => ({
+  x: Math.random() * W,
+  y: Math.random() * H * 0.65,
+  r: Math.random() * 1.2 + 0.2,
+  t: Math.random() * Math.PI * 2,
+}));
 
-            draw() {
-                ctx.beginPath();
-                ctx.moveTo(0, canvas.height);
+/* ─── Snow particles on summit ──────── */
+const snowflakes = Array.from({length: 18}, () => ({
+  x: Math.random() * W,
+  y: Math.random() * H * 0.5,
+  r: 0.5 + Math.random(),
+  speed: 0.2 + Math.random() * 0.4,
+  drift: (Math.random() - 0.5) * 0.3,
+}));
 
-                // First point with smooth entry
-                if (this.peaks.length > 0) {
-                    const firstPeak = this.peaks[0];
-                    const x = canvas.width * firstPeak.x;
-                    const y = canvas.height - (canvas.height * firstPeak.height);
-                    ctx.quadraticCurveTo(x * 0.5, y, x, y);
-                }
+/* ─── Main render loop ───────────────── */
+let scrollPct = 0;
+let frame = 0;
 
-                // Smooth curves between peaks
-                for (let i = 1; i < this.peaks.length; i++) {
-                    const peak = this.peaks[i];
-                    const prevPeak = this.peaks[i - 1];
+function lerp(a, b, t) { return a + (b-a) * t; }
 
-                    const x = canvas.width * peak.x;
-                    const y = canvas.height - (canvas.height * peak.height);
-                    const prevX = canvas.width * prevPeak.x;
-                    const prevY = canvas.height - (canvas.height * prevPeak.height);
+// Helper: get the Y of the far ridge at a given X fraction
+function getRidgeY(peaks, xFrac, scrollPct, parallax) {
+  const n = peaks.length - 1;
+  let i = 0;
+  while (i < n - 1 && peaks[i+1].x < xFrac) i++;
+  const a = peaks[i], b = peaks[Math.min(i+1, n)];
+  const t = (b.x === a.x) ? 0 : (xFrac - a.x) / (b.x - a.x);
+  const rawY = a.y + (b.y - a.y) * t;
+  return (rawY - scrollPct * parallax * 0.18) * H;
+}
 
-                    // Calculate control points for smoother curves
-                    const midX = (prevX + x) / 2;
-                    const tension = 0.3;
+function render() {
+  frame++;
+  const targetPct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight || 1);
+  scrollPct = lerp(scrollPct, targetPct, 0.06);
 
-                    const cp1X = prevX + (midX - prevX) * (1 - tension);
-                    const cp1Y = prevY;
-                    const cp2X = x - (x - midX) * (1 - tension);
-                    const cp2Y = y;
+  ctx.clearRect(0, 0, W, H);
 
-                    ctx.bezierCurveTo(cp1X, cp1Y, cp2X, cp2Y, x, y);
-                }
+  // 1. SKY
+  ctx.fillStyle = skyGradient(scrollPct);
+  ctx.fillRect(0, 0, W, H);
 
-                // Smooth exit
-                const lastPeak = this.peaks[this.peaks.length - 1];
-                const lastX = canvas.width * lastPeak.x;
-                const lastY = canvas.height - (canvas.height * lastPeak.height);
-                ctx.quadraticCurveTo(lastX + (canvas.width - lastX) * 0.5, lastY, canvas.width, canvas.height);
+  // 2. STARS
+  const starAlpha = Math.max(0, 1 - scrollPct * 3);
+  if (starAlpha > 0) {
+    stars.forEach(s => {
+      const twinkle = 0.4 + 0.6 * Math.sin(s.t + frame * 0.02);
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${twinkle * starAlpha * 0.7})`;
+      ctx.fill();
+    });
+  }
 
-                ctx.closePath();
+  // 3. UPDATE & DRAW keywords (before mountains so they appear in sky)
+  updateKwords();
+  drawKwords(ctx);
 
-                const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-                gradient.addColorStop(0, 'rgba(224, 30, 55, 0.15)');
-                gradient.addColorStop(1, 'rgba(44, 95, 141, 0.05)');
-                ctx.fillStyle = gradient;
-                ctx.fill();
+  // 4. FAR MOUNTAIN
+  makePath(farPeaks, scrollPct, 0.5);
+  const farGrad = ctx.createLinearGradient(0, 0, 0, H);
+  farGrad.addColorStop(0, 'rgba(28,40,52,0.94)');
+  farGrad.addColorStop(1, 'rgba(10,14,18,0.99)');
+  ctx.fillStyle = farGrad;
+  ctx.fill();
 
-                ctx.strokeStyle = 'rgba(224, 30, 55, 0.3)';
-                ctx.lineWidth = 2;
-                ctx.stroke();
-            }
-        }
+  // Snow cap glow on far peaks
+  ctx.save();
+  makePath(farPeaks, scrollPct, 0.5);
+  ctx.clip();
+  const snowY = H * (0.34 + scrollPct * 0.06);
+  const snowG = ctx.createLinearGradient(0, snowY - 40, 0, snowY + 20);
+  snowG.addColorStop(0, `rgba(210,228,235,${0.09 + scrollPct * 0.05})`);
+  snowG.addColorStop(1, 'rgba(210,228,235,0)');
+  ctx.fillStyle = snowG;
+  ctx.fillRect(0, 0, W, snowY + 20);
+  ctx.restore();
 
-        // Floating data points
-        const particles = [];
-        const words = ['LLM Development & Evaluation', 'Model Quality Metrics', 'Text Summarization', 'Sentiment Analysis', 'Automated Classification', 'SQL', 'Python', 'R', 'ETL Pipelines', 'Data Visualization', 'Statistical Modeling', 'Forecasting', 'Multi-Touch Attribution', 'Predictive Analytics', 'A/B Testing', 'Causal Inference', 'Technical Strategy', 'Team Building', 'Cross-functional Collaboration', 'Stakeholder Management', 'Mentorship', 'Quality Standards'];
+  // Far ridge line
+  makePath(farPeaks, scrollPct, 0.5);
+  ctx.strokeStyle = `rgba(90,120,145,${0.35 + scrollPct * 0.2})`;
+  ctx.lineWidth = 1;
+  ctx.stroke();
 
-        for (let i = 0; i < 25; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                text: words[Math.floor(Math.random() * words.length)],
-                speed: 0.15 + Math.random() * 0.4,
-                opacity: 0.02 + Math.random() * 0.08,
-                drift: Math.random() * 2 - 1
-            });
-        }
+  // 5. KEYWORDS AGAIN on top of far mountain but below near ridge
+  //    gives depth — some words peek over the far ridge
+  drawKwords(ctx);
 
-        const mountain = new Mountain();
+  // 6. NEAR RIDGE
+  makePath(nearPeaks, scrollPct, 0.9);
+  const nearGrad = ctx.createLinearGradient(0, 0, 0, H);
+  nearGrad.addColorStop(0, 'rgba(12,18,24,0.97)');
+  nearGrad.addColorStop(1, 'rgba(7,9,12,1)');
+  ctx.fillStyle = nearGrad;
+  ctx.fill();
 
-        // Remove loading state once canvas is ready
-        setTimeout(() => {
-            canvas.classList.remove('loading');
-        }, 100);
+  makePath(nearPeaks, scrollPct, 0.9);
+  ctx.strokeStyle = `rgba(45,65,78,${0.3 + scrollPct * 0.15})`;
+  ctx.lineWidth = 0.8;
+  ctx.stroke();
 
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // 7. SNOWFLAKES (appear at mid-scroll, fall in the sky above near ridge)
+  const snowAlpha = Math.max(0, (scrollPct - 0.3) * 2.5);
+  if (snowAlpha > 0) {
+    snowflakes.forEach(s => {
+      s.y += s.speed;
+      s.x += s.drift;
+      if (s.y > H * 0.6) { s.y = 0; s.x = Math.random() * W; }
+      // Only draw above near ridge
+      const ridgeY = getRidgeY(nearPeaks, s.x / W, scrollPct, 0.9);
+      if (s.y < ridgeY) {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(220,235,242,${snowAlpha * 0.6})`;
+        ctx.fill();
+      }
+    });
+  }
 
-            mountain.draw();
+  // 8. HIKER dot on the far ridge
+  const hiker = getHikerPos(scrollPct);
+  const glowR = ctx.createRadialGradient(hiker.x, hiker.y, 0, hiker.x, hiker.y, 18);
+  glowR.addColorStop(0, 'rgba(125,184,0,0.5)');
+  glowR.addColorStop(1, 'rgba(125,184,0,0)');
+  ctx.fillStyle = glowR;
+  ctx.fillRect(hiker.x - 18, hiker.y - 18, 36, 36);
 
-            particles.forEach(p => {
-                ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
-                ctx.font = '900 14px Manrope';
-                ctx.fillText(p.text, p.x, p.y);
+  ctx.beginPath();
+  ctx.arc(hiker.x, hiker.y, 3.5, 0, Math.PI * 2);
+  ctx.fillStyle = '#8fce00';
+  ctx.fill();
 
-                p.y -= p.speed;
-                p.x += p.drift * 0.1;
+  ctx.beginPath();
+  ctx.moveTo(hiker.x, hiker.y + 5);
+  ctx.lineTo(hiker.x, H);
+  ctx.strokeStyle = 'rgba(125,184,0,0.1)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([3, 6]);
+  ctx.stroke();
+  ctx.setLineDash([]);
 
-                if (p.y < -20) {
-                    p.y = canvas.height + 20;
-                    p.x = Math.random() * canvas.width;
-                }
+  // 9. RIGHT EDGE VIGNETTE (blend into content column)
+  const edgeFade = ctx.createLinearGradient(W - 60, 0, W, 0);
+  edgeFade.addColorStop(0, 'rgba(0,0,0,0)');
+  edgeFade.addColorStop(1, 'rgba(10,13,20,0.97)');
+  ctx.fillStyle = edgeFade;
+  ctx.fillRect(W - 60, 0, 60, H);
 
-                if (p.x < -50 || p.x > canvas.width + 50) {
-                    p.x = Math.random() * canvas.width;
-                }
-            });
+  requestAnimationFrame(render);
+}
 
-            requestAnimationFrame(animate);
-        }
+render();
 
-        animate();
+/* ─── Altitude HUD ───────────────────── */
+const MAX_ALT  = 14440; // Longs Peak, ft
+const altCounter = document.getElementById('altitude-counter');
+const altHud     = document.getElementById('altitude-hud');
 
-        // Parallax scrolling
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroContent = document.querySelector('.hero-content');
-            const canvasElement = document.querySelector('#mountainCanvas');
-            
-            if (scrolled < window.innerHeight) {
-                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-                canvasElement.style.transform = `translateY(${scrolled * 0.3}px)`;
-            }
-        });
+function updateHUD() {
+  const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight || 1);
+  const ft  = Math.round(pct * MAX_ALT);
+  altCounter.textContent = ft.toLocaleString() + ' ft';
+}
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
+window.addEventListener('scroll', updateHUD, { passive: true });
+updateHUD();
 
-        // Stats Counter Animation
-        function animateCounter(element) {
-            const target = parseInt(element.dataset.target);
-            const duration = 2000;
-            const start = 0;
-            const increment = target / (duration / 16);
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target.toLocaleString();
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current).toLocaleString();
-                }
-            }, 16);
-        }
+/* ─── Counter animation ──────────────── */
+function runCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const dur    = 1800;
+  const t0     = performance.now();
+  function tick(now) {
+    const p = Math.min((now - t0) / dur, 1);
+    const e = 1 - Math.pow(2, -10 * p);
+    el.textContent = Math.floor(e * target) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(tick);
+}
 
-        // Trigger stats counter on scroll into view
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.querySelectorAll('.stat-number').forEach(animateCounter);
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('[data-target]').forEach(runCounter);
+      statObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
 
-        const statsRow = document.querySelector('.stats-row');
-        if (statsRow) {
-            statsObserver.observe(statsRow);
-        }
+document.querySelectorAll('.basecamp-stats').forEach(el => statObserver.observe(el));
 
-        // Scroll-triggered animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+/* ─── Reveal on scroll ───────────────── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.07 });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with fade-in-up class
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Reading Progress Bar
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            const height = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = (scrolled / height) * 100;
-            document.querySelector('.reading-progress').style.width = progress + '%';
-        });
-    </script>
+document.querySelectorAll('.reveal, .stagger-children').forEach(el => revealObs.observe(el));
+</script>
 </body>
-
 </html>
