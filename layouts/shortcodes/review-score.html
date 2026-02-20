@@ -1,0 +1,28 @@
+{{/*
+  Review Score Circle Shortcode
+  Usage: {{< review-score score="85" label="Overall" size="large" >}}
+  
+  Parameters:
+  - score: 0-100 (required)
+  - label: Text below score (default: "Score")
+  - size: "normal" or "large" (default: "normal")
+*/}}
+
+{{ $score := .Get "score" | default "0" }}
+{{ $label := .Get "label" | default "Score" }}
+{{ $size := .Get "size" | default "normal" }}
+{{ $sizeClass := "" }}
+{{ if eq $size "large" }}
+  {{ $sizeClass = "review-score-circle--large" }}
+{{ end }}
+
+<div class="review-score-circle {{ $sizeClass }}" style="--score: {{ $score }};">
+    <svg viewBox="0 0 100 100">
+        <circle class="score-bg" cx="50" cy="50" r="45"></circle>
+        <circle class="score-progress" cx="50" cy="50" r="45"></circle>
+    </svg>
+    <div class="score-value">
+        <span class="score-number">0</span>
+        <span class="score-label">{{ $label }}</span>
+    </div>
+</div>

@@ -50,7 +50,7 @@
         <!-- Recent Reviews Section with Premium Cards -->
         <section class="section reviews-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header scroll-reveal">
                     <span class="section-tag">Fresh from the Lab</span>
                     <h2>Latest Reviews</h2>
                     <p class="section-subtitle">Honest gear reviews tested in the Colorado Rockies</p>
@@ -58,7 +58,7 @@
                 
                 <div class="peaks-grid premium-grid">
                     {{ range first 6 (where .Site.RegularPages "Section" "reviews") }}
-                    <article class="review-card fade-in-up">
+                    <article class="review-card scroll-reveal">
                         {{ if .Params.banner }}
                         {{ $image := .Resources.GetMatch .Params.banner }}
                         <div class="review-card-image">

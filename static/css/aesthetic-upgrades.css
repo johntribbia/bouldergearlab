@@ -1,0 +1,484 @@
+/* ============================================
+   BOULDER GEAR LAB - AESTHETIC UPGRADES 2026
+   Modern scroll animations, grain textures,
+   and dynamic score visualizations
+   ============================================ */
+
+/* ========================================
+   1. GRAIN TEXTURE OVERLAY
+   Adds subtle noise for editorial depth
+   ======================================== */
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Optional: Reduce grain in dark sections for better contrast */
+.bgl-hero::after,
+footer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ========================================
+   2. SCROLL ANIMATIONS
+   Elements animate in as user scrolls
+   ======================================== */
+
+/* Base state for animated elements */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays for grid items */
+.scroll-reveal:nth-child(1) { transition-delay: 0ms; }
+.scroll-reveal:nth-child(2) { transition-delay: 100ms; }
+.scroll-reveal:nth-child(3) { transition-delay: 200ms; }
+.scroll-reveal:nth-child(4) { transition-delay: 300ms; }
+.scroll-reveal:nth-child(5) { transition-delay: 400ms; }
+.scroll-reveal:nth-child(6) { transition-delay: 500ms; }
+
+/* Fade up variation - default */
+.scroll-reveal--fade-up {
+    transform: translateY(60px);
+}
+
+/* Fade in from left */
+.scroll-reveal--fade-left {
+    transform: translateX(-60px);
+}
+
+.scroll-reveal--fade-left.revealed {
+    transform: translateX(0);
+}
+
+/* Fade in from right */
+.scroll-reveal--fade-right {
+    transform: translateX(60px);
+}
+
+.scroll-reveal--fade-right.revealed {
+    transform: translateX(0);
+}
+
+/* Scale up effect */
+.scroll-reveal--scale {
+    transform: scale(0.9);
+}
+
+.scroll-reveal--scale.revealed {
+    transform: scale(1);
+}
+
+/* Blur in effect */
+.scroll-reveal--blur {
+    filter: blur(10px);
+    transform: translateY(20px);
+}
+
+.scroll-reveal--blur.revealed {
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Section headers animation */
+.section-header {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-header.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stats counter animation */
+.bgl-stat-number {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bgl-stat-number.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Cards with hover lift enhancement */
+.review-card,
+.peak-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-card:hover,
+.peak-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================
+   3. REVIEW SCORE VISUALIZATIONS
+   Animated circular & bar progress
+   ======================================== */
+
+/* Animated Score Circle */
+.review-score-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.review-score-circle svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.review-score-circle .score-bg {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 8;
+}
+
+.review-score-circle .score-progress {
+    fill: none;
+    stroke: url(#scoreGradient);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 283; /* 2 * PI * 45 (radius) */
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-score-circle.animated .score-progress {
+    stroke-dashoffset: calc(283 - (283 * var(--score)) / 100);
+}
+
+.review-score-circle .score-value {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display, 'Archivo', sans-serif);
+}
+
+.review-score-circle .score-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--mountain-dark, #1a1a1a);
+    line-height: 1;
+}
+
+.review-score-circle .score-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Large score circle variant */
+.review-score-circle--large {
+    width: 140px;
+    height: 140px;
+}
+
+.review-score-circle--large .score-number {
+    font-size: 42px;
+}
+
+.review-score-circle--large .score-label {
+    font-size: 12px;
+}
+
+/* Category Score Bars */
+.score-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: #fafafa;
+    border-radius: 16px;
+}
+
+.score-bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.score-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.score-bar-label {
+    font-weight: 600;
+    color: var(--mountain-dark, #1a1a1a);
+}
+
+.score-bar-value {
+    font-weight: 700;
+    color: var(--trail-red, #46a606);
+}
+
+.score-bar-track {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.score-bar-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--trail-red, #46a606), var(--alpine-blue, #2c5f8d));
+    border-radius: 4px;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.score-bar-fill.animated {
+    width: var(--score);
+}
+
+/* Overall Rating Display */
+.overall-rating {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 32px;
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+    border-radius: 20px;
+    margin-bottom: 32px;
+}
+
+.overall-rating .review-score-circle {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.overall-rating-text {
+    flex: 1;
+}
+
+.overall-rating-verdict {
+    font-family: var(--font-display, 'Archivo', sans-serif);
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--mountain-dark, #1a1a1a);
+    margin-bottom: 8px;
+}
+
+.overall-rating-summary {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Pros/Cons with animation */
+.pros-cons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 32px 0;
+}
+
+@media (max-width: 640px) {
+    .pros-cons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pros-list,
+.cons-list {
+    padding: 24px;
+    border-radius: 16px;
+}
+
+.pros-list {
+    background: linear-gradient(135deg, rgba(70, 166, 6, 0.08) 0%, rgba(70, 166, 6, 0.02) 100%);
+    border: 1px solid rgba(70, 166, 6, 0.2);
+}
+
+.cons-list {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.08) 0%, rgba(220, 53, 69, 0.02) 100%);
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.pros-list h4,
+.cons-list h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pros-list h4 { color: #2d8a05; }
+.cons-list h4 { color: #c82333; }
+
+.pros-list h4::before { content: '✓'; }
+.cons-list h4::before { content: '✗'; }
+
+.pros-list ul,
+.cons-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pros-list li,
+.cons-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 15px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pros-list li:last-child,
+.cons-list li:last-child {
+    border-bottom: none;
+}
+
+.pros-list.revealed li,
+.cons-list.revealed li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger the list item animations */
+.pros-list li:nth-child(1), .cons-list li:nth-child(1) { transition-delay: 0ms; }
+.pros-list li:nth-child(2), .cons-list li:nth-child(2) { transition-delay: 100ms; }
+.pros-list li:nth-child(3), .cons-list li:nth-child(3) { transition-delay: 200ms; }
+.pros-list li:nth-child(4), .cons-list li:nth-child(4) { transition-delay: 300ms; }
+.pros-list li:nth-child(5), .cons-list li:nth-child(5) { transition-delay: 400ms; }
+
+/* Quick Stats Pills */
+.quick-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.quick-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.quick-stat:hover {
+    border-color: var(--trail-red, #46a606);
+    box-shadow: 0 4px 12px rgba(70, 166, 6, 0.15);
+    transform: translateY(-2px);
+}
+
+.quick-stat-icon {
+    font-size: 16px;
+}
+
+.quick-stat-label {
+    color: #666;
+}
+
+.quick-stat-value {
+    font-weight: 700;
+    color: var(--mountain-dark, #1a1a1a);
+}
+
+/* ========================================
+   4. ENHANCED TYPOGRAPHY ANIMATIONS
+   ======================================== */
+
+/* Animated underline for headings */
+.animated-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--trail-red, #46a606), var(--alpine-blue, #2c5f8d));
+    border-radius: 2px;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animated-underline.revealed::after {
+    width: 100%;
+}
+
+/* ========================================
+   5. REDUCED MOTION PREFERENCES
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
+    .section-header,
+    .bgl-stat-number,
+    .score-bar-fill,
+    .review-score-circle .score-progress,
+    .pros-list li,
+    .cons-list li {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+    
+    .review-score-circle .score-progress {
+        stroke-dashoffset: calc(283 - (283 * var(--score)) / 100) !important;
+    }
+    
+    .score-bar-fill {
+        width: var(--score) !important;
+    }
+    
+    body::before {
+        display: none;
+    }
+}

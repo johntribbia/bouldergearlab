@@ -2,3 +2,15 @@
 <link href="{{ "css/bgl-custom.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
 <!-- Premium Styling Upgrades -->
 <link href="{{ "css/premium-upgrades.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
+<!-- 2026 Aesthetic Upgrades: Scroll animations, grain texture, score visualizations -->
+<link href="{{ "css/aesthetic-upgrades.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
+
+<!-- SVG Gradient Definition for Score Circles -->
+<svg width="0" height="0" style="position: absolute;">
+    <defs>
+        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#46a606" />
+            <stop offset="100%" style="stop-color:#2c5f8d" />
+        </linearGradient>
+    </defs>
+</svg>

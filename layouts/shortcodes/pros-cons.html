@@ -1,0 +1,93 @@
+{{/*
+  Pros and Cons Shortcode
+  Usage: 
+  {{< pros-cons >}}
+    pros:
+      - Great cushioning
+      - Excellent durability
+      - Good value
+    cons:
+      - Heavy for some
+      - Limited colors
+  {{< /pros-cons >}}
+  
+  Or simpler format:
+  {{< pros-cons pros="Great cushioning|Excellent durability|Good value" cons="Heavy for some|Limited colors" >}}
+*/}}
+
+{{ $prosParam := .Get "pros" }}
+{{ $consParam := .Get "cons" }}
+
+<div class="pros-cons-grid">
+  {{ if $prosParam }}
+    {{/* Parameter-based simple format */}}
+    <div class="pros-list">
+      <h4>Pros</h4>
+      <ul>
+        {{ range split $prosParam "|" }}
+          <li>{{ . | trim " " }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
+  
+  {{ if $consParam }}
+    <div class="cons-list">
+      <h4>Cons</h4>
+      <ul>
+        {{ range split $consParam "|" }}
+          <li>{{ . | trim " " }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
+  
+  {{ if and (not $prosParam) (not $consParam) }}
+    {{/* Inner content YAML-like format */}}
+    {{ $content := .Inner }}
+    {{ $inPros := false }}
+    {{ $inCons := false }}
+    {{ $pros := slice }}
+    {{ $cons := slice }}
+    
+    {{ range split $content "\n" }}
+      {{ $line := trim . " " }}
+      {{ if hasPrefix $line "pros:" }}
+        {{ $inPros = true }}
+        {{ $inCons = false }}
+      {{ else if hasPrefix $line "cons:" }}
+        {{ $inPros = false }}
+        {{ $inCons = true }}
+      {{ else if hasPrefix $line "- " }}
+        {{ $item := strings.TrimPrefix "- " $line }}
+        {{ if $inPros }}
+          {{ $pros = $pros | append $item }}
+        {{ else if $inCons }}
+          {{ $cons = $cons | append $item }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    
+    {{ if $pros }}
+    <div class="pros-list">
+      <h4>Pros</h4>
+      <ul>
+        {{ range $pros }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+    
+    {{ if $cons }}
+    <div class="cons-list">
+      <h4>Cons</h4>
+      <ul>
+        {{ range $cons }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  {{ end }}
+</div>

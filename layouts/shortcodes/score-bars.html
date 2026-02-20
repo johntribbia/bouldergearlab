@@ -1,0 +1,32 @@
+{{/*
+  Score Bars Shortcode
+  Usage: {{< score-bars >}}
+    Comfort: 90
+    Durability: 85
+    Value: 75
+    Performance: 95
+  {{< /score-bars >}}
+*/}}
+
+<div class="score-bars">
+{{ $lines := split .Inner "\n" }}
+{{ range $lines }}
+  {{ $line := trim . " " }}
+  {{ if $line }}
+    {{ $parts := split $line ":" }}
+    {{ if ge (len $parts) 2 }}
+      {{ $label := index $parts 0 | trim " " }}
+      {{ $value := index $parts 1 | trim " " }}
+      <div class="score-bar-item">
+        <div class="score-bar-header">
+          <span class="score-bar-label">{{ $label }}</span>
+          <span class="score-bar-value">{{ $value }}/100</span>
+        </div>
+        <div class="score-bar-track">
+          <div class="score-bar-fill" style="--score: {{ $value }}%;"></div>
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+{{ end }}
+</div>
