@@ -1383,17 +1383,15 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
 /* ─── Mountain geometry (deterministic) ─ */
-// Two parallax layers — far range + near ridge
+// Far range: one clean pyramid summit touching nearly the top, gentle shoulders
 const farPeaks = [
-  {x:0.0,  y:0.78},
-  {x:0.12, y:0.55},
-  {x:0.25, y:0.38},
-  {x:0.38, y:0.62},
-  {x:0.52, y:0.30},  // main summit
-  {x:0.65, y:0.50},
-  {x:0.78, y:0.44},
-  {x:0.88, y:0.60},
-  {x:1.0,  y:0.72},
+  {x:0.0,  y:0.92},
+  {x:0.18, y:0.72},
+  {x:0.36, y:0.40},
+  {x:0.50, y:0.15},  // summit — nearly touches top edge
+  {x:0.64, y:0.38},
+  {x:0.80, y:0.68},
+  {x:1.0,  y:0.88},
 ];
 
 const nearPeaks = [
