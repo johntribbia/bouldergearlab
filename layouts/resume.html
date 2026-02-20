@@ -1382,28 +1382,39 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-/* ─── Mountain geometry (deterministic) ─ */
-// Far range: one clean pyramid summit touching nearly the top, gentle shoulders
+/* ─── Mountain geometry — 3 depth layers ─ */
+
+// FAR: single clean summit, highest and lightest, most parallax
 const farPeaks = [
-  {x:0.0,  y:0.92},
-  {x:0.18, y:0.72},
-  {x:0.36, y:0.40},
-  {x:0.50, y:0.15},  // summit — nearly touches top edge
-  {x:0.64, y:0.38},
-  {x:0.80, y:0.68},
-  {x:1.0,  y:0.88},
+  {x:0.0,  y:0.95},
+  {x:0.20, y:0.75},
+  {x:0.38, y:0.48},
+  {x:0.50, y:0.20},
+  {x:0.62, y:0.46},
+  {x:0.80, y:0.72},
+  {x:1.0,  y:0.92},
 ];
 
+// MID: offset single peak, sits in front of far, medium parallax
+const midPeaks = [
+  {x:0.0,  y:0.98},
+  {x:0.15, y:0.82},
+  {x:0.32, y:0.52},
+  {x:0.40, y:0.44},  // mid summit — offset left of far
+  {x:0.58, y:0.58},
+  {x:0.75, y:0.78},
+  {x:1.0,  y:0.96},
+];
+
+// NEAR: single peak offset right, closest/darkest, least parallax
 const nearPeaks = [
-  {x:0.0,  y:0.88},
-  {x:0.10, y:0.72},
-  {x:0.22, y:0.80},
-  {x:0.35, y:0.65},
-  {x:0.50, y:0.75},
-  {x:0.63, y:0.60},
-  {x:0.75, y:0.70},
-  {x:0.88, y:0.65},
-  {x:1.0,  y:0.82},
+  {x:0.0,  y:1.00},
+  {x:0.18, y:0.90},
+  {x:0.38, y:0.82},
+  {x:0.58, y:0.62},  // near summit — offset right
+  {x:0.72, y:0.74},
+  {x:0.88, y:0.88},
+  {x:1.0,  y:0.98},
 ];
 
 function makePath(peaks, scrollPct, parallax) {
