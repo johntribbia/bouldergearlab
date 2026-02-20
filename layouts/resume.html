@@ -57,13 +57,13 @@
 
         /* Hero Section - Mountain Landscape */
         .hero-section {
-            min-height: 100vh;
+            min-height: 82vh;
             background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
         #mountainCanvas {
@@ -83,7 +83,7 @@
             z-index: 10;
             text-align: center;
             max-width: 1000px;
-            padding: 40px 20px;
+            padding: 20px 20px;
         }
 
         .hero-tagline {
@@ -92,7 +92,7 @@
             text-transform: uppercase;
             letter-spacing: 5px;
             font-size: 16px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: block;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
@@ -104,17 +104,17 @@
             letter-spacing: -0.02em;
             color: white;
             line-height: 0.95;
-            margin-bottom: 40px;
+            margin-bottom: 24px;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
         }
         
 
         .hero-subtitle {
-            font-size: clamp(18px, 2.5vw, 26px);
+            font-size: clamp(16px, 2vw, 21px);
             color: rgba(255, 255, 255, 0.9);
             font-weight: 400;
             max-width: 800px;
-            margin: 0 auto 40px;
+            margin: 0 auto 28px;
             line-height: 1.5;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
@@ -123,14 +123,14 @@
         .stats-row {
             display: flex;
             justify-content: center;
-            gap: 80px;
-            margin: 40px auto;
-            padding: 30px 60px;
+            gap: 60px;
+            margin: 24px auto;
+            padding: 20px 50px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            max-width: 700px;
+            max-width: 600px;
         }
         .stat-item {
             text-align: center;
@@ -139,7 +139,7 @@
         .stat-number {
             display: block;
             font-family: var(--font-display);
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 700;
             color: var(--trail-red);
             font-variant-numeric: tabular-nums;
@@ -198,24 +198,24 @@
 
         /* Content Sections */
         .section {
-            padding: 80px 0 0;
+            padding: 55px 0 0;
             position: relative;
             background-color: var(--summit-white);
             z-index: 100;
         }
 
         .section.compact {
-            padding: 40px 0 0;
+            padding: 28px 0 0;
         }
 
         /* Section Dividers */
         .section::before {
             content: "▲";
             position: absolute;
-            top: 40px;
+            top: 26px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 24px;
+            font-size: 20px;
             color: var(--trail-red);
             opacity: 0.3;
         }
@@ -232,10 +232,10 @@
 
         h2 {
             font-family: var(--font-display);
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
         }
 
         h2::before {
@@ -245,9 +245,9 @@
         }
 
         .section-subtitle {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--rock-gray);
-            margin-bottom: 40px;
+            margin-bottom: 24px;
             font-style: italic;
         }
 
@@ -267,7 +267,7 @@
         .about-card {
             background: white;
             border-radius: 20px;
-            padding: 36px 40px;
+            padding: 28px 32px;
             border: 2px solid #eee;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             margin-bottom: 0;
@@ -286,27 +286,27 @@
         }
 
         .about-card p {
-            font-size: 17px;
-            line-height: 1.85;
+            font-size: 16px;
+            line-height: 1.75;
             color: #333;
         }
 
         .about-card p + p {
-            margin-top: 18px;
+            margin-top: 12px;
         }
 
         /* Technical Expertise Section */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 18px;
+            margin-bottom: 24px;
         }
 
         .skill-category {
             background: white;
             border-radius: 16px;
-            padding: 25px;
+            padding: 18px 20px;
             border: 2px solid #eee;
             transition: all 0.3s ease;
         }
@@ -440,10 +440,10 @@
         /* Expedition Timeline */
         .expedition-section {
             background: var(--summit-white);
-            padding: 30px 0;
+            padding: 16px 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 12px;
             max-width: 1100px;
             margin: 0 auto;
             position: relative;
@@ -470,7 +470,7 @@
         .expedition-card {
             background: white;
             border-radius: 20px;
-            padding: 30px;
+            padding: 22px 24px;
             margin-bottom: 0;
             border-left: 6px solid var(--trail-red);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -604,11 +604,11 @@
         }
 
         .achievements-trail li {
-            padding: 8px 0 8px 30px;
+            padding: 5px 0 5px 28px;
             position: relative;
             color: #333;
-            line-height: 1.5;
-            font-size: 14px;
+            line-height: 1.45;
+            font-size: 13.5px;
         }
 
         .achievements-trail li:before {
@@ -671,15 +671,15 @@
         .awards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 18px;
+            gap: 12px;
             max-width: 1100px;
             margin: 0 auto;
         }
 
         .award-badge {
             background: white;
-            border-radius: 20px;
-            padding: 25px 20px;
+            border-radius: 16px;
+            padding: 18px 20px;
             border: 2px solid #eee;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -734,7 +734,7 @@
         .training-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 20px;
+            gap: 16px;
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -742,7 +742,7 @@
         .training-card {
             background: white;
             border-radius: 20px;
-            padding: 30px;
+            padding: 24px 28px;
             border: 2px solid #eee;
         }
 
@@ -815,29 +815,29 @@
         .summit-footer {
             background: var(--mountain-dark);
             color: white;
-            padding: 50px 20px 30px;
+            padding: 40px 20px 24px;
             text-align: center;
         }
 
         .summit-footer h2 {
             color: white;
-            margin-bottom: 25px;
+            margin-bottom: 16px;
         }
 
         .summit-tagline {
-            font-size: 22px;
+            font-size: 18px;
             opacity: 0.9;
             max-width: 700px;
-            margin: 0 auto 50px;
+            margin: 0 auto 36px;
             line-height: 1.6;
         }
 
         .contact-links {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         .contact-button {
@@ -873,23 +873,23 @@
         .open-to-opportunities {
             background: linear-gradient(135deg, var(--alpine-blue), var(--trail-red));
             color: white;
-            padding: 35px;
-            border-radius: 20px;
-            margin-top: 40px;
-            margin-bottom: 40px;
+            padding: 24px 30px;
+            border-radius: 16px;
+            margin-top: 24px;
+            margin-bottom: 24px;
             text-align: center;
         }
 
         .open-to-opportunities h3 {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .open-to-opportunities p {
-            font-size: 16px;
+            font-size: 15px;
             opacity: 0.95;
-            line-height: 1.6;
+            line-height: 1.55;
         }
 
         /* Stagger animation delays */
@@ -992,7 +992,7 @@
                 </div>
             </div>
             
-            <div style="margin-top: 40px; margin-bottom: 60px;">
+            <div style="margin-top: 24px; margin-bottom: 30px;">
                 <a href="#experience" class="cta-button secondary" aria-label="Navigate to experience section">View Experience</a>
                 <a href="#contact" class="cta-button secondary" aria-label="Navigate to contact section">Get In Touch</a>
             </div>
@@ -1074,37 +1074,6 @@
                         <span class="skill-tag" data-tooltip="IC to Senior Staff">Mentorship</span>
                         <span class="skill-tag" data-tooltip="Org-wide impact">Quality Standards</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership Overview -->
-    <section class="section compact">
-        <div class="container">
-            <h2>Leadership Approach</h2>
-            <p class="section-subtitle">Building high-performing teams and scalable data solutions</p>
-
-            <div class="peaks-grid">
-                <div class="peak-card fade-in-up">
-                    <div class="peak-title">Technical Leadership</div>
-                    <div class="peak-desc">Progressive leadership from IC to Senior Staff at Google, leading diverse
-                        teams across Data Science, Analytics Engineering, and BI. Setting quality standards and
-                        developing talent through direct mentorship and organizational influence.</div>
-                </div>
-
-                <div class="peak-card fade-in-up">
-                    <div class="peak-title">Strategic Vision</div>
-                    <div class="peak-desc">Driving end-to-end data science roadmaps that connect offline model
-                        evaluation to online product engagement. Establishing measurement frameworks that inform
-                        strategic decision-making at scale.</div>
-                </div>
-
-                <div class="peak-card fade-in-up">
-                    <div class="peak-title">Cross-Functional Impact</div>
-                    <div class="peak-desc">Fostering partnerships across engineering, product, research, and operations
-                        teams. Translating complex technical concepts into actionable business insights for diverse
-                        stakeholders.</div>
                 </div>
             </div>
         </div>
