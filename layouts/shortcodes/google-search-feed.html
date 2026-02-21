@@ -15,10 +15,15 @@
 {{ $fetchError := false }}
 {{ $searchResults := "" }}
 
-{{ with resources.GetRemote $url }}
-  {{ $searchResults = . | transform.Unmarshal }}
-{{ else }}
+{{ $result := try (resources.GetRemote $url) }}
+{{ with $result.Err }}
   {{ $fetchError = true }}
+{{ else }}
+  {{ with $result.Value }}
+    {{ $searchResults = . | transform.Unmarshal }}
+  {{ else }}
+    {{ $fetchError = true }}
+  {{ end }}
 {{ end }}
 
 {{ if $fetchError }}
