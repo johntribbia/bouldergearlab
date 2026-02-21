@@ -1745,7 +1745,10 @@ function runCounter(el) {
 const statObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      e.target.querySelectorAll('[data-target]').forEach(runCounter);
+      /* Delay counter to sync with the CSS riseIn animation (1.2s delay) */
+      setTimeout(() => {
+        e.target.querySelectorAll('[data-target]').forEach(runCounter);
+      }, 1300);
       statObserver.unobserve(e.target);
     }
   });

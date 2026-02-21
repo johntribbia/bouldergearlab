@@ -1,4 +1,4 @@
-<!-- Boulder Gear Lab Premium Hero Section -->
+<!-- Boulder Gear Lab — Alpine Dark Hero -->
 <section class="bgl-hero">
     <div class="bgl-hero-background">
         <img src="/img/photogrid.jpg" alt="Testing gear in action" class="bgl-hero-image" loading="eager">
@@ -6,9 +6,9 @@
     </div>
     <div class="bgl-hero-content">
         <div class="bgl-hero-text">
-            <span class="hero-badge">Gear Reviews • Est. Boulder, CO</span>
-            <h1>Boulder Gear Lab</h1>
-            <p class="lead">Honest gear reviews tested across miles of trails, roads, and mountains.<br>
+            <span class="hero-badge">Gear Reviews · Est. Boulder, CO</span>
+            <h1>Boulder<br><span style="font-weight:300;color:rgba(255,255,255,0.45);font-size:0.62em;letter-spacing:-0.01em;">Gear Lab</span></h1>
+            <p class="lead">Honest gear reviews tested across miles of trails, roads, and mountains.
                 Backed by a data science mindset and 20+ years of outdoor experience.</p>
             <div class="hero-cta-group">
                 <a href="/reviews/" class="bgl-hero-cta">Browse Reviews</a>
@@ -17,101 +17,7 @@
         </div>
     </div>
     <div class="hero-scroll-indicator">
-        <span>Scroll to explore</span>
-        <div class="scroll-arrow"></div>
+        <span class="scroll-hint-line"></span>
+        Scroll to explore
     </div>
 </section>
-
-<style>
-.hero-badge {
-    display: inline-block;
-    padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50px;
-    color: white;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 24px;
-    animation: heroFadeIn 1s ease-out;
-}
-
-.hero-cta-group {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    animation: heroFadeIn 1s ease-out 0.4s both;
-}
-
-.bgl-hero-cta.secondary {
-    background: transparent;
-    border: 2px solid white;
-    box-shadow: none;
-}
-
-.bgl-hero-cta.secondary:hover {
-    background: white;
-    color: var(--mountain-dark);
-}
-
-.hero-scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    text-align: right;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    animation: fadeInUp 1s ease-out 1s both;
-    z-index: 10;
-}
-
-.scroll-arrow {
-    width: 20px;
-    height: 20px;
-    margin: 10px 0 0 auto;
-    border-left: 2px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    transform: rotate(-45deg);
-    animation: scrollBounce 2s infinite;
-}
-
-@keyframes scrollBounce {
-    0%, 100% { transform: rotate(-45deg) translateY(0); }
-    50% { transform: rotate(-45deg) translateY(8px); }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-cta-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .bgl-hero-cta {
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-    }
-    
-    .hero-scroll-indicator {
-        display: none;
-    }
-}
-</style>

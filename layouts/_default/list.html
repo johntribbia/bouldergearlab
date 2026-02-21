@@ -16,22 +16,18 @@
 
         {{ partial "breadcrumbs.html" . }}
 
-        <!-- Premium Card Grid Layout -->
+        <!-- Zone-style Review List -->
         <section class="section reviews-section list-page">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
+                    <span class="section-tag">{{ if .Description }}{{ .Description }}{{ else }}Browse Our Collection{{ end }}</span>
                     <h2>{{ .Title }}</h2>
-                    {{ if .Description }}
-                    <p class="section-subtitle">{{ .Description }}</p>
-                    {{ else }}
-                    <p class="section-subtitle">Browse our collection of gear reviews</p>
-                    {{ end }}
                 </div>
 
                 <div class="peaks-grid premium-grid">
                     {{ $paginator := .Paginate (where .Data.Pages "Type" "in" .Site.Params.mainSections) }}
                     {{ range $paginator.Pages }}
-                    <article class="review-card fade-in-up">
+                    <article class="review-card reveal">
                         {{ if .Params.banner }}
                         <div class="review-card-image">
                             {{ $image := .Resources.GetMatch .Params.banner }}
@@ -45,7 +41,7 @@
                             <div class="review-card-overlay">
                                 <a href="{{ .Permalink }}" class="review-card-link">
                                     <span>Read Review</span>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <line x1="5" y1="12" x2="19" y2="12"></line>
                                         <polyline points="12 5 19 12 12 19"></polyline>
                                     </svg>
@@ -78,7 +74,7 @@
                             
                             <a href="{{ .Permalink }}" class="review-card-cta">
                                 Read Full Review
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
@@ -88,11 +84,11 @@
                     {{ end }}
                 </div>
 
-                <!-- Premium Pagination -->
+                <!-- Pagination -->
                 <div class="premium-pagination">
                     {{ if .Paginator.HasPrev }}
                     <a href="{{ .Paginator.Prev.URL | relURL }}" class="pagination-btn prev">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="19" y1="12" x2="5" y2="12"></line>
                             <polyline points="12 19 5 12 12 5"></polyline>
                         </svg>
@@ -109,7 +105,7 @@
                     {{ if .Paginator.HasNext }}
                     <a href="{{ .Paginator.Next.URL | relURL }}" class="pagination-btn next">
                         <span>Older</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
@@ -120,12 +116,10 @@
                 </div>
             </div>
         </section>
-        <!-- /#content -->
 
         {{ partial "footer.html" . }}
 
     </div>
-    <!-- /#all -->
 
     {{ partial "scripts.html" . }}
 

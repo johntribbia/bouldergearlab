@@ -1,0 +1,14 @@
+{{/* Alpine Dark breadcrumb — trail + page title */}}
+{{ if not .IsHome }}
+<nav class="alpine-breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="crumb-trail">
+      <li><a href="/">Home</a></li>
+      {{ if .Parent }}
+      <li><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+      {{ end }}
+    </ol>
+    <h1 class="crumb-title">{{ .Title }}</h1>
+  </div>
+</nav>
+{{ end }}

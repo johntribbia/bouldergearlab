@@ -1,252 +1,168 @@
 /**
- * Boulder Gear Lab - Scroll Reveal & Score Animations
- * Modern Intersection Observer-based animations
+ * Boulder Gear Lab – Alpine Dark Reveal System
+ * Unified IntersectionObserver for .reveal → .vis, .scroll-reveal → .revealed,
+ * stat counters, score circles, and stagger delays.
  */
 
-(function() {
+(function () {
     'use strict';
 
-    // Configuration
-    const config = {
-        threshold: 0.15,      // Trigger when 15% visible
-        rootMargin: '0px 0px -50px 0px',
-        animateOnce: true     // Only animate once
+    /* ── config ───────────────────────────────── */
+    const CFG = {
+        threshold : 0.12,
+        rootMargin: '0px 0px -60px 0px',
+        once      : true,          // observe only once
+        staggerMs : 120            // delay between siblings
     };
 
-    // Initialize when DOM is ready
+    /* ── bootstrap ────────────────────────────── */
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
+        document.addEventListener('DOMContentLoaded', boot);
     } else {
-        init();
+        boot();
     }
 
-    function init() {
-        // Check for reduced motion preference
+    function boot() {
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            revealAllElements();
+            showAll();
             return;
         }
-
-        setupScrollReveal();
-        setupScoreAnimations();
-        setupStatsCounter();
-        autoTagScrollElements();
+        autoTag();
+        initReveals();
+        initScoreCircles();
+        initScoreBars();
+        initProsCons();
+        initStatCounters();
     }
 
-    /**
-     * Auto-tag common elements for scroll reveal
-     */
-    function autoTagScrollElements() {
-        // Tag review cards
-        document.querySelectorAll('.review-card, .peak-card').forEach(el => {
-            if (!el.classList.contains('scroll-reveal')) {
-                el.classList.add('scroll-reveal');
-            }
-        });
-
-        // Tag section headers
-        document.querySelectorAll('.section-header, .section-title').forEach(el => {
-            if (!el.classList.contains('scroll-reveal')) {
-                el.classList.add('scroll-reveal');
-            }
-        });
-
-        // Tag stats
-        document.querySelectorAll('.bgl-stat-number').forEach(el => {
-            if (!el.classList.contains('scroll-reveal')) {
-                el.classList.add('scroll-reveal');
-            }
-        });
-
-        // Tag feature boxes
-        document.querySelectorAll('.feature-box, .box').forEach(el => {
-            if (!el.classList.contains('scroll-reveal')) {
-                el.classList.add('scroll-reveal');
-            }
-        });
-
-        // Re-run setup for newly tagged elements
-        setupScrollReveal();
-    }
-
-    /**
-     * Setup Intersection Observer for scroll reveals
-     */
-    function setupScrollReveal() {
-        const revealElements = document.querySelectorAll('.scroll-reveal:not(.revealed)');
-        
-        if (!revealElements.length) return;
-
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    
-                    if (config.animateOnce) {
-                        obs.unobserve(entry.target);
-                    }
+    /* ── auto-tag common elements ─────────────── */
+    function autoTag() {
+        var sel = [
+            '.review-card',
+            '.peak-card',
+            '.section-header',
+            '.section-title',
+            '.bgl-stat-number',
+            '.feature-box',
+            '.box',
+            '.box-simple'
+        ];
+        sel.forEach(function (s) {
+            document.querySelectorAll(s).forEach(function (el) {
+                if (!el.classList.contains('reveal') && !el.classList.contains('scroll-reveal')) {
+                    el.classList.add('reveal');
                 }
             });
-        }, {
-            threshold: config.threshold,
-            rootMargin: config.rootMargin
         });
-
-        revealElements.forEach(el => observer.observe(el));
     }
 
-    /**
-     * Setup score circle and bar animations
-     */
-    function setupScoreAnimations() {
-        // Score circles
-        const scoreCircles = document.querySelectorAll('.review-score-circle');
-        
-        if (scoreCircles.length) {
-            const circleObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated');
-                        animateScoreNumber(entry.target);
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
+    /* ── reveal observer (.reveal → .vis, .scroll-reveal → .revealed) ── */
+    function initReveals() {
+        var targets = document.querySelectorAll('.reveal:not(.vis), .scroll-reveal:not(.revealed)');
+        if (!targets.length) return;
 
-            scoreCircles.forEach(el => circleObserver.observe(el));
-        }
+        /* assign stagger delays inside grid parents */
+        assignStagger('.peaks-grid');
+        assignStagger('.premium-grid');
 
-        // Score bars
-        const scoreBars = document.querySelectorAll('.score-bar-fill');
-        
-        if (scoreBars.length) {
-            const barObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated');
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            scoreBars.forEach(el => barObserver.observe(el));
-        }
-
-        // Pros/Cons lists
-        const prosConsList = document.querySelectorAll('.pros-list, .cons-list');
-        
-        if (prosConsList.length) {
-            const listObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
-
-            prosConsList.forEach(el => listObserver.observe(el));
-        }
-    }
-
-    /**
-     * Animate score number counting up
-     */
-    function animateScoreNumber(circleEl) {
-        const scoreEl = circleEl.querySelector('.score-number');
-        if (!scoreEl) return;
-
-        const targetScore = parseInt(circleEl.style.getPropertyValue('--score')) || 0;
-        const duration = 1500; // ms
-        const startTime = performance.now();
-
-        function updateNumber(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            
-            // Ease out cubic
-            const easedProgress = 1 - Math.pow(1 - progress, 3);
-            const currentValue = Math.round(easedProgress * targetScore);
-            
-            scoreEl.textContent = currentValue;
-
-            if (progress < 1) {
-                requestAnimationFrame(updateNumber);
-            }
-        }
-
-        requestAnimationFrame(updateNumber);
-    }
-
-    /**
-     * Setup animated stats counter
-     */
-    function setupStatsCounter() {
-        const stats = document.querySelectorAll('.bgl-stat-number');
-        
-        if (!stats.length) return;
-
-        const statsObserver = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    animateStatNumber(entry.target);
-                    obs.unobserve(entry.target);
-                }
+        var io = new IntersectionObserver(function (entries, obs) {
+            entries.forEach(function (e) {
+                if (!e.isIntersecting) return;
+                var t = e.target;
+                t.classList.add(t.classList.contains('scroll-reveal') ? 'revealed' : 'vis');
+                if (CFG.once) obs.unobserve(t);
             });
-        }, { threshold: 0.5 });
+        }, { threshold: CFG.threshold, rootMargin: CFG.rootMargin });
 
-        stats.forEach(el => statsObserver.observe(el));
+        targets.forEach(function (el) { io.observe(el); });
     }
 
-    /**
-     * Animate stat numbers counting up
-     */
-    function animateStatNumber(el) {
-        const text = el.textContent.trim();
-        const match = text.match(/^([\d,]+)(\+?)(.*)$/);
-        
-        if (!match) return;
-        
-        const targetNum = parseInt(match[1].replace(/,/g, ''));
-        const suffix = (match[2] || '') + (match[3] || '');
-        const duration = 2000;
-        const startTime = performance.now();
-
-        function updateStat(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            
-            // Ease out expo
-            const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-            const currentValue = Math.round(easedProgress * targetNum);
-            
-            el.textContent = currentValue.toLocaleString() + suffix;
-
-            if (progress < 1) {
-                requestAnimationFrame(updateStat);
-            }
-        }
-
-        requestAnimationFrame(updateStat);
+    function assignStagger(parentSel) {
+        document.querySelectorAll(parentSel).forEach(function (grid) {
+            var kids = grid.querySelectorAll('.reveal, .scroll-reveal');
+            kids.forEach(function (el, i) {
+                el.style.transitionDelay = (i * CFG.staggerMs) + 'ms';
+            });
+        });
     }
 
-    /**
-     * Fallback: reveal all elements immediately
-     */
-    function revealAllElements() {
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-            el.classList.add('revealed');
+    /* ── score circles ────────────────────────── */
+    function initScoreCircles() {
+        observe('.review-score-circle', 0.5, function (el) {
+            el.classList.add('animated');
+            animateNumber(el.querySelector('.score-number'),
+                parseInt(el.style.getPropertyValue('--score')) || 0, 1500);
         });
-        document.querySelectorAll('.review-score-circle').forEach(el => {
+    }
+
+    /* ── score bars ───────────────────────────── */
+    function initScoreBars() {
+        observe('.score-bar-fill', 0.3, function (el) {
             el.classList.add('animated');
         });
-        document.querySelectorAll('.score-bar-fill').forEach(el => {
-            el.classList.add('animated');
-        });
-        document.querySelectorAll('.pros-list, .cons-list').forEach(el => {
+    }
+
+    /* ── pros / cons ──────────────────────────── */
+    function initProsCons() {
+        observe('.pros-list, .cons-list', 0.2, function (el) {
             el.classList.add('revealed');
         });
+    }
+
+    /* ── stat counters ────────────────────────── */
+    function initStatCounters() {
+        observe('.bgl-stat-number', 0.5, function (el) {
+            el.classList.add('revealed');
+            var text  = el.textContent.trim();
+            var m     = text.match(/^([\d,]+)(\+?)(.*)$/);
+            if (!m) return;
+            var target = parseInt(m[1].replace(/,/g, ''));
+            var suffix = (m[2] || '') + (m[3] || '');
+            animateCount(el, target, suffix, 2000);
+        });
+    }
+
+    /* ── helpers ───────────────────────────────── */
+    function observe(selector, thresh, cb) {
+        var els = document.querySelectorAll(selector);
+        if (!els.length) return;
+        var io = new IntersectionObserver(function (entries, obs) {
+            entries.forEach(function (e) {
+                if (!e.isIntersecting) return;
+                cb(e.target);
+                obs.unobserve(e.target);
+            });
+        }, { threshold: thresh });
+        els.forEach(function (el) { io.observe(el); });
+    }
+
+    function animateNumber(el, target, duration) {
+        if (!el) return;
+        var t0 = performance.now();
+        (function tick(now) {
+            var p = Math.min((now - t0) / duration, 1);
+            var ease = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(ease * target);
+            if (p < 1) requestAnimationFrame(tick);
+        })(t0);
+    }
+
+    function animateCount(el, target, suffix, duration) {
+        var t0 = performance.now();
+        (function tick(now) {
+            var p = Math.min((now - t0) / duration, 1);
+            var ease = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
+            el.textContent = Math.round(ease * target).toLocaleString() + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+        })(t0);
+    }
+
+    /* ── reduced-motion fallback ──────────────── */
+    function showAll() {
+        document.querySelectorAll('.reveal').forEach(function (e) { e.classList.add('vis'); });
+        document.querySelectorAll('.scroll-reveal').forEach(function (e) { e.classList.add('revealed'); });
+        document.querySelectorAll('.review-score-circle, .score-bar-fill').forEach(function (e) { e.classList.add('animated'); });
+        document.querySelectorAll('.pros-list, .cons-list').forEach(function (e) { e.classList.add('revealed'); });
     }
 
 })();

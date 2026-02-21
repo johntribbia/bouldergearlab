@@ -1,16 +1,24 @@
+<!-- Alpine Dark Design System — Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
 <!-- Boulder Gear Lab Custom CSS -->
 <link href="{{ "css/bgl-custom.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
 <!-- Premium Styling Upgrades -->
 <link href="{{ "css/premium-upgrades.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
 <!-- 2026 Aesthetic Upgrades: Scroll animations, grain texture, score visualizations -->
 <link href="{{ "css/aesthetic-upgrades.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
+<!-- Alpine Dark Design System — loaded LAST to override all previous styles -->
+<link href="{{ "css/alpine-dark.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
 
 <!-- SVG Gradient Definition for Score Circles -->
 <svg width="0" height="0" style="position: absolute;">
     <defs>
         <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#46a606" />
-            <stop offset="100%" style="stop-color:#2c5f8d" />
+            <stop offset="0%" style="stop-color:#7db800" />
+            <stop offset="100%" style="stop-color:#a8c8d8" />
         </linearGradient>
     </defs>
 </svg>
+

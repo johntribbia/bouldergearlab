@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  <head>
+    {{ partial "headers.html" . }}
+    {{ partial "custom_headers.html" . }}
+  </head>
+
+  <body>
+
+    <div id="all">
+
+        {{ partial "top.html" . }}
+
+        {{ partial "nav.html" . }}
+
+        {{ partial "breadcrumbs.html" . }}
+
+        {{ if isset .Params "id" }}
+
+          {{ partial .Params.id . }}
+
+        {{ else }}
+
+        <!-- Page Zone -->
+        <section class="section article-section">
+            <div class="container">
+
+                {{ if .Title }}
+                <header class="article-header reveal">
+                    <h1 class="article-title">{{ .Title }}</h1>
+                    {{ if .Description }}
+                    <p class="article-description">{{ .Description }}</p>
+                    {{ end }}
+                </header>
+                {{ end }}
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <article class="article-content">
+                            {{ .Content }}
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        {{ end }}
+
+        {{ partial "footer.html" . }}
+
+    </div>
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>
