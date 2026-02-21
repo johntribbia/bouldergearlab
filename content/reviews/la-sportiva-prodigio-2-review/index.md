@@ -128,15 +128,15 @@ Rock Protection: 9
 La Sportiva Prodigio v1 ()
 John: The Prodigio 2 improves on the original in several key ways. The slightly softer midsole enhances comfort, the deeper lugs provide better traction, and the enhanced rock protection makes technical terrain more manageable. The lengthwise fit remains similar, both require sizing up half a size for me, but the Prodigio 2’s wider platform feels more secure and accommodating. If I’m choosing between them, I’m going with the Prodigio 2.
 
-### Salomon S/Lab Ultra Glide 1.5 (RTR Review)
+### Salomon S/Lab Ultra Glide 1.5
 
 John: The S/Lab Ultra Glide 1.5 shares the Prodigio 2’s ultra-distance focus with soft cushioning and a smooth ride, but the S/Lab version is lighter and more race-focused. The Ultra Glide 1.5 feels softer and plusher underfoot with less responsiveness. The Prodigio 2 offers better rock protection from the midfoot insert and slightly better traction on technical terrain with its deeper lugs. Both excel at long distances on moderate terrain. Choose the Ultra Glide 1.5 if you want maximum plushness and Salomon's dialed fit, or the Prodigio 2 if you prefer more ground feel, better protection, and a livelier, more responsive ride.
 
-### Craft Xplor 2 (RTR Review)
+### Craft Xplor 2
 
 John: The Xplor 2 is another cushioned trail shoe aimed at long distances, but it takes a different approach than the Prodigio 2. The Xplor 2 has a wider, more stable platform with a rockered geometry similar to the Prodigio 2. However, the Xplor 2 feels firmer and more planted, with less bounce and energy return than the Prodigio 2’s XFlow midsole. The Prodigio 2 is noticeably lighter and more nimble, making it better for varied paces and technical terrain. The Xplor 2’s outsole is more aggressive, giving it an edge in loose or muddy conditions. Choose the Xplor 2 if you want maximum stability and traction on challenging terrain, or the Prodigio 2 if you prioritize a lighter, more responsive ride with better versatility across mixed surfaces.
 
-### Craft Pure Trail Pro (RTR Review)
+### Craft Pure Trail Pro
 
 John: The Pure Trail Pro is Craft’s more race-oriented trail shoe with less cushioning than the Prodigio 2. It's firmer, lower to the ground, and more responsive, making it better suited for faster efforts on moderate terrain. The Pure Trail Pro weighs less and feels more agile, but sacrifices the long-distance comfort that the Prodigio 2 excels at. The Prodigio 2’s softer midsole and higher stack height provide significantly more protection and fatigue resistance over ultra-distances. The Pure Trail Pro has a grippier outsole for muddier / softer terrain. Choose the Pure Trail Pro for shorter, faster races where you want maximum responsiveness, or the Prodigio 2 for ultras and long training runs where comfort matters most.
 
