@@ -9,19 +9,6 @@ description: "Meet John Tribbia and the philosophy behind Boulder Gear Lab."
             <img src="/img/about/image_1.jpg" alt="Testing gear on the trail">
         </div>
     </div>
-    <div>
-        <h1>John Tribbia</h1>
-        <p>
-            <strong>Data Scientist. Trail Runner. Cyclist. Outdoor Enthusiast.</strong>
-        </p>
-        <p>
-            I am a former sponsored athlete turned independent gear reviewer based in Boulder, Colorado — a place where the terrain has a way of testing the limits of everything you bring into the foothills.
-        </p>
-        <p>
-            With over 100,000 miles logged across trails and roads, I’ve spent decades exploring the outdoors. After years of representing brands like La Sportiva, Pearl Izumi, and Salomon, I now focus on providing completely independent reviews that combine analytical rigor with extensive field experience.
-        </p>
-    </div>
-</div>
 
 ---
 # Boulder Gear Lab
@@ -36,7 +23,19 @@ I test products the way you actually use them: grinding up Colorado peaks, commu
 <div class="about-image-small">
     <img src="/img/about/image_3.jpg" alt="Field testing in Boulder">
 </div>
-
+    <div>
+        <h1>John Tribbia</h1>
+        <p>
+            <strong>Data Scientist. Trail Runner. Cyclist. Outdoor Enthusiast.</strong>
+        </p>
+        <p>
+            I am a former sponsored athlete turned independent gear reviewer based in Boulder, Colorado — a place where the terrain has a way of testing the limits of everything you bring into the foothills.
+        </p>
+        <p>
+            With over 100,000 miles logged across trails and roads, I’ve spent decades exploring the outdoors. After years of representing brands like La Sportiva, Pearl Izumi, and Salomon, I now focus on providing completely independent reviews that combine analytical rigor with extensive field experience.
+        </p>
+    </div>
+</div>
 ---
 
 ## Two Worlds, One Lab
