@@ -19,9 +19,6 @@ High-quality gear reviews require three things: exhaustive testing, critical thi
 I test products the way you actually use them: grinding up Colorado peaks, commuting through Front Range winters, and pushing limits on all-day efforts. No hype, no fluff — just real miles and honest feedback.
 
 ---
-
-<div class="about-image-small">
-    <img src="/img/about/image_3.jpg" alt="Field testing in Boulder">
 </div>
     <div>
         <h1>John Tribbia</h1>
@@ -36,6 +33,9 @@ I test products the way you actually use them: grinding up Colorado peaks, commu
         </p>
     </div>
 </div>
+<div class="about-image-small">
+    <img src="/img/about/image_3.jpg" alt="Field testing in Boulder">
+
 ---
 
 ## Two Worlds, One Lab
