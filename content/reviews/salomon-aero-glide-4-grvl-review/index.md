@@ -36,36 +36,36 @@ While I haven’t been able to put in significant miles on true gravel just yet�
 
 ### Pros
 
-New secure and trails worthy upper, improved over v3, new single handed closure system: Sam
-Versatile: Energetic soft bouncier ride is now more stable due to the new upper and can better range off gravel and road to trails: Sam / John
-Outsole has solid grip and plays well on the road: Sam / John
-Notable extensive reflective highlights: Sam
-Breathable mesh upper (but perhaps a little too breathable for wet winter running!): Kelly
-Easy to step into and very quick to secure: Kelly / John
+- New secure and trails worthy upper, improved over v3, new single handed closure system: Sam
+- Versatile: Energetic soft bouncier ride is now more stable due to the new upper and can better range off gravel and road to trails: Sam / John
+- Outsole has solid grip and plays well on the road: Sam / John
+- Notable extensive reflective highlights: Sam
+- Breathable mesh upper (but perhaps a little too breathable for wet winter running!): Kelly
+- Easy to step into and very quick to secure: Kelly / John
 
 ### Cons:
 
-Significant 24g difference in weight between left and right shoe sample: Sam
-Plastic cord closure clip is large and hard to stuff into the front garage: Sam
-Plastic cord feels bulky and slightly uncomfortable on the top of my foot when I secure it in the front garage, so I’ve been mostly running with the cord out, which is a bit distracting: Kelly
-Unstable on technical terrain: John
-Hard to pull on, also a Pro as the fit is very secure: Sam
+- Significant 24g difference in weight between left and right shoe sample: Sam
+- Plastic cord closure clip is large and hard to stuff into the front garage: Sam
+- Plastic cord feels bulky and slightly uncomfortable on the top of my foot when I secure it in the front garage, so I’ve been mostly running with the cord out, which is a bit distracting: Kelly
+- Unstable on technical terrain: John
+- Hard to pull on, also a Pro as the fit is very secure: Sam
 
 ### Stats
 
-Approx. Weight: men's  9.5 oz / 269g :: women’s  8.1 oz / 230g US8
-Sample Weights:
-men’s  9.63 oz / 273g US8.5/ EU42 (average L/R-261g left shoe, 285g right shoe)
-v3: 9.2 oz / 261g US8.5
-Women’s   9.175oz/ 260g US W8  (average L/R- 9.21oz /261g left shoe, 9.14oz/259g right shoe)
-Stack Height:  41mm heel /  33 mm forefoot (unchanged)
-Platform Width:  90mm heel /  75mm midfoot  / 110 mm forefoot (unchanged)
+- Approx. Weight: men's  9.5 oz / 269g :: women’s  8.1 oz / 230g US8
+- Sample Weights:
+    - men’s  9.63 oz / 273g US8.5/ EU42 (average L/R-261g left shoe, 285g right shoe)
+    - v3: 9.2 oz / 261g US8.5
+- Women’s   9.175oz/ 260g US W8  (average L/R- 9.21oz /261g left shoe, 9.14oz/259g right shoe)
+- Stack Height:  41mm heel /  33 mm forefoot (unchanged)
+- Platform Width:  90mm heel /  75mm midfoot  / 110 mm forefoot (unchanged)
 
 ### Most comparable shoes
 
-Mount to Coast H1 ()
-Brooks Ghost Trail ()
-Adizero EVO SL ATR (w)
+- Mount to Coast H1 ()
+- Brooks Ghost Trail ()
+- Adizero EVO SL ATR (w)
 
 ### First Impressions, Fit and Upper
 
