@@ -33,8 +33,10 @@ I test products the way you actually use them: grinding up Colorado peaks, commu
         </p>
     </div>
 </div>
+
 <div class="about-image-small">
     <img src="/img/about/image_3.jpg" alt="Field testing in Boulder">
+
 
 ---
 ## Two Worlds, One Lab
@@ -49,6 +51,7 @@ I’ve spent twenty years testing gear through the lens of a competitive athlete
 
 I have contributed to reviews in Runner's World, Running Times, Triathlete Magazine, and Competitor Sports Magazine. And, I am activealy a regular contributor to [Road Trail Run](https://www.roadtrailrun.com), one of the most respected review platforms in the industry. [See my RTR reviews →](/roadtrailrun/)
 
+
 ---
 ## Experience
 
@@ -57,6 +60,7 @@ I have contributed to reviews in Runner's World, Running Times, Triathlete Magaz
 **Bike and Outdoor Industry:** 15+ years of direct outdoor industry experience, combining a decade of analytical consulting for brands like Backcountry with six years at University Bikes staying at the forefront of cycling technology.
 
 **Outdoor Foundation:** Eagle Scout, NOLS graduate, Born + Raised + Living in Boulder, Colorado.
+
 
 ---
 ## Let's Connect
