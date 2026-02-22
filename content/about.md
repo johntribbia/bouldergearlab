@@ -19,14 +19,14 @@ High-quality gear reviews require three things: exhaustive testing, critical thi
 I test products the way you actually use them: grinding up Colorado peaks, commuting through Front Range winters, and pushing limits on all-day efforts. No hype, no fluff — just real miles and honest feedback.
 
 ---
+## John Tribbia
 </div>
     <div>
-        <h1>John Tribbia</h1>
         <p>
             <strong>Data Scientist. Trail Runner. Cyclist. Outdoor Enthusiast.</strong>
         </p>
         <p>
-            I am a former sponsored athlete turned independent gear reviewer based in Boulder, Colorado — a place where the terrain has a way of testing the limits of everything you bring into the foothills.
+            I am a former sponsored athlete turned independent gear reviewer based in Boulder, Colorado - a place where the terrain has a way of testing the limits of everything you bring into the foothills.
         </p>
         <p>
             With over 100,000 miles logged across trails and roads, I’ve spent decades exploring the outdoors. After years of representing brands like La Sportiva, Pearl Izumi, and Salomon, I now focus on providing completely independent reviews that combine analytical rigor with extensive field experience.
@@ -37,7 +37,6 @@ I test products the way you actually use them: grinding up Colorado peaks, commu
     <img src="/img/about/image_3.jpg" alt="Field testing in Boulder">
 
 ---
-
 ## Two Worlds, One Lab
 
 ### The Data Science Side
@@ -51,7 +50,6 @@ I’ve spent twenty years testing gear through the lens of a competitive athlete
 I have contributed to reviews in Runner's World, Running Times, Triathlete Magazine, and Competitor Sports Magazine. And, I am activealy a regular contributor to [Road Trail Run](https://www.roadtrailrun.com), one of the most respected review platforms in the industry. [See my RTR reviews →](/roadtrailrun/)
 
 ---
-
 ## Experience
 
 **Running & Cycling:** 20+ years of competitive athletic experience, highlighted by a transition from junior mountain bike racing to sponsored trail running with multiple podium finishes on the global stage.
