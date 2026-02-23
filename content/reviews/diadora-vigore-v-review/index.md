@@ -4,7 +4,7 @@ date: 2026-02-21
 banner: "image_1.jpg"
 tags: ['running', 'shoes']
 categories: ['reviews']
-description: ""
+description: "Multi-tester review of the Diadora Vigore V - a cushioned daily trainer built for comfort, stability, and long-distance road running."
 draft: false
 ---
 <!--more-->

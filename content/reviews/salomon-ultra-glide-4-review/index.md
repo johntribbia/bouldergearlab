@@ -4,7 +4,7 @@ date: 2026-02-21
 banner: "image_1.jpg"
 tags: ['running', 'shoes']
 categories: ['reviews']
-description: ""
+description: "Multi-tester review of the Salomon Ultra Glide 4 - a cushioned trail running shoe built for long-distance ultras."
 draft: false
 ---
 <!--more-->

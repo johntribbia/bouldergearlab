@@ -4,7 +4,7 @@ date: 2026-02-21
 banner: "image_1.jpg"
 tags: ['running', 'shoes']
 categories: ['reviews']
-description: ""
+description: "In-depth review of the ON Cloudrunner 3 - a versatile daily trainer with CloudTec cushioning for road runners."
 draft: false
 ---
 <!--more-->

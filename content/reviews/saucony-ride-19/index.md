@@ -4,7 +4,7 @@ date: 2026-02-21
 banner: "image_1.jpg"
 tags: ['running', 'shoes']
 categories: ['reviews']
-description: ""
+description: "Multi-tester review of the Saucony Ride 19 - a versatile neutral daily trainer with PWRRUN+ cushioning."
 draft: false
 ---
 <!--more-->

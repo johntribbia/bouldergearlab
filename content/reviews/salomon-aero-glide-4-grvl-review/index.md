@@ -4,7 +4,7 @@ date: 2026-02-21
 banner: "image_1.jpg"
 tags: ['running', 'shoes']
 categories: ['reviews']
-description: ""
+description: "Multi-tester review of the Salomon Aero Glide 4 GRVL - a versatile road-to-trail shoe with gravel capability."
 draft: false
 ---
 <!--more-->

@@ -10,26 +10,14 @@
 <link rel="alternate" hreflang="en" href="{{ .Permalink }}" />
 {{ end }}
 
-<!-- Twitter Card Tags -->
-{{ $twitter_handle := .Site.Params.twitter_site }}
-{{ if $twitter_handle }}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@{{ $twitter_handle }}">
-<meta name="twitter:creator" content="@{{ $twitter_handle }}">
-<meta name="twitter:title" content="{{ .Title | plainify }}">
-<meta name="twitter:description" content="{{ default .Site.Params.defaultDescription .Description | plainify | truncate 160 }}">
-{{ if .Params.banner }}
-<meta name="twitter:image" content="{{ (.Params.banner | absURL) }}">
-{{ end }}
-{{ end }}
+<!-- Twitter Card Tags handled by headers.html -->
 
 <!-- Additional SEO Meta Tags -->
-<meta name="theme-color" content="#0066cc">
+<meta name="theme-color" content="#0a0d14">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- Preconnect to external resources -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Preconnect to external resources (fonts handled by custom_headers.html) -->
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 

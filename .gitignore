@@ -10,6 +10,10 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+# Python
+__pycache__/
+*.pyc
+
 # OS specific
 .DS_Store
 Thumbs.db
