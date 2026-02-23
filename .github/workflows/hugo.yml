@@ -40,8 +40,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
         with:
-          token: ${{ secrets.PAGES_TOKEN }}
-          enablement: github_pages
+          enablement: true
 
       - name: Create local config with credentials
         run: |
