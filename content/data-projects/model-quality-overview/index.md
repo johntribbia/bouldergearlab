@@ -11,23 +11,27 @@ draft: false
 
 *Article by John Tribbia*
 
-Every AI company tells the same story: we made our model smarter, so people used it more. It sounds obvious. But when you try to prove it with data, it falls apart almost immediately.
+> The technical version of this post, with full statistical details, model specifications, and reproducible code, is available [here](../model-quality/).
+
+## Every AI company tells the same story: we made our model smarter, so people used it more. 
+
+It sounds obvious. But when you try to prove it with data, it can fall apart pretty quickly.
 
 Here's the problem. When a company rolls out a new AI model, everything else changes too. There's a press cycle. New features ship alongside it. Marketing ramps up. Maybe it's the start of a new quarter and everyone's trying to hit goals. Engagement goes up, sure, but claiming the *model* caused that is like saying your umbrella made it rain.
 
-I wanted to build a way to actually test this. Not with a fancy A/B experiment (most companies don't run those on model upgrades), but with a statistical method that works on the messy data companies already have.
+I wanted to build a way to actually test this. Not with an A/B experiment (sometimes the landscape moves so fast that experimentation is an afterthought), but with a statistical method that works on the messy data companies already have.
 
 ## The Key Insight: Same Model, Different Experience
 
-The trick is surprisingly intuitive. Even when everyone is on the same AI model, not everyone gets the same quality of experience.
+The trick is surprisingly intuitive. Even when every user is on the same AI model, not everyone gets the same quality of experience.
 
 Think about it. A software engineer mostly asks the AI to write code. A novelist uses it for creative writing. A student uses it for math homework. And AI models aren't equally good at everything. They might be excellent at coding but mediocre at creative writing.
 
-That means the engineer is getting a better product than the novelist, *even though they're using the exact same model*. And that difference has nothing to do with when the model was released. It's baked into how each person uses the tool.
+That means the engineer is getting a better product experience than the novelist, *even though they're using the exact same model*. And that difference has nothing to do with when the model was released. It's baked into how each person uses the tool.
 
-This is the variation I exploit. Instead of comparing "before the upgrade" to "after the upgrade" (which is hopelessly muddled by everything else that changed), I compare users *within* the same model version who happen to get different quality levels because of what they use the AI for.
+This is the variation I exploit. Instead of comparing "before the upgrade" to "after the upgrade" (which is still valuable, but can be muddled by everything else that changed), I compare users *within* the same model version who happen to get different quality levels because of what they use the AI for.
 
-## The Experiment
+## The Set-up
 
 I built a synthetic dataset that simulates a Gemini-style AI assistant: 100,000 users, three model versions rolled out over six months, about 1.65 million weekly records total.
 
@@ -47,14 +51,14 @@ Notice how the improvement isn't uniform. Under v1.0, Coding scores 3.50 while C
 
 ## How It Works
 
-For each user, I calculate a personalized quality score based on *what they actually use the AI for*. A software engineer who spends 41% of their time on coding tasks and 5% on creative writing gets a quality score weighted heavily toward the coding ratings. A novelist with the opposite mix gets a very different score.
+For each user, I calculate a personalized quality score based on *what they actually use the AI for*. A software engineer who spends 41% of their time on coding tasks and 5% on creative writing gets a quality score weighted heavily toward the coding ratings. A novelist with the opposite mix gets a very different score. I call this a *user's quality of AI experience*.
 
 Then I subtract the average. This is the key step. It strips away everything that changes when a new model rolls out (the marketing, the press, the coincidental timing) and leaves only the structural difference between users who happen to benefit more or less from the current model's strengths.
 
 Here's a concrete example under v1.0:
 
-- **A software engineer** (mostly coding): personalized quality = **3.30** (above the 3.23 average)
-- **A creative writer** (mostly writing): personalized quality = **3.02** (below average)
+- **A software engineer** (mostly coding): quality experience = **3.30** (above the 3.23 average)
+- **A creative writer** (mostly writing): quality experience = **3.02** (below average)
 
 Same model, same week, different experience. The question is whether that 0.28-point gap predicts any difference in engagement.
 
@@ -71,7 +75,7 @@ The relationship between quality and engagement is highly significant for one me
 - **Active days per week**: Strong positive relationship. Users whose category mix aligns with the model's strengths are active more days per week.
 - **Number of prompts**: No relationship at all. Quality doesn't change how much people do once they open the app.
 
-This makes intuitive sense. Quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. If the AI is good at what you need, you're more likely to come back tomorrow. But once you're there, you ask as many questions as you have.
+This makes intuitive sense. Quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. Of course, we would want to consider other performance indicators like how long it took the model to respond (latency) and whether the model could respond at all (punt). In this context, if the AI is good at what you need, you're more likely to come back tomorrow. But once you're there, you ask as many questions as you have.
 
 ![GAMM smooth effects](figures/05_gamm_smooth_effects.png)
 
@@ -95,11 +99,11 @@ Both user segments show significant quality effects. The slopes are similar, con
 
 I ran what researchers call a falsification test: scramble which categories get which quality scores (so coding gets creative writing's ratings, and vice versa), then re-run the analysis. If the method is picking up real quality differences, the scrambled version should fail.
 
-With a known causal effect in the data, the scrambled version *also* found something significant. At first that sounds like a failure, but it's actually expected. The scrambled scores are correlated with the real scores (shuffling five categories creates unavoidable inverse relationships), so they pick up indirect signal. When I tested this same approach on data with *no* built-in effect, the falsification test passed cleanly.
+With a known causal effect in the data, the scrambled version *also* found something significant. At first that sounds like all of this is a failure, but it's actually expected. The scrambled scores are correlated with the real scores (shuffling five categories creates unavoidable inverse relationships), so they pick up indirect signal. When I tested this same approach on data with *no* built-in effect, the falsification test passed cleanly.
 
 The lesson: the falsification test is most useful as a first-pass diagnostic. If it fails when you don't expect a signal, your method has a problem. If it turns up something when a real effect exists, you need to dig into why.
 
-## What This Means for AI Companies
+## What This Means for Companies Deploying AI
 
 ### The method works
 
@@ -107,7 +111,7 @@ The within-version approach can isolate quality's contribution to engagement wit
 
 ### The naive approach doesn't
 
-Comparing engagement before and after a model upgrade tells you almost nothing about the model itself. The version-level jumps in this data are four to five times larger than the within-version quality effect. Most of that jump is probably not the model. It's everything else that changed at the same time.
+Comparing engagement before and after a model upgrade tells you almost nothing about the model itself. The version-level jumps in this data are four to five times larger than the within-version quality effect. Most of that jump is more than just the model. It's also everything else that changed at the same time.
 
 ### Quality matters for retention, not intensity
 
@@ -115,17 +119,15 @@ If you're trying to justify model investment to your leadership, "better models 
 
 ### What you need to try this
 
-1. **Category-level quality scores.** A single overall quality rating per model version won't work. You need to know how good the model is at coding *separately* from how good it is at creative writing.
+1. **Category-level quality scores.** A single overall quality rating per model version won't work. You need to know how good the model is at coding *separately* from how good it is at creative writing. 
 
-2. **Prompt-level usage logs.** You need to know what each user is actually doing with the AI, not just aggregate session counts.
+2. **Prompt-level usage logs.** You need to know what each user is actually doing with the AI, not just aggregate session counts. Having a category level taxonmy is key here and can help with privacy protocol when handling user level prompts.
 
 3. **A holdout group (ideally).** This observational approach works, but even a small 90/10 staggered rollout would make the causal story much stronger.
 
 ## The Bottom Line
 
-Every AI company assumes that better models drive more engagement. This project builds a method to actually test that assumption, validates it on synthetic data with a known answer, and shows it works. The method isn't perfect (the quality variation it exploits is narrow, and observational designs always carry caveats), but it's a principled starting point that any team with the right data can implement.
-
-The technical version of this post, with full statistical details, model specifications, and reproducible code, is available [here](../model-quality/).
+A lot of AI companies assume that better models drive more engagement. This project builds a method to  test that assumption, validates it on synthetic data with a known answer, and shows it works. The method isn't perfect (the quality variation it exploits is narrow, and observational designs always carry caveats), but it's a principled starting point that any team with the right data can implement.
 
 ---
 
