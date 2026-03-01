@@ -1,5 +1,5 @@
 ---
-title: "Does a Smarter AI Chatbot Actually Keep People Coming Back?"
+title: "Does a Smarter AI Actually Keep People Coming Back?"
 date: 2026-02-28
 banner: "model-quality-banner.png"
 tags: ['data project']
@@ -61,6 +61,10 @@ Here's a concrete example under v1.0:
 - **A creative writer** (mostly writing): quality experience = **3.02** (below average)
 
 Same model, same week, different experience. The question is whether that 0.28-point gap predicts any difference in engagement.
+
+![Q_it construction diagram](figures/08_qit_construction_diagram.png)
+
+*How user-level quality experience is constructed. Top: pre-period category weights for two example users. Middle: quality scores by category for v1.0. Bottom: stacked weighted contributions. Same model version, different experienced quality. The dashed line is the population mean.*
 
 ![Quality exposure over time](figures/03_qit_over_time.png)
 
