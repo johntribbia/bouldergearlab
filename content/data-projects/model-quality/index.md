@@ -1,7 +1,7 @@
 ---
 title: "Does Making AI Smarter Actually Make People Use It More?"
 date: 2026-02-28
-banner: "model_quality_banner.png"
+banner: "model-quality-banner.png"
 tags: ['data project']
 categories: ['data project']
 description: "I built and validated a statistical framework for measuring whether AI model quality drives user engagement, using ~1.65M synthetic records with a known causal mechanism. The estimator recovers 90% of the true effect."
