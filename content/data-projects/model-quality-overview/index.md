@@ -83,7 +83,7 @@ The relationship between quality and engagement is highly significant for one me
 - **Active days per week**: Strong positive relationship. Users whose category mix aligns with the model's strengths are active more days per week.
 - **Number of prompts**: No relationship at all. Quality doesn't change how much people do once they open the app.
 
-This makes intuitive sense. Quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. Of course, we would want to consider other performance indicators like how long it took the model to respond (latency) and whether the model could respond at all (punt). In this context, if the AI is good at what you need, you're more likely to come back tomorrow. But once you're there, you ask as many questions as you have.
+This makes intuitive sense. Quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. If the AI is good at what you need, you're more likely to come back tomorrow. But once you're there, you ask as many questions as you have. (Other performance dimensions like latency and punt rate could be folded into the same framework as additional predictors — that's a natural extension, but this analysis isolates quality alone.)
 
 ![GAMM smooth effects](figures/05_gamm_smooth_effects.png)
 
@@ -105,11 +105,11 @@ Both user segments show significant quality effects. The slopes are similar, con
 
 ## The Sanity Check (And Why It's Subtle)
 
-I ran what researchers call a falsification test: scramble which categories get which quality scores (so coding gets creative writing's ratings, and vice versa), then re-run the analysis. If the method is picking up real quality differences, the scrambled version should fail.
+The most important result from this analysis might be the one that *didn't* find anything. When I ran the method on data with no built-in quality effect, the falsification test came back clean: no signal detected. That's what gives me confidence the method isn't just picking up noise or artifacts.
 
-With a known causal effect in the data, the scrambled version *also* found something significant. At first that sounds like all of this is a failure, but it's actually expected. The scrambled scores are correlated with the real scores (shuffling five categories creates unavoidable inverse relationships), so they pick up indirect signal. When I tested this same approach on data with *no* built-in effect, the falsification test passed cleanly.
+The test works like this: scramble which categories get which quality scores (so coding gets creative writing's ratings, and vice versa), then re-run the analysis. If the method is working correctly, the scrambled version should fail.
 
-The lesson: the falsification test is most useful as a first-pass diagnostic. If it fails when you don't expect a signal, your method has a problem. If it turns up something when a real effect exists, you need to dig into why.
+There's a subtlety, though. When a real causal effect *does* exist in the data, the scrambled scores still pick up some signal — because shuffling five categories creates unavoidable inverse correlations with the real scores. That's not a flaw; it's expected. The test is most informative as a first-pass diagnostic on data where you don't yet know whether an effect exists.
 
 ## What This Means for Companies Deploying AI
 
