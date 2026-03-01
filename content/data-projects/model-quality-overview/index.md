@@ -21,6 +21,8 @@ Here's the problem. When a company rolls out a new AI model, everything else cha
 
 I wanted to build a way to actually test this. Not with an A/B experiment (sometimes the landscape moves so fast that experimentation is an afterthought), but with a statistical method that works on the messy data companies already have.
 
+More importantly, I wanted to answer the question that comes right after: **if quality does drive retention, where should you invest next?** Because if you can measure quality's effect at the category level — coding, creative writing, math — you can build a quality investment map that tells you exactly which improvement will buy the most retention per dollar spent.
+
 ## The Key Insight: Same Model, Different Experience
 
 The trick is surprisingly intuitive. Even when every user is on the same AI model, not everyone gets the same quality of experience.
@@ -48,6 +50,8 @@ The model quality scores look like this across five prompt categories:
 | Scientific | 3.29 | 3.60 | 4.06 |
 
 Notice how the improvement isn't uniform. Under v1.0, Coding scores 3.50 while Creative Writing scores only 2.79. That gap between categories is what makes the whole analysis possible. A coding-heavy user and a writing-heavy user are living in meaningfully different quality worlds, even under the same model.
+
+But this table also contains something else: a roadmap for where to invest. If you're deciding where to spend your next round of model fine-tuning, you need to know which of these categories would move the most users if improved. That requires combining this quality data with the usage data — which is exactly what this framework does.
 
 ## How It Works
 
@@ -120,6 +124,30 @@ Comparing engagement before and after a model upgrade tells you almost nothing a
 ### Quality matters for retention, not intensity
 
 If you're trying to justify model investment to your leadership, "better models bring people back more often" is a defensible claim. "Better models make people use it more per session" is not supported by this framework. That distinction matters for how you think about the ROI of model improvements.
+
+### So what do you actually do with this?
+
+The real power of this framework isn't just knowing that quality affects retention. It's knowing *where to invest next*.
+
+Because the quality score is built from category-level ratings weighted by each user's usage mix, you can decompose the overall effect into category-level contributions. That gives you a quality investment map: which categories have the highest marginal return on quality improvement for retention?
+
+Here's a concrete example. Take the v1.0 quality scores and the average usage weights from the data:
+
+| Category | Quality (v1.0) | Avg. User Weight | Weight x Quality | Gap to Best |
+|----------|---------------|-----------------|-----------------|-------------|
+| Coding | 3.50 | 24.6% | 0.861 | — |
+| General Q&A | 3.50 | 20.4% | 0.714 | — |
+| Scientific | 3.29 | 18.4% | 0.605 | 0.21 |
+| Math/Logic | 2.91 | 21.4% | 0.623 | 0.59 |
+| Creative Writing | 2.79 | 15.1% | 0.421 | 0.71 |
+
+Creative Writing has the largest quality gap (0.71 points below the best categories), but it has the smallest user weight (15.1%). Math/Logic has a slightly smaller gap (0.59) but a much larger weight (21.4%). If you could improve only one category by one point, Math/Logic would shift more users above the population mean than Creative Writing would, because more people rely on it.
+
+That's the quality investment map. It tells a product team: *don't just fix what's worst — fix what's worst among the categories people actually use the most.* You can run this analysis by segment too. If Enterprise users skew heavily toward Coding while Consumer users spread across categories, the optimal investment differs by segment.
+
+This is actionable today, without requiring any deeper causal machinery. A product team could use this to prioritize evaluation investments, allocate fine-tuning resources, or decide which categories to benchmark more aggressively.
+
+**One thing this framework can't tell you** is whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new and surprising, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis — tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it's a different analysis.
 
 ### What you need to try this
 
