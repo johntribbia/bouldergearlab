@@ -45,7 +45,7 @@ The formal conditional independence claim: $Q^c_{i,t} \perp \varepsilon_{Y} \mid
 
 ## Setting Up the Experiment
 
-The synthetic dataset simulates a ChatGPT-style AI assistant with three model versions deployed over 26 weeks to 100,000 users, generating ~1.65M records:
+The synthetic dataset simulates a Gemini-style AI assistant with three model versions deployed over 26 weeks to 100,000 users, generating ~1.65M records:
 
 - **Offline evaluations** (50,000 records): Human quality ratings on a 1-5 scale across five prompt categories
 - **User engagement** (1,500,980 records): Weekly session logs with prompt counts by category and observed active days

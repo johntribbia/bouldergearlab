@@ -29,7 +29,7 @@ This is the variation I exploit. Instead of comparing "before the upgrade" to "a
 
 ## The Experiment
 
-I built a synthetic dataset that simulates a ChatGPT-style AI assistant: 100,000 users, three model versions rolled out over six months, about 1.65 million weekly records total.
+I built a synthetic dataset that simulates a Gemini-style AI assistant: 100,000 users, three model versions rolled out over six months, about 1.65 million weekly records total.
 
 The critical ingredient: I baked a *known* causal effect into the data. I know exactly how much quality should affect engagement because I programmed it in. That means I can test whether my method recovers the right answer, not just whether it finds something "statistically significant."
 
