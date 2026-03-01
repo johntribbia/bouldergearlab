@@ -1,0 +1,210 @@
+=== WITHIN-VERSION IDENTIFICATION STRATEGY ===
+Q_it_c = quality centered within version (category-interaction variation)
+version_f = factor absorbing between-version level shifts
+TRUE_BETA = 1.00 (injected into DGP)
+
+=== Active Days Model (Binomial GAMM) ===
+    Outcome: active_days_observed (true count of distinct active days)
+
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+cbind(active_days, 7 - active_days) ~ s(Q_it_c, bs = "tp", k = 10) + 
+    version_f + s(week, bs = "tp", k = 10) + s(user_id_factor, 
+    bs = "re") + user_type + pre_project_engagement_score
+
+Parametric coefficients:
+                               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                  -1.3019125  0.0230744  -56.42   <2e-16 ***
+version_fv1.1                 0.1943693  0.0187475   10.37   <2e-16 ***
+version_fv1.2                 0.3710068  0.0339198   10.94   <2e-16 ***
+user_typeEnterprise           0.0090522  0.0099470    0.91    0.363    
+pre_project_engagement_score  0.0219560  0.0002335   94.01   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                     edf   Ref.df  Chi.sq p-value    
+s(Q_it_c)          1.618    2.023 341.653  <2e-16 ***
+s(week)            1.502    1.872   0.542   0.775    
+s(user_id_factor) 35.136 1997.000  35.911   0.258    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.289   Deviance explained = 27.1%
+fREML =  42290  Scale est. = 1         n = 29997
+
+
+=== Total Prompts Model (Poisson GAMM) ===
+    Outcome: total_prompts
+
+
+Family: poisson 
+Link function: log 
+
+Formula:
+total_prompts ~ s(Q_it_c, bs = "tp", k = 10) + version_f + s(week, 
+    bs = "tp", k = 10) + s(user_id_factor, bs = "re") + user_type + 
+    pre_project_engagement_score
+
+Parametric coefficients:
+                               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                   1.8490576  0.0144726 127.763   <2e-16 ***
+version_fv1.1                 0.2069336  0.0151090  13.696   <2e-16 ***
+version_fv1.2                 0.1990496  0.0238795   8.336   <2e-16 ***
+user_typeEnterprise          -0.0021354  0.0043401  -0.492    0.623    
+pre_project_engagement_score  0.0095945  0.0000977  98.207   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                      edf   Ref.df  Chi.sq p-value    
+s(Q_it_c)           1.223    1.386   0.353   0.816    
+s(week)             8.275    8.842 491.816  <2e-16 ***
+s(user_id_factor) 304.802 1997.000 378.673  <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.486   Deviance explained = 46.4%
+fREML =  38443  Scale est. = 1         n = 29997
+
+
+=== Falsification (Placebo) Model ===
+    Placebo: category labels deranged (no fixed points)
+
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+cbind(active_days, 7 - active_days) ~ s(Q_placebo_c, bs = "tp", 
+    k = 10) + version_f + s(week, bs = "tp", k = 10) + s(user_id_factor, 
+    bs = "re") + user_type + pre_project_engagement_score
+
+Parametric coefficients:
+                               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                  -1.3077774  0.0236372 -55.327   <2e-16 ***
+version_fv1.1                 0.1966384  0.0189269  10.389   <2e-16 ***
+version_fv1.2                 0.3641699  0.0340294  10.702   <2e-16 ***
+user_typeEnterprise           0.0026955  0.0104201   0.259    0.796    
+pre_project_engagement_score  0.0218363  0.0002442  89.405   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                      edf   Ref.df  Chi.sq p-value    
+s(Q_placebo_c)      4.039    4.997 125.382 < 2e-16 ***
+s(week)             1.561    1.958   0.599 0.75159    
+s(user_id_factor) 183.377 1997.000 206.039 0.00026 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.288   Deviance explained = 27.4%
+fREML =  42391  Scale est. = 1         n = 29997
+
+
+=== Consumer Segment ===
+
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+cbind(active_days, 7 - active_days) ~ s(Q_it_c, bs = "tp", k = 10) + 
+    version_f + s(week, bs = "tp", k = 10) + s(user_id_factor, 
+    bs = "re") + pre_project_engagement_score
+
+Parametric coefficients:
+                               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                  -1.2819404  0.0271161 -47.276   <2e-16 ***
+version_fv1.1                 0.1837538  0.0216380   8.492   <2e-16 ***
+version_fv1.2                 0.3717941  0.0401551   9.259   <2e-16 ***
+pre_project_engagement_score  0.0215715  0.0002882  74.836   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                     edf   Ref.df  Chi.sq p-value    
+s(Q_it_c)          1.000    1.000 205.626  <2e-16 ***
+s(week)            1.175    1.333   0.046  0.9197    
+s(user_id_factor) 75.533 1395.000  80.889  0.0454 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.278   Deviance explained = 26.2%
+fREML =  29563  Scale est. = 1         n = 20941
+
+
+=== Enterprise Segment ===
+
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+cbind(active_days, 7 - active_days) ~ s(Q_it_c, bs = "tp", k = 10) + 
+    version_f + s(week, bs = "tp", k = 10) + s(user_id_factor, 
+    bs = "re") + pre_project_engagement_score
+
+Parametric coefficients:
+                               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                  -1.3319663  0.0420832 -31.651  < 2e-16 ***
+version_fv1.1                 0.2182763  0.0356398   6.125  9.1e-10 ***
+version_fv1.2                 0.3796570  0.0628167   6.044  1.5e-09 ***
+pre_project_engagement_score  0.0228443  0.0004134  55.256  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                        edf  Ref.df  Chi.sq p-value    
+s(Q_it_c)         2.9084730   3.687 136.545  <2e-16 ***
+s(week)           1.8712535   2.384   0.593   0.795    
+s(user_id_factor) 0.0008896 601.000   0.001   0.973    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.319   Deviance explained = 29.9%
+fREML =  12736  Scale est. = 1         n = 9056
+
+
+=== Linear Model (Calibration Recovery) ===
+
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+cbind(active_days, 7 - active_days) ~ Q_it_c + version_f + s(week, 
+    bs = "tp", k = 10) + s(user_id_factor, bs = "re") + user_type + 
+    pre_project_engagement_score
+
+Parametric coefficients:
+                               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                  -1.2731195  0.0231962 -54.885   <2e-16 ***
+Q_it_c                        0.8986691  0.0486146  18.486   <2e-16 ***
+version_fv1.1                 0.1941699  0.0187446  10.359   <2e-16 ***
+version_fv1.2                 0.3714825  0.0339166  10.953   <2e-16 ***
+user_typeEnterprise           0.0090624  0.0099497   0.911    0.362    
+pre_project_engagement_score  0.0219562  0.0002336  94.002   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                     edf   Ref.df Chi.sq p-value
+s(week)            1.504    1.874   0.55   0.772
+s(user_id_factor) 36.051 1997.000  36.87   0.254
+
+R-sq.(adj) =  0.289   Deviance explained = 27.1%
+fREML =  42288  Scale est. = 1         n = 29997
+
+  TRUE_BETA = 1.00, beta_hat = 0.8987, recovery = 89.9%
+  95% CI: [0.8034, 0.9940]
+  TRUE_BETA in CI: NO
+
+
+=== Cluster Bootstrap (B= 100 ) ===
+  Mean coefficient: 0.8975 (SE = 0.0513)
+  95% CI: [0.8157, 1.0050]
+  Significant at 0.05: 100.0%

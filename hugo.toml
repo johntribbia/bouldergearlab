@@ -22,6 +22,12 @@ summaryLength = 70
 [markup.goldmark.renderer]
     unsafe = true
 
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['$$', '$$']]
+    inline = [['$', '$']]
+
 [params]
     viewMorePostLink = "/reviews/"
     author = "John Tribbia"
@@ -149,13 +155,19 @@ summaryLength = 70
     weight     = 5
 
 [[menu.main]]
+    name       = "Data Projects"
+    identifier = "menu.dataprojects"
+    url        = "/data-projects/"
+    weight     = 6
+
+[[menu.main]]
     name       = "Professional Resume"
     identifier = "menu.resume"
     url        = "/resume/"
-    weight     = 5
+    weight     = 7
 
 [[menu.main]]
     name       = "Contact"
     identifier = "menu.contact"
     url        = "/contact/"
-    weight     = 6
+    weight     = 8

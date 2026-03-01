@@ -21,3 +21,16 @@
 
 <!-- BGL Unified: scroll reveal, score animations, lightbox, reading progress, etc. -->
 <script src="{{ "js/bgl-unified.js" | relURL }}"></script>
+
+<!-- KaTeX Math Rendering -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false}
+    ],
+    throwOnError: false
+  });
+</script>
