@@ -21,7 +21,7 @@ Here's the problem. When a company rolls out a new AI model, everything else cha
 
 I wanted to build a way to actually test this. Not with an A/B experiment (sometimes the landscape moves so fast that experimentation is an afterthought), but with a statistical method that works on the messy data companies already have.
 
-More importantly, I wanted to answer the question that comes right after: **if quality does drive retention, where should you invest next?** Because if you can measure quality's effect at the category level — coding, creative writing, math — you can build a quality investment map that tells you exactly which improvement will buy the most retention per dollar spent.
+More importantly, I wanted to answer the question that comes right after: **if quality does drive retention, where should you invest next?** Because if you can measure quality's effect at the category level - coding, creative writing, math - you can build a quality investment map that tells you exactly which improvement will buy the most retention per dollar spent.
 
 ## The Key Insight: Same Model, Different Experience
 
@@ -51,7 +51,7 @@ The model quality scores look like this across five prompt categories:
 
 Notice how the improvement isn't uniform. Under v1.0, Coding scores 3.50 while Creative Writing scores only 2.79. That gap between categories is what makes the whole analysis possible. A coding-heavy user and a writing-heavy user are living in meaningfully different quality worlds, even under the same model.
 
-But this table also contains something else: a roadmap for where to invest. If you're deciding where to spend your next round of model fine-tuning, you need to know which of these categories would move the most users if improved. That requires combining this quality data with the usage data — which is exactly what this framework does.
+But this table also contains something else: a roadmap for where to invest. If you're deciding where to spend your next round of model fine-tuning, you need to know which of these categories would move the most users if improved. That requires combining this quality data with the usage data - which is exactly what this framework does.
 
 ## How It Works
 

@@ -46,7 +46,7 @@ The identifying assumption is straightforward. Here's the DAG:
 
 The formal conditional independence claim: $Q^c_{i,t} \perp \varepsilon_{Y} \mid V, X$. In words: once we control for which version a user is on (V) and their baseline characteristics (X), the remaining variation in quality exposure comes only from their category mix, which is structurally determined by their role and usage patterns. This is a weaker assumption than instrument exogeneity and stronger than simple selection-on-observables. Its plausibility rests on the frozen-weights design (discussed below).
 
-## Setting Up the Experiment
+## The Set-up
 
 The synthetic dataset simulates a Gemini-style AI assistant with three model versions deployed over 26 weeks to 100,000 users, generating ~1.65M records:
 
