@@ -316,17 +316,17 @@ Because $Q^c_{i,t}$ is constructed from category-level ratings weighted by each 
 
 Take the v1.0 quality scores and the average usage weights from the data:
 
-| Category | Quality (v1.0) | Avg. User Weight | Gap to Best | Impact of +1 Point |
-|----------|---------------|-----------------|-------------|-------------------|
-| Coding | 3.50 | 24.6% | — | 0.246 |
-| General Q&A | 3.50 | 20.4% | — | 0.204 |
-| Math/Logic | 2.91 | 21.4% | 0.59 | 0.214 |
-| Scientific | 3.29 | 18.4% | 0.21 | 0.184 |
-| Creative Writing | 2.79 | 15.1% | 0.71 | 0.151 |
+| Category | Quality (v1.0) | Avg. User Weight | Gap to Best |
+|----------|---------------|-----------------|-------------|
+| Coding | 3.50 | 24.6% | — |
+| General Q&A | 3.50 | 20.4% | — |
+| Math/Logic | 2.91 | 21.4% | 0.59 |
+| Scientific | 3.29 | 18.4% | 0.21 |
+| Creative Writing | 2.79 | 15.1% | 0.71 |
 
-The last column is the usage weight: if you improve a category by one point, how much does the average user's $Q_{i,t}$ shift? Creative Writing has the largest quality gap (0.71 points below the best categories), but improving it by one point only shifts the average user's score by 0.151. Math/Logic has a smaller gap (0.59) but a 40% larger impact per point (0.214) because more users rely on it. If you could improve only one category, Math/Logic buys more retention per dollar.
+Creative Writing has the largest quality gap (0.71 points below the best categories), but only 15.1% of usage falls there. Math/Logic has a smaller gap (0.59) but 40% more usage (21.4%). If you could improve only one category, Math/Logic buys more retention per dollar.
 
-**But we can do better than a gap table.** The simple table tells you which direction to invest, but not how much retention you'd actually gain. With a fitted model and the user-level frozen weights, we can run proper counterfactual simulations: pick a hypothetical improvement, recompute every user's $Q_{i,t}$, propagate it through the fitted GAMM (including the logistic link), and get predicted retention deltas in real units.
+**But a gap table only tells you the direction, not the magnitude.** With a fitted model and the user-level frozen weights, we can run proper counterfactual simulations: pick a hypothetical improvement, recompute every user's $Q_{i,t}$, propagate it through the fitted GAMM (including the logistic link and the recovered coefficient), and get predicted retention deltas in real units.
 
 I ran four scenarios against the v1.0 baseline (2.85 active days/week):
 
@@ -341,7 +341,7 @@ I ran four scenarios against the v1.0 baseline (2.85 active days/week):
 
 *Predicted retention lift by improvement scenario. v1.0 baseline propagated through the fitted GAMM. The "All Categories +0.2" scenario uses a smaller per-category improvement but lifts every user, producing the largest aggregate gain.*
 
-The rankings track the usage weights, as expected with a nearly linear smooth (edf = 1.62). Coding +0.5 beats Math/Logic +0.5 because more users rely on Coding (24.6% vs. 21.4%), even though Math/Logic has a larger quality gap. Creative Writing +0.5 finishes last despite having the biggest gap (0.71 points) because only 15.1% of usage falls there.
+The ranking of scenarios is predictable from the usage weights alone (with a nearly linear smooth, edf = 1.62), but the magnitudes are not, and the magnitudes are what make this actionable. Coding +0.5 beats Math/Logic +0.5 because more users rely on Coding (24.6% vs. 21.4%), even though Math/Logic has a larger quality gap. Creative Writing +0.5 finishes last despite having the biggest gap (0.71 points) because only 15.1% of usage falls there. You could have guessed that ordering from the gap table, but you couldn't have known that the difference between Coding and Creative Writing is worth roughly 7,000 extra active-user-days per week at scale.
 
 Two things stand out. First, the per-user effects are modest (0.1 to 0.3 extra active days/week) because the within-version quality spread is narrow. In production data with wider category gaps, these deltas would be larger. Second, the uniform improvement ("All Categories +0.2") dominates the targeted scenarios even though each category gets only 0.2 points instead of 0.5. That's because it lifts every user, not just those who happen to rely on the improved category. This is the diminishing-returns argument for broad quality investment over targeted fixes.
 
