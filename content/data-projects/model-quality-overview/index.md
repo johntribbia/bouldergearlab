@@ -149,7 +149,7 @@ That's the quality investment map. It tells a product team: *don't just fix what
 
 ### Putting real numbers on it
 
-The gap table tells you *which direction* to invest, but not *how much retention you'd actually gain*. So I ran proper counterfactual simulations: pick a hypothetical improvement, recompute every user's quality score, run it through the fitted model, and get predicted retention deltas in real units.
+The gap table tells you *which direction* to invest, but not *how much retention you'd actually gain*. So I ran proper counterfactual simulations: pick a hypothetical improvement, recompute every user's quality score, run it through the fitted model (using the recovered coefficient of 0.90 log-odds), and get predicted retention deltas in real units.
 
 Four scenarios, starting from the v1.0 baseline (2.85 active days/week):
 
@@ -166,9 +166,11 @@ Four scenarios, starting from the v1.0 baseline (2.85 active days/week):
 
 The ranking of scenarios is predictable from the usage weights alone, but the magnitudes are not, and the magnitudes are what make this actionable. Coding +0.5 beats Math/Logic +0.5 because more users rely on Coding (24.6% vs. 21.4%), even though Math/Logic has a larger quality gap. Creative Writing +0.5 finishes last despite having the biggest gap because only 15.1% of usage falls there. You could have guessed that ordering from the gap table, but you couldn't have known that the difference between Coding and Creative Writing is worth roughly 7,000 extra active-user-days per week at scale.
 
-Two things stand out. First, the per-user effects are modest (0.1 to 0.3 extra active days/week) because the within-version quality spread is narrow. In production data with wider category gaps, these deltas would be larger. Second, the uniform improvement ("All Categories +0.2") dominates the targeted scenarios even though each category gets only 0.2 points instead of 0.5. It lifts every user, not just those who happen to rely on the improved category. That's the argument for broad quality investment over targeted fixes.
+**The most strategically interesting result is the last row.** The uniform improvement ("All Categories +0.2") dominates every targeted scenario even though each category gets only 0.2 points instead of 0.5. It lifts every user, not just those who happen to rely on the improved category. Most product teams instinctively prioritize fixing the worst thing, but this argues for broad quality investment over targeted fixes.
 
-This is the kind of table a product team can take to a planning meeting: "Improving Coding quality by half a point is worth roughly 17,500 extra active-user-days per week across our 100K user base." That's a concrete ROI, not just a directional claim.
+The per-user effects are modest (0.1 to 0.3 extra active days/week) because the within-version quality spread is narrow. In production data with wider category gaps, these deltas would be larger.
+
+This is the kind of table a product team can take to a planning meeting: "Improving Coding quality by half a point is worth roughly 17,500 extra active-user-days per week across our 100K user base." That's a quantified outcome, not just a directional claim.
 
 **One thing this framework can't tell you** is whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new and surprising, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis: tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it's a different analysis.
 

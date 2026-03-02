@@ -326,7 +326,7 @@ Take the v1.0 quality scores and the average usage weights from the data:
 
 Creative Writing has the largest quality gap (0.71 points below the best categories), but only 15.1% of usage falls there. Math/Logic has a smaller gap (0.59) but 40% more usage (21.4%). If you could improve only one category, Math/Logic buys more retention per dollar.
 
-**But a gap table only tells you the direction, not the magnitude.** With a fitted model and the user-level frozen weights, we can run proper counterfactual simulations: pick a hypothetical improvement, recompute every user's $Q_{i,t}$, propagate it through the fitted GAMM (including the logistic link and the recovered coefficient), and get predicted retention deltas in real units.
+**But a gap table only tells you the direction, not the magnitude.** With a fitted model and the user-level frozen weights, we can run proper counterfactual simulations: pick a hypothetical improvement, recompute every user's $Q_{i,t}$, propagate it through the fitted GAMM (using the recovered coefficient of 0.90 log-odds and the logistic link), and get predicted retention deltas in real units.
 
 I ran four scenarios against the v1.0 baseline (2.85 active days/week):
 
@@ -343,7 +343,9 @@ I ran four scenarios against the v1.0 baseline (2.85 active days/week):
 
 The ranking of scenarios is predictable from the usage weights alone (with a nearly linear smooth, edf = 1.62), but the magnitudes are not, and the magnitudes are what make this actionable. Coding +0.5 beats Math/Logic +0.5 because more users rely on Coding (24.6% vs. 21.4%), even though Math/Logic has a larger quality gap. Creative Writing +0.5 finishes last despite having the biggest gap (0.71 points) because only 15.1% of usage falls there. You could have guessed that ordering from the gap table, but you couldn't have known that the difference between Coding and Creative Writing is worth roughly 7,000 extra active-user-days per week at scale.
 
-Two things stand out. First, the per-user effects are modest (0.1 to 0.3 extra active days/week) because the within-version quality spread is narrow. In production data with wider category gaps, these deltas would be larger. Second, the uniform improvement ("All Categories +0.2") dominates the targeted scenarios even though each category gets only 0.2 points instead of 0.5. That's because it lifts every user, not just those who happen to rely on the improved category. This is the diminishing-returns argument for broad quality investment over targeted fixes.
+**The most strategically interesting result is the last row.** The uniform improvement ("All Categories +0.2") dominates every targeted scenario even though each category gets only 0.2 points instead of 0.5. It lifts every user, not just those who happen to rely on the improved category. Most product teams instinctively prioritize fixing the worst thing, but this argues for broad quality investment over targeted fixes.
+
+The per-user effects are modest (0.1 to 0.3 extra active days/week) because the within-version quality spread is narrow. In production data with wider category gaps, these deltas would be larger.
 
 Note: these simulations do not re-center after the hypothetical improvement. This is intentional: the coefficient on $Q^c_{i,t}$ represents the effect of a 1-unit quality shift (identified within-version, but the slope applies to any shift), so the counterfactual captures the full population-level lift plus the redistribution across users. Shifts are small relative to the training range (~0.1 vs. SD of ~0.1), so extrapolation risk is minimal.
 
