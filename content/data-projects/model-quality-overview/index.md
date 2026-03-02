@@ -13,15 +13,15 @@ draft: false
 
 > The technical version of this post, with full statistical details, model specifications, and reproducible code, is available [here](../model-quality/).
 
-## Every AI company tells the same story: we made our model smarter, so people used it more. 
-
-It sounds obvious. But when you try to prove it with data, it can fall apart pretty quickly.
+Every AI company tells the same story: better models, more engagement. It sounds obvious. But when you try to prove it with data, it falls apart fast.
 
 Here's the problem. When a company rolls out a new AI model, everything else changes too. There's a press cycle. New features ship alongside it. Marketing ramps up. Maybe it's the start of a new quarter and everyone's trying to hit goals. Engagement goes up, sure, but claiming the *model* caused that is like saying your umbrella made it rain.
 
 I wanted to build a way to actually test this. Not with an A/B experiment (sometimes the landscape moves so fast that experimentation is an afterthought), but with a statistical method that works on the messy data companies already have.
 
 More importantly, I wanted to answer the question that comes right after: **if quality does drive retention, where should you invest next?** Because if you can measure quality's effect at the category level - coding, creative writing, math - you can build a quality investment map that tells you exactly which improvement will buy the most retention per dollar spent.
+
+And because the framework runs on synthetic data with a known answer programmed in, I can offer something most observational analyses can't: a direct accuracy check. The method recovers 90% of the true effect — and the remaining 10% is attributable to a well-understood, correctable source of noise.
 
 ## The Key Insight: Same Model, Different Experience
 
@@ -69,6 +69,14 @@ Same model, same week, different experience. The question is whether that 0.28-p
 ![Q_it construction diagram](figures/08_qit_construction_diagram.png)
 
 *How user-level quality experience is constructed. Top: pre-period category weights for two example users. Middle: quality scores by category for v1.0. Bottom: stacked weighted contributions. Same model version, different experienced quality. The dashed line is the population mean.*
+
+## What You Need to Try This
+
+1. **Category-level quality scores.** A single overall quality rating per model version won't work. You need to know how good the model is at coding *separately* from how good it is at creative writing. 
+
+2. **Prompt-level usage logs.** You need to know what each user is actually doing with the AI, not just aggregate session counts. Having a category-level taxonomy is key here and can help with privacy protocol when handling user-level prompts.
+
+3. **A holdout group (ideally).** This observational approach works, but even a small 90/10 staggered rollout would make the causal story much stronger.
 
 ## What I Found
 
@@ -174,13 +182,7 @@ This is the kind of table a product team can take to a planning meeting: "Improv
 
 **One thing this framework can't tell you** is whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new and surprising, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis: tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it's a different analysis.
 
-### What you need to try this
-
-1. **Category-level quality scores.** A single overall quality rating per model version won't work. You need to know how good the model is at coding *separately* from how good it is at creative writing. 
-
-2. **Prompt-level usage logs.** You need to know what each user is actually doing with the AI, not just aggregate session counts. Having a category-level taxonomy is key here and can help with privacy protocol when handling user-level prompts.
-
-3. **A holdout group (ideally).** This observational approach works, but even a small 90/10 staggered rollout would make the causal story much stronger.
+This distinction has real stakes for how you act on the signals this framework produces. If you use a one-month retention lift as the signal to double down on Creative Writing investment, but that lift is novelty rather than durability, you'll over-allocate to improvements that have already delivered most of their value. A practical guard: track whether the retention gain for new cohorts (users who arrived *after* the improvement) matches the gain for early adopters. If early adopters showed a spike and then reverted while new users showed no lift at all, that's the novelty effect in plain view. Durable quality gains should show up in new-user retention just as clearly as in early-adopter retention — because those users never experienced the before-state.
 
 ## The Bottom Line
 
