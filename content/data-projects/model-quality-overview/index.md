@@ -149,9 +149,28 @@ Creative Writing has the largest quality gap (0.71 points below the best categor
 
 That's the quality investment map. It tells a product team: *don't just fix what's worst; fix what's worst among the categories people actually use the most.* You can run this analysis by segment too. If Enterprise users skew heavily toward Coding while Consumer users spread across categories, the optimal investment differs by segment.
 
-This is actionable today, without requiring any deeper causal machinery. A product team could use this to prioritize evaluation investments, allocate fine-tuning resources, or decide which categories to benchmark more aggressively.
+### Putting real numbers on it
 
-With production data and a fitted model, you can go further. Instead of just ranking categories, you can simulate what happens when you improve one: recompute every user's quality score with the hypothetical improvement, run it through the fitted model, and get predicted active days. The difference gives you the expected retention gain in real units: extra active days per week across the user base. This also captures diminishing returns: if users who rely on a given category are already experiencing high quality, improving it further may yield less than the simple table suggests. In this dataset the quality-retention relationship is nearly linear, so the rankings match. In production, with wider quality spreads, the distinction could matter.
+The gap table tells you *which direction* to invest, but not *how much retention you'd actually gain*. So I ran proper counterfactual simulations: pick a hypothetical improvement, recompute every user's quality score, run it through the fitted model, and get predicted retention deltas in real units.
+
+Four scenarios, starting from the v1.0 baseline (2.85 active days/week):
+
+| Scenario | Delta Active Days/User/Week | % Change | Per 100K Users |
+|----------|---------------------------|----------|----------------|
+| Coding +0.5 | +0.175 | +6.1% | +17,533 days/wk |
+| Math/Logic +0.5 | +0.149 | +5.2% | +14,905 days/wk |
+| Creative Writing +0.5 | +0.106 | +3.7% | +10,626 days/wk |
+| All Categories +0.2 | +0.283 | +9.9% | +28,285 days/wk |
+
+![ROI Simulation](figures/10_roi_simulation.png)
+
+*Predicted retention lift by improvement scenario. The "All Categories +0.2" scenario uses a smaller per-category improvement but lifts every user, producing the largest aggregate gain.*
+
+The rankings track the usage weights, as expected. Coding +0.5 beats Math/Logic +0.5 because more users rely on Coding (24.6% vs. 21.4%), even though Math/Logic has a larger quality gap. Creative Writing +0.5 finishes last despite having the biggest gap because only 15.1% of usage falls there.
+
+Two things stand out. First, the per-user effects are modest (0.1 to 0.3 extra active days/week) because the within-version quality spread is narrow. In production data with wider category gaps, these deltas would be larger. Second, the uniform improvement ("All Categories +0.2") dominates the targeted scenarios even though each category gets only 0.2 points instead of 0.5. It lifts every user, not just those who happen to rely on the improved category. That's the argument for broad quality investment over targeted fixes.
+
+This is the kind of table a product team can take to a planning meeting: "Improving Coding quality by half a point is worth roughly 17,500 extra active-user-days per week across our 100K user base." That's a concrete ROI, not just a directional claim.
 
 **One thing this framework can't tell you** is whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new and surprising, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis: tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it's a different analysis.
 

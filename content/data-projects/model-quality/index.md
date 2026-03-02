@@ -326,7 +326,26 @@ Take the v1.0 quality scores and the average usage weights from the data:
 
 The last column is the usage weight: if you improve a category by one point, how much does the average user's $Q_{i,t}$ shift? Creative Writing has the largest quality gap (0.71 points below the best categories), but improving it by one point only shifts the average user's score by 0.151. Math/Logic has a smaller gap (0.59) but a 40% larger impact per point (0.214) because more users rely on it. If you could improve only one category, Math/Logic buys more retention per dollar.
 
-**Going further with predictions.** With a fitted model and production data, you can do better than the simple table. Recompute every user's $Q_{i,t}$ with a hypothetical category improvement, run the counterfactual scores through the fitted smooth $\hat{f}(Q^c_{i,t})$, and predict active days. The difference gives the expected retention gain in real units: extra active days per week across the user base. This also captures diminishing returns: if users who rely on a given category are already at the high end of the smooth, improving it further yields less than the linear approximation suggests. In this dataset, with edf = 1.62 and a nearly linear smooth, the prediction-based rankings match the simple table. In production, where quality spreads may be wider, the distinction could matter.
+**But we can do better than a gap table.** The simple table tells you which direction to invest, but not how much retention you'd actually gain. With a fitted model and the user-level frozen weights, we can run proper counterfactual simulations: pick a hypothetical improvement, recompute every user's $Q_{i,t}$, propagate it through the fitted GAMM (including the logistic link), and get predicted retention deltas in real units.
+
+I ran four scenarios against the v1.0 baseline (2.85 active days/week):
+
+| Scenario | Mean $\Delta Q_{i,t}$ | $\Delta$ Active Days/User/Week | % Change | Per 100K Users |
+|----------|---------------------|-------------------------------|----------|----------------|
+| Coding +0.5 | +0.124 | +0.175 | +6.1% | +17,533 days/wk |
+| Math/Logic +0.5 | +0.106 | +0.149 | +5.2% | +14,905 days/wk |
+| Creative Writing +0.5 | +0.074 | +0.106 | +3.7% | +10,626 days/wk |
+| All Categories +0.2 | +0.200 | +0.283 | +9.9% | +28,285 days/wk |
+
+![ROI Simulation](figures/10_roi_simulation.png)
+
+*Predicted retention lift by improvement scenario. v1.0 baseline propagated through the fitted GAMM. The "All Categories +0.2" scenario uses a smaller per-category improvement but lifts every user, producing the largest aggregate gain.*
+
+The rankings track the usage weights, as expected with a nearly linear smooth (edf = 1.62). Coding +0.5 beats Math/Logic +0.5 because more users rely on Coding (24.6% vs. 21.4%), even though Math/Logic has a larger quality gap. Creative Writing +0.5 finishes last despite having the biggest gap (0.71 points) because only 15.1% of usage falls there.
+
+Two things stand out. First, the per-user effects are modest (0.1 to 0.3 extra active days/week) because the within-version quality spread is narrow. In production data with wider category gaps, these deltas would be larger. Second, the uniform improvement ("All Categories +0.2") dominates the targeted scenarios even though each category gets only 0.2 points instead of 0.5. That's because it lifts every user, not just those who happen to rely on the improved category. This is the diminishing-returns argument for broad quality investment over targeted fixes.
+
+Note: these simulations do not re-center after the hypothetical improvement. This is intentional: the coefficient on $Q^c_{i,t}$ represents the effect of a 1-unit quality shift (identified within-version, but the slope applies to any shift), so the counterfactual captures the full population-level lift plus the redistribution across users. Shifts are small relative to the training range (~0.1 vs. SD of ~0.1), so extrapolation risk is minimal.
 
 **One caveat: novelty vs. durable quality.** This framework can't distinguish whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis: tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it requires a different analytical design.
 

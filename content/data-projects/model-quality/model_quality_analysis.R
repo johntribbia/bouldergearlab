@@ -1,37 +1,23 @@
 #!/usr/bin/env Rscript
 # ==============================================================================
-# Model Quality Analysis: Quantifying the Business Impact of AI Model Quality
+# Model Quality -> User Engagement (GAMM analysis)
 # ==============================================================================
-# WITHIN-VERSION IDENTIFICATION STRATEGY
 #
-# Key insight: instead of comparing engagement across version boundaries
-# (confounded with time), we identify the quality effect WITHIN each version
-# period. Users whose category mix aligns with higher-quality categories
-# (e.g., Coding is rated 3.50 vs Creative Writing 2.79 in v1.0) experience
-# different effective quality, even though everyone is on the same model.
+# Identification: within-version category-quality variation. Users whose
+# category mix leans toward higher-rated categories get different effective
+# quality even on the same model version.
 #
-# Implementation:
-#   - Q_it = sum(w_ic * q_cv): weighted quality from observed category usage
-#   - Q_it_c = Q_it - mean(Q_it | version): centered within each version
-#   - version_f: factor absorbing between-version level shifts
-#   - s(Q_it_c): the causal estimand -- within-version quality effect
+#   Q_it   = sum(w_ic * q_cv)              weighted quality from category usage
+#   Q_it_c = Q_it - mean(Q_it | version)   centered within version
+#   version_f absorbs between-version shifts; s(Q_it_c) is the estimand
 #
-# Pipeline (Steps 1-14):
-#   1. Quality Lookup Table
-#   2. Pre-Period Prompt Weights (from OBSERVED category counts)
-#   2b. Category Mix Stability Test (frozen-weights assumption)
-#   3. Weighted Quality Score (Q_it) + within-version centering
-#   4. Merge all tables
-#   5. EDA (including within-version Q_it_c diagnostics)
-#   6. GAMM: Active Days (binomial, using active_days_observed)
-#   7. GAMM: Total Prompts (Poisson)
-#   8. Visualize Smooth Effects
-#   9. Falsification Test (derangement -- no fixed points)
-#  10. Segment Analysis (Consumer vs Enterprise)
-#  11. Save outputs
-#  12. Calibration Recovery (DGP validation -- does estimator recover TRUE_BETA?)
-#  13. Cluster-Robust Inference (user-level block bootstrap)
-#  14. DAG Diagram
+# Steps:
+#   1.  Quality lookup    2.  Pre-period weights   2b. Mix stability
+#   3.  Q_it + centering  4.  Merge                5.  EDA
+#   6.  GAMM active days  7.  GAMM prompts         8.  Smooth plots
+#   9.  Falsification     10. Segments             11. Save
+#   12. Calibration       13. Bootstrap            14. DAG
+#   15. ROI simulation
 # ==============================================================================
 
 cat("=", rep("=", 69), "\n", sep = "")
@@ -85,9 +71,7 @@ theme_bgl <- function(base_size = 12) {
     )
 }
 
-# ==============================================================================
-# LOAD DATA
-# ==============================================================================
+# --- Load data ----------------------------------------------------------------
 cat("Loading data...\n")
 eval_df    <- read_csv(file.path(DATA_DIR, "offline_model_evaluation.csv"),
                        show_col_types = FALSE)
@@ -104,9 +88,7 @@ stopifnot("prompts_coding" %in% names(engage_df))
 stopifnot("active_days_observed" %in% names(engage_df))
 cat("  Confirmed: augmented columns present\n\n")
 
-# ==============================================================================
-# STEP 1: Quality Lookup Table
-# ==============================================================================
+# --- Step 1: Quality lookup ---------------------------------------------------
 cat("Step 1: Building quality lookup table...\n")
 
 quality_lookup <- eval_df %>%
@@ -130,12 +112,10 @@ for (v in unique(quality_lookup$model_version)) {
   cat(sprintf("    %s: SD = %.4f, range = [%.3f, %.3f]\n",
               v, sd(ratings), min(ratings), max(ratings)))
 }
-cat("  This within-version category spread is the source of identification.\n\n")
+cat("  This spread is where the identifying variation comes from.\n\n")
 
-# ==============================================================================
-# STEP 2: Pre-Period Prompt Weights (from OBSERVED category counts)
-# ==============================================================================
-cat("Step 2: Computing pre-period prompt weights from OBSERVED category data...\n")
+# --- Step 2: Pre-period prompt weights ----------------------------------------
+cat("Step 2: Computing pre-period prompt weights from observed category data...\n")
 
 cat_col_map <- c(
   "prompts_coding"           = "Coding",
@@ -191,12 +171,10 @@ weight_summary <- user_weights %>%
 print(as.data.frame(weight_summary))
 cat("\n")
 
-# ==============================================================================
-# STEP 2b: Category Mix Stability Test (Frozen-Weights Assumption)
-# ==============================================================================
+# --- Step 2b: Category mix stability check ------------------------------------
 cat("Step 2b: Testing category mix stability across version periods...\n")
-cat("  If users change WHAT they use the tool for after model upgrades,\n")
-cat("  frozen pre-period weights would be stale.\n\n")
+cat("  Checking whether users shift their category usage after upgrades.\n")
+cat("  If so, frozen pre-period weights would be stale.\n\n")
 
 # Compute weights for each version period
 period_weights <- list()
@@ -249,11 +227,9 @@ for (col in cat_cols) {
   }
   cat("\n")
 }
-cat("  -> High correlations + stable means support the frozen-weights assumption.\n\n")
+cat("  Looks good: high correlations + stable means, so frozen weights hold.\n\n")
 
-# ==============================================================================
-# STEP 3: Weighted Quality Score (Q_it) + Within-Version Centering
-# ==============================================================================
+# --- Step 3: Q_it + within-version centering ----------------------------------
 cat("Step 3: Computing Q_it and centering within version...\n")
 
 q_wide <- ql_wide
@@ -296,11 +272,9 @@ cat(sprintf("    v1.1: sd=%.4f, range=[%.4f, %.4f], IQR=%.4f\n",
 cat(sprintf("    v1.2: sd=%.4f, range=[%.4f, %.4f], IQR=%.4f\n",
             sd(Q_user$Q_v12_c), min(Q_user$Q_v12_c), max(Q_user$Q_v12_c),
             IQR(Q_user$Q_v12_c)))
-cat("  -> This is the identifying variation: same version, different category mix.\n\n")
+cat("  That's the identifying variation: same version, different category mix.\n\n")
 
-# ==============================================================================
-# STEP 4: Merge
-# ==============================================================================
+# --- Step 4: Merge ------------------------------------------------------------
 cat("Step 4: Merging datasets...\n")
 
 assign_version <- function(week) {
@@ -344,9 +318,7 @@ cat(sprintf("  Q_it_c range: [%.4f, %.4f], sd=%.4f\n",
             sd(engage_df$Q_it_c, na.rm = TRUE)))
 cat("\n")
 
-# ==============================================================================
-# STEP 5: EDA
-# ==============================================================================
+# --- Step 5: EDA --------------------------------------------------------------
 cat("Step 5: Exploratory Data Analysis...\n\n")
 
 # --- 5a: Active days ---
@@ -364,7 +336,7 @@ p_active <- ggplot(engage_df, aes(x = active_days)) +
 
 ggsave(file.path(FIG_DIR, "01_active_days_dist.png"), p_active,
        width = 8, height = 5, dpi = 150, bg = PAL$bg)
-cat("    -> Saved 01_active_days_dist.png\n")
+cat("    Saved 01_active_days_dist.png\n")
 
 # --- 5b: Total prompts ---
 cat("  5b: Total prompts distribution\n")
@@ -382,7 +354,7 @@ p_prompts <- ggplot(engage_df, aes(x = total_prompts)) +
 
 ggsave(file.path(FIG_DIR, "02_prompts_dist.png"), p_prompts,
        width = 8, height = 5, dpi = 150, bg = PAL$bg)
-cat("    -> Saved 02_prompts_dist.png\n")
+cat("    Saved 02_prompts_dist.png\n")
 
 # --- 5c: Q_it raw + centered ---
 cat("  5c: Quality exposure over time\n")
@@ -425,7 +397,7 @@ p_qit_combined <- p_qit_raw / p_qit_centered +
 
 ggsave(file.path(FIG_DIR, "03_qit_over_time.png"), p_qit_combined,
        width = 10, height = 8, dpi = 150, bg = PAL$bg)
-cat("    -> Saved 03_qit_over_time.png\n")
+cat("    Saved 03_qit_over_time.png\n")
 
 # --- 5d: Engagement by week ---
 cat("  5d: Engagement trends by week\n")
@@ -457,7 +429,7 @@ p_engage_week <- ggplot(weekly_engagement, aes(x = week)) +
 
 ggsave(file.path(FIG_DIR, "04_engagement_by_week.png"), p_engage_week,
        width = 10, height = 5, dpi = 150, bg = PAL$bg)
-cat("    -> Saved 04_engagement_by_week.png\n")
+cat("    Saved 04_engagement_by_week.png\n")
 
 # --- 5e: Within-version correlations ---
 cat("  5e: Within-version correlations (Q_it_c vs outcomes)\n")
@@ -476,13 +448,9 @@ cat(sprintf("    Version distribution:\n"))
 print(table(engage_df$version_f))
 cat("\n")
 
-# ==============================================================================
-# STEP 6: GAMM - Active Days (Binomial) -- Within-Version Identification
-# ==============================================================================
-cat("Step 6: GAMM for Active Days -- within-version identification...\n")
-cat("  Model: active_days ~ s(Q_it_c) + version_f + s(week) + s(user_id, re)\n")
-cat("  Q_it_c = centered quality (within-version category-interaction variation)\n")
-cat("  version_f = factor absorbing between-version level shifts\n\n")
+# --- Step 6: GAMM active days (binomial) --------------------------------------
+cat("Step 6: GAMM for Active Days (within-version identification)...\n")
+cat("  active_days ~ s(Q_it_c) + version_f + s(week) + s(user_id, re)\n\n")
 
 # ---- Stratified sampling ----
 set.seed(42)
@@ -628,11 +596,9 @@ for (nm in grep("version_f", names(ve), value = TRUE)) {
 }
 cat("\n")
 
-# ==============================================================================
-# STEP 7: GAMM - Total Prompts (Poisson)
-# ==============================================================================
+# --- Step 7: GAMM total prompts (Poisson) -------------------------------------
 cat("Step 7: GAMM for Total Prompts (Poisson)...\n")
-cat("  (NB theta was near-infinite in prior run -- no overdispersion, using Poisson)\n")
+cat("  NB theta was near-infinite in a prior run, so no overdispersion -- using Poisson.\n")
 
 t0 <- Sys.time()
 gc(verbose = FALSE)
@@ -666,9 +632,7 @@ for (nm in grep("version_f", names(vep), value = TRUE)) {
 }
 cat("\n")
 
-# ==============================================================================
-# STEP 8: Visualize Smooth Effects
-# ==============================================================================
+# --- Step 8: Smooth effect plots ----------------------------------------------
 cat("Step 8: Plotting smooth effects...\n")
 
 plot_smooth <- function(model, term, model_name, outcome_label, color,
@@ -744,15 +708,13 @@ p_smooths <- (p_ad_q | p_ad_w) / (p_pr_q | p_pr_w) +
 
 ggsave(file.path(FIG_DIR, "05_gamm_smooth_effects.png"), p_smooths,
        width = 14, height = 10, dpi = 150, bg = PAL$bg)
-cat("  -> Saved 05_gamm_smooth_effects.png\n\n")
+cat("  Saved 05_gamm_smooth_effects.png\n\n")
 
-# ==============================================================================
-# STEP 9: Falsification Test
-# ==============================================================================
-cat("Step 9: Falsification test with deranged category-quality mapping...\n")
-cat("  Placebo: derange which categories get which quality scores\n")
-cat("  (no category maps to itself), then center within version.\n")
-cat("  If real Q_it_c signal is genuine, the placebo should NOT be significant.\n\n")
+# --- Step 9: Falsification (derangement placebo) ------------------------------
+cat("Step 9: Falsification test -- deranged category-quality mapping...\n")
+cat("  Shuffle which categories get which quality scores (no fixed points),\n")
+cat("  re-center within version, and refit. If the real effect is real,\n")
+cat("  the placebo smooth should be flat.\n\n")
 
 cat("  Fitting placebo model (active days)...\n")
 t0 <- Sys.time()
@@ -787,13 +749,12 @@ cat(sprintf("  Placebo model: s(Q_placebo_c) edf=%.2f, p=%.2e, dev.expl=%.1f%%\n
             placebo_edf, placebo_p, placebo_summ$dev.expl * 100))
 
 if (placebo_p > 0.05 && real_p < 0.05) {
-  cat("\n  PASS: Real effect is significant, placebo is not.\n")
-  cat("  Within-version quality variation from category mix genuinely predicts engagement.\n")
+  cat("\n  PASS: Real effect significant, placebo is not.\n")
+  cat("  Quality variation from category mix genuinely predicts engagement.\n")
 } else if (placebo_p > 0.05 && real_p >= 0.05) {
   cat("\n  EXPECTED (synthetic data): Neither real nor placebo significant.\n")
-  cat("  The synthetic data has version-level effects (captured by version_f)\n")
-  cat("  but no within-version category-quality interaction in the DGP.\n")
-  cat("  The methodology correctly finds no spurious effect.\n")
+  cat("  No within-version category-quality interaction in the DGP,\n")
+  cat("  so correctly finding nothing here.\n")
 } else if (placebo_p <= 0.05 && real_p < 0.05) {
   cat("\n  CAUTION: Both real and placebo are significant.\n")
   cat("  Possible residual confounding within versions.\n")
@@ -802,9 +763,7 @@ if (placebo_p > 0.05 && real_p < 0.05) {
 }
 cat("\n")
 
-# ==============================================================================
-# STEP 10: Segment Analysis (Consumer vs Enterprise)
-# ==============================================================================
+# --- Step 10: Segment analysis (Consumer vs Enterprise) -----------------------
 cat("Step 10: Segment analysis -- Consumer vs Enterprise...\n")
 
 cat("  Fitting Consumer segment...\n")
@@ -880,7 +839,7 @@ p_segments <- p_seg_consumer + p_seg_enterprise +
 
 ggsave(file.path(FIG_DIR, "06_segment_comparison.png"), p_segments,
        width = 14, height = 6, dpi = 150, bg = PAL$bg)
-cat("  -> Saved 06_segment_comparison.png\n")
+cat("  Saved 06_segment_comparison.png\n")
 
 # Combined predicted active days
 cat("  Building combined segment plot...\n")
@@ -936,11 +895,9 @@ p_combined <- ggplot(combined_pred, aes(x = Q_it_c, color = segment, fill = segm
 
 ggsave(file.path(FIG_DIR, "07_quality_vs_active_days_by_segment.png"), p_combined,
        width = 10, height = 7, dpi = 150, bg = PAL$bg)
-cat("  -> Saved 07_quality_vs_active_days_by_segment.png\n\n")
+cat("  Saved 07_quality_vs_active_days_by_segment.png\n\n")
 
-# ==============================================================================
-# STEP 11: Summary & Outputs
-# ==============================================================================
+# --- Step 11: Summary & outputs -----------------------------------------------
 cat("=", rep("=", 69), "\n", sep = "")
 cat("RESULTS SUMMARY\n")
 cat("Within-Version Identification Strategy\n")
@@ -1017,13 +974,11 @@ cat("  05_gamm_smooth_effects.png\n")
 cat("  06_segment_comparison.png\n")
 cat("  07_quality_vs_active_days_by_segment.png\n\n")
 
-# ==============================================================================
-# STEP 12: Calibration Recovery (DGP Validation)
-# ==============================================================================
-cat("Step 12: Calibration recovery -- does the estimator recover TRUE_BETA?...\n")
+# --- Step 12: Calibration recovery (DGP validation) --------------------------
+cat("Step 12: Calibration recovery -- can we recover TRUE_BETA?...\n")
 cat(sprintf("  TRUE_BETA = %.2f (injected into DGP active_days log-odds)\n\n", TRUE_BETA))
 
-# Fit a LINEAR version (no smooth on Q_it_c) for direct coefficient extraction
+# Fit a linear version (no smooth on Q_it_c) to pull out the coefficient directly
 cat("  Fitting linear model for coefficient extraction...\n")
 model_linear <- bam(
   cbind(active_days, 7 - active_days) ~
@@ -1055,7 +1010,7 @@ cat(sprintf("  Recovery:            %.1f%% of TRUE_BETA = %.2f\n", recovery_pct,
 cat(sprintf("  TRUE_BETA in CI:     %s\n",
             ifelse(ci_lo <= TRUE_BETA & ci_hi >= TRUE_BETA, "YES", "NO")))
 
-# Also extract the effective linear slope from the GAM smooth
+# Also check the effective linear slope from the GAM smooth
 cat("\n  GAM smooth recovery (from predict at ±1 SD):\n")
 sd_qc <- sd(model_df$Q_it_c)
 nd_lo <- data.frame(
@@ -1080,11 +1035,9 @@ cat(sprintf("  GAM effective slope: %.4f per unit Q_it_c\n", smooth_slope))
 cat(sprintf("  GAM recovery:        %.1f%% of TRUE_BETA\n", smooth_slope / TRUE_BETA * 100))
 cat("\n")
 
-# ==============================================================================
-# STEP 13: Cluster-Robust Inference (User-Level Block Bootstrap)
-# ==============================================================================
+# --- Step 13: Cluster-robust bootstrap ----------------------------------------
 cat("Step 13: Cluster-robust inference (user-level block bootstrap)...\n")
-cat("  Resampling users (not observations) to account for within-user correlation.\n\n")
+cat("  Resampling whole users, not individual observations.\n\n")
 
 B <- 100
 set.seed(123)
@@ -1112,7 +1065,7 @@ for (b in seq_len(B)) {
   }))
   boot_df$user_id_factor <- factor(boot_df$boot_uid)
 
-  # Fit WITHOUT random effects for speed (bootstrap already handles clustering)
+  # Fit without random effects for speed (bootstrap handles the clustering)
   tryCatch({
     m <- bam(
       cbind(active_days, 7 - active_days) ~
@@ -1157,12 +1110,10 @@ cat(sprintf("    TRUE_BETA in CI:     %s\n",
             ifelse(boot_ci_lo <= TRUE_BETA & boot_ci_hi >= TRUE_BETA, "YES", "NO")))
 cat("\n")
 
-# ==============================================================================
-# STEP 14: DAG Diagram
-# ==============================================================================
+# --- Step 14: DAG diagram -----------------------------------------------------
 cat("Step 14: Generating causal DAG diagram...\n")
 
-# Build DAG with ggplot2 (no external packages needed)
+# Build DAG with ggplot2 (no extra packages)
 dag_nodes <- data.frame(
   name  = c("V", "q_cv", "W", "Q_c", "X", "Y", "U"),
   label = c("Model\nVersion (V)", "Category\nQuality (q[c,v])",
@@ -1220,11 +1171,163 @@ p_dag <- ggplot() +
 
 ggsave(file.path(FIG_DIR, "09_causal_dag.png"), p_dag,
        width = 10, height = 7, dpi = 150, bg = PAL$bg)
-cat("  -> Saved 09_causal_dag.png\n\n")
+cat("  Saved 09_causal_dag.png\n\n")
 
-# ==============================================================================
-# FINAL SUMMARY (updated with calibration + bootstrap)
-# ==============================================================================
+# --- Step 15: ROI simulation --------------------------------------------------
+cat("\n")
+cat("=", rep("=", 69), "\n", sep = "")
+cat("STEP 15: ROI Simulation\n")
+cat("  Counterfactual quality improvements -> predicted retention lift\n")
+cat("=", rep("=", 69), "\n\n")
+
+cat("  For each scenario: compute per-user delta_Q from frozen weights,\n")
+cat("  shift Q_it_c, predict through the fitted GAMM, convert to active-day deltas.\n\n")
+
+# User weights from Step 2 (pre_weights still in scope)
+sim_w <- pre_weights %>% filter(user_id %in% sample_users)
+cat(sprintf("  Users with weights: %d\n", nrow(sim_w)))
+
+# Focus on v1.0 period ("what should we build into v1.1?")
+v10_sim <- model_df %>% filter(version_week == "v1.0")
+n_users_v10 <- n_distinct(v10_sim$user_id)
+weeks_v10 <- n_distinct(v10_sim$week)
+cat(sprintf("  v1.0 simulation data: %s rows (%d users, %d weeks)\n",
+            format(nrow(v10_sim), big.mark = ","), n_users_v10, weeks_v10))
+
+# Baseline predictions (probability scale * 7 = active days)
+baseline_pred <- predict(model_active_days, newdata = v10_sim,
+                         type = "response", exclude = "s(user_id_factor)")
+baseline_mean_days <- mean(baseline_pred * 7)
+cat(sprintf("  Baseline mean predicted active days (v1.0): %.4f\n\n", baseline_mean_days))
+
+# --- Scenarios ---
+# Each entry: category column(s) to improve and by how much (rating points).
+scenarios <- list(
+  list(name = "Math/Logic +0.5",
+       desc = "Close the gap on second-worst category (high usage weight)",
+       cols = c("prompts_math_logic" = 0.5)),
+  list(name = "Creative Writing +0.5",
+       desc = "Close the gap on worst category (lowest usage weight)",
+       cols = c("prompts_creative_writing" = 0.5)),
+  list(name = "Coding +0.5",
+       desc = "Double down on strongest category (highest usage weight)",
+       cols = c("prompts_coding" = 0.5)),
+  list(name = "All Categories +0.2",
+       desc = "Uniform quality lift across all categories",
+       cols = c("prompts_coding" = 0.2, "prompts_creative_writing" = 0.2,
+                "prompts_general_qa" = 0.2, "prompts_math_logic" = 0.2,
+                "prompts_scientific" = 0.2))
+)
+
+# --- Run each scenario ---
+roi_list <- list()
+
+for (sc in scenarios) {
+  cat(sprintf("  Scenario: %s\n", sc$name))
+  cat(sprintf("    %s\n", sc$desc))
+
+  # Per-user delta_Q = sum(w_ic * delta_c) over improved categories
+  delta_q_user <- setNames(rep(0, nrow(sim_w)), sim_w$user_id)
+  for (col in names(sc$cols)) {
+    delta_q_user <- delta_q_user + sim_w[[col]] * sc$cols[col]
+  }
+
+  # Map user-level deltas to row-level (each user appears in multiple weeks)
+  delta_q_rows <- delta_q_user[as.character(v10_sim$user_id)]
+
+  # Counterfactual: shift Q_it_c by user-level delta.
+  # We do NOT re-center because:
+  #   - The slope on Q_it_c applies to any shift of that magnitude
+  #   - Re-centering would zero out the population-level lift, showing only
+  #     redistribution across users (useful but incomplete)
+  #   - Shifts are small (~0.1) relative to training range (~0.4 SD),
+  #     so extrapolation risk is minimal
+  cf_v10 <- v10_sim
+  cf_v10$Q_it_c <- cf_v10$Q_it_c + delta_q_rows
+
+  # Predict through fitted GAMM (nonlinear smooth + logistic link)
+  cf_pred <- predict(model_active_days, newdata = cf_v10,
+                     type = "response", exclude = "s(user_id_factor)")
+
+  # Delta active days per row
+  delta_days_row <- (cf_pred - baseline_pred) * 7
+
+  # Aggregate metrics
+  mean_dq   <- mean(delta_q_rows)
+  mean_dd   <- mean(delta_days_row)
+  pct_chg   <- mean_dd / baseline_mean_days * 100
+
+  # Per-user summary (avg across weeks in v1.0)
+  user_summary <- data.frame(user_id = v10_sim$user_id,
+                             delta = delta_days_row) %>%
+    group_by(user_id) %>%
+    summarise(user_mean_delta = mean(delta), .groups = "drop")
+
+  median_dd <- median(user_summary$user_mean_delta)
+  p90_dd    <- unname(quantile(user_summary$user_mean_delta, 0.90))
+  p10_dd    <- unname(quantile(user_summary$user_mean_delta, 0.10))
+
+  roi_list[[sc$name]] <- data.frame(
+    Scenario     = sc$name,
+    Q_Shift      = mean_dq,
+    Mean_Delta   = mean_dd,
+    Median_Delta = median_dd,
+    P10_Delta    = p10_dd,
+    P90_Delta    = p90_dd,
+    Pct_Change   = pct_chg,
+    Per_100K     = mean_dd * 100000,
+    stringsAsFactors = FALSE
+  )
+
+  cat(sprintf("    Mean Q_it shift:       +%.4f\n", mean_dq))
+  cat(sprintf("    Delta active days:     %+.4f mean, %+.4f median / user / week\n",
+              mean_dd, median_dd))
+  cat(sprintf("    User range (P10-P90):  [%+.4f, %+.4f]\n", p10_dd, p90_dd))
+  cat(sprintf("    Pct change:            %+.2f%%\n", pct_chg))
+  cat(sprintf("    Scaled to 100K users:  +%s extra active-user-days/week\n\n",
+              format(round(mean_dd * 100000), big.mark = ",")))
+}
+
+roi_df <- do.call(rbind, roi_list)
+rownames(roi_df) <- NULL
+
+cat("  === ROI Summary Table ===\n")
+print(roi_df, row.names = FALSE, digits = 4)
+cat("\n")
+
+# --- ROI Visualization ---
+cat("  Generating ROI simulation figure...\n")
+
+plot_roi_df <- roi_df %>%
+  mutate(Scenario = factor(Scenario, levels = rev(Scenario)),
+         label = sprintf("%+.3f days (%+.1f%%)", Mean_Delta, Pct_Change))
+
+p_roi <- ggplot(plot_roi_df, aes(x = Mean_Delta, y = Scenario)) +
+  geom_vline(xintercept = 0, linetype = "dotted", color = PAL$summit, alpha = 0.4) +
+  geom_segment(aes(x = 0, xend = Mean_Delta, y = Scenario, yend = Scenario),
+               color = PAL$ice, linewidth = 1.2) +
+  geom_point(color = PAL$moss, size = 5) +
+  geom_text(aes(label = label),
+            hjust = -0.1, color = PAL$summit, size = 3.8, fontface = "bold") +
+  scale_x_continuous(expand = expansion(mult = c(0.05, 0.45))) +
+  labs(
+    title = "ROI Simulation: Predicted Retention Lift by Scenario",
+    subtitle = sprintf("v1.0 baseline (%.2f active days/week) | Propagated through fitted GAMM",
+                       baseline_mean_days),
+    x = "Delta Active Days per User per Week",
+    y = NULL
+  ) +
+  theme_bgl() +
+  theme(
+    axis.text.y = element_text(size = 11, color = PAL$summit),
+    plot.margin = margin(10, 30, 10, 10)
+  )
+
+ggsave(file.path(FIG_DIR, "10_roi_simulation.png"), p_roi,
+       width = 12, height = 5, dpi = 150, bg = PAL$bg)
+cat("  Saved 10_roi_simulation.png\n\n")
+
+# --- Final calibration summary ------------------------------------------------
 cat("=", rep("=", 69), "\n", sep = "")
 cat("CALIBRATION RECOVERY SUMMARY\n")
 cat("=", rep("=", 69), "\n\n")
@@ -1247,6 +1350,15 @@ cat("  05_gamm_smooth_effects.png\n")
 cat("  06_segment_comparison.png\n")
 cat("  07_quality_vs_active_days_by_segment.png\n")
 cat("  09_causal_dag.png\n")
+cat("  10_roi_simulation.png\n")
+
+cat("\nROI SIMULATION SUMMARY:\n")
+for (i in seq_len(nrow(roi_df))) {
+  cat(sprintf("  %-25s: %+.4f active days/user/week (%+.1f%%), +%s per 100K users\n",
+              roi_df$Scenario[i], roi_df$Mean_Delta[i], roi_df$Pct_Change[i],
+              format(round(roi_df$Per_100K[i]), big.mark = ",")))
+}
+cat("\n")
 
 # Save model summaries (at end so all objects exist)
 sink(file.path(FIG_DIR, "model_summaries.txt"))
@@ -1278,7 +1390,20 @@ cat("\n\n=== Cluster Bootstrap (B=", B, ") ===\n")
 cat(sprintf("  Mean coefficient: %.4f (SE = %.4f)\n", boot_mean, boot_se))
 cat(sprintf("  95%% CI: [%.4f, %.4f]\n", boot_ci_lo, boot_ci_hi))
 cat(sprintf("  Significant at 0.05: %.1f%%\n", boot_sig_rate * 100))
+cat("\n\n=== ROI Simulation (Step 15) ===\n")
+cat(sprintf("  Baseline: v1.0, mean predicted active days = %.4f\n", baseline_mean_days))
+cat("  Scenarios propagated through fitted GAMM (no re-centering):\n\n")
+for (i in seq_len(nrow(roi_df))) {
+  cat(sprintf("  %s:\n", roi_df$Scenario[i]))
+  cat(sprintf("    Mean Q_it shift:    +%.4f\n", roi_df$Q_Shift[i]))
+  cat(sprintf("    Delta active days:  %+.4f mean, %+.4f median / user / week\n",
+              roi_df$Mean_Delta[i], roi_df$Median_Delta[i]))
+  cat(sprintf("    User range P10-P90: [%+.4f, %+.4f]\n", roi_df$P10_Delta[i], roi_df$P90_Delta[i]))
+  cat(sprintf("    Pct change:         %+.2f%%\n", roi_df$Pct_Change[i]))
+  cat(sprintf("    Per 100K users:     +%s extra active-user-days/week\n\n",
+              format(round(roi_df$Per_100K[i]), big.mark = ",")))
+}
 sink()
-cat("  -> Saved model_summaries.txt\n")
+cat("  Saved model_summaries.txt\n")
 
 cat("\nDone.\n")
