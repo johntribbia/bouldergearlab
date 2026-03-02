@@ -72,11 +72,11 @@ Same model, same week, different experience. The question is whether that 0.28-p
 
 ## What I Found
 
-Before getting into the model results, it's worth seeing the raw data. The chart below shows what quality exposure looks like over time — first the raw scores (which jump at each deployment boundary), then the centered scores that strip away those jumps and reveal the within-version spread we actually use.
+Before getting into the model results, it's worth seeing the raw data. The chart below shows what quality exposure looks like over time: first the raw scores (which jump at each deployment boundary), then the centered scores that strip away those jumps and reveal the within-version spread we actually use.
 
 ![Quality exposure over time](figures/03_qit_over_time.png)
 
-*Top: Raw quality scores show obvious step-function jumps at deployment boundaries — the variation we can't use. Bottom: Centered scores show only the within-version spread between users. That's the variation that drives the analysis.*
+*Top: Raw quality scores show obvious step-function jumps at deployment boundaries, the variation we can't use. Bottom: Centered scores show only the within-version spread between users. That's the variation that drives the analysis.*
 
 ### Quality drives whether people show up, not how much they do
 
@@ -85,7 +85,7 @@ The relationship between centered quality and engagement is highly significant f
 - **Active days per week**: Strong positive relationship. Users whose category mix aligns with the model's strengths are active more days per week.
 - **Number of prompts**: No relationship at all. Quality doesn't change how much people do once they open the app.
 
-This makes intuitive sense. Quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. If the AI is good at what you need, you're more likely to come back tomorrow. But once you're there, you ask as many questions as you have. (Other performance dimensions like latency and punt rate could be folded into the same framework as additional predictors — that's a natural extension, but this analysis isolates quality alone.)
+This makes intuitive sense. Quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. If the AI is good at what you need, you're more likely to come back tomorrow. But once you're there, you ask as many questions as you have. (Other performance dimensions like latency and punt rate could be folded into the same framework as additional predictors. That's a natural extension, but this analysis isolates quality alone.)
 
 ![GAMM smooth effects](figures/05_gamm_smooth_effects.png)
 
@@ -103,15 +103,15 @@ When I used a more sophisticated error-correction technique (cluster bootstrappi
 
 ![Quality vs Active Days by Segment](figures/07_quality_vs_active_days_by_segment.png)
 
-Both consumer and enterprise users show significant quality effects, with similar slopes. This matters for two reasons. First, it confirms the method works at the subgroup level, not just in aggregate. Second, it means you can run segment-specific investment maps — and because enterprise users tend to concentrate on different categories than consumers, the optimal investment could differ by segment.
+Both consumer and enterprise users show significant quality effects, with similar slopes. This matters for two reasons. First, it confirms the method works at the subgroup level, not just in aggregate. Second, it means you can run segment-specific investment maps, and because enterprise users tend to concentrate on different categories than consumers, the optimal investment could differ by segment.
 
 ## The Sanity Check (And Why It's Subtle)
 
-The most important result from this analysis might be the one that *didn't* find anything. In an earlier iteration of the project — before I injected the known causal effect — the falsification test came back clean: no signal detected. That's what gives me confidence the method isn't just picking up noise or artifacts when it does find something.
+The most important result from this analysis might be the one that *didn't* find anything. In an earlier iteration of the project, before I injected the known causal effect, the falsification test came back clean: no signal detected. That's what gives me confidence the method isn't just picking up noise or artifacts when it does find something.
 
 The test works like this: scramble which categories get which quality scores (so coding gets creative writing's ratings, and vice versa), then re-run the analysis. If the method is working correctly, the scrambled version should fail.
 
-There's a subtlety, though. When a real causal effect *does* exist in the data, the scrambled scores still pick up some signal — because shuffling five categories creates unavoidable inverse correlations with the real scores. That's not a flaw; it's expected. The test is most informative as a first-pass diagnostic on data where you don't yet know whether an effect exists.
+There's a subtlety, though. When a real causal effect *does* exist in the data, the scrambled scores still pick up some signal, because shuffling five categories creates unavoidable inverse correlations with the real scores. That's not a flaw; it's expected. The test is most informative as a first-pass diagnostic on data where you don't yet know whether an effect exists.
 
 ## What This Means for Companies Deploying AI
 
@@ -143,17 +143,17 @@ Here's a concrete example. Take the v1.0 quality scores and the average usage we
 | Scientific | 3.29 | 18.4% | 0.21 | 0.184 |
 | Creative Writing | 2.79 | 15.1% | 0.71 | 0.151 |
 
-The last column is the key: if you improve a category by one point, how much does the average user's quality score shift? It's just the usage weight — because more people relying on a category means more people benefit from the improvement.
+The last column is the key: if you improve a category by one point, how much does the average user's quality score shift? It's just the usage weight, because more people relying on a category means more people benefit from the improvement.
 
 Creative Writing has the largest quality gap (0.71 points below the best categories), but improving it by one point only shifts the average user's score by 0.151. Math/Logic has a smaller gap (0.59) but a 40% larger impact per point (0.214). If you could improve only one category, Math/Logic buys you more retention because more people rely on it.
 
-That's the quality investment map. It tells a product team: *don't just fix what's worst — fix what's worst among the categories people actually use the most.* You can run this analysis by segment too. If Enterprise users skew heavily toward Coding while Consumer users spread across categories, the optimal investment differs by segment.
+That's the quality investment map. It tells a product team: *don't just fix what's worst; fix what's worst among the categories people actually use the most.* You can run this analysis by segment too. If Enterprise users skew heavily toward Coding while Consumer users spread across categories, the optimal investment differs by segment.
 
 This is actionable today, without requiring any deeper causal machinery. A product team could use this to prioritize evaluation investments, allocate fine-tuning resources, or decide which categories to benchmark more aggressively.
 
-With production data and a fitted model, you can go further. Instead of just ranking categories, you can simulate what happens when you improve one: recompute every user's quality score with the hypothetical improvement, run it through the fitted model, and get predicted active days. The difference gives you the expected retention gain in real units — extra active days per week across the user base. This also captures diminishing returns: if users who rely on a given category are already experiencing high quality, improving it further may yield less than the simple table suggests. In this dataset the quality-retention relationship is nearly linear, so the rankings match. In production, with wider quality spreads, the distinction could matter.
+With production data and a fitted model, you can go further. Instead of just ranking categories, you can simulate what happens when you improve one: recompute every user's quality score with the hypothetical improvement, run it through the fitted model, and get predicted active days. The difference gives you the expected retention gain in real units: extra active days per week across the user base. This also captures diminishing returns: if users who rely on a given category are already experiencing high quality, improving it further may yield less than the simple table suggests. In this dataset the quality-retention relationship is nearly linear, so the rankings match. In production, with wider quality spreads, the distinction could matter.
 
-**One thing this framework can't tell you** is whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new and surprising, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis — tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it's a different analysis.
+**One thing this framework can't tell you** is whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new and surprising, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis: tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it's a different analysis.
 
 ### What you need to try this
 

@@ -26,7 +26,7 @@ This is what statisticians call confounding, and it's the reason most "model qua
 
 So the real question isn't whether engagement goes up when models improve. It does. The question is: **can we build a credible estimator for the model's contribution?**
 
-And once we have that estimator, we can answer the question that comes right after: **where should you invest next?** If the estimator measures quality's effect at the category level — coding, creative writing, math — you can build a quality investment map that tells a product team exactly which improvement will buy the most retention per dollar spent. That's the practical payoff of the methodology developed here.
+And once we have that estimator, we can answer the question that comes right after: **where should you invest next?** If the estimator measures quality's effect at the category level (coding, creative writing, math), you can build a quality investment map that tells a product team exactly which improvement will buy the most retention per dollar spent. That's the practical payoff of the methodology developed here.
 
 ## The Trick: Not Everyone Experiences the Same Model the Same Way
 
@@ -78,7 +78,7 @@ The critical detail: quality improvement isn't uniform across categories. This u
 
 Under v1.0, the gap between the best category (Coding, 3.50) and the worst (Creative Writing, 2.79) is 0.71 points. A coding-heavy user and a writing-heavy user are living in meaningfully different quality worlds. That's what gives us something to measure.
 
-But this table also encodes an investment question: which of these categories would move the most users if improved? Answering that requires combining quality data with usage data — which is exactly what this framework does.
+But this table also encodes an investment question: which of these categories would move the most users if improved? Answering that requires combining quality data with usage data, which is exactly what this framework does.
 
 ## How I Measured Each User's Quality Exposure
 
@@ -246,7 +246,7 @@ The edf of 1.62 means the model detected slight curvature beyond pure linearity,
 
 The active days quality smooth shows a clear positive slope with the confidence band well away from zero. The prompts quality smooth is flat. The edf of 1.62 for the active days smooth means the model detected slight curvature beyond pure linearity, though the dominant shape is linear.
 
-The active-days-but-not-prompts asymmetry has a clean interpretation: quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. Other performance dimensions — latency, punt rate, response length — could be folded into the same framework as additional predictors. That's a natural extension, but this analysis isolates quality alone.
+The active-days-but-not-prompts asymmetry has a clean interpretation: quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. Other performance dimensions (latency, punt rate, response length) could be folded into the same framework as additional predictors. That's a natural extension, but this analysis isolates quality alone.
 
 ## Calibration Recovery: Does the Estimator Get the Right Answer?
 
@@ -264,7 +264,7 @@ The cluster bootstrap CI [0.816, 1.005] includes the true value $\beta_{true}$ =
 
 ## The Falsification Test
 
-The most important validation may be the result that *didn't* find anything. In an earlier iteration of the project — before I injected the known causal effect into the DGP — the falsification test came back clean: no signal detected. The estimator found nothing because there was nothing to find. That's what gives confidence the method isn't manufacturing artifacts when it does detect something.
+The most important validation may be the result that *didn't* find anything. In an earlier iteration of the project, before I injected the known causal effect into the DGP, the falsification test came back clean: no signal detected. The estimator found nothing because there was nothing to find. That's what gives confidence the method isn't manufacturing artifacts when it does detect something.
 
 The test works by applying a strict derangement to the category-quality lookup table (every category maps to a *different* category, no fixed points), then rebuilding the quality measure from scratch.
 
@@ -306,7 +306,7 @@ This also has practical implications for the investment map (below). Because ent
 
 4. **The falsification test needs careful interpretation.** In the presence of a real causal effect, a deranged mapping will still find signal if it's correlated with the true exposure. The test is most informative when the null hypothesis (no quality-to-engagement channel) is plausible.
 
-5. **The naive approach doesn't work.** Comparing engagement before and after a model upgrade tells you almost nothing about the model itself. The version-level coefficients ($\beta_{v1.1}$ = 0.194, $\beta_{v1.2}$ = 0.371) are four to five times larger than the within-version quality effect, and they're causally uninterpretable. Everything changes at a deployment boundary — marketing, features, press — so those jumps absorb far more than the model's contribution.
+5. **The naive approach doesn't work.** Comparing engagement before and after a model upgrade tells you almost nothing about the model itself. The version-level coefficients ($\beta_{v1.1}$ = 0.194, $\beta_{v1.2}$ = 0.371) are four to five times larger than the within-version quality effect, and they're causally uninterpretable. Everything changes at a deployment boundary (marketing, features, press), so those jumps absorb far more than the model's contribution.
 
 ### From Validation to Action: The Quality Investment Map
 
@@ -326,9 +326,9 @@ Take the v1.0 quality scores and the average usage weights from the data:
 
 The last column is the usage weight: if you improve a category by one point, how much does the average user's $Q_{i,t}$ shift? Creative Writing has the largest quality gap (0.71 points below the best categories), but improving it by one point only shifts the average user's score by 0.151. Math/Logic has a smaller gap (0.59) but a 40% larger impact per point (0.214) because more users rely on it. If you could improve only one category, Math/Logic buys more retention per dollar.
 
-**Going further with predictions.** With a fitted model and production data, you can do better than the simple table. Recompute every user's $Q_{i,t}$ with a hypothetical category improvement, run the counterfactual scores through the fitted smooth $\hat{f}(Q^c_{i,t})$, and predict active days. The difference gives the expected retention gain in real units — extra active days per week across the user base. This also captures diminishing returns: if users who rely on a given category are already at the high end of the smooth, improving it further yields less than the linear approximation suggests. In this dataset, with edf = 1.62 and a nearly linear smooth, the prediction-based rankings match the simple table. In production, where quality spreads may be wider, the distinction could matter.
+**Going further with predictions.** With a fitted model and production data, you can do better than the simple table. Recompute every user's $Q_{i,t}$ with a hypothetical category improvement, run the counterfactual scores through the fitted smooth $\hat{f}(Q^c_{i,t})$, and predict active days. The difference gives the expected retention gain in real units: extra active days per week across the user base. This also captures diminishing returns: if users who rely on a given category are already at the high end of the smooth, improving it further yields less than the linear approximation suggests. In this dataset, with edf = 1.62 and a nearly linear smooth, the prediction-based rankings match the simple table. In production, where quality spreads may be wider, the distinction could matter.
 
-**One caveat: novelty vs. durable quality.** This framework can't distinguish whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis — tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it requires a different analytical design.
+**One caveat: novelty vs. durable quality.** This framework can't distinguish whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis: tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it requires a different analytical design.
 
 ### Where This Framework Falls Short
 
