@@ -26,6 +26,8 @@ This is what statisticians call confounding, and it's the reason most "model qua
 
 So the real question isn't whether engagement goes up when models improve. It does. The question is: **can we build a credible estimator for the model's contribution?**
 
+And once we have that estimator, we can answer the question that comes right after: **where should you invest next?** If the estimator measures quality's effect at the category level — coding, creative writing, math — you can build a quality investment map that tells a product team exactly which improvement will buy the most retention per dollar spent. That's the practical payoff of the methodology developed here.
+
 ## The Trick: Not Everyone Experiences the Same Model the Same Way
 
 The breakthrough comes from a simple observation: even when everyone is using the same model version, different people experience different levels of quality.
@@ -75,6 +77,8 @@ The critical detail: quality improvement isn't uniform across categories. This u
 | Scientific | 3.29 | 3.60 | 4.06 |
 
 Under v1.0, the gap between the best category (Coding, 3.50) and the worst (Creative Writing, 2.79) is 0.71 points. A coding-heavy user and a writing-heavy user are living in meaningfully different quality worlds. That's what gives us something to measure.
+
+But this table also encodes an investment question: which of these categories would move the most users if improved? Answering that requires combining quality data with usage data — which is exactly what this framework does.
 
 ## How I Measured Each User's Quality Exposure
 
@@ -242,6 +246,8 @@ The edf of 1.62 means the model detected slight curvature beyond pure linearity,
 
 The active days quality smooth shows a clear positive slope with the confidence band well away from zero. The prompts quality smooth is flat. The edf of 1.62 for the active days smooth means the model detected slight curvature beyond pure linearity, though the dominant shape is linear.
 
+The active-days-but-not-prompts asymmetry has a clean interpretation: quality affects the "should I bother opening this today?" decision, not the "how many questions should I ask?" decision. Other performance dimensions — latency, punt rate, response length — could be folded into the same framework as additional predictors. That's a natural extension, but this analysis isolates quality alone.
+
 ## Calibration Recovery: Does the Estimator Get the Right Answer?
 
 This is the core validation. I injected $\beta_{true}$ = 1.0 into the data-generating process. What does the estimator recover?
@@ -258,18 +264,22 @@ The cluster bootstrap CI [0.816, 1.005] includes the true value $\beta_{true}$ =
 
 ## The Falsification Test
 
-Any result needs a stress test. I run a falsification test: take the category-quality lookup table, apply a strict derangement (every category maps to a *different* category, no fixed points), and rebuild the quality measure from scratch.
+The most important validation may be the result that *didn't* find anything. In an earlier iteration of the project — before I injected the known causal effect into the DGP — the falsification test came back clean: no signal detected. The estimator found nothing because there was nothing to find. That's what gives confidence the method isn't manufacturing artifacts when it does detect something.
 
-The derangement used: Coding to Creative Writing, Creative Writing to Math/Logic, General QA to Scientific, Math/Logic to General QA, Scientific to Coding.
+The test works by applying a strict derangement to the category-quality lookup table (every category maps to a *different* category, no fixed points), then rebuilding the quality measure from scratch.
+
+The derangement used: Coding → Creative Writing, Creative Writing → Math/Logic, General QA → Scientific, Math/Logic → General QA, Scientific → Coding.
+
+With the causal effect present, the results look like this:
 
 | Model | s() edf | p-value | Dev. Explained |
 |-------|---------|---------|----------------|
 | Real quality | 1.62 | < 2 x 10^-16 | 27.1% |
 | Deranged (placebo) | 4.04 | < 2 x 10^-16 | 27.4% |
 
-**The placebo is also significant.** This is not a failure of the methodology. With a genuine causal mechanism in the DGP, the falsification test behaves differently than in the null case. The deranged Q scores correlate with the real Q scores at r = -0.44 (because shuffling categories with heterogeneous quality creates systematic inverse relationships). Since the real Q genuinely causes Y, any variable correlated with real Q will pick up indirect signal.
+**The placebo is also significant.** This is not a failure of the methodology. With a genuine causal mechanism in the DGP, the falsification test behaves differently than in the null case. The deranged $Q$ scores correlate with the real $Q$ scores at r = -0.44 (because shuffling five categories with heterogeneous quality creates systematic inverse relationships). Since the real $Q$ genuinely causes $Y$, any variable correlated with real $Q$ will pick up indirect signal.
 
-This is actually a useful diagnostic insight: the falsification test distinguishes "no signal at all" from "wrong mapping." In the null case (no injected effect), the falsification test passes cleanly. With a real effect, the test becomes a comparison of *how well* each mapping predicts the outcome, not a binary pass/fail. In production, this means a significant placebo result should prompt investigation of the placebo-real correlation rather than automatic rejection of the methodology.
+This is a useful diagnostic insight: the falsification test distinguishes "no signal at all" from "wrong mapping." In the null case (no injected effect), it passes cleanly. With a real effect, the test becomes a comparison of *how well* each mapping predicts the outcome, not a binary pass/fail. In production, this means a significant placebo result should prompt investigation of the placebo-real correlation rather than automatic rejection of the methodology.
 
 ## Consumer vs. Enterprise
 
@@ -282,6 +292,8 @@ This is actually a useful diagnostic insight: the falsification test distinguish
 
 Both segments show significant quality effects. This is expected: the injected causal mechanism applies uniformly to all users. In production data, where the true effect may differ by segment, the methodology can detect segment-level heterogeneity through stratified estimation. The fact that both segments are recovered here confirms the estimator works at the subgroup level, not just in aggregate.
 
+This also has practical implications for the investment map (below). Because enterprise users tend to concentrate on different categories than consumers, the optimal quality investment could differ by segment. A segment-specific decomposition of the quality effect into category-level contributions would tell a product team whether to prioritize the same improvements for everyone or tailor investments by user type.
+
 ## What This Means
 
 ### What This Project Demonstrates
@@ -293,6 +305,30 @@ Both segments show significant quality effects. This is expected: the injected c
 3. **Quality affects the decision to show up, not how much people do once there.** Active days respond to quality; prompt volume doesn't. The DGP was designed this way, and the estimator correctly recovers this asymmetry.
 
 4. **The falsification test needs careful interpretation.** In the presence of a real causal effect, a deranged mapping will still find signal if it's correlated with the true exposure. The test is most informative when the null hypothesis (no quality-to-engagement channel) is plausible.
+
+5. **The naive approach doesn't work.** Comparing engagement before and after a model upgrade tells you almost nothing about the model itself. The version-level coefficients ($\beta_{v1.1}$ = 0.194, $\beta_{v1.2}$ = 0.371) are four to five times larger than the within-version quality effect, and they're causally uninterpretable. Everything changes at a deployment boundary — marketing, features, press — so those jumps absorb far more than the model's contribution.
+
+### From Validation to Action: The Quality Investment Map
+
+The practical payoff of a calibrated within-version estimator isn't just knowing that quality affects retention. It's knowing **where to invest next**.
+
+Because $Q^c_{i,t}$ is constructed from category-level ratings weighted by each user's usage mix, the overall effect decomposes naturally into category-level contributions. That gives a quality investment map: which categories have the highest marginal return on quality improvement for retention?
+
+Take the v1.0 quality scores and the average usage weights from the data:
+
+| Category | Quality (v1.0) | Avg. User Weight | Gap to Best | Impact of +1 Point |
+|----------|---------------|-----------------|-------------|-------------------|
+| Coding | 3.50 | 24.6% | — | 0.246 |
+| General Q&A | 3.50 | 20.4% | — | 0.204 |
+| Math/Logic | 2.91 | 21.4% | 0.59 | 0.214 |
+| Scientific | 3.29 | 18.4% | 0.21 | 0.184 |
+| Creative Writing | 2.79 | 15.1% | 0.71 | 0.151 |
+
+The last column is the usage weight: if you improve a category by one point, how much does the average user's $Q_{i,t}$ shift? Creative Writing has the largest quality gap (0.71 points below the best categories), but improving it by one point only shifts the average user's score by 0.151. Math/Logic has a smaller gap (0.59) but a 40% larger impact per point (0.214) because more users rely on it. If you could improve only one category, Math/Logic buys more retention per dollar.
+
+**Going further with predictions.** With a fitted model and production data, you can do better than the simple table. Recompute every user's $Q_{i,t}$ with a hypothetical category improvement, run the counterfactual scores through the fitted smooth $\hat{f}(Q^c_{i,t})$, and predict active days. The difference gives the expected retention gain in real units — extra active days per week across the user base. This also captures diminishing returns: if users who rely on a given category are already at the high end of the smooth, improving it further yields less than the linear approximation suggests. In this dataset, with edf = 1.62 and a nearly linear smooth, the prediction-based rankings match the simple table. In production, where quality spreads may be wider, the distinction could matter.
+
+**One caveat: novelty vs. durable quality.** This framework can't distinguish whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis — tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it requires a different analytical design.
 
 ### Where This Framework Falls Short
 

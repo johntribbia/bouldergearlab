@@ -70,15 +70,17 @@ Same model, same week, different experience. The question is whether that 0.28-p
 
 *How user-level quality experience is constructed. Top: pre-period category weights for two example users. Middle: quality scores by category for v1.0. Bottom: stacked weighted contributions. Same model version, different experienced quality. The dashed line is the population mean.*
 
+## What I Found
+
+Before getting into the model results, it's worth seeing the raw data. The chart below shows what quality exposure looks like over time — first the raw scores (which jump at each deployment boundary), then the centered scores that strip away those jumps and reveal the within-version spread we actually use.
+
 ![Quality exposure over time](figures/03_qit_over_time.png)
 
-*Left: Raw quality scores jump at each model deployment. Right: After centering, we see only the within-version spread between users. That's the variation we can actually use.*
-
-## What I Found
+*Top: Raw quality scores show obvious step-function jumps at deployment boundaries — the variation we can't use. Bottom: Centered scores show only the within-version spread between users. That's the variation that drives the analysis.*
 
 ### Quality drives whether people show up, not how much they do
 
-The relationship between quality and engagement is highly significant for one metric and completely absent for another:
+The relationship between centered quality and engagement is highly significant for one metric and completely absent for another:
 
 - **Active days per week**: Strong positive relationship. Users whose category mix aligns with the model's strengths are active more days per week.
 - **Number of prompts**: No relationship at all. Quality doesn't change how much people do once they open the app.
@@ -97,15 +99,15 @@ The 10% it missed is explainable: the method uses *observed* usage patterns, whi
 
 When I used a more sophisticated error-correction technique (cluster bootstrapping, which accounts for the fact that the same person shows up multiple times in the data), the confidence interval captured the true value. The simpler approach narrowly missed it, which is exactly the kind of thing that matters in production.
 
-### Both consumer and enterprise users respond
+### The effect holds across user types
 
 ![Quality vs Active Days by Segment](figures/07_quality_vs_active_days_by_segment.png)
 
-Both user segments show significant quality effects. The slopes are similar, confirming that the method works at the subgroup level, not just in aggregate.
+Both consumer and enterprise users show significant quality effects, with similar slopes. This matters for two reasons. First, it confirms the method works at the subgroup level, not just in aggregate. Second, it means you can run segment-specific investment maps — and because enterprise users tend to concentrate on different categories than consumers, the optimal investment could differ by segment.
 
 ## The Sanity Check (And Why It's Subtle)
 
-The most important result from this analysis might be the one that *didn't* find anything. When I ran the method on data with no built-in quality effect, the falsification test came back clean: no signal detected. That's what gives me confidence the method isn't just picking up noise or artifacts.
+The most important result from this analysis might be the one that *didn't* find anything. In an earlier iteration of the project — before I injected the known causal effect — the falsification test came back clean: no signal detected. That's what gives me confidence the method isn't just picking up noise or artifacts when it does find something.
 
 The test works like this: scramble which categories get which quality scores (so coding gets creative writing's ratings, and vice versa), then re-run the analysis. If the method is working correctly, the scrambled version should fail.
 
@@ -133,21 +135,23 @@ Because the quality score is built from category-level ratings weighted by each 
 
 Here's a concrete example. Take the v1.0 quality scores and the average usage weights from the data:
 
-| Category | Quality (v1.0) | Avg. User Weight | Weight x Quality | Gap to Best |
-|----------|---------------|-----------------|-----------------|-------------|
-| Coding | 3.50 | 24.6% | 0.861 | — |
-| General Q&A | 3.50 | 20.4% | 0.714 | — |
-| Scientific | 3.29 | 18.4% | 0.605 | 0.21 |
-| Math/Logic | 2.91 | 21.4% | 0.623 | 0.59 |
-| Creative Writing | 2.79 | 15.1% | 0.421 | 0.71 |
+| Category | Quality (v1.0) | Avg. User Weight | Gap to Best | Impact of +1 Point |
+|----------|---------------|-----------------|-------------|-------------------|
+| Coding | 3.50 | 24.6% | — | 0.246 |
+| General Q&A | 3.50 | 20.4% | — | 0.204 |
+| Math/Logic | 2.91 | 21.4% | 0.59 | 0.214 |
+| Scientific | 3.29 | 18.4% | 0.21 | 0.184 |
+| Creative Writing | 2.79 | 15.1% | 0.71 | 0.151 |
 
-Creative Writing has the largest quality gap (0.71 points below the best categories), but it has the smallest user weight (15.1%). Math/Logic has a slightly smaller gap (0.59) but a much larger weight (21.4%). If you could improve only one category by one point, Math/Logic would shift more users above the population mean than Creative Writing would, because more people rely on it.
+The last column is the key: if you improve a category by one point, how much does the average user's quality score shift? It's just the usage weight — because more people relying on a category means more people benefit from the improvement.
+
+Creative Writing has the largest quality gap (0.71 points below the best categories), but improving it by one point only shifts the average user's score by 0.151. Math/Logic has a smaller gap (0.59) but a 40% larger impact per point (0.214). If you could improve only one category, Math/Logic buys you more retention because more people rely on it.
 
 That's the quality investment map. It tells a product team: *don't just fix what's worst — fix what's worst among the categories people actually use the most.* You can run this analysis by segment too. If Enterprise users skew heavily toward Coding while Consumer users spread across categories, the optimal investment differs by segment.
 
 This is actionable today, without requiring any deeper causal machinery. A product team could use this to prioritize evaluation investments, allocate fine-tuning resources, or decide which categories to benchmark more aggressively.
 
-With production data and a fitted model, you can go further. Because the quality score feeds directly into the model's smooth function, you can simulate what happens when you improve a specific category: recompute every user's quality score with the hypothetical improvement, feed the new scores through the fitted curve, and get predicted active days. The difference gives you the expected retention gain in real units — extra active days per week across the user base — not just abstract quality-weighted exposure. This prediction-based approach also respects nonlinearity: if the model detects diminishing returns at the high end of quality, a category whose users are already near the top of the curve would rank lower than the simple table suggests. In this dataset the smooth is nearly linear (edf = 1.62), so the rankings match. In production, with wider quality spreads, the distinction could matter.
+With production data and a fitted model, you can go further. Instead of just ranking categories, you can simulate what happens when you improve one: recompute every user's quality score with the hypothetical improvement, run it through the fitted model, and get predicted active days. The difference gives you the expected retention gain in real units — extra active days per week across the user base. This also captures diminishing returns: if users who rely on a given category are already experiencing high quality, improving it further may yield less than the simple table suggests. In this dataset the quality-retention relationship is nearly linear, so the rankings match. In production, with wider quality spreads, the distinction could matter.
 
 **One thing this framework can't tell you** is whether a quality improvement drives retention because it's genuinely better, or because it feels novel. A big jump in Creative Writing quality might bring users back for a few weeks simply because it's new and surprising, not because the sustained level matters. Distinguishing novelty effects from durable quality gains would require cohort-based analysis — tracking whether users who first experience an improvement show a different retention trajectory than users who arrive after it's the new normal. That's a natural next step, but it's a different analysis.
 
@@ -155,13 +159,13 @@ With production data and a fitted model, you can go further. Because the quality
 
 1. **Category-level quality scores.** A single overall quality rating per model version won't work. You need to know how good the model is at coding *separately* from how good it is at creative writing. 
 
-2. **Prompt-level usage logs.** You need to know what each user is actually doing with the AI, not just aggregate session counts. Having a category level taxonmy is key here and can help with privacy protocol when handling user level prompts.
+2. **Prompt-level usage logs.** You need to know what each user is actually doing with the AI, not just aggregate session counts. Having a category-level taxonomy is key here and can help with privacy protocol when handling user-level prompts.
 
 3. **A holdout group (ideally).** This observational approach works, but even a small 90/10 staggered rollout would make the causal story much stronger.
 
 ## The Bottom Line
 
-A lot of AI companies assume that better models drive more engagement. This project builds a method to  test that assumption, validates it on synthetic data with a known answer, and shows it works. The method isn't perfect (the quality variation it exploits is narrow, and observational designs always carry caveats), but it's a principled starting point that any team with the right data can implement.
+A lot of AI companies assume that better models drive more engagement. This project builds a method to test that assumption, validates it on synthetic data with a known answer, and shows it works. The method isn't perfect (the quality variation it exploits is narrow, and observational designs always carry caveats), but it's a principled starting point that any team with the right data can implement.
 
 ---
 
