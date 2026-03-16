@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <rect width="720" height="380" fill="#0a0d14"/>
+
+  <!-- Title block -->
+  <text x="360" y="30" text-anchor="middle" font-family="'Space Mono', monospace"
+        font-weight="700" font-size="16" fill="rgba(255,255,255,0.75)" letter-spacing="0.05em">STRESS-TESTING THE ARC</text>
+  <text x="360" y="50" text-anchor="middle" font-family="'Space Mono', monospace"
+        font-size="10" fill="rgba(255,255,255,0.28)">Classifier accuracy vs. measurement noise (σ) · V3 · 5,000 trials per cell</text>
+
+  <!-- Chart area: x=70–650, y=65–270 → val range 0.35–1.05 (scale=292.86/unit) -->
+
+  <!-- Horizontal grid -->
+  <line x1="70" y1="80"  x2="650" y2="80"  stroke="rgba(255,255,255,0.04)" stroke-width="0.8" stroke-dasharray="2,4"/>
+  <line x1="70" y1="138" x2="650" y2="138" stroke="rgba(255,255,255,0.22)" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <line x1="70" y1="197" x2="650" y2="197" stroke="rgba(255,255,255,0.04)" stroke-width="0.8" stroke-dasharray="2,4"/>
+  <line x1="70" y1="255" x2="650" y2="255" stroke="rgba(255,255,255,0.04)" stroke-width="0.8" stroke-dasharray="2,4"/>
+  <line x1="70" y1="270" x2="650" y2="270" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+
+  <!-- Vertical grid -->
+  <line x1="70"  y1="65" x2="70"  y2="272" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="215" y1="65" x2="215" y2="272" stroke="rgba(255,255,255,0.04)" stroke-width="0.8" stroke-dasharray="2,4"/>
+  <line x1="360" y1="65" x2="360" y2="272" stroke="rgba(255,255,255,0.04)" stroke-width="0.8" stroke-dasharray="2,4"/>
+  <line x1="505" y1="65" x2="505" y2="272" stroke="rgba(255,255,255,0.04)" stroke-width="0.8" stroke-dasharray="2,4"/>
+  <line x1="650" y1="65" x2="650" y2="272" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Y axis labels -->
+  <text x="62" y="84"  text-anchor="end" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.22)">100%</text>
+  <text x="62" y="142" text-anchor="end" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.38)">80%</text>
+  <text x="62" y="201" text-anchor="end" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.22)">60%</text>
+  <text x="62" y="259" text-anchor="end" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.22)">40%</text>
+  <text x="656" y="142" text-anchor="start" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.28)">floor</text>
+
+  <!-- X axis labels -->
+  <text x="70"  y="284" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.25)">σ=0.02</text>
+  <text x="215" y="284" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.25)">σ=0.05</text>
+  <text x="360" y="284" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.25)">σ=0.08</text>
+  <text x="505" y="284" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.25)">σ=0.11</text>
+  <text x="650" y="284" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.25)">σ=0.15</text>
+
+  <!-- ─── DATA CURVES ─── -->
+
+  <!-- Early Collapse (#e07055) · accuracy: 1.00, 0.94, 0.76, 0.61, 0.46 -->
+  <polyline points="70,80 215,97 360,150 505,194 650,238"
+            fill="none" stroke="#e07055" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="70"  cy="80"  r="4.5" fill="#e07055" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="215" cy="97"  r="4.5" fill="#e07055" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="360" cy="150" r="4.5" fill="#e07055" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="505" cy="194" r="4.5" fill="#e07055" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="650" cy="238" r="4.5" fill="#e07055" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+
+  <!-- Late Drift (#a8c8d8) · accuracy: 0.99, 0.84, 0.72, 0.63, 0.57 -->
+  <polyline points="70,83 215,127 360,162 505,188 650,206"
+            fill="none" stroke="#a8c8d8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="70"  cy="83"  r="4.5" fill="#a8c8d8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="215" cy="127" r="4.5" fill="#a8c8d8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="360" cy="162" r="4.5" fill="#a8c8d8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="505" cy="188" r="4.5" fill="#a8c8d8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="650" cy="206" r="4.5" fill="#a8c8d8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+
+  <!-- Steady Degradation (#9d8fe8) · accuracy: 1.00, 0.95, 0.76, 0.58, 0.44 -->
+  <polyline points="70,80 215,94 360,150 505,203 650,244"
+            fill="none" stroke="#9d8fe8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="70"  cy="80"  r="4.5" fill="#9d8fe8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="215" cy="94"  r="4.5" fill="#9d8fe8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="360" cy="150" r="4.5" fill="#9d8fe8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="505" cy="203" r="4.5" fill="#9d8fe8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="650" cy="244" r="4.5" fill="#9d8fe8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+
+  <!-- Recovery (#7db800) · accuracy: 1.00, 1.00, 0.97, 0.94, 0.90 -->
+  <polyline points="70,80 215,80 360,88 505,97 650,109"
+            fill="none" stroke="#7db800" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="70"  cy="80"  r="4.5" fill="#7db800" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="215" cy="80"  r="4.5" fill="#7db800" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="360" cy="88"  r="4.5" fill="#7db800" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="505" cy="97"  r="4.5" fill="#7db800" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <circle cx="650" cy="109" r="4.5" fill="#7db800" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+
+  <!-- ─── LEGEND (2 rows × 2 cols) ─── -->
+  <!-- Row 1 -->
+  <line x1="106" y1="311" x2="132" y2="311" stroke="#e07055" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="119" cy="311" r="3.5" fill="#e07055" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <text x="138" y="315" font-family="'Space Mono', monospace" font-size="10" fill="rgba(255,255,255,0.42)">Early Collapse</text>
+
+  <line x1="386" y1="311" x2="412" y2="311" stroke="#a8c8d8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="399" cy="311" r="3.5" fill="#a8c8d8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <text x="418" y="315" font-family="'Space Mono', monospace" font-size="10" fill="rgba(255,255,255,0.42)">Late Drift</text>
+
+  <!-- Row 2 -->
+  <line x1="106" y1="340" x2="132" y2="340" stroke="#9d8fe8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="119" cy="340" r="3.5" fill="#9d8fe8" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <text x="138" y="344" font-family="'Space Mono', monospace" font-size="10" fill="rgba(255,255,255,0.42)">Steady Degradation</text>
+
+  <line x1="386" y1="340" x2="412" y2="340" stroke="#7db800" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="399" cy="340" r="3.5" fill="#7db800" stroke="rgba(10,13,20,0.9)" stroke-width="1.5"/>
+  <text x="418" y="344" font-family="'Space Mono', monospace" font-size="10" fill="rgba(255,255,255,0.42)">Recovery</text>
+
+  <!-- 80% floor label at center bottom -->
+  <text x="360" y="365" text-anchor="middle" font-family="'Space Mono', monospace"
+        font-size="9" fill="rgba(255,255,255,0.18)">— — — 80% reliability floor</text>
+</svg>
