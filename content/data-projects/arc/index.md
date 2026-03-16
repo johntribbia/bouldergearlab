@@ -472,7 +472,7 @@ An arc is a shape. Rising, peaking, holding. It is also the name of the framewor
     <div class="arc-letter">C</div>
     <div class="arc-word">Calibrate</div>
     <div class="arc-target"><strong>As a target</strong>Hold quality through to completion without degrading.</div>
-    <div class="arc-measure"><strong>As a measurement</strong>Keep the eval signal honest over time and verify it is pointing at the right thing in the real world.</div>
+    <div class="arc-measure"><strong>As a measurement</strong>Prevent the signal from lying. Guard against benchmark contamination with held-out sets, track recovery rate as a robustness leading indicator, and close the loop with production transcripts to verify that eval failure patterns match real behavior.</div>
   </div>
 </div>
 
@@ -526,9 +526,11 @@ An arc is a shape. Rising, peaking, holding. It is also the name of the framewor
 
 ## What Goes Wrong
 
-Most agent failures are failures of arc, not ability. The capability is there, but it doesn't deploy in the right shape. When you plot step-by-step quality scores instead of just checking the final answer, four failure patterns emerge repeatedly, all producing similar aggregate scores while calling for completely different interventions.
+Most agent failures are failures of arc, not ability. The capability is there, but it doesn't deploy in the right shape. When you plot step-by-step quality scores instead of just checking the final answer, a small set of failure patterns emerge — all producing similar aggregate scores while calling for completely different interventions.
 
-To make this concrete, imagine four models each scoring around 0.74 on a ten-step task:
+The four patterns below are a logical partition of what can happen to a score vector across a task: it starts high and collapses early, it starts low and drifts, it declines steadily, or it dips and recovers. They are derived from the geometry of trajectories, not from a large empirical study. Whether these four are the right and complete taxonomy for your domain is precisely what the Calibrate phase is designed to tell you — by comparing eval-side pattern distributions against production transcripts.
+
+To make these patterns concrete, the examples below use synthetic scores constructed to illustrate each shape clearly. They are thought experiments, not measured model outputs. The point is the diagnostic logic, not the numbers:
 
 <div class="arc-score-wrap">
   <table class="arc-score-table">
@@ -586,7 +588,7 @@ Model A collapses early and grinds through the task on a broken foundation. Mode
   <p class="pattern-fix">Intervention: Measure recovery rate explicitly as a first-class metric.</p>
 </div>
 
-<p class="arc-p">Score each step with a zero-to-one judgment, plot the vector, look at the shape.</p>
+<p class="arc-p">Score each step against its sub-goal with a zero-to-one judgment, plot the vector, look at the shape. The rubric, who applies it, and how to verify the score is real rather than a format artifact are the subject of the Assess section below.</p>
 
 <hr class="arc-hr"/>
 
@@ -602,13 +604,31 @@ Model A collapses early and grinds through the task on a broken foundation. Mode
 
 <p class="arc-p">Select a task suite of 30–50 multi-step tasks representative of your deployment domain. Each task should be decomposable into 4–10 discrete sub-goals with verifiable outputs.</p>
 
-<p class="arc-p"><strong>1. Score each step independently.</strong> Use a privacy preserving No Look Eval (NLE) LLM with a rubric grounded in the sub-goal, not the final answer. Prompt it to return a float 0.0–1.0 with a one-sentence rationale. Never pass the full conversation history to the NLE. Score each step in isolation to avoid halo effects from earlier correct steps.</p>
+<p class="arc-p"><strong>1. Score each step independently.</strong> Use a privacy-preserving No Look Eval (NLE) judge model with a rubric grounded in the sub-goal, not the final answer. Prompt it to return a float 0.0–1.0 with a one-sentence rationale. Never pass the full conversation history to the NLE. Score each step in isolation to avoid halo effects from earlier correct steps. Human annotation is not required for routine runs; it is reserved for calibration (see step below).</p>
 
 <pre class="arc-pre"><code># NLE prompt template
 nle_prompt = """Given this sub-goal: {subgoal}
 And this model output: {step_output}
 Score the output 0.0-1.0 for how well it achieves the sub-goal.
 Return JSON: {"score": float, "rationale": str}"""</code></pre>
+
+<p class="arc-p">The rubric anchors the score to the sub-goal, not to style or length. A four-band scale covers most task types:</p>
+
+<div class="arc-score-wrap">
+  <table class="arc-score-table">
+    <thead>
+      <tr><th>Score</th><th>Criterion</th><th>Typical signals</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>0.0–0.2</td><td>Sub-goal not achieved</td><td>Output ignores the sub-goal, reaches a wrong conclusion, or hallucinates required facts.</td></tr>
+      <tr><td>0.3–0.5</td><td>Partial progress</td><td>Correct direction but a required element is missing, or the sub-goal is met with a flawed assumption that will propagate downstream.</td></tr>
+      <tr><td>0.6–0.8</td><td>Sub-goal achieved with caveats</td><td>All required elements present; minor gap in precision, completeness, or constraint adherence.</td></tr>
+      <tr><td>0.9–1.0</td><td>Sub-goal fully achieved</td><td>All required elements present, constraints respected, output verifiably correct against the sub-goal spec.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="arc-p">Calibrate the NLE judge before trusting it in production: score five human-labeled examples per task category across the full rubric range, and tune the NLE prompt until its scores correlate with human scores at r ≥ 0.80. This takes roughly 30 minutes per task category and should be re-run whenever you change the judge model or the prompt template.</p>
 
 <p class="arc-p"><strong>2. Compute the trajectory vector.</strong> Store scores as a list indexed by step. Compute three slope indicators: early slope (steps 1–N/3), mid slope (steps N/3–2N/3), and late slope (steps 2N/3–N). These three numbers alone will classify most trajectories into one of the four failure patterns.</p>
 
