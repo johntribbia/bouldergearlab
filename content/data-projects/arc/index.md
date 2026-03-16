@@ -387,7 +387,7 @@ draft: false
   margin: 2.4rem 0 0.85rem;
 }
 .arc-subhead {
-  font-size: 1.05rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: rgba(255,255,255,0.82);
   margin: 1.8rem 0 0.55rem;
@@ -435,7 +435,7 @@ A mountain climb is unforgiving. There is no flat section where you recover from
   <p class="arc-vis-note">The arc run peaks at ~163 bpm near the summit and holds. The blowup run spikes to 173 in the first 12 minutes and slowly collapses. Same finish time, same average heart rate, opposite story.</p>
 </div>
 
-Watch a language model work through a difficult multi-step task and you notice something similar is missing from how we evaluate it. The quality of its outputs often does not follow that curve. It might go out too fast and commit confidently to a flawed assumption in the first two steps, then spend six more building coherent-sounding reasoning on a wrong foundation. Or it might hold form through the first two-thirds and then fall apart when the task pitches steep and the context window is saturated. Or it might stumble and recover in ways that look more like luck than controlled effort.
+Watch a language model work through a difficult multi-step task and you notice something similar is missing from how we evaluate it. The quality of its outputs often does not follow that curve. It might go out too fast and commit confidently to a flawed assumption in the first two steps, then spend six more building coherent-sounding reasoning on a wrong foundation. Or it might hold form through the first two-thirds and then fall apart when the task pitches steep and the context window (the model's working memory) is saturated. Or it might stumble and recover in ways that look more like luck than controlled effort.
 
 The difference between the runner's rising arc and the model's erratic path is not just a performance gap. It is a measurement gap. We are not yet good at describing the shape of how agents succeed or fail across the course of a task. We ask whether they got the answer right at the end. That is like judging a mountain race by finish time alone.
 
@@ -443,7 +443,7 @@ The difference between the runner's rising arc and the model's erratic path is n
 
 ## Where This Fits in the Literature
 
-The idea that step-level evaluation beats outcome-only evaluation is not new. Lightman et al. (2023) made this case rigorously in "Let's Verify Step by Step," showing that process reward models trained to score individual reasoning steps rather than just final answers substantially outperform outcome reward models on hard math problems.<sup><a href="#fn1">1</a></sup> Cobbe et al. (2021) laid some of the groundwork with outcome supervision in "Training Verifiers to Solve Math Word Problems."<sup><a href="#fn2">2</a></sup> If you are doing serious RLHF or working on reasoning chain quality, you are probably already thinking in terms of step-level feedback.
+The idea that step-level evaluation beats outcome-only evaluation is not new. Lightman et al. (2023) made this case rigorously in "Let's Verify Step by Step," showing that models trained to score each individual reasoning step (process reward models) substantially outperform models that score only the final answer (outcome reward models) on hard math problems.<sup><a href="#fn1">1</a></sup> Cobbe et al. (2021) laid some of the groundwork with outcome supervision in "Training Verifiers to Solve Math Word Problems."<sup><a href="#fn2">2</a></sup> If you are doing serious RLHF (reinforcement learning from human feedback, the technique used to train language models on human preferences) or working on reasoning chain quality, you are probably already thinking in terms of step-level feedback.
 
 ARC is not trying to reinvent that. The distinction worth drawing is that Lightman et al. are solving a <em>training</em> problem: how do you generate the right signal to improve a model during training? ARC is solving a <em>diagnostic</em> problem: once you have a deployed agent producing multi-step outputs, how do you figure out what is actually wrong with it, where in the task it breaks down, and which intervention is likely to fix it? The frameworks address different questions. One shapes the model. The other tells you what shape the model is in and what shape the next training run should target.
 
@@ -526,9 +526,9 @@ An arc is a shape. Rising, peaking, holding. It is also the name of the framewor
 
 ## What Goes Wrong
 
-Most agent failures are failures of arc, not ability. The capability is there, but it doesn't deploy in the right shape. When you plot step-by-step quality scores instead of just checking the final answer, a small set of failure patterns emerge — all producing similar aggregate scores while calling for completely different interventions.
+Most agent failures are failures of arc, not ability. The capability is there, but it doesn't deploy in the right shape. When you plot step-by-step quality scores instead of just checking the final answer, a small set of failure patterns emerge, all producing similar aggregate scores while calling for completely different interventions.
 
-The four patterns below are a logical partition of what can happen to a score vector across a task: it starts high and collapses early, it starts low and drifts, it declines steadily, or it dips and recovers. They are derived from the geometry of trajectories, not from a large empirical study. Whether these four are the right and complete taxonomy for your domain is precisely what the Calibrate phase is designed to tell you — by comparing eval-side pattern distributions against production transcripts.
+The four patterns below are a logical partition of what can happen to a sequence of step scores across a task: it starts high and collapses early, it starts low and drifts, it declines steadily, or it dips and recovers. They are derived from the geometry of trajectories, not from a large empirical study. Whether these four are the right and complete taxonomy for your domain is precisely what the Calibrate phase is designed to tell you, by comparing eval-side pattern distributions against production transcripts.
 
 To make these patterns concrete, the examples below use synthetic scores constructed to illustrate each shape clearly. They are thought experiments, not measured model outputs. The point is the diagnostic logic, not the numbers:
 
@@ -572,7 +572,7 @@ Model A collapses early and grinds through the task on a broken foundation. Mode
 
 <div class="arc-text-pattern drift">
   <div class="pattern-title">Late Drift</div>
-  <p>Performance holds through the first two-thirds of the task and then falls sharply. Usually context saturation: the model loses track of earlier constraints as complexity compounds. The runner with strong legs and no fuel left for the ridge.</p>
+  <p>Performance holds through the first two-thirds of the task and then falls sharply. Usually context saturation: language models have a fixed context window, a limit on how much text they can hold in active memory at once. As the task grows more complex, that window fills and the model loses track of constraints established early on. The runner with strong legs and no fuel left for the ridge.</p>
   <p class="pattern-fix">Intervention: Context management, summarization at intermediate steps, or chunking strategies.</p>
 </div>
 
@@ -588,7 +588,7 @@ Model A collapses early and grinds through the task on a broken foundation. Mode
   <p class="pattern-fix">Intervention: Measure recovery rate explicitly as a first-class metric.</p>
 </div>
 
-<p class="arc-p">Score each step against its sub-goal with a zero-to-one judgment, plot the vector, look at the shape. The rubric, who applies it, and how to verify the score is real rather than a format artifact are the subject of the Assess section below.</p>
+<p class="arc-p">Score each step against its sub-goal with a zero-to-one judgment, plot the scores, look at the shape. The rubric, who applies it, and how to verify the score is real rather than a format artifact are the subject of the Assess section below.</p>
 
 <hr class="arc-hr"/>
 
@@ -604,13 +604,15 @@ Model A collapses early and grinds through the task on a broken foundation. Mode
 
 <p class="arc-p">Select a task suite of 30–50 multi-step tasks representative of your deployment domain. Each task should be decomposable into 4–10 discrete sub-goals with verifiable outputs.</p>
 
-<p class="arc-p"><strong>1. Score each step independently.</strong> Use a privacy-preserving No Look Eval (NLE) judge model with a rubric grounded in the sub-goal, not the final answer. Prompt it to return a float 0.0–1.0 with a one-sentence rationale. Never pass the full conversation history to the NLE. Score each step in isolation to avoid halo effects from earlier correct steps. Human annotation is not required for routine runs; it is reserved for calibration (see step below).</p>
+<p class="arc-p"><strong>1. Score each step independently.</strong> Use a privacy-preserving No Look Eval (NLE) judge model with a rubric grounded in the sub-goal, not the final answer. The "No Look" means the judge scores each step without seeing how the task ends; it cannot be influenced by knowing whether the final answer was right or wrong. Prompt it to return a score between 0.0 and 1.0 with a one-sentence rationale. Never pass the full conversation history to the NLE. Score each step in isolation to avoid halo effects (the tendency to rate later steps more generously because earlier steps went well, even if those later steps have independent flaws). Human annotation is not required for routine runs; it is reserved for calibration (see step below).</p>
 
 <pre class="arc-pre"><code># NLE prompt template
 nle_prompt = """Given this sub-goal: {subgoal}
 And this model output: {step_output}
 Score the output 0.0-1.0 for how well it achieves the sub-goal.
 Return JSON: {"score": float, "rationale": str}"""</code></pre>
+
+<p class="arc-p">In plain terms: a separate AI acts as the auditor. It reads only the task's sub-goal and the model's output for that one step, gives a score from 0 to 1, and explains its reasoning, without knowing whether the overall task succeeded or failed.</p>
 
 <p class="arc-p">The rubric anchors the score to the sub-goal, not to style or length. A four-band scale covers most task types:</p>
 
@@ -628,7 +630,7 @@ Return JSON: {"score": float, "rationale": str}"""</code></pre>
   </table>
 </div>
 
-<p class="arc-p">Calibrate the NLE judge before trusting it in production: score five human-labeled examples per task category across the full rubric range, and tune the NLE prompt until its scores correlate with human scores at r ≥ 0.80. This takes roughly 30 minutes per task category and should be re-run whenever you change the judge model or the prompt template.</p>
+<p class="arc-p">Calibrate the NLE judge before trusting it in production: score five human-labeled examples per task category across the full rubric range, and tune the NLE prompt until its scores correlate with human scores at r ≥ 0.80 (a strong correlation meaning the automated judge ranks outputs in nearly the same order a human reviewer would). This takes roughly 30 minutes per task category and should be re-run whenever you change the judge model or the prompt template.</p>
 
 <p class="arc-p"><strong>2. Compute the trajectory vector.</strong> Store scores as a list indexed by step. Compute three slope indicators: early slope (steps 1–N/3), mid slope (steps N/3–2N/3), and late slope (steps 2N/3–N). These three numbers alone will classify most trajectories into one of the four failure patterns.</p>
 
@@ -660,9 +662,42 @@ Return JSON: {"score": float, "rationale": str}"""</code></pre>
 
     return 'healthy'</code></pre>
 
+<p class="arc-p">In plain terms: this function reads the score sequence in thirds, looks for structural patterns (a strong start that collapses, a sharp late drop, a dip followed by recovery, or a slow overall slide), and returns a label. That label determines which intervention the Repair phase selects.</p>
+
 <p class="arc-subhead">Verifying the Trajectory is Real</p>
 
 <p class="arc-p"><strong>3. Run surface-feature variation.</strong> Paraphrase each failing task three times with structurally identical content but different wording, examples, and formatting. Re-score. If score variance across variants exceeds 0.15, the model is responding to surface features, not underlying capability.</p>
+
+<p class="arc-p">Here is what that looks like in practice. Suppose your agent is failing at step 3 of a customer support routing task. Specifically, it misidentifies the urgency tier. You write two paraphrases that ask for exactly the same thing:</p>
+
+<div class="arc-score-wrap">
+  <table class="arc-score-table">
+    <thead>
+      <tr><th>Variant</th><th>Phrasing</th><th>Step 3 Score</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Original</td>
+        <td style="color:rgba(255,255,255,0.55);">"Classify the urgency of this ticket: a user says their account is locked and they cannot access payroll."</td>
+        <td>0.31</td>
+      </tr>
+      <tr>
+        <td>Paraphrase A</td>
+        <td style="color:rgba(255,255,255,0.55);">"A customer reports being locked out of their account and unable to run payroll. Assign a priority level."</td>
+        <td>0.87</td>
+      </tr>
+      <tr>
+        <td>Paraphrase B</td>
+        <td style="color:rgba(255,255,255,0.55);">"Ticket summary: payroll access blocked due to account lockout. Determine the urgency category."</td>
+        <td>0.82</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="arc-p">Score variance across three variants: 0.56. The agent is not failing to recognize an urgent payroll lockout. It is tripping on the word "locked" in the original phrasing, which the model associates with a lower-tier security issue. The failure is surface-level format sensitivity, not a capability gap. Sending this to Repair and spending a sprint on a grounding prompt would be the wrong call. The fix is prompt wording, not model behavior.</p>
+
+<p class="arc-p">Variance below 0.08 across all three paraphrases means the failure is consistent regardless of how you ask. That is a genuine capability gap worth repairing.</p>
 
 <div class="arc-text-callout">
   <strong>Threshold:</strong> Variance &gt; 0.15 across 3 paraphrase variants means flag as format artifact. Variance &lt; 0.08 means genuine failure, so proceed to Repair. Assess costs one sprint when you skip it and discover a format artifact three sprints later. It is non-optional.
@@ -676,30 +711,57 @@ Return JSON: {"score": float, "rationale": str}"""</code></pre>
 
 <p class="arc-subhead">Step 1: Weight Sub-Goals by Downstream Impact</p>
 
+<p class="arc-p">Not all steps matter equally. A flawed assumption in step 1 of a 7-step task is much worse than the same flaw in step 6, because the downstream steps all build on it. Weighting makes that explicit so you are prioritizing the right break points.</p>
+
+<p class="arc-p">Consider a coding assistant tasked with implementing a feature: (1) understand the requirement, (2) identify affected files, (3) write the core logic, (4) write tests, (5) handle edge cases, (6) update documentation, (7) summarize changes. Steps 1 and 3 are critical gates: if the agent misreads the requirement or writes broken core logic, everything downstream is wrong regardless of how well it tests or documents. Steps 4–7 are isolated or shared dependencies.</p>
+
 <pre class="arc-pre"><code># Downstream impact weighting
 # 1 = isolated step (failure affects only this step)
 # 2 = shared dependency (failure propagates to 2-3 downstream steps)
 # 3 = critical gate (failure invalidates all downstream steps)
-weights = [3, 1, 2, 1, 3, 1, 2]   # assign per task
-weighted_score = sum(s*w for s,w in zip(scores, weights)) / sum(weights)</code></pre>
+
+# Coding assistant task: understand → find files → core logic → tests → edge cases → docs → summary
+weights = [3, 2, 3, 2, 1, 1, 1]
+weighted_score = sum(s*w for s,w in zip(scores, weights)) / sum(weights)
+
+# Example: agent scores well everywhere but misreads the requirement (step 1)
+scores  = [0.30, 0.85, 0.80, 0.88, 0.82, 0.90, 0.91]
+# Unweighted average: 0.78  (looks fine)
+# Weighted average:   0.64  (gate failure surfaces)</code></pre>
+
+<p class="arc-p">The unweighted average here is 0.78, which might pass a quality bar. The weighted average is 0.64, which correctly flags that the most load-bearing step failed. Assign weights before you score. Doing it after introduces hindsight bias: you will unconsciously weight the steps that happened to fail in this run rather than the steps that are genuinely most critical regardless of outcome.</p>
 
 <p class="arc-subhead">Step 2: Localize the Break Point</p>
 
-<pre class="arc-pre"><code>def find_break_point(scores):
+<p class="arc-p">The trajectory score tells you a failure happened. Localization tells you where. But score alone is often not enough: a step that looks mediocre in isolation might be fine given its difficulty, while an apparently acceptable step might have introduced a subtle error that takes three steps to surface. Adding cost and latency alongside trajectory gives you a richer signal and often surfaces the break before the score does.</p>
+
+<p class="arc-p">Think of it like this: if a step's score drops, that is the model telling you it struggled. If its latency spikes at the same step, the model is also telling you it was uncertain; it took longer to generate the output. If both happen together, you have a high-confidence break point. If latency spikes but score holds, the model was uncertain but recovered, and that is a step worth watching in future runs. Clustering these three signals together (score drop, latency spike, and token cost increase) is more diagnostic than any one alone.</p>
+
+<pre class="arc-pre"><code>def find_break_point(scores, latency_ms=None, token_cost=None):
     baseline = sum(scores[:len(scores)//3]) / (len(scores)//3)
+    signals = []
     for i in range(1, len(scores)):
-        step_drop = scores[i-1] - scores[i]
-        base_drop = baseline    - scores[i]
-        if step_drop > 0.20 or base_drop > 0.20:
-            return i
-    return None</code></pre>
+        step_drop  = scores[i-1] - scores[i]
+        base_drop  = baseline - scores[i]
+        lat_spike  = (latency_ms[i] / latency_ms[i-1] > 1.5) if latency_ms else False
+        cost_spike = (token_cost[i] / token_cost[i-1] > 1.4) if token_cost else False
+        n_signals  = sum([step_drop > 0.20, base_drop > 0.20, lat_spike, cost_spike])
+        signals.append((i, n_signals, step_drop, base_drop))
+
+    # Step with the most converging signals is the most likely break point
+    signals.sort(key=lambda x: -x[1])
+    return signals[0][0] if signals else None</code></pre>
+
+<p class="arc-p">In practice: you are running a document summarization agent across a 6-step pipeline. Steps 1–3 look fine. At step 4, score drops from 0.82 to 0.58, latency jumps from 1.2s to 3.8s, and token count doubles. All three signals converge: step 4 is the break. Without latency and cost data, step 4's score drop alone would still flag it, but the convergence removes ambiguity: the model is not just producing a worse output, it is genuinely struggling to produce any output at all. That is useful information for choosing the intervention.</p>
 
 <p class="arc-subhead">Step 3: Run the Disambiguation Protocol</p>
 
-<p class="arc-p">Once you have the break point, run the appropriate probe before assigning a root cause. Five failure types produce overlapping symptoms. The probe is what separates them. Never classify based on symptom alone.</p>
+<p class="arc-p">Once you have the break point, you have a location but not a cause. Five failure types produce overlapping symptoms. The table below gives each one a concrete probe (a targeted re-run that changes exactly one thing) to separate them. The "Disambiguator" column is the test. The "Intervention" column is only valid after the probe confirms the cause.</p>
+
+<p class="arc-p">A brief example of why this matters: suppose your document agent fails at step 4. The symptom is a dropped constraint: the model stops tracking a key requirement introduced in step 1. Two completely different causes produce that symptom: context loss (the model has simply run out of working memory for early context) and a capability gap (the model never reliably propagates multi-step constraints, regardless of context length). Context loss is fixed with chunking. A capability gap is not. That requires curriculum work or a different model. Applying chunking to a capability gap makes the task slower without fixing anything. The probe is what tells you which problem you actually have.</p>
 
 <div class="arc-disambig-wrap">
-  <div class="arc-disambig-label">Disambiguation protocol - verify before prescribing</div>
+  <div class="arc-disambig-label">Disambiguation protocol: verify before prescribing</div>
   <table class="arc-disambig-table">
     <thead>
       <tr><th>Symptom</th><th>Likely Cause</th><th>Disambiguator</th><th>Intervention</th></tr>
@@ -708,26 +770,26 @@ weighted_score = sum(s*w for s,w in zip(scores, weights)) / sum(weights)</code><
       <tr>
         <td>Wrong answer, step 1–2</td>
         <td>Hallucination or goal misread</td>
-        <td>Re-run with constraint injection. Persists? Hallucination. Repairs? Goal misread.</td>
+        <td>Re-run with the correct constraint injected explicitly ("The account type is enterprise, not SMB"). Persists? Hallucination: the model is fabricating. Repairs? Goal misread: it understood the wrong task from the original phrasing.</td>
         <td>Grounding or clarification prompt</td>
       </tr>
       <tr>
         <td>Correct mid-steps, wrong late</td>
         <td>Context loss or capability gap</td>
-        <td>Summarize context at midpoint, re-run tail. Improves? Context loss. Flat? Capability gap.</td>
-        <td>Chunking or summarization</td>
+        <td>Summarize the mid-point context into a fresh prompt and re-run only the failing tail. Improves? Context loss: the model had the capability but lost the thread. Flat? Capability gap: the model cannot do the late-task reasoning regardless of context freshness.</td>
+        <td>Chunking or summarization for context loss; curriculum or model upgrade for capability gap</td>
       </tr>
       <tr>
         <td>Wrong tool called</td>
         <td>Tool selection or goal misread</td>
-        <td>Swap tool descriptions. Persists? Goal misread. Repairs? Tool selection.</td>
+        <td>Swap the tool descriptions in the system prompt, renaming the tools but preserving their function. Persists? Goal misread: it is calling whatever it thinks fits the intent. Repairs? Tool selection: it was pattern-matching on the tool name, not the task.</td>
         <td>Tool description rewrite or goal clarification</td>
       </tr>
       <tr>
         <td>Gradual decline, all steps</td>
-        <td>Context loss or capability gap</td>
-        <td>Inject fresh context mid-run. Improves? Context loss. Flat? Capability gap.</td>
-        <td>Chunking or curriculum gap</td>
+        <td>Context accumulation or capability gradient</td>
+        <td>Inject a fresh context summary at the midpoint of the task and re-run from there. Improves? Accumulated context is the drag. Flat? The model simply performs worse as task complexity compounds. That is a capability gradient, not a context problem.</td>
+        <td>Chunking or periodic summarization for context; structured task decomposition for capability gradient</td>
       </tr>
     </tbody>
   </table>
@@ -747,16 +809,16 @@ weighted_score = sum(s*w for s,w in zip(scores, weights)) / sum(weights)</code><
 
 <p class="arc-subhead">Discipline 1: Internal Signal Integrity</p>
 
-<p class="arc-p"><strong>1. Build and protect a held-out eval set.</strong> Reserve 20% of your task suite, stratified by task type and difficulty, as a held-out set that never touches training data. Rescore this set after every training run alongside your in-distribution set.</p>
+<p class="arc-p"><strong>1. Build and protect a held-out eval set.</strong> Reserve 20% of your task suite, stratified by task type and difficulty, as a held-out set that never touches training data. Rescore this held-out set after every training run alongside your main eval set.</p>
 
-<p class="arc-p"><strong>2. Track the held-out gap.</strong> A stable or narrowing gap means the eval signal is trustworthy. A widening gap means surface performance is inflating faster than real capability.</p>
+<p class="arc-p"><strong>2. Track the held-out gap.</strong> A stable or narrowing gap means the eval signal is trustworthy. A widening gap means the model has learned to score well on familiar eval tasks without genuinely improving on new ones: surface performance inflating faster than real capability.</p>
 
 <pre class="arc-pre"><code>gap = in_distribution_score - held_out_score
 # gap < 0.05    -> signal healthy
 # gap 0.05-0.10 -> watch closely
 # gap > 0.10    -> surface inflation likely, pause and investigate</code></pre>
 
-<p class="arc-p"><strong>3. Retire contaminated benchmarks proactively.</strong> Flag any benchmark where the model scores above 0.92 on three consecutive runs. Assume contamination risk and retire it.</p>
+<p class="arc-p"><strong>3. Retire contaminated benchmarks proactively.</strong> Contamination happens when a model was trained or fine-tuned on data that resembles your eval tasks, causing scores to inflate artificially even without genuine improvement. Flag any benchmark where the model scores above 0.92 on three consecutive runs. Assume contamination risk and retire it.</p>
 
 <p class="arc-subhead">Discipline 2: Recovery Rate Tracking</p>
 
@@ -776,7 +838,7 @@ weighted_score = sum(s*w for s,w in zip(scores, weights)) / sum(weights)</code><
 
 <p class="arc-p"><strong>5. Sample production transcripts.</strong> Pull 50–100 real user interactions that map to your eval task categories. If you do not have direct transcript access, proxy behavioral signals work: did the user regenerate? Abandon? Continue without editing?</p>
 
-<p class="arc-p"><strong>6. Code transcripts for ARC failure patterns.</strong> Use the same taxonomy. A single coder with the rubric takes roughly two hours for 100 transcripts.</p>
+<p class="arc-p"><strong>6. Classify transcripts using ARC failure patterns.</strong> Use the same taxonomy. A single reviewer with the rubric takes roughly two hours for 100 transcripts.</p>
 
 <p class="arc-p"><strong>7. Compare distributions and close the loop.</strong> If distributions diverge by more than 15–20 percentage points on a given pattern, either your eval tasks are not representative of production or your failure taxonomy needs revision.</p>
 

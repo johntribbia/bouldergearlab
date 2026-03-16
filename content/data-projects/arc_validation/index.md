@@ -375,7 +375,7 @@ The same separation applies to ARC. The <a href="../arc/">previous post</a> desc
 
     return 'healthy'</code></pre>
 
-<p class="arc-p">All four article trajectories now classify correctly. At N=1,500 trajectories across five patterns, V3 achieves 94% overall accuracy and a macro F1 of 0.94 — compared to 76% and 0.69 for V1.</p>
+<p class="arc-p">All four article trajectories now classify correctly. At N=1,500 independently-generated synthetic trajectories across five patterns, V3 achieves 80% overall accuracy and a macro F1 of 0.79. Recovery classifies at near-perfect precision; the weaker patterns — early_collapse, late_drift, and steady_degradation — cluster around F1 = 0.70–0.75, reflecting genuine boundary ambiguity between categories rather than classifier bugs.</p>
 
 <div class="arc-val-wrap">
   <table class="arc-val-table">
@@ -386,38 +386,38 @@ The same separation applies to ARC. The <a href="../arc/">previous post</a> desc
       <tr>
         <td>early_collapse</td>
         <td class="arc-val-v1">0.00</td>
-        <td class="arc-val-v3">0.98</td>
-        <td class="arc-val-note">Segment mean comparison replaces within-segment slope</td>
+        <td class="arc-val-v3">0.68</td>
+        <td class="arc-val-note">Segment mean comparison replaces within-segment slope; mild collapses still bleed into steady_degradation</td>
       </tr>
       <tr>
         <td>late_drift</td>
-        <td style="color:rgba(255,255,255,0.55);">0.89</td>
-        <td class="arc-val-v3">0.85</td>
-        <td class="arc-val-note">Slight drop — mild drifts overlap with healthy at low noise</td>
+        <td style="color:rgba(255,255,255,0.55);">—</td>
+        <td style="color:rgba(255,255,255,0.55);">0.70</td>
+        <td class="arc-val-note">Gradual late drops fall below the slope threshold and read as healthy</td>
       </tr>
       <tr>
         <td>steady_degradation</td>
-        <td style="color:rgba(255,255,255,0.55);">0.66</td>
-        <td class="arc-val-v3">0.97</td>
-        <td class="arc-val-note">No longer absorbs early_collapse misclassifications</td>
+        <td style="color:rgba(255,255,255,0.55);">—</td>
+        <td style="color:rgba(255,255,255,0.55);">0.75</td>
+        <td class="arc-val-note">Acts as a catch-all; absorbs misclassified early_collapse and late_drift cases</td>
       </tr>
       <tr>
         <td>recovery</td>
-        <td class="arc-val-v3">1.00</td>
-        <td class="arc-val-v3">0.99</td>
-        <td class="arc-val-note">Recovery-first ordering protects this branch</td>
+        <td class="arc-val-v3">—</td>
+        <td class="arc-val-v3">0.98</td>
+        <td class="arc-val-note">Recovery-first ordering protects this branch; large cliff signal is distinctive</td>
       </tr>
       <tr>
         <td>healthy</td>
-        <td style="color:rgba(255,255,255,0.55);">0.93</td>
-        <td class="arc-val-v3">0.90</td>
-        <td class="arc-val-note">Mild late drifts occasionally read as healthy — acceptable</td>
+        <td style="color:rgba(255,255,255,0.55);">—</td>
+        <td style="color:rgba(255,255,255,0.55);">0.84</td>
+        <td class="arc-val-note">Mild late drifts below the slope threshold land here — acceptable by design</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<p class="arc-p">The late_drift F1 is worth a note. A mild late drift that builds toward a peak and then softens gradually can genuinely look like a healthy arc when the decline is below the slope threshold. That 13% leak into healthy is not a bug to chase: those are trajectories where the drop is too gentle to warrant a Repair sprint, and classifying them as healthy and moving on is probably the right call. The cases worth catching, such as sharp late collapses, are already classified at near-perfect precision.</p>
+<p class="arc-p">The F1 scores for early_collapse, late_drift, and steady_degradation cluster in the 0.68–0.75 range on independently-generated synthetic trajectories. The common failure mode is boundary ambiguity: a mild early collapse that doesn't drop far enough reads as steady_degradation; a gradual late drift that stays above the slope threshold reads as healthy; a noisy steady decline gets misattributed to whichever structural pattern the noise mimics. These are not classifier bugs to chase — they reflect cases where the signal is genuinely below the detection threshold. Recovery is the exception: its large single-step cliff (>0.20) is structurally distinctive and classifies at F1 = 0.98 even on hard independently-drawn samples. The noise sweep in the next section shows that these same patterns hold under measurement noise, with recovery remaining robust well above σ = 0.15 while the other three cross the 80% reliability floor around σ = 0.08.</p>
 
 <h3 class="arc-h3">How Noise Degrades Classification</h3>
 
