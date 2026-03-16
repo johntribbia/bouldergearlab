@@ -1,6 +1,6 @@
 ---
 title: "Does Making AI Smarter Actually Make People Use It More?"
-date: 2026-02-28
+date: 2026-02-09
 banner: "model-quality-banner.png"
 tags: ['data project']
 categories: ['data project']
