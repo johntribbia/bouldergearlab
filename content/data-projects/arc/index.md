@@ -4,6 +4,7 @@ date: 2026-02-25
 tags: ['data project']
 categories: ['data project']
 description: "Most agent evaluations only check whether the final answer was right. That is like judging effort in a mountain race by finish time alone. ARC is a framework for evaluating the full trajectory."
+banner: "arc-banner.svg"
 draft: false
 ---
 <!--more-->
