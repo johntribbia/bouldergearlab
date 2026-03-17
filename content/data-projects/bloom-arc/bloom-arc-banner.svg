@@ -1,0 +1,63 @@
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="200" fill="#16190f"/>
+
+  <!-- Grid -->
+  <line x1="0" y1="160" x2="800" y2="160" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="110" x2="800" y2="110" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="0" y1="60"  x2="800" y2="60"  stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Turn markers -->
+  <line x1="160" y1="155" x2="160" y2="165" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <line x1="320" y1="155" x2="320" y2="165" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <line x1="480" y1="155" x2="480" y2="165" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <line x1="640" y1="155" x2="640" y2="165" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Scenario C: Healthy (moss green) — stays high -->
+  <path d="M 80 52 C 180 50 260 54 320 52 C 420 50 540 55 720 51"
+        fill="none" stroke="#7db800" stroke-width="2" opacity="0.5"/>
+
+  <!-- Scenario A: Late Drift (ice blue) — high then drops after turn 3 -->
+  <path d="M 80 52 L 160 50 L 320 55 C 400 70 480 110 560 138 L 720 148"
+        fill="none" stroke="#a8c8d8" stroke-width="2.5" opacity="0.75"/>
+
+  <!-- Identity-reveal marker for Late Drift -->
+  <line x1="320" y1="32" x2="320" y2="160" stroke="#a8c8d8" stroke-width="1"
+        stroke-dasharray="3,5" opacity="0.3"/>
+  <circle cx="320" cy="55" r="4" fill="none" stroke="#a8c8d8" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Scenario B: Structural Baseline (coral) — flat at bottom throughout -->
+  <path d="M 80 145 C 200 143 340 146 480 144 C 580 143 650 146 720 144"
+        fill="none" stroke="#e07055" stroke-width="2" opacity="0.65"/>
+
+  <!-- Bloom detection label area (right side) -->
+  <rect x="648" y="38" width="120" height="22" rx="3"
+        fill="rgba(224,112,85,0.08)" stroke="rgba(224,112,85,0.25)" stroke-width="0.8"/>
+  <text x="708" y="53" text-anchor="middle"
+        font-family="'Space Mono', monospace" font-size="9" font-weight="700"
+        fill="#e07055" letter-spacing="0.08em">DETECTED</text>
+
+  <rect x="648" y="66" width="120" height="22" rx="3"
+        fill="rgba(224,112,85,0.08)" stroke="rgba(224,112,85,0.25)" stroke-width="0.8"/>
+  <text x="708" y="81" text-anchor="middle"
+        font-family="'Space Mono', monospace" font-size="9" font-weight="700"
+        fill="#e07055" letter-spacing="0.08em">DETECTED</text>
+
+  <rect x="648" y="94" width="120" height="22" rx="3"
+        fill="rgba(125,184,0,0.07)" stroke="rgba(125,184,0,0.2)" stroke-width="0.8"/>
+  <text x="708" y="109" text-anchor="middle"
+        font-family="'Space Mono', monospace" font-size="9" font-weight="700"
+        fill="#7db800" letter-spacing="0.08em">CLEAN</text>
+
+  <!-- Arrow from Bloom to ARC -->
+  <text x="620" y="77" text-anchor="end"
+        font-family="'Space Mono', monospace" font-size="9"
+        fill="rgba(255,255,255,0.18)" letter-spacing="0.06em">BLOOM</text>
+  <line x1="625" y1="74" x2="644" y2="74" stroke="rgba(255,255,255,0.12)" stroke-width="1"
+        marker-end="url(#arrow)"/>
+
+  <!-- Axis label -->
+  <text x="80" y="178" font-family="'Space Mono', monospace" font-size="8"
+        fill="rgba(255,255,255,0.18)" letter-spacing="0.06em">TURN 1</text>
+  <text x="714" y="178" font-family="'Space Mono', monospace" font-size="8"
+        fill="rgba(255,255,255,0.18)" letter-spacing="0.06em">TURN 5</text>
+</svg>
