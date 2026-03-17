@@ -604,6 +604,8 @@ Model A collapses early and grinds through the task on a broken foundation. Mode
 
 <p class="arc-p">Select a task suite of 30–50 multi-step tasks representative of your deployment domain. Each task should be decomposable into 4–10 discrete sub-goals with verifiable outputs.</p>
 
+<p class="arc-p">Here is what the scoring protocol looks like for a single task. Say you are evaluating a customer-service agent that handles a four-step support workflow: understand the user's issue, look up their account, propose a resolution, and draft the reply. Before you run the agent, you write a one-sentence success definition for each step, for example: for step 1, "correctly identifies the issue type and accounts for any stated constraints," for step 2, "retrieves the correct account record and surfaces the relevant fields," and so on. You run the agent and capture its output at each step. You then pass each output to a separate AI judge, along with only that step's success definition, and ask it to score from 0 to 1. The judge never sees the other steps or the final answer. Four steps, four scores, one trajectory. That is the protocol. Everything that follows (the rubric, the calibration check, the surface-feature verification) is about making sure those four numbers are trustworthy.</p>
+
 <p class="arc-p"><strong>1. Score each step independently.</strong> Use a privacy-preserving No Look Eval (NLE) judge model with a rubric grounded in the sub-goal, not the final answer. The "No Look" means it does the validation live without seeing how the task ends. It cannot be influenced by knowing whether the final answer was right or wrong. Prompt it to return a score between 0.0 and 1.0 with a one-sentence rationale. Never pass the full conversation history to the NLE. Score each step in isolation to avoid halo effects (the tendency to rate later steps more generously because earlier steps went well, even if those later steps have independent flaws). Human annotation is not required for routine runs and it is reserved for calibration (see step below).</p>
 
 <pre class="arc-pre"><code># NLE prompt template
@@ -623,7 +625,7 @@ Return JSON: {"score": float, "rationale": str}"""</code></pre>
     <tbody>
       <tr><td>0.0–0.2</td><td>Sub-goal not achieved</td><td>Output ignores the sub-goal, reaches a wrong conclusion, or hallucinates required facts.</td></tr>
       <tr><td>0.3–0.5</td><td>Partial progress</td><td>Correct direction but a required element is missing, or the sub-goal is met with a flawed assumption that will propagate downstream.</td></tr>
-      <tr><td>0.6–0.8</td><td>Sub-goal achieved with caveats</td><td>All required elements present; minor gap in precision, completeness, or constraint adherence.</td></tr>
+      <tr><td>0.6–0.8</td><td>Sub-goal achieved with caveats</td><td>All required elements present, with a minor gap in precision, completeness, or constraint adherence.</td></tr>
       <tr><td>0.9–1.0</td><td>Sub-goal fully achieved</td><td>All required elements present, constraints respected, output verifiably correct against the sub-goal spec.</td></tr>
     </tbody>
   </table>
@@ -734,7 +736,7 @@ scores  = [0.30, 0.85, 0.80, 0.88, 0.82, 0.90, 0.91]
 
 <p class="arc-p">The trajectory score tells you a failure happened. Localization tells you where. But score alone is often not enough: a step that looks mediocre in isolation might be fine given its difficulty, while an apparently acceptable step might have introduced a subtle error that takes three steps to surface. Adding cost and latency alongside trajectory gives you a richer signal and often surfaces the break before the score does.</p>
 
-<p class="arc-p">Think of it like this: if a step's score drops, that is the model telling you it struggled. If its latency spikes at the same step, the model is also telling you it was uncertain; it took longer to generate the output. If both happen together, you have a high-confidence break point. If latency spikes but score holds, the model was uncertain but recovered, and that is a step worth watching in future runs. Clustering these three signals together (score drop, latency spike, and token cost increase) is more diagnostic than any one alone.</p>
+<p class="arc-p">Think of it like this: if a step's score drops, that is the model telling you it struggled. If its latency spikes at the same step, the model is also telling you it was uncertain: it took longer to generate the output. If both happen together, you have a high-confidence break point. If latency spikes but score holds, the model was uncertain but recovered, and that is a step worth watching in future runs. Clustering these three signals together (score drop, latency spike, and token cost increase) is more diagnostic than any one alone.</p>
 
 <pre class="arc-pre"><code>def find_break_point(scores, latency_ms=None, token_cost=None):
     baseline = sum(scores[:len(scores)//3]) / (len(scores)//3)
@@ -776,7 +778,7 @@ scores  = [0.30, 0.85, 0.80, 0.88, 0.82, 0.90, 0.91]
         <td>Correct mid-steps, wrong late</td>
         <td>Context loss or capability gap</td>
         <td>Summarize the mid-point context into a fresh prompt and re-run only the failing tail. Improves? Context loss: the model had the capability but lost the thread. Flat? Capability gap: the model cannot do the late-task reasoning regardless of context freshness.</td>
-        <td>Chunking or summarization for context loss; curriculum or model upgrade for capability gap</td>
+        <td>Chunking or summarization for context loss. Curriculum or model upgrade for capability gap.</td>
       </tr>
       <tr>
         <td>Wrong tool called</td>
@@ -788,7 +790,7 @@ scores  = [0.30, 0.85, 0.80, 0.88, 0.82, 0.90, 0.91]
         <td>Gradual decline, all steps</td>
         <td>Context accumulation or capability gradient</td>
         <td>Inject a fresh context summary at the midpoint of the task and re-run from there. Improves? Accumulated context is the drag. Flat? The model simply performs worse as task complexity compounds. That is a capability gradient, not a context problem.</td>
-        <td>Chunking or periodic summarization for context; structured task decomposition for capability gradient</td>
+        <td>Chunking or periodic summarization for context. Structured task decomposition for capability gradient.</td>
       </tr>
     </tbody>
   </table>
