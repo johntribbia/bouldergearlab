@@ -214,13 +214,13 @@ def test_bulk(n_per_pattern=300, sigma=0.03, n_steps=10, seed=42):
     print()
     print(f"  {'Pattern':<24}  {'F1':>6}  {'Article target':>14}")
 
-    # Article-reported V3 F1 values (for comparison)
+    # V3 F1 values from the arc_validation article table
     article_f1 = {
-        'early_collapse':     0.98,
-        'late_drift':         0.85,
-        'steady_degradation': 0.97,
-        'recovery':           0.99,
-        'healthy':            0.90,
+        'early_collapse':     0.68,
+        'late_drift':         0.70,
+        'steady_degradation': 0.75,
+        'recovery':           0.98,
+        'healthy':            0.84,
     }
     print(f"  {'-' * 46}")
     for label in PATTERNS:
