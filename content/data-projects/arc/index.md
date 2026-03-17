@@ -604,7 +604,7 @@ Model A collapses early and grinds through the task on a broken foundation. Mode
 
 <p class="arc-p">Select a task suite of 30–50 multi-step tasks representative of your deployment domain. Each task should be decomposable into 4–10 discrete sub-goals with verifiable outputs.</p>
 
-<p class="arc-p"><strong>1. Score each step independently.</strong> Use a privacy-preserving No Look Eval (NLE) judge model with a rubric grounded in the sub-goal, not the final answer. The "No Look" means the judge scores each step without seeing how the task ends; it cannot be influenced by knowing whether the final answer was right or wrong. Prompt it to return a score between 0.0 and 1.0 with a one-sentence rationale. Never pass the full conversation history to the NLE. Score each step in isolation to avoid halo effects (the tendency to rate later steps more generously because earlier steps went well, even if those later steps have independent flaws). Human annotation is not required for routine runs; it is reserved for calibration (see step below).</p>
+<p class="arc-p"><strong>1. Score each step independently.</strong> Use a privacy-preserving No Look Eval (NLE) judge model with a rubric grounded in the sub-goal, not the final answer. The "No Look" means it does the validation live without seeing how the task ends. It cannot be influenced by knowing whether the final answer was right or wrong. Prompt it to return a score between 0.0 and 1.0 with a one-sentence rationale. Never pass the full conversation history to the NLE. Score each step in isolation to avoid halo effects (the tendency to rate later steps more generously because earlier steps went well, even if those later steps have independent flaws). Human annotation is not required for routine runs and it is reserved for calibration (see step below).</p>
 
 <pre class="arc-pre"><code># NLE prompt template
 nle_prompt = """Given this sub-goal: {subgoal}
@@ -612,7 +612,6 @@ And this model output: {step_output}
 Score the output 0.0-1.0 for how well it achieves the sub-goal.
 Return JSON: {"score": float, "rationale": str}"""</code></pre>
 
-<p class="arc-p">In plain terms: a separate AI acts as the auditor. It reads only the task's sub-goal and the model's output for that one step, gives a score from 0 to 1, and explains its reasoning, without knowing whether the overall task succeeded or failed.</p>
 
 <p class="arc-p">The rubric anchors the score to the sub-goal, not to style or length. A four-band scale covers most task types:</p>
 
