@@ -792,8 +792,8 @@ python scripts/bloom_arc.py --scores-file my_scored_transcripts.json</code></pre
   <h2>References</h2>
   <ol>
     <li id="fn1">Gupta, I., Fronsdal, K., Sheshadri, A., Michala, J., Tay, J., Wang, R., Bowman, S. R., and Price, S. (2025). "Bloom: Automated Behavioral Evaluations for LLMs." Anthropic Alignment Science. <a href="https://alignment.anthropic.com/2025/bloom-auto-evals/" target="_blank" rel="noopener">https://alignment.anthropic.com/2025/bloom-auto-evals/</a></li>
-    <li id="fn2">Tribbia, J. (2026). "The Shape of a Good Answer." Boulder Gear Lab. <a href="/data-projects/arc/">https://bouldergearlab.com/data-projects/arc/</a></li>
-    <li id="fn3">Tribbia, J. (2026). "Stress-Testing the Arc." Boulder Gear Lab. <a href="/data-projects/arc_validation/">https://bouldergearlab.com/data-projects/arc_validation/</a></li>
+    <li id="fn2">Tribbia, J. (2026). "The Shape of a Good Answer." <a href="/data-projects/arc/">https://bouldergearlab.com/data-projects/arc/</a></li>
+    <li id="fn3">Tribbia, J. (2026). "Stress-Testing the Arc." <a href="/data-projects/arc_validation/">https://bouldergearlab.com/data-projects/arc_validation/</a></li>
     <li id="fn4">Lightman, H., Kosaraju, V., Burda, Y., Edwards, H., Baker, B., Lee, T., Leike, J., Schulman, J., Sutskever, I., and Cobbe, K. (2023). "Let's Verify Step by Step." <em>arXiv preprint arXiv:2305.20050</em>. <a href="https://arxiv.org/abs/2305.20050" target="_blank" rel="noopener">https://arxiv.org/abs/2305.20050</a></li>
   </ol>
 </div>
