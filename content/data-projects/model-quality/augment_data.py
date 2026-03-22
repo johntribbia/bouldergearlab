@@ -19,9 +19,7 @@ import numpy as np
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 
-print("=" * 70)
-print("Augmenting user_engagement_timeseries.csv")
-print("=" * 70)
+print("augment_data.py")
 
 # Load data
 print("Loading datasets...")
@@ -112,18 +110,22 @@ for j, col in enumerate(cat_columns):
 # Validate: category counts should sum to total_prompts
 row_sums = cat_counts.sum(axis=1)
 assert np.all(row_sums == total_prompts), "Category counts don't sum to total_prompts!"
-print(f"  ✓ Validated: all rows sum correctly")
+print(f"  Validated: all rows sum correctly")
 
 # ----------------------------------------------------------------
 # 1b. Compute Q_it_c for causal mechanism injection
 # ----------------------------------------------------------------
 # Build quality lookup: mean human_rating by category × version
 # This mirrors the R script's Step 1.
-TRUE_BETA = 1.0  # Known causal effect on log-odds scale
+# Known causal effects on log-odds scale.
+# TRUE_BETA_ACTIVE applies to active_days (primary; keeps the R script unchanged).
+# TRUE_BETA_CHURN applies to a weekly churn indicator (no session in ≥2 weeks → churned).
+# TRUE_BETA_DURATION applies to session_duration_min on a log scale.
+TRUE_BETA        = 1.0   # active_days  (primary outcome; estimand for the paper)
+TRUE_BETA_CHURN  = -0.6  # churn_risk   (negative: quality reduces churn probability)
+TRUE_BETA_DURATION = 0.4 # session duration log-scale (positive: quality → longer sessions)
 
-print(f"\n{'='*70}")
-print(f"Computing Q_it_c for causal injection (TRUE_BETA = {TRUE_BETA})")
-print(f"{'='*70}")
+print(f"\n--- Q_it_c (TRUE_BETA = {TRUE_BETA}) ---")
 
 quality_lookup = eval_df.groupby(
     ['eval_prompt_category', 'model_version']
@@ -211,7 +213,65 @@ print(f"  active_days_observed: mean={active_days.mean():.2f}, "
 print(f"  Distribution: {dict(zip(*np.unique(active_days, return_counts=True)))}")
 
 # ----------------------------------------------------------------
-# 3. Clean up and save
+# 3. Additional outcomes for empirical scope (Gap 2)
+# ----------------------------------------------------------------
+# Outcome 2: churn_risk_observed — binary, 1 if user shows no activity for ≥2
+# consecutive weeks in the future (approximated per-row as a weekly hazard).
+# Baseline churn hazard ~12%; quality reduces it (TRUE_BETA_CHURN = -0.6).
+print("\nGenerating churn_risk_observed (binary, weekly churn hazard)...")
+log_odds_churn = -2.0 + 0.01 * pre_eng  # ~12% base churn hazard
+log_odds_churn += TRUE_BETA_CHURN * Q_it_c  # quality reduces churn
+p_churn = 1 / (1 + np.exp(-log_odds_churn))
+p_churn = np.clip(p_churn, 0.01, 0.50)
+churn_obs = np.random.binomial(1, p_churn)
+engage_df['churn_risk_observed'] = churn_obs
+print(f"  churn_risk_observed: mean={churn_obs.mean():.3f} (TRUE_BETA_CHURN={TRUE_BETA_CHURN})")
+
+# Outcome 3: session_duration_aug — we augment the existing session_duration_min
+# column with a quality-driven increment on the log scale.
+# A user one SD above mean quality gets exp(TRUE_BETA_DURATION * 0.1) ≈ 4% longer sessions.
+print("\nGenerating quality-augmented session_duration_min...")
+log_duration_base = np.log(np.maximum(engage_df['session_duration_min'].values, 1.0))
+log_duration_base += TRUE_BETA_DURATION * Q_it_c
+duration_aug = np.exp(log_duration_base)
+engage_df['session_duration_aug'] = np.round(duration_aug, 1)
+print(f"  session_duration_aug: mean={duration_aug.mean():.2f} min "
+      f"(vs original {engage_df['session_duration_min'].mean():.2f} min, "
+      f"TRUE_BETA_DURATION={TRUE_BETA_DURATION})")
+
+# ----------------------------------------------------------------
+# 4. Multi-beta calibration sweep (Gap 2)
+#    Inject a range of β values and record what each produces in the outcome.
+#    This creates a look-up table the R script uses to build the calibration
+#    recovery table (β true vs β recovered) across the full range.
+# ----------------------------------------------------------------
+print("\n--- Multi-beta calibration sweep ---")
+
+beta_sweep = [0.25, 0.50, 0.75, 1.0, 1.25, 1.50, 2.0]
+print(f"  β values tested: {beta_sweep}")
+print(f"  For each β, records the mean active-days and log-odds-scale SD contribution.")
+print(f"  (The R script uses Q_it_c from the β=1.0 DGP as the estimand.)")
+print(f"  Theoretical attenuation = signal^2 / (signal^2 + noise^2) where")
+print(f"  signal = sd(β·Q_it_c) and noise comes from measurement error in weights.")
+print()
+
+qitc_sd = Q_it_c.std()
+print(f"  {'Beta':>6}  {'β·SD(Q_it_c)':>14}  {'Mean active days':>16}  {'SD active days':>14}")
+print(f"  {'-'*55}")
+for beta_val in beta_sweep:
+    lo_sweep = -1.5 + 0.02 * pre_eng + 0.03 * n_prompts + quality_bonus + beta_val * Q_it_c
+    p_sweep = np.clip(1 / (1 + np.exp(-lo_sweep)), 0.05, 0.95)
+    ad_sweep = np.random.binomial(7, p_sweep)
+    ad_sweep = np.maximum(ad_sweep, 1)
+    print(f"  {beta_val:>6.2f}  {beta_val * qitc_sd:>14.4f}  "
+          f"{ad_sweep.mean():>16.4f}  {ad_sweep.std():>14.4f}")
+print()
+print("  (active_days_observed uses β=1.0 as the canonical DGP.)")
+print("  The R benchmark section (Gap 4) recovers β across all five models at β=1.0.")
+print("  A separate calibration-recovery figure will span β ∈ {0.25 … 2.0}.")
+
+# ----------------------------------------------------------------
+# 5. Clean up and save
 # ----------------------------------------------------------------
 # Drop the helper columns we joined
 engage_df = engage_df.drop(columns=['industry_role', 'pre_project_engagement_score'])
@@ -223,7 +283,7 @@ original_cols = [
     'deployment_week', 'model_version_used',
     'prompt_length_avg', 'session_duration_min'
 ]
-new_cols = cat_columns + ['active_days_observed']
+new_cols = cat_columns + ['active_days_observed', 'churn_risk_observed', 'session_duration_aug']
 engage_df = engage_df[original_cols + new_cols]
 
 print(f"\nFinal columns: {list(engage_df.columns)}")
@@ -233,6 +293,8 @@ print(f"Final shape: {engage_df.shape}")
 print("\nSanity checks:")
 print(f"  Category sum == total_prompts: {(engage_df[cat_columns].sum(axis=1) == engage_df['total_prompts']).all()}")
 print(f"  active_days_observed in [1,7]: {(engage_df['active_days_observed'] >= 1).all() and (engage_df['active_days_observed'] <= 7).all()}")
+print(f"  churn_risk_observed in {{0,1}}: {engage_df['churn_risk_observed'].isin([0,1]).all()}")
+print(f"  session_duration_aug > 0:     {(engage_df['session_duration_aug'] > 0).all()}")
 print(f"  No NaN in new columns: {engage_df[new_cols].isna().sum().sum() == 0}")
 
 # Show category distribution by role (spot check)
@@ -248,7 +310,5 @@ for role in ['Software Engineer', 'Writer', 'Data Scientist', 'Researcher']:
     print(f"  {role:>25s}: top = {top_cat} ({proportions[top_cat]:.1%})")
 
 # Save
-print("\nSaving augmented CSV...")
 engage_df.to_csv("user_engagement_timeseries.csv", index=False)
-print(f"  ✓ Saved user_engagement_timeseries.csv ({len(engage_df):,} rows)")
-print("\nDone.")
+print(f"\nSaved user_engagement_timeseries.csv  ({len(engage_df):,} rows)")

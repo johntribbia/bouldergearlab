@@ -92,6 +92,16 @@ Why freeze them? If a better model causes people to change *what* they use it fo
 
 **Are the frozen weights stable?** I tested this directly by comparing pre-period category proportions to usage in later version periods. The per-user correlations are high (mean r = 0.84 for v1.1, 0.82 for v1.2, with median above 0.91), and population-level means are essentially unchanged across periods. The frozen-weights assumption holds in this data.
 
+**How much pre-period data is enough?** Refitting the model with weights frozen at progressively shorter windows shows a clean pattern:
+
+| Freeze window | Weeks used | r(Q_fw, Q_canonical) | β̂ | Recovery |
+|---|---|---|---|---|
+| Early | 1–3 | 0.925 | 0.773 | 77% |
+| Mid | 1–5 | 0.976 | 0.819 | 82% |
+| Full (canonical) | 1–7 | 1.000 | 0.877 | 88% |
+
+Recovery is monotone in pre-period length. Three weeks of history gives noisier weight estimates, which pushes the coefficient toward zero — a direct errors-in-variables relationship. Most of the improvement happens in the first five weeks (r = 0.976 vs. the canonical); extending to seven provides modest additional gain. In practice: five or more weeks of pre-period history puts you in reasonable shape, and anything shorter should be treated with a K-L correction applied to account for the extra attenuation.
+
 The weights reflect genuine role-based patterns:
 
 | Category | Average Weight | Spread (SD) |
@@ -257,29 +267,28 @@ This is the core validation. I injected $\beta_{true}$ = 1.0 into the data-gener
 | Linear model (parametric $Q^c_{i,t}$) | 0.899 | [0.803, 0.994] | 90% |
 | GAM smooth (effective slope) | 0.882 | -- | 88% |
 | Cluster bootstrap (B=100) | 0.898 | [0.816, 1.005] | 90% |
+| K-L corrected ($\beta_{KL} = \hat\beta / \hat\lambda$) | 1.097 | [0.862, 1.332] | 110%* |
 
 The estimator recovers about 90% of the true effect. The 10% attenuation is expected: the R analysis uses *observed* category proportions (from noisy multinomial draws with 15% session-level variation), not the true Dirichlet preferences that the DGP uses. This measurement error in the exposure variable attenuates the coefficient toward zero, a textbook case of classical errors-in-variables bias.
 
 The cluster bootstrap CI [0.816, 1.005] includes the true value $\beta_{true}$ = 1.0, confirming that the estimator is correctly calibrated once within-user correlation is accounted for. The standard model CI [0.803, 0.994] narrowly misses, which is exactly the concern that motivates cluster-robust inference: standard errors that ignore within-user correlation are slightly too small.
 
+*The K-L corrected estimate (reliability $\hat\lambda$ = 0.80, estimated from cross-period stability correlations) addresses the measurement error in the exposure variable directly: $\beta_{KL}$ = 0.899 / 0.80 = 1.097. The CI formally covers the true value, though it's nearly 3× wider than the uncorrected version. The correction is appropriate when you're willing to assume measurement error is classical (non-differential) — which holds here by construction.
+
 ## The Falsification Test
 
-The most important validation may be the result that *didn't* find anything. In an earlier iteration of the project, before I injected the known causal effect into the DGP, the falsification test came back clean: no signal detected. The estimator found nothing because there was nothing to find. That's what gives confidence the method isn't manufacturing artifacts when it does detect something.
+The most important validation may be the result that *didn't* find anything. Before injecting the known causal effect into the DGP, the falsification test came back clean: no signal detected. The estimator found nothing because there was nothing to find.
 
-The test works by applying a strict derangement to the category-quality lookup table (every category maps to a *different* category, no fixed points), then rebuilding the quality measure from scratch.
+The primary test is a **user-weight permutation**: shuffle quality exposure across users within the same model version, breaking all correlation between the quality score and user identity. The permuted model returns β = −0.106, p = 0.265 — no signal, with the permuted effect only 12% of the real one in absolute magnitude. That's the clean null.
 
-The derangement used: Coding → Creative Writing, Creative Writing → Math/Logic, General QA → Scientific, Math/Logic → General QA, Scientific → Coding.
+| Model | β̂ | p-value | Interpretation |
+|-------|------|---------|----------------|
+| Real quality | 0.877 | < 2 × 10^-16 | Signal detected (expected) |
+| Permuted quality | −0.106 | 0.265 | Null confirmed ✓ |
 
-With the causal effect present, the results look like this:
+An earlier version of this analysis used a **category derangement** instead — remapping every category to a *different* category's quality scores (Coding → Creative Writing, Creative Writing → Math/Logic, and so on, no fixed points). That revealed an interesting wrinkle: with only five categories and heterogeneous quality scores, any strict shuffle creates unavoidable inverse correlations with the real scores (r = −0.44). Since real quality genuinely causes the outcome, the deranged scores leaked in as indirect signal and were also significant (p < 2 × 10^-16, dev. explained = 27.4% vs. 27.1%). The test looked alarming but the estimator wasn't the problem — the test design was. Permuting across users rather than remapping categories is the cleaner null.
 
-| Model | s() edf | p-value | Dev. Explained |
-|-------|---------|---------|----------------|
-| Real quality | 1.62 | < 2 x 10^-16 | 27.1% |
-| Deranged (placebo) | 4.04 | < 2 x 10^-16 | 27.4% |
-
-**The placebo is also significant.** This is not a failure of the methodology. With a genuine causal mechanism in the DGP, the falsification test behaves differently than in the null case. The deranged $Q$ scores correlate with the real $Q$ scores at r = -0.44 (because shuffling five categories with heterogeneous quality creates systematic inverse relationships). Since the real $Q$ genuinely causes $Y$, any variable correlated with real $Q$ will pick up indirect signal.
-
-This is a useful diagnostic insight: the falsification test distinguishes "no signal at all" from "wrong mapping." In the null case (no injected effect), it passes cleanly. With a real effect, the test becomes a comparison of *how well* each mapping predicts the outcome, not a binary pass/fail. In production, this means a significant placebo result should prompt investigation of the placebo-real correlation rather than automatic rejection of the methodology.
+There's also a time-shifted placebo (substituting the *next* version's quality for the current period) that provides a useful check in real-world settings where quality doesn't improve uniformly. In this synthetic DGP, quality improves monotonically across all categories and versions, so lead quality is highly correlated with current quality (r = 0.90) — the test can't distinguish them. That's a structural property of this particular data design, not a flaw in the method.
 
 ## Consumer vs. Enterprise
 

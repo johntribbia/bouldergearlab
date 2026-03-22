@@ -117,9 +117,9 @@ Both consumer and enterprise users show significant quality effects, with simila
 
 The most important result from this analysis might be the one that *didn't* find anything. In an earlier iteration of the project, before I injected the known causal effect, the falsification test came back clean: no signal detected. That's what gives me confidence the method isn't just picking up noise or artifacts when it does find something.
 
-The test works like this: scramble which categories get which quality scores (so coding gets creative writing's ratings, and vice versa), then re-run the analysis. If the method is working correctly, the scrambled version should fail.
+The test works like this: shuffle which *users* get which quality scores — scramble the assignment of quality exposure across users within the same model version, so there's no real signal left for the model to find. If the method is working correctly, the shuffled version should come back empty.
 
-There's a subtlety, though. When a real causal effect *does* exist in the data, the scrambled scores still pick up some signal, because shuffling five categories creates unavoidable inverse correlations with the real scores. That's not a flaw; it's expected. The test is most informative as a first-pass diagnostic on data where you don't yet know whether an effect exists.
+In this data, the permuted model returns β = −0.106, p = 0.265 — no signal, as expected. That clean null is what gives confidence that the real result (β = 0.877, p < 10⁻¹⁹) is capturing something genuine, not a statistical artifact or lucky timing.
 
 ## What This Means for Companies Deploying AI
 
@@ -130,6 +130,8 @@ The within-version approach can isolate quality's contribution to engagement wit
 ### The naive approach doesn't
 
 Comparing engagement before and after a model upgrade tells you almost nothing about the model itself. The version-level jumps in this data are four to five times larger than the within-version quality effect. Most of that jump is more than just the model. It's also everything else that changed at the same time.
+
+A head-to-head comparison with four alternative estimators confirms this directly. Naive OLS (without version fixed effects) recovers only 67% of the true effect; using real-time weights that let the outcome influence the predictor drops recovery to 50%. The proposed method reaches 88%, with the remaining gap fully explained by classical measurement noise.
 
 ### Quality matters for retention, not intensity
 

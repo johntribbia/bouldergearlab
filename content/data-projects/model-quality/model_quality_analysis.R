@@ -20,10 +20,7 @@
 #   15. ROI simulation
 # ==============================================================================
 
-cat("=", rep("=", 69), "\n", sep = "")
-cat("Model Quality Analysis: AI Model Quality -> User Engagement\n")
-cat("  Within-Version Identification Strategy\n")
-cat("=", rep("=", 69), "\n\n", sep = "")
+cat("model_quality_analysis.R  |  within-version GAMM\n\n")
 
 suppressPackageStartupMessages({
   library(dplyr)
@@ -480,6 +477,107 @@ model_df <- engage_df %>%
 cat(sprintf("  Modeling dataset: %s rows from %d users\n",
             format(nrow(model_df), big.mark = ","), length(sample_users)))
 
+# --- Step 2c: Frozen-weights sensitivity analysis (Gap 6) --------------------
+# (Placed here so sample_users and model_df with Q_it_c are available)
+cat("\nStep 2c: Frozen-weights sensitivity — do results depend on WHEN we freeze?\n")
+cat("  Re-run the centered quality score using weights frozen at different pre-periods.\n")
+cat("  If the identifying assumption (frozen weights ≈ latent preferences) holds,\n")
+cat("  estimates at the main model stage should be robust to this choice.\n\n")
+
+freeze_defs <- list(
+  "Weeks 1-3 (early)"  = c(1, 3),
+  "Weeks 1-5 (mid)"    = c(1, 5),
+  "Weeks 1-7 (full, canonical)" = c(1, pre_period_end)
+)
+
+sensitivity_q <- list()
+
+for (fname in names(freeze_defs)) {
+  wk_range <- freeze_defs[[fname]]
+  fw <- engage_df %>%
+    filter(week >= wk_range[1], week <= wk_range[2]) %>%
+    group_by(user_id) %>%
+    summarise(across(all_of(cat_cols), sum), .groups = "drop")
+  fw_totals <- rowSums(fw[, cat_cols])
+  for (col in cat_cols) {
+    fw[[col]] <- ifelse(fw_totals == 0, 1 / length(cat_cols), fw[[col]] / fw_totals)
+  }
+
+  # Compute Q_it under this freeze window
+  fw_weights <- fw %>%
+    pivot_longer(cols = all_of(cat_cols), names_to = "cat_col", values_to = "w_ic") %>%
+    mutate(eval_prompt_category = cat_col_map[cat_col]) %>%
+    select(user_id, eval_prompt_category, w_ic)
+
+  q_fw <- fw_weights %>%
+    filter(user_id %in% sample_users) %>%
+    inner_join(ql_wide, by = "eval_prompt_category") %>%
+    group_by(user_id) %>%
+    summarise(Q_fw10 = sum(w_ic * v1.0),
+              Q_fw11 = sum(w_ic * v1.1),
+              Q_fw12 = sum(w_ic * v1.2),
+              .groups = "drop") %>%
+    mutate(Q_fw10_c = Q_fw10 - mean(Q_fw10),
+           Q_fw11_c = Q_fw11 - mean(Q_fw11),
+           Q_fw12_c = Q_fw12 - mean(Q_fw12))
+
+  model_df_fw <- model_df %>%
+    left_join(q_fw %>% select(user_id, Q_fw10_c, Q_fw11_c, Q_fw12_c), by = "user_id") %>%
+    mutate(Q_fw_c = case_when(
+      version_week == "v1.0" ~ Q_fw10_c,
+      version_week == "v1.1" ~ Q_fw11_c,
+      TRUE                   ~ Q_fw12_c
+    ))
+
+  # Cor with canonical Q_it_c
+  r_with_canonical <- cor(model_df_fw$Q_fw_c, model_df_fw$Q_it_c, use = "complete.obs")
+
+  # Fit linear GAMM for quick β comparison
+  m_fw <- bam(
+    cbind(active_days, 7 - active_days) ~
+      Q_fw_c +
+      version_f +
+      s(week, bs = "tp", k = 10) +
+      s(user_id_factor, bs = "re") +
+      user_type +
+      pre_project_engagement_score,
+    data   = model_df_fw,
+    family = binomial(),
+    method = "fREML",
+    discrete = TRUE,
+    nthreads = 1
+  )
+
+  b_fw  <- coef(m_fw)["Q_fw_c"]
+  se_fw <- summary(m_fw)$p.table["Q_fw_c", "Std. Error"]
+  sensitivity_q[[fname]] <- list(
+    beta    = b_fw,
+    se      = se_fw,
+    recov   = b_fw / TRUE_BETA * 100,
+    r_canon = r_with_canonical,
+    n_weeks = diff(wk_range) + 1
+  )
+  cat(sprintf("  %s:\n", fname))
+  cat(sprintf("    Weeks used: %d-%d (%d weeks)  |  r(Q_fw_c, Q_canon) = %.4f\n",
+              wk_range[1], wk_range[2], diff(wk_range) + 1, r_with_canonical))
+  cat(sprintf("    β_hat = %.4f, SE = %.4f, recovery = %.1f%%\n\n",
+              b_fw, se_fw, b_fw / TRUE_BETA * 100))
+}
+
+cat("  ── Frozen-Weights Sensitivity Summary ──────────────────────────────────\n")
+cat(sprintf("  TRUE_BETA = %.2f\n", TRUE_BETA))
+cat(sprintf("  %-34s  %8s  %8s  %8s  %8s\n",
+            "Freeze window", "β_hat", "Recov%", "r(canon)", "n_weeks"))
+cat(sprintf("  %s\n", strrep("-", 72)))
+for (fname in names(sensitivity_q)) {
+  s <- sensitivity_q[[fname]]
+  cat(sprintf("  %-34s  %8.4f  %7.1f%%  %8.4f  %8d\n",
+              fname, s$beta, s$recov, s$r_canon, s$n_weeks))
+}
+cat("  ────────────────────────────────────────────────────────────────────────\n")
+cat("  Interpretation: if estimates are stable across freeze windows, the\n")
+cat("  canonical 7-week freeze is robust to the exact pre-period boundary choice.\n\n")
+
 # Pre-compute placebo Q_it_c (needed for Step 9)
 # Derangement: ensure NO category maps to itself (strict falsification)
 set.seed(99)
@@ -763,6 +861,163 @@ if (placebo_p > 0.05 && real_p < 0.05) {
 }
 cat("\n")
 
+# --- Step 9b: Stronger falsification — user-weight permutation ----------------
+cat("Step 9b: Stronger falsification — user-weight permutation...\n")
+cat("  Randomly shuffles which USERS get which frozen weight profiles.\n")
+cat("  Destroys the user-to-category-quality link while preserving the\n")
+cat("  cross-sectional distribution of Q scores and all other covariates.\n")
+cat("  This is a cleaner null than the derangement because permuted Q is\n")
+cat("  ORTHOGONAL to real Q (not anti-correlated with it at r=-0.44).\n\n")
+
+# Permute user_id -> Q_it_c mapping within each version period
+set.seed(77)
+model_df_perm <- model_df %>%
+  group_by(version_f) %>%
+  mutate(Q_perm_c = Q_it_c[sample(.N)]) %>%
+  ungroup()
+
+cat(sprintf("  Cor(Q_it_c, Q_perm_c): %.4f  (should be ~0; derangement was %.4f)\n",
+            cor(model_df_perm$Q_it_c, model_df_perm$Q_perm_c),
+            cor(model_df$Q_it_c, model_df$Q_placebo_c)))
+
+cat("  Fitting permutation placebo model...\n")
+gc(verbose = FALSE)
+model_perm <- bam(
+  cbind(active_days, 7 - active_days) ~
+    s(Q_perm_c, bs = "tp", k = 10) +
+    version_f +
+    s(week, bs = "tp", k = 10) +
+    s(user_id_factor, bs = "re") +
+    user_type +
+    pre_project_engagement_score,
+  data   = model_df_perm,
+  family = binomial(),
+  method = "fREML",
+  discrete = TRUE,
+  nthreads = 1
+)
+
+perm_summ <- summary(model_perm)
+perm_edf <- perm_summ$s.table["s(Q_perm_c)", "edf"]
+perm_p   <- perm_summ$s.table["s(Q_perm_c)", "p-value"]
+
+cat(sprintf("\n  Real model:        s(Q_it_c)   edf=%.2f, p=%.2e\n", real_edf, real_p))
+cat(sprintf("  Derangement:       s(Q_plac_c) edf=%.2f, p=%.2e\n", placebo_edf, placebo_p))
+cat(sprintf("  Weight permutation:s(Q_perm_c)  edf=%.2f, p=%.2e\n", perm_edf, perm_p))
+
+if (perm_p > 0.05 && real_p < 0.05) {
+  cat("\n  PASS: Real effect significant, permutation placebo is not.\n")
+  cat("  Confirms the effect is driven by the user-category-quality link,\n")
+  cat("  not residual confounding or model artifacts.\n")
+} else {
+  cat(sprintf("\n  NOTE: perm_p = %.3e — investigate if this is unexpected.\n", perm_p))
+}
+cat("\n")
+
+# --- Step 9c: Time-shifted placebo (lead quality scores) --------------------
+cat("Step 9c: Time-shifted placebo — use NEXT version's quality for current rows...\n")
+cat("  Assign each v1.0 row the v1.1 quality scores, each v1.1 row the v1.2 scores.\n")
+cat("  v1.2 rows get v1.0 scores (wrap-around, giving an out-of-range shift).\n")
+cat("  If the forward-shifted placebo is significant, the method may be capturing\n")
+cat("  general time confounders rather than the contemporaneous quality mechanism.\n\n")
+
+# Re-derive version-level mean quality from the lookup table (Q_user freed at Step 6)
+q_mean_v10 <- quality_lookup %>% filter(model_version == "v1.0") %>%
+  summarise(m = mean(mean_human_rating)) %>% pull(m)
+q_mean_v11 <- quality_lookup %>% filter(model_version == "v1.1") %>%
+  summarise(m = mean(mean_human_rating)) %>% pull(m)
+q_mean_v12 <- quality_lookup %>% filter(model_version == "v1.2") %>%
+  summarise(m = mean(mean_human_rating)) %>% pull(m)
+
+
+# Simpler and more defensible: shift user weights to next period's quality
+# Construct Q_lead: each user in v period evaluates their frozen weights against v+1 scores
+lead_q_wide <- quality_lookup %>%
+  arrange(eval_prompt_category, model_version) %>%
+  pivot_wider(names_from = model_version, values_from = mean_human_rating) %>%
+  rename(q_v10 = v1.0, q_v11 = v1.1, q_v12 = v1.2)
+
+lead_q_user_weights <- pre_weights %>%
+  filter(user_id %in% sample_users) %>%
+  pivot_longer(cols = all_of(cat_cols), names_to = "cat_col", values_to = "w_ic") %>%
+  mutate(eval_prompt_category = cat_col_map[cat_col]) %>%
+  select(user_id, eval_prompt_category, w_ic) %>%
+  inner_join(lead_q_wide, by = "eval_prompt_category") %>%
+  group_by(user_id) %>%
+  summarise(
+    Q_lead_v10 = sum(w_ic * q_v11),  # v1.0 rows get v1.1 quality
+    Q_lead_v11 = sum(w_ic * q_v12),  # v1.1 rows get v1.2 quality
+    Q_lead_v12 = sum(w_ic * q_v10),  # v1.2 rows get v1.0 quality (wrap)
+    .groups = "drop"
+  ) %>%
+  mutate(
+    Q_lead_v10_c = Q_lead_v10 - mean(Q_lead_v10),
+    Q_lead_v11_c = Q_lead_v11 - mean(Q_lead_v11),
+    Q_lead_v12_c = Q_lead_v12 - mean(Q_lead_v12)
+  )
+
+model_df_lead <- model_df %>%
+  left_join(lead_q_user_weights %>%
+              select(user_id, Q_lead_v10_c, Q_lead_v11_c, Q_lead_v12_c),
+            by = "user_id") %>%
+  mutate(
+    Q_lead_c = case_when(
+      version_week == "v1.0" ~ Q_lead_v10_c,
+      version_week == "v1.1" ~ Q_lead_v11_c,
+      TRUE                   ~ Q_lead_v12_c
+    )
+  )
+
+cat(sprintf("  Cor(Q_it_c, Q_lead_c): %.4f  (should be moderate + for v1.0/1.1, - for v1.2)\n",
+            cor(model_df_lead$Q_it_c, model_df_lead$Q_lead_c, use = "complete.obs")))
+
+cat("  Fitting time-shifted placebo model...\n")
+gc(verbose = FALSE)
+model_lead <- bam(
+  cbind(active_days, 7 - active_days) ~
+    s(Q_lead_c, bs = "tp", k = 10) +
+    version_f +
+    s(week, bs = "tp", k = 10) +
+    s(user_id_factor, bs = "re") +
+    user_type +
+    pre_project_engagement_score,
+  data   = model_df_lead,
+  family = binomial(),
+  method = "fREML",
+  discrete = TRUE,
+  nthreads = 1
+)
+
+lead_summ <- summary(model_lead)
+lead_edf  <- lead_summ$s.table["s(Q_lead_c)", "edf"]
+lead_p    <- lead_summ$s.table["s(Q_lead_c)", "p-value"]
+
+cat(sprintf("\n  Real (contemporaneous):  s(Q_it_c)   edf=%.2f, p=%.2e\n", real_edf, real_p))
+cat(sprintf("  Time-shifted (lead):     s(Q_lead_c) edf=%.2f, p=%.2e\n", lead_edf, lead_p))
+
+if (lead_p < 0.05) {
+  cat("\n  NOTE: Lead quality is also significant.\n")
+  cat("  Likely due to cross-version weight correlation (same frozen weights applied\n")
+  cat("  to different quality levels that are themselves positively correlated).\n")
+  cat("  Report the correlation and compare effect magnitudes — not a flat failure.\n")
+} else {
+  cat("\n  PASS: Lead quality not significant; temporal identification holds.\n")
+}
+
+# Summary table of all three falsification approaches
+cat("\n  ── Falsification Summary ─────────────────────────────────────────────\n")
+cat(sprintf("  %-28s  %6s  %11s  %s\n", "Test", "edf", "p-value", "Verdict"))
+cat(sprintf("  %-28s  %6s  %11s  %s\n", "---", "---", "---", "---"))
+verdict_real  <- "REAL EFFECT"
+verdict_derang <- if (placebo_p > 0.05) "PASS (ns)" else sprintf("CAUTION (r=%.2f with real)", cor(model_df$Q_it_c, model_df$Q_placebo_c))
+verdict_perm  <- if (perm_p > 0.05) "PASS (ns)" else "FAIL — investigate"
+verdict_lead  <- if (lead_p > 0.05) "PASS (ns)" else "CAUTION — check corr"
+cat(sprintf("  %-28s  %6.2f  %11.2e  %s\n", "Real Q_it_c", real_edf, real_p, verdict_real))
+cat(sprintf("  %-28s  %6.2f  %11.2e  %s\n", "Derangement placebo", placebo_edf, placebo_p, verdict_derang))
+cat(sprintf("  %-28s  %6.2f  %11.2e  %s\n", "User-weight permutation", perm_edf, perm_p, verdict_perm))
+cat(sprintf("  %-28s  %6.2f  %11.2e  %s\n", "Time-shifted lead", lead_edf, lead_p, verdict_lead))
+cat("  ──────────────────────────────────────────────────────────────────────\n\n")
+
 # --- Step 10: Segment analysis (Consumer vs Enterprise) -----------------------
 cat("Step 10: Segment analysis -- Consumer vs Enterprise...\n")
 
@@ -897,11 +1152,7 @@ ggsave(file.path(FIG_DIR, "07_quality_vs_active_days_by_segment.png"), p_combine
        width = 10, height = 7, dpi = 150, bg = PAL$bg)
 cat("  Saved 07_quality_vs_active_days_by_segment.png\n\n")
 
-# --- Step 11: Summary & outputs -----------------------------------------------
-cat("=", rep("=", 69), "\n", sep = "")
-cat("RESULTS SUMMARY\n")
-cat("Within-Version Identification Strategy\n")
-cat("=", rep("=", 69), "\n\n", sep = "")
+# --- Step 11: Summary & outputs ---
 
 get_test_stat <- function(s_table, term) {
   cols <- colnames(s_table)
@@ -1034,6 +1285,353 @@ smooth_slope <- (pred_hi$fit[, qcol] - pred_lo$fit[, qcol]) / (2 * sd_qc)
 cat(sprintf("  GAM effective slope: %.4f per unit Q_it_c\n", smooth_slope))
 cat(sprintf("  GAM recovery:        %.1f%% of TRUE_BETA\n", smooth_slope / TRUE_BETA * 100))
 cat("\n")
+
+# --- Step 12a: Klepper-Leamer measurement error correction (Gap 5) -----------
+# The 10% attenuation comes from classical errors-in-variables:
+# Q_it_c is computed from observed (noisy) category counts, not the latent
+# Dirichlet preferences.  Augment_data.py uses 15% session-level noise
+# (noisy_prefs = 0.85 * stable + 0.15 * random_dirichlet).
+#
+# Klepper-Leamer (1984):
+#   β_corrected = β_hat / λ,   λ = Var(Q_true) / Var(Q_obs)
+#
+# We estimate λ from the known noise process:
+#   Var(Q_obs) = Var(Q_true) + Var(measurement error)
+#   Var(Q_true) ≈ sd(Q_it_c)^2  (variance of the centered score in the DGP)
+#   Var(error)  ≈ (0.15)^2 * Var(noise component)
+#
+# More precisely, the noise comes from multinomial sampling over 85/15 mixture.
+# We approximate the noise-to-signal ratio from 2 × (1 - pre-period stability),
+# where stability ≈ mean(correlations across periods) ≈ 0.83.
+# →  λ ≈ mean_r²  (reliability coefficient, analogous to test-retest reliability)
+# ──────────────────────────────────────────────────────────────────────────────
+cat("Step 12a: Klepper-Leamer measurement error correction...\n")
+cat("  Q_it_c is built from observed (noisy) category counts, not latent preferences.\n")
+cat("  Classical errors-in-variables attenuates β_hat toward zero.\n\n")
+
+# Step A: Estimate reliability λ from previously computed stability correlations
+# (Step 2b output). We use the mean of the two cross-period correlations.
+# If we saved them, use those; otherwise re-derive from period_weights.
+cat("  Estimating reliability λ from cross-period weight correlations...\n")
+
+stab_cors <- numeric(0)
+pre_w_eval <- period_weights[["v1.0 (pre-period)"]]
+for (pname in names(period_defs)[-1]) {
+  later_w <- period_weights[[pname]]
+  shared <- inner_join(pre_w_eval, later_w, by = "user_id", suffix = c("_pre", "_post"))
+  shared <- shared[complete.cases(shared), ]
+  # Compute per-user Pearson r over the 5 category weights
+  cors_pname <- sapply(seq_len(nrow(shared)), function(i) {
+    w_pre  <- as.numeric(shared[i, paste0(cat_cols, "_pre")])
+    w_post <- as.numeric(shared[i, paste0(cat_cols, "_post")])
+    if (sd(w_pre) == 0 || sd(w_post) == 0) return(NA)
+    cor(w_pre, w_post)
+  })
+  stab_cors <- c(stab_cors, mean(cors_pname, na.rm = TRUE))
+  cat(sprintf("    Period '%s': mean r = %.4f\n", pname, mean(cors_pname, na.rm = TRUE)))
+}
+
+lambda_hat <- mean(stab_cors^2)  # reliability = mean squared correlation
+cat(sprintf("\n  Reliability estimate λ ≈ mean(r²) = %.4f\n", lambda_hat))
+cat("  (Interpretation: observed Q_it_c has λ the variance of the true latent score)\n\n")
+
+# Step B: Apply Klepper-Leamer correction to the linear coefficient
+beta_kl    <- beta_hat / lambda_hat
+se_kl      <- se_hat  / lambda_hat  # delta method (λ treated as fixed)
+ci_kl_lo   <- beta_kl - 1.96 * se_kl
+ci_kl_hi   <- beta_kl + 1.96 * se_kl
+recov_kl   <- beta_kl / TRUE_BETA * 100
+
+cat("  ── Klepper-Leamer Corrected Estimates ──────────────────────────────────\n")
+cat(sprintf("  Uncorrected β_hat:       %.4f (%.1f%% recovery, CI [%.4f, %.4f])\n",
+            beta_hat, recovery_pct, ci_lo, ci_hi))
+cat(sprintf("  Corrected  β_KL:         %.4f (%.1f%% recovery, CI [%.4f, %.4f])\n",
+            beta_kl, recov_kl, ci_kl_lo, ci_kl_hi))
+cat(sprintf("  TRUE_BETA:               %.2f\n", TRUE_BETA))
+cat(sprintf("  Correction factor (1/λ): %.4f\n", 1 / lambda_hat))
+cat(sprintf("  TRUE_BETA in KL CI:      %s\n",
+            ifelse(ci_kl_lo <= TRUE_BETA & ci_kl_hi >= TRUE_BETA, "YES", "NO")))
+cat("  ────────────────────────────────────────────────────────────────────────\n\n")
+
+# Step C: Sensitivity — what if λ is mis-estimated? Sweep λ from 0.60 to 1.0.
+cat("  Sensitivity to λ misspecification:\n")
+cat(sprintf("  %-8s  %8s  %8s  %8s  %8s  %8s\n",
+            "λ", "β_KL", "SE_KL", "CI_lo", "CI_hi", "Recovery%"))
+cat(sprintf("  %s\n", strrep("-", 56)))
+for (lam in seq(0.60, 1.00, by = 0.05)) {
+  b_l  <- beta_hat / lam
+  se_l <- se_hat   / lam
+  marker <- if (abs(lam - lambda_hat) < 0.03) " ← estimated" else ""
+  cat(sprintf("  %-8.2f  %8.4f  %8.4f  %8.4f  %8.4f  %7.1f%%%s\n",
+              lam, b_l, se_l, b_l - 1.96 * se_l, b_l + 1.96 * se_l,
+              b_l / TRUE_BETA * 100, marker))
+}
+cat("\n")
+
+# Add KL to benchmark table for later reference
+bench_results[["Proposed + K-L correction"]] <- list(
+  beta  = beta_kl,
+  se    = se_kl,
+  lo    = ci_kl_lo,
+  hi    = ci_kl_hi,
+  bias  = beta_kl - TRUE_BETA,
+  recov = recov_kl
+)
+
+cat("\n")
+
+# --- Step 12b: Benchmark comparisons (Gap 4) ----------------------------------
+# Compare the proposed method against four simpler alternatives.
+# All methods receive the same 2,000-user stratified sample.
+# Gold standard: TRUE_BETA = 1.0. Metric: recovered β, bias, 95% CI.
+# ──────────────────────────────────────────────────────────────────────────────
+cat("Step 12b: Benchmark comparisons — proposed vs. alternatives...\n\n")
+cat("  All methods fit on the same stratified 2,000-user sample.\n")
+cat("  TRUE_BETA = 1.0. Metric = recovered β and % bias.\n\n")
+
+bench_results <- list()
+
+# --- BM0: Proposed method (already fitted as model_linear) ---
+bench_results[["Proposed (frozen weights, GAMM)"]] <- list(
+  beta  = beta_hat,
+  se    = se_hat,
+  lo    = ci_lo,
+  hi    = ci_hi,
+  bias  = beta_hat - TRUE_BETA,
+  recov = recovery_pct
+)
+
+# --- BM1: Naive OLS (no within-version centering, no version FE) ---
+cat("  BM1: Naive OLS — raw Q_it (not centered), no version fixed effects...\n")
+cat("    (Recovering Q_it by adding back the version-level mean to Q_it_c)\n")
+
+# version-level population mean quality (from quality_lookup, same as Step 3 means)
+version_pop_means <- quality_lookup %>%
+  group_by(model_version) %>%
+  summarise(q_pop_mean = mean(mean_human_rating), .groups = "drop") %>%
+  rename(version_week = model_version)
+
+model_df_naive <- model_df %>%
+  left_join(version_pop_means, by = "version_week") %>%
+  mutate(Q_it_raw = Q_it_c + q_pop_mean)
+
+m_naive <- bam(
+  cbind(active_days, 7 - active_days) ~
+    Q_it_raw +
+    s(week, bs = "tp", k = 10) +
+    s(user_id_factor, bs = "re") +
+    user_type +
+    pre_project_engagement_score,
+  data   = model_df_naive,
+  family = binomial(),
+  method = "fREML",
+  discrete = TRUE,
+  nthreads = 1
+)
+b_naive <- coef(m_naive)["Q_it_raw"]
+se_naive <- summary(m_naive)$p.table["Q_it_raw", "Std. Error"]
+bench_results[["Naive OLS (no version FE)"]] <- list(
+  beta  = b_naive,
+  se    = se_naive,
+  lo    = b_naive - 1.96 * se_naive,
+  hi    = b_naive + 1.96 * se_naive,
+  bias  = b_naive - TRUE_BETA,
+  recov = b_naive / TRUE_BETA * 100
+)
+cat(sprintf("    β_hat = %.4f, bias = %+.4f, recovery = %.1f%%\n\n",
+            b_naive, b_naive - TRUE_BETA, b_naive / TRUE_BETA * 100))
+
+# --- BM2: Real-time weights (endogenous — current-period category counts, not frozen) ---
+cat("  BM2: Real-time weights — each week's observed category mix (not frozen)...\n")
+cat("    Expected: upward bias from reverse causality (better model -> users use\n")
+cat("    high-quality categories more -> observed weights reflect outcome).\n")
+
+# Compute per-row category weights from current-week counts
+rt_cat_totals <- rowSums(model_df[, cat_cols])
+rt_cat_totals[rt_cat_totals == 0] <- 1
+
+rt_weights_df <- model_df %>%
+  select(session_id, user_id, version_week, all_of(cat_cols)) %>%
+  mutate(across(all_of(cat_cols), ~ . / pmax(rt_cat_totals, 1)))
+
+# Compute Q_it from real-time weights
+rt_q_joined <- rt_weights_df %>%
+  pivot_longer(cols = all_of(cat_cols), names_to = "cat_col", values_to = "w_rt") %>%
+  mutate(eval_prompt_category = cat_col_map[cat_col]) %>%
+  left_join(quality_lookup, by = c("eval_prompt_category", "version_week" = "model_version")) %>%
+  group_by(session_id, version_week) %>%
+  summarise(Q_rt = sum(w_rt * mean_human_rating, na.rm = TRUE), .groups = "drop")
+
+model_df_rt <- model_df %>%
+  left_join(rt_q_joined, by = c("session_id", "version_week")) %>%
+  group_by(version_week) %>%
+  mutate(Q_rt_c = Q_rt - mean(Q_rt, na.rm = TRUE)) %>%
+  ungroup()
+
+m_rt <- bam(
+  cbind(active_days, 7 - active_days) ~
+    Q_rt_c +
+    version_f +
+    s(week, bs = "tp", k = 10) +
+    s(user_id_factor, bs = "re") +
+    user_type +
+    pre_project_engagement_score,
+  data   = model_df_rt,
+  family = binomial(),
+  method = "fREML",
+  discrete = TRUE,
+  nthreads = 1
+)
+b_rt <- coef(m_rt)["Q_rt_c"]
+se_rt <- summary(m_rt)$p.table["Q_rt_c", "Std. Error"]
+bench_results[["Real-time weights (endogenous)"]] <- list(
+  beta  = b_rt,
+  se    = se_rt,
+  lo    = b_rt - 1.96 * se_rt,
+  hi    = b_rt + 1.96 * se_rt,
+  bias  = b_rt - TRUE_BETA,
+  recov = b_rt / TRUE_BETA * 100
+)
+cat(sprintf("    β_hat = %.4f, bias = %+.4f, recovery = %.1f%%\n\n",
+            b_rt, b_rt - TRUE_BETA, b_rt / TRUE_BETA * 100))
+
+# --- BM3: User-level Diff-in-Diff ---
+cat("  BM3: User-level Diff-in-Diff — quality change between v1.0 and v1.1...\n")
+cat("    Treatment = users who experienced above-median Q increase at v1.1 rollout.\n")
+
+# For each user: delta_Q between v1.0 and v1.1 (first-difference in quality exposure)
+user_did <- model_df %>%
+  filter(version_week %in% c("v1.0", "v1.1")) %>%
+  group_by(user_id, version_week) %>%
+  summarise(
+    mean_active = mean(active_days, na.rm = TRUE),
+    mean_Q_c    = mean(Q_it_c, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  pivot_wider(names_from = version_week,
+              values_from = c(mean_active, mean_Q_c),
+              names_sep = "_") %>%
+  filter(!is.na(`mean_active_v1.0`) & !is.na(`mean_active_v1.1`)) %>%
+  mutate(
+    delta_Y  = `mean_active_v1.1` - `mean_active_v1.0`,
+    delta_Q  = `mean_Q_c_v1.1`   - `mean_Q_c_v1.0`
+  )
+
+m_did <- lm(delta_Y ~ delta_Q, data = user_did)
+b_did  <- coef(m_did)["delta_Q"]
+se_did <- sqrt(vcov(m_did)["delta_Q", "delta_Q"])
+
+# Convert from active-days scale to log-odds scale for comparability
+# (approximate: 1 active day per week ≈ p ≈ 0.43, logit(0.43) ≈ -0.28;
+#  a rough scale factor from the linear model is used)
+active_mean <- mean(model_df$active_days[model_df$version_week == "v1.0"], na.rm = TRUE)
+p_mean <- active_mean / 7
+scale_factor <- 1 / (p_mean * (1 - p_mean) * 7)  # delta method: d(logit)/d(E[Y])
+b_did_logit  <- b_did * scale_factor
+se_did_logit <- se_did * scale_factor
+
+bench_results[["User DiD (first-differences)"]] <- list(
+  beta  = b_did_logit,
+  se    = se_did_logit,
+  lo    = b_did_logit - 1.96 * se_did_logit,
+  hi    = b_did_logit + 1.96 * se_did_logit,
+  bias  = b_did_logit - TRUE_BETA,
+  recov = b_did_logit / TRUE_BETA * 100
+)
+cat(sprintf("    δ(active_days)/δ(Q_c) = %.4f, δ(log-odds) ≈ %.4f, recovery ≈ %.1f%%\n\n",
+            b_did, b_did_logit, b_did_logit / TRUE_BETA * 100))
+
+# --- BM4: User fixed-effects OLS (no GAM smooth, no random effect) ---
+cat("  BM4: User fixed-effects OLS (parametric, user FE via model matrix)...\n")
+cat("    Sweeps out all unobserved user-level heterogeneity. Slower but\n")
+cat("    a common alternative in the applied economics literature.\n")
+
+# Demean all variables within user (within-user FE via demeaning)
+user_means_fe <- model_df %>%
+  group_by(user_id) %>%
+  summarise(
+    Q_it_c_um   = mean(Q_it_c, na.rm = TRUE),
+    active_um   = mean(active_days, na.rm = TRUE),
+    week_um     = mean(week, na.rm = TRUE),
+    pre_eng_um  = mean(pre_project_engagement_score, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+model_df_fe <- model_df %>%
+  left_join(user_means_fe, by = "user_id") %>%
+  mutate(
+    Q_it_c_dm   = Q_it_c - Q_it_c_um,
+    active_dm   = active_days - active_um,
+    week_dm     = week - week_um,
+    pre_eng_dm  = pre_project_engagement_score - pre_eng_um
+  )
+
+m_fe <- lm(active_dm ~ Q_it_c_dm + week_dm + pre_eng_dm,
+           data = model_df_fe)
+b_fe  <- coef(m_fe)["Q_it_c_dm"]
+se_fe <- sqrt(vcov(m_fe)["Q_it_c_dm", "Q_it_c_dm"])
+b_fe_logit  <- b_fe * scale_factor
+se_fe_logit <- se_fe * scale_factor
+
+bench_results[["User FE OLS (demeaned)"]] <- list(
+  beta  = b_fe_logit,
+  se    = se_fe_logit,
+  lo    = b_fe_logit - 1.96 * se_fe_logit,
+  hi    = b_fe_logit + 1.96 * se_fe_logit,
+  bias  = b_fe_logit - TRUE_BETA,
+  recov = b_fe_logit / TRUE_BETA * 100
+)
+cat(sprintf("    δ(active_days)/δ(Q_c) = %.4f, δ(log-odds) ≈ %.4f, recovery ≈ %.1f%%\n\n",
+            b_fe, b_fe_logit, b_fe_logit / TRUE_BETA * 100))
+
+# --- Print benchmark summary table ---
+cat("  ══ Benchmark Comparison Table ══════════════════════════════════════════\n")
+cat(sprintf("  TRUE_BETA = %.2f\n\n", TRUE_BETA))
+cat(sprintf("  %-38s  %7s  %6s  %10s  %7s\n",
+            "Method", "β_hat", "SE", "95% CI", "Recov%"))
+cat(sprintf("  %-38s  %7s  %6s  %10s  %7s\n",
+            strrep("-", 38), strrep("-", 7), strrep("-", 6), strrep("-", 10), strrep("-", 7)))
+for (nm in names(bench_results)) {
+  b <- bench_results[[nm]]
+  star <- if (b$lo <= TRUE_BETA && b$hi >= TRUE_BETA) " ✓" else "  "
+  cat(sprintf("  %-38s  %7.4f  %6.4f  [%5.3f,%5.3f] %6.1f%%%s\n",
+              nm, b$beta, b$se, b$lo, b$hi, b$recov, star))
+}
+cat("  (✓ = TRUE_BETA = 1.0 contained in 95% CI)\n")
+cat("  ══════════════════════════════════════════════════════════════════════\n\n")
+
+# --- Benchmark figure ---
+cat("  Generating benchmark comparison figure...\n")
+bm_plot_df <- do.call(rbind, lapply(names(bench_results), function(nm) {
+  b <- bench_results[[nm]]
+  data.frame(method = nm, beta = b$beta, lo = b$lo, hi = b$hi,
+             recovery = b$recov, stringsAsFactors = FALSE)
+}))
+bm_plot_df$method <- factor(bm_plot_df$method, levels = rev(bm_plot_df$method))
+
+p_bm <- ggplot(bm_plot_df, aes(x = beta, y = method)) +
+  geom_vline(xintercept = TRUE_BETA, linetype = "solid",
+             color = PAL$moss, linewidth = 0.8, alpha = 0.7) +
+  geom_vline(xintercept = 0, linetype = "dotted",
+             color = PAL$summit, alpha = 0.4) +
+  geom_linerange(aes(xmin = lo, xmax = hi), color = PAL$ice, linewidth = 1.5) +
+  geom_point(aes(color = (lo <= TRUE_BETA & hi >= TRUE_BETA)),
+             size = 4) +
+  scale_color_manual(values = c("TRUE" = PAL$moss, "FALSE" = PAL$warn),
+                     guide = "none") +
+  geom_text(aes(label = sprintf("%.0f%%", recovery)),
+            nudge_y = 0.3, color = PAL$summit, size = 3.2) +
+  labs(
+    title = "Benchmark Comparison: Recovery of TRUE_BETA = 1.0",
+    subtitle = "Green line = true value | Green point = CI contains truth | % = recovery rate",
+    x = "Estimated β (log-odds scale)", y = NULL
+  ) +
+  theme_bgl() +
+  theme(axis.text.y = element_text(size = 9))
+
+ggsave(file.path(FIG_DIR, "11_benchmark_comparison.png"), p_bm,
+       width = 12, height = 6, dpi = 150, bg = PAL$bg)
+cat("  Saved 11_benchmark_comparison.png\n\n")
 
 # --- Step 13: Cluster-robust bootstrap ----------------------------------------
 cat("Step 13: Cluster-robust inference (user-level block bootstrap)...\n")
@@ -1174,12 +1772,7 @@ ggsave(file.path(FIG_DIR, "09_causal_dag.png"), p_dag,
 cat("  Saved 09_causal_dag.png\n\n")
 
 # --- Step 15: ROI simulation --------------------------------------------------
-cat("\n")
-cat("=", rep("=", 69), "\n", sep = "")
-cat("STEP 15: ROI Simulation\n")
-cat("  Counterfactual quality improvements -> predicted retention lift\n")
-cat("=", rep("=", 69), "\n\n")
-
+# --- Step 15: ROI simulation ---
 cat("  For each scenario: compute per-user delta_Q from frozen weights,\n")
 cat("  shift Q_it_c, predict through the fitted GAMM, convert to active-day deltas.\n\n")
 
@@ -1328,9 +1921,7 @@ ggsave(file.path(FIG_DIR, "10_roi_simulation.png"), p_roi,
 cat("  Saved 10_roi_simulation.png\n\n")
 
 # --- Final calibration summary ------------------------------------------------
-cat("=", rep("=", 69), "\n", sep = "")
-cat("CALIBRATION RECOVERY SUMMARY\n")
-cat("=", rep("=", 69), "\n\n")
+# --- Calibration recovery summary ---
 cat(sprintf("  TRUE_BETA:                %.2f\n", TRUE_BETA))
 cat(sprintf("  Linear model beta_hat:    %.4f (%.1f%% recovery)\n", beta_hat, recovery_pct))
 cat(sprintf("  Linear 95%% CI:           [%.4f, %.4f]\n", ci_lo, ci_hi))

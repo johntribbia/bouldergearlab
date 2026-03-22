@@ -1,48 +1,29 @@
 """
-AI Model Quality Impact Analysis - Synthetic Dataset Generator
-================================================================
-Generates 2.5M+ records across three interconnected tables for model quality analysis.
+Synthetic dataset generator for the model quality -> user engagement study.
+
+Creates three CSV files: offline model evaluations, user demographics and
+subscription status, and a weekly engagement time-series (~1.5M session rows).
+Run this before augment_data.py.
 
 Author: Boulder Gear Lab
-Version: 1.0
-Python: 3.8+
+Python: 3.9+
 Dependencies: pandas, numpy
 """
 
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
-from typing import Tuple, List
-import warnings
-warnings.filterwarnings('ignore')
 
-# Set random seed for reproducibility
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 
-print("=" * 70)
-print("AI Model Quality Impact Analysis - Dataset Generator")
-print("=" * 70)
-print(f"Random Seed: {RANDOM_SEED} (for reproducibility)")
+print(f"data-generator.py  |  seed={RANDOM_SEED}")
 print()
 
 
-def generate_evaluation_data(n_v10: int = 15000, 
-                             n_v11: int = 18000, 
-                             n_v12: int = 17000) -> pd.DataFrame:
-    """
-    Generate offline model evaluation data with correlated metrics.
-    
-    Parameters:
-    -----------
-    n_v10, n_v11, n_v12 : int
-        Number of evaluations per model version
-    
-    Returns:
-    --------
-    pd.DataFrame with evaluation records
-    """
-    print("Generating Offline Model Evaluation Data...")
+def generate_evaluation_data(n_v10=15000, n_v11=18000, n_v12=17000):
+    """Offline evaluation records with correlated human and synthetic metrics."""
+    print("--- Evaluation data ---")
     
     model_configs = [
         {'version': 'v1.0', 'deploy_week': 1, 'avg_rating': 3.2, 'avg_synthetic': 65, 'count': n_v10},
@@ -93,30 +74,16 @@ def generate_evaluation_data(n_v10: int = 15000,
     
     df = pd.DataFrame(all_records)
     
-    # Verify correlation
     correlation = df['human_rating'].corr(df['synthetic_metric'])
-    print(f"  ✓ Generated {len(df):,} evaluation records")
-    print(f"  ✓ Correlation ρ(human_rating, synthetic_metric) = {correlation:.3f}")
-    print(f"  ✓ Model versions: {df['model_version'].unique().tolist()}")
+    print(f"  {len(df):,} records  |  ρ(human, synthetic) = {correlation:.3f}")
     print()
     
     return df
 
 
-def generate_user_demographics(n_users: int = 100000) -> pd.DataFrame:
-    """
-    Generate user demographic and subscription data.
-    
-    Parameters:
-    -----------
-    n_users : int
-        Number of users to generate
-    
-    Returns:
-    --------
-    pd.DataFrame with user records
-    """
-    print("Generating User Demographics & Subscription Data...")
+def generate_user_demographics(n_users=100000):
+    """User demographics, subscription status, and treatment assignment."""
+    print("--- User demographics ---")
     
     countries = ['US', 'UK', 'Canada', 'Germany', 'France', 'India', 'Other']
     country_weights = [0.35, 0.15, 0.10, 0.10, 0.08, 0.12, 0.10]
@@ -176,38 +143,22 @@ def generate_user_demographics(n_users: int = 100000) -> pd.DataFrame:
         })
     
     df = pd.DataFrame(records)
-    
-    # Calculate statistics
-    overall_conv = df['is_subscriber'].mean() * 100
+
+    overall_conv   = df['is_subscriber'].mean() * 100
     treatment_conv = df[df['is_treatment_group']]['is_subscriber'].mean() * 100
-    control_conv = df[~df['is_treatment_group']]['is_subscriber'].mean() * 100
+    control_conv   = df[~df['is_treatment_group']]['is_subscriber'].mean() * 100
     enterprise_pct = (df['user_type'] == 'Enterprise').mean() * 100
-    
-    print(f"  ✓ Generated {len(df):,} user records")
-    print(f"  ✓ Overall conversion rate: {overall_conv:.2f}%")
-    print(f"  ✓ Treatment group conversion: {treatment_conv:.2f}%")
-    print(f"  ✓ Control group conversion: {control_conv:.2f}%")
-    print(f"  ✓ Enterprise users: {enterprise_pct:.1f}%")
+
+    print(f"  {len(df):,} users  |  conversion {overall_conv:.1f}%  "
+          f"(treatment {treatment_conv:.1f}% / control {control_conv:.1f}%)")
     print()
-    
+
     return df
 
 
-def generate_engagement_data(users_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Generate time-series engagement data for all users.
-    
-    Parameters:
-    -----------
-    users_df : pd.DataFrame
-        User demographics dataframe
-    
-    Returns:
-    --------
-    pd.DataFrame with engagement session records
-    """
-    print("Generating User Engagement Time-Series Data...")
-    print("  (This may take 1-2 minutes for 2M+ records...)")
+def generate_engagement_data(users_df):
+    """Weekly session records for all users across a 26-week window."""
+    print("--- Engagement time-series (this takes ~2 minutes) ---")
     
     model_schedule = [
         {'version': 'v1.0', 'start_week': 1, 'end_week': 7, 'quality': 3.2},
@@ -301,103 +252,40 @@ def generate_engagement_data(users_df: pd.DataFrame) -> pd.DataFrame:
                 session_id += 1
     
     df = pd.DataFrame(all_sessions)
-    
-    # Calculate statistics
+
     missing_sentiment = df['user_sentiment_score'].isna().mean() * 100
     avg_prompts = df['total_prompts'].mean()
-    engagement_quality_corr = df['total_prompts'].corr(
-        df['model_version_used'].map({'v1.0': 3.2, 'v1.1': 3.7, 'v1.2': 4.1})
-    )
-    
-    print(f"  ✓ Generated {len(df):,} engagement session records")
-    print(f"  ✓ Missing sentiment scores: {missing_sentiment:.1f}%")
-    print(f"  ✓ Average prompts per session: {avg_prompts:.2f}")
-    print(f"  ✓ Correlation(prompts, model_quality): {engagement_quality_corr:.3f}")
+
+    print(f"  {len(df):,} session records  |  missing sentiment {missing_sentiment:.1f}%  "
+          f"|  mean prompts/week {avg_prompts:.1f}")
     print()
-    
+
     return df
 
 
-def verify_data_quality(eval_df: pd.DataFrame, 
-                       demo_df: pd.DataFrame, 
-                       engage_df: pd.DataFrame) -> None:
-    """
-    Verify data quality and statistical properties.
-    """
-    print("=" * 70)
-    print("Data Quality Verification")
-    print("=" * 70)
-    
-    # Total records
-    total_records = len(eval_df) + len(demo_df) + len(engage_df)
-    print(f"Total Records Generated: {total_records:,}")
-    print()
-    
-    # Evaluation data checks
-    print("Evaluation Data:")
+def verify_data_quality(eval_df, demo_df, engage_df):
+    """Basic sanity checks across the three tables."""
+    print("--- Verification ---")
+    total = len(eval_df) + len(demo_df) + len(engage_df)
+    print(f"  {total:,} total records  "
+          f"({len(eval_df):,} evals / {len(demo_df):,} users / {len(engage_df):,} sessions)")
+
     corr = eval_df['human_rating'].corr(eval_df['synthetic_metric'])
-    print(f"  - Correlation ρ(human, synthetic): {corr:.4f} (target: ~0.82)")
-    print(f"  - Model versions: {sorted(eval_df['model_version'].unique())}")
-    print(f"  - Categories: {len(eval_df['eval_prompt_category'].unique())}")
-    print()
-    
-    # Demographics checks
-    print("Demographics Data:")
-    print(f"  - Total users: {len(demo_df):,}")
-    print(f"  - Subscribers: {demo_df['is_subscriber'].sum():,} ({demo_df['is_subscriber'].mean()*100:.2f}%)")
-    print(f"  - Treatment group: {demo_df['is_treatment_group'].sum():,} ({demo_df['is_treatment_group'].mean()*100:.2f}%)")
-    print(f"  - Enterprise users: {(demo_df['user_type']=='Enterprise').sum():,} ({(demo_df['user_type']=='Enterprise').mean()*100:.1f}%)")
-    print()
-    
-    # Engagement checks
-    print("Engagement Data:")
-    print(f"  - Total sessions: {len(engage_df):,}")
-    print(f"  - Unique users: {engage_df['user_id'].nunique():,}")
-    print(f"  - Missing sentiment: {engage_df['user_sentiment_score'].isna().sum():,} ({engage_df['user_sentiment_score'].isna().mean()*100:.1f}%)")
-    print(f"  - Week range: {engage_df['week'].min()} to {engage_df['week'].max()}")
-    
-    # Check referential integrity
-    users_in_engagement = set(engage_df['user_id'].unique())
-    users_in_demo = set(demo_df['user_id'].unique())
-    integrity_check = users_in_engagement.issubset(users_in_demo)
-    print(f"  - Referential integrity: {'✓ PASS' if integrity_check else '✗ FAIL'}")
-    print()
-    
-    # Statistical properties for causal inference
-    print("Causal Inference Properties:")
-    treatment_users = demo_df[demo_df['is_treatment_group']]
-    control_users = demo_df[~demo_df['is_treatment_group']]
-    
-    # Check balance
-    pre_eng_diff = abs(treatment_users['pre_project_engagement_score'].mean() - 
-                      control_users['pre_project_engagement_score'].mean())
-    print(f"  - Pre-engagement balance: {pre_eng_diff:.2f} point difference")
-    
-    # DiD effect
-    treatment_engage = engage_df[engage_df['user_id'].isin(treatment_users['user_id'])]
-    pre_treatment = treatment_engage[treatment_engage['week'] < 8]['total_prompts'].mean()
-    post_treatment = treatment_engage[treatment_engage['week'] >= 8]['total_prompts'].mean()
-    did_effect = post_treatment - pre_treatment
-    print(f"  - Embedded DiD effect: {did_effect:.2f} prompts/week")
-    
-    # Conversion effect
-    treatment_conv = treatment_users['is_subscriber'].mean()
-    control_conv = control_users['is_subscriber'].mean()
-    ate_effect = (treatment_conv - control_conv) * 100
-    print(f"  - Embedded ATE (conversion): {ate_effect:.2f} percentage points")
+    print(f"  ρ(human, synthetic) = {corr:.3f}  (target ~0.82)")
+
+    sub_rate   = demo_df['is_subscriber'].mean() * 100
+    treat_rate = demo_df['is_treatment_group'].mean() * 100
+    print(f"  Subscription rate: {sub_rate:.1f}%  |  treatment share: {treat_rate:.1f}%")
+
+    integ_ok = set(engage_df['user_id'].unique()).issubset(
+                   set(demo_df['user_id'].unique()))
+    print(f"  Referential integrity: {'pass' if integ_ok else 'FAIL'}")
     print()
 
 
-def save_datasets(eval_df: pd.DataFrame, 
-                 demo_df: pd.DataFrame, 
-                 engage_df: pd.DataFrame,
-                 output_dir: str = './') -> None:
-    """
-    Save datasets to CSV files.
-    """
-    print("=" * 70)
-    print("Saving Datasets to CSV Files...")
-    print("=" * 70)
+def save_datasets(eval_df, demo_df, engage_df, output_dir='./'):
+    """Write all three tables to CSV."""
+    print("--- Saving files ---")
     
     files = [
         (eval_df, 'offline_model_evaluation.csv'),
@@ -408,70 +296,17 @@ def save_datasets(eval_df: pd.DataFrame,
     for df, filename in files:
         filepath = output_dir + filename
         df.to_csv(filepath, index=False)
-        file_size_mb = df.memory_usage(deep=True).sum() / (1024 * 1024)
-        print(f"  ✓ Saved: {filename}")
-        print(f"    - Records: {len(df):,}")
-        print(f"    - Size: ~{file_size_mb:.1f} MB")
-        print()
+        print(f"  {filename}  ({len(df):,} rows)")
 
-
-def generate_sample_preview(eval_df: pd.DataFrame, 
-                           demo_df: pd.DataFrame, 
-                           engage_df: pd.DataFrame) -> None:
-    """
-    Print sample records from each dataset.
-    """
-    print("=" * 70)
-    print("Sample Data Preview")
-    print("=" * 70)
-    print()
-    
-    print("Evaluation Data (first 3 records):")
-    print(eval_df.head(3).to_string(index=False))
-    print()
-    
-    print("Demographics Data (first 3 records):")
-    print(demo_df.head(3).to_string(index=False))
-    print()
-    
-    print("Engagement Data (first 3 records):")
-    print(engage_df.head(3).to_string(index=False))
-    print()
 
 
 def main():
-    """
-    Main execution function.
-    """
-    print("Starting dataset generation...")
-    print()
-    
-    # Generate all three datasets
-    eval_df = generate_evaluation_data()
-    demo_df = generate_user_demographics(n_users=100000)
+    eval_df   = generate_evaluation_data()
+    demo_df   = generate_user_demographics(n_users=100000)
     engage_df = generate_engagement_data(demo_df)
-    
-    # Verify data quality
     verify_data_quality(eval_df, demo_df, engage_df)
-    
-    # Show sample data
-    generate_sample_preview(eval_df, demo_df, engage_df)
-    
-    # Save to CSV
     save_datasets(eval_df, demo_df, engage_df)
-    
-    print("=" * 70)
-    print("Dataset Generation Complete!")
-    print("=" * 70)
-    print()
-    print("Next Steps:")
-    print("1. Load the CSV files into your analysis environment")
-    print("2. Perform exploratory data analysis")
-    print("3. Test parallel trends assumption (weeks 1-7)")
-    print("4. Implement DiD regression for engagement analysis")
-    print("5. Conduct propensity score matching for conversion analysis")
-    print()
-    print("Data generation complete!")
+    print("Done.")
 
 
 if __name__ == "__main__":
