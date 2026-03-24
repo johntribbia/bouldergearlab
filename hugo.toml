@@ -77,8 +77,8 @@ summaryLength = 70
         country = "USA"
 
 [Permalinks]
-    reviews = "/reviews/:year/:month/:day/:filename/"
-    data-projects = "/data-projects/:filename/"
+    reviews = "/reviews/:year/:month/:day/:contentbasename/"
+    data-projects = "/data-projects/:contentbasename/"
 
 [params.topbar]
     enable = true
