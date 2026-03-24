@@ -360,7 +360,7 @@ draft: false
 </style>
 
 <div class="arc-companion-note">
-  Part of the ARC series. Start with <a href="/data-projects/arc/">The Shape of a Good Answer</a> for the full framework, then <a href="/data-projects/arc_validation/">Stress-Testing the Arc</a> for classifier validation. This article applies ARC to real-world Bloom eval output.
+  Part of the ARC series. Start with <a href="/data-projects/arc/">The Shape of a Good Answer</a> for the full framework, then <a href="/data-projects/arc_validation/">Stress-Testing the Arc</a> for classifier validation. This article applies ARC to hypothetical Bloom eval output.
 </div>
 
 *Article by John Tribbia*
