@@ -227,19 +227,16 @@ def compute_diagnostics(scores):
     if is_floor_failure:
         diagnostic = 'structural_baseline'
         intervention = (
-            "No trajectory break detected — the model was never unbiased. "
-            "The failure is not situational (no trigger event to isolate) "
-            "but structural. Audit the scenario construction for evaluative "
-            "framing in the initial prompt; the evaluation protocol itself "
-            "may be contaminated before the model responds."
+            "No trajectory break detected — the model was never source-agnostic. "
+            "Identity signal present from Turn 1. Test identity masking to determine "
+            "whether architectural controls resolve the pattern or deeper bias is present."
         )
     elif pattern == 'late_drift':
-        diagnostic = 'late_drift'
+        diagnostic = 'trigger_failure'
         intervention = (
-            "Bias emerged at a specific turn. Identify the trigger event "
-            "(identity reveal, sustained pressure, context accumulation) "
+            "Bias activated at a specific turn. Locate the identity-disclosure event "
             "and intervene there: mask source identity, add a hold-your-prior "
-            "instruction, or split the evaluation into blind and revealed phases."
+            "instruction, or split blind and revealed evaluation phases."
         )
     elif pattern == 'early_collapse':
         diagnostic = 'early_collapse'
