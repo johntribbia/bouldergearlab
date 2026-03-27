@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <rect width="720" height="380" fill="#0a0d14"/>
+
+  <!-- Grid -->
+  <line x1="0"   y1="190" x2="720" y2="190" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="0"   y1="95"  x2="720" y2="95"  stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="0"   y1="285" x2="720" y2="285" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="180" y1="0"   x2="180" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="360" y1="0"   x2="360" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="540" y1="0"   x2="540" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Baseline -->
+  <line x1="60" y1="240" x2="660" y2="240" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+
+  <!-- Tick marks -->
+  <line x1="60"  y1="238" x2="60"  y2="246" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="660" y1="238" x2="660" y2="246" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+  <!-- Aug 2025 label -->
+  <text x="60"  y="260" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.22)">Aug 2025</text>
+  <text x="660" y="260" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.22)">Feb 2026</text>
+
+  <!-- Divider line between the two story lanes -->
+  <line x1="360" y1="75" x2="360" y2="225" stroke="rgba(255,255,255,0.06)" stroke-width="0.8" stroke-dasharray="4,5"/>
+
+  <!-- ── LEFT LANE: US States (converging — line goes down) ── -->
+  <!-- Area fill -->
+  <path d="M 60 130 C 200 135 320 172 660 185 L 660 240 L 60 240 Z"
+        fill="rgba(125,184,0,0.05)"/>
+  <!-- Line -->
+  <path d="M 60 130 C 200 135 320 172 660 185"
+        fill="none" stroke="#7db800" stroke-width="3" stroke-linecap="round"/>
+  <!-- Start dot -->
+  <circle cx="60"  cy="130" r="5" fill="#0a0d14" stroke="#7db800" stroke-width="2"/>
+  <!-- End dot -->
+  <circle cx="660" cy="185" r="5" fill="#0a0d14" stroke="#7db800" stroke-width="2"/>
+
+  <!-- Start value label -->
+  <rect x="68" y="114" width="34" height="16" rx="3" fill="rgba(125,184,0,0.12)"/>
+  <text x="85" y="126" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="10" fill="#7db800">30%</text>
+  <!-- End value label -->
+  <rect x="668" y="169" width="34" height="16" rx="3" fill="rgba(125,184,0,0.12)"/>
+  <text x="685" y="181" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="10" fill="#7db800">24%</text>
+
+  <!-- Down arrow indicator -->
+  <text x="160" y="116" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="rgba(125,184,0,0.55)">&#x25BE; converging</text>
+
+  <!-- Lane label -->
+  <text x="108" y="96" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="11" fill="rgba(125,184,0,0.8)" letter-spacing="0.06em">TOP 5 US STATES</text>
+  <text x="108" y="110" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.25)">share of domestic usage</text>
+
+  <!-- ── RIGHT LANE: Countries (diverging — line goes up) ── -->
+  <!-- Area fill -->
+  <path d="M 60 185 C 200 178 320 155 660 130 L 660 240 L 60 240 Z"
+        fill="rgba(224,112,85,0.05)"/>
+  <!-- Line -->
+  <path d="M 60 185 C 200 178 320 155 660 130"
+        fill="none" stroke="#e07055" stroke-width="3" stroke-linecap="round"/>
+  <!-- Start dot -->
+  <circle cx="60"  cy="185" r="5" fill="#0a0d14" stroke="#e07055" stroke-width="2"/>
+  <!-- End dot -->
+  <circle cx="660" cy="130" r="5" fill="#0a0d14" stroke="#e07055" stroke-width="2"/>
+
+  <!-- Start value label -->
+  <rect x="68" y="169" width="34" height="16" rx="3" fill="rgba(224,112,85,0.12)"/>
+  <text x="85" y="181" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="10" fill="#e07055">45%</text>
+  <!-- End value label -->
+  <rect x="668" y="114" width="34" height="16" rx="3" fill="rgba(224,112,85,0.12)"/>
+  <text x="685" y="126" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="10" fill="#e07055">48%</text>
+
+  <!-- Up arrow indicator -->
+  <text x="540" y="116" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="rgba(224,112,85,0.55)">&#x25B4; diverging</text>
+
+  <!-- Lane label -->
+  <text x="600" y="96" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="11" fill="rgba(224,112,85,0.8)" letter-spacing="0.06em">TOP 20 COUNTRIES</text>
+  <text x="600" y="110" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.25)">share of global usage</text>
+
+  <!-- Crossover zone highlight -->
+  <rect x="285" y="148" width="150" height="44" rx="4"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+  <text x="360" y="167" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.3)">same period</text>
+  <text x="360" y="181" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.3)">opposite directions</text>
+
+  <!-- Title block -->
+  <text x="360" y="296" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="18" fill="rgba(255,255,255,0.78)" letter-spacing="0.04em">THE DOUBLE BURDEN</text>
+  <text x="360" y="316" text-anchor="middle" font-family="'Space Mono', monospace" font-size="10" fill="rgba(255,255,255,0.28)" letter-spacing="0.08em">AI INFRASTRUCTURE · ENVIRONMENTAL JUSTICE</text>
+
+  <!-- Subtle bottom rule -->
+  <line x1="240" y1="330" x2="480" y2="330" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+</svg>
