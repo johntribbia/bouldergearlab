@@ -46,6 +46,8 @@ By day, I am a Data Scientist at Google, leading teams in analytics, machine lea
 
 The "Lab" in Boulder Gear Lab refers to this mindset of rigorous problem-solving and critical thinking, rather than a sterile room full of sensors.
 
+The [Data Projects](/data-projects/) section is where that professional work shows up publicly. The writing there covers original frameworks for evaluating AI agent behavior, statistical approaches to measuring model quality, and analysis of how AI usage and infrastructure are actually distributed across the economy.
+
 ### The Gear Testing Side
 I’ve spent twenty years testing gear through the lens of a competitive athlete. While I value my past partnerships with brands like La Sportiva, Pearl Izumi, and Salomon, those sponsorships are behind me. This allows me to maintain complete editorial independence.
 
