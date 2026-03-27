@@ -267,7 +267,7 @@
        ══════════════════════════════════════════════════ */
     function initStatCounters() {
         /* text-parsing counters (review pages) */
-        observeOnce('.bgl-stat-number', 0.5, function (el) {
+        observeOnce('.bgl-stat-number:not([data-target])', 0.5, function (el) {
             el.classList.add('revealed');
             var text = el.textContent.trim();
             var m = text.match(/^([\d,]+)(\+?)(.*)$/);
