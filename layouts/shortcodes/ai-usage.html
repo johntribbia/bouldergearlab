@@ -13,12 +13,12 @@
 
   Usage (data project with code):
     {{< ai-usage
-          tool="Gemini 3"
+          tool="Claude"
           usage="sentence restructuring and improving the clarity of complex statistical arguments"
           code="Generative AI drafted initial scaffolding for the simulation code. The author validated and finalized all parameters to ensure accuracy." >}}
 
   Usage (review article, editing only):
-    {{< ai-usage tool="Gemini 3" usage="sentence restructuring and light copy-editing" >}}
+    {{< ai-usage tool="Claude" usage="sentence restructuring and light copy-editing" >}}
 */}}
 
 {{- $tool  := .Get "tool"  | default "Generative AI" -}}
