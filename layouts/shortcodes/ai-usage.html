@@ -1,0 +1,32 @@
+{{/*
+  AI Usage Disclosure Shortcode
+  Works in both data-project (HTML) and review (Markdown) articles.
+
+  Parameters:
+  - tool    : AI tool name (default: "Generative AI")
+  - usage   : Brief phrase describing what it was used for.
+              Inserted after the em dash in the opening sentence.
+              Default: "sentence restructuring and improving the clarity
+              of complex arguments"
+  - code    : Optional. A second sentence covering AI-assisted code work.
+              Omit if no code was involved.
+
+  Usage (data project with code):
+    {{< ai-usage
+          tool="Gemini 3"
+          usage="sentence restructuring and improving the clarity of complex statistical arguments"
+          code="Generative AI drafted initial scaffolding for the simulation code. The author validated and finalized all parameters to ensure accuracy." >}}
+
+  Usage (review article, editing only):
+    {{< ai-usage tool="Gemini 3" usage="sentence restructuring and light copy-editing" >}}
+*/}}
+
+{{- $tool  := .Get "tool"  | default "Generative AI" -}}
+{{- $usage := .Get "usage" | default "sentence restructuring and improving the clarity of complex arguments" -}}
+{{- $code  := .Get "code"  | default "" -}}
+
+<div class="bgl-ai-usage">
+  <div class="bgl-ai-usage-label">AI Usage</div>
+  <p>Ideas, analysis, and opinions are my own. {{ $tool }} was used as an editor after the writing and analysis were complete - {{ $usage }}. The author reviewed all suggested changes.</p>
+  {{ if $code }}<p>{{ $code }}</p>{{ end }}
+</div>

@@ -1,0 +1,20 @@
+{{/*
+  AI Usage partial — auto-injected in single.html.
+  Reads from front matter params:
+    ai_tool  : AI tool name (default: "Generative AI")
+    ai_usage : Brief description of how it was used
+    ai_code  : Optional second sentence for code-related AI use
+  Set ai_tool: "" in front matter to suppress the block entirely.
+*/}}
+{{- $tool  := .Params.ai_tool  | default "Generative AI" -}}
+{{- $usage := .Params.ai_usage | default "sentence restructuring and light copy-editing" -}}
+{{- $code  := .Params.ai_code  | default "" -}}
+
+{{/* Suppress block if ai_tool is explicitly set to empty string */}}
+{{- if ne (.Params.ai_tool | default "x") "" -}}
+<div class="bgl-ai-usage">
+  <div class="bgl-ai-usage-label">AI Usage</div>
+  <p>Ideas, analysis, and opinions are my own. {{ $tool }} was used as an editor after the writing and analysis were complete — {{ $usage }}. The author reviewed all suggested changes.</p>
+  {{ if $code }}<p>{{ $code }}</p>{{ end }}
+</div>
+{{- end -}}
