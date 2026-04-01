@@ -263,7 +263,7 @@ Meanwhile, the physical infrastructure of AI is moving out of saturated tech hub
 
 <h2 class="aj-h2">The Physical Cost</h2>
 
-<p class="aj-p">A single 100MW hyperscale facility consumes roughly 800,000 megawatt-hours of electricity per year. Water use for cooling runs between 300 million and 700 million gallons annually. The footprint is typically 100 to 500 acres of land, most of it previously agricultural or undeveloped. In drought counties, cooling water competes with irrigation. A large AI training cluster can consume the equivalent of an Olympic swimming pool in water every few days.</p>
+<p class="aj-p">A 100MW hyperscale facility running near capacity draws roughly 876,000 megawatt-hours of electricity per year. Reported water use at large U.S. data centers has already reached the mid-hundreds of millions of gallons annually: Google used 355.1 million gallons in The Dalles in 2021, and Microsoft's facility near Des Moines used nearly 360 million gallons in 2022. Hyperscale campuses commonly span a few hundred acres, often on agricultural or previously undeveloped land. In water-stressed counties, that demand can collide with irrigation and other local water needs. During GPT-4's development, Microsoft's Iowa operations used water at a rate that worked out to roughly an Olympic swimming pool every couple of days.</p>
 
 <div class="aj-table-wrap">
   <div class="aj-table-caption">Table 1 · Estimated Annual Impact per 100MW Facility</div>
@@ -272,9 +272,9 @@ Meanwhile, the physical infrastructure of AI is moving out of saturated tech hub
       <tr><th>Resource</th><th>Annual Consumption</th><th>Community Equivalent</th></tr>
     </thead>
     <tbody>
-      <tr><td>Electricity</td><td>800,000+ MWh</td><td>Power for ~75,000 households</td></tr>
-      <tr><td>Fresh Water</td><td>300M – 700M gallons</td><td>Indoor needs of 3,000+ families</td></tr>
-      <tr><td>Land Use</td><td>100 – 500 acres</td><td>Farmland or habitat, gone permanently</td></tr>
+      <tr><td>Electricity</td><td>~876,000 MWh</td><td>Power for ~75,000 households</td></tr>
+      <tr><td>Fresh Water</td><td>355M+ gallons</td><td>Hundreds of millions of gallons for cooling</td></tr>
+      <tr><td>Land Use</td><td>200 – 500 acres</td><td>Often converted from farmland or open land</td></tr>
     </tbody>
   </table>
 </div>
@@ -306,7 +306,7 @@ Meanwhile, the physical infrastructure of AI is moving out of saturated tech hub
 <p class="aj-p">Bullard's core finding in 1990 was not that environmental injustice was intentional. Most individual siting decisions were made by people following incentives, and the pattern came out of the aggregate. The same structure appears in data center siting decisions being made now, across dozens of communities, each evaluated separately, each following the same incentive gradient. What the March 2026 report begins to make legible is that the communities absorbing this infrastructure and the communities benefiting most from what the infrastructure produces are not, predominantly, the same places.</p>
 
 <div class="aj-footnotes">
-  Analysis based on the <a href="https://www.anthropic.com/research/economic-index-march-2026-report" target="_blank" rel="noopener">Anthropic Economic Index, March 2026</a>. Resource consumption estimates are derived from published industry benchmarks for 100MW-class hyperscale data centers. Environmental justice framework draws on Robert Bullard, <em>Dumping in Dixie</em> (1990); Valerie Kuletz, <em>The Tainted Desert</em> (1998). Automation exposure estimates from Goldman Sachs Global Investment Research, "The Potentially Large Effects of Artificial Intelligence on Economic Growth" (2023); IMF, <em>World Economic Outlook</em> (April 2024).
+  Analysis based on the <a href="https://www.anthropic.com/research/economic-index-march-2026-report" target="_blank" rel="noopener">Anthropic Economic Index, March 2026</a>. The 100MW scale reference comes from the International Energy Agency's <em>Energy and AI</em> analysis; the annual electricity figure is the implied load at continuous operation. Water-use figures draw on disclosed reporting for Google's The Dalles data center and Microsoft's Iowa operations, along with Brookings reporting on high-end daily water demand at large data centers. Land-use estimates draw on TechTarget reporting on hyperscale campus size and market reporting on large data center land transactions. Water-stress and irrigation conflicts draw on the Lincoln Institute of Land Policy and local reporting from Arizona, Oregon, and Aragon, Spain. The AI training water-use comparison draws on Associated Press reporting about Microsoft's Iowa facilities during GPT-4 development and the water-footprint research led by Shaolei Ren at UC Riverside. Environmental justice framework draws on Robert Bullard, <em>Dumping in Dixie</em> (1990); Valerie Kuletz, <em>The Tainted Desert</em> (1998). Automation exposure estimates from Goldman Sachs Global Investment Research, "The Potentially Large Effects of Artificial Intelligence on Economic Growth" (2023); IMF, <em>World Economic Outlook</em> (April 2024).
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
