@@ -7,6 +7,7 @@ description: "XFlow cushioning and a wider platform, tested across four terrain 
 draft: false
 ---
 
+{{< rawhtml >}}
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=DM+Mono:wght@400;500&display=swap');
   :root {
@@ -512,3 +513,4 @@ draft: false
 
   </div>
 </div>
+{{< /rawhtml >}}
