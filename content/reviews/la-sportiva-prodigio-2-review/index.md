@@ -328,7 +328,7 @@
 
   <div class="body">
 
-    <p>I tested the Prodigio 2 across six ascents of Bear Peak from the Cragmoor trailhead, a route that moves through four distinct terrain types in under four miles. Shanahan Trail is wide and smooth, almost a maintained dirt road. Single track past the Mesa Trail junction toward the Slab narrows and picks up technical character. Fern Canyon is steep switchbacks, embedded rock, and roots. The ridge from the Saddle to the summit is loose scree, eroding dirt, and in early spring, snow patches that range from firm névé to afternoon slop. That sequence puts a trail shoe through a realistic range.</p>
+    <p>I tested the Prodigio 2 across multiple ascents of Bear Peak from the Cragmoor trailhead, a route that moves through four distinct terrain types in under four miles. Shanahan Trail is wide and smooth, almost a maintained dirt road. Single track past the Mesa Trail junction toward the Slab narrows and picks up technical character. Fern Canyon is steep switchbacks, embedded rock, and roots. The ridge from the Saddle to the summit is loose scree, eroding dirt, and in early spring, snow patches that range from firm névé to afternoon slop. That sequence puts a trail shoe through a realistic range.</p>
 
     <div class="spec-block">
       <h4>Specifications</h4>
