@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Sportiva Prodigio 2 Review</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+---
+title: "La Sportiva Prodigio 2 Review"
+date: 2026-04-02
+tags: ["running", "shoes", "trail"]
+categories: ["reviews"]
+description: "XFlow cushioning and a wider platform, tested across four terrain types from the Cragmoor trailhead to the summit of Bear Peak."
+layout: "review-standalone"
+draft: false
+---
+
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=DM+Mono:wght@400;500&display=swap');
   :root {
     --ink: #1a1612;
     --paper: #f7f4ef;
@@ -291,8 +295,6 @@
     margin: 32px 0;
   }
 </style>
-</head>
-<body>
 
 <div class="masthead">
   <div class="masthead-brand">Road Trail Run</div>
@@ -517,6 +519,3 @@
 
   </div>
 </article>
-
-</body>
-</html>
