@@ -4,7 +4,6 @@ date: 2026-04-02
 tags: ["running", "shoes", "trail"]
 categories: ["reviews"]
 description: "XFlow cushioning and a wider platform, tested across four terrain types from the Cragmoor trailhead to the summit of Bear Peak."
-layout: "review-standalone"
 draft: false
 ---
 
@@ -18,17 +17,6 @@ draft: false
     --rule: #d8d0c4;
     --highlight: #f0e8d8;
     --col-width: 680px;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 18px;
-    line-height: 1.75;
-    font-weight: 300;
   }
 
   .masthead {
@@ -56,10 +44,15 @@ draft: false
     color: #fff;
   }
 
-  .article {
+  .p2r {
     max-width: 800px;
     margin: 0 auto;
-    padding: 60px 40px 100px;
+    padding: 40px 0 100px;
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    font-weight: 300;
   }
 
   .kicker {
@@ -71,7 +64,7 @@ draft: false
     margin-bottom: 18px;
   }
 
-  h1 {
+  .p2r h1 {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(30px, 5vw, 48px);
     line-height: 1.12;
@@ -143,7 +136,7 @@ draft: false
     color: var(--ink);
   }
 
-  h2 {
+  .p2r h2 {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 26px;
     font-weight: 700;
@@ -153,9 +146,9 @@ draft: false
     border-bottom: 2px solid var(--rule);
     max-width: var(--col-width);
   }
-  h2::before { content: 'Test Report: '; color: var(--accent); font-style: italic; font-weight: 400; font-size: 20px; }
+  .p2r h2::before { content: 'Test Report: '; color: var(--accent); font-style: italic; font-weight: 400; font-size: 20px; }
 
-  h3 {
+  .p2r h3 {
     font-family: 'Source Serif 4', serif;
     font-size: 19px;
     font-weight: 600;
@@ -302,7 +295,7 @@ draft: false
 </div>
 <div class="hero-band">Gear Review · Trail Running · Footwear</div>
 
-<article class="article">
+<div class="p2r">
 
   <div class="kicker">La Sportiva Prodigio 2 · Field Test</div>
 
@@ -518,4 +511,4 @@ draft: false
     <hr class="divider">
 
   </div>
-</article>
+</div>
