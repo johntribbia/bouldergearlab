@@ -192,22 +192,40 @@ draft: false
   .spec-value { font-size: 15px; font-weight: 600; color: var(--ink); margin-top: 2px; }
 
   .test-note {
-    border: 1.5px solid var(--rule);
+    background: var(--highlight);
+    border-left: 4px solid var(--accent);
     padding: 20px 24px;
     margin: 32px 0;
     max-width: var(--col-width);
-    font-size: 15px;
     line-height: 1.65;
   }
   .test-note strong {
     font-family: 'DM Mono', monospace;
-    font-size: 9.5px;
+    font-size: 10px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
   }
+  .test-note dl { margin: 0; }
+  .test-note dt {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .test-note dd {
+    font-size: 15px;
+    color: var(--ink);
+    margin: 2px 0 8px 0;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 8px;
+  }
+  .test-note dd:last-child { border-bottom: none; padding-bottom: 0; }
 
   .verdict {
     background: var(--ink);
@@ -352,7 +370,7 @@ draft: false
 
     <p>Shanahan Trail out of the Cragmoor trailhead is forgiving terrain for a first read on a shoe. The surface is compact and wide, smooth enough that you pick up details technical terrain would mask: how the heel cup sits early in a run, whether the gusseted tongue stays centered, whether the forefoot has room without shifting.</p>
 
-    <p>I tested the EU 42.5, a half size up in US terms from my normal fit. That sizing is consistent with the original Prodigio and with most La Sportiva trail shoes I've run in. In it, the midfoot locks in without pressure points, the forefoot has room to splay, and the toe box doesn't crowd. La Sportiva advertises a wider platform on this version, and on Shanahan it's immediately apparent: there's more volume in the midfoot and forefoot without any sloppy movement. No heel slippage across any of the six Bear Peak outings.</p>
+    <p>I tested the EU 42.5, a half size up in US terms from my normal fit. That sizing is consistent with the original Prodigio and with most La Sportiva trail shoes I've run in. In it, the midfoot locks in without pressure points, the forefoot has room to splay, and the toe box doesn't crowd. La Sportiva advertises a wider platform on this version, and on Shanahan it's immediately apparent: there's more volume in the midfoot and forefoot without any sloppy movement. No heel slippage across any of the Bear Peak outings.</p>
 
     <img src="LaSportivaProdigio2@ConkStudio-00062.jpg" alt="Close-up of the Prodigio 2 on Shanahan Trail dirt surface">
 
@@ -380,7 +398,7 @@ draft: false
 
     <p>The midfoot PU coated insert handles the rock jab problem that soft midsoles typically compromise on. Through Fern Canyon's mid-section, where embedded rocks are everywhere underfoot, I logged far fewer painful contacts than I do in comparable cushioning-class shoes. The insert sits below the comfort layer: it shields without stiffening the ride. You don't feel it. You feel the absence of the problem it solves.</p>
 
-    <p>The wider platform is the other major story in the canyon. Where the original Prodigio could feel twitchy on off-camber footing, the Prodigio 2 tracks predictably on Fern Canyon's angled surfaces and uneven switchback landings. I trusted the lateral edge. No ankle rolls across six outings, no hesitation on technical sections at pace. The repositioned rocker adds to this: transitions through the canyon are smooth, and the ball-of-foot buffer is most apparent on steep uphill sections where you're climbing on your forefoot onto uneven rock.</p>
+    <p>The wider platform is the other major story in the canyon. Where the original Prodigio could feel twitchy on off-camber footing, the Prodigio 2 tracks predictably on Fern Canyon's angled surfaces and uneven switchback landings. I trusted the lateral edge. No ankle rolls across all of my ascents, no hesitation on technical sections at pace. The repositioned rocker adds to this: transitions through the canyon are smooth, and the ball-of-foot buffer is most apparent on steep uphill sections where you're climbing on your forefoot onto uneven rock.</p>
 
     <div class="pullquote">
       "The XFlow compound is soft enough for long miles and responsive enough that Fern Canyon at tempo doesn't feel like a negotiation."
@@ -410,7 +428,18 @@ draft: false
 
     <div class="test-note">
       <strong>Terrain-by-terrain traction · Bear Peak route</strong>
-      Shanahan (wide hard-pack): smooth, fast, quiet. Single track toward the Slab (mixed dirt and root): confident throughout. Fern Canyon (embedded rock and root): lugs bite on rock; FriXion holds on dry stone. Summit ridge scree: digs in, sheds material on each stride. Snow patches: firm névé, solid; afternoon slop, acceptable, no accumulation.
+      <dl>
+        <dt>Shanahan (wide hard-pack)</dt>
+        <dd>Smooth, fast, quiet.</dd>
+        <dt>Single track toward the Slab (mixed dirt and root)</dt>
+        <dd>Confident throughout.</dd>
+        <dt>Fern Canyon (embedded rock and root)</dt>
+        <dd>Lugs bite on rock; FriXion holds on dry stone.</dd>
+        <dt>Summit ridge scree</dt>
+        <dd>Digs in, sheds material on each stride.</dd>
+        <dt>Snow patches</dt>
+        <dd>Firm névé: solid. Afternoon slop: acceptable, no accumulation.</dd>
+      </dl>
     </div>
 
     <img src="LaSportivaProdigio2@ConkStudio-00257.jpg" alt="Prodigio 2 post-use on rocky trail — shoe after miles on technical Bear Peak terrain">
@@ -427,9 +456,9 @@ draft: false
 
     <img src="LaSportivaProdigio2@ConkStudio-00105.jpg" alt="John at Shanahan looking out toward the Flatirons — Prodigio 2 worn">
 
-    <p>Through Fern Canyon on the way down, the technical surface shifts to forefoot and midfoot landings on roots and embedded rock, where the rocker geometry earns its keep. I ran the Fern Canyon descent at tempo across three of the six outings. No nervous braking. The midsole absorbs. The platform holds. You keep moving.</p>
+    <p>Through Fern Canyon on the way down, the technical surface shifts to forefoot and midfoot landings on roots and embedded rock, where the rocker geometry earns its keep. No nervous braking. The midsole absorbs. The platform holds. You keep moving.</p>
 
-    <p>By the time the descent flattens onto single track toward the Mesa Trail junction, the shoe has absorbed a full loop's worth of load: the ascent miles, the scree, the canyon. The XFlow midsole hasn't compacted. There's still return underfoot on the final Shanahan stretch back to the car. After six Bear Peak outings in mixed early-spring conditions, the midsole response is unchanged. That is the bar for a shoe you plan to put real miles on.</p>
+    <p>By the time the descent flattens onto single track toward the Mesa Trail junction, the shoe has absorbed a full loop's worth of load: the ascent miles, the scree, the canyon. The XFlow midsole hasn't compacted. There's still return underfoot on the final Shanahan stretch back to the car. After multiple Bear Peak round trips in mixed early-spring conditions, the midsole response is unchanged. That is the bar for a shoe you plan to put real miles on.</p>
 
     <img src="LaSportivaProdigio2@ConkStudio-00247.jpg" alt="La Sportiva Prodigio 2 on Bear Peak trail — shoe on dirt with Boulder backdrop">
 
@@ -444,15 +473,14 @@ draft: false
           <li>FriXion compound grips dry stone aggressively</li>
           <li>Rocker adds forefoot buffer on technical descents</li>
           <li>Heel lockdown solid from the first mile</li>
-          <li>Breathable mesh with no irritation points across six outings</li>
+          <li>Breathable mesh with no irritation points</li>
         </ul>
       </div>
       <div class="cons">
         <h5>Limitations</h5>
         <ul>
-          <li>Mesh upper feels less durable than La Sportiva's burlier options</li>
           <li>Too cushioned for runners who rely on direct ground feel</li>
-          <li>Requires sizing up half a US size; test fit before purchasing</li>
+          <li>Requires sizing up half a EU size; test fit before purchasing</li>
         </ul>
       </div>
     </div>
