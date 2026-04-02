@@ -13,7 +13,7 @@ draft: false
   :root {
     --ink: #1a1612;
     --paper: #f7f4ef;
-    --accent: #c8401a;
+    --accent: #7db800;
     --muted: #7a7068;
     --rule: #d8d0c4;
     --highlight: #f0e8d8;
@@ -251,15 +251,15 @@ draft: false
     margin: 36px 0;
     max-width: var(--col-width);
   }
-  .pros { padding: 20px 24px; border-left: 3px solid #3a9e5a; }
-  .cons { padding: 20px 24px; border-left: 3px solid var(--accent); }
+  .pros { padding: 20px 24px; border-left: 3px solid var(--accent); }
+  .cons { padding: 20px 24px; border-left: 3px solid var(--muted); }
   .pros h5, .cons h5 { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
-  .pros h5 { color: #3a9e5a; }
-  .cons h5 { color: var(--accent); }
+  .pros h5 { color: var(--accent); }
+  .cons h5 { color: var(--muted); }
   .pros ul, .cons ul { list-style: none; padding: 0; }
   .pros ul li, .cons ul li { font-size: 14px; line-height: 1.6; padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
-  .pros ul li::before { content: '+ '; color: #3a9e5a; font-weight: 700; }
-  .cons ul li::before { content: '- '; color: var(--accent); font-weight: 700; }
+  .pros ul li::before { content: '+ '; color: var(--accent); font-weight: 700; }
+  .cons ul li::before { content: '- '; color: var(--muted); font-weight: 700; }
 
   .divider { border: none; border-top: 1px solid var(--rule); margin: 60px 0; max-width: var(--col-width); }
 
