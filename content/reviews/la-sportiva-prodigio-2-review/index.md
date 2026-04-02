@@ -1,6 +1,7 @@
 ---
 title: "La Sportiva Prodigio 2 Review"
 date: 2026-04-02
+banner: "LaSportivaProdigio2@ConkStudio-03756.jpg"
 tags: ["running", "shoes", "trail"]
 categories: ["reviews"]
 description: "XFlow cushioning and a wider platform, tested across four terrain types from the Cragmoor trailhead to the summit of Bear Peak."
