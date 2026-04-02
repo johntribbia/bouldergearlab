@@ -445,7 +445,6 @@ draft: false
 
     <img src="LaSportivaProdigio2@ConkStudio-00257.jpg" alt="Prodigio 2 post-use on rocky trail — shoe after miles on technical Bear Peak terrain">
 
-    <img src="LaSportivaProdigio2@ConkStudio-03740.jpg" alt="La Sportiva Prodigio 2 outsole — FriXion dual-compound lug detail, studio">
 
     <!-- ═══════════════════════════════════════════════
          THE DESCENT
@@ -503,6 +502,8 @@ draft: false
     <h2>Summary</h2>
 
     <p>The Prodigio 2 is La Sportiva's best iteration of this platform. The slightly softer XFlow midsole improves long-distance comfort, the deeper lugs improve traction in loose conditions, and the wider platform makes technical terrain more manageable than the original. On the Bear Peak route from Cragmoor (smooth approach, technical single track, Fern Canyon switchbacks, scree ridge, and full descent back), the shoe handled each transition cleanly.</p>
+
+      <img src="LaSportivaProdigio2@ConkStudio-03740.jpg" alt="La Sportiva Prodigio 2 outsole — FriXion dual-compound lug detail, studio">
 
     <p>The midsole softness is a real trade-off for runners who want to read terrain through the sole. This shoe is built for accumulated miles on mixed terrain where cushioning and protection matter more than tactile feedback. Those are different priorities, and the Prodigio 2 is clear about which side it's on.</p>
 
