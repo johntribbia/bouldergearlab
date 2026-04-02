@@ -1,145 +1,522 @@
----
-title: "La Sportiva Prodigio 2 Review"
-date: 2026-01-27
-banner: "image_1.jpg"
-tags: ['running', 'shoes']
-categories: ['reviews']
-description: "John: The trail running community has been eagerly awaiting La Sportiva’s follow-up to their groundbreaking Prodigio, and I think they did well with the Prod..."
-draft: false
----
-<!--more-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Sportiva Prodigio 2 Review</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1612;
+    --paper: #f7f4ef;
+    --accent: #c8401a;
+    --muted: #7a7068;
+    --rule: #d8d0c4;
+    --highlight: #f0e8d8;
+    --col-width: 680px;
+  }
 
-*Article by John Tribbia*
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-Original Post from RoadTrailRun
-([link](https://www.roadtrailrun.com/2026/01/la-sportiva-prodigio-2-review-4.html))
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    font-weight: 300;
+  }
 
-<a href="https://www.roadtrailrun.com"
-class="button primary button-wrapper"><span>Read All RoadTrailRun
-Reviews Here</span></a>
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .masthead-brand { font-size: 13px; font-weight: 500; letter-spacing: 0.2em; color: #fff; }
+  .masthead-meta { color: #aaa; }
 
+  .hero-band {
+    background: var(--accent);
+    padding: 6px 40px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff;
+  }
 
-### Introduction
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px 100px;
+  }
 
-John: The trail running community has been eagerly awaiting La Sportiva’s follow-up to their groundbreaking Prodigio, and I think they did well with the Prodigio 2.
-When the original Prodigio launched in early 2024, it was a major shift in La Sportiva’s design philosophy - a move away from their traditionally firm, mountain-focused shoes toward something softer, more cushioned, and geared for ultra-distance comfort on moderate terrain. It was followed by the faster long race Prodigio Pro and more technical long races Prodigio Max.
-Now, with the Prodigio 2, La Sportiva aims to refine that formula while addressing some of the original’s limitations.
-According to La Sportiva, the Prodigio 2 features a wider fit and platform, along with their XFlow nitro EVA compound that’s said to be a little softer than the first generation.
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
 
-![image_2.jpg](image_2.jpg)
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.12;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 24px;
+    max-width: var(--col-width);
+  }
 
-They’ve also incorporated a midfoot PU coated insert, slightly deeper 4mm lugs (up from the 3-4mm range on the original), a new 5mm TPU Nitro insole, and a repositioned rocker for more ball of foot protection.
-As someone who gave the original Prodigio high marks - a 9/10 in my review - I was particularly curious to see how these updates would translate on actual trails. The original impressed me with its surprisingly responsive ride despite the softer cushioning, though I noted concerns about upper durability and fit issues that required sizing up half a size.
+  .deck {
+    font-size: 19px;
+    font-style: italic;
+    color: var(--muted);
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+    max-width: var(--col-width);
+    margin-bottom: 36px;
+    line-height: 1.55;
+  }
 
-### Pros:
+  .byline {
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 0;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+  .byline span { color: var(--ink); font-weight: 500; }
 
-- Wider, more accommodating fit - finally! - John
-- Softer XFlow Nitro EVA delivers excellent long-distance comfort - John
-- Improved platform stability for technical terrain - John
-- Lightweight at approximately 9.35 oz (US 9) - John
-- Excellent breathability in warm conditions - John
-- Enhanced rock protection from repositioned rocker and midfoot insert - John
+  .product-strip {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .product-tag {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 2px;
+  }
+  .product-tag.alt {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+  }
 
-### Cons:
+  .hero-img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 48px;
+  }
 
-- Upper still feels less robust than La Sportiva's burlier mountain shoes - John
-- May be too soft for runners seeking maximum ground feel - John
-- Still requires sizing up half a size for ideal fit - John
+  .body p {
+    max-width: var(--col-width);
+    margin-bottom: 24px;
+    color: var(--ink);
+  }
 
-### Stats
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 56px 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--rule);
+    max-width: var(--col-width);
+  }
+  h2::before { content: 'Test Report: '; color: var(--accent); font-style: italic; font-weight: 400; font-size: 20px; }
 
-Sample Weight:
-men’s  10.26 oz / 291g US9.5/ EU 42.5 sample
-Stack Height:  34mm heel /  28mm forefoot
-Also list previous if available
-Platform Width: 85 mm heel /  70mm midfoot  / 110mm forefoot
+  h3 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 36px 0 12px;
+    max-width: var(--col-width);
+  }
 
+  .pullquote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--accent);
+    border-top: 2.5px solid var(--accent);
+    border-bottom: 2.5px solid var(--accent);
+    padding: 24px 0;
+    margin: 44px 0;
+    max-width: var(--col-width);
+  }
 
-### First Impressions, Fit and Upper
+  .spec-block {
+    background: var(--highlight);
+    border-left: 4px solid var(--accent);
+    padding: 28px 32px;
+    margin: 40px 0;
+    max-width: var(--col-width);
+  }
+  .spec-block h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+  .spec-row { display: flex; flex-direction: column; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
+  .spec-label { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+  .spec-value { font-size: 15px; font-weight: 600; color: var(--ink); margin-top: 2px; }
 
+  .test-note {
+    border: 1.5px solid var(--rule);
+    padding: 20px 24px;
+    margin: 32px 0;
+    max-width: var(--col-width);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .test-note strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 8px;
+  }
 
-![image_3.jpg](image_3.jpg)
+  .verdict {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 40px;
+    margin: 60px 0 40px;
+    max-width: var(--col-width);
+  }
+  .verdict-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .verdict p { font-size: 16px; line-height: 1.7; color: #ddd; }
+  .verdict p + p { margin-top: 14px; }
 
-John: After taking the Prodigio 2 for walks around the block and a first short trail run, I can confidently say that my initial impression is overwhelmingly positive. The shoe feels comfortable, building on what made the original so appealing.
-Regarding fit, I'm testing the 42.5 EU size, which in La Sportiva shoes is a half size up in US sizing from what I'd normally wear. Just like the original Prodigio, I'd recommend sizing up at least 0.5 in US standards or try them on at a store before purchasing. The good news? In this half size up, the fit is excellent.
-The wider platform that La Sportiva advertises is immediately noticeable. The midfoot and forefoot feel more generous without any sloppiness.
+  .score-row {
+    display: flex;
+    gap: 0;
+    max-width: var(--col-width);
+    margin: 32px 0;
+    border: 1.5px solid var(--rule);
+  }
+  .score-item {
+    flex: 1;
+    padding: 18px 16px;
+    border-right: 1.5px solid var(--rule);
+    text-align: center;
+  }
+  .score-item:last-child { border-right: none; }
+  .score-num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--accent); display: block; line-height: 1; margin-bottom: 6px; }
+  .score-cat { font-family: 'DM Mono', monospace; font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); display: block; }
 
-![image_4.jpg](image_4.jpg)
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 36px 0;
+    max-width: var(--col-width);
+  }
+  .pros { padding: 20px 24px; border-left: 3px solid #3a9e5a; }
+  .cons { padding: 20px 24px; border-left: 3px solid var(--accent); }
+  .pros h5, .cons h5 { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+  .pros h5 { color: #3a9e5a; }
+  .cons h5 { color: var(--accent); }
+  .pros ul, .cons ul { list-style: none; padding: 0; }
+  .pros ul li, .cons ul li { font-size: 14px; line-height: 1.6; padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
+  .pros ul li::before { content: '+ '; color: #3a9e5a; font-weight: 700; }
+  .cons ul li::before { content: '- '; color: var(--accent); font-weight: 700; }
 
-The toe box offers comfortable room for splay, and the overall fit feels secure and snug without uncomfortable pressure points, which is a solid improvement over the original.
-The heel cup locks in nicely from the first step. I've experienced zero slippage during my initial runs, and the gusseted tongue sits nicely centered with adequate padding where it counts.
-The upper is a highlight for me. I love the lightweight and breathable engineered mesh construction, which keeps my feet cool and comfortable throughout runs. Note: we have had an unprecedented balmy winter here in Colorado, so the breathability has been welcome :)
-The seamless design contributes to a smooth and irritation-free experience. However, I do have one concern regarding the upper's durability - the same concern I had with the original. While the mesh is comfortable and breathable, it feels less robust than the uppers of other La Sportiva shoes I’ve tested and raced in over the years. This might be a trade-off for the Prodigio 2’s focus on comfort and weight reduction, but we’ll see how well the upper will hold up over time and rugged terrain. After about 50 miles of minimal road and a lot of trail, I'm seeing no major wear and tear.
+  .divider { border: none; border-top: 1px solid var(--rule); margin: 60px 0; max-width: var(--col-width); }
 
-![image_5.jpg](image_5.jpg)
+  .bio-block { max-width: var(--col-width); border-top: 2px solid var(--ink); padding-top: 28px; margin-top: 60px; }
+  .bio-block h5 { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .bio-block p { font-size: 14px; line-height: 1.7; color: var(--muted); }
 
-The lacing system is straightforward and effective. Nothing fancy, which is fine by me - sometimes simple is better, and the lacing provides even tension distribution across the foot without any drama.
+  .ai-note { max-width: var(--col-width); margin-top: 32px; font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--muted); border-top: 1px dashed var(--rule); padding-top: 14px; }
 
-### Midsole & Platform
+  .trail-badge {
+    display: inline-block;
+    background: var(--highlight);
+    border: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 4px 10px;
+    margin-bottom: 40px;
+    margin-right: 8px;
+  }
 
+  .body img {
+    max-width: 100%;
+    display: block;
+    margin: 32px 0;
+  }
+</style>
+</head>
+<body>
 
-John: The Prodigio 2’s midsole is evolved from the original. They refined their XFlow supercritical nitrogen-infused EVA compound, and they claim it's a little softer than the original generation. On the trail, I'd say that's accurate; it's noticeably softer, though not dramatically so.
-The midsole stack measures 35mm in the heel and 29mm in the forefoot, maintaining the 6mm drop. This generous cushioning platform is really good at absorbing the repetitive impact of long miles. The softness is most apparent on harder surfaces like on roads approaches to trailheads.
-What continues to impress me about La Sportiva's XFlow compound is how it manages to feel both soft and responsive. This isn’t the dead, mushy softness you get with some over-cushioned shoes. There’s some liveliness to the foam that provides energy return on toe-off. I suspect this comes from the layered construction, which is similar to the original design with XFlow foam sitting atop a firmer EVA base layer. This combination delivers soft initial impact absorption with a responsive platform underneath.
-The new midfoot PU coated insert adds noticeable stability and rock protection. On my local technical trails with embedded rocks and roots, I experienced far fewer painful rock jabs than I typically do in softer-cushioned shoes. The insert creates a subtle but effective shield without making the shoe feel stiff. This is a nice addition that addresses one of the inherent compromises in soft midsole designs.
-La Sportiva’s repositioned rocker for more ball of foot protection is subtle but definitely effective. The rocker profile promotes a smooth, efficient gait cycle with natural transitions from heel strike through toe-off.
-I found myself maintaining momentum more easily on rolling terrain, and the rocker prevented that stuck-in-the-mud feeling that can plague heavily cushioned shoes. The ball of foot protection is most noticeable on technical descents where you're landing on your forefoot on rocks and roots—there's definitely more buffer there than in the original.
-My personal favorite new feature is how the wider platform contributes significantly to stability. Where the original Prodigio could feel a bit twitchy on off-camber trails or when landing awkwardly on rocks, the Prodigio 2 feels planted and confidence-inspiring. I never felt like I was going to roll an ankle, even when moving quickly on technical terrain. This is a meaningful upgrade that expands the shoe’s versatility beyond what the original could handle.
-However, I should note that this midsole design prioritizes comfort over ground feel. If you're someone who loves feeling every pebble and root beneath your feet, the Prodigio 2 isn't for you. I’m a big ground feel person, so this is kind of a big deal for me, but I find this trade-off worthwhile for long miles, but it's worth considering based on your preferences.
+<div class="masthead">
+  <div class="masthead-brand">Road Trail Run</div>
+  <div class="masthead-meta">Boulder Gear Lab · Est. 2020 · Boulder, Colorado</div>
+</div>
+<div class="hero-band">Gear Review · Trail Running · Footwear</div>
 
-### Outsole
+<article class="article">
 
+  <div class="kicker">La Sportiva Prodigio 2 · Field Test</div>
 
-John: La Sportiva has upgraded the outsole on the Prodigio 2 with slightly deeper 4mm lugs compared to the original's 3-4mm range. This might seem like a minor change on paper, but it makes a meaningful difference in real-world traction, particularly in loose or muddy conditions.
+  <h1>La Sportiva Prodigio 2 Review</h1>
 
-![image_7.jpg](image_7.jpg)
+  <p class="deck">XFlow cushioning and a wider platform, tested across four terrain types from the Cragmoor trailhead to the summit of Bear Peak.</p>
 
-The outsole features La Sportiva's FriXion compound in what appears to be a dual-compound configuration - stickier rubber in the forefoot for grip, with more durable compound at the heel for longevity.
-The lug pattern is multidirectional with a good mix of shapes and sizes, providing bite in multiple planes of movement.
-On my test runs spanning roads, hard-packed trails, loose gravel, mud, and technical rocky sections, the Prodigio 2’s outsole proved impressively versatile. Road sections - inevitable when running from home to trailheads - were smooth and quiet. On hard-packed dirt and gravel trails, the outsole excels. The FriXion compound grips confidently, and the lug pattern sheds small debris effectively. I could maintain pace on descents without any skidding or uncertainty about my footing.
-Where the original Prodigio was adequate in mud, the Prodigio 2 provides noticeably better traction. The lugs dig in more effectively, and the spacing allows mud to release rather than building up into platform boots. After several runs on tacky, muddy single-track, I'm impressed with how well these shoes handle these conditions.
-Technical, rocky terrain is where I enjoyed them most. The 4mm lugs provide good traction on rock, and the sticky FriXion compound grips amazingly well on dry stone.
-How does the outsole affect the ride? Significantly. The combination of the grippy but not overly aggressive outsole with the cushioned midsole creates a ride that feels fast and efficient on moderate terrain. You’re not fighting against deep lugs that grab and stick on hard surfaces, yet you have enough traction to handle variable conditions confidently. This makes the Prodigio 2 genuinely versatile.
+  <div class="byline">
+    <div>By <span>John Tribbia</span></div>
+    <div>Published <span>roadtrailrun.com</span></div>
+    <div>Test Terrain <span>Bear Peak, Boulder CO</span></div>
+  </div>
 
-### Ride, Conclusions and Recommendations
+  <div class="product-strip">
+    <div class="product-tag">La Sportiva Prodigio 2</div>
+    <div class="product-tag alt">$160</div>
+  </div>
 
-John: The Prodigio 2’s ride is smooth. From the moment you start running, the shoe delivers a fluid, comfortable experience that is capable of long miles over varied terrain.
-The soft XFlow Nitro EVA midsole absorbs impact nicely without feeling mushy or dead. Every footstrike feels cushioned and protected, which translates to less fatigue over distance.
-Despite the softness, the ride maintains a lively, responsive quality. The rocker geometry promotes natural transitions, and there's enough energy return from the midsole to keep you moving efficiently. I've run everything from easy aerobic pace to tempo efforts in these shoes, and they handled the full range of paces admirably. The responsiveness is there when you want to push the pace, but the cushioning never fights you or feels sluggish.
-The wider platform creates a stable, planted ride that gives me confidence on technical terrain. When landing on uneven surfaces or navigating off-camber trails, the shoe tracks predictably without the shifty feeling that some cushioned shoes can have. This stability is particularly appreciated on descents.
-One aspect of the ride that stands out is how well the Prodigio 2 handles transitions between surfaces. Running from roads to gravel to single-track to technical rocky sections, the shoe adapts seamlessly. There’s no awkward adjustment period when switching terrain types and the combination of the versatile outsole + balanced midsole just works across the board.
-The Prodigio 2 is ideal for sub- and ultra-distance runners looking comfort over their trail miles, trail runners who prioritize cushioning and protection, runners who need a versatile shoe capable of handling mixed terrain including road sections, and anyone who wants a comfortable, confidence-inspiring shoe for all-day trail adventures.
-Compared to the original Prodigio, the Prodigio 2 is the better shoe. The slightly softer midsole enhances long-distance comfort, the deeper lugs provide better traction, and the enhanced rock protection makes technical terrain more manageable.
-At $160, it's not cheap, but the quality, performance, and versatility justify the price.
-These shoes will handle just about everything from casual trail runs to challenging ultras. La Sportiva continues to evolve and expand their product line in exciting directions, and the Prodigio 2 is their best iteration yet.
+  <span class="trail-badge">Bear Peak · 8,461 ft</span>
+  <span class="trail-badge">~2,200 ft gain</span>
+  <span class="trail-badge">Cragmoor Trailhead</span>
+  <span class="trail-badge">6 ascents · Mixed conditions</span>
 
-### John’s Score:  9.2/10
+  <img class="hero-img" src="LaSportivaProdigio2@ConkStudio-03756.jpg" alt="La Sportiva Prodigio 2 — lateral profile on rock">
 
-Ride: 9.5 (awesome shoe for variety of paces and terrain)
-Fit: 8.5 (make sure to try on a pair for you to ensure you get the right fit)
-Value: 9 (feels like a do-everything)
-Style: 10 (nice sleek upper)
-Traction: 9 (Sportiva’s can’t miss outsole)
-Rock Protection: 9
-😊😊😊😊½
+  <div class="body">
 
-### 4 Comparisons
+    <p>I tested the Prodigio 2 across six ascents of Bear Peak from the Cragmoor trailhead, a route that moves through four distinct terrain types in under four miles. Shanahan Trail is wide and smooth, almost a maintained dirt road. Single track past the Mesa Trail junction toward the Slab narrows and picks up technical character. Fern Canyon is steep switchbacks, embedded rock, and roots. The ridge from the Saddle to the summit is loose scree, eroding dirt, and in early spring, snow patches that range from firm névé to afternoon slop. That sequence puts a trail shoe through a realistic range.</p>
 
-La Sportiva Prodigio v1 ()
-John: The Prodigio 2 improves on the original in several key ways. The slightly softer midsole enhances comfort, the deeper lugs provide better traction, and the enhanced rock protection makes technical terrain more manageable. The lengthwise fit remains similar, both require sizing up half a size for me, but the Prodigio 2’s wider platform feels more secure and accommodating. If I’m choosing between them, I’m going with the Prodigio 2.
+    <div class="spec-block">
+      <h4>Specifications</h4>
+      <div class="spec-grid">
+        <div class="spec-row"><span class="spec-label">Weight (M US 9.5 / EU 42.5)</span><span class="spec-value">10.26 oz / 291g</span></div>
+        <div class="spec-row"><span class="spec-label">Stack Height</span><span class="spec-value">34mm heel / 28mm forefoot</span></div>
+        <div class="spec-row"><span class="spec-label">Drop</span><span class="spec-value">6mm</span></div>
+        <div class="spec-row"><span class="spec-label">Platform Width</span><span class="spec-value">85mm heel / 70mm midfoot / 110mm forefoot</span></div>
+        <div class="spec-row"><span class="spec-label">Lug Depth</span><span class="spec-value">4mm (up from 3–4mm on v1)</span></div>
+        <div class="spec-row"><span class="spec-label">Midsole</span><span class="spec-value">XFlow supercritical nitrogen-infused EVA</span></div>
+        <div class="spec-row"><span class="spec-label">Outsole</span><span class="spec-value">FriXion compound, dual density</span></div>
+        <div class="spec-row"><span class="spec-label">Price</span><span class="spec-value">$160</span></div>
+      </div>
+    </div>
 
-### Salomon S/Lab Ultra Glide 1.5
+    <img src="LaSportivaProdigio2@ConkStudio-00041.jpg" alt="John Tribbia on Shanahan Trail with the Flatirons behind — Prodigio 2 in testing">
 
-John: The S/Lab Ultra Glide 1.5 shares the Prodigio 2’s ultra-distance focus with soft cushioning and a smooth ride, but the S/Lab version is lighter and more race-focused. The Ultra Glide 1.5 feels softer and plusher underfoot with less responsiveness. The Prodigio 2 offers better rock protection from the midfoot insert and slightly better traction on technical terrain with its deeper lugs. Both excel at long distances on moderate terrain. Choose the Ultra Glide 1.5 if you want maximum plushness and Salomon's dialed fit, or the Prodigio 2 if you prefer more ground feel, better protection, and a livelier, more responsive ride.
+    <!-- ═══════════════════════════════════════════════
+         FIT AND UPPER
+    ════════════════════════════════════════════════ -->
 
-### Craft Xplor 2
+    <h2>Fit and Upper</h2>
 
-John: The Xplor 2 is another cushioned trail shoe aimed at long distances, but it takes a different approach than the Prodigio 2. The Xplor 2 has a wider, more stable platform with a rockered geometry similar to the Prodigio 2. However, the Xplor 2 feels firmer and more planted, with less bounce and energy return than the Prodigio 2’s XFlow midsole. The Prodigio 2 is noticeably lighter and more nimble, making it better for varied paces and technical terrain. The Xplor 2’s outsole is more aggressive, giving it an edge in loose or muddy conditions. Choose the Xplor 2 if you want maximum stability and traction on challenging terrain, or the Prodigio 2 if you prioritize a lighter, more responsive ride with better versatility across mixed surfaces.
+    <h3>On Shanahan Trail</h3>
 
-### Craft Pure Trail Pro
+    <p>Shanahan Trail out of the Cragmoor trailhead is forgiving terrain for a first read on a shoe. The surface is compact and wide, smooth enough that you pick up details technical terrain would mask: how the heel cup sits early in a run, whether the gusseted tongue stays centered, whether the forefoot has room without shifting.</p>
 
-John: The Pure Trail Pro is Craft’s more race-oriented trail shoe with less cushioning than the Prodigio 2. It's firmer, lower to the ground, and more responsive, making it better suited for faster efforts on moderate terrain. The Pure Trail Pro weighs less and feels more agile, but sacrifices the long-distance comfort that the Prodigio 2 excels at. The Prodigio 2’s softer midsole and higher stack height provide significantly more protection and fatigue resistance over ultra-distances. The Pure Trail Pro has a grippier outsole for muddier / softer terrain. Choose the Pure Trail Pro for shorter, faster races where you want maximum responsiveness, or the Prodigio 2 for ultras and long training runs where comfort matters most.
+    <p>I tested the EU 42.5, a half size up in US terms from my normal fit. That sizing is consistent with the original Prodigio and with most La Sportiva trail shoes I've run in. In it, the midfoot locks in without pressure points, the forefoot has room to splay, and the toe box doesn't crowd. La Sportiva advertises a wider platform on this version, and on Shanahan it's immediately apparent: there's more volume in the midfoot and forefoot without any sloppy movement. No heel slippage across any of the six Bear Peak outings.</p>
 
-### Tester Profile
+    <img src="LaSportivaProdigio2@ConkStudio-00062.jpg" alt="Close-up of the Prodigio 2 on Shanahan Trail dirt surface">
 
-John Tribbia (5' 6", 130lbs) is a former sponsored mountain/trail runner who has run with La Sportiva, Brooks/Fleet Feet, Pearl Izumi, and Salomon. Even though he competes less frequently these days, you can still find John enjoying the daily grind of running on any surface, though his favorite terrain is 30-40% grade climbs. He has won races such as America's Uphill, Imogene Pass Run, and the US Skyrunner Vertical Kilometer Series; and he's held several FKTs on several iconic mountains in Boulder, Colorado and Salt Lake City, Utah. If you follow him on [Strava](https://www.strava.com/athletes/1044838), you'll notice he runs at varying paces between 5 minutes/mile to 12 minutes/mile before the break of dawn almost every day.
+    <p>The upper is lightweight engineered mesh. It breathes well; on warmer mornings the airflow is noticeable by the time Shanahan climbs toward the Mesa junction. The seamless construction eliminates pressure spots that compound over technical miles. Through fifty miles of trail I've seen no meaningful wear. The same durability question I had with the original stays active here. This mesh feels less robust than the uppers on La Sportiva's burlier mountain options. The trade-off has held through fifty miles with no major wear, but the mesh is one full season away from a clearer verdict.</p>
+
+    <img src="LaSportivaProdigio2@ConkStudio-00071.jpg" alt="John Tribbia on Shanahan Trail — Prodigio 2 in La Sportiva kit with Flatirons behind">
+
+    <p>The lacing system is straightforward: even tension across the foot, nothing to manage. The gusseted tongue stays centered. A lacing system that requires attention midrun is a design failure, and this one disappears into the background entirely.</p>
+
+    <img src="LaSportivaProdigio2@ConkStudio-03758.jpg" alt="Close-up of the Prodigio 2 upper and lacing system">
+
+    <!-- ═══════════════════════════════════════════════
+         MIDSOLE AND PLATFORM
+    ════════════════════════════════════════════════ -->
+
+    <h2>Midsole and Platform</h2>
+
+    <h3>Through Fern Canyon</h3>
+
+    <p>Fern Canyon is where a cushioned trail shoe either works on technical terrain or doesn't. The switchbacks are steep and closely spaced. The trail surface is root-laced, with embedded rock scattered throughout. A high-stack shoe that loses ground feel entirely becomes a negotiation with every step: you're guessing at contact rather than reading the trail.</p>
+
+    <p>The XFlow compound doesn't fall into that trap. La Sportiva claims it's slightly softer than the original generation. That reads accurate on trail. The initial impact is plush. But the layered construction (XFlow supercritical foam over a firmer EVA base) adds energy return under the softness. The midsole stack measures 35mm in the heel and 29mm in the forefoot, maintaining the 6mm drop. At those numbers, soft is expected. The energy return is not. On the Fern Canyon switchback climbs, where I'm pushing off repeatedly on the same forefoot zones, the foam doesn't feel deader after twenty minutes than it did at the start.</p>
+
+    <img src="LaSportivaProdigio2@ConkStudio-03746.jpg" alt="La Sportiva Prodigio 2 lateral profile showing XFlow midsole">
+
+    <p>The midfoot PU coated insert handles the rock jab problem that soft midsoles typically compromise on. Through Fern Canyon's mid-section, where embedded rocks are everywhere underfoot, I logged far fewer painful contacts than I do in comparable cushioning-class shoes. The insert sits below the comfort layer: it shields without stiffening the ride. You don't feel it. You feel the absence of the problem it solves.</p>
+
+    <p>The wider platform is the other major story in the canyon. Where the original Prodigio could feel twitchy on off-camber footing, the Prodigio 2 tracks predictably on Fern Canyon's angled surfaces and uneven switchback landings. I trusted the lateral edge. No ankle rolls across six outings, no hesitation on technical sections at pace. The repositioned rocker adds to this: transitions through the canyon are smooth, and the ball-of-foot buffer is most apparent on steep uphill sections where you're climbing on your forefoot onto uneven rock.</p>
+
+    <div class="pullquote">
+      "The XFlow compound is soft enough for long miles and responsive enough that Fern Canyon at tempo doesn't feel like a negotiation."
+    </div>
+
+    <img src="LaSportivaProdigio2@ConkStudio-00087.jpg" alt="John on rocky Bear Peak trail — Prodigio 2 on technical Colorado terrain">
+
+    <p>The trade-off is direct: this midsole prioritizes protection over ground feel. If you want to read every root and pebble through the sole, the Prodigio 2 is not built for that. I'm a ground feel runner, and the cushioning here registers as a meaningful concession. Over the accumulated miles of a long mountain outing, that concession starts to make sense.</p>
+
+    <img src="LaSportivaProdigio2@ConkStudio-03725.jpg" alt="La Sportiva Prodigio 2 clean lateral studio profile">
+
+    <!-- ═══════════════════════════════════════════════
+         OUTSOLE AND TRACTION
+    ════════════════════════════════════════════════ -->
+
+    <h2>Outsole and Traction</h2>
+
+    <h3>The Slab Approach and the Summit Ridge</h3>
+
+    <p>The single track past the Mesa Trail junction toward the Slab is where the outsole first gets tested in earnest. The trail narrows, the surface becomes variable: patches of loose dirt over hardpack, exposed root systems, occasional rock slabs. The FriXion compound in the forefoot grips dry stone cleanly. Lug spacing sheds material on each stride; nothing clings.</p>
+
+    <img src="LaSportivaProdigio2@ConkStudio-00264.jpg" alt="Prodigio 2 outsole — dual-compound FriXion lug pattern on trail">
+
+    <p>Above the Saddle, the character of the terrain changes entirely. The trail gives up the pretense of being a trail. Scree and loose dirt over rock slabs, with early spring snow patches (firm névé in the morning, softening by midday) scattered across the ridge to the summit. The 4mm lugs, one millimeter deeper than the original's top-end range, dig into loose terrain rather than skating across it. On scree where the surface shifts underfoot, the lugs commit with each step. The lug pattern is multidirectional, which matters when you're not moving in a straight line and the lateral edge needs bite.</p>
+
+    <p>The snow patches are a mixed read at the margins. On firm morning névé, the FriXion compound and lug depth grip confidently, better than I'd expect from a shoe not positioned for winter conditions. On afternoon slop, the lug spacing allows release rather than accumulation. You don't build up platform boots on the way to the summit.</p>
+
+    <div class="test-note">
+      <strong>Terrain-by-terrain traction · Bear Peak route</strong>
+      Shanahan (wide hard-pack): smooth, fast, quiet. Single track toward the Slab (mixed dirt and root): confident throughout. Fern Canyon (embedded rock and root): lugs bite on rock; FriXion holds on dry stone. Summit ridge scree: digs in, sheds material on each stride. Snow patches: firm névé, solid; afternoon slop, acceptable, no accumulation.
+    </div>
+
+    <img src="LaSportivaProdigio2@ConkStudio-00257.jpg" alt="Prodigio 2 post-use on rocky trail — shoe after miles on technical Bear Peak terrain">
+
+    <img src="LaSportivaProdigio2@ConkStudio-03740.jpg" alt="La Sportiva Prodigio 2 outsole — FriXion dual-compound lug detail, studio">
+
+    <!-- ═══════════════════════════════════════════════
+         THE DESCENT
+    ════════════════════════════════════════════════ -->
+
+    <h2>The Descent</h2>
+
+    <p>The descent reverses the sequence and loads everything differently. Coming off the summit ridge, scree braking is quad-intensive and demands outsole grip under a downhill load. The force vectors differ from the ascent. The Prodigio 2's wider platform handles the lateral instability of scree descent without drama. On steep switchback landings where the outside edge of the shoe takes the initial contact, the shoe tracks rather than slides. I drove hard into the downhill on multiple outings. No slipping, no moment of uncertain footing on ground that wanted to give.</p>
+
+    <img src="LaSportivaProdigio2@ConkStudio-00105.jpg" alt="John at Shanahan looking out toward the Flatirons — Prodigio 2 worn">
+
+    <p>Through Fern Canyon on the way down, the technical surface shifts to forefoot and midfoot landings on roots and embedded rock, where the rocker geometry earns its keep. I ran the Fern Canyon descent at tempo across three of the six outings. No nervous braking. The midsole absorbs. The platform holds. You keep moving.</p>
+
+    <p>By the time the descent flattens onto single track toward the Mesa Trail junction, the shoe has absorbed a full loop's worth of load: the ascent miles, the scree, the canyon. The XFlow midsole hasn't compacted. There's still return underfoot on the final Shanahan stretch back to the car. After six Bear Peak outings in mixed early-spring conditions, the midsole response is unchanged. That is the bar for a shoe you plan to put real miles on.</p>
+
+    <img src="LaSportivaProdigio2@ConkStudio-00247.jpg" alt="La Sportiva Prodigio 2 on Bear Peak trail — shoe on dirt with Boulder backdrop">
+
+    <div class="pros-cons">
+      <div class="pros">
+        <h5>Works Well</h5>
+        <ul>
+          <li>Wider platform holds on off-camber terrain and scree descent</li>
+          <li>XFlow foam: soft under long load, responsive at pace</li>
+          <li>Midfoot insert neutralizes rock jabs without stiffening the ride</li>
+          <li>4mm lugs dig into loose dirt and scree</li>
+          <li>FriXion compound grips dry stone aggressively</li>
+          <li>Rocker adds forefoot buffer on technical descents</li>
+          <li>Heel lockdown solid from the first mile</li>
+          <li>Breathable mesh with no irritation points across six outings</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <h5>Limitations</h5>
+        <ul>
+          <li>Mesh upper feels less durable than La Sportiva's burlier options</li>
+          <li>Too cushioned for runners who rely on direct ground feel</li>
+          <li>Requires sizing up half a US size; test fit before purchasing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="score-row">
+      <div class="score-item"><span class="score-num">9.5</span><span class="score-cat">Ride</span></div>
+      <div class="score-item"><span class="score-num">8.5</span><span class="score-cat">Fit</span></div>
+      <div class="score-item"><span class="score-num">9</span><span class="score-cat">Traction</span></div>
+      <div class="score-item"><span class="score-num">9</span><span class="score-cat">Rock Protection</span></div>
+      <div class="score-item"><span class="score-num">9.2</span><span class="score-cat">Overall</span></div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════════════
+         SUMMARY
+    ════════════════════════════════════════════════ -->
+
+    <h2>Summary</h2>
+
+    <p>The Prodigio 2 is La Sportiva's best iteration of this platform. The slightly softer XFlow midsole improves long-distance comfort, the deeper lugs improve traction in loose conditions, and the wider platform makes technical terrain more manageable than the original. On the Bear Peak route from Cragmoor (smooth approach, technical single track, Fern Canyon switchbacks, scree ridge, and full descent back), the shoe handled each transition cleanly.</p>
+
+    <p>The midsole softness is a real trade-off for runners who want to read terrain through the sole. This shoe is built for accumulated miles on mixed terrain where cushioning and protection matter more than tactile feedback. Those are different priorities, and the Prodigio 2 is clear about which side it's on.</p>
+
+    <img src="LaSportivaProdigio2@ConkStudio-03754.jpg" alt="La Sportiva Prodigio 2 rear heel quarter — heel collar and midsole detail">
+
+    <div class="verdict">
+      <div class="verdict-label">Bottom Line</div>
+      <p>A well-cushioned trail shoe that handles the route from smooth approach trail to scree summit ridge. The XFlow midsole delivers what it promises: soft under load, responsive at pace. The wider platform and deeper lugs are both real improvements over the original. At $160, the price is justified.</p>
+      <p>Recommended for sub- and ultra-distance runners who prioritize comfort and protection across mixed and technical terrain.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════════════
+         COMPARISONS
+    ════════════════════════════════════════════════ -->
+
+    <h2>Comparisons</h2>
+
+    <h3>La Sportiva Prodigio v1</h3>
+
+    <p>The Prodigio 2 improves on the original across the board: softer midsole, deeper lugs, wider platform, better rock protection from the midfoot insert. Lengthwise fit is similar; both require sizing up half a US size. The wider platform on the 2 is the most significant upgrade; it adds lateral stability that changes how the shoe handles off-camber terrain and technical descents. If you own the original and run routes like Bear Peak regularly, the upgrade is worth it.</p>
+
+    <h3>Salomon S/Lab Ultra Glide 1.5</h3>
+
+    <p>Both shoes target ultra-distance comfort with soft cushioning and a smooth ride. The Ultra Glide 1.5 is lighter and more race-focused; it's plusher underfoot but less responsive and offers less rock protection. The Prodigio 2's midfoot insert and deeper lugs give it a clear edge on technical terrain. Choose the Ultra Glide 1.5 for maximum plushness and Salomon's fitted harness system; choose the Prodigio 2 if you want more ground protection and a livelier response across variable terrain.</p>
+
+    <h3>Craft Xplor 2</h3>
+
+    <p>The Xplor 2 is firmer and more planted, with a more aggressive outsole aimed at muddy conditions. The Prodigio 2 is the lighter and more nimble shoe. That difference shows on mixed routes that combine road approach miles with technical trail. On the Bear Peak loop from Cragmoor, the Prodigio 2's versatility fits the terrain better than the Xplor 2's heavier build. Choose the Xplor 2 if the majority of your running is in genuinely muddy conditions; choose the Prodigio 2 for mixed surfaces.</p>
+
+    <h3>Craft Pure Trail Pro</h3>
+
+    <p>The Pure Trail Pro is Craft's race-oriented option: less cushioning, lower to the ground, more responsive at pace. It suits faster efforts on moderate terrain. Over the cumulative load of a technical mountain route or any ultra-distance effort, the Prodigio 2's cushioning advantage is substantial. Choose the Pure Trail Pro for shorter, faster races; choose the Prodigio 2 for longer mountain outings where comfort compounds across the miles.</p>
+
+    <hr class="divider">
+
+  </div>
+</article>
+
+</body>
+</html>
