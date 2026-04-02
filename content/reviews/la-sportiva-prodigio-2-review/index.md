@@ -335,11 +335,9 @@ draft: false
   </div>
 
   <span class="trail-badge">Bear Peak · 8,461 ft</span>
-  <span class="trail-badge">~2,200 ft gain</span>
+  <span class="trail-badge">~2,800 ft gain</span>
   <span class="trail-badge">Cragmoor Trailhead</span>
-  <span class="trail-badge">6 ascents · Mixed conditions</span>
-
-  <img class="hero-img" src="LaSportivaProdigio2@ConkStudio-03756.jpg" alt="La Sportiva Prodigio 2 — lateral profile on rock">
+  <span class="trail-badge">Multiple ascents · Mixed conditions</span>
 
   <div class="body">
 
@@ -458,7 +456,7 @@ draft: false
 
     <p>Through Fern Canyon on the way down, the technical surface shifts to forefoot and midfoot landings on roots and embedded rock, where the rocker geometry earns its keep. No nervous braking. The midsole absorbs. The platform holds. You keep moving.</p>
 
-    <p>By the time the descent flattens onto single track toward the Mesa Trail junction, the shoe has absorbed a full loop's worth of load: the ascent miles, the scree, the canyon. The XFlow midsole hasn't compacted. There's still return underfoot on the final Shanahan stretch back to the car. After multiple Bear Peak round trips in mixed early-spring conditions, the midsole response is unchanged. That is the bar for a shoe you plan to put real miles on.</p>
+    <p>By the time the descent flattens onto single track toward the Mesa Trail junction, the shoe has absorbed a full loop's worth of load: the ascent miles, the scree, the canyon. The XFlow midsole hasn't compacted. There's still return underfoot on the final Shanahan stretch back to my house. After multiple Bear Peak round trips in mixed early-spring conditions, the midsole response is unchanged. That is the bar for a shoe you plan to put real miles on.</p>
 
     <img src="LaSportivaProdigio2@ConkStudio-00247.jpg" alt="La Sportiva Prodigio 2 on Bear Peak trail — shoe on dirt with Boulder backdrop">
 
