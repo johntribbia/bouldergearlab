@@ -208,7 +208,7 @@ A 100MW hyperscale facility running near capacity draws roughly 876,000 megawatt
 | Fresh Water | 355M+ gallons | Scale of reported use at Google The Dalles, Microsoft Iowa |
 | Land Use | 200-500 acres | Often converted from farmland or open land |
 
-Electricity, water, and land flow into the facility from the host community. AI services flow outward to a user base concentrated somewhere else. The costs — grid strain, water table drawdown, rate increases — stay local.
+Electricity, water, and land flow into the facility from the host community. AI services flow outward to a user base concentrated somewhere else. The costs stay local: grid strain, water table drawdown, rate increases.
 
 ---
 
@@ -238,7 +238,7 @@ The case on siting and procedural grounds stands without the overlap claim. Reac
 
 ## The Aggregate Pattern
 
-AI is an infrastructure-intensive industry. Infrastructure-intensive industries have a track record in the American context that Bullard documented three decades ago: physical burden migrates toward communities with less capacity to set terms. The migration is not typically the result of deliberate malice. It results from developers following rational incentives — cheap land, limited organized resistance, local officials looking for tax revenue — and from communities lacking the legal and technical staff to slow the intake down long enough to change the terms.
+AI is an infrastructure-intensive industry. Infrastructure-intensive industries have a track record in the American context that Bullard documented three decades ago: physical burden migrates toward communities with less capacity to set terms. The migration is not typically the result of deliberate malice. It results from developers following rational incentives (cheap land, limited organized resistance, local officials looking for tax revenue) and from communities lacking the legal and technical staff to slow the intake down long enough to change the terms.
 
 The convergence finding within the US is genuinely significant. It suggests the access side of the ledger can improve over time within a shared institutional environment. The infrastructure side has not historically tracked the adoption side. The regions that absorbed coal infrastructure did not proportionally absorb coal wealth. The communities that absorbed petrochemical infrastructure absorbed the contamination at rates disconnected from their share of the economic benefit. The pattern is consistent enough that the burden of proof runs the other way: what is different this time that would produce a different result.
 
