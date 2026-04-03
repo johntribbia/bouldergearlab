@@ -168,7 +168,7 @@ banner: "aj-banner.svg"
 
 ---
 
-The **Anthropic Economic Index** for March 2026 contains a number that deserves more attention than it has received: 49% of jobs have now seen at least a quarter of their tasks performed using Claude. Breadth is not the same as equity. The same report documents a pattern that should concern anyone familiar with how industrial booms distribute their costs.
+The **Anthropic Economic Index** for March 2026 includes a finding that hasn't gotten much traction in the coverage of it: 49% of jobs have now seen at least a quarter of their tasks performed using Claude. Breadth is not the same as equity. The same report documents a pattern familiar from every major industrial boom before it: costs and benefits don't settle in the same places.
 
 ---
 
@@ -180,7 +180,7 @@ Same period. Converging within the US. Diverging across countries.
 
 This is not mainly a bandwidth or language problem. Using AI at work requires an employer who has built it into workflows, a job structured around knowledge work, and enough time on the platform to develop fluency. That last part matters more than the headline convergence numbers suggest.
 
-The March 2026 report documents that users who have been on Claude for six months or more have a 10% higher conversation success rate, independent of country, task type, or other factors. They also do more work-related tasks and fewer personal ones. The most plausible explanation is learning-by-doing: experienced users have developed habits that make them better at the tool. The implication is that the three-point global concentration shift understates the real dynamic. The advantage of early adoption compounds. Those already ahead get more from each capability improvement than those just arriving.
+The March 2026 report documents that users who have been on Claude for six months or more have a 10% higher conversation success rate, independent of country, task type, or other factors. They also do more work-related tasks and fewer personal ones. The most plausible explanation is learning-by-doing: experienced users have developed habits that make them better at the tool. The three-point global concentration shift understates the real dynamic. The advantage of early adoption compounds. Those already ahead get more from each capability improvement than those just arriving.
 
 The US convergence finding is also decelerating. The report now projects 5 to 9 years to reach roughly equal per-capita usage across states, up from the 2 to 5 year estimate in the previous report.
 
@@ -208,7 +208,7 @@ A 100MW hyperscale facility running near capacity draws roughly 876,000 megawatt
 | Fresh Water | 355M+ gallons | Scale of reported use at Google The Dalles, Microsoft Iowa |
 | Land Use | 200-500 acres | Often converted from farmland or open land |
 
-The pattern of resource extraction is straightforward. Electricity, water, and land flow into the facility from the host community. AI services flow outward to a user base concentrated in a different set of places. The infrastructure costs, grid strain, water table drawdown, rate increases, stay local.
+Electricity, water, and land flow into the facility from the host community. AI services flow outward to a user base concentrated somewhere else. The costs — grid strain, water table drawdown, rate increases — stay local.
 
 ---
 
@@ -218,11 +218,11 @@ Bullard's framework distinguishes between distributive questions (who bears cost
 
 Rural planning boards typically do not have hydrology staff or environmental impact modeling capacity. When a developer representing a hyperscaler walks in with a 200-page feasibility study, the asymmetry is not between competing arguments but between technical capacity and its absence. The most consequential decisions have already been made before the first public meeting.
 
-Bullard's 1990 findings were the result of decisions made years earlier, in rooms where affected communities had no one present. The siting decisions happening now, across dozens of communities evaluated separately, have the same structure.
+Bullard's 1990 findings were the result of decisions made years earlier, in rooms affected communities never entered. The siting decisions happening now, across dozens of communities evaluated separately, have the same structure.
 
 ---
 
-## The Automation Overlap: A Hypothesis Worth Investigating
+## The Automation Overlap
 
 The March 2026 report distinguishes between augmentation, where AI makes a worker more productive, and automation, where AI takes over what the worker does. Augmentation rose slightly in Claude.ai traffic. Automation patterns in the API grew: business sales & outreach, and automated trading & market operations. These are administrative and service roles distributed throughout the economy, not concentrated in global tech hubs.
 
@@ -232,17 +232,17 @@ The overlap argument writes itself. The communities absorbing data center infras
 
 The problem is the evidence for that overlap does not yet exist at the local level. The March 2026 report does not break down automation exposure by geography. Data center siting records are fragmented across county filings. The structural argument is sound. The data to confirm it locally has not been assembled.
 
-That is worth saying plainly. The case on siting and procedural grounds stands without the overlap claim. Reaching for it before it can be demonstrated weakens the parts that hold.
+The case on siting and procedural grounds stands without the overlap claim. Reaching for it before it can be demonstrated weakens the parts that hold.
 
 ---
 
 ## The Aggregate Pattern
 
-The AI industry is structurally an infrastructure-intensive industry. Infrastructure-intensive industries have a track record in the American context that Bullard documented three decades ago: physical burden migrates toward communities with less capacity to set terms. The migration is not typically the result of deliberate malice. It results from developers following rational incentives, cheap land, limited organized resistance, local officials looking for tax revenue, and from communities lacking the legal and technical staff to slow the process long enough to change the terms.
+AI is an infrastructure-intensive industry. Infrastructure-intensive industries have a track record in the American context that Bullard documented three decades ago: physical burden migrates toward communities with less capacity to set terms. The migration is not typically the result of deliberate malice. It results from developers following rational incentives — cheap land, limited organized resistance, local officials looking for tax revenue — and from communities lacking the legal and technical staff to slow the intake down long enough to change the terms.
 
 The convergence finding within the US is genuinely significant. It suggests the access side of the ledger can improve over time within a shared institutional environment. The infrastructure side has not historically tracked the adoption side. The regions that absorbed coal infrastructure did not proportionally absorb coal wealth. The communities that absorbed petrochemical infrastructure absorbed the contamination at rates disconnected from their share of the economic benefit. The pattern is consistent enough that the burden of proof runs the other way: what is different this time that would produce a different result.
 
-Bullard's core finding in 1990 was not that environmental injustice was intentional. Most individual siting decisions were made by people following incentives, and the pattern emerged from the aggregate. The same structure appears in data center siting decisions being made now, across dozens of communities, each evaluated separately, each following the same incentive gradient. What the March 2026 report begins to make legible is that the communities absorbing this infrastructure and the communities benefiting most from what the infrastructure produces are not, predominantly, the same places.
+Bullard's core finding in 1990 was not that environmental injustice was intentional. Most individual siting decisions were made by people following incentives, and the pattern emerged from the aggregate. The same structure appears in data center siting decisions being made now, across dozens of communities, each evaluated separately, each following the same incentive gradient. What the March 2026 report makes visible is that the communities absorbing this infrastructure and the communities benefiting most from it are not, in the main, the same places.
 
 ---
 
