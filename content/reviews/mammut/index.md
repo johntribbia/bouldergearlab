@@ -52,8 +52,7 @@ color: #fff;
 max-width: 800px;
 margin: 0 auto;
 padding: 40px 0 100px;
-background: #fff;
-color: var(--ink);
+color: var(--paper);
 font-family: 'Source Serif 4', Georgia, serif;
 font-size: 18px;
 line-height: 1.75;
@@ -72,14 +71,14 @@ font-family: 'Playfair Display', Georgia, serif;
 font-size: clamp(30px, 5vw, 48px);
 line-height: 1.12;
 font-weight: 700;
-color: var(--ink);
+color: #fff;
 margin-bottom: 24px;
 max-width: var(--col-width);
 }
 .deck {
 font-size: 19px;
 font-style: italic;
-color: var(--muted);
+color: #c0b8b0;
 border-left: 3px solid var(--accent);
 padding-left: 20px;
 max-width: var(--col-width);
@@ -91,7 +90,7 @@ font-family: 'DM Mono', monospace;
 font-size: 10.5px;
 letter-spacing: 0.14em;
 text-transform: uppercase;
-color: var(--muted);
+color: #c0b8b0;
 border-top: 1px solid var(--rule);
 border-bottom: 1px solid var(--rule);
 padding: 12px 0;
@@ -100,7 +99,7 @@ display: flex;
 gap: 36px;
 flex-wrap: wrap;
 }
-.byline span { color: var(--ink); font-weight: 500; }
+.byline span { color: var(--paper); font-weight: 500; }
 .product-strip {
 display: flex;
 gap: 16px;
@@ -119,8 +118,8 @@ border-radius: 2px;
 }
 .product-tag.alt {
 background: transparent;
-color: var(--ink);
-border: 1.5px solid var(--ink);
+color: var(--paper);
+border: 1.5px solid var(--paper);
 }
 .hero-img {
 width: 100%;
@@ -131,13 +130,13 @@ margin-bottom: 48px;
 .body p {
 max-width: var(--col-width);
 margin-bottom: 24px;
-color: var(--ink);
+color: var(--paper);
 }
 .p2r h2 {
 font-family: 'Playfair Display', Georgia, serif;
 font-size: 26px;
 font-weight: 700;
-color: var(--ink);
+color: #fff;
 margin: 56px 0 18px;
 padding-bottom: 10px;
 border-bottom: 2px solid var(--rule);
@@ -148,7 +147,7 @@ max-width: var(--col-width);
 font-family: 'Source Serif 4', serif;
 font-size: 19px;
 font-weight: 600;
-color: var(--ink);
+color: var(--paper);
 margin: 36px 0 12px;
 max-width: var(--col-width);
 }
@@ -246,9 +245,9 @@ max-width: var(--col-width);
 .cons { padding: 20px 24px; border-left: 3px solid var(--muted); }
 .pros h5, .cons h5 { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
 .pros h5 { color: var(--accent); }
-.cons h5 { color: var(--muted); }
+.cons h5 { color: #c0b8b0; }
 .pros ul, .cons ul { list-style: none; padding: 0; }
-.pros ul li, .cons ul li { font-size: 14px; line-height: 1.6; padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
+.pros ul li, .cons ul li { font-size: 14px; line-height: 1.6; padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--paper); }
 .pros ul li::before { content: '+ '; color: var(--accent); font-weight: 700; }
 .cons ul li::before { content: '- '; color: var(--muted); font-weight: 700; }
 .divider { border: none; border-top: 1px solid var(--rule); margin: 60px 0; max-width: var(--col-width); }
@@ -276,10 +275,10 @@ font-size: 13px;
 letter-spacing: 0.15em;
 color: var(--accent);
 }
-.bio-block { max-width: var(--col-width); border-top: 2px solid var(--ink); padding-top: 28px; margin-top: 60px; }
-.bio-block h5 { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-.bio-block p { font-size: 14px; line-height: 1.7; color: var(--muted); }
-.ai-note { max-width: var(--col-width); margin-top: 32px; font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--muted); border-top: 1px dashed var(--rule); padding-top: 14px; }
+.bio-block { max-width: var(--col-width); border-top: 2px solid var(--paper); padding-top: 28px; margin-top: 60px; }
+.bio-block h5 { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #c0b8b0; margin-bottom: 12px; }
+.bio-block p { font-size: 14px; line-height: 1.7; color: #c0b8b0; }
+.ai-note { max-width: var(--col-width); margin-top: 32px; font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #c0b8b0; border-top: 1px dashed var(--rule); padding-top: 14px; }
 .trail-badge {
 display: inline-block;
 background: var(--highlight);
