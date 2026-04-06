@@ -50,6 +50,7 @@ draft: false
     max-width: 800px;
     margin: 0 auto;
     padding: 40px 0 100px;
+    background: #fff;
     color: var(--ink);
     font-family: 'Source Serif 4', Georgia, serif;
     font-size: 18px;

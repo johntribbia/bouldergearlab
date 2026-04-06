@@ -52,6 +52,7 @@ color: #fff;
 max-width: 800px;
 margin: 0 auto;
 padding: 40px 0 100px;
+background: #fff;
 color: var(--ink);
 font-family: 'Source Serif 4', Georgia, serif;
 font-size: 18px;
@@ -365,17 +366,17 @@ margin: 32px 0;
   <!-- Fit -->
   <h2>Fit and Bounce</h2>
 
-![mammut_1.JPG](mammut_1.JPG)
-
   <div class="body">
+
+    <img src="mammut_1.JPG" alt="Mammut Aenergy Trail Vest 12L on Bear Peak">
 
     <p>I'm 5'6" and 135 lbs and tested a medium. I sized up one step from where I might otherwise land because I don't want constriction across my chest on effort. In medium, the fit is snug and athletic without pressure. On steep uphills where you're leaning hard into the pitch, the harness doesn't shift up or gap at the shoulder. I ran it over a base layer in the 40s and skin-direct in the 70s. The fit didn't change between the two configurations.</p>
 
     <p>Bounce on the descent is the more important test. I ran down multiple times with a full practical load: two 500ml soft flasks, a packable shell, my bear spray in the tunnel pocket, and a phone. Nothing shifted, nothing slapped. For a point of comparison, I'd been running shorter outings in a Kiprun 5L vest. The Mammut's bounce suppression is on par. That's meaningful for a 12L vest where you're carrying weight farther from the body.</p>
 
-  </div>
+    <img src="mammut_2.JPG" alt="Mammut Aenergy Trail Vest 12L fit and bounce test">
 
-![mammut_2.JPG](mammut_2.JPG)
+  </div>
 
   <!-- Ventilation and Storage -->
   <h2>Ventilation and Storage</h2>
@@ -393,9 +394,9 @@ margin: 32px 0;
 
     <p>The zippered main compartment handles phone, keys, and the essentials for a 60 to 90-minute effort. Extend the outing past two hours or add layers and you'll run short on room. The 12L rating is accurate. The vest doesn't overpromise its capacity. It's built for short to moderate mountain outings and it suits that use case precisely.</p>
 
+    <img src="mammut_3.JPG" alt="Mammut vest 3D mesh back panel ventilation">
+
   </div>
-  
-  ![mammut_3.JPG](mammut_3.JPG)
 
   <!-- Durability -->
   <h2>Durability</h2>
@@ -405,9 +406,9 @@ margin: 32px 0;
 
     <p>Several outings on variable terrain including scrambling sections where I grabbed the vest to move across exposed rock. The ripstop shows no snagging or delamination. Stitching at the shoulder anchor points is clean. Zipper pulls haven't snagged once. The vest looks essentially the same as it did out of the box. The ripstop fabric holds up without drama on the kind of terrain where a thinner mesh would already show wear.</p>
 
+    <img src="mammut_4.JPG" alt="Mammut vest ripstop durability on scrambling terrain">
+
   </div>
-  
-  ![mammut_4.JPG](mammut_4.JPG)
 
   <div class="pros-cons">
     <div class="pros">
@@ -430,8 +431,10 @@ margin: 32px 0;
       </ul>
     </div>
   </div>
-  
-  ![mammut_5.JPG](mammut_5.JPG)
+
+  <div class="body">
+    <img src="mammut_5.JPG" alt="Mammut Aenergy Trail Vest 12L on Bear Peak trail">
+  </div>
 
   <div class="verdict">
     <div class="verdict-label">Vest Verdict</div>
@@ -439,8 +442,10 @@ margin: 32px 0;
     <p>Recommended for runners covering 60–90 minute mountain efforts who carry bear spray, a spare layer, and flasks without needing a full day-pack setup.</p>
   </div>
 
-  ![mammut_6.JPG](mammut_6.JPG)
-  
+  <div class="body">
+    <img src="mammut_6.JPG" alt="Mammut Aenergy Trail Vest 12L field test">
+  </div>
+
   <hr class="divider">
 
   <!-- ═══════════════════════════════════════════════
@@ -451,8 +456,10 @@ margin: 32px 0;
     <span class="product-header-name">Aenergy Ultra Carbon Poles</span>
     <span class="product-header-price">Sold as pair</span>
   </div>
-  
-  ![mammut_7.JPG](mammut_7.JPG)
+
+  <div class="body">
+    <img src="mammut_7.JPG" alt="Mammut Aenergy Ultra Carbon Poles">
+  </div>
 
   <div class="spec-block">
     <h4>Specifications</h4>
@@ -466,8 +473,10 @@ margin: 32px 0;
     </div>
   </div>
 
-  ![mammut_8.JPG](mammut_8.JPG)
-  
+  <div class="body">
+    <img src="mammut_8.JPG" alt="Mammut carbon poles detail and construction">
+  </div>
+
   <!-- Weight and Stiffness -->
   <h2>Weight and Stiffness</h2>
   <h3>The West Ridge Descent</h3>
@@ -478,10 +487,10 @@ margin: 32px 0;
 
     <p>For comparison, I've been running with Black Diamond Distance Carbon Z poles for the past several months. The Mammuts are stiffer under hard lateral loading and feel more planted when pushing off rocky ground on the descent. The Black Diamonds are a bit lighter. On scree where you're driving the tip into an unstable surface and loading the pole laterally while your foot searches for purchase, that stiffness difference is the one you want.</p>
 
+    <img src="mammut_9.JPG" alt="Mammut poles on West Ridge descent — stiffness under hard load">
+
   </div>
 
-  ![mammut_9.JPG](mammut_9.JPG)
-  
   <!-- Fold and Deploy -->
   <h2>Fold and Deploy</h2>
   <h3>Runnable Sections and Summit Scrambles</h3>
@@ -496,9 +505,9 @@ margin: 32px 0;
       "Under ten seconds each way, consistently — with gloves on, on a cold summit."
     </div>
 
-  </div>
+    <img src="mammut_10.JPG" alt="Mammut poles fold and deploy system in use">
 
-  ![mammut_10.JPG](mammut_10.JPG)
+  </div>
 
   <!-- Adjustability and Grip -->
   <h2>Adjustability and Grip</h2>
@@ -510,9 +519,9 @@ margin: 32px 0;
 
     <p>The EVA foam grip stays comfortable over long efforts and doesn't get slippery when your hands are working and sweating on steep climbing sections. The grip shape works in both the standard hold and the shortened low-grip position on steep pitches where you choke down. The wrist strap is minimal — functional but without the velcro and adjustment buckle you'd find on a more traditional trekking pole. That suits a running grip pattern well. Runners who rely heavily on strap braking on descents may want more.</p>
 
-  </div>
+    <img src="mammut_11.JPG" alt="Mammut poles grip and wrist strap detail">
 
-  ![mammut_11.JPG](mammut_11.JPG)
+  </div>
 
   <div class="test-note">
     <strong>Pole use by terrain · Bear Peak and West Ridge</strong>
@@ -556,7 +565,9 @@ margin: 32px 0;
     </div>
   </div>
 
-  ![mammut_12.JPG](mammut_12.JPG)
+  <div class="body">
+    <img src="mammut_12.JPG" alt="Mammut Aenergy Ultra Carbon Poles on trail">
+  </div>
 
   <div class="verdict">
     <div class="verdict-label">Poles Verdict</div>
