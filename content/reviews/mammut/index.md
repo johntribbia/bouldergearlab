@@ -3,13 +3,11 @@ title: Mammut Aenergy Trail Vest 12L and Aenergy Ultra Carbon Poles Review
 date: 2026-04-06
 banner: mammut_0.JPG
 tags:
-  |  |  |  |
-  | --- | --- | --- |
-  | running | poles | trail |
+  - running
+  - poles
+  - trail
 categories:
-  |  |
-  | --- |
-  | reviews |
+  - reviews
 description: Field-tested across Bear Peak, Fern Canyon, West Ridge, and Bear Canyon — a vest built for short mountain runs and the lightest carbon poles I've put under hard load.
 draft: false
 ---
