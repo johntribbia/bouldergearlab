@@ -11,7 +11,7 @@ draft: false
 
 *Article by John Tribbia*
 
-> **A note on scope.** The numbers here come from synthetic data with known effects baked in from the start. This is not an attempt to backsolve Anthropic's revenue model. It is a demonstration of how a data team could study a policy change like this without fooling themselves.
+> **A note on scope.** This is a thought experiment, so the numbers here come from synthetic data with known effects baked in from the start. This is not an attempt to backsolve Anthropic's revenue model. It is a demonstration of how a data team could study a policy change like this without fooling themselves.
 >
 > **A note on measurement.** When I say `OAuth intensity`, think of the pre-policy share of a user's prompts or tokens that were routed through OAuth-connected third-party tools. In a real product setting, that is the practical version I would want in the logs, frozen before the rule change.
 
@@ -34,21 +34,21 @@ Two users can both pay for `Pro` and be nothing alike economically. One opens Cl
 
 *\* Synthetic data only. Cost figures are modeled, not sourced from Anthropic.*
 
-In the synthetic data, heavy-OAuth developers are where the stress shows up first. That is the whole point. The plan tier does not tell you where the margin problem lives. The usage pattern does.
+In the synthetic data, heavy-OAuth developers are where the stress shows up first. That is the whole point. Plan tier alone may not reveal where the margin problem lives. The usage pattern often can.
 
 ![Cost/revenue ratio by OAuth intensity and segment](figures/01_cost_revenue_ratio.png)
 
 *As OAuth intensity rises, the cost/revenue ratio climbs quickly for developer-type users and crosses break-even first.*
 
-## Why a simple before-and-after read fails
+## Why a simple before-and-after can be misleading
 
-The obvious way to study the policy is to compare churn before and after April 4. That kind of read tells you almost nothing. The announcement arrived with press coverage, social chatter, competitor responses, and a rush of user reactions all at once. A raw before-and-after comparison would credit the whole weather system to one umbrella.
+The obvious way to study the policy is to compare churn before and after April 4. That kind of read can be misleading. The announcement arrived with press coverage, social chatter, competitor responses, and a rush of user reactions all at once. A raw before-and-after comparison would likely credit the whole weather system to one umbrella.
 
-This is the same confounding trap that shows up in model rollout analysis. Deployment boundaries are noisy. Policy boundaries are even worse. If the goal is causal measurement, you need variation that existed before the announcement and only determines exposure to the change.
+This is the same confounding trap that shows up in model rollout analysis. Deployment boundaries are noisy. Policy boundaries can be even worse. If the goal is causal measurement, you need variation that existed before the announcement and only determines exposure to the change.
 
 ## Freeze the exposure before the announcement
 
-That variation is pre-policy OAuth intensity: in practical terms, the share of prompts or tokens a user was already routing through OAuth-connected tools before Anthropic changed the rules. Some users were structurally dependent on that workflow long before the announcement. Others were barely touched. Measure that behavior early, freeze it, and compare users within the same plan tier.
+That variation is pre-policy OAuth intensity. In practical terms, this intensity measure is the share of prompts or tokens a user was already routing through OAuth-connected tools before Anthropic changed the rules. Some users were structurally dependent on that workflow long before the announcement. Others were barely touched. Measure that behavior early, freeze it, and compare users within the same plan tier.
 
 | Plan | Mean Centered* | SD of Centered Score* |
 |------|---------------|----------------------|
@@ -69,7 +69,7 @@ Before using that frozen exposure in the DiD estimator, it is worth checking tha
 
 *For readability, the chart uses a simple heavy-versus-light split. The tighter specification keeps the exposure continuous within each plan tier.*
 
-Once you have that exposure measure, the rest is fairly clean: center it within `Pro` and `Max`, build a pre/post panel, and estimate a difference-in-differences model. For the simple chart and binary DiD, the control group is light-OAuth users. That is a practical choice, not a perfect one, because some of those users are still a little exposed. The higher-fidelity version is the continuous within-plan estimator, which keeps each user's frozen pre-policy OAuth share instead of forcing everyone into hard buckets. In the synthetic data, that estimator returns a large negative effect. Users who relied more heavily on OAuth tools lose materially more active days per week after the block lands.
+Once you have that exposure measure, the rest is fairly clean. We can center it within `Pro` and `Max`, build a pre/post panel, and estimate a difference-in-differences model. For the simple chart and binary DiD, the control group is light-OAuth users. That is a practical choice, not a perfect one, because some of those users are still a little exposed. The higher-fidelity version is the continuous within-plan estimator, which keeps each user's frozen pre-policy OAuth share instead of forcing everyone into hard buckets. In the synthetic data, that estimator returns a large negative effect. Users who relied more heavily on OAuth tools lose materially more active days per week after the block lands.
 
 | Model | Coeff.* | 95% CI* | Std. Error | p-value | Interpretation |
 |-------|--------|---------|-----------|---------|----------------|
@@ -96,21 +96,25 @@ Not every affected user does the same thing after the wall goes up.
 
 *\* Synthetic data only. These are injected probabilities, not observed Anthropic figures.*
 
-Developers are the conversion story. Casual users are the churn story. Business users sit in the middle. A go-to-market team needs that view early — the playbook for a developer is nothing like the one for a casual user.
+Developers in this scenario tend to be the conversion story. Casual users tend to be the churn story. Business users sit in the middle. A team benefits from that view early, because the playbook for a developer looks quite different from the one for a casual user.
 
 ![Post-policy destinations for heavy OAuth users](figures/02_post_policy_destinations.png)
 
 *Heavy users do not all disappear. Developers convert at much higher rates than casual users, while casual users are far more likely to walk.*
 
-A user who genuinely needs API access and can wire it up in an afternoon is a very different problem from a user who only wanted a convenient flat-rate tool. The first group is an expansion opportunity. The second is a retention risk.
+A user who genuinely needs API access and can wire it up in an afternoon is a very different problem from a user who only wanted a convenient flat-rate tool. The first group looks like an expansion opportunity; the second, a retention risk.
 
-There is also a PLG read here. The developer who self-migrates to direct API access after the OAuth block is the canonical PLG conversion event: demonstrated value → friction introduced → willingness to pay for direct access confirmed. That user was already running production-adjacent workloads through Claude. They are now on a usage-indexed plan where spending scales with the value they extract, and they got there without a sales motion. If API conversion rates for that cohort hold up, the policy did not just solve an economics problem — it moved a segment of power users onto the right commercial trajectory.
+There is also a product lead growth scenario here. The developer who self-migrates to direct API access after the OAuth block is the canonical PLG conversion event: 
 
-## The policy is a customer-journey decision
+demonstrated value → friction introduced → willingness to pay for direct access confirmed. 
+
+That user was already running production-adjacent workloads through Claude. They are now on a usage-indexed plan where spending scales with the value they extract, and they got there without a sales motion. If API conversion rates for that cohort hold up, the policy may not just solve an economics problem — it could move a segment of power users onto the right commercial trajectory.
+
+## Policy change becomes a customer-journey decision
 
 This is the part most pricing commentary tends to miss. Anthropic did not just change what usage is covered. It changed the path users have to take to keep doing the same job.
 
-If the API migration is smooth, the policy can work. If it is clumsy, it becomes a revenue leak and a gift to competitors. In the synthetic scenario model, the policy only turns clearly positive when API conversion gets high enough to offset churn.
+If the API migration is smooth, the policy can work. If it is clumsy, it can become a revenue leak and a potential gift to competitors. In the synthetic scenario model, the policy only turns clearly positive when API conversion gets high enough to offset churn.
 
 | Scenario | P(Churn) | P(Convert to API) | P(Bundle) | Monthly Rev Delta* | % Change* |
 |----------|---------|-------------------|-----------|-------------------|-----------|
@@ -124,25 +128,25 @@ If the API migration is smooth, the policy can work. If it is clumsy, it becomes
 
 *The outcome turns on conversion execution, not just the price sheet.*
 
-The decision is made. This is an execution problem now. Documentation, migration flow, credits, bundling, and onboarding matter more than the announcement copy once the decision has been made.
+The decision is made. At that point, it becomes primarily an execution problem. Documentation, migration flow, credits, bundling, and onboarding likely matter more than the announcement copy once the decision has been made.
 
-## What this means for a data team right now
+## Summing up...
 
 The measurement framework here is only useful if the right data exists when you need it. In practice, that requires three things done before the policy lands.
 
-First, instrument the exposure before the shock. OAuth intensity as an identification variable only works if it is in the logs before the rules change. The right schema: `user_id`, `session_id`, `oauth_app_id`, `token_count`, `plan_tier`, `timestamp` — frozen at the end of the pre-period. A data team that builds this column retroactively, after the announcement, is already too late for clean identification.
+First, instrument the exposure before the shock. OAuth intensity as an identification variable only works if it is in the logs before the rules change. The right schema: `user_id`, `session_id`, `oauth_app_id`, `token_count`, `plan_tier`, `timestamp` — frozen at the end of the pre-period. A data team that builds this column retroactively, after the announcement, may already be too late for clean identification.
 
 Second, watch two numbers, not one. With churn held at the base-case 42%, even converting every remaining non-bundle user to API (~40%) still does not reach breakeven — the API average ($85/mo) is not high enough to fully offset the cost from churned users at base-case rates. The policy turns net-positive when both conversion rises (~50%) and churn falls simultaneously (~30%). Those are the two leading indicators a GTM team needs on a live dashboard in the 30 days after launch: API conversion rate and churn rate, tracked separately for the heavy-OAuth cohort, not the full user base.
 
-Third, segment the migration support before day one. Developers and casual users need completely different responses. Developers need clean API onboarding docs, a credit bridge, and minimal friction between "my OAuth tool stopped working" and "my API key is wired up." Casual users need a clear explanation of what changed and an honest look at whether a bundle covers their actual use case. One generic migration email to the entire affected cohort is the most expensive mistake available.
+Third, segment the migration support before day one. Developers and casual users will likely need quite different responses. Developers need clean API onboarding docs, a credit bridge, and minimal friction between "my OAuth tool stopped working" and "my API key is wired up." Casual users need a clear explanation of what changed and an honest look at whether a bundle covers their actual use case. One generic migration email to the entire affected cohort is likely among the more costly mistakes available.
 
-## The logic transfers
+## How this can transfer to other use cases
 
 Nothing about this framework is specific to Anthropic or OAuth. The same logic works whenever a product or pricing change hits users differently based on how they actually use the product: tier migrations, feature sunsets, pricing shifts, even model rollouts with uneven value across tasks.
 
 The regression is the easy part. Logging the right behavioral data before the decision lands is the hard part. If you have that, you can tell who actually took the hit and who was just standing nearby when the news cycle exploded. You can also be honest about the tradeoff between a readable heavy-versus-light comparison and the higher-fidelity continuous exposure model underneath it.
 
-## The read
+## TL;DR
 
 You do not learn much by staring at the date the policy landed. You learn more by finding the user-level exposure that was already there before the shock, freezing it, and letting that carry the identification.
 
