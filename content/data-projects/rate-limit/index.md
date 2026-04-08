@@ -108,7 +108,7 @@ There is also a product lead growth scenario here. The developer who self-migrat
 
 demonstrated value → friction introduced → willingness to pay for direct access confirmed. 
 
-That user was already running production-adjacent workloads through Claude. They are now on a usage-indexed plan where spending scales with the value they extract, and they got there without a sales motion. If API conversion rates for that cohort hold up, the policy may not just solve an economics problem — it could move a segment of power users onto the right commercial trajectory.
+That user was already running production-adjacent workloads through Claude. They are now on a usage-indexed plan where spending scales with the value they extract, and they got there without a sales motion. If API conversion rates for that cohort hold up, the policy may not just solve an economics problem. It could move a segment of power users onto the right commercial trajectory.
 
 ## Policy change becomes a customer-journey decision
 
@@ -134,9 +134,9 @@ The decision is made. At that point, it becomes primarily an execution problem. 
 
 The measurement framework here is only useful if the right data exists when you need it. In practice, that requires three things done before the policy lands.
 
-First, instrument the exposure before the shock. OAuth intensity as an identification variable only works if it is in the logs before the rules change. The right schema: `user_id`, `session_id`, `oauth_app_id`, `token_count`, `plan_tier`, `timestamp` — frozen at the end of the pre-period. A data team that builds this column retroactively, after the announcement, may already be too late for clean identification.
+First, instrument the exposure before the shock. OAuth intensity as an identification variable only works if it is in the logs before the rules change. The right schema: `user_id`, `session_id`, `oauth_app_id`, `token_count`, `plan_tier`, `timestamp` frozen at the end of the pre-period. A data team that builds this column retroactively, after the announcement, may already be too late for clean identification.
 
-Second, watch two numbers, not one. With churn held at the base-case 42%, even converting every remaining non-bundle user to API (~40%) still does not reach breakeven — the API average ($85/mo) is not high enough to fully offset the cost from churned users at base-case rates. The policy turns net-positive when both conversion rises (~50%) and churn falls simultaneously (~30%). Those are the two leading indicators a GTM team needs on a live dashboard in the 30 days after launch: API conversion rate and churn rate, tracked separately for the heavy-OAuth cohort, not the full user base.
+Second, watch two numbers, not one. With churn held at the base-case 42%, even converting every remaining non-bundle user to API (~40%) still does not reach breakeven. The API average ($85/mo) is not high enough to fully offset the cost from churned users at base-case rates. The policy turns net-positive when both conversion rises (~50%) and churn falls simultaneously (~30%). Those are the two leading indicators a team needs on a live dashboard in the 30 days after launch: API conversion rate and churn rate, tracked separately for the heavy-OAuth cohort, not the full user base.
 
 Third, segment the migration support before day one. Developers and casual users will likely need quite different responses. Developers need clean API onboarding docs, a credit bridge, and minimal friction between "my OAuth tool stopped working" and "my API key is wired up." Casual users need a clear explanation of what changed and an honest look at whether a bundle covers their actual use case. One generic migration email to the entire affected cohort is likely among the more costly mistakes available.
 
