@@ -1,5 +1,5 @@
 ---
-title: "Was Anthropic's OAuth Clampdown Probably Inevitable?"
+title: "Was Anthropic's OAuth Clampdown Inevitable?"
 date: 2026-04-04
 banner: "rate-limit-banner.png"
 tags: ['data project']
