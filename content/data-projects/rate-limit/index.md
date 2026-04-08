@@ -150,7 +150,7 @@ The regression is the easy part. Logging the right behavioral data before the de
 
 You do not learn much by staring at the date the policy landed. You learn more by finding the user-level exposure that was already there before the shock, freezing it, and letting that carry the identification.
 
-That is what this synthetic exercise shows. If heavy third-party OAuth users were the group breaking flat-rate subscription economics, Anthropic's move was not arbitrary. It was arithmetic.
+That is what this synthetic exercise shows. If heavy third-party OAuth users were the group breaking flat-rate subscription economics, Anthropic's move was probably not arbitrary. It was probably math.
 
 ---
 
