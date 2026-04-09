@@ -15,9 +15,7 @@ draft: false
 >
 > **A note on measurement.** When I say `OAuth intensity`, think of the pre-policy share of a user's prompts or tokens that were routed through OAuth-connected third-party tools. In a real product setting, that is the practical version I would want in the logs, frozen before the rule change.
 
-Anthropic's April 2026 decision to stop covering third-party OAuth usage under Claude subscriptions looked abrupt. From a unit economics perspective, it was also pretty easy to understand. If a relatively small slice of power users was routing API-like workloads through a flat-rate plan, the problem was probably not about optics. It was more likely the math.
-
-This piece borrows the logic from my earlier [model-quality analysis](../model-quality-overview/). Instead of asking whether better answers make people come back more often, it asks whether **pre-policy OAuth intensity predicts who takes the hit when the rule changes**.
+Anthropic's April 2026 decision to stop covering third-party OAuth usage under Claude subscriptions looked abrupt. From a unit economics perspective, it was also pretty easy to understand: a small slice of power users was routing API-like workloads through a flat-rate plan, and the math eventually catches up to that. The harder question is whether pre-policy OAuth intensity can identify *which users* absorb the economic hit when the rule lands, and what they do next. That is what this piece, borrowing the causal framework from my earlier [model-quality analysis](../model-quality-overview/), tries to show.
 
 ## Same plan, completely different cost world
 
@@ -84,7 +82,7 @@ Not every affected user does the same thing after the wall goes up.
 
 | Destination | Revenue Impact | Key Driver | Implication |
 |-------------|---------------|------------|-----------------|
-| Churn | -$20 to -$200/mo | Casual users; no API need | Retention risk |
+| Churn | -\$20 to -\$200/mo | Casual users; no API need | Retention risk |
 | Convert to API | +$65/mo avg | Developers; power users | Expansion opportunity |
 | Buy Bundle | +$50/mo | Business; moderate need | Upsell motion |
 
