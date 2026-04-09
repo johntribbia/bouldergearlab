@@ -325,7 +325,6 @@ draft: false
 
   <div class="byline">
     <div>By <span>John Tribbia</span></div>
-    <div>Published <span>roadtrailrun.com</span></div>
     <div>Test Terrain <span>Bear Peak, Boulder CO</span></div>
   </div>
 
