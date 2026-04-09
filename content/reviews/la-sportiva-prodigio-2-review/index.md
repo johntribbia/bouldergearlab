@@ -520,31 +520,6 @@ draft: false
     </div>
 
     <hr class="divider">
-
-    <!-- ═══════════════════════════════════════════════
-         COMPARISONS
-    ════════════════════════════════════════════════ -->
-
-    <h2>Comparisons</h2>
-
-    <h3>La Sportiva Prodigio v1</h3>
-
-    <p>The Prodigio 2 improves on the original across the board: softer midsole, deeper lugs, wider platform, better rock protection from the midfoot insert. Lengthwise fit is similar; both require sizing up half a US size. The wider platform on the 2 is the most significant upgrade; it adds lateral stability that changes how the shoe handles off-camber terrain and technical descents. If you own the original and run routes like Bear Peak regularly, the upgrade is worth it.</p>
-
-    <h3>Salomon S/Lab Ultra Glide 1.5</h3>
-
-    <p>Both shoes target ultra-distance comfort with soft cushioning and a smooth ride. The Ultra Glide 1.5 is lighter and more race-focused; it's plusher underfoot but less responsive and offers less rock protection. The Prodigio 2's midfoot insert and deeper lugs give it a clear edge on technical terrain. Choose the Ultra Glide 1.5 for maximum plushness and Salomon's fitted harness system; choose the Prodigio 2 if you want more ground protection and a livelier response across variable terrain.</p>
-
-    <h3>Craft Xplor 2</h3>
-
-    <p>The Xplor 2 is firmer and more planted, with a more aggressive outsole aimed at muddy conditions. The Prodigio 2 is the lighter and more nimble shoe. That difference shows on mixed routes that combine road approach miles with technical trail. On the Bear Peak loop from Cragmoor, the Prodigio 2's versatility fits the terrain better than the Xplor 2's heavier build. Choose the Xplor 2 if the majority of your running is in genuinely muddy conditions; choose the Prodigio 2 for mixed surfaces.</p>
-
-    <h3>Craft Pure Trail Pro</h3>
-
-    <p>The Pure Trail Pro is Craft's race-oriented option: less cushioning, lower to the ground, more responsive at pace. It suits faster efforts on moderate terrain. Over the cumulative load of a technical mountain route or any ultra-distance effort, the Prodigio 2's cushioning advantage is substantial. Choose the Pure Trail Pro for shorter, faster races; choose the Prodigio 2 for longer mountain outings where comfort compounds across the miles.</p>
-
-    <hr class="divider">
-
   </div>
 </div>
 {{< /rawhtml >}}
