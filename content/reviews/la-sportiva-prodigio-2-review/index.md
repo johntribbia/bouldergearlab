@@ -379,7 +379,7 @@ draft: false
 
     <p>The upper is lightweight engineered mesh. It breathes well; on warmer mornings the airflow is noticeable by the time Shanahan climbs toward the Mesa junction. The seamless construction eliminates pressure spots that compound over technical miles. Through fifty miles of trail I've seen no meaningful wear. The same durability question I had with the original stays active here. This mesh feels less robust than the uppers on La Sportiva's burlier mountain options. The trade-off has held through fifty miles with no major wear, but the mesh is one full season away from a clearer verdict.</p>
 
-    <img src="LaSportivaProdigio2@ConkStudio-00071.jpg" alt="John Tribbia on Shanahan Trail — Prodigio 2 in La Sportiva kit with Flatirons behind">
+    <img src="LaSportivaProdigio2@ConkStudio-04410.jpg" alt="John Tribbia on Shanahan Trail">
 
     <p>The lacing system is straightforward: even tension across the foot, nothing to manage. The gusseted tongue stays centered. A lacing system that requires attention midrun is a design failure, and this one disappears into the background entirely.</p>
 
@@ -407,13 +407,11 @@ draft: false
 
     <p>The wider platform is the other major story in the canyon. Where the original Prodigio could feel twitchy on off-camber footing, the Prodigio 2 tracks predictably on Fern Canyon's angled surfaces and uneven switchback landings. I trusted the lateral edge. No ankle rolls across all of my ascents, no hesitation on technical sections at pace. The repositioned rocker adds to this: transitions through the canyon are smooth, and the ball-of-foot buffer is most apparent on steep uphill sections where you're climbing on your forefoot onto uneven rock.</p>
 
-    <img src="LaSportivaProdigio2@ConkStudio-04486.jpg" alt="John taking it into Fern Canyon">
+    <img src="LaSportivaProdigio2@ConkStudio-04588.jpg" alt="John taking it into Fern Canyon">
 
     <div class="pullquote">
       "The XFlow compound is soft enough for long miles and responsive enough that Fern Canyon at tempo doesn't feel like a negotiation."
     </div>
-
-    <img src="LaSportivaProdigio2@ConkStudio-00087.jpg" alt="John on rocky Bear Peak trail — Prodigio 2 on technical Colorado terrain">
 
     <p>The trade-off is direct: this midsole prioritizes protection over ground feel. If you want to read every root and pebble through the sole, the Prodigio 2 is not built for that. I'm a ground feel runner, and the cushioning here registers as a meaningful concession. Over the accumulated miles of a long mountain outing, that concession starts to make sense.</p>
 
@@ -461,16 +459,12 @@ draft: false
     <h2>The Descent</h2>
 
     <p>The descent reverses the sequence and loads everything differently. Coming off the summit ridge, scree braking is quad-intensive and demands outsole grip under a downhill load. The force vectors differ from the ascent. The Prodigio 2's wider platform handles the lateral instability of scree descent without drama. On steep switchback landings where the outside edge of the shoe takes the initial contact, the shoe tracks rather than slides. I drove hard into the downhill on multiple outings. No slipping, no moment of uncertain footing on ground that wanted to give.</p>
-
-    <img src="LaSportivaProdigio2@ConkStudio-00105.jpg" alt="John at Shanahan looking out toward the Flatirons — Prodigio 2 worn">
+    
+    <img src="LaSportivaProdigio2@ConkStudio-04619.jpg" alt="La Sportiva Prodigio 2 on Bear Peak trail zoom in">
 
     <p>Through Fern Canyon on the way down, the technical surface shifts to forefoot and midfoot landings on roots and embedded rock, where the rocker geometry earns its keep. No nervous braking. The midsole absorbs. The platform holds. You keep moving.</p>
 
-    <img src="LaSportivaProdigio2@ConkStudio-04619.jpg" alt="La Sportiva Prodigio 2 on Bear Peak trail zoom in">
-
     <p>By the time the descent flattens onto single track toward the Mesa Trail junction, the shoe has absorbed a full loop's worth of load: the ascent miles, the scree, the canyon. The XFlow midsole hasn't compacted. There's still return underfoot on the final Shanahan stretch back to my house. After multiple Bear Peak round trips in mixed early-spring conditions, the midsole response is unchanged. That is the bar for a shoe you plan to put real miles on.</p>
-
-    <img src="LaSportivaProdigio2@ConkStudio-00247.jpg" alt="La Sportiva Prodigio 2 on Bear Peak trail — shoe on dirt with Boulder backdrop">
 
     <div class="pros-cons">
       <div class="pros">
@@ -524,8 +518,6 @@ draft: false
       <p>A well-cushioned trail shoe that handles the route from smooth approach trail to scree summit ridge. The XFlow midsole delivers what it promises: soft under load, responsive at pace. The wider platform and deeper lugs are both real improvements over the original. At $160, the price is justified.</p>
       <p>Recommended for sub- and ultra-distance runners who prioritize comfort and protection across mixed and technical terrain.</p>
     </div>
-
-    <img src="LaSportivaProdigio2@ConkStudio-04410.jpg" alt="John Tribbia">
 
     <hr class="divider">
 
