@@ -325,6 +325,7 @@ draft: false
 
   <div class="byline">
     <div>By <span>John Tribbia</span></div>
+    <div> Photos by <span> Travis Conklin, <a href="https://www.conk.studio/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Conk Studio</a></span></div>
     <div>Test Terrain <span>Bear Peak, Boulder CO</span></div>
   </div>
 
