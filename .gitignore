@@ -22,3 +22,4 @@ Thumbs.db
 
 # Large data files
 *.csv
+content/data-projects/openai/
