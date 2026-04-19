@@ -13,6 +13,8 @@ resources/_gen/
 # Python
 __pycache__/
 *.pyc
+.venv/
+venv/
 
 # OS specific
 .DS_Store
