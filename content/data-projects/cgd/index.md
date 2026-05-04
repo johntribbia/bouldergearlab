@@ -277,7 +277,7 @@ Analysis covers January 2013 – September 2016 · Source: Data obtained under t
 
 <div class="cgd-hook">
   <div class="cgd-hook-kicker">The Finding</div>
-  <h2 class="cgd-hook-title">A legal case can feel abstract until the billing pattern moves in the opposite direction.</h2>
+  <h2 class="cgd-hook-title">Children's Dental Group ran pediatric Denti-Cal clinics across California. In March 2015, the chain changed hands. A legal case can feel abstract until the billing pattern moves in the opposite direction.</h2>
   <p class="cgd-hook-text">California paid $62.23 million across ten offices between 2013 and 2016. After March 2015, every office except Anaheim flat-lined or fell—system average down 3.6%. Anaheim rose $14.49 per visit day above peer offices in two-way fixed-effects DiD (t&nbsp;=&nbsp;4.28), growing to +$21.99 under trend adjustment. The synthetic control puts the post-period gap at $18.67. No single control office drives the result. At provider level, three dentists show elevated post-2015 payments in baseline DiD—but pretrend diagnostics split them: two show acceleration that predates the March 2015 cutoff, one does not, and it's that divergence in internal validity, not raw effect size, that determines how much weight each signal can carry.</p>
 
   <div class="cgd-impact-grid">
@@ -320,6 +320,10 @@ Analysis covers January 2013 – September 2016 · Source: Data obtained under t
 </div>
 
 <p class="cgd-p">This article makes two claims. First, the office-level Anaheim signal is strong and remains strong under harder specifications. Second, the provider-level Diaz signal is important but less clean causally once pre-existing trend differences are modeled.</p>
+
+<div class="cgd-callout">
+  <strong>How the main results hold up:</strong> Anaheim's DiD estimate (+$14.49/visit-day, t&nbsp;=&nbsp;4.28) survives synthetic control (+$18.67 gap), every leave-one-out subset ($12.16–$15.94), and trend adjustment (+$21.99). At provider level, Pham is the cleanest signal—flat pretrend, negative falsification, trend-adjusted effect that strengthens (+$3,521, t&nbsp;=&nbsp;4.63). Diaz and Tarnavsky show larger raw effects but pre-period acceleration that attenuates or reverses under stricter specification.
+</div>
 
 <h2 class="cgd-h2">Case Context and Research Question</h2>
 
@@ -479,6 +483,16 @@ Analysis covers January 2013 – September 2016 · Source: Data obtained under t
 </div>
 
 <p class="cgd-p">In baseline DiD ranking: Diaz first ($4,757), Tarnavsky second ($3,811), Pham fourth ($1,208). Permutation p = 0.10. But placebo rank is separate from pretrend quality. Diaz and Tarnavsky both show significant pre-period acceleration. Pham does not. Leave-one-out checks confirm baseline Diaz and Tarnavsky estimates are stable across control subset removals; Pham's smaller magnitude is stable too.</p>
+
+<div class="cgd-vis-card">
+  <div class="cgd-vis-label">SENSITIVITY CHECK · PROVIDER LEAVE-ONE-OUT</div>
+  <div class="cgd-vis-title">Diaz DiD Estimate Across Control-Provider Subsets</div>
+  <div class="cgd-vis-sub">95% confidence intervals · each bar drops one control provider · March 2015 cutoff</div>
+  <div style="position:relative;width:100%;height:280px;">
+    <canvas id="cgdProviderLooChart"></canvas>
+  </div>
+  <p class="cgd-vis-note">LOO range: $4,032 (drop Caroline Hu) to $5,139 (drop Tarnavsky). All estimates exclude zero. No single control provider drives the Diaz result.</p>
+</div>
 
 <div class="cgd-vis-card">
   <div class="cgd-vis-label">PROVIDER LEV EL · THREE-PROVIDER CAUSAL COMPARISON</div>
