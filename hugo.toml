@@ -26,7 +26,6 @@ summaryLength = 70
   enable = true
   [markup.goldmark.extensions.passthrough.delimiters]
     block = [['$$', '$$']]
-    inline = [['$', '$']]
 
 [params]
     viewMorePostLink = "/reviews/"

@@ -4,6 +4,7 @@ date: 2026-05-03
 tags: ["data project"]
 categories: ["data project"]
 description: "California Denti-Cal records show Anaheim's payment intensity rose after the March 2015 ownership transition while every peer office fell or held flat. The divergence survives difference-in-differences, synthetic control, and every leave-one-out subset."
+banner: "cgd-banner.svg"
 draft: false
 math: false
 ---

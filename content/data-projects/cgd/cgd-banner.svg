@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <rect width="720" height="380" fill="#0a0d14"/>
+
+  <!-- Background grid -->
+  <line x1="0" y1="100" x2="720" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="150" x2="720" y2="150" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="0" y1="200" x2="720" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="250" x2="720" y2="250" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="200" y1="70" x2="200" y2="290" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+  <line x1="400" y1="70" x2="400" y2="290" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+  <line x1="600" y1="70" x2="600" y2="290" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+
+  <!-- Baseline axis -->
+  <line x1="72" y1="268" x2="648" y2="268" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+
+  <!-- Gap fill between post-period lines -->
+  <path d="M 413,187 C 475,175 555,158 640,148 L 640,210 C 555,204 475,198 413,192 Z"
+        fill="rgba(125,184,0,0.06)"/>
+
+  <!-- Pre-period: both lines close together (flat) -->
+  <!-- Peer offices pre-period (ice blue) -->
+  <path d="M 80,188 C 180,191 290,193 413,192"
+        fill="none" stroke="#a8c8d8" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Anaheim pre-period (moss green, same level, slight variation) -->
+  <path d="M 80,185 C 180,182 290,186 413,187"
+        fill="none" stroke="#7db800" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- March 2015 transition line -->
+  <line x1="413" y1="80" x2="413" y2="268" stroke="rgba(224,112,85,0.55)" stroke-width="1.2" stroke-dasharray="5,4"/>
+
+  <!-- Post-period: Anaheim rises, peers fall -->
+  <!-- Peer offices post-period (ice blue, declining) -->
+  <path d="M 413,192 C 475,198 555,204 640,210"
+        fill="none" stroke="#a8c8d8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Anaheim post-period (moss green, rising) -->
+  <path d="M 413,187 C 475,175 555,158 640,148"
+        fill="none" stroke="#7db800" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Divergence arrow / bracket -->
+  <line x1="644" y1="148" x2="644" y2="210" stroke="rgba(255,255,255,0.18)" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="638" y1="148" x2="650" y2="148" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <line x1="638" y1="210" x2="650" y2="210" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+
+  <!-- DiD annotation -->
+  <rect x="654" y="164" width="54" height="32" rx="4" fill="rgba(125,184,0,0.10)" stroke="rgba(125,184,0,0.35)" stroke-width="0.8"/>
+  <text x="681" y="177" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="10" fill="#7db800">+$14.49</text>
+  <text x="681" y="189" text-anchor="middle" font-family="'Space Mono', monospace" font-size="8" fill="rgba(125,184,0,0.65)">DiD effect</text>
+
+  <!-- Endpoint dots -->
+  <circle cx="640" cy="148" r="4.5" fill="#7db800" opacity="0.9"/>
+  <circle cx="640" cy="210" r="4.5" fill="#a8c8d8" opacity="0.8"/>
+  <circle cx="413" cy="187" r="5"   fill="rgba(224,112,85,0.85)"/>
+
+  <!-- Line labels -->
+  <text x="84" y="177" font-family="'Space Mono', monospace" font-size="9.5" fill="#7db800" opacity="0.75" letter-spacing="0.04em">Anaheim</text>
+  <text x="84" y="205" font-family="'Space Mono', monospace" font-size="9.5" fill="#a8c8d8" opacity="0.65" letter-spacing="0.04em">Peer offices</text>
+
+  <!-- Transition label -->
+  <rect x="366" y="83" width="94" height="18" rx="3" fill="rgba(224,112,85,0.09)" stroke="rgba(224,112,85,0.35)" stroke-width="0.7"/>
+  <text x="413" y="95" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" font-weight="700" fill="#e07055" letter-spacing="0.05em">Mar 2015</text>
+
+  <!-- Period labels on axis -->
+  <text x="80"  y="284" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.22)" letter-spacing="0.03em">Jan 2013</text>
+  <text x="360" y="284" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.16)" letter-spacing="0.03em">baseline period</text>
+  <text x="526" y="284" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.16)" letter-spacing="0.03em">divergence window</text>
+  <text x="640" y="284" text-anchor="end"   font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.22)" letter-spacing="0.03em">Sep 2016</text>
+
+  <!-- Title block -->
+  <text x="360" y="330" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="16" fill="rgba(255,255,255,0.72)" letter-spacing="0.07em">AGAINST THE TREND</text>
+  <text x="360" y="352" text-anchor="middle" font-family="'Space Mono', monospace" font-size="10" fill="rgba(255,255,255,0.27)" letter-spacing="0.04em">Denti-Cal payments · Anaheim vs. peer offices · 2013–2016</text>
+</svg>
