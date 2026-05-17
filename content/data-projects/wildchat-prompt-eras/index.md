@@ -168,7 +168,7 @@ banner: "wc-banner.svg"
 
 *Article by John Tribbia*
 
-<p class="wc-p"><a href="/data-projects/model-quality-overview/">A previous post</a> built a framework for measuring whether AI model quality drives user engagement. The data was synthetic by design. You can't observe the true causal effect in a real system, so the methodology was validated by injecting a known effect and checking recovery. But the framework made a behavioral prediction that real data can test: if quality drives engagement, then when a model improves unevenly across task types, the aggregate topic mix of what users actually do should shift in the direction of the improvement.</p>
+<p class="wc-p"><a href="/data-projects/model-quality-overview/">A previous post</a> built a framework for measuring whether AI model quality drives user engagement. The data was synthetic by design. It requires a lot of effort to observe the true full causal effect in a real system, so the methodology was validated by injecting a known effect and checking recovery. But the framework made a behavioral prediction that real data can test: if quality drives engagement, then when a model improves unevenly across task types, the aggregate topic mix of what users actually do should shift in the direction of the improvement.</p>
 
 <p class="wc-p">GPT-4 launched on March 14, 2023. Its quality gains over GPT-3.5 were not uniform. On coding benchmarks it improved by nearly 19 percentage points. On reasoning and factual tasks it gained 13–16 points. On casual conversation it gained almost nothing. If users are sensitive to that quality gradient, even without knowing the benchmark numbers, coding and reasoning prompts should grow at the transition. Casual prompts should not.</p>
 
