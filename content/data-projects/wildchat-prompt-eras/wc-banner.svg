@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <rect width="720" height="380" fill="#0a0d14"/>
+
+  <!-- Background grid -->
+  <line x1="0"   y1="103" x2="720" y2="103" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="0"   y1="173" x2="720" y2="173" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="0"   y1="243" x2="720" y2="243" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="210" y1="60"  x2="210" y2="243" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+  <line x1="360" y1="60"  x2="360" y2="243" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+  <line x1="510" y1="60"  x2="510" y2="243" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+
+  <!-- Baseline -->
+  <line x1="60" y1="243" x2="660" y2="243" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+
+  <!-- GPT-4 Turbo launch line (Nov 2023 = month 7, x=410) -->
+  <line x1="410" y1="60" x2="410" y2="243" stroke="rgba(255,255,255,0.18)" stroke-width="1.2" stroke-dasharray="4,4"/>
+
+  <!-- Image Generation area fill -->
+  <path d="M 60,236 L 110,236 L 160,236 L 210,145 L 260,173 L 310,166 L 360,173 L 410,138 L 460,96 L 510,89 L 560,103 L 610,82 L 660,89 L 660,243 L 60,243 Z"
+        fill="rgba(224,112,85,0.09)"/>
+
+  <!-- Image Generation line -->
+  <polyline
+    points="60,236 110,236 160,236 210,145 260,173 310,166 360,173 410,138 460,96 510,89 560,103 610,82 660,89"
+    fill="none" stroke="#e07055" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Coding area fill -->
+  <path d="M 60,173 L 110,180 L 160,166 L 210,187 L 260,180 L 310,173 L 360,180 L 410,180 L 460,194 L 510,187 L 560,194 L 610,187 L 660,194 L 660,243 L 60,243 Z"
+        fill="rgba(125,184,0,0.05)"/>
+
+  <!-- Coding line -->
+  <polyline
+    points="60,173 110,180 160,166 210,187 260,180 310,173 360,180 410,180 460,194 510,187 560,194 610,187 660,194"
+    fill="none" stroke="#7db800" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Casual Conversation line (flat, muted) -->
+  <polyline
+    points="60,222 110,219 160,222 210,222 260,222 310,219 360,222 410,219 460,222 510,219 560,222 610,222 660,219"
+    fill="none" stroke="rgba(168,200,216,0.35)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- GPT-4 Turbo label -->
+  <text x="414" y="74"  font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.45)">GPT-4 Turbo</text>
+  <text x="414" y="85"  font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.25)">Nov 2023</text>
+
+  <!-- Image Generation label + badge -->
+  <rect x="462" y="68" width="140" height="15" rx="2" fill="rgba(224,112,85,0.12)"/>
+  <text x="532" y="79" text-anchor="middle" font-family="'Space Mono', monospace" font-size="10" fill="#e07055">Image Generation</text>
+  <rect x="462" y="87" width="62" height="14" rx="2" fill="rgba(224,112,85,0.15)"/>
+  <text x="493" y="98" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="10" fill="#e07055">+12.7 pp</text>
+
+  <!-- Coding label -->
+  <text x="66" y="160" font-family="'Space Mono', monospace" font-size="10" fill="rgba(125,184,0,0.75)">Coding</text>
+
+  <!-- Casual label -->
+  <text x="66" y="213" font-family="'Space Mono', monospace" font-size="9" fill="rgba(168,200,216,0.4)">Casual chat</text>
+
+  <!-- Y-axis labels -->
+  <text x="54" y="247" text-anchor="end" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.18)">0%</text>
+  <text x="54" y="177" text-anchor="end" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.18)">10%</text>
+  <text x="54" y="107" text-anchor="end" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.18)">20%</text>
+
+  <!-- X-axis labels -->
+  <text x="60"  y="259" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.2)">Apr 23</text>
+  <text x="410" y="259" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.32)">Nov 23</text>
+  <text x="660" y="259" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="rgba(255,255,255,0.2)">Apr 24</text>
+
+  <!-- Title block -->
+  <text x="60" y="298" font-family="'Space Mono', monospace" font-weight="700" font-size="15" fill="rgba(255,255,255,0.85)" letter-spacing="0.02em">How Users Vote With Their Prompts</text>
+  <text x="60" y="318" font-family="'Space Mono', monospace" font-size="10" fill="rgba(255,255,255,0.28)" letter-spacing="0.05em">WILDCHAT-1M · BERTOPIC · GPT-3.5 → GPT-4 TURBO</text>
+</svg>
