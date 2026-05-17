@@ -1,0 +1,921 @@
+{
+  "months": [
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04"
+  ],
+  "topics": [
+    {
+      "topic_id": 0,
+      "label": "Image Generation (Midjourney)",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 0.0,
+          "mom": 0.0
+        },
+        {
+          "month": "2023-05",
+          "share": 0.0,
+          "mom": 0.06
+        },
+        {
+          "month": "2023-06",
+          "share": 0.06,
+          "mom": 14.29
+        },
+        {
+          "month": "2023-07",
+          "share": 14.35,
+          "mom": 5.09
+        },
+        {
+          "month": "2023-08",
+          "share": 19.44,
+          "mom": -1.44
+        },
+        {
+          "month": "2023-09",
+          "share": 18.0,
+          "mom": -3.98
+        },
+        {
+          "month": "2023-10",
+          "share": 14.02,
+          "mom": 3.03
+        },
+        {
+          "month": "2023-11",
+          "share": 17.05,
+          "mom": 1.42
+        },
+        {
+          "month": "2023-12",
+          "share": 18.47,
+          "mom": 1.12
+        },
+        {
+          "month": "2024-01",
+          "share": 19.59,
+          "mom": -3.89
+        },
+        {
+          "month": "2024-02",
+          "share": 15.7,
+          "mom": 8.72
+        },
+        {
+          "month": "2024-03",
+          "share": 24.42,
+          "mom": 3.65
+        },
+        {
+          "month": "2024-04",
+          "share": 28.07,
+          "mom": 0
+        }
+      ],
+      "peak_share": 28.07,
+      "peak_month": "2024-04",
+      "last3_avg": 22.73,
+      "first3_avg": 0.02
+    },
+    {
+      "topic_id": 4,
+      "label": "General Chat & Instructions",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 1.24,
+          "mom": -0.16
+        },
+        {
+          "month": "2023-05",
+          "share": 1.08,
+          "mom": 0.53
+        },
+        {
+          "month": "2023-06",
+          "share": 1.61,
+          "mom": -0.17
+        },
+        {
+          "month": "2023-07",
+          "share": 1.44,
+          "mom": -0.96
+        },
+        {
+          "month": "2023-08",
+          "share": 0.48,
+          "mom": 0.33
+        },
+        {
+          "month": "2023-09",
+          "share": 0.81,
+          "mom": 24.36
+        },
+        {
+          "month": "2023-10",
+          "share": 25.17,
+          "mom": -23.9
+        },
+        {
+          "month": "2023-11",
+          "share": 1.27,
+          "mom": -0.63
+        },
+        {
+          "month": "2023-12",
+          "share": 0.64,
+          "mom": 0.18
+        },
+        {
+          "month": "2024-01",
+          "share": 0.82,
+          "mom": -0.67
+        },
+        {
+          "month": "2024-02",
+          "share": 0.15,
+          "mom": 0.14
+        },
+        {
+          "month": "2024-03",
+          "share": 0.29,
+          "mom": 0.2
+        },
+        {
+          "month": "2024-04",
+          "share": 0.49,
+          "mom": 0
+        }
+      ],
+      "peak_share": 25.17,
+      "peak_month": "2023-10",
+      "last3_avg": 0.31,
+      "first3_avg": 1.31
+    },
+    {
+      "topic_id": 1,
+      "label": "Software Coding & Debugging",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 16.23,
+          "mom": -3.71
+        },
+        {
+          "month": "2023-05",
+          "share": 12.52,
+          "mom": -1.01
+        },
+        {
+          "month": "2023-06",
+          "share": 11.51,
+          "mom": -5.23
+        },
+        {
+          "month": "2023-07",
+          "share": 6.28,
+          "mom": -1.56
+        },
+        {
+          "month": "2023-08",
+          "share": 4.72,
+          "mom": 1.55
+        },
+        {
+          "month": "2023-09",
+          "share": 6.27,
+          "mom": -0.64
+        },
+        {
+          "month": "2023-10",
+          "share": 5.63,
+          "mom": 4.38
+        },
+        {
+          "month": "2023-11",
+          "share": 10.01,
+          "mom": -2.17
+        },
+        {
+          "month": "2023-12",
+          "share": 7.84,
+          "mom": -0.83
+        },
+        {
+          "month": "2024-01",
+          "share": 7.01,
+          "mom": -2.23
+        },
+        {
+          "month": "2024-02",
+          "share": 4.78,
+          "mom": 2.81
+        },
+        {
+          "month": "2024-03",
+          "share": 7.59,
+          "mom": -0.57
+        },
+        {
+          "month": "2024-04",
+          "share": 7.02,
+          "mom": 0
+        }
+      ],
+      "peak_share": 16.23,
+      "peak_month": "2023-04",
+      "last3_avg": 6.46,
+      "first3_avg": 13.42
+    },
+    {
+      "topic_id": 3,
+      "label": "Casual Conversation",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 0.37,
+          "mom": 0.2
+        },
+        {
+          "month": "2023-05",
+          "share": 0.57,
+          "mom": 1.72
+        },
+        {
+          "month": "2023-06",
+          "share": 2.29,
+          "mom": 3.99
+        },
+        {
+          "month": "2023-07",
+          "share": 6.28,
+          "mom": 3.63
+        },
+        {
+          "month": "2023-08",
+          "share": 9.91,
+          "mom": -2.59
+        },
+        {
+          "month": "2023-09",
+          "share": 7.32,
+          "mom": -3.08
+        },
+        {
+          "month": "2023-10",
+          "share": 4.24,
+          "mom": -1.1
+        },
+        {
+          "month": "2023-11",
+          "share": 3.14,
+          "mom": 2.02
+        },
+        {
+          "month": "2023-12",
+          "share": 5.16,
+          "mom": 3.29
+        },
+        {
+          "month": "2024-01",
+          "share": 8.45,
+          "mom": -5.16
+        },
+        {
+          "month": "2024-02",
+          "share": 3.29,
+          "mom": -1.15
+        },
+        {
+          "month": "2024-03",
+          "share": 2.14,
+          "mom": 2.83
+        },
+        {
+          "month": "2024-04",
+          "share": 4.97,
+          "mom": 0
+        }
+      ],
+      "peak_share": 9.91,
+      "peak_month": "2023-08",
+      "last3_avg": 3.47,
+      "first3_avg": 1.08
+    },
+    {
+      "topic_id": 11,
+      "label": "Sports, Games & Entertainment Scripts",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 1.36,
+          "mom": 8.1
+        },
+        {
+          "month": "2023-05",
+          "share": 9.46,
+          "mom": -8.53
+        },
+        {
+          "month": "2023-06",
+          "share": 0.93,
+          "mom": -0.51
+        },
+        {
+          "month": "2023-07",
+          "share": 0.42,
+          "mom": -0.32
+        },
+        {
+          "month": "2023-08",
+          "share": 0.1,
+          "mom": -0.1
+        },
+        {
+          "month": "2023-09",
+          "share": 0.0,
+          "mom": 0.1
+        },
+        {
+          "month": "2023-10",
+          "share": 0.1,
+          "mom": 0.07
+        },
+        {
+          "month": "2023-11",
+          "share": 0.17,
+          "mom": -0.17
+        },
+        {
+          "month": "2023-12",
+          "share": 0.0,
+          "mom": 0.0
+        },
+        {
+          "month": "2024-01",
+          "share": 0.0,
+          "mom": 0.0
+        },
+        {
+          "month": "2024-02",
+          "share": 0.0,
+          "mom": 0.0
+        },
+        {
+          "month": "2024-03",
+          "share": 0.0,
+          "mom": 0.1
+        },
+        {
+          "month": "2024-04",
+          "share": 0.1,
+          "mom": 0
+        }
+      ],
+      "peak_share": 9.46,
+      "peak_month": "2023-05",
+      "last3_avg": 0.03,
+      "first3_avg": 3.92
+    },
+    {
+      "topic_id": 8,
+      "label": "Scene & Visual Description",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 0.37,
+          "mom": -0.03
+        },
+        {
+          "month": "2023-05",
+          "share": 0.34,
+          "mom": 1.83
+        },
+        {
+          "month": "2023-06",
+          "share": 2.17,
+          "mom": -0.3
+        },
+        {
+          "month": "2023-07",
+          "share": 1.87,
+          "mom": -1.58
+        },
+        {
+          "month": "2023-08",
+          "share": 0.29,
+          "mom": 0.06
+        },
+        {
+          "month": "2023-09",
+          "share": 0.35,
+          "mom": 0.34
+        },
+        {
+          "month": "2023-10",
+          "share": 0.69,
+          "mom": -0.61
+        },
+        {
+          "month": "2023-11",
+          "share": 0.08,
+          "mom": 0.35
+        },
+        {
+          "month": "2023-12",
+          "share": 0.43,
+          "mom": -0.22
+        },
+        {
+          "month": "2024-01",
+          "share": 0.21,
+          "mom": 9.06
+        },
+        {
+          "month": "2024-02",
+          "share": 9.27,
+          "mom": -5.28
+        },
+        {
+          "month": "2024-03",
+          "share": 3.99,
+          "mom": -1.07
+        },
+        {
+          "month": "2024-04",
+          "share": 2.92,
+          "mom": 0
+        }
+      ],
+      "peak_share": 9.27,
+      "peak_month": "2024-02",
+      "last3_avg": 5.39,
+      "first3_avg": 0.96
+    },
+    {
+      "topic_id": 2,
+      "label": "Professional & Business Writing",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 4.46,
+          "mom": 2.34
+        },
+        {
+          "month": "2023-05",
+          "share": 6.8,
+          "mom": -1.11
+        },
+        {
+          "month": "2023-06",
+          "share": 5.69,
+          "mom": -0.17
+        },
+        {
+          "month": "2023-07",
+          "share": 5.52,
+          "mom": -0.52
+        },
+        {
+          "month": "2023-08",
+          "share": 5.0,
+          "mom": 1.04
+        },
+        {
+          "month": "2023-09",
+          "share": 6.04,
+          "mom": -0.41
+        },
+        {
+          "month": "2023-10",
+          "share": 5.63,
+          "mom": 1.83
+        },
+        {
+          "month": "2023-11",
+          "share": 7.46,
+          "mom": -1.98
+        },
+        {
+          "month": "2023-12",
+          "share": 5.48,
+          "mom": -3.01
+        },
+        {
+          "month": "2024-01",
+          "share": 2.47,
+          "mom": -0.23
+        },
+        {
+          "month": "2024-02",
+          "share": 2.24,
+          "mom": 0.19
+        },
+        {
+          "month": "2024-03",
+          "share": 2.43,
+          "mom": -0.38
+        },
+        {
+          "month": "2024-04",
+          "share": 2.05,
+          "mom": 0
+        }
+      ],
+      "peak_share": 7.46,
+      "peak_month": "2023-11",
+      "last3_avg": 2.24,
+      "first3_avg": 5.65
+    },
+    {
+      "topic_id": 6,
+      "label": "Roleplay & Interactive Fiction",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 0.87,
+          "mom": 3.27
+        },
+        {
+          "month": "2023-05",
+          "share": 4.14,
+          "mom": 3.29
+        },
+        {
+          "month": "2023-06",
+          "share": 7.43,
+          "mom": -2.59
+        },
+        {
+          "month": "2023-07",
+          "share": 4.84,
+          "mom": -3.69
+        },
+        {
+          "month": "2023-08",
+          "share": 1.15,
+          "mom": -0.69
+        },
+        {
+          "month": "2023-09",
+          "share": 0.46,
+          "mom": -0.16
+        },
+        {
+          "month": "2023-10",
+          "share": 0.3,
+          "mom": 0.21
+        },
+        {
+          "month": "2023-11",
+          "share": 0.51,
+          "mom": 0.03
+        },
+        {
+          "month": "2023-12",
+          "share": 0.54,
+          "mom": 0.28
+        },
+        {
+          "month": "2024-01",
+          "share": 0.82,
+          "mom": -0.52
+        },
+        {
+          "month": "2024-02",
+          "share": 0.3,
+          "mom": -0.2
+        },
+        {
+          "month": "2024-03",
+          "share": 0.1,
+          "mom": 0.09
+        },
+        {
+          "month": "2024-04",
+          "share": 0.19,
+          "mom": 0
+        }
+      ],
+      "peak_share": 7.43,
+      "peak_month": "2023-06",
+      "last3_avg": 0.2,
+      "first3_avg": 4.15
+    },
+    {
+      "topic_id": 5,
+      "label": "Creative Fiction Writing",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 3.84,
+          "mom": 0.24
+        },
+        {
+          "month": "2023-05",
+          "share": 4.08,
+          "mom": -1.36
+        },
+        {
+          "month": "2023-06",
+          "share": 2.72,
+          "mom": -1.62
+        },
+        {
+          "month": "2023-07",
+          "share": 1.1,
+          "mom": -0.04
+        },
+        {
+          "month": "2023-08",
+          "share": 1.06,
+          "mom": -0.13
+        },
+        {
+          "month": "2023-09",
+          "share": 0.93,
+          "mom": 0.35
+        },
+        {
+          "month": "2023-10",
+          "share": 1.28,
+          "mom": 1.01
+        },
+        {
+          "month": "2023-11",
+          "share": 2.29,
+          "mom": 1.25
+        },
+        {
+          "month": "2023-12",
+          "share": 3.54,
+          "mom": -1.68
+        },
+        {
+          "month": "2024-01",
+          "share": 1.86,
+          "mom": -0.37
+        },
+        {
+          "month": "2024-02",
+          "share": 1.49,
+          "mom": 0.26
+        },
+        {
+          "month": "2024-03",
+          "share": 1.75,
+          "mom": -0.09
+        },
+        {
+          "month": "2024-04",
+          "share": 1.66,
+          "mom": 0
+        }
+      ],
+      "peak_share": 4.08,
+      "peak_month": "2023-05",
+      "last3_avg": 1.63,
+      "first3_avg": 3.55
+    },
+    {
+      "topic_id": 10,
+      "label": "Social & Lifestyle Scenarios",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 1.12,
+          "mom": 2.22
+        },
+        {
+          "month": "2023-05",
+          "share": 3.34,
+          "mom": -1.92
+        },
+        {
+          "month": "2023-06",
+          "share": 1.42,
+          "mom": 2.32
+        },
+        {
+          "month": "2023-07",
+          "share": 3.74,
+          "mom": -2.49
+        },
+        {
+          "month": "2023-08",
+          "share": 1.25,
+          "mom": -1.02
+        },
+        {
+          "month": "2023-09",
+          "share": 0.23,
+          "mom": 0.56
+        },
+        {
+          "month": "2023-10",
+          "share": 0.79,
+          "mom": -0.03
+        },
+        {
+          "month": "2023-11",
+          "share": 0.76,
+          "mom": 3.21
+        },
+        {
+          "month": "2023-12",
+          "share": 3.97,
+          "mom": -3.76
+        },
+        {
+          "month": "2024-01",
+          "share": 0.21,
+          "mom": -0.21
+        },
+        {
+          "month": "2024-02",
+          "share": 0.0,
+          "mom": 0.0
+        },
+        {
+          "month": "2024-03",
+          "share": 0.0,
+          "mom": 0.0
+        },
+        {
+          "month": "2024-04",
+          "share": 0.0,
+          "mom": 0
+        }
+      ],
+      "peak_share": 3.97,
+      "peak_month": "2023-12",
+      "last3_avg": 0.0,
+      "first3_avg": 1.96
+    },
+    {
+      "topic_id": 7,
+      "label": "Translation & World History",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 3.84,
+          "mom": -0.55
+        },
+        {
+          "month": "2023-05",
+          "share": 3.29,
+          "mom": -1.0
+        },
+        {
+          "month": "2023-06",
+          "share": 2.29,
+          "mom": -0.93
+        },
+        {
+          "month": "2023-07",
+          "share": 1.36,
+          "mom": 0.37
+        },
+        {
+          "month": "2023-08",
+          "share": 1.73,
+          "mom": 1.29
+        },
+        {
+          "month": "2023-09",
+          "share": 3.02,
+          "mom": -1.93
+        },
+        {
+          "month": "2023-10",
+          "share": 1.09,
+          "mom": 1.12
+        },
+        {
+          "month": "2023-11",
+          "share": 2.21,
+          "mom": -0.06
+        },
+        {
+          "month": "2023-12",
+          "share": 2.15,
+          "mom": -0.71
+        },
+        {
+          "month": "2024-01",
+          "share": 1.44,
+          "mom": 0.35
+        },
+        {
+          "month": "2024-02",
+          "share": 1.79,
+          "mom": -0.82
+        },
+        {
+          "month": "2024-03",
+          "share": 0.97,
+          "mom": -0.39
+        },
+        {
+          "month": "2024-04",
+          "share": 0.58,
+          "mom": 0
+        }
+      ],
+      "peak_share": 3.84,
+      "peak_month": "2023-04",
+      "last3_avg": 1.11,
+      "first3_avg": 3.14
+    },
+    {
+      "topic_id": 9,
+      "label": "Character Comparison / Reaction",
+      "series": [
+        {
+          "month": "2023-04",
+          "share": 0.5,
+          "mom": 1.09
+        },
+        {
+          "month": "2023-05",
+          "share": 1.59,
+          "mom": 2.06
+        },
+        {
+          "month": "2023-06",
+          "share": 3.65,
+          "mom": 0.17
+        },
+        {
+          "month": "2023-07",
+          "share": 3.82,
+          "mom": -1.13
+        },
+        {
+          "month": "2023-08",
+          "share": 2.69,
+          "mom": -1.64
+        },
+        {
+          "month": "2023-09",
+          "share": 1.05,
+          "mom": 0.63
+        },
+        {
+          "month": "2023-10",
+          "share": 1.68,
+          "mom": -1.0
+        },
+        {
+          "month": "2023-11",
+          "share": 0.68,
+          "mom": -0.14
+        },
+        {
+          "month": "2023-12",
+          "share": 0.54,
+          "mom": -0.33
+        },
+        {
+          "month": "2024-01",
+          "share": 0.21,
+          "mom": 0.24
+        },
+        {
+          "month": "2024-02",
+          "share": 0.45,
+          "mom": -0.06
+        },
+        {
+          "month": "2024-03",
+          "share": 0.39,
+          "mom": 0.0
+        },
+        {
+          "month": "2024-04",
+          "share": 0.39,
+          "mom": 0
+        }
+      ],
+      "peak_share": 3.82,
+      "peak_month": "2023-07",
+      "last3_avg": 0.41,
+      "first3_avg": 1.91
+    }
+  ],
+  "gpt4_turbo_date": "2023-11",
+  "midjourney_emergence": "2023-07"
+}

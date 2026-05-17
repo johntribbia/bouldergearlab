@@ -1,0 +1,110 @@
+[
+  {
+    "topic_id": 0,
+    "name": "Image Generation (Midjourney)",
+    "share_before": 8.28,
+    "share_after": 20.94,
+    "delta_pp": 12.66,
+    "chi2": 450.08,
+    "p_value": 0.0
+  },
+  {
+    "topic_id": 4,
+    "name": "General Chat & Instructions",
+    "share_before": 4.06,
+    "share_after": 0.6,
+    "delta_pp": -3.46,
+    "chi2": 142.441,
+    "p_value": 0.0
+  },
+  {
+    "topic_id": 6,
+    "name": "Roleplay & Interactive Fiction",
+    "share_before": 3.28,
+    "share_after": 0.39,
+    "delta_pp": -2.89,
+    "chi2": 124.221,
+    "p_value": 0.0
+  },
+  {
+    "topic_id": 11,
+    "name": "Sports, Games & Entertainment Scripts",
+    "share_before": 2.37,
+    "share_after": 0.06,
+    "delta_pp": -2.32,
+    "chi2": 115.261,
+    "p_value": 0.0
+  },
+  {
+    "topic_id": 9,
+    "name": "Character Comparison / Reaction",
+    "share_before": 2.25,
+    "share_after": 0.48,
+    "delta_pp": -1.77,
+    "chi2": 63.483,
+    "p_value": 0.0
+  },
+  {
+    "topic_id": 8,
+    "name": "Scene & Visual Description",
+    "share_before": 0.94,
+    "share_after": 2.69,
+    "delta_pp": 1.75,
+    "chi2": 61.137,
+    "p_value": 0.0
+  },
+  {
+    "topic_id": 2,
+    "name": "Professional & Business Writing",
+    "share_before": 5.68,
+    "share_after": 4.0,
+    "delta_pp": -1.68,
+    "chi2": 18.567,
+    "p_value": 0.0
+  },
+  {
+    "topic_id": 1,
+    "name": "Software Coding & Debugging",
+    "share_before": 9.3,
+    "share_after": 7.64,
+    "delta_pp": -1.67,
+    "chi2": 11.019,
+    "p_value": 0.0009
+  },
+  {
+    "topic_id": 10,
+    "name": "Social & Lifestyle Scenarios",
+    "share_before": 1.91,
+    "share_after": 0.85,
+    "delta_pp": -1.06,
+    "chi2": 23.531,
+    "p_value": 0.0
+  },
+  {
+    "topic_id": 7,
+    "name": "Translation & World History",
+    "share_before": 2.35,
+    "share_after": 1.55,
+    "delta_pp": -0.8,
+    "chi2": 9.914,
+    "p_value": 0.0016
+  },
+  {
+    "topic_id": 3,
+    "name": "Casual Conversation",
+    "share_before": 3.95,
+    "share_after": 4.27,
+    "delta_pp": 0.32,
+    "chi2": 0.769,
+    "p_value": 0.3807
+  },
+  {
+    "topic_id": 5,
+    "name": "Creative Fiction Writing",
+    "share_before": 2.34,
+    "share_after": 2.11,
+    "delta_pp": -0.23,
+    "chi2": 0.67,
+    "p_value": 0.413
+  }
+]

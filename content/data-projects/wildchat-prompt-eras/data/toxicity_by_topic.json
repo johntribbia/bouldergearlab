@@ -1,0 +1,93 @@
+[
+  {
+    "topic_id": 0,
+    "name": "Image Generation (Midjourney)",
+    "n": 1781,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 1,
+    "name": "Software Coding & Debugging",
+    "n": 1179,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 2,
+    "name": "Professional & Business Writing",
+    "n": 686,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 3,
+    "name": "Casual Conversation",
+    "n": 554,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 4,
+    "name": "General Chat & Instructions",
+    "n": 373,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 5,
+    "name": "Creative Fiction Writing",
+    "n": 306,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 6,
+    "name": "Roleplay & Interactive Fiction",
+    "n": 296,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 7,
+    "name": "Translation & World History",
+    "n": 278,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 8,
+    "name": "Scene & Visual Description",
+    "n": 218,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 9,
+    "name": "Character Comparison / Reaction",
+    "n": 215,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 10,
+    "name": "Social & Lifestyle Scenarios",
+    "n": 205,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": 11,
+    "name": "Sports, Games & Entertainment Scripts",
+    "n": 203,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  },
+  {
+    "topic_id": -1,
+    "name": "[Outlier / Unclustered]",
+    "n": 5106,
+    "n_toxic": 0,
+    "toxicity_rate": 0.0
+  }
+]

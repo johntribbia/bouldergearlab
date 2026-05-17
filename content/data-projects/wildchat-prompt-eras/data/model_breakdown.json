@@ -1,0 +1,44 @@
+{
+  "labels": [
+    "Image Generation (Midjourney)",
+    "Software Coding & Debugging",
+    "Professional & Business Writing",
+    "Casual Conversation",
+    "General Chat & Instructions",
+    "Creative Fiction Writing",
+    "Roleplay & Interactive Fiction",
+    "Translation & World History",
+    "Scene & Visual Description",
+    "Character Comparison / Reaction",
+    "Social & Lifestyle Scenarios",
+    "Sports, Games & Entertainment Scripts"
+  ],
+  "gpt35_shares": [
+    17.14,
+    7.06,
+    5.03,
+    5.07,
+    3.27,
+    1.65,
+    2.67,
+    1.68,
+    0.74,
+    1.83,
+    1.47,
+    1.93
+  ],
+  "gpt4_shares": [
+    0.0,
+    13.89,
+    5.09,
+    0.84,
+    1.03,
+    4.21,
+    0.56,
+    3.21,
+    4.4,
+    0.78,
+    1.62,
+    0.06
+  ]
+}

@@ -1,0 +1,642 @@
+[
+  {
+    "topic_id": -1,
+    "name": "[Outlier / Unclustered]",
+    "size": 5106,
+    "share_pct": 37.55,
+    "top_keywords": [
+      "write",
+      "ai",
+      "like",
+      "prompt",
+      "use",
+      "create",
+      "image",
+      "midjourney"
+    ]
+  },
+  {
+    "topic_id": 0,
+    "name": "Image Generation (Midjourney)",
+    "size": 1781,
+    "share_pct": 13.1,
+    "top_keywords": [
+      "ai",
+      "midjourney",
+      "image",
+      "prompt",
+      "prompts ai",
+      "structure formatting",
+      "words description",
+      "visualize"
+    ]
+  },
+  {
+    "topic_id": 1,
+    "name": "Software Coding & Debugging",
+    "size": 1179,
+    "share_pct": 8.67,
+    "top_keywords": [
+      "class",
+      "public",
+      "private",
+      "data",
+      "local",
+      "using",
+      "return",
+      "com"
+    ]
+  },
+  {
+    "topic_id": 2,
+    "name": "Professional & Business Writing",
+    "size": 686,
+    "share_pct": 5.05,
+    "top_keywords": [
+      "company",
+      "write",
+      "letter",
+      "skills",
+      "project",
+      "following",
+      "job",
+      "professional"
+    ]
+  },
+  {
+    "topic_id": 3,
+    "name": "Casual Conversation",
+    "size": 554,
+    "share_pct": 4.07,
+    "top_keywords": [
+      "just",
+      "maybe",
+      "school",
+      "okay",
+      "club",
+      "hope",
+      "oh",
+      "waiting"
+    ]
+  },
+  {
+    "topic_id": 4,
+    "name": "General Chat & Instructions",
+    "size": 373,
+    "share_pct": 2.74,
+    "top_keywords": [
+      "message",
+      "send",
+      "concise",
+      "discussion",
+      "clear",
+      "asked",
+      "response",
+      "say"
+    ]
+  },
+  {
+    "topic_id": 5,
+    "name": "Creative Fiction Writing",
+    "size": 306,
+    "share_pct": 2.25,
+    "top_keywords": [
+      "story",
+      "write",
+      "man",
+      "long",
+      "original",
+      "female",
+      "creative",
+      "dialogue"
+    ]
+  },
+  {
+    "topic_id": 6,
+    "name": "Roleplay & Interactive Fiction",
+    "size": 296,
+    "share_pct": 2.18,
+    "top_keywords": [
+      "player",
+      "female",
+      "strange",
+      "day",
+      "base",
+      "looking",
+      "looked",
+      "like"
+    ]
+  },
+  {
+    "topic_id": 7,
+    "name": "Translation & World History",
+    "size": 278,
+    "share_pct": 2.04,
+    "top_keywords": [
+      "chinese",
+      "history",
+      "language",
+      "english",
+      "write",
+      "social",
+      "war",
+      "following"
+    ]
+  },
+  {
+    "topic_id": 8,
+    "name": "Scene & Visual Description",
+    "size": 218,
+    "share_pct": 1.6,
+    "top_keywords": [
+      "water",
+      "looks",
+      "story",
+      "face",
+      "relaxing",
+      "make",
+      "add",
+      "set"
+    ]
+  },
+  {
+    "topic_id": 9,
+    "name": "Character Comparison / Reaction",
+    "size": 215,
+    "share_pct": 1.58,
+    "top_keywords": [
+      "react",
+      "characters",
+      "girls",
+      "vs",
+      "humans",
+      "age",
+      "black",
+      "says"
+    ]
+  },
+  {
+    "topic_id": 10,
+    "name": "Social & Lifestyle Scenarios",
+    "size": 205,
+    "share_pct": 1.51,
+    "top_keywords": [
+      "feet",
+      "script",
+      "summer",
+      "friends",
+      "friend",
+      "hot",
+      "work",
+      "wearing"
+    ]
+  },
+  {
+    "topic_id": 11,
+    "name": "Sports, Games & Entertainment Scripts",
+    "size": 203,
+    "share_pct": 1.49,
+    "top_keywords": [
+      "script",
+      "vs",
+      "state",
+      "write",
+      "team",
+      "season",
+      "000",
+      "10"
+    ]
+  },
+  {
+    "topic_id": 12,
+    "name": "Social Media & Design Content",
+    "size": 151,
+    "share_pct": 1.11,
+    "top_keywords": [
+      "include",
+      "details",
+      "art",
+      "social",
+      "don",
+      "end",
+      "media",
+      "design"
+    ]
+  },
+  {
+    "topic_id": 13,
+    "name": "Teen / Young Adult Scenarios",
+    "size": 146,
+    "share_pct": 1.07,
+    "top_keywords": [
+      "year old",
+      "14",
+      "old",
+      "year",
+      "girlfriend",
+      "scene",
+      "dialogue",
+      "friend"
+    ]
+  },
+  {
+    "topic_id": 14,
+    "name": "Image Generation (Midjourney) \u2014 Alt A",
+    "size": 138,
+    "share_pct": 1.01,
+    "top_keywords": [
+      "ai",
+      "midjourney",
+      "image",
+      "prompt",
+      "structure formatting",
+      "prompts ai",
+      "words description",
+      "visualize"
+    ]
+  },
+  {
+    "topic_id": 15,
+    "name": "Content Writing & Blogging",
+    "size": 132,
+    "share_pct": 0.97,
+    "top_keywords": [
+      "article",
+      "post",
+      "tone",
+      "try",
+      "written",
+      "language",
+      "examples",
+      "write"
+    ]
+  },
+  {
+    "topic_id": 16,
+    "name": "Image Generation (Midjourney) \u2014 Alt B",
+    "size": 125,
+    "share_pct": 0.92,
+    "top_keywords": [
+      "confused",
+      "ai",
+      "midjourney",
+      "image",
+      "prompt",
+      "prompts",
+      "words description",
+      "structure formatting"
+    ]
+  },
+  {
+    "topic_id": 17,
+    "name": "Image Generation (Midjourney) \u2014 Alt C",
+    "size": 106,
+    "share_pct": 0.78,
+    "top_keywords": [
+      "ai",
+      "midjourney",
+      "prompt",
+      "image",
+      "prompt generator",
+      "provide detailed",
+      "generative ai",
+      "generator"
+    ]
+  },
+  {
+    "topic_id": 18,
+    "name": "Academic Research & Health",
+    "size": 104,
+    "share_pct": 0.76,
+    "top_keywords": [
+      "study",
+      "health",
+      "research",
+      "results",
+      "10",
+      "various",
+      "summarize",
+      "write"
+    ]
+  },
+  {
+    "topic_id": 19,
+    "name": "Image Generation (Midjourney) \u2014 Alt D",
+    "size": 100,
+    "share_pct": 0.74,
+    "top_keywords": [
+      "ai",
+      "midjourney",
+      "prompt",
+      "image",
+      "prompts ai",
+      "structure formatting",
+      "words description",
+      "visualize"
+    ]
+  },
+  {
+    "topic_id": 20,
+    "name": "Music & Lyrics",
+    "size": 94,
+    "share_pct": 0.69,
+    "top_keywords": [
+      "song",
+      "music",
+      "wait",
+      "pop",
+      "house",
+      "cause",
+      "rock",
+      "earth"
+    ]
+  },
+  {
+    "topic_id": 21,
+    "name": "Jailbreak Attempts",
+    "size": 91,
+    "share_pct": 0.67,
+    "top_keywords": [
+      "young",
+      "woman",
+      "beautiful",
+      "want",
+      "fictional",
+      "long",
+      "instructions",
+      "ignore"
+    ]
+  },
+  {
+    "topic_id": 22,
+    "name": "General Assistance",
+    "size": 83,
+    "share_pct": 0.61,
+    "top_keywords": [
+      "base",
+      "main",
+      "new",
+      "just",
+      "fellow",
+      "oh",
+      "ve",
+      "help"
+    ]
+  },
+  {
+    "topic_id": 23,
+    "name": "Fantasy Worldbuilding",
+    "size": 78,
+    "share_pct": 0.57,
+    "top_keywords": [
+      "features",
+      "fantasy",
+      "dialogue",
+      "eyes",
+      "hair",
+      "town",
+      "girl",
+      "story"
+    ]
+  },
+  {
+    "topic_id": 24,
+    "name": "Food & Nutrition",
+    "size": 66,
+    "share_pct": 0.49,
+    "top_keywords": [
+      "food",
+      "make",
+      "weight",
+      "week",
+      "like",
+      "told",
+      "yes",
+      "opened"
+    ]
+  },
+  {
+    "topic_id": 25,
+    "name": "Personal Narrative & Family",
+    "size": 66,
+    "share_pct": 0.49,
+    "top_keywords": [
+      "dialogue",
+      "day",
+      "story",
+      "room",
+      "months",
+      "time",
+      "parents",
+      "getting"
+    ]
+  },
+  {
+    "topic_id": 26,
+    "name": "TV, Games & Entertainment Recs",
+    "size": 66,
+    "share_pct": 0.49,
+    "top_keywords": [
+      "kids",
+      "names",
+      "tv",
+      "similar",
+      "needs",
+      "mid",
+      "shows",
+      "game"
+    ]
+  },
+  {
+    "topic_id": 27,
+    "name": "Character & Game Design",
+    "size": 62,
+    "share_pct": 0.46,
+    "top_keywords": [
+      "fight",
+      "characters",
+      "personality",
+      "game",
+      "fighting",
+      "character",
+      "following",
+      "team"
+    ]
+  },
+  {
+    "topic_id": 28,
+    "name": "Art & Visual Media",
+    "size": 59,
+    "share_pct": 0.43,
+    "top_keywords": [
+      "art",
+      "title",
+      "word",
+      "characters",
+      "work",
+      "generate",
+      "order",
+      "media"
+    ]
+  },
+  {
+    "topic_id": 29,
+    "name": "Image Generation (Midjourney) \u2014 Alt E",
+    "size": 57,
+    "share_pct": 0.42,
+    "top_keywords": [
+      "ai",
+      "midjourney",
+      "prompt",
+      "image",
+      "concept",
+      "prompts ai",
+      "words description",
+      "structure formatting"
+    ]
+  },
+  {
+    "topic_id": 30,
+    "name": "Document Formatting & Templates",
+    "size": 55,
+    "share_pct": 0.4,
+    "top_keywords": [
+      "non",
+      "sentences",
+      "style",
+      "format",
+      "details",
+      "date",
+      "content",
+      "2023"
+    ]
+  },
+  {
+    "topic_id": 31,
+    "name": "Humor & Comedy Writing",
+    "size": 54,
+    "share_pct": 0.4,
+    "top_keywords": [
+      "funny",
+      "make",
+      "17",
+      "sense",
+      "really",
+      "fun",
+      "question",
+      "write"
+    ]
+  },
+  {
+    "topic_id": 32,
+    "name": "Anime & Manga Scenarios",
+    "size": 54,
+    "share_pct": 0.4,
+    "top_keywords": [
+      "anime",
+      "scene",
+      "hair",
+      "black",
+      "young",
+      "man",
+      "dressed",
+      "white"
+    ]
+  },
+  {
+    "topic_id": 33,
+    "name": "Image Generation (Midjourney) \u2014 Alt F",
+    "size": 53,
+    "share_pct": 0.39,
+    "top_keywords": [
+      "ai",
+      "midjourney",
+      "image",
+      "prompt",
+      "generator",
+      "generative",
+      "prompts",
+      "structure formatting"
+    ]
+  },
+  {
+    "topic_id": 34,
+    "name": "Digital Art Descriptions",
+    "size": 53,
+    "share_pct": 0.39,
+    "top_keywords": [
+      "picture",
+      "art",
+      "street",
+      "want",
+      "digital",
+      "imagine",
+      "examples",
+      "different"
+    ]
+  },
+  {
+    "topic_id": 35,
+    "name": "Meta: ChatGPT Itself",
+    "size": 52,
+    "share_pct": 0.38,
+    "top_keywords": [
+      "chat",
+      "version",
+      "designed",
+      "brief",
+      "mid",
+      "success",
+      "knowledge",
+      "probably"
+    ]
+  },
+  {
+    "topic_id": 36,
+    "name": "Image Generation (Midjourney) \u2014 Alt G",
+    "size": 52,
+    "share_pct": 0.38,
+    "top_keywords": [
+      "ai",
+      "midjourney",
+      "prompt",
+      "image",
+      "prompts ai",
+      "structure formatting",
+      "words description",
+      "create image"
+    ]
+  },
+  {
+    "topic_id": 37,
+    "name": "Video & YouTube Scripts",
+    "size": 50,
+    "share_pct": 0.37,
+    "top_keywords": [
+      "youtube",
+      "video",
+      "script",
+      "text",
+      "background",
+      "interesting",
+      "experience",
+      "content"
+    ]
+  },
+  {
+    "topic_id": 38,
+    "name": "Social Pleasantries",
+    "size": 50,
+    "share_pct": 0.37,
+    "top_keywords": [
+      "amazing",
+      "today",
+      "school",
+      "thanks",
+      "really",
+      "meeting",
+      "quite",
+      "love"
+    ]
+  }
+]

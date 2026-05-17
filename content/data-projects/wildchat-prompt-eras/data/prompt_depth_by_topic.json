@@ -1,0 +1,110 @@
+[
+  {
+    "topic_id": 0,
+    "name": "Image Generation (Midjourney)",
+    "n": 1781,
+    "median": 450.0,
+    "mean": 455.3,
+    "p25": 450.0,
+    "p75": 453.0
+  },
+  {
+    "topic_id": 3,
+    "name": "Casual Conversation",
+    "n": 554,
+    "median": 174.0,
+    "mean": 293.6,
+    "p25": 76.0,
+    "p75": 418.0
+  },
+  {
+    "topic_id": 6,
+    "name": "Roleplay & Interactive Fiction",
+    "n": 296,
+    "median": 128.0,
+    "mean": 203.1,
+    "p25": 77.0,
+    "p75": 248.2
+  },
+  {
+    "topic_id": 10,
+    "name": "Social & Lifestyle Scenarios",
+    "n": 205,
+    "median": 85.0,
+    "mean": 98.7,
+    "p25": 54.0,
+    "p75": 112.0
+  },
+  {
+    "topic_id": 8,
+    "name": "Scene & Visual Description",
+    "n": 218,
+    "median": 79.0,
+    "mean": 84.7,
+    "p25": 49.0,
+    "p75": 111.5
+  },
+  {
+    "topic_id": 4,
+    "name": "General Chat & Instructions",
+    "n": 373,
+    "median": 63.0,
+    "mean": 76.5,
+    "p25": 37.0,
+    "p75": 78.0
+  },
+  {
+    "topic_id": 5,
+    "name": "Creative Fiction Writing",
+    "n": 306,
+    "median": 53.0,
+    "mean": 272.4,
+    "p25": 27.0,
+    "p75": 147.5
+  },
+  {
+    "topic_id": 1,
+    "name": "Software Coding & Debugging",
+    "n": 1179,
+    "median": 46.0,
+    "mean": 220.6,
+    "p25": 15.0,
+    "p75": 202.0
+  },
+  {
+    "topic_id": 2,
+    "name": "Professional & Business Writing",
+    "n": 686,
+    "median": 29.5,
+    "mean": 165.4,
+    "p25": 13.2,
+    "p75": 86.8
+  },
+  {
+    "topic_id": 7,
+    "name": "Translation & World History",
+    "n": 278,
+    "median": 28.0,
+    "mean": 412.2,
+    "p25": 12.0,
+    "p75": 155.0
+  },
+  {
+    "topic_id": 9,
+    "name": "Character Comparison / Reaction",
+    "n": 215,
+    "median": 19.0,
+    "mean": 55.7,
+    "p25": 12.0,
+    "p75": 36.0
+  },
+  {
+    "topic_id": 11,
+    "name": "Sports, Games & Entertainment Scripts",
+    "n": 203,
+    "median": 10.0,
+    "mean": 36.8,
+    "p25": 7.0,
+    "p75": 14.5
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "Coding (HumanEval)": {
+    "gpt35": 48.1,
+    "gpt4": 67.0,
+    "delta_pp": 18.9
+  },
+  "Reasoning (MMLU)": {
+    "gpt35": 70.0,
+    "gpt4": 86.4,
+    "delta_pp": 16.4
+  },
+  "Factual QA (TruthfulQA)": {
+    "gpt35": 58.7,
+    "gpt4": 71.9,
+    "delta_pp": 13.2
+  },
+  "Creative Writing (MT-Bench)": {
+    "gpt35": 7.94,
+    "gpt4": 8.99,
+    "delta_pp": 1.05
+  },
+  "Casual Chat (MT-Bench)": {
+    "gpt35": 8.35,
+    "gpt4": 8.39,
+    "delta_pp": 0.04
+  }
+}
