@@ -1,6 +1,6 @@
 ---
 title: ""
-description: "Meet John Tribbia and the philosophy behind Boulder Gear Lab."
+description: "Meet John Tribbia — Data Scientist at Google, independent gear reviewer, and the person behind Boulder Gear Lab."
 ---
 
 <div class="about-hero">
@@ -14,9 +14,9 @@ description: "Meet John Tribbia and the philosophy behind Boulder Gear Lab."
 # Boulder Gear Lab
 ## The Philosophy
 
-High-quality gear reviews require three things: exhaustive testing, critical thinking, and radical honesty. The same three things, it turns out, that make good data science. I've spent two decades applying all three — on the trail and at the terminal.
+The gear reviews and the data projects run on the same fuel: long exposure, honest measurement, and the willingness to publish what you actually found.
 
-I test products the way you actually use them: grinding up Colorado peaks, commuting through Front Range winters, and pushing limits on all-day efforts. No hype, no fluff — just real miles and honest feedback.
+I test products the way you use them — grinding up Colorado peaks, commuting through Front Range winters, pushing limits on all-day efforts. No hype, no fluff, just real miles and honest feedback. The data work follows the same logic: spend real time with the problem, measure what matters, report what the analysis actually shows.
 
 ---
 ## John Tribbia
@@ -26,10 +26,10 @@ I test products the way you actually use them: grinding up Colorado peaks, commu
             <strong>Data Scientist. Trail Runner. Cyclist. Outdoor Enthusiast.</strong>
         </p>
         <p>
-            I am a former sponsored athlete turned independent gear reviewer based in Boulder, Colorado - a place where the terrain has a way of testing the limits of everything you bring into the foothills.
+            I'm a Data Scientist and independent gear reviewer based in Boulder, Colorado — a former sponsored athlete who never stopped logging miles or chasing hard problems.
         </p>
         <p>
-            With over 100,000 miles logged across trails and roads, I’ve spent decades exploring the outdoors. After years of representing brands like La Sportiva, Pearl Izumi, and Salomon, I now focus on providing completely independent reviews that combine analytical rigor with extensive field experience.
+            After years representing brands like La Sportiva, Pearl Izumi, and Salomon, I review gear with no brand relationships to protect. The data work follows the same principle: no outcome to defend, just the analysis.
         </p>
     </div>
 </div>
@@ -41,19 +41,17 @@ I test products the way you actually use them: grinding up Colorado peaks, commu
 ---
 ## Two Worlds, One Lab
 
-I've logged over 100,000 miles on Colorado trails and spent about as long wrestling with messy data as a Data Scientist. Both involve field conditions, unexpected failures, and the discipline to report honestly what you found — not what you hoped to find.
+The "Lab" in Boulder Gear Lab is a mindset, not a room full of sensors. Both sides of this site run on the same discipline: spend real time with the subject, measure what matters, and report what you found.
 
 ### The Data Science Side
-By day, I am a Data Scientist at Google, leading teams in analytics, machine learning, and statistical modeling. I hold a PhD in Sociology from the University of Colorado Boulder, specializing in quantitative methods and research design. 
+I'm a Data Scientist at Google, leading teams in analytics, machine learning, and statistical modeling. I hold a PhD in Sociology from the University of Colorado Boulder, with a focus on quantitative methods and research design.
 
-The "Lab" in Boulder Gear Lab refers to this mindset of rigorous problem-solving and critical thinking, rather than a sterile room full of sensors.
-
-The [Data Projects](/data-projects/) section is where that professional work shows up publicly. The writing there covers original frameworks for evaluating AI agent behavior, statistical approaches to measuring model quality, and analysis of how AI usage and infrastructure are actually distributed across the economy.
+The [Data Projects](/data-projects/) section is where that work surfaces publicly. The articles cover original frameworks for evaluating AI agent behavior, statistical approaches to measuring model quality, and how AI adoption and infrastructure are distributed across the economy.
 
 ### The Gear Testing Side
-I’ve spent twenty years testing gear through the lens of a competitive athlete. While I value my past partnerships with brands like La Sportiva, Pearl Izumi, and Salomon, those sponsorships are behind me. This allows me to maintain complete editorial independence.
+Over 100,000 miles logged across trails and roads, twenty years of competitive athletics, and sponsored stints with La Sportiva, Pearl Izumi, and Salomon. Those partnerships ended, and the independence that followed is not something I'd trade.
 
-I have contributed to reviews in Runner's World, Running Times, Triathlete Magazine, and Competitor Sports Magazine. And, I am activealy a regular contributor to [Road Trail Run](https://www.roadtrailrun.com), one of the most respected review platforms in the industry. [See my RTR reviews →](/roadtrailrun/)
+I've contributed to Runner's World, Running Times, Triathlete Magazine, and Competitor Sports Magazine, and I'm a regular contributor to [Road Trail Run](https://www.roadtrailrun.com), one of the most respected platforms in the industry. [See my RTR reviews →](/roadtrailrun/)
 
 
 ---
