@@ -45,17 +45,17 @@
 
         </div>
 
-        <!-- Recent Reviews Zone -->
+        <!-- Recent Posts Zone -->
         <section class="section reviews-section">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="section-tag">Fresh from the Lab</span>
-                    <h2>Latest Reviews</h2>
-                    <p class="section-subtitle">Honest gear reviews tested in the Colorado Rockies</p>
+                    <h2>Latest Posts</h2>
+                    <p class="section-subtitle">Gear reviews and data projects from Boulder, Colorado</p>
                 </div>
                 
                 <div class="peaks-grid premium-grid">
-                    {{ range first 6 (where .Site.RegularPages "Section" "reviews") }}
+                    {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Section" "in" (slice "reviews" "data-projects")) }}
                     <article class="review-card reveal">
                         {{ if .Params.banner }}
                         {{ $image := .Resources.GetMatch .Params.banner }}
@@ -67,7 +67,7 @@
                             {{ end }}
                             <div class="review-card-overlay">
                                 <a href="{{ .Permalink }}" class="review-card-link">
-                                    <span>Read Review</span>
+                                    <span>{{ if eq .Section "reviews" }}Read Review{{ else }}Read More{{ end }}</span>
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <line x1="5" y1="12" x2="19" y2="12"></line>
                                         <polyline points="12 5 19 12 12 19"></polyline>
@@ -94,7 +94,7 @@
                                 {{ end }}
                             </p>
                             <a href="{{ .Permalink }}" class="review-card-cta">
-                                Read Full Review
+                                {{ if eq .Section "reviews" }}Read Full Review{{ else }}Read More{{ end }}
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -108,6 +108,13 @@
                 <div class="section-cta reveal">
                     <a href="/reviews/" class="cta-button browse-all">
                         Browse All Reviews
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="/data-projects/" class="cta-button browse-all">
+                        Browse Data Projects
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>

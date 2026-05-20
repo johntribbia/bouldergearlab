@@ -81,7 +81,7 @@ summaryLength = 70
 
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Boulder Gear Lab || Gear testing • Boulder, Colorado</p>
+    text = """<p class="hidden-sm hidden-xs">Boulder Gear Lab || Gear testing · Data science · Boulder, Colorado</p>
       """
 
 [params.widgets]
