@@ -24,6 +24,8 @@
                     <h2>{{ .Title }}</h2>
                 </div>
 
+                {{ if .Content }}<div class="section-intro">{{ .Content }}</div>{{ end }}
+
                 <div class="peaks-grid premium-grid">
                     {{ $paginator := .Paginate (where .Data.Pages "Type" "in" .Site.Params.mainSections) }}
                     {{ range $paginator.Pages }}

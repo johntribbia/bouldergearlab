@@ -14,7 +14,7 @@ description: "Meet John Tribbia and the philosophy behind Boulder Gear Lab."
 # Boulder Gear Lab
 ## The Philosophy
 
-High-quality gear reviews require three things: exhaustive testing, critical thinking, and radical honesty. My background in data science shapes my approach — not through lab-coat measurements, but through systematic inquiry. I look for the "why" behind a product's performance and consider the real-world edge cases where gear usually fails.
+High-quality gear reviews require three things: exhaustive testing, critical thinking, and radical honesty. The same three things, it turns out, that make good data science. I've spent two decades applying all three — on the trail and at the terminal.
 
 I test products the way you actually use them: grinding up Colorado peaks, commuting through Front Range winters, and pushing limits on all-day efforts. No hype, no fluff — just real miles and honest feedback.
 
@@ -40,6 +40,8 @@ I test products the way you actually use them: grinding up Colorado peaks, commu
 
 ---
 ## Two Worlds, One Lab
+
+I've logged over 100,000 miles on Colorado trails and spent about as long wrestling with messy data as a Data Scientist. Both involve field conditions, unexpected failures, and the discipline to report honestly what you found — not what you hoped to find.
 
 ### The Data Science Side
 By day, I am a Data Scientist at Google, leading teams in analytics, machine learning, and statistical modeling. I hold a PhD in Sociology from the University of Colorado Boulder, specializing in quantitative methods and research design. 

@@ -32,7 +32,7 @@ summaryLength = 70
     author = "John Tribbia"
     defaultKeywords = ["gear reviews", "outdoor equipment", "running shoes", "bikes", "Boulder Colorado"]
     mainSections = ["reviews", "data-projects"]
-    defaultDescription = "Honest gear reviews and outdoor data science from Boulder, Colorado"
+    defaultDescription = "Two kinds of field work. One lab."
 
     # Social media
     twitter_site = "" # your Twitter handle
