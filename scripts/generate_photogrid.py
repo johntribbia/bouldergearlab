@@ -35,6 +35,30 @@ def find_review_images(reviews_dir):
     
     return images
 
+
+def find_data_project_images(data_dir, figures_only=True):
+    """
+    Find chart/figure images from data project folders.
+    
+    Args:
+        data_dir: Path to data-projects directory
+        figures_only: If True, only include images inside 'figures/' subdirectories
+        
+    Returns:
+        list: List of image file paths
+    """
+    images = []
+    
+    for root, dirs, files in os.walk(data_dir):
+        # Skip if figures_only and this path isn't inside a figures/ directory
+        if figures_only and 'figures' not in Path(root).parts:
+            continue
+        for file in files:
+            if file.lower().endswith(('.jpg', '.jpeg', '.png', '.gif')):
+                images.append(os.path.join(root, file))
+    
+    return images
+
 def create_photogrid(images, output_path, grid_size=(3, 3), total_width=1200):
     """
     Create a composite image grid from random images.
@@ -129,6 +153,17 @@ def main():
         default='content/reviews',
         help='Path to reviews directory (default: content/reviews)'
     )
+    parser.add_argument(
+        '--data-dir', '-d',
+        default='content/data-projects',
+        help='Path to data-projects directory (default: content/data-projects)'
+    )
+    parser.add_argument(
+        '--data-ratio',
+        type=float,
+        default=0.25,
+        help='Fraction of grid cells to fill with data project charts (default: 0.25)'
+    )
     
     args = parser.parse_args()
     
@@ -141,6 +176,7 @@ def main():
     
     # Resolve paths
     reviews_dir = Path(args.reviews_dir)
+    data_dir = Path(args.data_dir)
     output_path = Path(args.output)
     
     if not reviews_dir.exists():
@@ -154,19 +190,43 @@ def main():
     print("  Boulder Gear Lab - Photo Grid Generator")
     print("=" * 60)
     
-    # Find images
+    # Find review images
     print(f"\n🔍 Searching for images in {reviews_dir}...")
-    images = find_review_images(str(reviews_dir))
+    review_images = find_review_images(str(reviews_dir))
     
-    if not images:
+    if not review_images:
         print(f"❌ No images found in {reviews_dir}")
         sys.exit(1)
     
-    print(f"   Found {len(images)} images\n")
+    print(f"   Found {len(review_images)} review images")
+    
+    # Find data project chart images
+    data_images = []
+    if data_dir.exists() and args.data_ratio > 0:
+        print(f"\n🔍 Searching for charts in {data_dir}...")
+        data_images = find_data_project_images(str(data_dir))
+        print(f"   Found {len(data_images)} data project charts")
+    
+    # Mix pools: data_ratio of slots go to data charts, rest to reviews
+    total_images = cols * rows
+    n_data = min(round(total_images * args.data_ratio), len(data_images))
+    n_review = total_images - n_data
+    
+    selected_data = random.sample(data_images, n_data) if n_data > 0 else []
+    selected_review = random.sample(review_images, min(n_review, len(review_images)))
+    
+    # Interleave data charts evenly through the grid
+    combined = selected_review[:]
+    if selected_data:
+        step = max(1, len(combined) // len(selected_data))
+        for i, chart in enumerate(selected_data):
+            combined.insert(min((i + 1) * step, len(combined)), chart)
+    
+    print(f"\n   Grid mix: {len(selected_review)} gear photos + {n_data} data charts")
     
     # Create grid
-    print(f"📸 Creating {cols}x{rows} photogrid ({cols*rows} images)...\n")
-    create_photogrid(images, str(output_path), (cols, rows), args.size)
+    print(f"\n📸 Creating {cols}x{rows} photogrid ({cols*rows} images)...\n")
+    create_photogrid(combined, str(output_path), (cols, rows), args.size)
 
 if __name__ == '__main__':
     main()
