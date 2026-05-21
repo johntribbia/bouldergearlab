@@ -1,6 +1,6 @@
 ---
 title: ""
-description: "Meet John Tribbia — Data Scientist at Google, independent gear reviewer, and the person behind Boulder Gear Lab."
+description: "Meet John Tribbia. Data Scientist, independent gear reviewer, and the person behind Boulder Gear Lab."
 ---
 
 <div class="about-hero">
