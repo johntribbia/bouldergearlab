@@ -4,7 +4,7 @@ date: 2026-05-02
 tags: ['data project']
 categories: ['data project']
 description: "The model quality framework originally relied on scalar ratings and active days. By replacing those inputs with ARC trajectory scores and 7-day retention probability, we recover 89% of a known causal effect. Notably, the early trajectory slope carries an independent retention penalty that the mean score misses entirely."
-draft: true
+draft: false
 banner: "aqr-banner.svg"
 build:
   list: never
