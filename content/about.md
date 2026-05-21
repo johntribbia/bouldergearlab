@@ -16,7 +16,7 @@ description: "Meet John Tribbia — Data Scientist at Google, independent gear r
 
 The gear reviews and the data projects run on the same fuel: long exposure, honest measurement, and the willingness to publish what you actually found.
 
-I test products the way you use them — grinding up Colorado peaks, commuting through Front Range winters, pushing limits on all-day efforts. No hype, no fluff, just real miles and honest feedback. The data work follows the same logic: spend real time with the problem, measure what matters, report what the analysis actually shows.
+My approach to testing gear and analyzing data comes down to the same thing: putting in the actual miles. Whether I'm grinding up Colorado peaks, commuting through Front Range winters, or digging into a complex data problem, I don't care about hype. I focus on spending time with the problem, measuring what matters, and delivering honest, evidence-based feedback.
 
 ---
 ## John Tribbia
@@ -26,10 +26,10 @@ I test products the way you use them — grinding up Colorado peaks, commuting t
             <strong>Data Scientist. Trail Runner. Cyclist. Outdoor Enthusiast.</strong>
         </p>
         <p>
-            I'm a Data Scientist and independent gear reviewer based in Boulder, Colorado — a former sponsored athlete who never stopped logging miles or chasing hard problems.
+            I'm a Data Scientist and independent gear reviewer based in Boulder, Colorado. I'm a former sponsored athlete who never stopped logging miles or chasing hard problems.
         </p>
         <p>
-            After years representing brands like La Sportiva, Pearl Izumi, and Salomon, I review gear with no brand relationships to protect. The data work follows the same principle: no outcome to defend, just the analysis.
+            Having spent years representing brands like La Sportiva, Pearl Izumi, and Salomon, I value being able to review gear without any industry strings attached. My data work runs on that same independence. I don't have a preferred outcome to protect, I just let the analysis speak for itself.
         </p>
     </div>
 </div>
@@ -44,7 +44,7 @@ I test products the way you use them — grinding up Colorado peaks, commuting t
 The "Lab" in Boulder Gear Lab is a mindset, not a room full of sensors. Both sides of this site run on the same discipline: spend real time with the subject, measure what matters, and report what you found.
 
 ### The Data Science Side
-I'm a Data Scientist at Google, leading teams in analytics, machine learning, and statistical modeling. I hold a PhD in Sociology from the University of Colorado Boulder, with a focus on quantitative methods and research design.
+I'm a Data Scientist with over 14 years of experience and 10+ years as a team lead. I hold a PhD in Sociology from the University of Colorado Boulder, with a focus on quantitative methods and research design. My [Professional Resume](/resume/) provides a detailed overview of my past accomplishments as a data scientist.
 
 The [Data Projects](/data-projects/) section is where that work surfaces publicly. The articles cover original frameworks for evaluating AI agent behavior, statistical approaches to measuring model quality, and how AI adoption and infrastructure are distributed across the economy.
 
@@ -55,7 +55,7 @@ I've contributed to Runner's World, Running Times, Triathlete Magazine, and Comp
 
 
 ---
-## Experience
+## Outdoor Experience
 
 **Running & Cycling:** 20+ years of competitive athletic experience, highlighted by a transition from junior mountain bike racing to sponsored trail running with multiple podium finishes on the global stage.
 
