@@ -1,5 +1,5 @@
 ---
-title: "The Repair Requires a Diagnosis"
+title: "The Value of Failure Taxonomy"
 date: 2026-05-23
 tags: ['data project']
 categories: ['data project']

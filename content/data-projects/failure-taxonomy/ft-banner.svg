@@ -88,7 +88,7 @@
   <!-- Title block -->
   <text x="72" y="310"
         font-family="'Space Mono', monospace" font-weight="700" font-size="16"
-        fill="rgba(255,255,255,0.85)" letter-spacing="0.02em">The Repair Requires a Diagnosis</text>
+        fill="rgba(255,255,255,0.85)" letter-spacing="0.02em">The Value of Failure Taxonomy</text>
   <text x="72" y="331"
         font-family="'Space Mono', monospace" font-size="10"
         fill="rgba(255,255,255,0.28)" letter-spacing="0.05em">FAILURE TAXONOMY · MAST (NeurIPS 2025) · N=1,000 SYNTHETIC</text>
