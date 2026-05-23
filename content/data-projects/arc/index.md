@@ -916,7 +916,7 @@ steady_degradation diverges 23pp -> add more to eval suite before next run</code
 
 <hr class="arc-hr"/>
 
-<p class="arc-p">The framework describes what a good trajectory looks like and how to classify deviations from it. But a classification system is itself an instrument and instruments fail in specific ways. The next post does what you should do with any new tool before trusting it in production: deliberately tries to break it. The classifier gets stress-tested against synthetic trajectories at increasing noise levels, and the failure modes are documented precisely. Knowing the operating envelope of your measurement tool is part of trusting it.</p>
+<p class="arc-p">A classification system is itself an instrument, and instruments fail in specific ways. The next post deliberately tries to break this one: the classifier gets stress-tested against synthetic trajectories at increasing noise levels, and the failure modes are documented precisely. You need to know where a tool breaks before you trust it in production.</p>
 
 <div class="arc-footnotes">
   <h2>References</h2>

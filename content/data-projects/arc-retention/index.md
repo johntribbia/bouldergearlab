@@ -457,7 +457,7 @@ bam(returned_next_week ~
 
 <p class="aqr-p">Creative Writing ranks last as a single-category target at 1,500 users per week, matching the prior analysis. But that ranking rests entirely on mean score. When early slope contributes separately, a Creative Writing investment addressing both mean quality and orientation quality returns 2,100 users, on par with Math/Logic. The trajectory penalty was invisible to scalar ratings.</p>
 
-<p class="aqr-p">The broad investment ("All categories +0.02") returns 4,000 users per week, 67% more than the best single-category scenario. Each category gets only a 0.02-point improvement, but it lifts every user rather than only those whose usage mix overlaps the targeted category. The argument for breadth holds across both frameworks.</p>
+<p class="aqr-p">The broad investment ("All categories +0.02") returns 4,000 users per week, 67% more than the best single-category scenario. Each category gets only a 0.02-point improvement, but it lifts every user rather than only those whose usage mix overlaps the targeted category.</p>
 
 ---
 

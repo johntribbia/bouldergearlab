@@ -172,7 +172,7 @@ banner: "wc-banner.svg"
 
 <p class="wc-p">GPT-4 launched on March 14, 2023. Its quality gains over GPT-3.5 were not uniform. On coding benchmarks it improved by nearly 19 percentage points. On reasoning and factual tasks it gained 13–16 points. On casual conversation it gained almost nothing. If users are sensitive to that quality gradient, even without knowing the benchmark numbers, coding and reasoning prompts should grow at the transition. Casual prompts should not.</p>
 
-<p class="wc-p">That is the question. WildChat-1M gives us a dataset large enough to look for the signal.</p>
+<p class="wc-p">WildChat-1M is large enough to look for that signal.</p>
 
 <hr class="wc-hr">
 
@@ -376,9 +376,7 @@ banner: "wc-banner.svg"
 
 <h2 class="wc-h2">What This Connects Back To</h2>
 
-<p class="wc-p">The model-quality post built a causal estimator on the premise that users who happen to rely on categories where the model is strong will experience higher quality and, as a result, remain more engaged. The key mechanism was within-version variation: same model, different task mix, different experienced quality.</p>
-
-<p class="wc-p">This analysis operates at a coarser level across model versions across months, but the behavioral logic is the same. Model quality is not uniform across task types. Users, in aggregate, respond to quality. The topic mix is the trace of that response.</p>
+<p class="wc-p">The behavioral logic here lines up with the within-version estimator. Quality differences across task types don't announce themselves to users — they show up in behavior. The topic mix is the trace.</p>
 
 <p class="wc-p">The Midjourney finding reframes rather than refutes the quality-gap thesis. GPT-4 Turbo's price reduction made the model accessible to a different kind of user than early GPT-4 adopters, and those users came primarily for image generation, piping idiosyncratic visual concepts into ChatGPT to be reformulated as structured Midjourney prompts. That task benefits substantially from improved instruction-following and creative elaboration, both areas where GPT-4 outperforms GPT-3.5. The coding signal, while swamped at the aggregate transition, shows up clearly in the cross-sectional data: coding accounts for 13.9% of GPT-4 conversations versus 7.1% on GPT-3.5, a near-2× overrepresentation that is consistent with users routing harder tasks to the better model. The practical implication still holds: the return on a quality investment depends on which category you improve, not just by how much. The finding is that the category that moved most at GPT-4 Turbo's launch was not the one the benchmarks advertised.</p>
 

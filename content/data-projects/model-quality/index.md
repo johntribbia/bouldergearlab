@@ -26,7 +26,7 @@ This is what statisticians call confounding, and it's the reason most "model qua
 
 So the real question isn't whether engagement goes up when models improve. It does. The question is: **can we build a credible estimator for the model's contribution?**
 
-And once we have that estimator, we can answer the question that comes right after: **where should you invest next?** If the estimator measures quality's effect at the category level (coding, creative writing, math), you can build a quality investment map that tells a product team exactly which improvement will buy the most retention per dollar spent. That's the practical payoff of the methodology developed here.
+Once that estimator is calibrated, a second question follows: **where should you invest next?** If the estimator measures quality's effect at the category level (coding, creative writing, math), you can build a quality investment map that tells a product team exactly which improvement will buy the most retention per dollar spent. That's the practical payoff of the methodology developed here.
 
 ## The Trick: Not Everyone Experiences the Same Model the Same Way
 
@@ -301,7 +301,7 @@ There's also a time-shifted placebo (substituting the *next* version's quality f
 
 Both segments show significant quality effects. This is expected: the injected causal mechanism applies uniformly to all users. In production data, where the true effect may differ by segment, the methodology can detect segment-level heterogeneity through stratified estimation. The fact that both segments are recovered here confirms the estimator works at the subgroup level, not just in aggregate.
 
-This also has practical implications for the investment map (below). Because enterprise users tend to concentrate on different categories than consumers, the optimal quality investment could differ by segment. A segment-specific decomposition of the quality effect into category-level contributions would tell a product team whether to prioritize the same improvements for everyone or tailor investments by user type.
+Because enterprise users tend to concentrate on different categories than consumers, the optimal quality investment could differ by segment. A segment-specific decomposition of the quality effect into category-level contributions would tell a product team whether to prioritize the same improvements for everyone or tailor investments by user type.
 
 ## What This Means
 
