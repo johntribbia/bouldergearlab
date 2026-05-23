@@ -4,7 +4,7 @@ date: 2026-05-23
 tags: ['data project']
 categories: ['data project']
 description: "Detecting that an AI system is failing is the easier problem. A failure taxonomy maps observable loss signals to the system layer responsible and a misrouted repair can make a different failure worse."
-draft: true
+draft: false
 banner: "ft-banner.svg"
 ---
 <!--more-->
