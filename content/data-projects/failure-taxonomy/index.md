@@ -173,7 +173,7 @@ banner: "ft-banner.svg"
 
 *Article by John Tribbia*
 
-<p class="ft-p">Modern cars log hundreds of fault codes. When a warning light trips, the code tells the mechanic which system threw the fault, not just that something failed. A shop that responded to every warning light by replacing the air filter would fix almost nothing, spend a lot of time doing it, and never understand why the same light came back. The warning light is not the diagnosis. It is the prompt to begin one.</p>
+<p class="ft-p">My recent trip to the auto mechanic at the Toyota dealership was my last freebie under my ToyotaCare plan after purchasing a new car two years ago. I wanted to make sure I got everything that needed fixing, fixed. The mechanics ran diagnostics and the system flagged several fault codes, like an aged air filter, low brake fluid, and something off with the steering. With these systems, when a warning light trips, the code tells the mechanic which system threw the fault, not just that something failed. A shop that responded to every warning light by replacing the air filter would fix almost nothing, spend a lot of time doing it, and never understand why the same light came back. The warning light is not the diagnosis. It is the prompt to begin one.</p>
 
 <p class="ft-p">The previous four posts built the instruments. <a href="../model-quality/">Model quality</a> drives retention, and category-level variation is what makes the causal identification work. The <a href="../arc/">trajectory of how a model arrives at its answer</a> carries signal the final score misses. That <a href="../arc-retention/">trajectory shape predicts whether users come back</a>. Users <a href="../wildchat-prompt-eras/">reveal quality gaps through their prompt behavior</a>, without ever filing a bug report.</p>
 
@@ -185,7 +185,7 @@ banner: "ft-banner.svg"
 
 <p class="ft-p">MAST (NeurIPS 2025, UC Berkeley) analyzed 1,642 multi-agent execution traces across seven state-of-the-art open-source frameworks. Failure rates ranged from 41% to 86.7%. These are not prototype systems. They are the frameworks being deployed in production today.</p>
 
-<p class="ft-p">A separate study of real production agent failures found that parsing failures alone account for roughly 38% of all observed incidents: malformed JSON, missing schema fields, instruction noncompliance. Not 38% of some narrow subcategory. Thirty-eight percent of everything. That single failure type has a specific, tractable repair target: the output formatting instructions in the system prompt. You do not need a model retrain. You need a better instruction.</p>
+<p class="ft-p">A separate study of real production agent failures found that parsing failures alone account for roughly 38% of all observed incidents: malformed JSON, missing schema fields, instruction noncompliance. Not 38% of some narrow subcategory, but 38% of everything. That single failure type has a specific, tractable repair target: the output formatting instructions in the system prompt. You do not need a model retrain. You need a better instruction.</p>
 
 <p class="ft-p">That is the structural case for a taxonomy. If 38% of your failures route to the same fix, and you are applying the same fix to 100% of your failures, you are burning resources on the 62% while under-investing in the 38% that would actually move the needle. The taxonomy is the routing layer between the signal and the repair.</p>
 
@@ -193,7 +193,7 @@ banner: "ft-banner.svg"
 
 <h2 class="ft-h2">Mapping Failures to Layers</h2>
 
-<p class="ft-p">A loss taxonomy maps observed failure signals to the system component most likely responsible — routes known failures to the correct repair layer, and surfaces failures that have no existing category. That second function is the one most systems skip.</p>
+<p class="ft-p">A loss taxonomy maps observed failure signals to the system component most likely responsible. It routes known failures to the correct repair layer, and surfaces failures that have no existing category. The second function is the one most systems skip.</p>
 
 <p class="ft-p">Read it as a routing table, not a checklist.</p>
 
@@ -263,7 +263,7 @@ banner: "ft-banner.svg"
 
 <h2 class="ft-h2">Taxonomy-Routed vs. Naive Repair</h2>
 
-<p class="ft-p">The synthetic experiment runs 1,000 simulated production interactions with five injected failure types, proportions drawn from MAST's published distribution: specification misalignment (~25%), reasoning failure (~20%), context management (~18%), output format error (~15%), retrieval and knowledge gap (~12%), and residual unclassified (~10%). Two repair strategies are applied over three cycles.</p>
+<p class="ft-p">This synthetic experiment runs 1,000 simulated production interactions with five injected failure types, proportions drawn from MAST's published distribution: specification misalignment (~25%), reasoning failure (~20%), context management (~18%), output format error (~15%), retrieval and knowledge gap (~12%), and residual unclassified (~10%). Two repair strategies are applied over three cycles.</p>
 
 <p class="ft-p"><strong>Strategy A (Naive)</strong> treats all failures as equivalent. Repair is applied uniformly: the same prompt adjustment across every failure type, regardless of which layer the fault originates from.</p>
 
@@ -290,17 +290,17 @@ banner: "ft-banner.svg"
 
 <p class="ft-p">After cycle 2, the divergence starts. The taxonomy-routed strategy continues recovering. The naive strategy plateaus. The failures that did not respond to the uniform fix are still present, and some that initially appeared to improve have re-emerged in slightly different form because the root layer was never addressed.</p>
 
-<p class="ft-p">After cycle 3, Strategy B has recovered 85% of injected quality loss. Strategy A has recovered 45% and is beginning to regress on failure types whose repair target conflicts with the uniform fix applied to other types.</p>
+<p class="ft-p">After cycle 3, Strategy B has recovered 85% of injected quality loss. Strategy A has recovered only 45% and is beginning to regress on failure types whose repair target conflicts with the uniform fix applied to other types.</p>
 
 <div class="ft-callout red">
-  <strong>Format instruction tightening</strong> that fixes output errors can over-constrain the system prompt and increase valid-request refusals. A repair that helps one failure type makes a different failure type worse. The taxonomy prevents this class of iatrogenic failure.
+  <strong>Format instruction tightening</strong> that fixes output errors can over-constrain the system prompt and increase valid-request refusals. A repair that helps one failure type makes a different failure type worse. The taxonomy prevents this category of unintended side-effect failures.
 </div>
 
-<p class="ft-p">The crossover is not a fluke of the specific numbers chosen. It is a structural property of the problem. When you apply a fix to the wrong layer, you do not merely fail to fix the failure. In some cases you create a new one. That effect is real in the synthetic data, and the mechanism is not synthetic at all.</p>
+<p class="ft-p">The crossover is not a fluke of the specific numbers chosen. It is a structural property of the problem. When you apply a fix to the wrong layer, you do not merely fail to fix the failure. In some cases you create a new one. That effect is real in the synthetic data, and yet the mechanism is not synthetic.</p>
 
 <hr class="ft-hr">
 
-<h2 class="ft-h2">The Loop in Full</h2>
+<h2 class="ft-h2">Feedback Loop in Full</h2>
 
 <p class="ft-p">The complete cycle runs seven steps. The first six appear in most implementations. The seventh is where most implementations stop short.</p>
 
@@ -328,7 +328,7 @@ banner: "ft-banner.svg"
 
 <p class="ft-p">The earlier posts built the instruments. The taxonomy connects them to a repair. Without that connection, you have signal and no routing. The monitoring loop becomes a thrash loop.</p>
 
-<p class="ft-p">The question left open is what the residual looks like in real user data: how fast new failure modes accumulate, whether a taxonomy can be built to keep pace, and whether the unclassified share stabilizes or grows. The WildChat dataset has the behavioral traces to start answering that.</p>
+<p class="ft-p">The question left open is what the residual looks like in real user data: how fast new failure modes accumulate, whether a taxonomy can be built to keep pace, and whether the unclassified share stabilizes or grows. The WildChat dataset has the behavioral traces to start answering that in a forthcoming analysis.</p>
 
 <hr class="ft-hr">
 
@@ -471,5 +471,4 @@ Chart.defaults.borderColor = 'rgba(255,255,255,0.06)';
 <div class="ft-footnotes">
   <p><strong>Prior work.</strong> The within-version quality exposure framework, identification strategy, frozen-weights design, and GAMM specification are described in <a href="../model-quality/">Does Making AI Smarter Actually Make People Use It More?</a> The ARC trajectory evaluation framework is described in <a href="../arc/">The Shape of a Good Answer</a>. The ARC-retention extension is in <a href="../arc-retention/">The Shape Predicts the Return</a>. Behavioral inference from prompt topic shifts is in <a href="../wildchat-prompt-eras/">How Users Vote With Their Prompts</a>.</p>
   <p><strong>Data note.</strong> All data is synthetic. No real users, no proprietary models, no production systems. Failure type proportions are drawn from MAST (Guo et al., NeurIPS 2025). The repair effectiveness parameters (80–90% recovery for taxonomy-matched repair, 10–30% for mismatched repair) are specified in the data-generating process and are not estimated from the data.</p>
-  <p><strong>Software.</strong> Python 3.11; numpy, pandas, matplotlib. Code available at the GitHub link above at publication.</p>
 </div>
