@@ -19,7 +19,7 @@ Anthropic's April 2026 decision to stop covering third-party OAuth usage under C
 
 This piece borrows the logic from my earlier [model-quality analysis](../model-quality-overview/). Instead of asking whether better answers make people come back more often, it asks whether **pre-policy OAuth intensity predicts who takes the hit when the rule changes**.
 
-## The key insight: same plan, completely different cost world
+## Same plan, completely different cost world
 
 Two users can both pay for `Pro` and be nothing alike economically. One opens Claude a few times a week. The other runs a big chunk of a development workflow through an OAuth-connected coding tool. The subscription line is the same. The compute bill is not.
 
@@ -34,7 +34,7 @@ Two users can both pay for `Pro` and be nothing alike economically. One opens Cl
 
 *\* Synthetic data only. Cost figures are modeled, not sourced from Anthropic.*
 
-In the synthetic data, heavy-OAuth developers are where the stress shows up first. That is the whole point. The plan tier does not tell you where the margin problem lives. The usage pattern does.
+In the synthetic data, heavy-OAuth developers are where the stress shows up first. The plan tier does not tell you where the margin problem lives. The usage pattern does.
 
 ![Cost/revenue ratio by OAuth intensity and segment](figures/01_cost_revenue_ratio.png)
 
@@ -46,7 +46,7 @@ The obvious way to study the policy is to compare churn before and after April 4
 
 This is the same confounding trap that shows up in model rollout analysis. Deployment boundaries are noisy. Policy boundaries are even worse. If the goal is causal measurement, you need variation that existed before the announcement and only determines exposure to the change.
 
-## The causal handle: freeze OAuth intensity before the policy
+## Freeze the exposure before the announcement
 
 That variation is pre-policy OAuth intensity: in practical terms, the share of prompts or tokens a user was already routing through OAuth-connected tools before Anthropic changed the rules. Some users were structurally dependent on that workflow long before the announcement. Others were barely touched. Measure that behavior early, freeze it, and compare users within the same plan tier.
 
@@ -74,7 +74,7 @@ Once you have that exposure measure, the rest is fairly clean: center it within 
 
 ## What happens next depends on who the user is
 
-Not every affected user does the same thing after the wall goes up. That is where the real question starts.
+Not every affected user does the same thing after the wall goes up.
 
 | Destination | Revenue Impact | Key Driver | Implication |
 |-------------|---------------|------------|-----------------|
@@ -90,17 +90,17 @@ Not every affected user does the same thing after the wall goes up. That is wher
 
 *\* Synthetic data only. These are injected probabilities, not observed Anthropic figures.*
 
-Developers are the conversion story. Casual users are the churn story. Business users sit in the middle. A go-to-market team would want that view early because the response should not be one-size-fits-all.
+Developers convert at high rates. Casual users walk. Business users split. A go-to-market team needs that breakdown early because the response for each segment is different.
 
 ![Post-policy destinations for heavy OAuth users](figures/02_post_policy_destinations.png)
 
 *Heavy users do not all disappear. Developers convert at much higher rates than casual users, while casual users are far more likely to walk.*
 
-A user who genuinely needs API access and can wire it up in an afternoon is a very different problem from a user who only wanted a convenient flat-rate tool. The first group is an expansion opportunity. The second is a retention risk.
+A user who genuinely needs API access and can wire it up in an afternoon is a very different problem from a user who only wanted a convenient flat-rate tool. One group has a workflow dependency that converts cleanly into API revenue. The other just wanted a cheaper way to run a light workload.
 
-## The policy is really a customer-journey decision
+## Execution determines whether the policy works
 
-This is the part most pricing commentary tends to miss. Anthropic did not just change what usage is covered. It changed the path users have to take to keep doing the same job.
+Anthropic did not just change what usage is covered. It changed the path users have to take to keep doing the same job.
 
 If the API migration is smooth, the policy can work. If it is clumsy, it becomes a revenue leak and a gift to competitors. In the synthetic scenario model, the policy only turns clearly positive when API conversion gets high enough to offset churn.
 
@@ -116,19 +116,19 @@ If the API migration is smooth, the policy can work. If it is clumsy, it becomes
 
 *The outcome turns on conversion execution, not just the price sheet.*
 
-That is why this is better understood as an execution problem than a pure pricing problem. Documentation, migration flow, credits, bundling, and onboarding matter more than the announcement copy once the decision has been made.
+Documentation, migration flow, credits, bundling, and onboarding carry more weight than the announcement copy once the decision is made.
 
-## The bigger point
+## Where this logic applies
 
-Nothing about this framework is specific to Anthropic or OAuth. The same logic works whenever a product or pricing change hits users differently based on how they actually use the product: tier migrations, feature sunsets, pricing shifts, even model rollouts with uneven value across tasks.
+This logic is not specific to Anthropic or OAuth. The same approach works whenever a product or pricing change hits users differently based on how they actually use the product: tier migrations, feature sunsets, pricing shifts, even model rollouts with uneven value across tasks.
 
-The regression is the easy part. Logging the right behavioral data before the decision lands is the hard part. If you have that, you can tell who actually took the hit and who was just standing nearby when the news cycle exploded. You can also be honest about the tradeoff between a readable heavy-versus-light comparison and the higher-fidelity continuous exposure model underneath it.
+Running the regression is tractable. Getting the behavioral data logged before the decision lands is where most analyses break down. If you have it, you can tell who actually took the hit and who was just standing nearby when the news cycle exploded. You can also be honest about the tradeoff between a readable heavy-versus-light comparison and the higher-fidelity continuous exposure model underneath it.
 
-## The bottom line
+## What the data shows
 
 You do not learn much by staring at the date the policy landed. You learn more by finding the user-level exposure that was already there before the shock, freezing it, and letting that carry the identification.
 
-That is what this synthetic exercise shows. If heavy third-party OAuth users were the group breaking flat-rate subscription economics, Anthropic's move was not arbitrary. It was arithmetic.
+If heavy third-party OAuth users were the group breaking flat-rate subscription economics, Anthropic's move was not arbitrary. It was arithmetic.
 
 ---
 
