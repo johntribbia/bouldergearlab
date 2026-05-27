@@ -1,7 +1,7 @@
 baseURL = "https://www.bouldergearlab.com/"
 title = "Boulder Gear Lab"
 theme = "hugo-universal-theme"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 
 # Enable Google Analytics by entering your tracking code
@@ -26,6 +26,10 @@ summaryLength = 70
   enable = true
   [markup.goldmark.extensions.passthrough.delimiters]
     block = [['$$', '$$']]
+
+[security]
+    # Allow section index pages authored as HTML (e.g., content/data-projects/_index.html).
+    allowContent = ['^text/html$']
 
 [params]
     viewMorePostLink = "/reviews/"
