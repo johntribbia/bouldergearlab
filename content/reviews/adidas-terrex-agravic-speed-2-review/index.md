@@ -9,6 +9,13 @@ draft: false
 ---
 <!--more-->
 
+Original Post from RoadTrailRun
+([link](https://www.roadtrailrun.com/2026/06/adidas-terrex-agravic-speed-2-review-3.html?m=1#google_vignette))
+
+<a href="https://www.roadtrailrun.com"
+class="button primary button-wrapper"><span>Read All RoadTrailRun
+Reviews Here</span></a>
+
 {{< rawhtml >}}
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=DM+Mono:wght@400;500&display=swap');
@@ -143,16 +150,21 @@ draft: false
 
 	.source-line {
 		max-width: var(--col-width);
-		margin: 0 0 32px;
-		font-family: 'DM Mono', monospace;
-		font-size: 10px;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: #b9aca0;
-	}
-	.source-line a { color: var(--accent); text-decoration: underline; }
-
-	.body p {
+    margin: 0 0 40px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #b9aca0;
+    border: 1px solid #3a3028;
+    padding: 12px 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .source-line a { color: var(--accent); text-decoration: underline; }
+  .source-line strong { color: var(--paper); font-weight: 500; }
 		max-width: var(--col-width);
 		margin-bottom: 24px;
 		color: var(--paper);
@@ -360,7 +372,7 @@ draft: false
 	<span class="trail-badge">Sanitas Valley Trailhead</span>
 	<span class="trail-badge">Multiple ascents | Mixed conditions</span>
 
-	<p class="source-line">Originally published on <a href="https://www.roadtrailrun.com/2026/06/adidas-terrex-agravic-speed-2-review-3.html?m=1#google_vignette">RoadTrailRun</a>. Read all RoadTrailRun reviews <a href="https://www.roadtrailrun.com">here</a>.</p>
+	<p class="source-line"><strong>Originally published on</strong> <a href="https://www.roadtrailrun.com/2026/06/adidas-terrex-agravic-speed-2-review-3.html?m=1#google_vignette" target="_blank" rel="noopener noreferrer">RoadTrailRun</a> &nbsp;·&nbsp; <a href="https://www.roadtrailrun.com" target="_blank" rel="noopener noreferrer">Read all RoadTrailRun reviews &rarr;</a></p>
 
 	<div class="body">
 		<p>I tested the Agravic Speed 2 across the classic Mount Sanitas loop, a route that demands immediate transitions between drastically different terrain types. The outing begins with a short valley connector before hitting the Mt Sanitas Trail Climb, a relentless 1.17-mile technical staircase of jagged sandstone blocks, log steps, and steep, off-camber scrambles. After the summit ridge, the route drops down the back side via the Lions Lair Trail, transitioning into smooth, flowing singletrack. The loop finishes with a high-speed blast down the gravel of the Sunshine Canyon Trail back to the trailhead. That sequence puts a lightweight, non-plated race shoe through a definitive test of agility, climbing efficiency, and descending protection.</p>
