@@ -1,6 +1,7 @@
 ---
 title: "adidas Terrex Agravic Speed 2 Review"
 date: 2026-06-13
+banner: "image_0.jpg"
 tags: ["running", "shoes", "trail"]
 categories: ["reviews"]
 description: "A light, agile trail racer with excellent dry-surface grip and a secure heel, best suited to short-to-mid-distance mountain efforts."
