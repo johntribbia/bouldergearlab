@@ -4,7 +4,7 @@ date: 2026-06-13
 tags: ["running", "shoes", "trail"]
 categories: ["reviews"]
 description: "A light, agile trail racer with excellent dry-surface grip and a secure heel, best suited to short-to-mid-distance mountain efforts."
-draft: true
+draft: false
 ---
 <!--more-->
 
