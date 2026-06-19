@@ -307,6 +307,23 @@ draft: false
     display: block;
     margin: 32px 0;
   }
+
+  .video-embed {
+    position: relative;
+    width: 100%;
+    max-width: var(--col-width);
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 40px 0 48px;
+  }
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 </style>
 
 <div class="masthead">
@@ -338,6 +355,10 @@ draft: false
   <span class="trail-badge">~2,800 ft gain</span>
   <span class="trail-badge">Cragmoor Trailhead</span>
   <span class="trail-badge">Multiple ascents · Mixed conditions</span>
+
+  <div class="video-embed">
+    <iframe src="https://www.youtube.com/embed/iKsVpbSnHCo?si=nxjCz9CJZrNKDQsv" title="Bear Peak vs. La Sportiva Prodigio 2 - The Ultimate Trail Test!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 
   <div class="body">
 
