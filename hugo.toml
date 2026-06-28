@@ -26,6 +26,7 @@ summaryLength = 70
   enable = true
   [markup.goldmark.extensions.passthrough.delimiters]
     block = [['$$', '$$']]
+    inline = [['$', '$']]
 
 [security]
     # Allow section index pages authored as HTML (e.g., content/data-projects/_index.html).

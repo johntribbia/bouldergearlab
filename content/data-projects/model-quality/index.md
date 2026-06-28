@@ -6,6 +6,7 @@ tags: ['data project']
 categories: ['data project']
 description: "I built and validated a statistical framework for measuring whether AI model quality drives user engagement, using ~1.65M synthetic records with a known causal mechanism. The estimator recovers 90% of the true effect."
 draft: false
+math: true
 build:
   list: never
   render: always
