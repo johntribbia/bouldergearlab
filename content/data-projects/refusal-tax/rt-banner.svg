@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <rect width="720" height="380" fill="#0a0d14"/>
+
+  <!-- Subtle grid -->
+  <line x1="0" y1="190" x2="720" y2="190" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="180" y1="0" x2="180" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="360" y1="0" x2="360" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="540" y1="0" x2="540" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="360" y="72" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="26" fill="rgba(255,255,255,0.85)" letter-spacing="0.04em">THE REFUSAL TAX</text>
+  <text x="360" y="96" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="rgba(255,255,255,0.32)" letter-spacing="0.05em">DECOMPOSING A 7.2-POINT RETENTION GAP</text>
+
+  <!-- Naive bar (full width, single segment, unlabeled cause) -->
+  <text x="80" y="160" font-family="'Space Mono', monospace" font-size="11" fill="rgba(255,255,255,0.4)">NAIVE</text>
+  <rect x="80" y="170" width="560" height="34" rx="4" fill="rgba(224,112,85,0.16)" stroke="#e07055" stroke-width="1"/>
+  <text x="360" y="192" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="14" fill="#e07055">-7.2 points, cause unknown</text>
+
+  <!-- Decomposed stacked bar -->
+  <text x="80" y="240" font-family="'Space Mono', monospace" font-size="11" fill="rgba(255,255,255,0.4)">DECOMPOSED</text>
+  <!-- malicious departure: 5.7/7.2 = 79.2% -->
+  <rect x="80" y="250" width="443" height="34" fill="rgba(157,143,232,0.22)" stroke="#9d8fe8" stroke-width="1"/>
+  <!-- macro seasonality: 0.71/7.2 = 9.9% -->
+  <rect x="523" y="250" width="55" height="34" fill="rgba(168,200,216,0.22)" stroke="#a8c8d8" stroke-width="1"/>
+  <!-- benign friction: 0.33/7.2 = 4.6% -->
+  <rect x="578" y="250" width="26" height="34" fill="rgba(125,184,0,0.28)" stroke="#7db800" stroke-width="1"/>
+
+  <!-- Legend -->
+  <rect x="80" y="310" width="12" height="12" fill="rgba(157,143,232,0.4)" stroke="#9d8fe8" stroke-width="1"/>
+  <text x="98" y="320" font-family="'Space Mono', monospace" font-size="11" fill="rgba(255,255,255,0.55)">malicious departure (5.7 pts)</text>
+
+  <rect x="80" y="332" width="12" height="12" fill="rgba(168,200,216,0.4)" stroke="#a8c8d8" stroke-width="1"/>
+  <text x="98" y="342" font-family="'Space Mono', monospace" font-size="11" fill="rgba(255,255,255,0.55)">academic calendar (0.71 pts)</text>
+
+  <rect x="360" y="332" width="12" height="12" fill="rgba(125,184,0,0.4)" stroke="#7db800" stroke-width="1"/>
+  <text x="378" y="342" font-family="'Space Mono', monospace" font-size="11" fill="rgba(255,255,255,0.55)">genuine friction (0.33 pts)</text>
+</svg>

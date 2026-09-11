@@ -1,0 +1,38 @@
+{
+  "n_users": 15000,
+  "archetype_share": {
+    "general": 0.72,
+    "student": 0.25,
+    "malicious": 0.03
+  },
+  "reliability": {
+    "split_half_r": 0.814,
+    "spearman_brown_reliability": 0.897
+  },
+  "tier1_telemetry": {
+    "academic_biology_refusal_rate_pre": 0.012,
+    "academic_biology_refusal_rate_post": 0.082,
+    "false_positive_rate_pre": 0.012,
+    "false_positive_rate_post": 0.082
+  },
+  "tier2_naive": {
+    "retention_refused": 0.8729,
+    "retention_unrefused": 0.9449,
+    "naive_churn_gap_pp": 7.2
+  },
+  "tier3_decomposition_pp": {
+    "total_gap": 7.2,
+    "macro_seasonality": 0.71,
+    "malicious_departure": 5.7,
+    "benign_friction": 0.33
+  },
+  "tier3_estimator": {
+    "beta_naive_nocontrol_logodds": 24.5394,
+    "beta_raw_controlled_logodds": 7.6869,
+    "beta_corrected_logodds": 8.5653,
+    "true_beta_logodds_equiv": 9.7906,
+    "naive_pct_of_true": 250.6,
+    "raw_pct_of_true": 78.5,
+    "corrected_pct_of_true": 87.5
+  }
+}
