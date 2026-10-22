@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <rect width="720" height="380" fill="#0a0d14"/>
+  <line x1="0" y1="190" x2="720" y2="190" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="180" y1="0" x2="180" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="360" y1="0" x2="360" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="540" y1="0" x2="540" y2="380" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <!-- retention: jumps at launch and stays high -->
+  <polyline points="60,280 200,280 240,170 280,150 400,155 540,150 680,145" fill="none" stroke="#e07055" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- learning: flat -->
+  <polyline points="60,300 200,300 240,298 400,296 540,294 680,292" fill="none" stroke="rgba(168,200,216,0.7)" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="240" y1="110" x2="240" y2="320" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="250" y="125" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.35)">launch</text>
+  <text x="60" y="60" font-family="monospace" font-size="15" letter-spacing="2" fill="rgba(255,255,255,0.45)">RETENTION VS. LEARNING</text>
+  <text x="60" y="88" font-family="monospace" font-size="12" letter-spacing="1" fill="rgba(255,255,255,0.28)">SYNTHETIC STAGGERED ROLLOUT · 40,000 LEARNERS</text>
+  <text x="60" y="345" font-family="monospace" font-size="12" fill="#e07055">weekly active rate</text>
+  <text x="250" y="345" font-family="monospace" font-size="12" fill="rgba(168,200,216,0.8)">checkpoint score</text>
+</svg>
